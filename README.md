@@ -1,1 +1,1 @@
-# GroupDocs.Viewer-Docs
+Public documentation for GroupDocs.Viewer
