@@ -18,6 +18,7 @@ There are 20 features, improvements, and bug-fixes in this release, most notable
 * GroupDocs.Viewer-CLI Dotnet Tool
 * Improved rendering Spreadsheet files
 * Render Text files to responsive HTML
+* Fixed exception when invalid or expired license provided
 * [Separator detection for CSV/TSV files]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/separator-detection.md">}})
 
 ## Full List of Issues Covering all Changes in this Release
