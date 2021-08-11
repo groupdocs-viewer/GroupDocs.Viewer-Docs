@@ -25,7 +25,11 @@ Auto Detection means that GroupDocs.Viewer for .NET can determine the type of th
 | [.ZIP](https://wiki.fileformat.com/compression/zip) | [Archive file format](https://wiki.fileformat.com/compression/zip) | Yes |
 | [.TAR](https://wiki.fileformat.com/compression/tar) | [Consolidated Unix File Archive](https://wiki.fileformat.com/compression/tar) | Yes |
 | [.BZ2](https://wiki.fileformat.com/compression/bz2) | [Bzip2 compressed file](https://wiki.fileformat.com/compression/bz2) | Yes |
+| [.7Z](https://wiki.fileformat.com/compression/7z) | [7-Zip compressed file](https://wiki.fileformat.com/compression/7z) | Yes |
 | [.GZ](https://wiki.fileformat.com/compression/gz) | [Gnu Zipped File](https://wiki.fileformat.com/compression/gz) | Yes |
+| [.TGZ](https://fileinfo.com/extension/tgz) | [TAR GZipped File](https://fileinfo.com/extension/tgz) | Yes |
+| [.XZ](https://fileinfo.com/extension/xz) | [XZipped File](https://fileinfo.com/extension/xz) | Yes |
+| [.TXZ](https://fileinfo.com/extension/txz) | [TAR XZipped File](https://fileinfo.com/extension/txz) | Yes |
 | [.RAR](https://wiki.fileformat.com/compression/rar) | [Roshal ARchive File](https://wiki.fileformat.com/compression/rar) | Yes |
 
 ## In this section
