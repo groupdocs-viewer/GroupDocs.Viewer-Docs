@@ -12,7 +12,7 @@ hideChildren: False
 
 ## Major Features
 
-There are 40 features, improvements, and bug-fixes in this release, most notable are:
+There are 41 features, improvements, and bug-fixes in this release, most notable are:
 
 * Add syntax highlight to programming language formats
 * Support cancellation: Improvement for Visio documents loading cancellation
@@ -66,6 +66,7 @@ There are 40 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-3565|"Could not load file. File is corrupted or damaged." exception when rendering XLS file"|Bug|
 |VIEWERNET-3571|Document viewer API only Renders the Deleted Folder of a PST File in .NET|Bug|
 |VIEWERNET-3581|Could not load file or assembly exception when targeting .NET 6|Bug|
+|VIEWERNET-3489|Invalid column index when rendering XLSM to PDF|Bug|
 
 ### Public API Changes
 
@@ -92,3 +93,14 @@ public static readonly FileType PS1 = new FileType("Windows PowerShell Cmdlet Fi
 /// </summary>
 public static readonly FileType PSD1 = new FileType("Windows PowerShell script module manifest", ".psd1");
 ```
+
+### Behaviour changes
+
+Now when rendering source code files, they will be colorized. This feature is supported for following files:
+C++, CSS, HTML, JAVA, Javascript, JSON, PHP, SQL, XML, PSM1, PS1, PSD1
+
+C# colorizing example:  \
+![C# coloring](viewer/net/images/code-coloring/cs-document-coloring.png)
+
+SQL colorizing example: \
+![SQL coloring](viewer/net/images/code-coloring/sql-document-coloring.png)
