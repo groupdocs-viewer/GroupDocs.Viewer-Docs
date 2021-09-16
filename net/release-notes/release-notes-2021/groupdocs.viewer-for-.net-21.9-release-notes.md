@@ -12,7 +12,7 @@ hideChildren: False
 
 ## Major Features
 
-There are 41 features, improvements, and bug-fixes in this release, most notable are:
+There are 39 features, improvements, and bug-fixes in this release, most notable are:
 
 * Add syntax highlight to programming language formats
 * Support cancellation: Improvement for Visio documents loading cancellation
@@ -42,7 +42,6 @@ There are 41 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-2992|"Could not load file. File is corrupted or damaged." exception when rendering IFC file"|Bug|
 |VIEWERNET-3133|"Could not load file. File is corrupted or damaged." exception when rendering CDR file"|Bug|
 |VIEWERNET-3138|Specific IFC files failed to open|Bug|
-|VIEWERNET-3226|File is corrupted or damaged exception when rendering XLSX file|Bug|
 |VIEWERNET-3231|"Parameter is not valid." exception when rendering VSD file"|Bug|
 |VIEWERNET-3275|"Parameter is not valid." exception when rendering VSDX file"|Bug|
 |VIEWERNET-3287|"Could not load file. File is corrupted or damaged." exception when rendering TGA file to HTML"|Bug|
@@ -63,7 +62,6 @@ There are 41 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-3534|Error when rendering specific DICOM file.|Bug|
 |VIEWERNET-3559|Cannot load specific Xps file|Bug|
 |VIEWERNET-3560|Cannot load specific Xps file.|Bug|
-|VIEWERNET-3565|"Could not load file. File is corrupted or damaged." exception when rendering XLS file"|Bug|
 |VIEWERNET-3571|Document viewer API only Renders the Deleted Folder of a PST File in .NET|Bug|
 |VIEWERNET-3581|Could not load file or assembly exception when targeting .NET 6|Bug|
 |VIEWERNET-3489|Invalid column index when rendering XLSM to PDF|Bug|
