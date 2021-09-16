@@ -97,7 +97,7 @@ public static readonly FileType PSD1 = new FileType("Windows PowerShell script m
 Now when rendering source code files, they will be colorized. This feature is supported for following files:
 C++, CSS, HTML, JAVA, Javascript, JSON, PHP, SQL, XML, PSM1, PS1, PSD1
 
-C# colorizing example:  \
+C# colorizing example: \
 ![C# coloring](viewer/net/images/code-coloring/cs-document-coloring.png)
 
 SQL colorizing example: \
