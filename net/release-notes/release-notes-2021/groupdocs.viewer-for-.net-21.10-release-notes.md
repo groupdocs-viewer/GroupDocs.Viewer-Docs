@@ -12,7 +12,7 @@ hideChildren: False
 
 ## Major Features
 
-There are 29 features, improvements, and bug-fixes in this release, most notable are:
+There are 28 features, improvements, and bug-fixes in this release, most notable are:
 
 * Open files with HTML table inside as XLS files
 * Change language in Angular UI
@@ -52,7 +52,6 @@ There are 29 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-3627|"Object reference not set to an instance of an object." exception when rendering NUMBERS file|Bug|
 |VIEWERNET-3637|Specific numbers document should be exported correctly.|Bug|
 |VIEWERNET-3638|Enormous conversion time and output file size while converting specific worksheet of XLSX to HTML|Bug|
-|VIEWERNET-3640|GroupDocs.Total-Angular is not working after update to the latest version|Bug|
 
 ### Behaviour changes
 
