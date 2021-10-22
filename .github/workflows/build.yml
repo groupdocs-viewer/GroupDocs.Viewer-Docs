@@ -1,0 +1,58 @@
+# Build & deploy documentation
+
+name: Build & Deploy
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push
+  push:
+  # Triggers the workflow on pull
+  pull_request:
+  # Run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PRODUCT: comparison
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Submodule update
+        run: |
+          git submodule update --init --recursive
+          git submodule foreach git pull origin master
+
+      - name: Install Hugo
+        run: |
+          curl -LO https://github.com/gohugoio/hugo/releases/download/v0.67.1/hugo_extended_0.67.1_Linux-64bit.deb
+          sudo dpkg -i hugo_extended_0.67.1_Linux-64bit.deb
+          
+      - name: Run and build Hugo
+        run: |
+          mkdir -p common/content/${{ env.PRODUCT }}
+          cp -r java common/content/${{ env.PRODUCT }}
+          cp -r net common/content/${{ env.PRODUCT }}
+          cp _index.md common/content/${{ env.PRODUCT }}
+          hugo --source common --minify --config config.toml,ignore-total-config.toml
+
+      - name: Deploy sitemap
+        uses: nogsantos/scp-deploy@master
+        with:
+          src: common/public/product-sitemap.xml
+          host: ${{ secrets.DOCS_SSH_HOST }}
+          remote: ${{ secrets.DOCS_SSH_DIR }}/sitemaps/${{ env.PRODUCT }}.xml
+          user: ${{ secrets.DOCS_SSH_USER }}
+          key: ${{ secrets.DOCS_SSH_KEY }}
+
+      - name: Deploy documentation
+        uses: nogsantos/scp-deploy@master
+        with:
+          src: common/public/${{ env.PRODUCT }}
+          host: ${{ secrets.DOCS_SSH_HOST }}
+          remote: ${{ secrets.DOCS_SSH_DIR }}
+          user: ${{ secrets.DOCS_SSH_USER }}
+          key: ${{ secrets.DOCS_SSH_KEY }}
