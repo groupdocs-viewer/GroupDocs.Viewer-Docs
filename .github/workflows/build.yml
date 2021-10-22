@@ -16,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      PRODUCT: comparison
+      PRODUCT: viewer
 
     steps:
       - uses: actions/checkout@v2
