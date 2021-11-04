@@ -22,7 +22,9 @@ To install packages on Debian-based Linux distributions use [apt-get](https://
 
 1. Windows Fonts - `sudo apt-get install ttf-mscorefonts-installer`
 
-2. SkiaSharp - `dotnet add package SkiaSharp.NativeAssets.Linux.NoDependencies`
+2. SkiaSharp - `dotnet add package SkiaSharp.NativeAssets.Linux.NoDependencies --version 2.80.2`.
+
+    _Make sure to install the same version of this package as version of `SkiaSharp` library that GroupDocs.Viewer depends on. You can find the exact version number at the `Dependencies` tab at [GroupDocs.Viewer](https://www.nuget.org/packages/groupdocs.viewer) NuGet page._
 
 3. System.Drawing dependencies - `sudo apt-get install libc6-dev libgdiplus libx11-dev`
 
