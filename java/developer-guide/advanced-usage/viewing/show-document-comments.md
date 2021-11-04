@@ -31,6 +31,7 @@ The following code sample shows how to render documents with comments.
 ```
 
 ## More resources
+
 ### GitHub Examples
 You may easily run the code above and see the feature in action in our GitHub examples:
 *   [GroupDocs.Viewer for Java examples, plugins, and showcase](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java)

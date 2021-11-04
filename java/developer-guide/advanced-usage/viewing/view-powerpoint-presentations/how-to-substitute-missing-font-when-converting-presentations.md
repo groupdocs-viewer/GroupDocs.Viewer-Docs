@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Background
-
 In case your presentation document contains a font that is not installed into the system [GroupDocs.Viewer](https://products.groupdocs.com/viewer) will use a default font. [GroupDocs.Viewer for Java](https://products.groupdocs.com/viewer/java) enables you to specify font substitution with [setDefaultFontName(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setDefaultFontName(java.lang.String)) setting.
 
 ## Font substitution
@@ -30,7 +28,7 @@ When converting to HTML with external resources:
 
 ```java
     try (Viewer viewer = new Viewer("input.pptx")) {
-        HtmlViewOptions viewOptions = HtmlViewOptions.forExternalResources();
+        HtmlViewOptions viewOptions = HtmlViewOptions.forExternalResources("output/html_external");
         viewOptions.setDefaultFontName("Times New Roman");
         viewer.view(viewOptions);
     }

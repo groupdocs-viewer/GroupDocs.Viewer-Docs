@@ -8,10 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-This article explains how to show hidden rows and cells when viewing Spreadsheets with [GroupDocs.Viewer](https://products.groupdocs.com/viewer) within your Java applications.
-
-## Background
-
 Sometimes Excel document may contain hidden columns and rows (as shown in the image below). [GroupDocs.Viewer](https://products.groupdocs.com/viewer) doesn't render hidden columns and rows by default. However, there may be the case when you want to control the inclusion of hidden content in the rendering results. 
 
 ![](viewer/java/images/render-hidden-columns-and-rows.png)

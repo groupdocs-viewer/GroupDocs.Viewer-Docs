@@ -8,16 +8,15 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Introduction
-
 When you are converting HTML files, you can ajdust top/bottom, left/right page margins in final document.
 The units of margins are typography points.
 Default values are:
-Top/Bottom - 72
-Left/Right - 5
+* Top/Bottom - 72
+* Left/Right - 5
 
 Final margin value is calculated as:
-Final margin value = [HTML page margin value] + [margin value in viewer ]
+
+Final margin value = **[HTML page margin value]** + **[margin value in viewer]**
 
 ![Page in Internet Explorer](viewer/java/images/how-to-convert-and-view-html-files-with-margins/page-in-explorer.jpg)
 

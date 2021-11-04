@@ -1,6 +1,6 @@
 ---
-id: net-standard-2-0-api-limitations
-url: viewer/java/net-standard-2-0-api-limitations
+id: java-api-limitations
+url: viewer/java/java-api-limitations
 title: Java API Limitations
 weight: 1
 description: "This article is about the limitations of GroupDocs.Viewer for Java."

@@ -30,6 +30,11 @@ Following code snippet shows how to adjust image quality when rendering to HTML.
 ```
 
 ## More resources
+
+### View PDF Documents Online
+
+View PDF files online with **[GroupDocs Viewer App](https://products.groupdocs.app/viewer/pdf)**.
+
 ### GitHub Examples
 You may easily run the code above and see the feature in action in our GitHub examples:
 *   [GroupDocs.Viewer for Java examples, plugins, and showcase](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java)

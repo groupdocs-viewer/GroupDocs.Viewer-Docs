@@ -8,9 +8,11 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Overview
-
 The archive files are used to compress files to save space on disk or compress files to group them. There are different compression algorithms are used to compress files that's why we have different archive formats. The most popular archive formats are ZIP and TAR and it's highly likely that you've already packed and unpacked archive files. 
+
+## Online Archive Viewer
+
+To view Archive files online please check out free **[Archive Viewer](https://products.groupdocs.app/viewer/archive)**
 
 ## Supported Archive Formats
 
@@ -23,6 +25,8 @@ Auto Detection means that [GroupDocs.Viewer](https://products.groupdocs.com/view
 | [.ZIP](https://wiki.fileformat.com/compression/zip) | [Archive file format](https://wiki.fileformat.com/compression/zip) | Yes |
 | [.TAR](https://wiki.fileformat.com/compression/tar) | [Consolidated Unix File Archive](https://wiki.fileformat.com/compression/tar) | Yes |
 | [.BZ2](https://wiki.fileformat.com/compression/bz2) | [Bzip2 compressed file](https://wiki.fileformat.com/compression/bz2) | Yes |
+| [.GZ](https://wiki.fileformat.com/compression/gz) | [Gnu Zipped File](https://wiki.fileformat.com/compression/gz) | Yes |
+| [.RAR](https://wiki.fileformat.com/compression/rar) | [Roshal ARchive File](https://wiki.fileformat.com/compression/rar) | Yes |
 
 *Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
 

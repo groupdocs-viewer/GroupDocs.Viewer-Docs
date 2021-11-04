@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Introduction
-
 IGS is a 2D/3D vector format file based on the Initial Graphics Exchange Specification (IGES). It consists of text instructions and all lines are fixed 80 bytes length with 72 bytes of data.
 
 It can be opened with desktop applications like e.g. Autodesk AutoCAD.
