@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-There are two main additional dependencies should be installed when running on Linux
+There are a couple of additional dependencies that should be installed when running on Linux:
 
 1. Fonts - because of the lack of Windows fonts in Linux fonts used in documents are substituted with available fonts, this might lead to inaccurate document layout when rendering the document to PNG, JPG, and PDF.
 
