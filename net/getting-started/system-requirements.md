@@ -3,33 +3,25 @@ id: system-requirements
 url: viewer/net/system-requirements
 title: System Requirements
 weight: 3
-description: ""
+description: "GroupDocs.Viewer for .NET system requirements and supported frameworks"
 keywords: 
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-## Overview
-
-GroupDocs.Viewer for .NET does not require any external software or third party tool to be installed. Just follow one of the way as described in [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}).
+GroupDocs.Viewer for .NET does not require any external software to be installed such as Microsoft Word, Microsoft Excel or Microsoft PowerPoint. To install GroupDocs.Viewer for .NET just follow one of the way as described in [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}).
 
 ## Supported Operating Systems
 
-GroupDocs.Viewer for .NET supports any 32-bit or 64-bit operating system where .NET or Mono framework is installed including, but not limited to:
+GroupDocs.Viewer for .NET can be used on any 32-bit or 64-bit operating system where .NET Framework, .NET Core 3.1 or .NET is installed including, but not limited to:
 
 ### Windows
 
-* Microsoft Windows 2003 Server ( x64, x86)
-* Microsoft Windows 2008 Server ( x64, x86)
-* Microsoft Windows 2012 Server ( x64, x86)
-* Microsoft Windows 2012 R2 Server ( x64, x86)
-* Microsoft Windows 2016 Server ( x64, x86)
-* Microsoft Windows 2019 Server ( x64, x86)
-* Microsoft Windows Vista ( x64, x86)
-* Microsoft Windows XP ( x64, x86)
-* Microsoft Windows 7 ( x64, x86)
-* Microsoft Windows 8, 8.1 ( x64, x86)
-* Microsoft Windows 10 ( x64, x86)
-* Microsoft Azure
+* Microsoft Windows 2003 Server and later
+* Microsoft Windows XP (x64, x86)
+* Microsoft Windows Vista (x64, x86)
+* Microsoft Windows 7, 8, 8.1 (x64, x86)
+* Microsoft Windows 10 (x64, x86)
+* Microsoft Windows 11 (x64)
 
 ### Linux
 
@@ -41,14 +33,13 @@ GroupDocs.Viewer for .NET supports any 32-bit or 64-bit operating system where 
 
 ## Supported Frameworks
 
-GroupDocs.Viewer for .NET  supports .NET and Mono frameworks as follows:
+GroupDocs.Viewer for .NET supports .NET as follows:
 
-### .NET Frameworks
+### .NET Framework
 
 * .NET Framework 2.0
 * .NET Framework 3.5
 * .NET Framework 4.0
-* .NET Framework 4.0\_ClientProfile
 * .NET Framework 4.5.0
 * .NET Framework 4.5.1
 * .NET Framework 4.5.2
@@ -60,26 +51,20 @@ GroupDocs.Viewer for .NET  supports .NET and Mono frameworks as follows:
 * .NET Framework 4.6.2
 * .NET Framework 4.7
 * .NET Framework 4.7.2
-* .NET Standard 2.0 
-* .NET Core 2.0
-* .NET Core 2.1
+* .NET Framework 4.8
 
-### Mono Framework
+### .NET Core
 
-* Mono 2.6.7 or later
+* .NET Core 3.1
+
+### .NET
+
+* .NET 5
 
 ## Development Environments
 
-GroupDocs.Viewer for .NET can be used to develop applications in any development environment that targets the .NET platform, but the following environments are explicitly supported:
+GroupDocs.Viewer for .NET can be used to develop applications in any development environment that targets .NET, but the following environments are explicitly supported:
 
-* Microsoft Visual Studio 2010
-* Microsoft Visual Studio 2011
-* Microsoft Visual Studio 2012
-* Microsoft Visual Studio 2013
-* Microsoft Visual Studio 2015
-* Microsoft Visual Studio 2017
-* Microsoft Visual Studio 2019
-* Xamarin.Android
-* Xamarin.IOS
-* Xamarin.Mac
-* MonoDevelop 2.4 and later
+* Microsoft Visual Studio 2010 and later
+* Microsoft Visual Studio for Mac
+* Rider from JetBrains
