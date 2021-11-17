@@ -2,7 +2,7 @@
 id: groupdocs-viewer-for-net-21-10-release-notes
 url: viewer/net/groupdocs-viewer-for-net-21-10-release-notes
 title: GroupDocs.Viewer for .NET 21.10 Release Notes
-weight: 111
+weight: 110
 description: "Features, improvements, and bugs-fixes that are shipped in GroupDocs.Viewer for .NET 21.10"
 keywords: release notes, groupdocs.viewer, .net, 21.10
 productName: GroupDocs.Viewer for .NET
