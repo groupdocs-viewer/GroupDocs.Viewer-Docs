@@ -46,8 +46,8 @@ There are 19 features, improvements, and bug-fixes in this release, most notable
 
 ### Behaviour changes
 
-Since GroupDocs.Viewer 21.11 version if file extension is wrong, GroupDocs.Viewer will try to detect actual format and render file.
-Since GroupDocs.Viewer 21.11 version you can set resolution for images inside presentations when rendering to HTML:
+Since GroupDocs.Viewer 21.11 version if the file extension is wrong, GroupDocs.Viewer will try to detect the actual format and render the file.
+Since GroupDocs.Viewer 21.11 version you can set a resolution for images inside presentations when rendering to HTML:
 
 ```cs
  using (Viewer viewer = new Viewer("presentation.pptx"))
