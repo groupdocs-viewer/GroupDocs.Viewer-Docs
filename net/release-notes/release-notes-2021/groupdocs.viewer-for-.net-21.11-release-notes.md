@@ -75,7 +75,7 @@ public PresentationOptions PresentationOptions { get; set; } = new PresentationO
 ### GroupDocs.Viewer.Options namespace
 
 Added new [GroupDocs.Viewer.Options.PresentationOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/presentationoptions>) and
-[GroupDocs.Viewer.Options.Resolution](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/resolution>)  classes.
+[GroupDocs.Viewer.Options.Resolution](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/resolution>) classes.
 
 ```cs
 /// <summary>
@@ -120,7 +120,7 @@ public class Resolution
     public static readonly Resolution Dpi72 = new Resolution(72);
 
     /// <summary>
-    ///  Default compression level.
+    ///  Default compression level - as in the document.
     /// </summary>
     public static readonly Resolution DocumentResolution = new Resolution(0);
 
