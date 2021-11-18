@@ -59,6 +59,8 @@ Since GroupDocs.Viewer 21.11 version you can set a resolution for images inside 
  }
 ```
 
+Read more information in [How to set a resolution for images when rendering presentations to HTML]({{< ref "viewer/net/developer-guide/advanced-usage/how-to/how-to-set-resolution-for-images-when-rendering-presentations-to-html.md">}}) article.
+
 ## Public API Changes
 
 ### GroupDocs.Viewer.Options.BaseViewOptions class
