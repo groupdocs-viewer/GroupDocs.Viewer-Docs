@@ -63,6 +63,22 @@ Read more information in [How to set a resolution for images when rendering pres
 
 ## Public API Changes
 
+### GroupDocs.Viewer.Common namespace
+
+Removed duplicate delegates in .NET 2.0 assembly from `GroupDocs.Viewer.Common` namespace:
+- public delegate void Action();
+- public delegate void Action<in T1>(T1 arg1);
+
+Removed duplicate delegates in .NET Framework 4 and .NET Standard 2.0 assemblies from `GroupDocs.Viewer.Common` namespace
+- public delegate void Action();
+- public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
+- public delegate void Action<in T1, in T2, in T3>(T1 arg1, T2 arg2, T3 arg3);
+- public delegate TResult Func<out TResult>();
+- public delegate TResult Func<in T, out TResult>(T arg);
+- public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
+- public delegate TResult Func<in T1, in T2, in T3, out TResult>(T1 arg1, T2 arg2, T3 arg3);
+- public delegate TResult Func<in T1, in T2, in T3, in T4, out TResult>(T1 arg1, T2 arg2, T3 arg3, T4 arg4);
+
 ### GroupDocs.Viewer.Options.BaseViewOptions class
 
 Added new `PresentationOptions` property.
