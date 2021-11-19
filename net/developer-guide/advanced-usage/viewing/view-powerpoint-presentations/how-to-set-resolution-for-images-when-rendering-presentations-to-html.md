@@ -1,84 +1,52 @@
 ---
 id: how-to-set-resolution-for-images-when-rendering-presentations-to-html
 url: viewer/net/how-to-set-resolution-for-images-when-rendering-presentations-to-html
-title: How to set resolution for images when rendering presentations to HTML
+title: How to set a resolution for images when rendering presentations to HTML
 weight: 2
 description: "In this article we show how to set resolution for images inside presentation when rendering to HTML."
 keywords: presentation images resolution quality
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-FODP is Flat Open Document Presentation in XML format for presentations. It can be opened with LibreOffice (OpenOffice) Impress.
+Some presentations might have high-resolution (pictures, backgrounds, etc.) images, for some cases you need to reduce the resolution to get a smaller rendered HTML file size.
 
-ODP is Open Document Presentation too, but it formatted using the OASIS XML-based OpenDocument standard and consists of an archive with a set of files and a [manifest](https://en.wikipedia.org/wiki/Manifest_file) file.
+## How to set a resolution for images when rendering presentations to HTML
 
-![](viewer/net/images/how-to-convert-and-view-fodp-and-odp-files.png)
+### Available resolution options
 
-## How to convert FODP(ODP) files
+In [GroupDocs.Viewer.Options.BaseViewOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions>) class there [GroupDocs.Viewer.Options.PresentationOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/presentationoptions>) property with [GroupDocs.Viewer.Options.Resolution](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/resolution>) property which contains resolution options, you can refer to this table to make the right choice for your final document purpose:
 
-### Convert FODP(ODP) to HTML
+|Resolution option|Resolution in DPI| Optimal use |
+| --- | --- | --- |
+|Resolution.DocumentResolution|As in the document| Default value - as in the document.|
+|Resolution.Dpi72|72|Max compression, low quality.|
+|Resolution.Dpi96|96|Good for web pages and projectors.|
+|Resolution.Dpi150|150|Good for web pages and projectors.|
+|Resolution.Dpi220|220|Excellent quality on most printers and screens.|
+|Resolution.Dpi330|330|Good quality for high-definition (HD) displays.|
 
-To convert FODP(ODP) files to HTML with GroupDocs.Viewer for .NET use following code:
+To set resolution when converting presentation files to HTML with GroupDocs.Viewer for .NET use following code:
 
 ```csharp
-using (Viewer viewer = new Viewer("sample.fodp"))
+using (Viewer viewer = new Viewer("sample.pptx"))
 {
-       HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources("output.html");
-       viewer.View(options);
+      HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources("result_{0}.html");
+      htmlViewOptions.PresentationOptions.Resolution = Resolution.Dpi150;
+
+      viewer.View(options);
 }
 ```
 
-The following screenshot shows the output HTML file opened in a browser.
+### Comparison size with different resolutions
 
-![](viewer/net/images/how-to-convert-and-view-fodp-and-odp-files_1.png)
-
-### Convert FODP(ODP) to JPG
-
-To convert FODP(ODP) files to JPG with GroupDocs.Viewer for .NET use following code: 
-
-```csharp
-using (Viewer viewer = new Viewer("sample.fodp"))
-{
-       JpgViewOptions options = new JpgViewOptions("output.jpg");
-       viewer.View(options);
-}
-```
-
-The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
-
-![](viewer/net/images/how-to-convert-and-view-fodp-and-odp-files_2.png)
-
-### Convert FODP(ODP) to PNG
-
-To convert FODP(ODP) files to PNG with GroupDocs.Viewer for .NET use following code:
-
-```csharp
-using (Viewer viewer = new Viewer("sample.fodp"))
-{
-       PngViewOptions options = new PngViewOptions("output.png");
-       viewer.View(options);
-}
-```
-
-The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
-
-![](viewer/net/images/how-to-convert-and-view-fodp-and-odp-files_3.png)
-
-### Convert FODP(ODP) to PDF
-
-To convert FODP(ODP) files to PDF with GroupDocs.Viewer for .NET use following code:
-
-```csharp
-using (Viewer viewer = new Viewer("sample.fodp"))
-{
-       PdfViewOptions options = new PdfViewOptions("output.pdf");
-       viewer.View(options);
-}
-```
-
-The following screenshot shows the output PDF file opened in an Acrobat Reader.
-
-![](viewer/net/images/how-to-convert-and-view-fodp-and-odp-files_4.png)
+|The resolution, DPI| File size|
+| --- | --- |
+|Document resolution|165 MB|
+|72|7.4 MB|
+|96|11.76 MB|
+|150|21.49 MB|
+|220|36.21 MB|
+|330|67 MB|
 
 ## More resources
 
