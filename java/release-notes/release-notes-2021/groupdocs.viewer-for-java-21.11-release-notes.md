@@ -311,6 +311,9 @@ There are lots of features, improvements, and bug-fixes in this release, most no
 |VIEWERNET-3184|Invalid row index when rendering XLSM|Bug|
 |VIEWERNET-2924|"Image export failed." exception when rendering EMF file|Bug|
 |VIEWERNET-2848|"Image export failed." exception when rendering TIFF file|Bug|
+|VIEWERJAVA-2468|Viewer - html files with erroneous css class|Bug|
+|VIEWERJAVA-2718|java.lang.IllegalStateException: Cannot load configuration class: com.groupdocs.ui.Application|Bug|
+|VIEWERJAVA-2721|Getting NoSuchAlgorithmException when converting XLSX to pdf|Bug|
 
 ## Public API and Backward Incompatible Changes
 
