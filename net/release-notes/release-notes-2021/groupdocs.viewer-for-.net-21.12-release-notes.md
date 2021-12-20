@@ -17,6 +17,7 @@ There are 13 features, improvements, and bug-fixes in this release, most notable
 * Text gradient support for DOCX files
 * Barcode fields are not updated in .NET
 * Excel original grid should not be changed when Overflow HideText and OverlayIfNextIsEmpty rendering
+* Fixed application crash on Linux when Processing a File with a Form Element
 
 ## Full List of Issues Covering all Changes in this Release
 
