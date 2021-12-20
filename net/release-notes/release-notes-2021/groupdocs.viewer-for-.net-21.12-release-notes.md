@@ -12,7 +12,7 @@ hideChildren: False
 
 ## Major Features
 
-There are 12 features, improvements, and bug-fixes in this release, most notable are:
+There are 13 features, improvements, and bug-fixes in this release, most notable are:
 
 * Text gradient support for DOCX files
 * Barcode fields are not updated in .NET
@@ -34,6 +34,7 @@ There are 12 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-3742|Cannot view specific XLS file|Bug|
 |VIEWERNET-3780|Failed to load specific PSD|Bug|
 |VIEWERNET-3783|Conversion from EPS to PDF produce blank output|Bug|
+|VIEWERNET-3678|Application Crash on Linux when Processing a File with a Form Element|Bug|
 
 ### Behaviour changes
 
