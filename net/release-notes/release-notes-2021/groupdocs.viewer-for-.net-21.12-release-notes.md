@@ -12,7 +12,7 @@ hideChildren: False
 
 ## Major Features
 
-There are 13 features, improvements, and bug-fixes in this release, most notable are:
+There are 12 features, improvements, and bug-fixes in this release, most notable are:
 
 * Text gradient support for DOCX files
 * Barcode fields are not updated in .NET
@@ -30,7 +30,6 @@ There are 13 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-3667|"Could not load file. File is corrupted or damaged." exception when rendering TGA file"|Bug|
 |VIEWERNET-3684|Excel original grid should not be changed when Overflow HideText and OverlayIfNextIsEmpty rendering|Bug|
 |VIEWERNET-3736|QR code size is smaller comparing with Word|Bug|
-|VIEWERNET-3737|XLS file rendered incorrect|Bug|
 |VIEWERNET-3741|Barcode fields are not updated in .NET|Bug|
 |VIEWERNET-3742|Cannot view specific XLS file|Bug|
 |VIEWERNET-3780|Failed to load specific PSD|Bug|
