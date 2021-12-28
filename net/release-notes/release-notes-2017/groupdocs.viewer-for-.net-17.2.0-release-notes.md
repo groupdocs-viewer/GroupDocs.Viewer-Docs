@@ -37,8 +37,8 @@ There are 2 new features and 11 improvements and fixes in this regular monthly r
 | VIEWERNET-688 | Getting GroupDocs.Foundation Dependency Exception in SharePoint 2013 | Bug |
 | VIEWERNET-505 | Background image is missing when converting to image. | Bug |
 
-   
- 
+   
+ 
 
 ## Public API and Backward Incompatible Changes
 
@@ -127,7 +127,7 @@ foreach (PageHtml page in pages)
 
 ### Implementation of settings which allows rendering of pdf document's layers separately
 
-When rendering layered Pdf documents into HTML, since the version 17.2.0 by default all layers are rendered as one, and you are unable to distinguish between them. If you want pdf layers to be separated into different HTML elements, so that you can manipulate them using Javascript or Javascript libraries, set PdfOptions.RenderLayersSeparately property of HtmlOptions object to true as shown in below example. 
+When rendering layered Pdf documents into HTML, since the version 17.2.0 by default all layers are rendered as one, and you are unable to distinguish between them. If you want pdf layers to be separated into different HTML elements, so that you can manipulate them using Javascript or Javascript libraries, set PdfOptions.RenderLayersSeparately property of HtmlOptions object to true as shown in below example. 
 
 
 
@@ -311,7 +311,7 @@ imageHandler.RotatePage(guid, rotateOptions);
 
 If you have created your own implementation of IInputDataHandler, please use AddFile(string guid, Stream content) method instead.
 
-**Difference in the implementation of IInputDataHandler obsolete SaveDocument and replacing AddFile methods for Azure input data handler.**
+**Difference in the implementation of IInputDataHandler obsolete SaveDocument and replacing AddFile methods for Azure input data handler.**
 
 **Obsolete SaveDocument method (C#)**
 

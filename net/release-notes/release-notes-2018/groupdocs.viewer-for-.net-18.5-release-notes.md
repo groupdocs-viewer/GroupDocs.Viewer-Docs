@@ -43,7 +43,7 @@ There are 14 features, improvements, and fixes in this regular monthly release. 
 
 ### Setting page size when rendering Email documents as PDF and image
 
-Since the version 18.5, it is possible to set output page size for rendering Email documents into PDF and images. To enable this feature, set the **PageSize** property of the **EmailOptions** class. Please note that for rendering into HTML the whole email message is rendered into one responsive HTML page and this new option will not influence the rendering. 
+Since the version 18.5, it is possible to set output page size for rendering Email documents into PDF and images. To enable this feature, set the **PageSize** property of the **EmailOptions** class. Please note that for rendering into HTML the whole email message is rendered into one responsive HTML page and this new option will not influence the rendering. 
 
 **Rendering as Image (C#)**
 
@@ -88,12 +88,12 @@ Console.WriteLine(pdfContainer.Stream.Length);
 
 ### Changing language for the header of emails
 
-When rendering email messages, by default the API uses the English language to render field labels such as (From, To, Subject etc.). To change field labels, the API provides a new property called **FieldLabels** in **EmailOptions** class.
+When rendering email messages, by default the API uses the English language to render field labels such as (From, To, Subject etc.). To change field labels, the API provides a new property called **FieldLabels** in **EmailOptions** class.
 
 **How to change field labels (C#)**
 
 ```csharp
- string guid = "email.msg";
+ string guid = "email.msg";
   
 //Instantiate Viewer Hanlder 
 ViewerHtmlHandler htmlHandler = new ViewerHtmlHandler();
@@ -115,7 +115,7 @@ List<PageHtml> pages = htmlHandler.GetPages(guid, htmlOptions);
 
 ##### Public bool UseCache property is set obsolete
 
-This property will be removed in version 18.8, please use EnableCaching property instead.
+This property will be removed in version 18.8, please use EnableCaching property instead.
 
 ##### Public bool EnableCaching property added
 

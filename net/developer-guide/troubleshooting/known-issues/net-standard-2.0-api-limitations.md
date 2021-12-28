@@ -18,35 +18,12 @@ There are a couple of additional dependencies that should be installed when runn
 
 ## How to install the dependencies
 
-To install packages on Debian-based Linux distributions use [apt-get](https://wiki.debian.org/apt-get) utility:
+To install packages on Debian-based Linux distributions use [apt-get](https://wiki.debian.org/apt-get) utility:
 
-1. Windows Fonts - `sudo apt-get install ttf-mscorefonts-installer`
+1. Windows Fonts - `sudo apt-get install ttf-mscorefonts-installer`
 
 2. SkiaSharp - `dotnet add package SkiaSharp.NativeAssets.Linux.NoDependencies --version 2.80.2`.
 
     _Make sure to install the same version of this package as version of `SkiaSharp` library that GroupDocs.Viewer depends on. You can find the exact version number at the `Dependencies` tab at [GroupDocs.Viewer](https://www.nuget.org/packages/groupdocs.viewer) NuGet page._
 
-3. System.Drawing dependencies - `sudo apt-get install libc6-dev libgdiplus libx11-dev`
-
-## More resources
-
-### GitHub Examples
-
-You may easily run the code above and see the feature in action in our GitHub examples:
-
-- [GroupDocs.Viewer for .NET examples, plugins, and showcase](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET)
-
-- [GroupDocs.Viewer for Java examples, plugins, and showcase](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java)
-
-- [Document Viewer for .NET MVC UI Example](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-MVC)
-
-- [Document Viewer for .NET App WebForms UI Modern Example](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-WebForms)
-
-- [Document Viewer for Java App Dropwizard UI Modern Example](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java-Dropwizard)
-
-- [Document Viewer for Java Spring UI Example](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java-Spring)
-
-### Free Online App
-
-Along with full-featured .NET library we provide simple but powerful free Apps.
-You are welcome to view Word, PDF, Excel, PowerPoint documents with free to use online **[GroupDocs Viewer App](https://products.groupdocs.app/viewer)**.
+3. System.Drawing dependencies - `sudo apt-get install libc6-dev libgdiplus libx11-dev`

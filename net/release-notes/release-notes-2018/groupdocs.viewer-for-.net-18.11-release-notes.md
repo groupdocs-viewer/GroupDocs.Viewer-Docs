@@ -13,7 +13,7 @@ hideChildren: False
 ## Major Features
 
 There are 13 features, improvements, and fixes in this regular monthly release. The most notable are:
-*    Added following file formats support
+*    Added following file formats support
     *   Printer Command Language(PCL)        
     *   Tab-separated values (TSV)        
 *   Handling fonts while rendering MS OneNote documents
@@ -25,13 +25,13 @@ There are 13 features, improvements, and fixes in this regular monthly release. 
 | --- | --- | --- |
 | VIEWERNET-128 | Add PCL file format support | Feature |
 | VIEWERNET-1786 | Add TSV (Tab-separated values) file format support | Feature |
-| VIEWERNET-1768 | Rendering comments from ODP presentation documents that has no author  | Improvement |
+| VIEWERNET-1768 | Rendering comments from ODP presentation documents that has no author  | Improvement |
 | VIEWERNET-1778 | Rendering attachments while working with source document's stream | Improvement |
 | VIEWERNET-1787 | Extend support for ExcludeFonts setting of HtmlOptions class for MS OneNote documents | Improvement |
 | VIEWERNET-1789 | Exporting font files as external resources when rendering MS OneNote documents | Improvement |
 | VIEWERNET-1793 | Add support for DefaultFontName option when rendering MS OneNote documents | Improvement |
 | VIEWERNET-1549 | Exception when rendering email message containing .msg file as attachment | Bug |
-| VIEWERNET-133 | Issues when rendering Japanese PDF document to HTML  | Bug |
+| VIEWERNET-133 | Issues when rendering Japanese PDF document to HTML  | Bug |
 | VIEWERNET-1231 | Font lightness is ignored for rendering Presentations into HTML | Bug |
 | VIEWERNET-1790 | Resources are not created in cache after GetPrintableHtml called | Bug |
 | VIEWERNET-1801 | Unexpected behavior of cache when both Image and Html handlers instantiated | Bug |
@@ -39,7 +39,7 @@ There are 13 features, improvements, and fixes in this regular monthly release. 
 
 ## Public API and Backward Incompatible Changes
 
-{{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Viewer for .NET 18.11. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Viewer which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}{{< alert style="info" >}}Since version 18.11, despite using the ViewerConfig.EnableCaching = true option, GetPrintableHtml method of the ViewerHtmlHandler and ViewerImageHandler classes does not cache the rendering results.{{< /alert >}}
+{{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Viewer for .NET 18.11. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Viewer which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}{{< alert style="info" >}}Since version 18.11, despite using the ViewerConfig.EnableCaching = true option, GetPrintableHtml method of the ViewerHtmlHandler and ViewerImageHandler classes does not cache the rendering results.{{< /alert >}}
 
 ### Supported File Formats
 
@@ -54,7 +54,7 @@ In version 18.11, following public class members were added, marked as obsolete,
 
 #### GroupDocs.Viewer.Domain.Containers.DocumentInfoContainer
 
-##### string DocumentType { get; } property compilation is set to fail
+##### string DocumentType { get; } property compilation is set to fail
 
 This property is obsolete and will be removed after v18.11. Use FileFormat property instead.
 
@@ -68,11 +68,11 @@ This property is obsolete and will be removed after v18.11. Use FileFormat prope
 
 #### GroupDocs.Viewer.Domain.FileDescription
 
-##### string BaseName { get; } property compilation is set to fail
+##### string BaseName { get; } property compilation is set to fail
 
 This property is obsolete and will be removed after v18.11. To get base name use following code: System.IO.Path.GetFileNameWithoutExtension(fileDescription.Name).
 
-##### string DocumentType { get; } property compilation is set to fail
+##### string DocumentType { get; } property compilation is set to fail
 
 This property is obsolete and will be removed after v18.11. Use FileFormat property instead.
 

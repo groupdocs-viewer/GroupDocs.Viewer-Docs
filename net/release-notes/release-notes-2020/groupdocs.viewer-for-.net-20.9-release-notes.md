@@ -15,7 +15,7 @@ hideChildren: False
 There are 10 features, improvements, and bug-fixes in this release, most notable are:
 
 * Added Adobe Photoshop Large Document Format (.psb) file format support
-* [Added feature to render only figures without scheme for Visio files]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-visio-documents/how-to-render-visio-files-figures.md">}})
+* [Added feature to render only figures without scheme for Visio files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-visio-documents/how-to-render-visio-files-figures.md">}})
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -36,7 +36,7 @@ There are 10 features, improvements, and bug-fixes in this release, most notable
 
 ### Behavior changes
 
-* In this version we've improved viewing of Visio documents - now you can choose what to render: Visio figures or Visio scheme(diagram), also Visio figures will be rendered automatically if Visio document does not contain scheme pages.
+* In this version we've improved rendering of Visio documents - now you can choose what to render: Visio figures or Visio scheme(diagram), also Visio figures will be rendered automatically if Visio document does not contain scheme pages.
 
 ### Changes in the public API
 

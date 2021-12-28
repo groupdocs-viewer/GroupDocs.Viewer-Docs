@@ -30,7 +30,7 @@ This is the first version of new generation GroupDocs.Viewer for .NET. The most 
 
 ## Full List of Issues Covering all Changes in this Release
 
-This is the first version of new generation GroupDocs.Viewer for .NET. 
+This is the first version of new generation GroupDocs.Viewer for .NET. 
 
 ## Public API and Backward Incompatible Changes
 

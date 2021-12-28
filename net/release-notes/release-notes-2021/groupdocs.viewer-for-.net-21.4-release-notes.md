@@ -16,7 +16,7 @@ There are 19 features, improvements, and bug-fixes in this release, most notable
 
 * [GroupDocs.Viewer WPF Example](<https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-WPF>)
 * [GroupDocs.Viewer Windows Forms Example](<https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-WinForms>)
-* [Add support of resizing images when rendering to HTML/PDF]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/set-output-image-size-limits-when-rendering-to-pdf-html.md">}})
+* Add support of resizing images when rendering to [HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/set-image-size-limits-when-rendering-to-html.md">}})/[PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/set-image-size-limits-when-rendering-to-pdf.md">}})
 * Watermark styles correct page layout
 * Descriptive exception message when opening password-protected ODP/OTP presentations
 * Default font is applied when rendering PPTX

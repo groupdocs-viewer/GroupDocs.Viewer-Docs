@@ -14,7 +14,7 @@ There are 12 features, improvements and fixes in this regular monthly release. T
 
 *   Added support of file formats:
     *   Device Independent Bitmap File (.dib)
-    *   Microsoft PowerPoint Template (.pot) 
+    *   Microsoft PowerPoint Template (.pot) 
     *   Bzip2 Compressed File (.bz2)
 *   Ability to obtain files (attachments) contained in password protected documents
 
@@ -45,13 +45,13 @@ There are 12 features, improvements and fixes in this regular monthly release. T
 
 A new overload for GetFile method that accepts document password has been added.
 
-This overload provides the ability to obtain contained files (attachments) from password protected documents.
+This overload provides the ability to obtain contained files (attachments) from password protected documents.
 
 #### public FileContainer GetFile(AttachmentBase attachment, string password)
 
 A new overload for GetFile method that accepts document password has been added.
 
-This overload provides the ability to obtain contained files (attachments) from password protected documents.
+This overload provides the ability to obtain contained files (attachments) from password protected documents.
 
 ### GroupDocs.Viewer.Handler.ViewerImageHandler
 
@@ -59,10 +59,10 @@ This overload provides the ability to obtain contained files (attachments) from
 
 A new overload for GetFile method that accepts document password has been added.
 
-This overload provides the ability to obtain contained files (attachments) from password protected documents.
+This overload provides the ability to obtain contained files (attachments) from password protected documents.
 
 #### public FileContainer GetFile(AttachmentBase attachment, string password)
 
 A new overload for GetFile method that accepts document password has been added.
 
-This overload provides the ability to obtain contained files (attachments) from password protected documents.
+This overload provides the ability to obtain contained files (attachments) from password protected documents.

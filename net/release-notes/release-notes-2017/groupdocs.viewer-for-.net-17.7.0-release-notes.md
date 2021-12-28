@@ -68,7 +68,7 @@ using (FileContainer container = handler.GetPdfFile(guid, pdfFileOptions))
 }
 ```
 
-##### List of formats affected by PdfFileOptions.JpegQuality property when rendered as pdf
+##### List of formats affected by PdfFileOptions.JpegQuality property when rendered as pdf
 
 | Format Name | Description |
 | --- | --- |
@@ -77,18 +77,18 @@ using (FileContainer container = handler.GetPdfFile(guid, pdfFileOptions))
 | Microsoft Outlook | Affects JPEG images set as a background in email documents msg and eml formats |
 | OpenDocument Formats | Affects JPEG images contained in OpenDocument presentation (odp) andOpenDocument text (odt) formats |
 | Image files | Affects rendering from PSD, TIFF, multi-page TIFF, WebP, SVG and DjVu formats |
-| Metafile | Affects rendering from WMF and EMF formats |
-| Microsoft Visio | Affects JPEG images contained inside Microsoft Visio documents |
+| Metafile | Affects rendering from WMF and EMF formats |
+| Microsoft Visio | Affects JPEG images contained inside Microsoft Visio documents |
 
 ### List of Changes in GroupDocs.Viewer for .NET 17.7.0
 
 #### GroupDocs.Viewer.Converter.Options.PdfOptions - Public bool PreventGlyphsGrouping obsolete property compilation is set to fail
 
-Using this property in non obsolete members will result in compilation error. Get ready for the change, this property is no longer active and will be completely removed in the next version. Please use *EnablePreciseRendering* property instead. The difference between this tow settings is that obsolete *PreventGlyphsGrouping* property has been influencing only rendering into HTML, whereas *EnablePreciseRendering*  affects both image and HTML rendering. More over *EnablePreciseRendering* contains additional technics for improving rendering PDF documents.
+Using this property in non obsolete members will result in compilation error. Get ready for the change, this property is no longer active and will be completely removed in the next version. Please use *EnablePreciseRendering* property instead. The difference between this tow settings is that obsolete *PreventGlyphsGrouping* property has been influencing only rendering into HTML, whereas *EnablePreciseRendering*  affects both image and HTML rendering. More over *EnablePreciseRendering* contains additional technics for improving rendering PDF documents.
 
 #### Public GroupDocs.Viewer.Domain.EmailAttachment obsolete class and class members compilation is set to fail
 
-Please use GroupDocs.Viewer.Domain.Attachment class instead as show in example below. This class is obsolete and will be removed in the next version.
+Please use GroupDocs.Viewer.Domain.Attachment class instead as show in example below. This class is obsolete and will be removed in the next version.
 
 **Loading email attachments using obsolete and new class**
 

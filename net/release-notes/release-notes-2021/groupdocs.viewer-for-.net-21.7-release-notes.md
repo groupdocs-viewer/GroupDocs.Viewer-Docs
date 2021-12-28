@@ -14,12 +14,12 @@ hideChildren: False
 
 There are 20 features, improvements, and bug-fixes in this release, most notable are:
 
-* [Cancel viewer document loading/rendering]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/cancel-viewing-with-cancellation-token.md">}})
+* [Cancel viewer document loading/rendering]({{< ref "viewer/net/developer-guide/rendering-documents/cancel-rendering.md">}})
 * [GroupDocs.Viewer-CLI Dotnet Tool](https://www.nuget.org/packages/groupdocs.viewer-cli)
 * Improved rendering Spreadsheet files
 * Render Text files to responsive HTML
 * Fixed exception when invalid or expired license provided
-* [Separator detection for CSV/TSV files]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/separator-detection.md">}})
+* [Separator detection for CSV/TSV files]({{< ref "separator-detection">}})
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -59,4 +59,4 @@ Added new `DetectSeparator` property.
 public bool DetectSeparator { get; set; } = false;
 ```
 
-See how to use new properties in [Separator detection for CSV/TSV files]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/separator-detection.md">}})
+See how to use new properties in [Separator detection for CSV/TSV files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/separator-detection.md">}})

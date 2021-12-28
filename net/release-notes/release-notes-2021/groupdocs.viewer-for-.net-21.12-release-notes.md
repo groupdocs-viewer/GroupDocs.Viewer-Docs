@@ -16,7 +16,7 @@ There are 12 features, improvements, and bug-fixes in this release, most notable
 
 * Added text gradient support for DOCX files
 * Fields are going to be updated when rendering Words documents that contains barcodes
-* Excel original grid should not be changed when text overflow is set to HideText or OverlayIfNextIsEmpty 
+* Excel original grid should not be changed when text overflow is set to HideText or OverlayIfNextIsEmpty
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -35,7 +35,7 @@ There are 12 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-3783|Conversion from EPS to PDF produce blank output|Bug|
 |VIEWERNET-3678|Application Crash on Linux when Processing a File with a Form Element|Bug|
 
-## Behaviour changes
+## Behavior changes
 
-In GroupDocs.Viewer 21.12 version because of issues of autodetection, autodetection feature is disabled.
+In GroupDocs.Viewer 21.12 version because of issues of auto detection, auto detection feature is disabled.
 Document extension should match the actual document format.

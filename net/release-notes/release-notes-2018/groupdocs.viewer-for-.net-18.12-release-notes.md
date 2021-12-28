@@ -12,21 +12,21 @@ hideChildren: False
 
 ## Major Features
 
-There are 9 features, improvements, and fixes in this regular monthly release. The most notable are:
+There are 9 features, improvements, and fixes in this regular monthly release. The most notable are:
 
 *   Ability to obtain the list of folders contained in Outlook Data Files
-*   Setting for specifying the folder to render from Outlook Data Files
+*   Setting for specifying the folder to render from Outlook Data Files
 *   Improved rendering of CAD and Outlook Data File documents
 
 ## Full List of Issues Covering all Changes in this Release
 
 | Key | Summary | Category |
 | --- | --- | --- |
-| VIEWERNET-1779 | Obtaining the list of folders contained in OST/PST formats  | Feature |
+| VIEWERNET-1779 | Obtaining the list of folders contained in OST/PST formats  | Feature |
 | VIEWERNET-1780 | Setting for rendering specific folder from OST/PST formats | Feature |
 | VIEWERNET-1811 | Ignore empty columns when rendering spreadsheet documents | Feature |
 | VIEWERNET-1220 | Ignore empty string when it passed as path to directory with fonts | Improvement |
-| VIEWERNET-1820 | Improve rendering into HTML for Outlook Data Files with subfolders and empty folders  | Improvement |
+| VIEWERNET-1820 | Improve rendering into HTML for Outlook Data Files with subfolders and empty folders  | Improvement |
 | VIEWERNET-1824 | Set exception localization feature as obsolete | Improvement |
 | VIEWERNET-1828 | Prevent rendering frozen and invisible CAD layers by default | Improvement |
 | VIEWERNET-150 | PDF contains blank page when rendering XPS to PDF | Bug |
@@ -55,7 +55,7 @@ string guid = "sample.pst";
 OutlookDocumentInfoContainer documentInfoContainer = htmlHandler.GetDocumentInfo(guid) as OutlookDocumentInfoContainer;
   
 foreach (string folderName in documentInfoContainer.Folders)
- Console.WriteLine("Folder name: {0}", folderName);  
+ Console.WriteLine("Folder name: {0}", folderName);  
 ```
 
 **Retrieving the list of sub folders from specified folder within Outlook Data File documents (C#)**
@@ -81,7 +81,7 @@ foreach (string folderName in documentInfoContainer.Folders)
 
 ### Rendering messages from specified folder only
 
-By default, messages from all folders (including nested folders) are rendered. When you need to render items form specific folder, set *FolderName* property of the *OutlookOptions* class as shown in example below. This option is available since version 18.12. Please note that you should use the following convention for naming folders and subfolders to specify it in *FolderName* option: **{Parent folder name}\\\\{Sub folder name}**. Thus, if you need to render items from Inbox folder just specify `FolderName = "Inbox";` when you need to render subfolder named "Orion" that resides in a folder named "Urgent" that in turn resides in Inbox set: `FolderName = "Inbox\\Urgent\\Orion".` The following example shows how to use this option for rendering into HTML, image, and PDF:
+By default, messages from all folders (including nested folders) are rendered. When you need to render items form specific folder, set *FolderName* property of the *OutlookOptions* class as shown in example below. This option is available since version 18.12. Please note that you should use the following convention for naming folders and subfolders to specify it in *FolderName* option: **{Parent folder name}\\\\{Sub folder name}**. Thus, if you need to render items from Inbox folder just specify `FolderName = "Inbox";` when you need to render subfolder named "Orion" that resides in a folder named "Urgent" that in turn resides in Inbox set: `FolderName = "Inbox\\Urgent\\Orion".` The following example shows how to use this option for rendering into HTML, image, and PDF:
 
 **Rendering specified folder into image (or HTML) (C#)**
 
@@ -110,7 +110,7 @@ foreach (PageImage page in pages)
 **Rendering specified folder into PDF (C#)**
 
 ```csharp
- // Setup GroupDocs.Viewer config
+ // Setup GroupDocs.Viewer config
 ViewerConfig config = new ViewerConfig();
 config.StoragePath = @"C:\storage";
   
@@ -162,9 +162,9 @@ In version 18.12, following public class members were added, marked as obsolete,
 
 #### GroupDocs.Viewer.Converter.Options.ImageOptions
 
-##### public string FileExtension { get; } property has been set obsolete
+##### public string FileExtension { get; } property has been set obsolete
 
-Use System.IO.Path.GetExtension(string path) method instead.
+Use System.IO.Path.GetExtension(string path) method instead.
 
 #### GroupDocs.Viewer.Converter.Options.OutlookOptions
 
@@ -174,7 +174,7 @@ Use this option to specify Outlook folders.
 
 #### GroupDocs.Viewer.Domain.Containers.DocumentInfoContainer
 
-##### string DocumentType { get; } property has been removed
+##### string DocumentType { get; } property has been removed
 
 This property is obsolete, use FileFormat property instead.
 
@@ -188,11 +188,11 @@ This property is obsolete, use FileFormat property instead.
 
 #### GroupDocs.Viewer.Domain.FileDescription
 
-##### string BaseName { get; } property has been removed
+##### string BaseName { get; } property has been removed
 
 This property is obsolete, to get base name use following code: System.IO.Path.GetFileNameWithoutExtension(fileDescription.Name).
 
-##### string DocumentType { get; } property has been removed
+##### string DocumentType { get; } property has been removed
 
 This property is obsolete, use FileFormat property instead.
 
@@ -206,45 +206,45 @@ This property is obsolete, use FileFormat property instead.
 
 #### GroupDocs.Viewer.Handler.ViewerHtmlHandler
 
-##### public ViewerHtmlHandler(ViewerConfig viewerConfig, CultureInfo cultureInfo) constructor marked as obsolete
+##### public ViewerHtmlHandler(ViewerConfig viewerConfig, CultureInfo cultureInfo) constructor marked as obsolete
 
 This constructor is obsolete and will be removed after version 19.2.
 
-##### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor marked as obsolete
+##### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor marked as obsolete
 
 This constructor is obsolete and will be removed after version 19.2.
 
-##### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor marked as obsolete
+##### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor marked as obsolete
 
 This constructor is obsolete and will be removed after version 19.2.
 
-##### public ViewerHtmlHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor marked as obsolete
+##### public ViewerHtmlHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor marked as obsolete
 
 This constructor is obsolete and will be removed after version 19.2.
 
-##### public ViewerHtmlHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor marked as obsolete
+##### public ViewerHtmlHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor marked as obsolete
 
 This constructor is obsolete and will be removed after version 19.2.
 
 #### GroupDocs.Viewer.Handler.ViewerImageHandler
 
-##### public ViewerImageHandler(ViewerConfig viewerConfig, CultureInfo cultureInfo) constructor marked as obsolete
+##### public ViewerImageHandler(ViewerConfig viewerConfig, CultureInfo cultureInfo) constructor marked as obsolete
 
 This constructor is obsolete and will be removed after version 19.2.
 
-##### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor marked as obsolete
+##### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor marked as obsolete
 
 This constructor is obsolete and will be removed after version 19.2.
 
-##### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor marked as obsolete
+##### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor marked as obsolete
 
 This constructor is obsolete and will be removed after version 19.2.
 
-##### public ViewerImageHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor marked as obsolete
+##### public ViewerImageHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor marked as obsolete
 
 This constructor is obsolete and will be removed after version 19.2.
 
-##### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor marked as obsolete
+##### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor marked as obsolete
 
 This constructor is obsolete and will be removed after version 19.2.
 
@@ -254,12 +254,12 @@ This constructor is obsolete and will be removed after version 19.2.
 
 This interface is obsolete and will be removed after version 19.2.
 
-##### string GetString(string key) method marked as obsolete
+##### string GetString(string key) method marked as obsolete
 
 This method is obsolete and will be removed after version 19.2.
 
 #### GroupDocs.Viewer.Localization.LocalizedStringKeys
 
-##### public static class LocalizedStringKeys marked as obsolete
+##### public static class LocalizedStringKeys marked as obsolete
 
 This class and all of it constants are obsolete and will be removed after version 19.2.

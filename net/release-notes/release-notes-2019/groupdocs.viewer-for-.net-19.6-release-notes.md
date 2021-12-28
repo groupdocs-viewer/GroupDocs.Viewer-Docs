@@ -15,7 +15,7 @@ hideChildren: False
 There are 7 features, improvements and fixes in this regular monthly release. The most notable are:
 
 *   Added support of file formats:
-    *   Microsoft Excel 97-2003 Template (.xlt)
+    *   Microsoft Excel 97-2003 Template (.xlt)
     *   Microsoft Excel Macro-Enabled Template (.xltm)
     *   Microsoft Excel Template (.xltx)
     *   JPEG 2000 Code Stream (.jpc)
@@ -78,7 +78,7 @@ There are 7 features, improvements and fixes in this regular monthly release. Th
 
 {{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Viewer for .NET 19.6. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Viewer which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
 
-#### public static decimal GetConsumptionCredit() method added
+#### public static decimal GetConsumptionCredit() method added
 
 This method returns count of credits which were consumed in case of Metered licensing is used.
 

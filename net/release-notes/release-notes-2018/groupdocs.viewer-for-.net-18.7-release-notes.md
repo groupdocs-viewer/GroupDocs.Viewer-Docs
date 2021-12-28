@@ -34,7 +34,7 @@ There are 9 features, improvements, and fixes in this regular monthly release. T
 
 ## Public API and Backward Incompatible Changes
 
-{{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Viewer for .NET 18.7. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Viewer which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}{{< alert style="warning" >}}IMPORTANT: Please note that due to the change in the structure of GroupDocs.Viewer.Domain.AttachmentBase class, it is necessary to clear the cache after upgrading to the version 18.7 if you were using cache based rendering before and working with document attachments (that may exist in email and PDF document formats){{< /alert >}}
+{{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Viewer for .NET 18.7. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Viewer which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}{{< alert style="warning" >}}IMPORTANT: Please note that due to the change in the structure of GroupDocs.Viewer.Domain.AttachmentBase class, it is necessary to clear the cache after upgrading to the version 18.7 if you were using cache based rendering before and working with document attachments (that may exist in email and PDF document formats){{< /alert >}}
 
 ### List of Changes in v18.7
 
@@ -44,11 +44,11 @@ In the version 18.7 following public class members were added, marked as obsolet
 
 ##### **Public string PageNamePrefix property accepts the empty string**
 
-PageNamePrefix property is used for adding prefixes to output file names in the cache. The default implementation of CacheDataHandler is using "page" as the prefix. Output HTML files are named page1.html, page2.html and so on, resources folders are named page1, page2 and so on, output image files are named page1.png, page2.png and so on. Since the version 18.7, it is possible to set the empty string for PageNamePrefix property, then default CacheDataHandler will name this files and folder correspondingly 1.html, 2.html and so on, resource folder names 1, 2 and so on, output image files 1.png, 2.png and so on.
+PageNamePrefix property is used for adding prefixes to output file names in the cache. The default implementation of CacheDataHandler is using "page" as the prefix. Output HTML files are named page1.html, page2.html and so on, resources folders are named page1, page2 and so on, output image files are named page1.png, page2.png and so on. Since the version 18.7, it is possible to set the empty string for PageNamePrefix property, then default CacheDataHandler will name this files and folder correspondingly 1.html, 2.html and so on, resource folder names 1, 2 and so on, output image files 1.png, 2.png and so on.
 
 ##### Public bool UseCache property compilation is set to fail
 
-This property will be removed in version 18.8, please use EnableCaching property instead.
+This property will be removed in version 18.8, please use EnableCaching property instead.
 
 #### GroupDocs.Viewer.Domain.Attachment
 
@@ -96,12 +96,12 @@ Use this method to clear all the data from cache.
 
 #### GroupDocs.Viewer.Handler.ViewerHtmlHandler
 
-##### public void ClearCache(TimeSpan olderThan) method compilation is set to fail 
+##### public void ClearCache(TimeSpan olderThan) method compilation is set to fail 
 
-Please use *public void ClearCache()* or *public void ClearCache(string guid)* methods instead.
+Please use *public void ClearCache()* or *public void ClearCache(string guid)* methods instead.
 
 #### GroupDocs.Viewer.Handler.ViewerImageHandler
 
-##### public void ClearCache(TimeSpan olderThan) method compilation is set to fail 
+##### public void ClearCache(TimeSpan olderThan) method compilation is set to fail 
 
-Please use *public void ClearCache()* or *public void ClearCache(string guid)* methods instead.
+Please use *public void ClearCache()* or *public void ClearCache(string guid)* methods instead.

@@ -17,7 +17,7 @@ This page contains release notes for [GroupDocs.Viewer for .NET 16.10.0](http://
 There are 1 new feature and 8 improvements and fixes in this regular monthly release. The most notable are: 
 *   Improved rendering Slides documents by removing embedded audios
 *   Improved extracting document information
-*   MOBI file format viewing support
+*   MOBI file format rendering support
 *   Fixed rendering of DWG documents which were rendered into small image or into image with dots
 
 ## Full List of Issues Covering all Changes in this Release
@@ -39,7 +39,7 @@ There are 1 new feature and 8 improvements and fixes in this regular monthly rel
 {{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Viewer for .NET 16.10.0. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Viewer which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
 
 1.  Rename classes which names start with AutoCad to Cad
-    1.  Class *GroupDocs.Viewer.Domain.DocumentTypeFormat* constant *AUTOCAD\_DRAWING\_FILE\_FORMAT* **value changed** to *"CAD Drawing File Format"*
-    2.  Class *GroupDocs.Viewer.Domain.DocumentTypeFormat* constant *AUTOCAD\_DRAWING\_FILE\_FORMAT* **name  changed** to *CAD\_DRAWING\_FILE\_FORMAT*
+    1.  Class *GroupDocs.Viewer.Domain.DocumentTypeFormat* constant *AUTOCAD\_DRAWING\_FILE\_FORMAT* **value changed** to *"CAD Drawing File Format"*
+    2.  Class *GroupDocs.Viewer.Domain.DocumentTypeFormat* constant *AUTOCAD\_DRAWING\_FILE\_FORMAT* **name  changed** to *CAD\_DRAWING\_FILE\_FORMAT*
 2.  Mobi format support
-    1.  Class *GroupDocs.Viewer.Domain.DocumentTypeFormat* **constant added** *public const string MOBIPOCKET = "Mobipocket"*
+    1.  Class *GroupDocs.Viewer.Domain.DocumentTypeFormat* **constant added** *public const string MOBIPOCKET = "Mobipocket"*

@@ -14,9 +14,9 @@ hideChildren: False
 
 There are 19 features, improvements and bug-fixes in this release, most notable are:
 
-*   Starting from 19.10 GroupDocs.Viewer for .NET includes .NET Standard 2.0 version. It has full functionality of .NET Framework version with few limitations (see [.NET Standard 2.0 API Limitations]({{< ref "viewer/net/developer-guide/troubleshooting/known-issues/net-standard-2.0-api-limitations.md" >}}))
-*   Added support of Gnu Zipped File (.gzip) file format 
-*   Added support of StarOffice Calc Spreadsheet (.sxc) file format
+* Starting from 19.10 GroupDocs.Viewer for .NET includes .NET Standard 2.0 version. It has full functionality of .NET Framework version with few limitations (see [.NET Standard 2.0 API Limitations]({{< ref "viewer/net/developer-guide/troubleshooting/known-issues/net-standard-2.0-api-limitations.md" >}}))
+* Added support of Gnu Zipped File (.gzip) file format 
+* Added support of StarOffice Calc Spreadsheet (.sxc) file format
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -48,19 +48,19 @@ Following public class members were added, marked as obsolete, removed or replac
 
 ### GroupDocs.Viewer.Options.LoadOptions
 
-#### public LoadOptions(FileType fileType) constructor has been set as obsolete 
+#### public LoadOptions(FileType fileType) constructor has been set as obsolete 
 
 This constructor is obsolete and will be available until January 2020 (v20.1). Please use the default parameterless constructor instead.
 
-#### public LoadOptions(FileType fileType, string password) constructor has been set as obsolete 
+#### public LoadOptions(FileType fileType, string password) constructor has been set as obsolete 
 
 This constructor is obsolete and will be available until January 2020 (v20.1). Please use the default parameterless constructor instead.
 
-#### public LoadOptions(FileType fileType, string password, Encoding encoding) constructor has been set as obsolete 
+#### public LoadOptions(FileType fileType, string password, Encoding encoding) constructor has been set as obsolete 
 
 This constructor is obsolete and will be available until January 2020 (v20.1). Please use the default parameterless constructor instead.
 
-#### public LoadOptions() constructor has been added
+#### public LoadOptions() constructor has been added
 
 ```csharp
 /// <summary>
@@ -73,7 +73,7 @@ public LoadOptions()
 }
 ```
 
-#### public FileType FileType { get; set; } public setter has been added
+#### public FileType FileType { get; set; } public setter has been added
 
 ```csharp
 /// <summary>
@@ -82,7 +82,7 @@ public LoadOptions()
 public FileType FileType { get; set; }
 ```
 
-#### public string Password { get; set; } public setter has been added
+#### public string Password { get; set; } public setter has been added
 
 ```csharp
 /// <summary>
@@ -91,7 +91,7 @@ public FileType FileType { get; set; }
 public string Password { get; set; }
 ```
 
-#### public Encoding Encoding { get; set; } public setter has been added
+#### public Encoding Encoding { get; set; } public setter has been added
 
 ```csharp
 /// <summary>

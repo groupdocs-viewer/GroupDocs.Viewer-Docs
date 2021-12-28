@@ -14,7 +14,7 @@ hideChildren: False
 
 There are 8 features, improvements, and bug-fixes in this release, most notable are:
 
-*   Added AutoCAD Drawing Template (.dwt) file-format support
+*   Added AutoCAD Drawing Template (.dwt) file-format support
 *   Improved performance when rendering documents in chunks
 *   Improved rendering MS Project documents
 
@@ -37,15 +37,15 @@ following public class members were added, marked as obsolete, removed or replac
 
 ### GroupDocs.Viewer.Viewer
 
-#### public Viewer(String filePath, Common.Func<LoadOptions> getLoadOptions) constructor has been set as obsolete 
+#### public Viewer(String filePath, Common.Func<LoadOptions> getLoadOptions) constructor has been set as obsolete 
 
-This constructor is obsolete and will be available till March 2020 (v20.3). Please switch to constructor that accepts LoadOptions object instead of factory method.
+This constructor is obsolete and will be available till March 2020 (v20.3). Please switch to constructor that accepts LoadOptions object instead of factory method.
 
-#### Viewer(String filePath, Common.Func<LoadOptions> getLoadOptions, ViewerSettings settings) constructor has been set as obsolete 
+#### Viewer(String filePath, Common.Func<LoadOptions> getLoadOptions, ViewerSettings settings) constructor has been set as obsolete 
 
-This constructor is obsolete and will be available till March 2020 (v20.3). Please switch to constructor that accepts LoadOptions object instead of factory method.
+This constructor is obsolete and will be available till March 2020 (v20.3). Please switch to constructor that accepts LoadOptions object instead of factory method.
 
-#### public Viewer(String filePath, LoadOptions loadOptions) constructor has been added
+#### public Viewer(String filePath, LoadOptions loadOptions) constructor has been added
 
 ```csharp
 /// <summary>
@@ -58,7 +58,7 @@ This constructor is obsolete and will be available till March 2020 (v20.3). Ple
 public Viewer(String filePath, LoadOptions loadOptions)
 ```
 
-#### public Viewer(String filePath, LoadOptions loadOptions, ViewerSettings settings) constructor has been added
+#### public Viewer(String filePath, LoadOptions loadOptions, ViewerSettings settings) constructor has been added
 
 ```csharp
 /// <summary>

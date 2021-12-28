@@ -16,7 +16,7 @@ There are 24 improvements and fixes in this regular monthly release. The most no
 
 *   Improved rendering performance.
 *   Improved applying watermark performance.
-*   Improved GetPdfFile method usability and performance.
+*   Improved GetPdfFile method usability and performance.
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -51,7 +51,7 @@ There are 24 improvements and fixes in this regular monthly release. The most no
 
 ## Public API and Backward Incompatible Changes
 
-The PdfFileOptions AddPrintAction property is obsolete in version 3.4.0, please use PdfFileOptions Transformations property and Transformation.AddPringAction enumeration.
+The PdfFileOptions AddPrintAction property is obsolete in version 3.4.0, please use PdfFileOptions Transformations property and Transformation.AddPringAction enumeration.
 
 **Get original file in Pdf format with print action**
 

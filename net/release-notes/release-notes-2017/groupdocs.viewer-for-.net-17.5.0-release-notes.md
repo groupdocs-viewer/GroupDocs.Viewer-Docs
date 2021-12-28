@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This page contains release notes for GroupDocs.Viewer for .NET 17.5.0.{{< /alert >}}
+{{< alert style="info" >}}This page contains release notes for GroupDocs.Viewer for .NET 17.5.0.{{< /alert >}}
 
 ## Major Features
 
@@ -104,7 +104,7 @@ FileContainer fileContainer = imageHandler.GetPdfFile(guid, pdfFileOptions);
 
 **Set output quality when rendering documents into pdf**
 
-When documents are rendered as pdf, sometimes we might be unhappy with a very big size of the resulting pdf, or we might intentionally want to reduce the quality of render result. For this purposes, you can use PdfFileOptions.JpegQuality property as shown in the example below. Valid values for this option are in the range between 1 and 100, where 100 stands for the best quality and biggest size and 1 stands for the lowest quality and lowest size of resulting pdf document. The default value is 90.
+When documents are rendered as pdf, sometimes we might be unhappy with a very big size of the resulting pdf, or we might intentionally want to reduce the quality of render result. For this purposes, you can use PdfFileOptions.JpegQuality property as shown in the example below. Valid values for this option are in the range between 1 and 100, where 100 stands for the best quality and biggest size and 1 stands for the lowest quality and lowest size of resulting pdf document. The default value is 90.
 
 
 
@@ -128,7 +128,7 @@ using (FileContainer container = handler.GetPdfFile(guid, pdfFileOptions))
 }
 ```
 
-##### List of formats affected by PdfFileOptions.JpegQuality property when rendered as PDF
+##### List of formats affected by PdfFileOptions.JpegQuality property when rendered as PDF
 
 | Format Name | Description |
 | --- | --- |
@@ -137,16 +137,16 @@ using (FileContainer container = handler.GetPdfFile(guid, pdfFileOptions))
 | Microsoft Outlook | Affects JPEG images set as a background in email documents msg and eml formats |
 | OpenDocument Formats | Affects JPEG images contained in OpenDocument presentation (odp) andOpenDocument text (odt) formats |
 | Image files | Affects rendering from PSD, TIFF, multi-page TIFF, WebP and DjVu formats |
-| Metafile | Affects rendering from WMF and EMF formats |
-| Microsoft Visio | Affects JPEG images contained inside Microsoft Visio documents |
+| Metafile | Affects rendering from WMF and EMF formats |
+| Microsoft Visio | Affects JPEG images contained inside Microsoft Visio documents |
 
 ### Throw GroupDocsViewerException when File Type can't be Determined for Passed Stream
 
-GroupDocs.Viewer will throw GroupDocsViewerException instead of EndOfStreamException when GroupDocs.Viewer can't determine file type.
+GroupDocs.Viewer will throw GroupDocsViewerException instead of EndOfStreamException when GroupDocs.Viewer can't determine file type.
 
 ### Create Lowercase Name when Rendering Document from Stream
 
-GroupDocs.Viewer will create the lower-case name for the document. Name consists of 32 digits separated by hyphens: 00000000-0000-0000-0000-000000000000 (GUID) and extension e.g. 00000000-0000-0000-0000-000000000000.docx.
+GroupDocs.Viewer will create the lower-case name for the document. Name consists of 32 digits separated by hyphens: 00000000-0000-0000-0000-000000000000 (GUID) and extension e.g. 00000000-0000-0000-0000-000000000000.docx.
 
 ### List of changes in GroupDocs.Viewer for .NET 17.5.0
 
@@ -154,7 +154,7 @@ GroupDocs.Viewer will create the lower-case name for the document. Name consists
 
 ##### Public bool UseCache property added
 
-This property indicates whether the cache is used while obtaining file data.
+This property indicates whether the cache is used while obtaining file data.
 
 #### GroupDocs.Viewer.Converter.Options.RenderOptions
 
@@ -162,19 +162,19 @@ This property indicates whether the cache is used while obtaining file data.
 
 Please use CountPagesToRender property instead.
 
-##### Public List<int> PageNumbersToConvert property obsolete property has been removed
+##### Public List<int> PageNumbersToConvert property obsolete property has been removed
 
 Please use PageNumbersToRender property instead.
 
 #### GroupDocs.Viewer.Domain.Containers.FileTreeContainer
 
-##### Public GroupDocs.Viewer.Domain.Containers.FileTreeContainer obsolete class and class public members have been removed
+##### Public GroupDocs.Viewer.Domain.Containers.FileTreeContainer obsolete class and class public members have been removed
 
-Please use FileListContainer class instead.
+Please use FileListContainer class instead.
 
 #### GroupDocs.Viewer.Domain.Containers.RotatePageContainer
 
-##### Public GroupDocs.Viewer.Domain.Containers.RotatePageContainer obsolete class and class public members removed
+##### Public GroupDocs.Viewer.Domain.Containers.RotatePageContainer obsolete class and class public members removed
 
 To get rotation angles use GetDocumentInfo method after calling RotatePage.
 
@@ -188,19 +188,19 @@ This class has been completely deleted. There no alternative provided for this c
 
 ##### Public GroupDocs.Viewer.Domain.EmailAttachment class and class members are set as obsolete
 
-Please use GroupDocs.Viewer.Domain.Attachment class instead. This class is obsolete and will be removed in version 17.8.0.
+Please use GroupDocs.Viewer.Domain.Attachment class instead. This class is obsolete and will be removed in version 17.8.0.
 
 #### GroupDocs.Viewer.Domain.EmailFileData
 
-##### Public GroupDocs.Viewer.Domain.EmailFileData class and class members are set as obsolete
+##### Public GroupDocs.Viewer.Domain.EmailFileData class and class members are set as obsolete
 
-Please use FileData class instead. This class is obsolete and will be removed in version 17.8.0.
+Please use FileData class instead. This class is obsolete and will be removed in version 17.8.0.
 
 #### GroupDocs.Viewer.Domain.Options.FileTreeOptions
 
-##### Public GroupDocs.Viewer.Domain.Options.FileTreeOptions obsolete class and class public members have been removed
+##### Public GroupDocs.Viewer.Domain.Options.FileTreeOptions obsolete class and class public members have been removed
 
-Please use FileListOptions class instead.
+Please use FileListOptions class instead.
 
 #### GroupDocs.Viewer.Domain.Options.PrintableHtmlOptions
 
@@ -246,7 +246,7 @@ Please, pass guid parameter to RotatePage method of corresponding ViewerHandler 
 
 ###### public RotatePageOptions(string guid, int pageNumber, int rotationAngle)
 
-Two obsolete constructors with guid parameter removed, use overloaded constructor without guid instead and pass guid parameter to RotatePage method of corresponding ViewerHandler.
+Two obsolete constructors with guid parameter removed, use overloaded constructor without guid instead and pass guid parameter to RotatePage method of corresponding ViewerHandler.
 
 {{< alert style="info" >}}To get final rotation angle of the document, please use GetDocumentInfo method of corresponding ViewerHandler class.{{< /alert >}}
 
@@ -262,7 +262,7 @@ This class has been completely removed. There is no substitution provided for th
 
 Please implement AddFile(string guid, Stream content) method instead.
 
-##### Obsolete List<FileDescription> LoadFileTree(FileTreeOptions fileTreeOptions) method removed
+##### Obsolete List<FileDescription> LoadFileTree(FileTreeOptions fileTreeOptions) method removed
 
 Please implement GetEntities(string path) method instead.
 
@@ -270,7 +270,7 @@ Please implement GetEntities(string path) method instead.
 
 ##### Public FileTreeContainer LoadFileTree () method is removed
 
-Please use GetFileList() method instead.
+Please use GetFileList() method instead.
 
 ##### Public FileTreeContainer LoadFileTree(FileTreeOptions fileTreeOptions) method is removed
 
@@ -284,7 +284,7 @@ Please use GetPrintableHtml method of the ViewerHtmlHandler class with guid para
 
 Please use RotatePage method with guid parameter instead.
 
-##### Public void ReorderPage(ReorderPageOptions reorderPageOptions) obsolete method  removed
+##### Public void ReorderPage(ReorderPageOptions reorderPageOptions) obsolete method  removed
 
 Please use ReorderPage method with guid parameter instead
 
@@ -302,6 +302,6 @@ Please use GetPrintableHtml method of the ViewerImageHandler class with guid par
 
 #### GroupDocs.Viewer.Helper.FileDataJsonSerializer
 
-##### Public GroupDocs.Viewer.Helper.FileDataJsonSerializer obsolete class and class public members removed
+##### Public GroupDocs.Viewer.Helper.FileDataJsonSerializer obsolete class and class public members removed
 
 This class has been completely removed. There is no alternative provided for this class.

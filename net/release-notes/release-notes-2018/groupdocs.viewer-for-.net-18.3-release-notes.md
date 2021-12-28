@@ -14,12 +14,12 @@ hideChildren: False
 
 There are 15 new features, improvements, and fixes in this regular monthly release. The most notable are:
 
-*   Added support for following file formats:  
-    *   XLTM (Excel Open XML Macro-Enabled Spreadsheet) 
+*   Added support for following file formats:  
+    *   XLTM (Excel Open XML Macro-Enabled Spreadsheet) 
     *   XLTX (Excel Open XML Spreadsheet Template)
-*   Added support of HtmlOptions.ExcludeFonts for Text (Microsoft Word) document
+*   Added support of HtmlOptions.ExcludeFonts for Text (Microsoft Word) document
 *   Improved rendering Microsoft OneNote documents as HTML
-*   Added support for ShowHiddenSlides option for Open Document Presentation documents
+*   Added support for ShowHiddenSlides option for Open Document Presentation documents
 *   Added option which allows to specify image quality when rendering PDF documents as HTML
 
 ## Full List of Issues Covering all Changes in this Release
@@ -48,7 +48,7 @@ There are 15 new features, improvements, and fixes in this regular monthly relea
 
 ### Image quality when rendering PDF documents as HTML
 
-When rendering PDF documents as HTML, GroupDocs.Viewer creates single image resource which contains all the images from the PDF document page and uses created image as the background for HTML document. Starting from v18.3, new option added to **PdfOptions** class called **ImageQuality** which allows you to control image resource quality. Supported values are **Low*, *Medium** and **High**. Please note that with **Low** value you'll have the best performance and with **High** value, you'll have the best quality but it will slow down rendering. 
+When rendering PDF documents as HTML, GroupDocs.Viewer creates single image resource which contains all the images from the PDF document page and uses created image as the background for HTML document. Starting from v18.3, new option added to **PdfOptions** class called **ImageQuality** which allows you to control image resource quality. Supported values are **Low*, *Medium** and **High**. Please note that with **Low** value you'll have the best performance and with **High** value, you'll have the best quality but it will slow down rendering. 
 
 **How to render PDF document with image quality option**
 
@@ -81,9 +81,9 @@ foreach (PageHtml page in pages)
 
 #### GroupDocs.Viewer.Converter.Options.PdfOptions
 
-##### public ImageQuality ImageQuality { get; set; } property has been added
+##### public ImageQuality ImageQuality { get; set; } property has been added
 
-This property allows specifying image quality when rendering PDF documents as HTML. Supported values are Low, Medium and High. The default value is Low.
+This property allows specifying image quality when rendering PDF documents as HTML. Supported values are Low, Medium and High. The default value is Low.
 
 **How to render document with desired image quality**
 

@@ -44,7 +44,7 @@ There are 19 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-3731|Missing text when rendering PS into PDF|Bug|
 |VIEWERNET-3732|Errors while extracting a text from PDF|Bug|
 
-### Behaviour changes
+### Behavior changes
 
 Since GroupDocs.Viewer 21.11 version if the file extension is wrong, GroupDocs.Viewer will try to detect the actual format and render the file.
 Since GroupDocs.Viewer 21.11 version you can set a resolution for images inside presentations when rendering to HTML:
@@ -59,25 +59,27 @@ Since GroupDocs.Viewer 21.11 version you can set a resolution for images inside 
  }
 ```
 
-Read more information in [How to set a resolution for images when rendering presentations to HTML]({{< ref "viewer/net/developer-guide/advanced-usage/how-to/how-to-set-resolution-for-images-when-rendering-presentations-to-html.md">}}) article.
+Read more information in [Set resolution for images when rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-powerpoint-presentations/how-to-set-resolution-for-images-when-rendering-presentations-to-html.md">}}) article.
 
 ## Public API Changes
 
 ### GroupDocs.Viewer.Common namespace
 
 Removed duplicate delegates in .NET 2.0 assembly from `GroupDocs.Viewer.Common` namespace:
-- public delegate void Action();
-- public delegate void Action<in T1>(T1 arg1);
+
+* `public delegate void Action();`
+* `public delegate void Action<in T1>(T1 arg1);`
 
 Removed duplicate delegates in .NET Framework 4 and .NET Standard 2.0 assemblies from `GroupDocs.Viewer.Common` namespace
-- public delegate void Action();
-- public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
-- public delegate void Action<in T1, in T2, in T3>(T1 arg1, T2 arg2, T3 arg3);
-- public delegate TResult Func<out TResult>();
-- public delegate TResult Func<in T, out TResult>(T arg);
-- public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
-- public delegate TResult Func<in T1, in T2, in T3, out TResult>(T1 arg1, T2 arg2, T3 arg3);
-- public delegate TResult Func<in T1, in T2, in T3, in T4, out TResult>(T1 arg1, T2 arg2, T3 arg3, T4 arg4);
+
+* `public delegate void Action();`
+* `public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);`
+* `public delegate void Action<in T1, in T2, in T3>(T1 arg1, T2 arg2, T3 arg3);`
+* `public delegate TResult Func<out TResult>();`
+* `public delegate TResult Func<in T, out TResult>(T arg);`
+* `public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);`
+* `public delegate TResult Func<in T1, in T2, in T3, out TResult>(T1 arg1, T2 arg2, T3 arg3);`
+* `public delegate TResult Func<in T1, in T2, in T3, in T4, out TResult>(T1 arg1, T2 arg2, T3 arg3, T4 arg4);`
 
 ### GroupDocs.Viewer.Options.BaseViewOptions class
 

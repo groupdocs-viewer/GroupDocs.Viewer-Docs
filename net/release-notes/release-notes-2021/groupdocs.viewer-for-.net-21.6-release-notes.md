@@ -14,7 +14,7 @@ hideChildren: False
 
 There are 23 features, improvements, and bug-fixes in this release, most notable are:
 
-* [Define page size when rendering TXT to HTML]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-text-files/configure-count-of-characters-per-row-and-rows-per-page-to-render.md">}})
+* [Define page size when rendering TXT to HTML]({{< ref "viewer/net/developer-guide/loading-documents/load-password-protected-document.md">}})
 * Fixed rendering of large GIF files
 * Improved rendering Spreadsheet files
 
@@ -79,4 +79,4 @@ public class TextOptions
 }
 ```
 
-See how to use new properties in [Define page size when rendering TXT to HTML]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-text-files/configure-count-of-characters-per-row-and-rows-per-page-to-render.md">}}).
+See how to use new properties in [Define page size when rendering TXT to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/configure-count-of-characters-per-row-and-rows-per-page-to-render.md">}}).

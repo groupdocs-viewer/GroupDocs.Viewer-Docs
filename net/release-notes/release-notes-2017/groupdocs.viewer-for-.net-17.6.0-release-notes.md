@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}This page contains release notes for GroupDocs.Viewer for .NET 17.6.0.{{< /alert >}}
+{{< alert style="info" >}}This page contains release notes for GroupDocs.Viewer for .NET 17.6.0.{{< /alert >}}
 
 ## Major Features
 
@@ -104,7 +104,7 @@ foreach (PageData pageData in documentInfoContainer.Pages)
 
 #### Public bool UsePdf property is set obsolete
 
-This property will be removed in the version 17.8.0, please use ImageOptions.ExtractText or DocumentInfoOptions.ExtractText settings instead, as shown in the example below.
+This property will be removed in the version 17.8.0, please use ImageOptions.ExtractText or DocumentInfoOptions.ExtractText settings instead, as shown in the example below.
 
 **How to get text coordinates in image mode**
 
@@ -168,23 +168,23 @@ foreach (PageData pageData in documentInfoContainer.Pages)
 }
 ```
 
-#### Public bool UsePdf property is set obsolete in GroupDocs.Viewer.Converter.Options.FileDataOptions
+#### Public bool UsePdf property is set obsolete in GroupDocs.Viewer.Converter.Options.FileDataOptions
 
-This property will be removed in the version 17.8.0, please use ExtractText property instead.
+This property will be removed in the version 17.8.0, please use ExtractText property instead.
 
-#### Public bool ExtractText property added in GroupDocs.Viewer.Converter.Options.ImageOptions
+#### Public bool ExtractText property added in GroupDocs.Viewer.Converter.Options.ImageOptions
 
 Please use this setting as a replacement for obsolete ViewerConfig.UsePdf, to render the document into the image with text extraction enabled.
 
-#### Public bool ExtractText property added in GroupDocs.Viewer.Domain.CachedPageDescription
+#### Public bool ExtractText property added in GroupDocs.Viewer.Domain.CachedPageDescription
 
 This property indicates that the cached page will be or has been created with text extraction enabled.
 
-#### Public bool TextExtracted property added in GroupDocs.Viewer.Domain.FileData
+#### Public bool TextExtracted property added in GroupDocs.Viewer.Domain.FileData
 
 This property indicates whether the text with coordinates has been extracted into the file data.
 
-#### Public bool ExactText property added in GroupDocs.Viewer.Domain.Options.DocumentInfoOptions
+#### Public bool ExactText property added in GroupDocs.Viewer.Domain.Options.DocumentInfoOptions
 
 Please use this setting as a replacement for obsolete ViewerConfig.UsePdf, to get the text with coordinates as shown in below example.
 

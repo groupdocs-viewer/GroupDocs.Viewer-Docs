@@ -14,7 +14,7 @@ This page contains release notes for GroupDocs.Viewer for .NET 3.3.0
 
 There are 33 improvements and fixes in this regular monthly release. The most notable are:
 
-*   Introduced option to specify custom fonts path.
+*   Introduced option to specify custom fonts path.
 *   Introduced new methods for working with email attachments.
 *   Introduced new methods for getting info for remotely located document or document in the form of stream.
 *   Introduced ability to clear cache.
@@ -59,8 +59,8 @@ There are 33 improvements and fixes in this regular monthly release. The most no
 | WEB-1531 | Outlines are rendered incorrectly in HTML | Bug |
 | WEB-2320 | Some text extracted from document twice | Bug |
 
-   
- 
+   
+ 
 
 ## Public API and Backward Incompatible Changes
 
@@ -197,7 +197,7 @@ Console.WriteLine("DocumentType: {0}", documentInfo.DocumentType);
 Console.WriteLine("DocumentTypeFormat: {0}", documentInfo.DocumentTypeFormat);
 Console.WriteLine("Extension: {0}", documentInfo.Extension);
 Console.WriteLine("FileType: {0}", documentInfo.FileType);
-Console.WriteLine("Guid: {0}", documentInfo.Guid);
+Console.WriteLine("Guid: {0}", documentInfo
 Console.WriteLine("LastModificationDate: {0}", documentInfo.LastModificationDate);
 Console.WriteLine("Name: {0}", documentInfo.Name);
 Console.WriteLine("PageCount: {0}", documentInfo.Pages.Count);
@@ -235,7 +235,7 @@ Console.WriteLine("DocumentType: {0}", documentInfo.DocumentType);
 Console.WriteLine("DocumentTypeFormat: {0}", documentInfo.DocumentTypeFormat);
 Console.WriteLine("Extension: {0}", documentInfo.Extension);
 Console.WriteLine("FileType: {0}", documentInfo.FileType);
-Console.WriteLine("Guid: {0}", documentInfo.Guid);
+Console.WriteLine("Guid: {0}", documentInfo
 Console.WriteLine("LastModificationDate: {0}", documentInfo.LastModificationDate);
 Console.WriteLine("Name: {0}", documentInfo.Name);
 Console.WriteLine("PageCount: {0}", documentInfo.Pages.Count);
@@ -273,7 +273,7 @@ Console.WriteLine("DocumentType: {0}", documentInfo.DocumentType);
 Console.WriteLine("DocumentTypeFormat: {0}", documentInfo.DocumentTypeFormat);
 Console.WriteLine("Extension: {0}", documentInfo.Extension);
 Console.WriteLine("FileType: {0}", documentInfo.FileType);
-Console.WriteLine("Guid: {0}", documentInfo.Guid);
+Console.WriteLine("Guid: {0}", documentInfo
 Console.WriteLine("LastModificationDate: {0}", documentInfo.LastModificationDate);
 Console.WriteLine("Name: {0}", documentInfo.Name);
 Console.WriteLine("PageCount: {0}", documentInfo.Pages.Count);

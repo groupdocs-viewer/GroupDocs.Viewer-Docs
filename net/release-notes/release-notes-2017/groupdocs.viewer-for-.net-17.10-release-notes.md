@@ -43,7 +43,7 @@ There are 3 new features and 11 improvements and fixes in this regular monthly r
 
 ### How to enable rendering hidden sheets, slides or pages
 
-Microsoft Excel, PowerPoint and Visio documents may contain hidden pages (slides or sheets). By default, hidden pages are not rendered. In order to include them into the rendering set **ShowHiddenPages** property of the **RenderOptions** (ImageOptions or HtmlOptions) class as true as shown in the example below. This new setting has replaced obsolete **CellsOptions.ShowHiddenSheets** and **DiagramOptions.ShowHiddenPages** properties in **RenderOptions** class.
+Microsoft Excel, PowerPoint and Visio documents may contain hidden pages (slides or sheets). By default, hidden pages are not rendered. In order to include them into the rendering set **ShowHiddenPages** property of the **RenderOptions** (ImageOptions or HtmlOptions) class as true as shown in the example below. This new setting has replaced obsolete **CellsOptions.ShowHiddenSheets** and **DiagramOptions.ShowHiddenPages** properties in **RenderOptions** class.
 
 **Show hidden pages for Visio files in image representation**
 
@@ -110,7 +110,7 @@ foreach (PageHtml page in pages)
 {{< alert style="info" >}}This feature is supported starting from 17.10 for rendering the document as PDF and as image with enabled text extraction.{{< /alert >}}
 
   
-GroupDocs.Viewer provides two options which allow controlling worksheets dividing: **CellsOptions.OnePagePerSheet** and **CellsOptions.CountRowsPerPage**. By default **CellsOptions.OnePagePerSheet** is set to true so Viewer will render the whole worksheet into single HTML/Image page or into a single page in PDF document. To enable dividing worksheet into pages **CellsOptions.OnePagePerSheet** should be disabled. In the next code snippet, it is shown how to render document which contains one sheet with 1000 rows into 10 pages.
+GroupDocs.Viewer provides two options which allow controlling worksheets dividing: **CellsOptions.OnePagePerSheet** and **CellsOptions.CountRowsPerPage**. By default **CellsOptions.OnePagePerSheet** is set to true so Viewer will render the whole worksheet into single HTML/Image page or into a single page in PDF document. To enable dividing worksheet into pages **CellsOptions.OnePagePerSheet** should be disabled. In the next code snippet, it is shown how to render document which contains one sheet with 1000 rows into 10 pages.
 
 **Rendering worksheets by dividing into pages**
 
@@ -146,7 +146,7 @@ foreach (PageImage page in pages)
 
 ##### Public bool ShowHiddenSheets is set obsolete
 
-This property will be removed in the version 17.12, please use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead as shown in the example below.
+This property will be removed in the version 17.12, please use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead as shown in the example below.
 
 **Show hidden sheets for Excel files in image representation (since v17.10 C#)**
 
@@ -212,15 +212,15 @@ foreach (PageImage page in pages)
 
 #### GroupDocs.Viewer.Converter.Options.DiagramOptions
 
-##### Public DiagramOptions class is set obsolete
+##### Public DiagramOptions class is set obsolete
 
-This property will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+This property will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Converter.Options.HtmlOptions
 
 ##### Public bool IgnoreResourcePrefixForCss property compilation is set to fail
 
-This property will be removed in the version 17.11.0, please use IgnorePrefixInResources property instead, as shown in the example below.
+This property will be removed in the version 17.11.0, please use IgnorePrefixInResources property instead, as shown in the example below.
 
 **In this example HtmlResourcePrefix option will be applied to resources inside HTML content, but will not be applied inside resources like SVG and CSS.**
 
@@ -234,49 +234,49 @@ htmlOptions.IgnorePrefixInResources = true;
 
 ##### Public bool ShowHiddenPages property is added
 
-This property enables rendering hidden pages, sheets or slides in Microsoft Excel, PowerPoint and Visio documents. It replaces obsolete CellsOptions.ShowHiddenSheets and DiagramOptions.ShowHiddenPages  properties in RenderOptions class.
+This property enables rendering hidden pages, sheets or slides in Microsoft Excel, PowerPoint and Visio documents. It replaces obsolete CellsOptions.ShowHiddenSheets and DiagramOptions.ShowHiddenPages  properties in RenderOptions class.
 
 ##### Public DiagramOptions DiagramOptions is set obsolete
 
-This will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+This will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Domain.CachedDocumentDescription
 
 ##### Public DiagramOptions DiagramOptions is set obsolete
 
-This will  be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+This will  be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Domain.CachedPageDescription
 
 ##### Public DiagramOptions DiagramOptions is set obsolete
 
-This property will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+This property will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Domain.Html.HtmlResource
 
 ##### Public DiagramOptions DiagramOptions is set obsolete
 
-This property will be removed in version 17.12. 
+This property will be removed in version 17.12. 
 
 #### GroupDocs.Viewer.Domain.Options.DocumentInfoOptions
 
 ##### Public bool ShowHiddenPages property is added
 
-This property enables rendering hidden pages, sheets or slides in Microsoft Excel, PowerPoint and Visio documents. It replaces obsolete CellsOptions.ShowHiddenSheets and DiagramOptions.ShowHiddenPages  properties in RenderOptions class.
+This property enables rendering hidden pages, sheets or slides in Microsoft Excel, PowerPoint and Visio documents. It replaces obsolete CellsOptions.ShowHiddenSheets and DiagramOptions.ShowHiddenPages  properties in RenderOptions class.
 
 ##### Public DiagramOptions DiagramOptions is set obsolete
 
-This will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+This will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Domain.Options.PdfFileOptions
 
 ##### Public bool ShowHiddenPages property is added
 
-This property enables rendering hidden pages, sheets or slides in Microsoft Excel, PowerPoint and Visio documents. It replaces obsolete CellsOptions.ShowHiddenSheets and DiagramOptions.ShowHiddenPages  properties in RenderOptions class.
+This property enables rendering hidden pages, sheets or slides in Microsoft Excel, PowerPoint and Visio documents. It replaces obsolete CellsOptions.ShowHiddenSheets and DiagramOptions.ShowHiddenPages  properties in RenderOptions class.
 
 ##### Public DiagramOptions DiagramOptions is set obsolete
 
-This property will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+This property will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Handler.IInputDataHandler
 
@@ -286,7 +286,7 @@ This method is obsolete and has been removed in the current version.
 
 #### GroupDocs.Viewer.Handler.ViewerHtmlHandler
 
-##### Public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore) constructor compilation is set to fail.
+##### Public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore) constructor compilation is set to fail.
 
 This constructor is obsolete and will be removed after 17.11.0. Please use overload without 'fileDataStore' parameter.
 
@@ -296,7 +296,7 @@ This constructor is obsolete and will be removed after 17.11.0. Please use overl
 
 #### GroupDocs.Viewer.Handler.ViewerImageHandler
 
-##### Public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore) constructor compilation is set to fail.
+##### Public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore) constructor compilation is set to fail.
 
 This constructor is obsolete and will be removed after 17.11.0. Please use overload without 'fileDataStore' parameter.
 
@@ -306,8 +306,8 @@ This constructor is obsolete and will be removed after 17.11.0. Please use overl
 
 #### GroupDocs.Viewer.Helper.IFileDataStore
 
-##### Public interface IFileDataStore interface compilation is set to fail.
+##### Public interface IFileDataStore interface compilation is set to fail.
 
 This interface is obsolete and will be removed after 17.11.0.
 
-{{< alert style="info" >}}Rendering documents into HTML from stream does not create external resourcesIn order to save HTML resources (styles, images, and fonts) in separate files with HtmlOptions.IsResourcesEmbedded property set to false, document name should be passed. In the case when we are rendering from the stream, and do not provide document name, before the version 17.10, API was suppressing saving resources separately and has been embedding resources into HTML regardless of IsResourcesEmbedded setting. Since the version 17.10, when document name is not provided, API tries to generate document name from the stream, when that stream is rendered again, API will generate the same name. Try to avoid not passing document name, in cases when document name is known, because API does not guarantee that document type can be detected and that document name will be unique for the stream(in some case, API may generate the same name for two different streams).{{< /alert >}}
+{{< alert style="info" >}}Rendering documents into HTML from stream does not create external resourcesIn order to save HTML resources (styles, images, and fonts) in separate files with HtmlOptions.IsResourcesEmbedded property set to false, document name should be passed. In the case when we are rendering from the stream, and do not provide document name, before the version 17.10, API was suppressing saving resources separately and has been embedding resources into HTML regardless of IsResourcesEmbedded setting. Since the version 17.10, when document name is not provided, API tries to generate document name from the stream, when that stream is rendered again, API will generate the same name. Try to avoid not passing document name, in cases when document name is known, because API does not guarantee that document type can be detected and that document name will be unique for the stream(in some case, API may generate the same name for two different streams).{{< /alert >}}

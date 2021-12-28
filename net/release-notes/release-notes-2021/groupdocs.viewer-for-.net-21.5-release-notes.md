@@ -16,7 +16,7 @@ There are 15 features, improvements, and bug-fixes in this release, most notable
 
 * Support rendering of VCF files that contain contacts list - now VCF with multiple contacts are supported
 * Improve rendering performance for files without header - for CAD files
-* [Optimize output HTML for printing]({{< ref "viewer/net/developer-guide/advanced-usage/how-to/how-to-optimize-output-html-for-printing.md">}})
+* [Optimize output HTML for printing]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/optimize-html-for-printing.md">}})
 * Render spreadsheets similar to Excel (by page breaks) by default
 
 ## Full List of Issues Covering all Changes in this Release

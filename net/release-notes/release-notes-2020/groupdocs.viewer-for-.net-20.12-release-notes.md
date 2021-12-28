@@ -79,7 +79,7 @@ public VisioRenderingOptions Clone()
 
 ### Behavior changes
 
-In this version we've improved viewing of archives - when you use HtmlViewOptions with RenderSinglePage = true and calling the GetViewInfo method you get 1 page in result info:
+In this version we've improved rendering of archives - when you use HtmlViewOptions with RenderSinglePage = true and calling the GetViewInfo method you get 1 page in result info:
 
 ```csharp
 

@@ -40,9 +40,9 @@ There are 11 features, improvements and fixes in this regular monthly release. T
 
 ### GroupDocs.Viewer.Config.ViewerConfig
 
-#### public string LocalesPath property compilation set to fail
+#### public string LocalesPath property compilation set to fail
 
-This property is obsolete and will be removed after version 19.2. GroupDocs.Viewer no longer provides localization supports.
+This property is obsolete and will be removed after version 19.2. GroupDocs.Viewer no longer provides localization supports.
 
 ### GroupDocs.Viewer.Converter.Options.ImageOptions
 
@@ -56,19 +56,19 @@ This property is obsolete and will be removed after version 19.2.
 
 This constructor is obsolete and will be removed after version 19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor has been set as obsolete
+#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor has been set as obsolete
 
 This constructor is obsolete and will be removed after version 19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor has been set as obsolete
+#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor has been set as obsolete
 
 This constructor is obsolete and will be removed after version 19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerHtmlHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been set as obsolete
+#### public ViewerHtmlHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been set as obsolete
 
 This constructor is obsolete and will be removed after version 19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been set as obsolete
+#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been set as obsolete
 
 This constructor is obsolete and will be removed after version 19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
@@ -78,19 +78,19 @@ This constructor is obsolete and will be removed after version 19.3. Please, ins
 
 This constructor is obsolete and will be removed after version 19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor has been set obsolete
+#### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor has been set obsolete
 
 This constructor is obsolete and will be removed after version 19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor has been set obsolete
+#### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor has been set obsolete
 
 This constructor is obsolete and will be removed after version 19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerImageHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been set obsolete
+#### public ViewerImageHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been set obsolete
 
 This constructor is obsolete and will be removed after version 19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been set obsolete
+#### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been set obsolete
 
 This constructor is obsolete and will be removed after version 19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
@@ -98,10 +98,10 @@ This constructor is obsolete and will be removed after version 19.3. Please, ins
 
 #### public interface ILocalizationHandler compilation is set to fail
 
-This interface is obsolete and will be removed after version 19.2. The exception localization feature no longer provided.
+This interface is obsolete and will be removed after version 19.2. The exception localization feature no longer provided.
 
 ### GroupDocs.Viewer.Localization.LocalizedStringKeys
 
 #### public static class LocalizedStringKeys and all its members have been set obsolete
 
-This class and its members are obsolete and will be removed after version 19.2. The exception localization feature no longer provided.
+This class and its members are obsolete and will be removed after version 19.2. The exception localization feature no longer provided.
