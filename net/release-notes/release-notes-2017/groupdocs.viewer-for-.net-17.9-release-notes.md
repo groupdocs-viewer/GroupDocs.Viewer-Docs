@@ -44,9 +44,9 @@ There are 2 new features and 12 improvements and fixes in this regular monthly r
 
 ### Excluding fonts when rendering to HTML
 
-When we are rendering documents into HTML, by default the fonts that are used in the document are added into HTML content. This ensures fonts availability so that you can be pretty sure that the text from the original document will appear similar in the HTML, regardless of whether the fonts are installed on the viewer's device or not. Depending on **IsResourceEmbedded** option of **HtmlOptions** class the fonts are added inline as base64-encoded fonts or as external resources. Embedded fonts increase the size of the rendering result, in order to prevent adding fonts into HTML, set **ExcludeFonts** property of **HtmlOptions** class as true as shown in the example below:
+When we are rendering documents into HTML, by default the fonts that are used in the document are added into HTML content. This ensures fonts availability so that you can be pretty sure that the text from the original document will appear similar in the HTML, regardless of whether the fonts are installed on the viewer's device or not. Depending on **IsResourceEmbedded** option of **HtmlOptions** class the fonts are added inline as base64-encoded fonts or as external resources. Embedded fonts increase the size of the rendering result, in order to prevent adding fonts into HTML, set **ExcludeFonts** property of **HtmlOptions** class as true as shown in the example below:
 
-Use **ExcludeFonts = true** to prevent adding fonts in HTML representations
+Use **ExcludeFonts = true** to prevent adding fonts in HTML representations
 
 
 
@@ -71,13 +71,13 @@ foreach (PageHtml page in pages)
 }
 ```
 
-{{< alert style="info" >}}Please note, that the option for excluding fonts, is available since the version 17.9 and currently works only for email documents. We are planning to extend support for this feature for all document types where it is applicable in the upcoming releases.{{< /alert >}}{{< alert style="info" >}}Please note that, currently, not all document types support adding fonts into HTML, but we are planning to extend this feature to work with every document where it is applicable, in the upcoming releases.{{< /alert >}}
+{{< alert style="info" >}}Please note, that the option for excluding fonts, is available since the version 17.9 and currently works only for email documents. We are planning to extend support for this feature for all document types where it is applicable in the upcoming releases.{{< /alert >}}{{< alert style="info" >}}Please note that, currently, not all document types support adding fonts into HTML, but we are planning to extend this feature to work with every document where it is applicable, in the upcoming releases.{{< /alert >}}
 
 ### Rendering Document into Responsive HTML
 
-{{< alert style="info" >}}Since the version 17.9, this feature is extended to support MS Visio documents, SVG images, MS Word, Open Office Text and Rich Text Format documents.{{< /alert >}}
+{{< alert style="info" >}}Since the version 17.9, this feature is extended to support MS Visio documents, SVG images, MS Word, Open Office Text and Rich Text Format documents.{{< /alert >}}
 
-Set **EnableResponsiveRendering = true** to get responsive html representations.
+Set **EnableResponsiveRendering = true** to get responsive html representations.
 
 
 
@@ -128,7 +128,7 @@ Please note that, currently, this option works for most document types, but ther
 
 ##### Public bool UsePdf obsolete property has been removed
 
-Please use ImageOptions.ExtractText or DocumentInfoOptions.ExtractText  settings instead, as shown in example below.
+Please use ImageOptions.ExtractText or DocumentInfoOptions.ExtractText  settings instead, as shown in example below.
 
 **Get text coordinates in image mode**
 
@@ -193,7 +193,7 @@ foreach (PageData pageData in documentInfoContainer.Pages)
 
 ##### Public bool DeleteAnnotations is set as obsolete
 
-This property is obsolete and will be removed in version 17.12. Please use RenderComments property of the HtmlOptions or ImageOptions class instead.
+This property is obsolete and will be removed in version 17.12. Please use RenderComments property of the HtmlOptions or ImageOptions class instead.
 
 #### GroupDocs.Viewer.Domain.EmailAttachment
 
@@ -225,9 +225,9 @@ using (FileContainer fileContainer = imageHandler.GetFile(attachment))
 
 #### GroupDocs.Viewer.Domain.EmailFileData
 
-##### Public GroupDocs.Viewer.Domain.EmailFileData class and class members have been removed
+##### Public GroupDocs.Viewer.Domain.EmailFileData class and class members have been removed
 
-Please use FileData class instead. 
+Please use FileData class instead. 
 
 #### GroupDocs.Viewer.Domain.FileData
 
@@ -241,4 +241,4 @@ There is no replacement for this property.
 
 This method is obsolete and will be removed in the next version.
 
-{{< alert style="danger" >}}NuGet package name changedThe NuGet package name was changed from groupdocs-viewer-dotnet to GroupDocs.Viewer.{{< /alert >}}{{< alert style="danger" >}}File extension field does not include periodThere is a breaking change in the version 17.9 related to the file extensions, this change is especially relevant to users who have implemented their own custom ICacheDataHandler. All file extensions from now on will come with the leading dot.Following public members are affected:FileExtension property of ImageOptions classExtension property of the AttachmentBase abstract class SupportedDocumentFormats property of the DocumentFormatsContainer classExtension property of the FileDescription classExtension property of DocumentInfoContainer classOutputExtension property of the CachedDocumentDescription and CachedPageDescription classes.{{< /alert >}}
+{{< alert style="danger" >}}NuGet package name changedThe NuGet package name was changed from groupdocs-viewer-dotnet to GroupDocs.Viewer.{{< /alert >}}{{< alert style="danger" >}}File extension field does not include periodThere is a breaking change in the version 17.9 related to the file extensions, this change is especially relevant to users who have implemented their own custom ICacheDataHandler. All file extensions from now on will come with the leading dot.Following public members are affected:FileExtension property of ImageOptions classExtension property of the AttachmentBase abstract class SupportedDocumentFormats property of the DocumentFormatsContainer classExtension property of the FileDescription classExtension property of DocumentInfoContainer classOutputExtension property of the CachedDocumentDescription and CachedPageDescription classes.{{< /alert >}}

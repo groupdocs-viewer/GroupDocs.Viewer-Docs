@@ -39,11 +39,11 @@ There 10 improvements, fixes, and new features in this regular monthly release. 
 
 ### ODG (OpenDocument Graphics) file format support
 
-Since version 17.12, ODG file format is also supported.   
+Since version 17.12, ODG file format is also supported.   
 
 ### Removing cache files of a specific document
 
-A new overload of the ViewerHandler.ClearCache method with guid parameter has been added to remove the cache files of a specific document.
+A new overload of the ViewerHandler.ClearCache method with guid parameter has been added to remove the cache files of a specific document.
 
 
 
@@ -63,7 +63,7 @@ viewerImageHandler.ClearCache(guid);
 
 ### Setting for minifying CSS resources and HTML content
 
-Since the version 17.12 GroupDocs.Viewer API provides a new **EnableMinification** property of the **HtmlOptions** class, that lets you get output content minified. Minification removes comments, extra white-spaces, and other unneeded characters without breaking the content structure. As a result, the page becomes smaller in size and loads faster. The following example demonstrates how to minify output content when rendering MS Word document into HTML.
+Since the version 17.12 GroupDocs.Viewer API provides a new **EnableMinification** property of the **HtmlOptions** class, that lets you get output content minified. Minification removes comments, extra white-spaces, and other unneeded characters without breaking the content structure. As a result, the page becomes smaller in size and loads faster. The following example demonstrates how to minify output content when rendering MS Word document into HTML.
 
 
 
@@ -94,25 +94,25 @@ While these settings will not compress the content as significantly as this migh
 
 #### Details behind minification
 
-The process of minification almost in all cases provides the output that looks identically with original content in all browsers but minified HTML content does not pass strict HTML validation. Here is the list of technics that lay behind minification process:
+The process of minification almost in all cases provides the output that looks identically with original content in all browsers but minified HTML content does not pass strict HTML validation. Here is the list of technics that lay behind minification process:
 
-HTML minification:  
+HTML minification:  
 
 *   Comments (except when they contain IE conditional statements) are completely removed
 *   Conditional comments are compressed
 *   Spaces and line breaks inside the tags and between the tags are removed
-*   Document type declaration is simplified to `<!DOCTYPE html>`, and all HTML tag properties are removed
+*   Document type declaration is simplified to `<!DOCTYPE html>`, and all HTML tag properties are removed
 *   Protocol declarations like http:, https: and javascript: from path values are removed
 *   Multiple spaces between words (except when they occur inside the pre or textarea tag) are replaced with single space
 *   Quotes around tag property values (except inline events) are removed
 *   Default attributes for "script", "style" and "link" tags are removed
-*   Boolean attributes are simplified, therefore `<input type="text" disabled="disabled">` becomes `<input type=text disabled>`
+*   Boolean attributes are simplified, therefore `<input type="text" disabled="disabled">` becomes `<input type=text disabled>`
 
 ### Option to split MS Project documents by time intervals
 
 #### Adjusting Page Size and Time Unit
 
-When you are rendering MS Project documents into an image, HTML or PDF, GroupDocs.Viewer API tries to find optimal output size and time unit, depending on the projects overall length. In case you need to set your own page size or time unit, you can set **ProjectOptions** class properties of corresponding **RenderOptions** (**HtmlOptions** or **ImageOptions**) or **PdfFileOptions** class for rendering into PDF,  as shown in examples below. Time unit refers to smallest unit (days, third of a month or month) used in timescale bar. When the *TimeUnit.Days* is selected you will get the most detailed view of your tasks and when *TimeUni*t.*Month* is selected you will get a more general representation of tasks.
+When you are rendering MS Project documents into an image, HTML or PDF, GroupDocs.Viewer API tries to find optimal output size and time unit, depending on the projects overall length. In case you need to set your own page size or time unit, you can set **ProjectOptions** class properties of corresponding **RenderOptions** (**HtmlOptions** or **ImageOptions**) or **PdfFileOptions** class for rendering into PDF,  as shown in examples below. Time unit refers to smallest unit (days, third of a month or month) used in timescale bar. When the *TimeUnit.Days* is selected you will get the most detailed view of your tasks and when *TimeUni*t.*Month* is selected you will get a more general representation of tasks.
 
 **Setting page size and time unit when rendering MS Project documents (C#)**
 
@@ -169,7 +169,7 @@ Stream pdfFileStream = fileContainer.Stream;
 
 ##### void ClearCache(string guid) overload has been added.
 
-A new overload of ClearCache method aims to clear cache related to the specific document, indicated by guid parameter. Please implement this new overload if you are supplying your custom implementation for the cache data handler. 
+A new overload of ClearCache method aims to clear cache related to the specific document, indicated by guid parameter. Please implement this new overload if you are supplying your custom implementation for the cache data handler. 
 
 #### GroupDocs.Viewer.Handler.ViewerHandler<T>
 

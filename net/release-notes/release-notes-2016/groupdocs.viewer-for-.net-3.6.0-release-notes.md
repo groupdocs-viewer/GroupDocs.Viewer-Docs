@@ -19,7 +19,7 @@ There are 7 new features and 14 improvements and fixes in this regular monthly r
 *   Hide/Show the hidden pages for Visio files
 *   Ability to set default font when rendering Cells and Words documents
 *   Ability to set the encoding standard automatically
-*   LaTeX file format viewing support
+*   LaTeX file format rendering support
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -31,7 +31,7 @@ There are 7 new features and 14 improvements and fixes in this regular monthly r
 | VIEWERNET-639 | Hide/Show the hidden pages for Visio files | New Feature |
 | VIEWERNET-801 | Ability to set default font when rendering Cells documents | New Feature |
 | VIEWERNET-802 | Ability to set default font when rendering Words documents | New Feature |
-| WEB-2073 | LaTeX file format viewing support | New Feature |
+| WEB-2073 | LaTeX file format rendering support | New Feature |
 | VIEWERNET-401 | Improve applying pdf document transformations | Improvement |
 | VIEWERNET-803 | Ability to set the encoding standard automatically | Improvement |
 | VIEWERNET-824 | Cleanup GetDocumentInfo method response | Improvement |
@@ -53,8 +53,8 @@ There are 7 new features and 14 improvements and fixes in this regular monthly r
 
 ### Cleanup GetDocumentInfo method response
 
-*   Class GroupDocs.Viewer.Domain.Containers.DocumentInfoContainer field ContentControls marked as 'obsolete' 
-*   Class GroupDocs.Viewer.Domain.ContentControl marked as 'obsolete' 
+*   Class GroupDocs.Viewer.Domain.Containers.DocumentInfoContainer field ContentControls marked as 'obsolete' 
+*   Class GroupDocs.Viewer.Domain.ContentControl marked as 'obsolete' 
 *   Class GroupDocs.Viewer.Domain.WordsFileData field ContentControls marked as 'obsolete'
 
 ### User can't catch GroupDocsException
@@ -114,28 +114,28 @@ config.DefaultFontName = "Calibri";
 // Setup GroupDocs.Viewer config
 ViewerConfig config = new ViewerConfig();
 config.StoragePath = @"C:\storage";
-  
+  
 // Create image handler
 ViewerImageHandler imageHandler = new ViewerImageHandler(config);
 string guid = "sample.vdx";
-  
+  
 // Set image options to show hidden pages
 ImageOptions options = new ImageOptions();
 options.DiagramOptions.ShowHiddenPages = true;
-  
+  
 DocumentInfoContainer container = imageHandler.GetDocumentInfo(guid);
-  
+  
 foreach (PageData page in container.Pages)
-   Console.WriteLine("Page number: {0}, Page Name: {1}, IsVisible: {2}", page.Number, page.Name, page.IsVisible);
-  
+   Console.WriteLine("Page number: {0}, Page Name: {1}, IsVisible: {2}", page.Number, page.Name, page.IsVisible);
+  
 List<PageImage> pages = imageHandler.GetPages(guid, options);
-  
+  
 foreach (PageImage page in pages)
 {
-   Console.WriteLine("Page number: {0}", page.PageNumber);
-  
-   // Page image stream
-   Stream imageContent = page.Stream;
+   Console.WriteLine("Page number: {0}", page.PageNumber);
+  
+   // Page image stream
+   Stream imageContent = page.Stream;
 }
 
 ```
@@ -148,26 +148,26 @@ foreach (PageImage page in pages)
 // Setup GroupDocs.Viewer config
 ViewerConfig config = new ViewerConfig();
 config.StoragePath = @"C:\storage";
-  
+  
 // Create html handler
 ViewerHtmlHandler htmlHandler = new ViewerHtmlHandler(config);
 string guid = "sample.vdx";
-  
+  
 // Set html options to show grid lines
 HtmlOptions options = new HtmlOptions();
 options.DiagramOptions.ShowHiddenPages = true;
-  
+  
 DocumentInfoContainer container = htmlHandler.GetDocumentInfo(guid);
-  
+  
 foreach (PageData page in container.Pages)
-   Console.WriteLine("Page number: {0}, Page Name: {1}, IsVisible: {2}", page.Number, page.Name, page.IsVisible);
-  
+   Console.WriteLine("Page number: {0}, Page Name: {1}, IsVisible: {2}", page.Number, page.Name, page.IsVisible);
+  
 List<PageHtml> pages = htmlHandler.GetPages(guid, options);
-  
+  
 foreach (PageHtml page in pages)
 {
-   Console.WriteLine("Page number: {0}", page.PageNumber);
-   //Console.WriteLine("Html content: {0}", page.HtmlContent);
+   Console.WriteLine("Page number: {0}", page.PageNumber);
+   //Console.WriteLine("Html content: {0}", page.HtmlContent);
 }
 
 ```

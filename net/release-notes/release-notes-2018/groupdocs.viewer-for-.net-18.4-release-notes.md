@@ -15,8 +15,8 @@ hideChildren: False
 There are 18 new features, improvements, and fixes in this regular monthly release. The most notable are:
 
 *   Added support for following file formats  
-    *   POTX (PowerPoint Open XML Presentation Template) 
-    *   PPTM (PowerPoint Open XML Macro-Enabled Presentation)
+    *   POTX (PowerPoint Open XML Presentation Template) 
+    *   PPTM (PowerPoint Open XML Macro-Enabled Presentation)
     *   EPS (Encapsulated PostScript)
 *   Implemented simple file storage interface
 *   Improved minification process
@@ -52,7 +52,7 @@ There are 18 new features, improvements, and fixes in this regular monthly relea
 
 ### Managing Text Overflow when Rendering Cells Documents to HTML
 
-When cells documents are rendered into HTML, overflowed text inside the cell overlays subsequent cells until it meets non-empty cell. To expand the cell width to fit the overflowed text, set CellsOptions.TextOverflowMode of HtmlOptions, ImageOptions or PdfOptions to TextOverflowMode.AutoFitColumn.
+When cells documents are rendered into HTML, overflowed text inside the cell overlays subsequent cells until it meets non-empty cell. To expand the cell width to fit the overflowed text, set CellsOptions.TextOverflowMode of HtmlOptions, ImageOptions or PdfOptions to TextOverflowMode.AutoFitColumn.
 
 **Setting overflowed text to be hidden when rendering Cells documents**
 
@@ -98,14 +98,13 @@ CSS minification:
 
 ### Rendering Print Area in Cells Documents
 
-Starting from 18.4 GroupDocs.Viewer provides new option *RenderPrintAreaOnly* in *GroupDocs.Viewer.Converter.Options.CellsOptions* class which enables rendering sections of the worksheet(s) defined as [print area](https://support.office.com/en-us/article/set-or-clear-a-print-area-on-a-worksheet-27048af8-a321-416d-ba1b-e99ae2182a7e). GroupDocs.Viewer renders each print area in a worksheet as a separate page.
-
-**Note:** Next example shows how to render print area(s) when rendering as HTML.
+Starting from 18.4 GroupDocs.Viewer provides new option *RenderPrintAreaOnly* in *GroupDocs.Viewer.Converter.Options.CellsOptions* class which enables rendering sections of the worksheet(s) defined as [print area](https://support.office.com/en-us/article/set-or-clear-a-print-area-on-a-worksheet-27048af8-a321-416d-ba1b-e99ae2182a7e). GroupDocs.Viewer renders each print area in a worksheet as a separate page.
 
 **Rendering print area.**
+This example shows how to render print area(s) when rendering to HTML.
 
 ```csharp
- // Setup GroupDocs.Viewer config
+ // Setup GroupDocs.Viewer config
 ViewerConfig config = new ViewerConfig();
 config.StoragePath = @"C:\storage";
  
@@ -127,9 +126,9 @@ foreach (PageHtml page in pages)
 }
 ```
 
-**Note:** Next example shows how to render print area(s) when rendering as the image.
-
 **Rendering print area.**
+
+Next example shows how to render print area(s) when rendering to image.
 
 ```csharp
 // Setup GroupDocs.Viewer config
@@ -154,9 +153,9 @@ foreach (PageImage page in pages)
 }
 ```
 
-**Note:** Next example shows how to render print area(s) when rendering as PDF.
-
 **Rendering print area.**
+
+Next example shows how to render print area(s) when rendering as PDF.
 
 ```csharp
 // Setup GroupDocs.Viewer config
@@ -182,7 +181,7 @@ FileContainer container = imageHandler.GetPdfFile(guid, options);
 
 ### Rendering Hidden Rows and Columns
 
-Starting from 18.4 GroupDocs.Viewer provides two new options *ShowHiddenRows* and *ShowHiddenColumns* in *GroupDocs.Viewer.Converter.Options.CellsOptions* class which enables rendering [hidden rows and columns](https://support.office.com/en-us/article/hide-or-show-rows-or-columns-659c2cad-802e-44ee-a614-dde8443579f8). By default, GroupDocs.Viewer doesn't render hidden rows and columns so this options should be enabled in case you would like to render the hidden content.
+Starting from 18.4 GroupDocs.Viewer provides two new options *ShowHiddenRows* and *ShowHiddenColumns* in *GroupDocs.Viewer.Converter.Options.CellsOptions* class which enables rendering [hidden rows and columns](https://support.office.com/en-us/article/hide-or-show-rows-or-columns-659c2cad-802e-44ee-a614-dde8443579f8). By default, GroupDocs.Viewer doesn't render hidden rows and columns so this options should be enabled in case you would like to render the hidden content.
 
 **Note**: Next example shows how to render hidden rows and columns when rendering as HTML.
 
@@ -270,7 +269,7 @@ Starting from v18.4 GroupDocs.Viewer provides a simple interface to implement cu
 
 #### Amazon S3 File Storage
 
-The next example is based on **IFileStorage** interface which was added in **v18.4** and required [AWSSDK.S3 NuGet package](https://www.nuget.org/packages/AWSSDK.S3/).
+The next example is based on **IFileStorage** interface which was added in **v18.4** and required [AWSSDK.S3 NuGet package](https://www.nuget.org/packages/AWSSDK.S3/).
 
 **Custom file storage implementation**
 
@@ -544,7 +543,7 @@ public class LocalFileStorage : IFileStorage
 
 #### IFileStorage Interface
 
-This interface is an alternative to complex and overloaded ICacheDataHandler and IInputDataHandler interfaces. 
+This interface is an alternative to complex and overloaded ICacheDataHandler and IInputDataHandler interfaces. 
 
 **IFileStorage interface (C#)**
 
@@ -637,9 +636,9 @@ Please use DefaultFontName property of the ImageOptions, HtmlOptions, DocumentIn
 
 #### GroupDocs.Viewer.Converter.Options.CellsOptions
 
-##### public bool RenderPrintAreaOnly { get; set; } property has been added.
+##### public bool RenderPrintAreaOnly { get; set; } property has been added.
 
-This option enables rendering section(s) of a worksheet defined as a print area. 
+This option enables rendering section(s) of a worksheet defined as a print area. 
 
 
 
@@ -647,13 +646,13 @@ This option enables rendering section(s) of a worksheet defined as a print are
 //Init viewer config
 ViewerConfig viewerConfig = new ViewerConfig();
 viewerConfig.StoragePath = "c:\\storage";
- 
+ 
 // Init viewer html or image handler
 ViewerHtmlHandler viewerHtmlHandler = new ViewerHtmlHandler(viewerConfig);
 
 // Set the guid of the document you want to render
 string guid = "with-print-area.xlsx";
- 
+ 
 // Enable rendering print area
 HtmlOptions htmlOptions = new HtmlOptions();
 htmlOptions.CellsOptions.RenderPrintAreaOnly = true;
@@ -661,7 +660,7 @@ htmlOptions.CellsOptions.RenderPrintAreaOnly = true;
 List<PageHtml> pages = viewerHtmlHandler.GetPages(guid, htmlOptions);
 ```
 
-##### public bool ShowHiddenRows { get; set; } property has been added.
+##### public bool ShowHiddenRows { get; set; } property has been added.
 
 This option enables rendering of hidden rows.
 
@@ -671,13 +670,13 @@ This option enables rendering of hidden rows.
 //Init viewer config
 ViewerConfig viewerConfig = new ViewerConfig();
 viewerConfig.StoragePath = "c:\\storage";
- 
+ 
 // Init viewer html or image handler
 ViewerHtmlHandler viewerHtmlHandler = new ViewerHtmlHandler(viewerConfig);
 
 // Set the guid of the document you want to render
 string guid = "with-hidden-rows.xlsx";
- 
+ 
 // Enable rendering hidden rows
 HtmlOptions htmlOptions = new HtmlOptions();
 htmlOptions.CellsOptions.ShowHiddenRows= true;
@@ -685,9 +684,9 @@ htmlOptions.CellsOptions.ShowHiddenRows= true;
 List<PageHtml> pages = viewerHtmlHandler.GetPages(guid, htmlOptions);
 ```
 
-##### public bool ShowHiddenColumns { get; set; } property has been added.
+##### public bool ShowHiddenColumns { get; set; } property has been added.
 
-This option enables rendering of hidden columns. 
+This option enables rendering of hidden columns. 
 
 
 
@@ -695,13 +694,13 @@ This option enables rendering of hidden columns. 
 //Init viewer config
 ViewerConfig viewerConfig = new ViewerConfig();
 viewerConfig.StoragePath = "c:\\storage";
- 
+ 
 // Init viewer html or image handler
 ViewerHtmlHandler viewerHtmlHandler = new ViewerHtmlHandler(viewerConfig);
 
 // Set the guid of the document you want to render
 string guid = "with-hidden-columns.xlsx";
- 
+ 
 // Enable rendering hidden columns
 HtmlOptions htmlOptions = new HtmlOptions();
 htmlOptions.CellsOptions.ShowHiddenColumns= true;
@@ -727,7 +726,7 @@ To get the number of pages, use Count property of pages list
 
 ##### GroupDocs.Viewer.Exception.CacheFileNotFoundException class has been set as obsolete
 
-This exception is obsolete. GroupDocs.Viewer will start throwing System.IO.FileNotFoundException instead of CacheFileNotFoundException in version v18.7 and next versions.
+This exception is obsolete. GroupDocs.Viewer will start throwing System.IO.FileNotFoundException instead of CacheFileNotFoundException in version v18.7 and next versions.
 
 #### GroupDocs.Viewer.Exception.GuidNotSpecifiedException
 
@@ -743,31 +742,31 @@ This exception is obsolete and will be removed in v18.7.
 
 #### GroupDocs.Viewer.Handler.Cache.ICacheDataHandler
 
-#### void ClearCache(TimeSpan olderThan) method has been set as obsolete
+#### void ClearCache(TimeSpan olderThan) method has been set as obsolete
 
 This method is obsolete and will be removed in v18.7.
 
 #### GroupDocs.Viewer.Handler.ViewerHtmlHandler
 
-##### public ViewerImageHandler(IFileStorage fileStorage) constructor has been added
+##### public ViewerImageHandler(IFileStorage fileStorage) constructor has been added
 
 This constructor can be used to pass custom file storage implementation.
 
-##### public ViewerImageHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been added
+##### public ViewerImageHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been added
 
 This constructor can be used to pass custom file storage implementation along with culture information.
 
-##### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage) constructor has been added
+##### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage) constructor has been added
 
 This constructor can be used to pass custom file storage implementation along with Viewer configuration.
 
-##### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been added
+##### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been added
 
 This constructor can be used to pass custom file storage implementation along with Viewer configuration and culture information.
 
-##### public void ClearCache(TimeSpan olderThan) method has been set as obsolete 
+##### public void ClearCache(TimeSpan olderThan) method has been set as obsolete 
 
-Please use *public void ClearCache()* or *public void ClearCache(string guid) * methods instead.
+Please use *public void ClearCache()* or *public void ClearCache(string guid) * methods instead.
 
 **C# (since the v18.4)**
 
@@ -776,16 +775,16 @@ Please use *public void ClearCache()* or *public void ClearCache(string guid)
 ViewerConfig config = new ViewerConfig();
 config.StoragePath = @"C:\storage";
 config.UseCache = true;
- 
+ 
 string guid = "document.docx";
 ViewerHtmlHandler handler = new ViewerHtmlHandler(config);
 
-// Create cache by calling GetPages method
+// Create cache by calling GetPages method
 List<PageHtml> pages = handler.GetPages(guid);
 
 // Clear cache files for specified file 
 handler.ClearCache(guid);
- 
+ 
 // Clear all cache files
 handler.ClearCache();
 ```
@@ -810,25 +809,25 @@ handler.ClearCache(TimeSpan.FromMinutes(1));
 
 #### GroupDocs.Viewer.Handler.ViewerImageHandler
 
-##### public ViewerImageHandler(IFileStorage fileStorage) constructor has been added
+##### public ViewerImageHandler(IFileStorage fileStorage) constructor has been added
 
 This constructor can be used to pass custom file storage implementation.
 
-##### public ViewerImageHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been added
+##### public ViewerImageHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been added
 
 This constructor can be used to pass custom file storage implementation along with culture information.
 
-##### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage) constructor has been added
+##### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage) constructor has been added
 
 This constructor can be used to pass custom file storage implementation along with Viewer configuration.
 
-##### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been added
+##### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been added
 
 This constructor can be used to pass custom file storage implementation along with Viewer configuration and culture information.
 
-##### public void ClearCache(TimeSpan olderThan) method has been set as obsolete 
+##### public void ClearCache(TimeSpan olderThan) method has been set as obsolete 
 
-Please use *public void ClearCache()* or *public void ClearCache(string guid)* methods instead.
+Please use *public void ClearCache()* or *public void ClearCache(string guid)* methods instead.
 
 **C# (since the v18.4)**
 
@@ -837,16 +836,16 @@ Please use *public void ClearCache()* or *public void ClearCache(string guid)
 ViewerConfig config = new ViewerConfig();
 config.StoragePath = @"C:\storage";
 config.UseCache = true;
- 
+ 
 string guid = "document.docx";
 ViewerImageHandler handler = new ViewerImageHandler(config);
 
-// Create cache by calling GetPages method
+// Create cache by calling GetPages method
 List<PageImage> pages = handler.GetPages(guid);
 
 // Clear cache files for specified file 
 handler.ClearCache(guid);
- 
+ 
 // Clear all cache files
 handler.ClearCache();
 ```
@@ -871,7 +870,7 @@ handler.ClearCache(TimeSpan.FromMinutes(1));
 
 #### GroupDocs.Viewer.Storage.IFileStorage
 
-##### public interface IFileStorage interface has been added.
+##### public interface IFileStorage interface has been added.
 
 This interface is an alternative to complex and overloaded ICacheDataHandler and IInputDataHandler interfaces.
 
@@ -1106,9 +1105,9 @@ public class AmazonS3FileStorage : IFileStorage, IDisposable
 
 #### GroupDocs.Viewer.Storage.LocalFileStorage
 
-##### public class LocalFileStorage class has been added.
+##### public class LocalFileStorage class has been added.
 
-This class is an example of how *IFileStorage* interface that can be implemented to work with local files.
+This class is an example of how *IFileStorage* interface that can be implemented to work with local files.
 
 **Custom file storage based on IFileStorage interface**
 

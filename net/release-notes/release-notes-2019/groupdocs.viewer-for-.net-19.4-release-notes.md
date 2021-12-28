@@ -29,11 +29,11 @@ There are 14 features, improvements, and fixes in this regular monthly release. 
 | VIEWERNET-1857 | Rending attachments from password protected zip archives | Improvement |
 | VIEWERNET-23 | Exception: Value does not fall within the expected range | Bug |
 | VIEWERNET-51 | Some characters are missing when rendering PDF as Html | Bug |
-| VIEWERNET-203 | Invalid Printable HTML  for MS Project documents with several pages  | Bug |
+| VIEWERNET-203 | Invalid Printable HTML  for MS Project documents with several pages  | Bug |
 | VIEWERNET-225 | Missing characters when rendering PDF document as HTML | Bug |
 | VIEWERNET-1227 | License is not applied in Unit Test project | Bug |
 | VIEWERNET-1939 | ArchiveDocumentInfoContainer.Folders doesn't return the list of folders | Bug |
-| VIEWERNET-1977 |  Values in the form fields are missing when rendering PDF into HTML | Bug |
+| VIEWERNET-1977 |  Values in the form fields are missing when rendering PDF into HTML | Bug |
 | VIEWERNET-1966 | First page of ODT documents is not rendering | Bug |
 | VIEWERNET-1975 | Metered related exception when License is initialized with other GroupDocs products | Bug |
 
@@ -86,62 +86,62 @@ using (FileContainer fileContainer = imageHandler.GetFile(fileStream, attachment
 
 ### GroupDocs.Viewer.Handler.Cache.ICacheDataHandler
 
-#### public DateTime? GetLastModificationDate method has been removed
+#### public DateTime? GetLastModificationDate method has been removed
 
-This property has been removed. GroupDocs.Viewer will no longer rely on document last modification date while caching or retrieving render results from cache.
+This property has been removed. GroupDocs.Viewer will no longer rely on document last modification date while caching or retrieving render results from cache.
 
 ### GroupDocs.Viewer.Handler.ViewerHtmlHandler
 
 #### public ViewerHtmlHandler(ViewerConfig viewerConfig, CultureInfo cultureInfo) constructor has been removed
 
-This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor has been removed
+#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor has been removed
 
-This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor has been removed
+#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor has been removed
 
-This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerHtmlHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been removed
+#### public ViewerHtmlHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been removed
 
-This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been removed
+#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been removed
 
-This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
 
 ### GroupDocs.Viewer.Handler.ViewerImageHandler
 
 #### public ViewerImageHandler(ViewerConfig viewerConfig, CultureInfo cultureInfo) constructor has been removed
 
-This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor has been removed
+#### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor has been removed
 
-This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor has been removed
+#### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor has been removed
 
-This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerImageHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been removed
+#### public ViewerImageHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been removed
 
-This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been removed
+#### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor has been removed
 
-This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor has been removed. Please, instead, use the constructors that do not have CultureInfo argument.
 
 ### GroupDocs.Viewer.Localization.ILocalizationHandler
 
 #### public interface ILocalizationHandler has been removed
 
-This interface is obsolete and has been removed. The exception localization feature no longer provided.
+This interface is obsolete and has been removed. The exception localization feature no longer provided.
 
 ### GroupDocs.Viewer.Localization.LocalizedStringKeys
 
 #### public static class LocalizedStringKeys and all its members have been removed
 
-This class and its members are obsolete and have been removed. The exception localization feature no longer provided.
+This class and its members are obsolete and have been removed. The exception localization feature no longer provided.

@@ -16,8 +16,8 @@ This page contains release notes for [GroupDocs.Viewer for .NET 16.12.0](http://
 
 There are 2 new features and 9 improvements and fixes in this regular monthly release. The most notable are:
 
-*   WebP (Image format) file format viewing support
-*   OTS (OpenDocument Spreadsheet Template) file format viewing support
+*   WebP (Image format) file format rendering support
+*   OTS (OpenDocument Spreadsheet Template) file format rendering support
 *   Current directory is used as storage path when storage path is not specified in ViewerConfig
 *   Implemented responsive HTML output for Slides documents
 
@@ -31,7 +31,7 @@ There are 2 new features and 9 improvements and fixes in this regular monthly re
 | VIEWERNET-934 | Implement responsive html output for Slides documents | Improvement |
 | VIEWERNET-1027 | Different exception messages for password encrypted Word document | Bug |
 | VIEWERNET-993 | Failed to load SAI image | Bug |
-| VIEWERNET-976 | Large scrollbars when viewing pdf converted to html with embedded resources in IE Edge | Bug |
+| VIEWERNET-976 | Large scrollbars when rendering pdf converted to html with embedded resources in IE Edge | Bug |
 | VIEWERNET-962 | IE Edge displays large scrollbars for generated HTML | Bug |
 | VIEWERNET-953 | Failed to load Tex file from stream | Bug |
 | VIEWERNET-947 | Failed to load XCF file | Bug |
@@ -50,4 +50,4 @@ There are 2 new features and 9 improvements and fixes in this regular monthly re
 
 ###### Public API changes:
 
-class *GroupDocs.Viewer.Domain.DocumentTypeFormat* new constant added *public const string APPLE\_MAIL = "Apple Mail";*
+class *GroupDocs.Viewer.Domain.DocumentTypeFormat* new constant added *public const string APPLE\_MAIL = "Apple Mail";*

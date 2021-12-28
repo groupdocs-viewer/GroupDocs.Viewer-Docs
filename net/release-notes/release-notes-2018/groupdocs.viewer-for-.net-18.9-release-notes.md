@@ -14,10 +14,10 @@ hideChildren: False
 
 There are 12 features, improvements, and fixes in this regular monthly release. The most notable are:
 
-*    Added following file formats support
+*    Added following file formats support
     *   Computer Graphics Metafile (CGM)
-    *   Microsoft Outlook Personal Storage Table (PST)
-    *   Microsoft Outlook Offline Storage Table (OST)
+    *   Microsoft Outlook Personal Storage Table (PST)
+    *   Microsoft Outlook Offline Storage Table (OST)
 *   Added support of rendering colored CAD drawings
 *   Added support of rendering Microsoft Project documents as HTML with embedded resources
 
@@ -48,7 +48,7 @@ MS Project documents can be of the various length. In some cases, it might be co
 
 #### How to get overall length of MS Project document
 
-The overall length of MS Project document can be determined by the start and end date values returned from GetDocumentInfo of the ViewerHandler class as shown in the example below. 
+The overall length of MS Project document can be determined by the start and end date values returned from GetDocumentInfo of the ViewerHandler class as shown in the example below. 
 
 **Obtaining the overall length of MS Project document**
 
@@ -137,11 +137,11 @@ This property is used for setting Outlook Data File document (PST/OST) rendering
 
 #### GroupDocs.Viewer.Domain.Containers.DocumentInfoContainer
 
-##### string FileFormat { get; } property added
+##### string FileFormat { get; } property added
 
 Gets the file format e.g. "Microsoft Word".
 
-##### string DocumentType { get; } property marked as obsolete
+##### string DocumentType { get; } property marked as obsolete
 
 This property is obsolete and will be removed after v18.11. Use FileFormat property instead.
 
@@ -161,15 +161,15 @@ This class represents a container for MS Project document description.
 
 #### GroupDocs.Viewer.Domain.FileDescription
 
-##### string FileFormat { get; } property added
+##### string FileFormat { get; } property added
 
 Gets the file format e.g. "Microsoft Word".
 
-##### string BaseName { get; } property marked as obsolete
+##### string BaseName { get; } property marked as obsolete
 
 This property is obsolete and will be removed after v18.11. To get base name use following code: System.IO.Path.GetFileNameWithoutExtension(fileDescription.Name).
 
-##### string DocumentType { get; } property marked as obsolete
+##### string DocumentType { get; } property marked as obsolete
 
 This property is obsolete and will be removed after v18.11. Use FileFormat property instead.
 
@@ -199,4 +199,4 @@ This property is used for setting Outlook Data File document (PST/OST) rendering
 
 ##### GroupDocs.Viewer.Domain.ProjectFileData class has been added
 
-This class extends FileData class and contains properties specific to MS Project documents.
+This class extends FileData class and contains properties specific to MS Project documents.

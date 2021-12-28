@@ -13,13 +13,13 @@ hideChildren: False
 ## Major Features
 
 There are 4 new features and 16 improvements and fixes in this regular monthly release. The most notable are:  
- 
+ 
 
 *   Save HTML resources to cache without saving them to local disc
 *   Improve rendering Pdf Dynamic XFA Forms
 *   Ability to set default font when rendering Diagram documents
-*   EMF and DICOM file format viewing support
-*   Fixed HTML watermark rendering 
+*   EMF and DICOM file format rendering support
+*   Fixed HTML watermark rendering 
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -51,18 +51,18 @@ There are 4 new features and 16 improvements and fixes in this regular monthly r
 {{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Viewer for .NET 3.7.0. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Viewer which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
 
 1.  Mark CachedPageDescription redundant constructor as Obsolete
-    1.  Class GroupDocs.Viewer.Domain.CachedPageDescription constructor public CachedPageDescription(string guid, CacheFileType cacheFileType) marked as 'obsolete'
-2.  Improve CAD files rendering 
-    1.  Class GroupDocs.Viewer.Domain.DocumentTypeName constant public const string Autocad = "Autocad"; changed to public const string CAD = "CAD";
+    1.  Class GroupDocs.Viewer.Domain.CachedPageDescription constructor public CachedPageDescription(string guid, CacheFileType cacheFileType) marked as 'obsolete'
+2.  Improve CAD files rendering 
+    1.  Class GroupDocs.Viewer.Domain.DocumentTypeName constant public const string Autocad = "Autocad"; changed to public const string CAD = "CAD";
 3.  Update public classes fields access modifiers.
-    1.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_CORRUPTED\_OR\_DAMAGED\_FILE
-    2.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_FILE\_TYPE\_NOT\_SUPPORTED
-    3.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_INVALID\_PASSWORD
-    4.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_PASSWORD\_PROTECTED\_FILE
-    5.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_STORAGE\_PATH\_NOT\_SPECIFIED
-    6.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_CACHE\_FILE\_NOT\_FOUND
-    7.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_GUID\_NOT\_SPECIFIED
-    8.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_TRANSFORMATION\_FAILED\_PAGE\_NOT\_EXIST
+    1.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_CORRUPTED\_OR\_DAMAGED\_FILE
+    2.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_FILE\_TYPE\_NOT\_SUPPORTED
+    3.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_INVALID\_PASSWORD
+    4.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_PASSWORD\_PROTECTED\_FILE
+    5.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_STORAGE\_PATH\_NOT\_SPECIFIED
+    6.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_CACHE\_FILE\_NOT\_FOUND
+    7.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_GUID\_NOT\_SPECIFIED
+    8.  Class GroupDocs.Viewer.Localization.LocalizedStringKeys new contant EXC\_TMPL\_TRANSFORMATION\_FAILED\_PAGE\_NOT\_EXIST
 
 ### Set default font name
 

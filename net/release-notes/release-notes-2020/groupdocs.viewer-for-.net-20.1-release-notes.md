@@ -15,7 +15,7 @@ hideChildren: False
   
 There are 5 features, improvements, and bug-fixes in this release, most notable are:
 
-*   Added OpenDocument Graphic Template (.otg) file-format support
+*   Added OpenDocument Graphic Template (.otg) file-format support
 *   Improved rendering presentations to responsive HTML
 *   Removed legacy API
 
@@ -24,7 +24,7 @@ There are 5 features, improvements, and bug-fixes in this release, most notable 
 | Key | Summary | Category |
 | --- | --- | --- |
 | VIEWERNET-2045 | Add OpenDocument Graphic Template (.otg) file format support | Feature |
-| VIEWERNET-2240 | Improve rendering presentations to responsive HTML  | Improvement |
+| VIEWERNET-2240 | Improve rendering presentations to responsive HTML  | Improvement |
 | VIEWERNET-2276 | MSI package is not signed | Bug |
 | VIEWERNET-2277 | Resource loading timeout is not working for some files | Bug |
 | VIEWERNET-2282 | Parameter is not valid exception when resizing image | Bug |
@@ -43,10 +43,10 @@ We have removed all public types form GroupDocs.Viewer.Legacy namespace.
 
 #### GroupDocs.Viewer.Options.LoadOptions
 
-#### public LoadOptions(FileType fileType, string password) constructor has been removed
+#### public LoadOptions(FileType fileType, string password) constructor has been removed
 
 Please use the default parameterless constructor instead.
 
-#### public LoadOptions(FileType fileType, string password, Encoding encoding) constructor has been removed
+#### public LoadOptions(FileType fileType, string password, Encoding encoding) constructor has been removed
 
 Please use the default parameterless constructor instead.

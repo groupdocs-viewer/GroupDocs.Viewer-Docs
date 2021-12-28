@@ -17,9 +17,9 @@ This page contains release notes for [GroupDocs.Viewer for .NET 16.11.0](http://
 There are 2 new features and 15 improvements and fixes in this regular monthly release. The most notable are:
 
 *   Ability to set default font when rendering Email documents
-*   OTP (OpenDocument Presentation Template) file format viewing support
-*   Improved public API of ViewerConfig class and IInputDataHandler interface
-*   When viewing two documents in one browser page CSS classes are not overriding
+*   OTP (OpenDocument Presentation Template) file format rendering support
+*   Improved public API of ViewerConfig class and IInputDataHandler interface
+*   When rendering two documents in one browser page CSS classes are not overriding
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -71,19 +71,19 @@ config.DefaultFontName = "Calibri";
 ### Improved Public APIs
 
 1.  Improve public API of ViewerConfig classPublic API changes:
-    1.  Class *GroupDocs.Viewer.Config.ViewerConfig* property *public string TempFolderName* marked as 'Obsolete'
-    2.  Class *GroupDocs.Viewer.Config.ViewerConfig* property *public string TempPath* marked as 'Obsolete'
+    1.  Class *GroupDocs.Viewer.Config.ViewerConfig* property *public string TempFolderName* marked as 'Obsolete'
+    2.  Class *GroupDocs.Viewer.Config.ViewerConfig* property *public string TempPath* marked as 'Obsolete'
 2.  Improve public API of IInputDataHandler interface Public API changes:
-    1.  Class *ViewerImageHandler/ViewerHtmlHandler* method *FileListContainer GetFileList()* added
-    2.  Class\_ViewerImageHandler/ViewerHtmlHandler\_ method *GetFileList(FileListOptions fileListOptions)* added
-    3.  Class *ViewerImageHandler/ViewerHtmlHandler* method *FileTreeContainer LoadFileTree()* marked as 'Obsolete'
-    4.  Class *ViewerImageHandler/ViewerHtmlHandler* method *FileTreeContainer LoadFileTree(FileTreeOptions fileTreeOptions)* marked as 'Obsolete'
-    5.  Class *GroupDocs.Viewer.Domain.Containers.FileTreeContainer* marked as 'Obsolete'
-    6.  Class *GroupDocs.Viewer.Domain.Options.FileTreeOptions* marked as 'Obsolete'
-    7.  Interface *GroupDocs.Viewer.Handler.Input.IInputDataHandler* method *SaveDocument(CachedDocumentDescription cachedDocumentDescription, Stream documentStream)* marked as 'Obsolete'
-    8.  Interface *GroupDocs.Viewer.Handler.Input.IInputDataHandler* method *LoadFileTree(FileTreeOptions fileTreeOptions)* marked as 'Obsolete'
-    9.  Interface *GroupDocs.Viewer.Handler.Input.IInputDataHandler* method *void AddFile(string guid, Stream content)* added
-    10.  Interface *GroupDocs.Viewer.Handler.Input.IInputDataHandler* method *List<FileDescription> GetEntities(string path)* added
+    1.  Class *ViewerImageHandler/ViewerHtmlHandler* method *FileListContainer GetFileList()* added
+    2.  Class\_ViewerImageHandler/ViewerHtmlHandler\_ method *GetFileList(FileListOptions fileListOptions)* added
+    3.  Class *ViewerImageHandler/ViewerHtmlHandler* method *FileTreeContainer LoadFileTree()* marked as 'Obsolete'
+    4.  Class *ViewerImageHandler/ViewerHtmlHandler* method *FileTreeContainer LoadFileTree(FileTreeOptions fileTreeOptions)* marked as 'Obsolete'
+    5.  Class *GroupDocs.Viewer.Domain.Containers.FileTreeContainer* marked as 'Obsolete'
+    6.  Class *GroupDocs.Viewer.Domain.Options.FileTreeOptions* marked as 'Obsolete'
+    7.  Interface *GroupDocs.Viewer.Handler.Input.IInputDataHandler* method *SaveDocument(CachedDocumentDescription cachedDocumentDescription, Stream documentStream)* marked as 'Obsolete'
+    8.  Interface *GroupDocs.Viewer.Handler.Input.IInputDataHandler* method *LoadFileTree(FileTreeOptions fileTreeOptions)* marked as 'Obsolete'
+    9.  Interface *GroupDocs.Viewer.Handler.Input.IInputDataHandler* method *void AddFile(string guid, Stream content)* added
+    10.  Interface *GroupDocs.Viewer.Handler.Input.IInputDataHandler* method *List<FileDescription> GetEntities(string path)* added
 
 ### Get file list
 

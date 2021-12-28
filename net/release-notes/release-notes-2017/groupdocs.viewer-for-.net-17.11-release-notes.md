@@ -49,7 +49,7 @@ Since the version 17.11, there is a new overload for RotatePage method of the Vi
 **Rotate 3rd hidden page of the document by 90 deg (C#)**
 
 ```csharp
- // Setup GroupDocs.Viewer config
+ // Setup GroupDocs.Viewer config
 ViewerConfig config = new ViewerConfig();
 config.StoragePath = @"C:\storage";
  config.UseCache = true;
@@ -115,61 +115,61 @@ List<PageHtml> pages = htmlHandler.GetPages(guid, htmlOptions);
 
 ##### Public bool ShowHiddenSheets property compilation is set to fail
 
-This property is no longer active and will be removed in the version 17.12, please use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+This property is no longer active and will be removed in the version 17.12, please use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Converter.Options.DiagramOptions
 
-##### Public DiagramOptions class compilation is set to fail
+##### Public DiagramOptions class compilation is set to fail
 
-This class will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+This class will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Converter.Options.HtmlOptions
 
 ##### Public bool IgnoreResourcePrefixForCss property has been removed
 
-This property has been removed, please use IgnorePrefixInResources property instead.
+This property has been removed, please use IgnorePrefixInResources property instead.
 
 #### GroupDocs.Viewer.Converter.Options.PdfOptions
 
 ##### Public bool DeleteAnnotations property compilation is set to fail
 
-This property is no longer active and will be removed in version 17.12. Please use RenderComments property of the HtmlOptions or ImageOptions class instead.
+This property is no longer active and will be removed in version 17.12. Please use RenderComments property of the HtmlOptions or ImageOptions class instead.
 
 #### GroupDocs.Viewer.Converter.Options.RenderOptions
 
 ##### Public DiagramOptions.ShowHiddenPages property compilation is set to fail
 
-This property is no longer active and will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+This property is no longer active and will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Domain.CachedDocumentDescription
 
 ##### Public DiagramOptions.ShowHiddenPages property compilation is set to fail
 
-This property is no longer active and will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+This property is no longer active and will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Domain.CachedPageDescription
 
 ##### Public DiagramOptions.ShowHiddenPages property compilation is set to fail
 
-This property is no longer active and will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+This property is no longer active and will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Domain.Html.HtmlResource
 
 ##### Public DiagramOptions.ShowHiddenPages property compilation is set to fail
 
-This property is no longer active and will be removed in version 17.12. 
+This property is no longer active and will be removed in version 17.12. 
 
 #### GroupDocs.Viewer.Domain.Options.DocumentInfoOptions
 
 ##### Public DiagramOptions.ShowHiddenPages property compilation is set to fail
 
-This property is no longer active and will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+This property is no longer active and will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Domain.Options.PdfFileOptions
 
 #### Public DiagramOptions.ShowHiddenPages property compilation is set to fail
 
-This property is no longer active and will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions, HtmlOptions or PdfFileOptions) class instead.
+This property is no longer active and will be removed in version 17.12. To enable rendering hidden pages use ShowHiddenPages property of the RenderOptions (ImageOptions, HtmlOptions or PdfFileOptions) class instead.
 
 #### GroupDocs.Viewer.Handler.ViewerHandler
 
@@ -179,17 +179,17 @@ This property is no longer active and will be removed in version 17.12. To enab
 
 #### GroupDocs.Viewer.Handler.ViewerHtmlHandler
 
-##### Public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore) constructor has been removed
+##### Public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore) constructor has been removed
 
 Please use overload without 'fileDataStore' parameter.
 
-##### Public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore, CultureInfo cultureInfo) constructor has been removed
+##### Public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore, CultureInfo cultureInfo) constructor has been removed
 
 Please use overload without 'fileDataStore' parameter.
 
 #### GroupDocs.Viewer.Handler.ViewerImageHandler
 
-##### Public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore) constructor has been removed
+##### Public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore) constructor has been removed
 
 This constructor is obsolete and has been removed. Please use overload without 'fileDataStore' parameter.
 
@@ -199,8 +199,8 @@ This constructor is obsolete and has been removed. Please use overload without '
 
 #### GroupDocs.Viewer.Helper.IFileDataStore
 
-##### Public interface IFileDataStore interface has been removed
+##### Public interface IFileDataStore interface has been removed
 
 This interface has been removed. If you need your own implementation for storing file data, please refer to the documentation and implement the ICacheDataHandler interface instead.
 
-{{< alert style="info" >}}Starting from 17.11 caching based on render options feature was disabled. It is recommended to clear your cache folder after update to 17.11 in the case when default implementation of ICacheDataHandler shipped with GroupDocs.Viewer for .NET is used. {{< /alert >}}
+{{< alert style="info" >}}Starting from 17.11 caching based on render options feature was disabled. It is recommended to clear your cache folder after update to 17.11 in the case when default implementation of ICacheDataHandler shipped with GroupDocs.Viewer for .NET is used. {{< /alert >}}

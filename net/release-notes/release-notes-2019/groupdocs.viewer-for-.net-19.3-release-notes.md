@@ -15,8 +15,8 @@ hideChildren: False
 There are 10 features, improvements, and fixes in this regular monthly release. The most notable are:
 
 *   Added Cs and Vb file formats support
-*   Feature for detecting printing restriction in PDF documents, and the ability to print such documents
-*   Ability to specify owner password, user password, and permissions when rendering into PDF
+*   Feature for detecting printing restriction in PDF documents, and the ability to print such documents
+*   Ability to specify owner password, user password, and permissions when rendering into PDF
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -37,9 +37,9 @@ There are 10 features, improvements, and fixes in this regular monthly release. 
 
 ### GroupDocs.Viewer.Config.ViewerConfig
 
-#### public string LocalesPath property has been removed 
+#### public string LocalesPath property has been removed 
 
-This property has been removed. GroupDocs.Viewer no longer provides localization supports.
+This property has been removed. GroupDocs.Viewer no longer provides localization supports.
 
 ### GroupDocs.Viewer.Converter.Options.ArchiveOptions
 
@@ -79,7 +79,7 @@ ArchiveOptions class allows specifying archive documents specific rendering opti
 
 ### GroupDocs.Viewer.Domain.CachedPageDescription
 
- 
+ 
 
 #### public ArchiveOptions ArchiveOptions property has been added
 
@@ -91,9 +91,9 @@ ArchiveOptions class allows specifying archive documents specific rendering opti
 
 ### GroupDocs.Viewer.Domain.Containers.PdfDocumentInfoContainer
 
- 
+ 
 
-#### public class PdfDocumentInfoContainer class has been added
+#### public class PdfDocumentInfoContainer class has been added
 
 ```csharp
 /// <summary>
@@ -131,13 +131,13 @@ ViewerImageHandler imageHandler = new ViewerImageHandler(viewerConfig);
 // Retrieve document information
 string guid = "document.pdf";
 PdfDocumentInfoContainer documentInfo = imageHandler.GetDocumentInfo(guid) as PdfDocumentInfoContainer;
- 
+ 
 bool printingAllowed = documentInfo.PrintingAllowed;
 ```
 
 ### GroupDocs.Viewer.Domain.Html.HtmlResource
 
- 
+ 
 
 #### public ArchiveOptions ArchiveOptions property has been added
 
@@ -145,9 +145,9 @@ ArchiveOptions class allows specifying archive documents specific rendering opti
 
 ### GroupDocs.Viewer.Domain.Options
 
- 
+ 
 
-#### public enum PdfFilePermissions enumeration has been added
+#### public enum PdfFilePermissions enumeration has been added
 
 ```csharp
 /// <summary>
@@ -183,7 +183,7 @@ public enum PdfFilePermissions
 }
 ```
 
-#### public class PdfFileSecurity class has been added
+#### public class PdfFileSecurity class has been added
 
 ```csharp
 /// <summary>
@@ -225,7 +225,7 @@ public class PdfFileSecurity
 }
 ```
 
-#### PdfFileSecurity PdfFileSecurity { get; set; } property has been added to PdfFileOptions class
+#### PdfFileSecurity PdfFileSecurity { get; set; } property has been added to PdfFileOptions class
 
 ```csharp
 /// <summary>
@@ -247,11 +247,11 @@ public PdfFileSecurity PdfFileSecurity { get; set; }
 
 #### Specify owner password, user password and permissions when rendering into PDF
 
-Since the version 19.3 GroupDocs.Viewer for .NET API enables to specify owner password, user password and PDF file permissions when rendering into PDF. API provides following settings: 
+Since the version 19.3 GroupDocs.Viewer for .NET API enables to specify owner password, user password and PDF file permissions when rendering into PDF. API provides following settings: 
 
-*   **Owner password** - Set owner password if password required to change the document permissions.
-*   **User password** - Set user password if password required when opening a document.
-*   **PDF file permissions** - Set permissions to allow or deny printing, modification and data extraction.
+*   **Owner password** - Set owner password if password required to change the document permissions.
+*   **User password** - Set user password if password required when opening a document.
+*   **PDF file permissions** - Set permissions to allow or deny printing, modification and data extraction.
 
 Following example demonstrates how to render document into PDF and set password for opening, password to change document permissions and permissions to deny printing
 
@@ -264,14 +264,14 @@ viewerConfig.StoragePath = @"C:\storage";
 
 // Create image handler
 ViewerImageHandler imageHandler = new ViewerImageHandler(viewerConfig);
- 
+ 
 // Create PDF file security
 string ownerPassword = "owner password";
 string userPassword = "user password";
 PdfFilePermissions denyPrinting = PdfFilePermissions.All ^ PdfFilePermissions.Printing;
  
 PdfFileSecurity pdfFileSecurity = new PdfFileSecurity(ownerPassword, userPassword, denyPrinting);
- 
+ 
 // Create options
 PdfFileOptions pdfFileOptions = new PdfFileOptions();
 pdfFileOptions.PdfFileSecurity = pdfFileSecurity;
@@ -283,15 +283,15 @@ FileContainer fileContainer = imageHandler.GetPdfFile(guid, pdfFileOptions);
 
 ### GroupDocs.Viewer.Domain.Options.DocumentInfoOptions
 
- 
+ 
 
 #### public ArchiveOptions ArchiveOptions property has been added
 
-ArchiveOptions class allows specifying archive documents specific rendering options as explained in the article (given at the end of the page)
+ArchiveOptions class allows specifying archive documents specific rendering options as explained in the article (given at the end of the page)
 
 ### GroupDocs.Viewer.Domain.Options.PdfFileOptions
 
- 
+ 
 
 #### public ArchiveOptions ArchiveOptions property has been added.
 
@@ -299,81 +299,81 @@ ArchiveOptions class allows specifying archive documents specific rendering opti
 
 ### GroupDocs.Viewer.Handler.Cache.ICacheDataHandler
 
- 
+ 
 
-#### public DateTime? GetLastModificationDate method  compilation is set to fail 
+#### public DateTime? GetLastModificationDate method  compilation is set to fail 
 
-This property is obsolete and will be removed after v19.3. GroupDocs.Viewer will no longer rely on document last modification date while caching or retrieving render results from cache.
+This property is obsolete and will be removed after v19.3. GroupDocs.Viewer will no longer rely on document last modification date while caching or retrieving render results from cache.
 
 ### GroupDocs.Viewer.Handler.ViewerHtmlHandler
 
- 
+ 
 
 #### public ViewerHtmlHandler(ViewerConfig viewerConfig, CultureInfo cultureInfo) constructor compilation is set to fail
 
-This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor compilation is set to fail
+#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor compilation is set to fail
 
-This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor compilation is set to fail
+#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor compilation is set to fail
 
-This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerHtmlHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor compilation is set to fail
+#### public ViewerHtmlHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor compilation is set to fail
 
-This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor compilation is set to fail
+#### public ViewerHtmlHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor compilation is set to fail
 
-This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
 ### GroupDocs.Viewer.Handler.ViewerImageHandler
 
- 
+ 
 
 #### public ViewerImageHandler(ViewerConfig viewerConfig, CultureInfo cultureInfo) constructor compilation is set to fail
 
-This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor compilation is set to fail
+#### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, CultureInfo cultureInfo) constructor compilation is set to fail
 
-This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor compilation is set to fail
+#### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, CultureInfo cultureInfo) constructor compilation is set to fail
 
-This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerImageHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor compilation is set to fail
+#### public ViewerImageHandler(IFileStorage fileStorage, CultureInfo cultureInfo) constructor compilation is set to fail
 
-This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
-#### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor compilation is set to fail
+#### public ViewerImageHandler(ViewerConfig viewerConfig, IFileStorage fileStorage, CultureInfo cultureInfo) constructor compilation is set to fail
 
-This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
+This constructor is obsolete and will be removed after v19.3. Please, instead, use the constructors that do not have CultureInfo argument.
 
 ### GroupDocs.Viewer.Localization.ILocalizationHandler
 
- 
+ 
 
 #### public interface ILocalizationHandler compilation is set to fail
 
-This interface is obsolete and will be removed after version 19.3. The exception localization feature no longer provided.
+This interface is obsolete and will be removed after version 19.3. The exception localization feature no longer provided.
 
 ### GroupDocs.Viewer.Localization.LocalizedStringKeys
 
- 
+ 
 
 #### public static class LocalizedStringKeys and all its members have been set obsolete
 
-This class and its members are obsolete and will be removed after version 19.3. The exception localization feature no longer provided.
+This class and its members are obsolete and will be removed after version 19.3. The exception localization feature no longer provided.
 
 ## Rendering Archive documents
 
 #### Introduction
 
-Since version 19.2 GroupDocs.Viewer for .Net API supports rendering Archive documents. Rendering into HTML provides one HTML page with the list of all items (files and folders) in the root of the archive. Rendering into PDF and image provides one or more pages, depending on a number of items (files or folders) in the archive, each output image or PDF page contains a maximum of 10 items. By default, only the items from the root of the archive are rendered. Since version 19.3, it is possible to obtain the list of contained folders and render the content from those.
+Since version 19.2 GroupDocs.Viewer for .Net API supports rendering Archive documents. Rendering into HTML provides one HTML page with the list of all items (files and folders) in the root of the archive. Rendering into PDF and image provides one or more pages, depending on a number of items (files or folders) in the archive, each output image or PDF page contains a maximum of 10 items. By default, only the items from the root of the archive are rendered. Since version 19.3, it is possible to obtain the list of contained folders and render the content from those.
 
 #### Obtaining the list of folders from the Archive
 
@@ -401,11 +401,11 @@ foreach (string folderName in documentInfoContainer.Folders)
 
 ```
 
-When you need to obtain the list of folders contained in a certain folder inside the archive, you have to use ArchiveOptions.FolderName option (available since version 19.3) as shown in the example below.  For instance, let's assume there is a folder named 'FirstLevelFolder' in the root of the archive, then if you need to get the list of folders inside this 'FirstLevelFolder', set the value 
+When you need to obtain the list of folders contained in a certain folder inside the archive, you have to use ArchiveOptions.FolderName option (available since version 19.3) as shown in the example below.  For instance, let's assume there is a folder named 'FirstLevelFolder' in the root of the archive, then if you need to get the list of folders inside this 'FirstLevelFolder', set the value 
 
 ArchiveOptions.FolderName = "FirstLevelFolder";
 
-In case you need to obtain a list of folders from 'SecondLevelFolder' that resides in 'FirstLevelFolder' then set the value using '/' path delimiter character as shown in the following example:
+In case you need to obtain a list of folders from 'SecondLevelFolder' that resides in 'FirstLevelFolder' then set the value using '/' path delimiter character as shown in the following example:
 
 **Retrieving the list of folders from the certain folder inside the archive**
 
@@ -434,7 +434,7 @@ foreach (string folderName in documentInfoContainer.Folders)
 
 #### Rendering certain folders from the archive
 
-By default items from the root of the archive are rendered. When you have obtained the list of folders as explained in the section above, you are now able to render the specified folder as shown in the examples below.
+By default items from the root of the archive are rendered. When you have obtained the list of folders as explained in the section above, you are now able to render the specified folder as shown in the examples below.
 
 **Rendering specified folder into image (or HTML)**
 

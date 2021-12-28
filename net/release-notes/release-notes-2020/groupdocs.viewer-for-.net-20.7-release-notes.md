@@ -62,13 +62,13 @@ There are 31 features, improvements, and bug-fixes in this release, most notable
 
 ### Behavior changes
 
-{{< alert style="warning" >}}In this version we've improved viewing of archives and text files - now it could be rendered to multiple and single pages, they are rendered to multiple pages by default. See [How to convert archive files to HTML]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-archive-files/how-to-convert-archive-files-to-html.md" >}}) and [How to convert and view TXT files]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-text-files/how-to-convert-and-view-txt-files.md" >}}) for more details.{{< /alert >}}
+{{< alert style="warning" >}}In this version we've improved rendering of archives and text files - now it could be rendered to multiple and single pages, they are rendered to multiple pages by default. See [How to convert archive files to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-convert-archive-files-to-html.md" >}}) and [Render TXT files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/how-to-convert-and-view-txt-files.md" >}}) for more details.{{< /alert >}}
 
 ### Changes in the public API
 
 ### GroupDocs.Viewer.Viewer
 
-Added new method _GetFileInfo()_ and related _FileInfo_ class to support checking if file is encrypted or not. See [How to check if file is encrypted]({{< ref "viewer/net/developer-guide/basic-usage/how-to-check-if-file-is-encrypted.md">}}) for more details and code sample.
+Added new method _GetFileInfo()_ and related _FileInfo_ class to support checking if file is encrypted or not. See [How to check if file is encrypted]({{< ref "viewer/net/developer-guide/retrieving-document-information/how-to-check-if-file-is-encrypted.md">}}) for more details and code sample.
 
 ```csharp
 /// <summary>
@@ -171,7 +171,7 @@ public int ItemsPerPage { get; set; }
 
 #### GroupDocs.Viewer.Options.HtmlViewOptions
 
-Added new property _RenderSinglePage_ to [GroupDocs.Viewer.Options.HtmlViewOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions>) class to support rendering text files to a single page see [Rendering text files into a single HTML page]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-text-files/how-to-convert-and-view-txt-files.md#convert-txt-to-html">}}) for more details.
+Added new property _RenderSinglePage_ to [GroupDocs.Viewer.Options.HtmlViewOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions>) class to support rendering text files to a single page see [Rendering text files into a single HTML page]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/how-to-convert-and-view-txt-files.md">}}) for more details.
 
 ```csharp
 /// <summary>
@@ -182,7 +182,7 @@ public bool RenderSinglePage { get; set; }
 
 #### GroupDocs.Viewer.Options.SpreadsheetOptions
 
-The new factory method _ForSplitSheetIntoPages()_ and property _CountColumnsPerPage_ has been added to [GroupDocs.Viewer.Options.SpreadsheetOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions>) to support partial rendering of Excel spreadsheets by splitting worksheets into pages by rows and columns. See [Split worksheets into pages]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-excel-spreadsheets/split-worksheets-into-pages.md" >}}) documentation article for more details and code samples.
+The new factory method _ForSplitSheetIntoPages()_ and property _CountColumnsPerPage_ has been added to [GroupDocs.Viewer.Options.SpreadsheetOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions>) to support partial rendering of Excel spreadsheets by splitting worksheets into pages by rows and columns. See [Split worksheets into pages]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/split-worksheets-into-pages.md" >}}) documentation article for more details and code samples.
 
 ```csharp
 /// <summary>
@@ -203,7 +203,7 @@ public static SpreadsheetOptions ForSplitSheetIntoPages(int countRowsPerPage, in
 
 #### GroupDocs.Viewer.Options.WordProcessingOptions
 
-Added new properties to [GroupDocs.Viewer.Options.WordProcessingOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions>) class to support setting margins when rendering Web documents see [How to convert and view HTML files with user defined margins]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-web-documents/how-to-convert-and-view-html-files-with-margins.md" >}}) documentation article for more details and code samples.
+Added new properties to [GroupDocs.Viewer.Options.WordProcessingOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions>) class to support setting margins when rendering Web documents see [Render HTML files with user defined margins]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-web-documents/how-to-convert-and-view-html-files-with-margins.md" >}}) documentation article for more details and code samples.
 
 ```csharp
 /// <summary>

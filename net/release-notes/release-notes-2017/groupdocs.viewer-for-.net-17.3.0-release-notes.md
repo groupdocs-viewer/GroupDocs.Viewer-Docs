@@ -8,16 +8,16 @@ keywords:
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}} This page contains release notes for GroupDocs.Viewer for .NET 17.3.0.{{< /alert >}}
+{{< alert style="info" >}} This page contains release notes for GroupDocs.Viewer for .NET 17.3.0.{{< /alert >}}
 
 ## Major Features
 
 There are 7 new features and 6 improvements and fixes in this regular monthly release. The most notable are:
 
 *   Metered Licensing support
-*   Added support of VSTX and VSSX file formats
-*   Added setting for adjusting the size when rendering CAD documents
-*   Added setting to delete annotations when rendering PDF documents
+*   Added support of VSTX and VSSX file formats
+*   Added setting for adjusting the size when rendering CAD documents
+*   Added setting to delete annotations when rendering PDF documents
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -77,7 +77,7 @@ foreach (PageImage page in pages)
 }
 ```
 
-{{< alert style="warning" >}}The following logic for sizing Cad document rendering is applied:If both CadOptions.Height and CadOptions.Width properties are set, the resulting image will have the same size in pixels.If only one of CadOptions.Height and CadOptions.Width is set, the value of another side will be calculated from ratio in the original document. If  CadOptions.Height is set as 600 and the ratio of the height to width in original cad document is 6 to 5, then the width of the resulting image will be 500 px.If none of CadOptions.Height and CadOptions.Width is set, or set as 0, the CadOptions.ScaleFactor will be used to form resulting image size. The data type of this property is float, values higher than 1 will enlarge resulting image and values between 0 and 1 will make image smaller. If the render result image size is equal to 200 px to 200 px, when CadOptions.ScaleFactor is equal to 1, then setting this value to 0.1 will provide image with 20 px to 20 px dimension.When CadOptions are not set size of resulting image is set by API.      The same logic is applied when rendering to HTML. When rendering to pdf, generally only height to width ratio matters.{{< /alert >}}
+{{< alert style="warning" >}}The following logic for sizing Cad document rendering is applied:If both CadOptions.Height and CadOptions.Width properties are set, the resulting image will have the same size in pixels.If only one of CadOptions.Height and CadOptions.Width is set, the value of another side will be calculated from ratio in the original document. If  CadOptions.Height is set as 600 and the ratio of the height to width in original cad document is 6 to 5, then the width of the resulting image will be 500 px.If none of CadOptions.Height and CadOptions.Width is set, or set as 0, the CadOptions.ScaleFactor will be used to form resulting image size. The data type of this property is float, values higher than 1 will enlarge resulting image and values between 0 and 1 will make image smaller. If the render result image size is equal to 200 px to 200 px, when CadOptions.ScaleFactor is equal to 1, then setting this value to 0.1 will provide image with 20 px to 20 px dimension.When CadOptions are not set size of resulting image is set by API.      The same logic is applied when rendering to HTML. When rendering to pdf, generally only height to width ratio matters.{{< /alert >}}
 
 ### Integrate Metered licensing
 
@@ -218,53 +218,53 @@ FileContainer fileContainer = imageHandler.GetPdfFile(guid, pdfFileOptions);
 
 #### Public CellsDocumentInfoOptions CellsDocumentInfoOptions obsolete property compilation is set to fail
 
-Using this member in not obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version. Please use CellsOptions property instead.
+Using this member in not obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version. Please use CellsOptions property instead.
 
-#### Public WordsDocumentInfoOptions WordsDocumentInfoOptions obsolete property compilation is set to fail 
+#### Public WordsDocumentInfoOptions WordsDocumentInfoOptions obsolete property compilation is set to fail 
 
-Using this member in not obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version. Please use WordsOptions property instead. 
+Using this member in not obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version. Please use WordsOptions property instead. 
 
-#### Public EmailDocumentInfoOptions EmailDocumentInfoOptions obsolete property compilation is set to fail
+#### Public EmailDocumentInfoOptions EmailDocumentInfoOptions obsolete property compilation is set to fail
 
-Using this member in not obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version. Please use EmailOptions property instead. 
+Using this member in not obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version. Please use EmailOptions property instead. 
 
-### Removal of Members in GroupDocs.Viewer.Domain.CachedPageDescription
+### Removal of Members in GroupDocs.Viewer.Domain.CachedPageDescription
 
 #### Public CachedPageDescription(string guid, CacheFileType cacheFileType) obsolete constructor compilation is set to fail
 
-Using this constructor in not obsolete members will result in compilation error. Get ready for the change, this constructor will be completely deleted in the next version. Please use CachedPageDescription(string guid) or CachedPageDescription(string guid, string name) constructor instead.
+Using this constructor in not obsolete members will result in compilation error. Get ready for the change, this constructor will be completely deleted in the next version. Please use CachedPageDescription(string guid) or CachedPageDescription(string guid, string name) constructor instead.
 
-### Removal of Members in GroupDocs.Viewer.Domain.Containers.DocumentInfoContainer
+### Removal of Members in GroupDocs.Viewer.Domain.Containers.DocumentInfoContainer
 
 #### Public List<ContentControl> ContentControls obsolete property compilation is set to fail
 
-Using this member in not obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version. 
+Using this member in not obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version. 
 
-### Removal of Members in GroupDocs.Viewer.Domain.ContentControl
+### Removal of Members in GroupDocs.Viewer.Domain.ContentControl
 
 #### Public GroupDocs.Viewer.Domain.ContentControl obsolete class and class public members compilation is set to fail
 
 Using this class in non-obsolete members will result in compilation error. Get ready for the change, this class will be completely deleted in the next version.
 
-### Removal of Members in GroupDocs.Viewer.Domain.Options.CellsDocumentInfoOptions
+### Removal of Members in GroupDocs.Viewer.Domain.Options.CellsDocumentInfoOptions
 
-#### Public GroupDocs.Viewer.Domain.Options.CellsDocumentInfoOptions obsolete class and class public members compilation is set to fail
+#### Public GroupDocs.Viewer.Domain.Options.CellsDocumentInfoOptions obsolete class and class public members compilation is set to fail
 
-Using this class in not obsolete members will result in compilation error. Get ready for the change, this class will be completely deleted in the next version. Please use CellsOptions class instead.
+Using this class in not obsolete members will result in compilation error. Get ready for the change, this class will be completely deleted in the next version. Please use CellsOptions class instead.
 
-### Removal of Members in GroupDocs.Viewer.Domain.Options.DocumentInfoOptions
+### Removal of Members in GroupDocs.Viewer.Domain.Options.DocumentInfoOptions
 
-#### Public string Guid obsolete property compilation is set to fail
+#### Public string Guid obsolete property compilation is set to fail
 
-Using this member in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version. Please pass guid parameter separately to the method where you will pass DocumentInfoOptions as shown in example below.
+Using this member in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version. Please pass guid parameter separately to the method where you will pass DocumentInfoOptions as shown in example below.
 
-#### Public DocumentInfoOptions(string guid) constructor compilation is set to fail
+#### Public DocumentInfoOptions(string guid) constructor compilation is set to fail
 
-Using this constructor in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version.Please use empty constructor  and pass guid parameter separately to the method where you will pass  DocumentInfoOptions as shown in example below.
+Using this constructor in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version.Please use empty constructor  and pass guid parameter separately to the method where you will pass  DocumentInfoOptions as shown in example below.
 
-#### Public DocumentInfoOptions(string guid, string password) constructor compilation is set to fail
+#### Public DocumentInfoOptions(string guid, string password) constructor compilation is set to fail
 
-Using this constructor in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version.Please use constructors without guid parameter instead as shown in example below.
+Using this constructor in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version.Please use constructors without guid parameter instead as shown in example below.
 
 **How to get DocumentInfoContainer using DocumentInfoOptions**
 
@@ -287,7 +287,7 @@ Console.WriteLine("DateCreated: {0}", documentInfo.DateCreated);
 Console.WriteLine("DocumentType: {0}", documentInfo.DocumentType);
 Console.WriteLine("Extension: {0}", documentInfo.Extension);
 Console.WriteLine("FileType: {0}", documentInfo.FileType);
-Console.WriteLine("Guid: {0}", documentInfo.Guid);
+Console.WriteLine("Guid: {0}", documentInfo
 Console.WriteLine("LastModificationDate: {0}", documentInfo.LastModificationDate);
 Console.WriteLine("Name: {0}", documentInfo.Name);
 Console.WriteLine("PageCount: {0}", documentInfo.Pages.Count);
@@ -320,7 +320,7 @@ Console.WriteLine("DocumentType: {0}", documentInfo.DocumentType);
 Console.WriteLine("DocumentTypeFormat: {0}", documentInfo.DocumentTypeFormat);
 Console.WriteLine("Extension: {0}", documentInfo.Extension);
 Console.WriteLine("FileType: {0}", documentInfo.FileType);
-Console.WriteLine("Guid: {0}", documentInfo.Guid);
+Console.WriteLine("Guid: {0}", documentInfo
 Console.WriteLine("LastModificationDate: {0}", documentInfo.LastModificationDate);
 Console.WriteLine("Name: {0}", documentInfo.Name);
 Console.WriteLine("PageCount: {0}", documentInfo.Pages.Count);
@@ -333,17 +333,17 @@ foreach (PageData pageData in documentInfo.Pages)
 }
 ```
 
-#### Public CellsDocumentInfoOptions CellsDocumentInfoOptions obsolete property compilation is set to fail
+#### Public CellsDocumentInfoOptions CellsDocumentInfoOptions obsolete property compilation is set to fail
 
- Using this member in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version.Please use CellsOptions instead as shown in example below.
+ Using this member in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version.Please use CellsOptions instead as shown in example below.
 
-#### Public WordsDocumentInfoOptions WordsDocumentInfoOptions obsolete property compilation is set to fail
+#### Public WordsDocumentInfoOptions WordsDocumentInfoOptions obsolete property compilation is set to fail
 
- Using this member in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version.Please use WordsOptions instead.
+ Using this member in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version.Please use WordsOptions instead.
 
-#### Public EmailDocumentInfoOptions EmailDocumentInfoOptions obsolete property compilation is set to fail
+#### Public EmailDocumentInfoOptions EmailDocumentInfoOptions obsolete property compilation is set to fail
 
- Using this member in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version.Please use EmailOptions instead.
+ Using this member in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version.Please use EmailOptions instead.
 
 **How to get document pages with Words, Cells and Email document encoding setting**
 
@@ -405,17 +405,17 @@ emailDocumentInfoOptions.EmailOptions.Encoding = encoding;
 DocumentInfoContainer emailDocumentInfoContainer = viewerImageHandler.GetDocumentInfo(emailDocumentGuid, emailDocumentInfoOptions);
 ```
 
-### Removal of Members in GroupDocs.Viewer.Domain.Options.EmailDocumentInfoOptions
+### Removal of Members in GroupDocs.Viewer.Domain.Options.EmailDocumentInfoOptions
 
-#### Public GroupDocs.Viewer.Domain.Options.EmailDocumentInfoOptions obsolete class and class public members compilation is set to fail
+#### Public GroupDocs.Viewer.Domain.Options.EmailDocumentInfoOptions obsolete class and class public members compilation is set to fail
 
 Using this class in not obsolete members will result in compilation error. Get ready for the change, this class will be completely deleted in the next version. Please use EmailOptions class instead.
 
-### Removal of Members in GroupDocs.Viewer.Domain.Options.PdfFileOptions
+### Removal of Members in GroupDocs.Viewer.Domain.Options.PdfFileOptions
 
 #### Public string Guid obsolete property compilation is set to fail
 
-Using this member in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version. Please pass guid parameter separately to the method where you will pass PdfFileOptions as shown in example below.
+Using this member in non-obsolete members will result in compilation error. Get ready for the change, this property will be completely deleted in the next version. Please pass guid parameter separately to the method where you will pass PdfFileOptions as shown in example below.
 
 #### All obsolete public constructors with guid properties compilations are set to fail, including following:
 
@@ -443,11 +443,11 @@ Using this member in non-obsolete members will result in compilation error. Get 
 
 #### public PdfFileOptions(string guid, string password, Transformation transformations, bool addPrintAction, Watermark watermark)
 
-Using this constructors in non obsolete memebers will result in compilation error. Get ready for the change, this constructors will be completely deleted in the next version. Please use parameterless constructor instead and set properties manually as shown in example below.
+Using this constructors in non obsolete memebers will result in compilation error. Get ready for the change, this constructors will be completely deleted in the next version. Please use parameterless constructor instead and set properties manually as shown in example below.
 
 **Get original file in Pdf format with Watermark using PdfFileOptions**
 
-Add watermark to Pdf document by setting **Watermark** property of **PdfFileOptions.**
+Add watermark to Pdf document by setting **Watermark** property of **PdfFileOptions.**
 
 **Before v3.5.0 (C#)**
 
@@ -461,7 +461,7 @@ ViewerImageHandler imageHandler = new ViewerImageHandler(config);
 
 PdfFileOptions options = new PdfFileOptions();
 options.Guid = "word.doc";
- 
+ 
 // Set watermark properties
 Watermark watermark = new Watermark("This is watermark text");
 watermark.Color = System.Drawing.Color.Blue;
@@ -487,7 +487,7 @@ config.StoragePath = @"C:\storage";
 ViewerImageHandler imageHandler = new ViewerImageHandler(config);
 
 string guid = "word.doc";
- 
+ 
 // Set watermark properties
 Watermark watermark = new Watermark("This is watermark text");
 watermark.Color = System.Drawing.Color.Blue;
@@ -503,27 +503,27 @@ Console.WriteLine("Stream lenght: {0}", container.Stream.Length);
 
 ```
 
-### Removal of Members in GroupDocs.Viewer.Domain.Options.WordsDocumentInfoOptions
+### Removal of Members in GroupDocs.Viewer.Domain.Options.WordsDocumentInfoOptions
 
-#### Public GroupDocs.Viewer.Domain.Options.WordsDocumentInfoOptions obsolete class and class public members compilation is set to fail
+#### Public GroupDocs.Viewer.Domain.Options.WordsDocumentInfoOptions obsolete class and class public members compilation is set to fail
 
 Using this class in not obsolete members will result in compilation error. Get ready for the change, this class will be completely deleted in the next version. Please use WordsOptions class instead.
 
-### Removal of Members in GroupDocs.Viewer.Domain.WordsFileData
+### Removal of Members in GroupDocs.Viewer.Domain.WordsFileData
 
-#### Public GroupDocs.Viewer.Domain.WordsFileData obsolete class and class public members compilation is set to fail
+#### Public GroupDocs.Viewer.Domain.WordsFileData obsolete class and class public members compilation is set to fail
 
-Using this class in non-obsolete members will result in compilation error. Get ready for the change, this class will be completely deleted in the next version.
+Using this class in non-obsolete members will result in compilation error. Get ready for the change, this class will be completely deleted in the next version.
 
-### Removal of Members in GroupDocs.Viewer.Handler.ViewerHandler<T>
+### Removal of Members in GroupDocs.Viewer.Handler.ViewerHandler<T>
 
 #### Public FileContainer GetPdfFile(PdfFileOptions pdfFileOptions) obsolete method compilation is set to fail
 
-Using this method in non-obsolete members will result in compilation error. Get ready for the change, this method will be completely deleted in the next version. Please use overload with guid parameter instead as shown in example below.
+Using this method in non-obsolete members will result in compilation error. Get ready for the change, this method will be completely deleted in the next version. Please use overload with guid parameter instead as shown in example below.
 
 **Get original file in Pdf format with Watermark**
 
-Add watermark to Pdf document by setting **Watermark** property of **PdfFileOptions.**
+Add watermark to Pdf document by setting **Watermark** property of **PdfFileOptions.**
 
 **Before v3.5.0 (C#)**
 
@@ -537,7 +537,7 @@ ViewerImageHandler imageHandler = new ViewerImageHandler(config);
 
 PdfFileOptions options = new PdfFileOptions();
 options.Guid = "word.doc";
- 
+ 
 // Set watermark properties
 Watermark watermark = new Watermark("This is watermark text");
 watermark.Color = System.Drawing.Color.Blue;
@@ -563,7 +563,7 @@ config.StoragePath = @"C:\storage";
 ViewerImageHandler imageHandler = new ViewerImageHandler(config);
 
 string guid = "word.doc";
- 
+ 
 // Set watermark properties
 Watermark watermark = new Watermark("This is watermark text");
 watermark.Color = System.Drawing.Color.Blue;
@@ -604,7 +604,7 @@ Console.WriteLine("DateCreated: {0}", documentInfo.DateCreated);
 Console.WriteLine("DocumentType: {0}", documentInfo.DocumentType);
 Console.WriteLine("Extension: {0}", documentInfo.Extension);
 Console.WriteLine("FileType: {0}", documentInfo.FileType);
-Console.WriteLine("Guid: {0}", documentInfo.Guid);
+Console.WriteLine("Guid: {0}", documentInfo
 Console.WriteLine("LastModificationDate: {0}", documentInfo.LastModificationDate);
 Console.WriteLine("Name: {0}", documentInfo.Name);
 Console.WriteLine("PageCount: {0}", documentInfo.Pages.Count);
@@ -637,7 +637,7 @@ Console.WriteLine("DocumentType: {0}", documentInfo.DocumentType);
 Console.WriteLine("DocumentTypeFormat: {0}", documentInfo.DocumentTypeFormat);
 Console.WriteLine("Extension: {0}", documentInfo.Extension);
 Console.WriteLine("FileType: {0}", documentInfo.FileType);
-Console.WriteLine("Guid: {0}", documentInfo.Guid);
+Console.WriteLine("Guid: {0}", documentInfo
 Console.WriteLine("LastModificationDate: {0}", documentInfo.LastModificationDate);
 Console.WriteLine("Name: {0}", documentInfo.Name);
 Console.WriteLine("PageCount: {0}", documentInfo.Pages.Count);
@@ -650,8 +650,8 @@ foreach (PageData pageData in documentInfo.Pages)
 }
 ```
 
-### Removal of Members in GroupDocs.Viewer.Helper.FileDataJsonSerializer
+### Removal of Members in GroupDocs.Viewer.Helper.FileDataJsonSerializer
 
-#### Public GroupDocs.Viewer.Helper.FileDataJsonSerializer obsolete class and class public members compilation is set to fail
+#### Public GroupDocs.Viewer.Helper.FileDataJsonSerializer obsolete class and class public members compilation is set to fail
 
 Using this class in non-obsolete members will result in compilation error. Get ready for the change, this class will be completely deleted in the next version.

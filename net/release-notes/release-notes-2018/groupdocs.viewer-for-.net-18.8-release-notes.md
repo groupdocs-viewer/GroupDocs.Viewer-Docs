@@ -95,9 +95,9 @@ FileContainer fileContainer = imageHandler.GetPdfFile(guid, options);
 Stream pdfFileStream = fileContainer.Stream;
 ```
 
-### Changes in sample configuration files 
+### Changes in sample configuration files 
 
-Since the version 18.8, it is possible to set ForcePasswordValidation property of the ViewerConfig class using app.config / web.config configuration files. UseCache property of the ViewerConfig class became  obsolete and has been removed, therefore <useCache value="bool"/> element is no longer valid. Due to recent changes, valid app.config / web.config is as below:
+Since the version 18.8, it is possible to set ForcePasswordValidation property of the ViewerConfig class using app.config / web.config configuration files. UseCache property of the ViewerConfig class became  obsolete and has been removed, therefore <useCache value="bool"/> element is no longer valid. Due to recent changes, valid app.config / web.config is as below:
 
 **Sample app.config with correct GroupDocs.Viewer configurations**
 
@@ -134,7 +134,7 @@ In the version 18.8, following public class members were added, marked as obsole
 
 ##### Public bool UseCache property compilation is set to fail
 
-This property has been removed, please use EnableCaching property instead.
+This property has been removed, please use EnableCaching property instead.
 
 #### GroupDocs.Viewer.Converter.Options.ProjectOptions
 
@@ -180,10 +180,10 @@ This method is obsolete and will be removed after v18.10. GroupDocs.Viewer will 
 
 ##### public void ClearCache(TimeSpan olderThan) method has been removed
 
-Please use *public void ClearCache()* or *public void ClearCache(string guid) * methods instead.
+Please use *public void ClearCache()* or *public void ClearCache(string guid) * methods instead.
 
 #### GroupDocs.Viewer.Handler.ViewerImageHandler
 
 ##### public void ClearCache(TimeSpan olderThan) method has been removed
 
-Please use *public void ClearCache()* or *public void ClearCache(string guid) * methods instead.
+Please use *public void ClearCache()* or *public void ClearCache(string guid) * methods instead.

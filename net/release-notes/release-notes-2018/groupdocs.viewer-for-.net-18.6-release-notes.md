@@ -46,7 +46,7 @@ There are 17 features, improvements, and fixes in this regular monthly release. 
 
 ### Force password validation
 
-When password protected documents are rendered with the caching enabled, document password is validated only on the first call, all subsequent renderings will provide output without checking the document password. In order to alter this behavior and let the API to validate document password on each rendering, set ForcePasswordValidation property of the ViewerConfig object as shown in the example below.
+When password protected documents are rendered with the caching enabled, document password is validated only on the first call, all subsequent renderings will provide output without checking the document password. In order to alter this behavior and let the API to validate document password on each rendering, set ForcePasswordValidation property of the ViewerConfig object as shown in the example below.
 
 **How to force password validation each time document is rendered**
 
@@ -79,12 +79,12 @@ foreach (PageHtml page in pages)
 
 ### Rendering by coordinates or Tiled rendering
 
-Tiled rendering or (rendering by coordinates) is the process of rendering CAD documents (into an image, HTML or PDF) by dividing into square parts and rendering each part (or tile), separately. The advantage to this is that the amount of memory involved is reduced as compared to rendering the entire document at once. Since the version 18.6, tiled rendering is available for rendering into an image and HTML for DWG file format. Generally, DWG documents are divided into pages by Model and Layouts, but when the tiled rendering is enabled, only the Model is rendered, and every tile composes a separate page. You can add as many tiles as you need. The following example demonstrates how to render DWG drawing into an image by dividing into four equal parts. 
+Tiled rendering or (rendering by coordinates) is the process of rendering CAD documents (into an image, HTML or PDF) by dividing into square parts and rendering each part (or tile), separately. The advantage to this is that the amount of memory involved is reduced as compared to rendering the entire document at once. Since the version 18.6, tiled rendering is available for rendering into an image and HTML for DWG file format. Generally, DWG documents are divided into pages by Model and Layouts, but when the tiled rendering is enabled, only the Model is rendered, and every tile composes a separate page. You can add as many tiles as you need. The following example demonstrates how to render DWG drawing into an image by dividing into four equal parts. 
 
 **Rendering by coordinates (C#)**
 
 ```csharp
- // Setup GroupDocs.Viewer config
+ // Setup GroupDocs.Viewer config
 ViewerConfig config = new ViewerConfig();
 config.StoragePath = @"C:\storage";
   
@@ -131,7 +131,7 @@ foreach (PageImage page in pages)
 
 #### How tiled rendering works with other CAD options
 
-When the tiled rendering is enabled, (i.e CadOptions.Tiles list is not empty) RenderLayouts and LayoutName properties of CadOptions class are ignored (only the Model is rendered). If you are setting the size of the document manually, using CadOptions.ScaleFactor or CadOptions.Width and CadOptions.Height properties, please pass the same parameters to the GetDocumentInfo method to get correct document overall size as shown in the example below.
+When the tiled rendering is enabled, (i.e CadOptions.Tiles list is not empty) RenderLayouts and LayoutName properties of CadOptions class are ignored (only the Model is rendered). If you are setting the size of the document manually, using CadOptions.ScaleFactor or CadOptions.Width and CadOptions.Height properties, please pass the same parameters to the GetDocumentInfo method to get correct document overall size as shown in the example below.
 
 **Rendering by coordinates when setting output size manually (C#)**
 
@@ -176,17 +176,17 @@ foreach (PageImage page in pages)
 
 ### Known issues with rendering CAD documents
 
-#### Running .Net 4.5 executables (and higher)  as 32-bit process
+#### Running .Net 4.5 executables (and higher)  as 32-bit process
 
-When you are rendering CAD documents using GroupDocs.Viewer from your .Net application that has a framework 4.5 and higher on 64-bit windows systems, and you have "Preffer 32-bit" option turned on (checked) in your project options in Visual Studio, rendering may continue without termination. To resolve the issue switch "Preffer 32-bit" option off (uncheck)  from your project options in Visual Studio.
+When you are rendering CAD documents using GroupDocs.Viewer from your .Net application that has a framework 4.5 and higher on 64-bit windows systems, and you have "Preffer 32-bit" option turned on (checked) in your project options in Visual Studio, rendering may continue without termination. To resolve the issue switch "Preffer 32-bit" option off (uncheck)  from your project options in Visual Studio.
 
-The same issue appears when you are running Web Application from IIS Express 32-bit version, using Visual Studio. To resolve the issue, set "Use 64 bit version of IIS Express for websites and projects" option on (check) in Web Projects subsection of the Project and Solutions section in Visual Studio options.
+The same issue appears when you are running Web Application from IIS Express 32-bit version, using Visual Studio. To resolve the issue, set "Use 64 bit version of IIS Express for websites and projects" option on (check) in Web Projects subsection of the Project and Solutions section in Visual Studio options.
 
 This issue is reproducible since the version 18.6.
 
 ### Managing text overflow when rendering Cells documents to HTML
 
-Since the version 18.6, rendering into HTML with TextOverflowMode.Overlay has been improved. Before version 18.6 text from both cells (that is overlaying and that is overlayed) was visible. Since the version 18.6 only text from overlaying cell is visible and text that is overlayed is hidden.
+Since the version 18.6, rendering into HTML with TextOverflowMode.Overlay has been improved. Before version 18.6 text from both cells (that is overlaying and that is overlayed) was visible. Since the version 18.6 only text from overlaying cell is visible and text that is overlayed is hidden.
 
 ### List of Changes in v18.6
 
@@ -194,9 +194,9 @@ Since the version 18.6, rendering into HTML with TextOverflowMode.Overlay has 
 
 ##### **Public string CacheFolderName property accepts an empty string**
 
-CacheFolderName property sets the folder inside StoragePath directory, that will be used for keeping cache files. This property is ignored when CachePath property value is set.
+CacheFolderName property sets the folder inside StoragePath directory, that will be used for keeping cache files. This property is ignored when CachePath property value is set.
 
-Since the version 18.6, it is possible to set the empty string for CacheFolderName property of the ViewerConfig object. Previously, property setter (mutator) was replacing empty string value with the string "temp". 
+Since the version 18.6, it is possible to set the empty string for CacheFolderName property of the ViewerConfig object. Previously, property setter (mutator) was replacing empty string value with the string "temp". 
 
 ##### **Public bool ForcePasswordValidation property has been added.**
 
@@ -229,7 +229,7 @@ HtmlOptions options = new HtmlOptions();
 options.EmbedResources = false;
  
 // Pass HtmlOptions object to GetPages method of the ViewerHandler
-List<PageImage> pages = handler.GetPages(guid, options); 
+List<PageImage> pages = handler.GetPages(guid, options); 
 ```
 
 **(C#) (before v18.6)**
@@ -251,5 +251,5 @@ options.IsResourcesEmbedded = false;
  
  
 // Pass HtmlOptions object to GetPages method of the ViewerHandler
-List<PageImage> pages = handler.GetPages(guid, options); 
+List<PageImage> pages = handler.GetPages(guid, options); 
 ```

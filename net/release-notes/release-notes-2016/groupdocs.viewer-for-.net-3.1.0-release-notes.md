@@ -17,7 +17,7 @@ There are 32 improvements and fixes in this regular monthly release. The most no
 *   Introduced error localization.
 *   Improved image watermarks.
 *   Improved image conversion and resizing.
-*   Improved convertor post-processing actions.
+*   Improved convertor post-processing actions.
 *   Added required HTML markup for email documents.
 
 ## Full List of Issues Covering all Changes in this Release

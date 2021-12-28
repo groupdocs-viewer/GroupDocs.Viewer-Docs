@@ -53,6 +53,6 @@ There are 28 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-3637|Specific numbers document should be exported correctly.|Bug|
 |VIEWERNET-3638|Enormous conversion time and output file size while converting specific worksheet of XLSX to HTML|Bug|
 
-### Behaviour changes
+### Behavior changes
 
 Since GroupDocs.Viewer 21.10 version when rendering archive to multiple HTML pages, all contents of the archive are rendered recursively, in previous versions only root folder was rendered.

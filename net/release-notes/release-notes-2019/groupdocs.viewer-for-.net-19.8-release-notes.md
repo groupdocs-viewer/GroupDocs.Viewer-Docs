@@ -12,14 +12,14 @@ hideChildren: False
 
 ## Major Features
 
-{{< alert style="danger" >}}In this version we're introducing new public API which was designed to be simple and easy to use. For more details about new API please check Public Docs section. The legacy API have been moved into Legacy namespace so after update to this version it is required to make project-wide replacement of namespace usages from GroupDocs.Viewer. to GroupDocs.Viewer.Legacy. to resolve build issues.{{< /alert >}}
+{{< alert style="danger" >}}In this version we're introducing new public API which was designed to be simple and easy to use. For more details about new API please check Public Docs section. The legacy API have been moved into Legacy namespace so after update to this version it is required to make project-wide replacement of namespace usages from GroupDocs.Viewer. to GroupDocs.Viewer.Legacy. to resolve build issues.{{< /alert >}}
 
   
 Other notable features:
 
-*   Added support of rendering custom folders from Outlook Data Files
+*   Added support of rendering custom folders from Outlook Data Files
 *   Added support of file formats:
-    *   Microsoft Excel Add-in (.xlam) 
+    *   Microsoft Excel Add-in (.xlam) 
     *   Microsoft Project Exchange File (.mpx)
 
 ## Full List of Issues Covering all Changes in this Release
@@ -36,10 +36,10 @@ Other notable features:
 
 ### All public types from GroupDocs.Viewer namespace are moved and marked as obsolete
 
-#### All public types from GroupDocs.Viewer namespace 
+#### All public types from GroupDocs.Viewer namespace 
 
-1.  Have been moved into **GroupDocs.Viewer.Legacy** namespace
-2.  Marked as **Obsolete** with message: *This interface/class/enumeration is obsolete and will be available till January 2020 (v20.1).*
+1.  Have been moved into **GroupDocs.Viewer.Legacy** namespace
+2.  Marked as **Obsolete** with message: *This interface/class/enumeration is obsolete and will be available till January 2020 (v20.1).*
 
 #### Full list of types that have been moved and marked as obsolete:
 1.  GroupDocs.Viewer.Storage.FileInfo => GroupDocs.Viewer.Legacy.Storage.FileInfo    

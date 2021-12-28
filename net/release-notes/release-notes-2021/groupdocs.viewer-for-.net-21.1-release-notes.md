@@ -14,8 +14,8 @@ hideChildren: False
 
 There are 9 features, improvements, and bug-fixes in this release, most notable are:
 
-* [AI (Adobe Illustrator) file-format support]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-image-files/how-to-convert-and-view-ai-files.md">}})
-* [Microsoft Compiled HTML Help  (CHM) file-format support]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-web-documents/how-to-convert-and-view-chm-files.md">}})
+* [AI (Adobe Illustrator) file-format support]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-ai-files.md">}})
+* [Microsoft Compiled HTML Help  (CHM) file-format support]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-web-documents/how-to-convert-and-view-chm-files.md">}})
 * Add Truevision TGA (TARGA) (tga) file-format support
 * Add Animated PNG (apng) file-format support
 * Render multipaged PDF to single page HTML
@@ -62,7 +62,7 @@ public Viewer(Common.Func<Stream> getFileStream, Common.Func<LoadOptions> getLoa
 Please use [MailStorageOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/mailstorageoptions>) class, this class will be replaced at 21.4 version
 
 public class [MailStorageOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/mailstorageoptions>) class added to GroupDocs.Viewer.Options. This class provides view options for
-viewing mail storage formats like Lotus Notes (NSF)
+rendering mail storage formats like Lotus Notes (NSF)
 
 ```csharp
 

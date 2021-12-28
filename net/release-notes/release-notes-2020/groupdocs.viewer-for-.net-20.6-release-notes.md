@@ -11,12 +11,14 @@ hideChildren: False
 {{< alert style="info" >}}This page contains release notes for GroupDocs.Viewer for .NET 20.6{{< /alert >}}
 
 ## Major Features  
+
 There are 19 features, improvements, and bug-fixes in this release, most notable are:
-*   [Fixed High RAM consumption issue when rendering a large text file]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-text-files/how-to-convert-and-view-txt-files.md">}})
-*   [Improved rendering Outlook files (pst, ost) to HTML]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-outlook-data-files/how-to-convert-and-view-ost-and-pst-files.md">}})
-*   [Show spreadsheet column headings and row numbers]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-excel-spreadsheets/how-to-show-spreadsheet-column-and-row-headings.md" >}}) was implemented for all options
-*   [Support file format detection for passed stream]({{< ref "viewer/net/developer-guide/basic-usage/how-to-determine-file-type.md">}})
-*   [Get sheet names from an Excel file]({{< ref "viewer/net/developer-guide/advanced-usage/viewing/view-excel-spreadsheets/how-to-get-the-names-of-the-worksheets.md">}})
+
+* [Fixed High RAM consumption issue when rendering a large text file]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/how-to-convert-and-view-txt-files.md">}})
+* [Improved rendering Outlook files (pst, ost) to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-outlook-data-files/how-to-convert-and-view-ost-and-pst-files.md">}})
+* [Show spreadsheet column headings and row numbers]({{< ref "/viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/how-to-show-spreadsheet-column-and-row-headings" >}}) was implemented for all options
+* [Support file format detection for passed stream]({{< ref "viewer/net/developer-guide/retrieving-document-information/how-to-determine-file-type.md">}})
+* [Get sheet names from an Excel file]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/how-to-get-the-names-of-the-worksheets.md">}})
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -79,8 +81,8 @@ public Page(int number, string name, bool visible)
 /// <param name="number">The page number.</param>
 /// <param name="name">The worksheet or page name.</param>
 /// <param name="visible">The page visibility indicator.</param>
-/// <param name="width">The width of the page in pixels when viewing as JPG or PNG.</param>
-/// <param name="height">The height of the page in pixels when viewing as JPG or PNG.</param>
+/// <param name="width">The width of the page in pixels when rendering as JPG or PNG.</param>
+/// <param name="height">The height of the page in pixels when rendering as JPG or PNG.</param>
 /// <exception cref="System.ArgumentException">Thrown when <paramref name="number"/> is less or equal to zero.</exception>
 /// <exception cref="System.ArgumentException">Thrown when <paramref name="width"/> is less or equal to zero.</exception>
 /// <exception cref="System.ArgumentException">Thrown when <paramref name="height"/> is less or equal to zero.</exception>
@@ -92,9 +94,9 @@ public Page(int number, string name, bool visible, int width, int height)
 /// <param name="number">The page number.</param>
 /// <param name="name">The worksheet or page name.</param>
 /// <param name="visible">The page visibility indicator.</param>
-/// <param name="width">The width of the page in pixels when viewing as JPG or PNG.</param>
-/// <param name="height">The height of the page in pixels when viewing as JPG or PNG.</param>
-/// <param name="lines">The lines contained by the page when viewing as JPG or PNG with enabled Text Extraction.</param>
+/// <param name="width">The width of the page in pixels when rendering as JPG or PNG.</param>
+/// <param name="height">The height of the page in pixels when rendering as JPG or PNG.</param>
+/// <param name="lines">The lines contained by the page when rendering as JPG or PNG with enabled Text Extraction.</param>
 /// <exception cref="System.ArgumentException">Thrown when <paramref name="number"/> is less or equal to zero.</exception>
 /// <exception cref="System.ArgumentException">Thrown when <paramref name="width"/> is less or equal to zero.</exception>
 /// <exception cref="System.ArgumentException">Thrown when <paramref name="height"/> is less or equal to zero.</exception>

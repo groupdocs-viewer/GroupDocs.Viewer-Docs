@@ -22,4 +22,4 @@ One bug fix is included into this hot-fix release.
 
 ## Public API and Backward Incompatible Changes
 
-There are no public API and backward incompatible changes in this release.
+There are no public API and backward incompatible changes in this release.

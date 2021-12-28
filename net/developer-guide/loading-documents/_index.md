@@ -1,0 +1,12 @@
+---
+id: loading
+url: viewer/net/loading
+title: Loading Documents
+weight: 1
+description: "This article document loading use cases with GroupDocs.Viewer within your .NET applications."
+productName: GroupDocs.Viewer for .NET
+hideChildren: False
+---
+You can configure how document will be loaded using [LoadOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions) class constructor parameters and properties e.g. you can specify the type of the document is going to be loaded and password for the password-protected documents.
+
+For more details about setting load options please refer to the following articles:

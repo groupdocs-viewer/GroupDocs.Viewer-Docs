@@ -17,7 +17,7 @@ There are 12 features, improvements, and fixes in this regular monthly release. 
 *   Added setting for specifying Layers when rendering CAD documents
 *   Added Jpeg2000 (JP2, J2C, J2K, JPF, JPX, JPM) file formats support
 *   Added PostScript (PS) file format support
-*   Added Microsoft PowerPoint Macro-Enabled Template (POTM) and Microsoft PowerPoint Macro-Enabled Show (PPSM) file formats support
+*   Added Microsoft PowerPoint Macro-Enabled Template (POTM) and Microsoft PowerPoint Macro-Enabled Show (PPSM) file formats support
 *   Added support of rendering notes for Presentation documents
 
 ## Full List of Issues Covering all Changes in this Release
@@ -45,16 +45,16 @@ There are 12 features, improvements, and fixes in this regular monthly release. 
 
 GroupDocs.Viewer for .NET 18.1 includes the support of following file formats.
 
-*   POTM 
-*   PPSM 
-*   JPEG2000 (JP2, J2C, J2K, JPF, JPX, JPM)
+*   POTM 
+*   PPSM 
+*   JPEG2000 (JP2, J2C, J2K, JPF, JPX, JPM)
 *   PS (PostScript)
 
-### Rendering notes in Presentation documents 
+### Rendering notes in Presentation documents 
 
-Starting from version 18.1, rendering notes in the Presentation documents is also supported in HTML based rendering. 
+Starting from version 18.1, rendering notes in the Presentation documents is also supported in HTML based rendering. 
 
-{{< alert style="info" >}}Limitation: When rendering the document as the image, in case of notes do not fit into the single page, some of the trailing notes may be truncated.{{< /alert >}}
+{{< alert style="info" >}}Limitation: When rendering the document as the image, in case of notes do not fit into the single page, some of the trailing notes may be truncated.{{< /alert >}}
 
 **Rendering document with notes**
 
@@ -82,7 +82,7 @@ foreach (PageImage page in pages)
 
 ### Working with CAD layers
 
-Layers in CAD documents is a way of organizing objects in the drawing by associating them with a specific function or a purpose. For example, when we have a complex drawing of the building, all objects can be divided (associated) into several layers - e.g. electrical, water plumbing, furniture, walls and so on. According to your needs, you can temporarily hide or show some of the objects by turning off their layers. Since the version 18.1, GroupDocs.Viewer API allows you to get the list of layers from the drawing and supports rendering specified layers.
+Layers in CAD documents is a way of organizing objects in the drawing by associating them with a specific function or a purpose. For example, when we have a complex drawing of the building, all objects can be divided (associated) into several layers - e.g. electrical, water plumbing, furniture, walls and so on. According to your needs, you can temporarily hide or show some of the objects by turning off their layers. Since the version 18.1, GroupDocs.Viewer API allows you to get the list of layers from the drawing and supports rendering specified layers.
 
 #### How to get the list of layers from the drawing
 
@@ -137,9 +137,9 @@ foreach (PageImage page in pages)
 
 ### Exclude/include fonts when rendering SVG and Presentation documents to HTML
 
-When we are rendering documents into HTML, by default fonts that are used in the document are added to HTML content. This ensures fonts availability so that you can be pretty sure that the text from the original document will appear similar in HTML, regardless of whether fonts are installed on the viewer's device or not. Depending on **IsResourceEmbedded** option of **HtmlOptions** class the fonts are added inline as base64-encoded fonts or as external resources. Support for adding and preventing fonts into HTML added for Presentation documents and Scalable Vector Graphics since the version 18.1.
+When we are rendering documents into HTML, by default fonts that are used in the document are added to HTML content. This ensures fonts availability so that you can be pretty sure that the text from the original document will appear similar in HTML, regardless of whether fonts are installed on the viewer's device or not. Depending on **IsResourceEmbedded** option of **HtmlOptions** class the fonts are added inline as base64-encoded fonts or as external resources. Support for adding and preventing fonts into HTML added for Presentation documents and Scalable Vector Graphics since the version 18.1.
 
-Embedded fonts increase the size of the rendering result. In order to prevent adding fonts into HTML, set **ExcludeFonts** property of **HtmlOptions** class as true as shown in the example below:
+Embedded fonts increase the size of the rendering result. In order to prevent adding fonts into HTML, set **ExcludeFonts** property of **HtmlOptions** class as true as shown in the example below:
 
 **Use ExcludeFonts = true to prevent adding fonts in HTML representations**
 
@@ -199,7 +199,7 @@ List<PageImage> pages = handler.GetPages(guid, options);
 
 ##### Public List<string> Layers property added
 
-Use this property to set the list of layers that should be rendered. 
+Use this property to set the list of layers that should be rendered. 
 
 **Rendering certain Layers from CAD document**
 
@@ -231,7 +231,7 @@ foreach (PageImage page in pages)
 
 ##### Public bool ShowHiddenSheets property has been removed
 
-Please use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
+Please use ShowHiddenPages property of the RenderOptions (ImageOptions or HtmlOptions) class instead.
 
 #### GroupDocs.Viewer.Converter.Options.PdfOptions
 
@@ -268,7 +268,7 @@ foreach (PageHtml page in pages)
 
 ##### Public string DefaultFontName property added
 
-Use this property to set default font that should be used as a replacement for missing fonts while rendering into an image or HTML as shown in the example below:
+Use this property to set default font that should be used as a replacement for missing fonts while rendering into an image or HTML as shown in the example below:
 
 
 
@@ -291,13 +291,13 @@ List<PageImage> pages = handler.GetPages(guid, options);
 
 ##### A new CadFileData class added
 
-This class represents file data for CAD documents. It inherits from FileData and extends it by providing **public List<string> Layers** property that contains the list of layer names contained in CAD document.
+This class represents file data for CAD documents. It inherits from FileData and extends it by providing **public List<string> Layers** property that contains the list of layer names contained in CAD document.
 
 #### GroupDocs.Viewer.Domain.Containers.CadDocumentInfoContainer
 
-##### A new CadDocumentInfoContainer class added
+##### A new CadDocumentInfoContainer class added
 
-This class represents document information container for CAD documents. It inherits from DocumentInfoContainer and extends it by providing **public List<string> Layers** property that contains the list of layer names contained in CAD document.
+This class represents document information container for CAD documents. It inherits from DocumentInfoContainer and extends it by providing **public List<string> Layers** property that contains the list of layer names contained in CAD document.
 
 #### GroupDocs.Viewer.Domain.Options.DocumentInfoOptions
 

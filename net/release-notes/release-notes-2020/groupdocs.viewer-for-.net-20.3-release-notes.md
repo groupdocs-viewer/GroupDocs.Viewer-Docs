@@ -16,8 +16,8 @@ This page contains release notes for GroupDocs.Viewer for .NET 20.3.
 
 There are 9 features, improvements, and bug-fixes in this release, most notable are:
 
-*   Added support of Microsoft Excel 97-2003 Template (.xlt) file format
-*   Added new option that enables users to set filename when viewing archive files 
+*   Added support of Microsoft Excel 97-2003 Template (.xlt) file format
+*   Added new option that enables users to set filename when rendering archive files 
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -37,27 +37,27 @@ There are 9 features, improvements, and bug-fixes in this release, most notable 
 
 ### Changes in GroupDocs.Viewer.FileType class
 
-public static readonly FileType XLT = new FileType("Microsoft Excel Template", ".xlt"); field added
+public static readonly FileType XLT = new FileType("Microsoft Excel Template", ".xlt"); field added
 
 Microsoft Excel Template (.xlt)
 
-public static FileType FromExtension(string extension) method behavior changed
+public static FileType FromExtension(string extension) method behavior changed
 
-This method now accepts *null* or *empty* string and returns *FileType.Unknown* file type instead of throwing *InvalidArgumentException*.
+This method now accepts *null* or *empty* string and returns *FileType.Unknown* file type instead of throwing *InvalidArgumentException*.
 
-public static FileType FromMediaType(string mediaType) method behavior changed
+public static FileType FromMediaType(string mediaType) method behavior changed
 
-This method now accepts *null* or *empty* string and returns *FileType.Unknown* file type instead of throwing *InvalidArgumentException*.
+This method now accepts *null* or *empty* string and returns *FileType.Unknown* file type instead of throwing *InvalidArgumentException*.
 
 ### Changes in GroupDocs.Viewer.Options.ArchiveOptions class
 
-public FileName FileName { get; set; } property added
+public FileName FileName { get; set; } property added
 
-The filename to display in the header. By default, the name of the source file is displayed.
+The filename to display in the header. By default, the name of the source file is displayed.
 
 ### Changes in GroupDocs.Viewer.Options.FileName class
 
-public class FileName class added
+public class FileName class added
 
 This class represents the name of the file.
 
@@ -104,7 +104,7 @@ public class FileName
 
 ### Changes in GroupDocs.Viewer.Results.Attachment class
 
-public Attachment(string fileName) constructor added
+public Attachment(string fileName) constructor added
 
 Initializes new instance of Attachment class.
 
@@ -119,19 +119,19 @@ public Attachment(string fileName)
 
 ### Changes in GroupDocs.Viewer.Viewer class
 
-public Viewer(String filePath, Common.Func<LoadOptions> getLoadOptions) constructor has been removed 
+public Viewer(String filePath, Common.Func<LoadOptions> getLoadOptions) constructor has been removed 
 
 Please switch to the constructor that accepts LoadOptions object instead of factory method.
 
-Viewer(String filePath, Common.Func<LoadOptions> getLoadOptions, ViewerSettings settings) constructor has been removed
+Viewer(String filePath, Common.Func<LoadOptions> getLoadOptions, ViewerSettings settings) constructor has been removed
 
 Please switch to the constructor that accepts LoadOptions object instead of factory method.
 
-public void SaveAttachment(string attachmentId, Stream destination) method set as obsolete
+public void SaveAttachment(string attachmentId, Stream destination) method set as obsolete
 
-This method is obsolete and will removed in June 2020 (v20.6). Please switch to the method that accepts Attachment as a first parameter.
+This method is obsolete and will removed in June 2020 (v20.6). Please switch to the method that accepts Attachment as a first parameter.
 
-public void SaveAttachment(Attachment attachment, Stream destination) method added
+public void SaveAttachment(Attachment attachment, Stream destination) method added
 
 Saves attachment file to the destination stream.
 

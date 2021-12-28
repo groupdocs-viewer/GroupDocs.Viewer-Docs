@@ -14,8 +14,8 @@ hideChildren: False
 
 There are 14 features, improvements, and bug-fixes in this release, most notable are:
 
-*   Added support of retrieving an attachment file type
-*   Display folder name in the header when viewing archives
+*   Added support of retrieving an attachment file type
+*   Display folder name in the header when rendering archives
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -30,17 +30,17 @@ There are 14 features, improvements, and bug-fixes in this release, most notable
 | VIEWERNET-1202 | Invalid characters while viewing rendered HTML in IE | Bug |
 | VIEWERNET-2175 | STL file is rendered into blank HTML or image | Bug |
 | VIEWERNET-2306 | Issue in rendering/converting email attachments | Bug |
-| VIEWERNET-2315 | Getting evaluation message on second server even license is applied  | Bug |
+| VIEWERNET-2315 | Getting evaluation message on second server even license is applied  | Bug |
 | VIEWERNET-2319 | Archive file name is missing when passing file stream | Bug |
-| VIEWERNET-2320 | GetViewInfo hangs indefinitely  | Bug |
+| VIEWERNET-2320 | GetViewInfo hangs indefinitely  | Bug |
 | VIEWERNET-2321 | ArchiveViewInfo shows that current folder is sub-folder of itself | Bug |
-| VIEWERNET-2343 | Document viewer size discrepancy  | Bug |
+| VIEWERNET-2343 | Document viewer size discrepancy  | Bug |
 
 ## Public API and Backward Incompatible Changes
 
 In version 20.2 following public class members were added:
 
-*   Added new property to **[GroupDocs.Viewer.Options.PdfOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions)** class
+*   Added new property to **[GroupDocs.Viewer.Options.PdfOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions)** class
 
 ```csharp
 /// <summary>
@@ -66,7 +66,7 @@ public static readonly FileType GZ = new FileType("Gnu Zipped File", ".gz");
 /// Gnu Zipped File (.gzip)
 /// </summary>
 public static readonly FileType GZIP = new FileType("Gnu Zipped File", ".gzip");
- 
+ 
 /// <summary>
 /// Maps file media type to file type e.g. 'application/pdf' will be mapped to <see cref="FileType.PDF"/>.
 /// </summary>

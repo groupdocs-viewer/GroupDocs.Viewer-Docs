@@ -3,11 +3,13 @@ id: developer-guide
 url: viewer/net/developer-guide
 title: Developer Guide
 weight: 3
-description: "Explains GroupDocs.Viewer for .NET file viewer features and shows how to view PDF, Word, Excel, PowerPoint documents inside your .NET applications"
-keywords: GroupDocs.Viewer Developer Guide, GroupDocs.Viewer .NET Developer Guide, GroupDocs.Viewer Developer Guide C#, Using GroupDocs.Viewer for .NET, GroupDocs.Viewer for .NET use cases
+description: "GroupDocs.Viewer for .NET developer guide"
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-{{< alert style="info" >}}
-This section describes some basic and advanced use cases of GroupDocs.Viewer for .NET. Please refer to [GitHub repository](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) for more examples and samples.
-{{< /alert >}}
+
+This section contains information about basic and advanced use cases of GroupDocs.Viewer for .NET.
+
+Refer to our public [repository](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) at GitHub for example and demo projects.
+
+To find out more about the features you're interested in, navigate to the appropriate section:

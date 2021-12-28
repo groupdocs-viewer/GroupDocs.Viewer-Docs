@@ -3,85 +3,131 @@ id: how-to-run-examples
 url: viewer/net/how-to-run-examples
 title: How to Run Examples
 weight: 6
-description: ""
-keywords: 
+description: "How to run GroupDocs.Viewer for .NET examples and demo projects."
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
+toc: True
 ---
-{{< alert style="warning" >}}Before running an example make sure that GroupDocs.Viewer has been installed successfully.{{< /alert >}}
 
-We offer multiple solutions on how you can run GroupDocs.Viewer examples, by building your own or using our back-end or front-end examples out-of-the-box.
-
-Please choose one from the following list:
+We offer multiple solutions on how you can run GroupDocs.Viewer examples, by building your own or using our back-end or front-end examples.
 
 ## Build project from scratch
 
-* Open Visual Studio and go to **File** -> **New** -> **Project**.
-* Select appropriate project type - Console App, ASP.NET Web Application etc.
-* Install **GroupDocs.Viewer for .NET** from Nuget or official GroupDocs website following this guide.
-* Code your first application with **GroupDocs.Viewer for .NET** like this
+You can build a project from scratch using Visual Studio or [.NET CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/). We'll step you through both cases.
+
+### Build project using .NET CLI
+
+* Make sure you have .NET Core or .NET SDK installed <https://dotnet.microsoft.com/download>.
+* Create a directory for your console app by executing e.g. `mkdir my-console-app` in your terminal.
+* Navigate to `my-console-app` directory by executing `cd my-console-app`.
+* Create empty console app by executing `dotnet new console`
+* Add GroupDocs.Viewer for .NET package `dotnet add package GroupDocs.Viewer`
+* Edit `Program.cs` and add the following lines to the `Main` method
+  
   ```csharp
-  string documentPath = @"C:\sample.docx"; // NOTE: Put here actual path for your document
+  string documentPath = @"C:\sample.docx";
   using (Viewer viewer = new Viewer(documentPath))
   {
-     // The file path format e.g. 'page_{0}.html'
      string filePathFormat = @"C:\output\page-{0}.html";
      HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources(filePathFormat);
      viewer.View(options);
   }
   ```
+  
+* Replace `documentPath` value with the actual path to the document you're going to render.
+* Run the project by executing `dotnet run`.
+* Check the output in `C:\\output\\` directory.
+
+### Build project using Visual Studio
+
+* Open Visual Studio and go to **File** -> **New** -> **Project**.
+* Select appropriate project type e.g. Console Application or Console App (.NET Framework)
+* Install **GroupDocs.Viewer for .NET** from Nuget or official GroupDocs website with one of ways listed in "Installation"({{< ref "installation" >}}) section.
+* Add the following code to the `Main` method:
+
+  ```csharp
+  string documentPath = @"C:\sample.docx";
+  using (Viewer viewer = new Viewer(documentPath))
+  {
+     string filePathFormat = @"C:\output\page-{0}.html";
+     HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources(filePathFormat);
+     viewer.View(options);
+  }
+  ```
+
+* Replace `documentPath` value with the actual path to the document you're going to render.
 * Build and Run your project.
-* Rendered document pages will appear inside "*C:\\output\\" *directory.
+* Rendered document pages will be saved in `C:\\output\\` directory.
 
 ## Run back-end examples
 
-The complete examples package of **GroupDocs.Viewer** is hosted on [Github](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET). You can either download the ZIP file from [here](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/archive/master.zip) or clone the repository of Github using your favourite git client.  
-In case you download the ZIP file, extract the folders on your local disk. The extracted files and folders will look like following image:
+You can find number of back-end examples in our repository hosted on [Github](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET). You can either download the ZIP file from [here](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/archive/master.zip) or clone the repository of Github using your favorite git client.  
+In case you download the ZIP file, extract the folders on your local disk.
 
-![](viewer/net/images/how-to-run-examples.png)
+* Navigate to `Examples` directory and open `GroupDocs.Viewer.Examples.CSharp.sln` using Visual Studio.
+* Open `RunExamples.cs` file and uncomment the example(s) that you would like to run.
+* Optionally you can set the path to the license in `Utils.cs` file.
 
-In extracted files and folders, you can find CSharp solution file. The project is created in **Microsoft Visual Studio 2019**. The **Resources** folder contains all the sample document and image files used in the examples.  
-To run the examples, open the solution file in Visual Studio and build the project. To add missing references of **GroupDocs.Viewer** see [Development Environment, Installation and Configuration]({{< ref "viewer/net/getting-started/installation.md" >}}). All the functions are called from **RunExamples.cs**.
-Un-comment the function you want to run and comment the rest.
+## Run Demo Projects
 
-![](viewer/net/images/how-to-run-examples_1.png)
+To run any demo from [GroupDocs.Viewer for .NET Demo projects](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/) you can either:
 
-## Run MVC examples
+* Clone the repository:
 
-You can run [GroupDocs.Viewer for .NET MVC Example](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-MVC) following these steps:
-
-* Download [source code](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-MVC/archive/master.zip) from GitHub or clone this repository
-  ```csharp
-  git clone https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-MVC   
+  ```bash
+  git clone git@github.com:groupdocs-viewer/GroupDocs.Viewer-for-.NET.git  
   ```
-* Open solution in the VisualStudio. Update common parameters in **web.config** and example related properties in the **configuration.yml** to meet your requirements.
-* Open [http://localhost:8080/viewer](http://localhost:8080/viewer) in your favorite browser
 
-For more details about project configuration please refer to this [guide](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-MVC#configuration).
+* Or [download](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/archive/master.zip) source code.
 
-## Run WebForms examples
+### ASP.NET Core Demo
 
-You can run [GroupDocs.Viewer for .NET Web.Forms Example](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-WebForms) following these steps:
+* Clone or download ["GroupDocs.Viewer-for-.NET"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) repository from GitHub or skip this step if you already have the code.
+* Navigate to `Demos/ASP.NET Core` folder.
+* Execute `dotnet run` in a terminal.
+* Open [http://localhost:8080/viewer](http://localhost:8080/viewer) in your favorite browser.
 
-* Download [source code](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-WebForms/archive/master.zip) from GitHub or clone this repository
-  ```csharp
-  git clone https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-WebForms
-  ```    
-* Open solution in the VisualStudio. Update common parameters in **web.config** and example related properties in the **configuration.yml** to meet your requirements.
-* Open [http://localhost:8080/viewer](http://localhost:8080/viewer) in your favorite browser
+### ASP.NET MVC Demo
 
-For more details about project configuration please refer to this [guide](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-WebForms#configuration).
+* Clone or download ["GroupDocs.Viewer-for-.NET"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) repository from GitHub or skip this step if you already have the code.
+* Navigate to  `Demos/MVC` folder.
+* Open `GroupDocs.Viewer MVC.sln` solution in `Demos/MVC` folder using Visual Studio.
+* Update parameters in **web.config** and demo related properties in the **configuration.yml** to meet your requirements, see more about configuring the demo at ["Configuration"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/MVC#configuration) section.
+* Run the project and open [http://localhost:8080/viewer](http://localhost:8080/viewer) in your favorite browser.
 
-## Run from Docker
+{{< alert style="info" >}}
 
-Use [Docker](https://www.docker.com/) image to try GroupDocs.Viewer for .NET features in an easy way. Here are the command to run GroupDocs.Viewer for .NET from docker image.
+For more details about demo configuration please refer to ["Configuration"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/MVC#configuration) section.
 
-```csharp
-mkdir DocumentSamples
-mkdir Licenses
-docker run -p 8080:8080 --env application.hostAddress=localhost -v `pwd`/DocumentSamples:/home/groupdocs/app/DocumentSamples -v `pwd`/Licenses:/home/groupdocs/app/Licenses groupdocs/viewer
-## Open http://localhost:8080/viewer in your favorite browser.
-```
+{{< /alert >}}
+
+### ASP.NET Web Forms Demo
+
+* Clone or download ["GroupDocs.Viewer-for-.NET"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) repository from GitHub or skip this step if you already have the code.
+* Navigate to `Demos/WebForms` folder.
+* Open `GroupDocs.Viewer.WebForms.sln` solution using Visual Studio.
+* Open solution in the VisualStudio. Update common parameters in **web.config** and example related properties in the **configuration.yml** to meet your requirements.
+* Open [http://localhost:8080/viewer](http://localhost:8080/viewer) in your favorite browser.
+
+{{< alert style="info" >}}
+
+For more details about demo configuration please refer to ["Configuration"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/WebForms#configuration) section.
+
+{{< /alert >}}
+
+### WPF Demo
+
+* Clone or download ["GroupDocs.Viewer-for-.NET"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) repository from GitHub or skip this step if you already have the code.
+* Navigate to `Demos/WPF/src` folder.
+* Open `GroupDocs.Viewer.WPF.sln` using Visual Studio.
+* Run the project.
+
+### Windows Forms Demo
+
+* Clone or download ["GroupDocs.Viewer-for-.NET"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) repository from GitHub or skip this step if you already have the code.
+* Navigate to `Demos/WinForms/src` folder.
+* Open `GroupDocs.Viewer.WinForms.sln` using Visual Studio.
+* Run the project.
 
 ## Contribute
 

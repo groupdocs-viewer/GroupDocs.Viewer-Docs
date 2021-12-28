@@ -19,8 +19,8 @@ There are 9 new features and 11 improvements and fixes in this regular monthly r
 *   Implemented feature to show comments when rendering Spreadsheet documents as HTML
 *   Implemented feature to show comments when rendering Presentation documents
 *   Implemented feature to ignore empty rows when rendering Spreadsheet documents
-*   Added DNG image file format support
-*   Added Microsoft Visio VSTM, VSSM and VSDM file formats support
+*   Added DNG image file format support
+*   Added Microsoft Visio VSTM, VSSM and VSDM file formats support
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -53,7 +53,7 @@ There are 9 new features and 11 improvements and fixes in this regular monthly r
 
 ### Ignoring resource prefix for HTML resources
 
-{{< alert style="info" >}}Since the version 17.8.0, IgnoreResourcePrefixForCss setting is set obsolete and has been replaced by IgnorePrefixInResources which applies to all resource types.{{< /alert >}}
+{{< alert style="info" >}}Since the version 17.8.0, IgnoreResourcePrefixForCss setting is set obsolete and has been replaced by IgnorePrefixInResources which applies to all resource types.{{< /alert >}}
 
 **Ignoring resource prefix using IgnorePrefixInResources**
 
@@ -67,7 +67,7 @@ htmlOptions.IgnorePrefixInResources = true;
 
 ### Rendering documents with Comments
 
-{{< alert style="info" >}}Since the version 17.8.0, rendering comments into HTML and PDF is supported for Microsoft Power Point documents and rendering comments into HTML is supported for Spreadsheet documents (MS Excel and OpenDocument spreadsheet).{{< /alert >}}
+{{< alert style="info" >}}Since the version 17.8.0, rendering comments into HTML and PDF is supported for Microsoft Power Point documents and rendering comments into HTML is supported for Spreadsheet documents (MS Excel and OpenDocument spreadsheet).{{< /alert >}}
 
 **Rendering document with comments.**
 
@@ -153,22 +153,22 @@ foreach (PageHtml page in pages)
 
 {{< alert style="info" >}}Starting from 17.8.0, GroupDocs.Viewer for .NET uses the single naming convention for HTML resources.{{< /alert >}}
 
-*   Image resources (resources with extensions .png, .jpg, .jpeg, .bmp, .emf, .wmf) 
+*   Image resources (resources with extensions .png, .jpg, .jpeg, .bmp, .emf, .wmf) 
     *   for the first resource: image + extension e.g. image.png
     *   for the second and next resources: image + number + extension e.g. image1.png
-*   Font resources (resources with extensions .woff, .eot, .ttf) 
+*   Font resources (resources with extensions .woff, .eot, .ttf) 
     *   for the first resource: font + extension e.g. font.woff
     *   for the second and next resources: font + number + extension e.g. font1.woff
-*   Graphics resources (resources with extensions .svg) 
+*   Graphics resources (resources with extensions .svg) 
     *   for the first resource: graphics.svg
-    *   for the second and next resources: graphics + number.svg e.g. graphics1.svg
+    *   for the second and next resources: graphics + number.svg e.g. graphics1.svg
 *   Other resources
     *   for the first resource: other + extension e.g. other.ext
-    *   for the second and next resources: other + number + extension e.g. other1.ext
+    *   for the second and next resources: other + number + extension e.g. other1.ext
 
 ### Responsive output for rendering into HTML
 
-In order to make your rendering into HTML look well across all type of devices set *EnableResponsiveRendering *option of HtmlOptions class and pass it to ViewerHtmlHandler as shown in example below:
+In order to make your rendering into HTML look well across all type of devices set *EnableResponsiveRendering *option of HtmlOptions class and pass it to ViewerHtmlHandler as shown in example below:
 
 **Getting responsive html representations.**
 
@@ -210,7 +210,7 @@ foreach (PageHtml page in pages)
 | Microsoft Excel | XLS, XLSX, XLSM, XLSB |
 | Microsoft PowerPoint | PPT, PPTX, PPS, PPSX |
 | Microsoft Project | MPP, MPT |
-| Microsoft Visio | VSD, VDX, VSS, VSX, VST, VTX, VSDX, VDW, VSSX, VSTX, VSDM , VSTM, VSSM |
+| Microsoft Visio | VSD, VDX, VSS, VSX, VST, VTX, VSDX, VDW, VSSX, VSTX, VSDM , VSTM, VSSM |
 | Microsoft Word | DOC, DOCX, DOCM, DOT, DOTX, DOTM |
 | Mobipocket e-book format | MOBI |
 | OpenDocument Formats | ODT, OTT, ODS, ODP, OTP, OTS |
@@ -225,14 +225,14 @@ foreach (PageHtml page in pages)
 
 ##### Public bool UsePdf obsolete property compilation is set to fail
 
-This property will be removed in the version 17.9.0, please use ImageOptions.ExtractText or DocumentInfoOptions.ExtractText settings instead, as shown in the example below.
+This property will be removed in the version 17.9.0, please use ImageOptions.ExtractText or DocumentInfoOptions.ExtractText settings instead, as shown in the example below.
 
 **Get text coordinates in image mode**
 
 **before v17.6.0 (C#)**
 
 ```csharp
- //Init viewer config
+ //Init viewer config
 ViewerConfig viewerConfig = new ViewerConfig();
 viewerConfig.StoragePath = "c:\\storage";
 viewerConfig.UsePdf = true;
@@ -342,13 +342,13 @@ foreach (PageData pageData in documentInfoContainer.Pages)
 
 ##### Public bool UsePdf obsolete property compilation is set to fail
 
-This property will be removed in the version 17.9.0, please use ExtractText property instead.
+This property will be removed in the version 17.9.0, please use ExtractText property instead.
 
 #### GroupDocs.Viewer.Converter.Options.HtmlOptions
 
 ##### Public bool IgnoreResourcePrefixForCss property is set obsolete
 
-This property will be removed in the version 17.11.0, please use IgnorePrefixInResources property instead, as shown in example below.
+This property will be removed in the version 17.11.0, please use IgnorePrefixInResources property instead, as shown in example below.
 
 **In this example HtmlResourcePrefix option will be applied to resources inside HTML content, but will not be applied inside resources like SVG and CSS.**
 
@@ -360,19 +360,19 @@ htmlOptions.HtmlResourcePrefix = "http://contoso.com/api/getResource?name="
 htmlOptions.IgnorePrefixInResources = true;
 ```
 
-##### Public bool IgnorePrefixInResources has been added
+##### Public bool IgnorePrefixInResources has been added
 
-Use this property to prevent adding HtmlResourcePrefix in resource files like CSS or SVG.
+Use this property to prevent adding HtmlResourcePrefix in resource files like CSS or SVG.
 
 #### GroupDocs.Viewer.Domain.EmailFileData
 
-##### Public GroupDocs.Viewer.Domain.EmailFileData class and class members compilation is set to fail
+##### Public GroupDocs.Viewer.Domain.EmailFileData class and class members compilation is set to fail
 
-Please use FileData class instead. This class is obsolete and will be removed in version 17.9.0.
+Please use FileData class instead. This class is obsolete and will be removed in version 17.9.0.
 
 #### GroupDocs.Viewer.Handler.ViewerHtmlHandler
 
-##### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore) constructor is set obsolete
+##### public ViewerHtmlHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore) constructor is set obsolete
 
 This constructor is obsolete and will be removed after 17.11.0. Please use overload without 'fileDataStore' parameter.
 
@@ -382,7 +382,7 @@ This constructor is obsolete and will be removed after 17.11.0. Please use overl
 
 #### GroupDocs.Viewer.Handler.ViewerImageHandler
 
-##### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore) constructor is set obsolete
+##### public ViewerImageHandler(ViewerConfig viewerConfig, IInputDataHandler inputDataHandler, ICacheDataHandler cacheDataHandler, IFileDataStore fileDataStore) constructor is set obsolete
 
 This constructor is obsolete and will be removed after 17.11.0. Please use overload without 'fileDataStore' parameter.
 
@@ -392,6 +392,6 @@ This constructor is obsolete and will be removed after 17.11.0. Please use overl
 
 #### GroupDocs.Viewer.Helper.IFileDataStore
 
-##### public interface IFileDataStore interface is set obsolete
+##### public interface IFileDataStore interface is set obsolete
 
 This interface is obsolete and will be removed after 17.11.0.

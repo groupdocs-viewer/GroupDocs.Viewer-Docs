@@ -48,7 +48,7 @@ There are 5 new features and 15 improvements and fixes in this regular monthly r
 
 {{< alert style="info" >}}This section lists public API changes that were introduced in GroupDocs.Viewer for .NET 17.4.0. It includes not only new and obsoleted public methods, but also a description of any changes in the behavior behind the scenes in GroupDocs.Viewer which may affect existing code. Any behavior introduced that could be seen as a regression and modifies existing behavior is especially important and is documented here.{{< /alert >}}
 
-### Support of ONE and DjVu File Formats
+### Support of ONE and DjVu File Formats
 
 GroupDocs.Viewer for .NET 17.4.0 supports ONE and DjVu file formats.
 
@@ -82,7 +82,7 @@ using (FileContainer container = handler.GetPdfFile(guid, pdfFileOptions))
 
 **Rendering Model and all non empty Layouts from CAD document**
 
-When CAD documents are rendered, by default we get only Model representation. In order to render Model and all non-empty Layouts within CAD document, a new property CadOptions.RenderLayouts of an ImageOptions and HtmlOptions has been introduced in version 17.4.0.
+When CAD documents are rendered, by default we get only Model representation. In order to render Model and all non-empty Layouts within CAD document, a new property CadOptions.RenderLayouts of an ImageOptions and HtmlOptions has been introduced in version 17.4.0.
 
 
 
@@ -160,8 +160,8 @@ foreach (PageData page in pages)
 ### Managing Text Overflow when Rendering Cells Documents to HTML
 
 1.  To set the overflowed text to be hidden, set CellsOptions.TextOverflowMode of HtmlOption to TextOverflowMode.HideText as shown in the example below.
-2.  To set the overflowed text to overlay subsequent cells untill it meets non empty cell, set CellsOptions.TextOverflowMode of HtmlOption to TextOverflowMode.OverlayIfNextIsEmpty. This is a default value of the CellsOptions.TextOverflowMode.
-3.  To set the overflowed text to overlay subsequent cells even they are not empty, set CellsOptions.TextOverflowMode of HtmlOption to TextOverflowMode.Overlay.
+2.  To set the overflowed text to overlay subsequent cells untill it meets non empty cell, set CellsOptions.TextOverflowMode of HtmlOption to TextOverflowMode.OverlayIfNextIsEmpty. This is a default value of the CellsOptions.TextOverflowMode.
+3.  To set the overflowed text to overlay subsequent cells even they are not empty, set CellsOptions.TextOverflowMode of HtmlOption to TextOverflowMode.Overlay.
 
 
 
@@ -190,7 +190,7 @@ foreach (PageHtml page in pages)
 
 ### Enabling Precise Mode when Rendering PDF Documents
 
-When pdf documents are rendered, we get similar representation in image and HTML formats, but sometimes result of rendering may contain shifted characters, symbols or document objects.To improve render result in such cases please use PdfOptions.EnablePreciseRendering as shown in the example below. This option includes technics for more accurate representation of documents both into HTML and image formats.
+When pdf documents are rendered, we get similar representation in image and HTML formats, but sometimes result of rendering may contain shifted characters, symbols or document objects.To improve render result in such cases please use PdfOptions.EnablePreciseRendering as shown in the example below. This option includes technics for more accurate representation of documents both into HTML and image formats.
 
 
 
@@ -221,15 +221,15 @@ foreach (PageHtml page in pages)
 
 #### Public CellsDocumentInfoOptions CellsDocumentInfoOptions obsolete property has been removed
 
-Please use CellsOptions property instead.
+Please use CellsOptions property instead.
 
 #### Public WordsDocumentInfoOptions WordsDocumentInfoOptions obsolete property has been removed
 
-Please use WordsOptions property instead. 
+Please use WordsOptions property instead. 
 
-#### Public EmailDocumentInfoOptions EmailDocumentInfoOptions obsolete property has been removed
+#### Public EmailDocumentInfoOptions EmailDocumentInfoOptions obsolete property has been removed
 
-Please use EmailOptions property instead. 
+Please use EmailOptions property instead. 
 
 ### GroupDocs.Viewer.Converter.Options.PdfOptions
 
@@ -255,19 +255,19 @@ Since the version 17.4.0, all implementations of abstract RenderOptions class in
 
 #### Public CachedPageDescription(string guid, CacheFileType cacheFileType) obsolete constructor has been removed
 
-Please use CachedPageDescription(string guid) or CachedPageDescription(string guid, string name) constructor instead.
+Please use CachedPageDescription(string guid) or CachedPageDescription(string guid, string name) constructor instead.
 
 ### GroupDocs.Viewer.Domain.Containers.DocumentInfoContainer
 
 #### Public List<ContentControl> ContentControls obsolete property has been removed
 
-There is no replacement for this property.
+There is no replacement for this property.
 
 ### GroupDocs.Viewer.Domain.Containers.FileTreeContainer
 
-#### Public GroupDocs.Viewer.Domain.Containers.FileTreeContainer obsolete class and class public members compilation is set to fail
+#### Public GroupDocs.Viewer.Domain.Containers.FileTreeContainer obsolete class and class public members compilation is set to fail
 
-Using this class in non-obsolete members will result in compilation error. Get ready for the change, this class will be completely deleted in the next version. Please use FileListContainer class instead, as shown in the example:
+Using this class in non-obsolete members will result in compilation error. Get ready for the change, this class will be completely deleted in the next version. Please use FileListContainer class instead, as shown in the example:
 
 
 
@@ -305,7 +305,7 @@ foreach (var node in container.Files)
 
 ### GroupDocs.Viewer.Domain.Containers.RotatePageContainer
 
-#### Public GroupDocs.Viewer.Domain.Containers.RotatePageContainer obsolete class and class public members compilation is set to fail
+#### Public GroupDocs.Viewer.Domain.Containers.RotatePageContainer obsolete class and class public members compilation is set to fail
 
 Using this class in non-obsolete members will result in compilation error. Get ready for the change, this class will be completely deleted in the next version. To get rotation angles use GetDocumentInfo method after calling RotatePage, as shown in the example:
 
@@ -328,13 +328,13 @@ int angle = imageHandler.GetDocumentInfo(guid).Pages[0].Angle
 
 ### GroupDocs.Viewer.Domain.Options.CellsDocumentInfoOptions
 
-#### Public GroupDocs.Viewer.Domain.Options.CellsDocumentInfoOptions obsolete class and class public members have been removed
+#### Public GroupDocs.Viewer.Domain.Options.CellsDocumentInfoOptions obsolete class and class public members have been removed
 
 Please use CellsOptions class instead.
 
 ### GroupDocs.Viewer.Domain.Options.DocumentInfoOptions
 
-#### Public DocumentInfoOptions(string password) constructor has been added
+#### Public DocumentInfoOptions(string password) constructor has been added
 
 Use this constructors as a replacement for constructor with guid parameter.
 
@@ -342,11 +342,11 @@ Use this constructors as a replacement for constructor with guid parameter.
 
 Please pass guid parameter separately as shown in the example below.
 
-#### Public DocumentInfoOptions(string guid) constructor has been removed
+#### Public DocumentInfoOptions(string guid) constructor has been removed
 
-Please use the empty constructor and pass guid parameter separately as shown in the example below.
+Please use the empty constructor and pass guid parameter separately as shown in the example below.
 
-#### Public DocumentInfoOptions(string guid, string password) constructor has been removed
+#### Public DocumentInfoOptions(string guid, string password) constructor has been removed
 
 Please use constructors without guid parameter instead as shown in the example below.
 
@@ -370,7 +370,7 @@ Console.WriteLine("DocumentType: {0}", documentInfo.DocumentType);
 Console.WriteLine("DocumentTypeFormat: {0}", documentInfo.DocumentTypeFormat);
 Console.WriteLine("Extension: {0}", documentInfo.Extension);
 Console.WriteLine("FileType: {0}", documentInfo.FileType);
-Console.WriteLine("Guid: {0}", documentInfo.Guid);
+Console.WriteLine("Guid: {0}", documentInfo
 Console.WriteLine("LastModificationDate: {0}", documentInfo.LastModificationDate);
 Console.WriteLine("Name: {0}", documentInfo.Name);
 Console.WriteLine("PageCount: {0}", documentInfo.Pages.Count);
@@ -383,17 +383,17 @@ foreach (PageData pageData in documentInfo.Pages)
 }
 ```
 
-#### Public CellsDocumentInfoOptions CellsDocumentInfoOptions obsolete property has been removed
+#### Public CellsDocumentInfoOptions CellsDocumentInfoOptions obsolete property has been removed
 
- Please use CellsOptions instead as shown in example below.
+ Please use CellsOptions instead as shown in example below.
 
-#### Public WordsDocumentInfoOptions WordsDocumentInfoOptions obsolete property has been removed
+#### Public WordsDocumentInfoOptions WordsDocumentInfoOptions obsolete property has been removed
 
- Please use WordsOptions instead as shown in the example below.
+ Please use WordsOptions instead as shown in the example below.
 
-#### Public EmailDocumentInfoOptions EmailDocumentInfoOptions obsolete property has been removed
+#### Public EmailDocumentInfoOptions EmailDocumentInfoOptions obsolete property has been removed
 
- Please use EmailOptions instead as shown in the example below.
+ Please use EmailOptions instead as shown in the example below.
 
 
 
@@ -426,7 +426,7 @@ DocumentInfoContainer emailDocumentInfoContainer = viewerImageHandler.GetDocumen
 
 ### GroupDocs.Viewer.Domain.Options.EmailDocumentInfoOptions
 
-#### Public GroupDocs.Viewer.Domain.Options.EmailDocumentInfoOptions obsolete class and class public memebers have been removed
+#### Public GroupDocs.Viewer.Domain.Options.EmailDocumentInfoOptions obsolete class and class public memebers have been removed
 
 Please use EmailOptions class instead.
 
@@ -486,7 +486,7 @@ Please use parameterless constructor or newly added constructors without guid pa
 
 **Get original file in Pdf format with Watermark using PdfFileOptions**
 
-Add watermark to Pdf document by setting **Watermark** property of **PdfFileOptions.**
+Add watermark to Pdf document by setting **Watermark** property of **PdfFileOptions.**
 
 
 
@@ -545,7 +545,7 @@ Console.WriteLine("Html content: {0}", container.HtmlContent);
 
 ##### public PrintableHtmlOptions(string guid)
 
-The compilation of all constructors with guid parameter is set to fail, they will be removed in version 17.5.0, use parameterless constructor instead and pass guid to GetPrintableHtml method of corresponding ViewerHandler as shown in the example below.
+The compilation of all constructors with guid parameter is set to fail, they will be removed in version 17.5.0, use parameterless constructor instead and pass guid to GetPrintableHtml method of corresponding ViewerHandler as shown in the example below.
 
 **Using parameterless constructor instead of constructors with guid parameter**
 
@@ -573,7 +573,7 @@ Console.WriteLine("Html content: {0}", container.HtmlContent);
 
 ### GroupDocs.Viewer.Domain.Options.ReorderPageOptions
 
-#### Public string Guid obsolete property compilation is set to fail  
+#### Public string Guid obsolete property compilation is set to fail  
 
 This property's compilation is set to fail and will be removed in the version 17.5.0, please, pass guid parameter to ReorderPage method of corresponding ViewerHandler instead as shown the example below.
 
@@ -583,7 +583,7 @@ This property's compilation is set to fail and will be removed in the version 17
 
 ##### public ReorderPageOptions(string guid, int pageNumber, int newPosition)
 
-The compilation of two obsolete constructors with guid parameter is set to fail, they will be removed in version 17.5.0, use the overloaded constructor without guid instead and pass guid parameter to ReorderPage method of corresponding ViewerHandler as shown in the example below.
+The compilation of two obsolete constructors with guid parameter is set to fail, they will be removed in version 17.5.0, use the overloaded constructor without guid instead and pass guid parameter to ReorderPage method of corresponding ViewerHandler as shown in the example below.
 
 **Using constructors without guid instead of constructors with guid parameter.**
 
@@ -605,7 +605,7 @@ imageHandler.ReorderPage(guid, options);
 
 #### Public string Guid obsolete property compilation is set to fail
 
-This property compilation is set to fail and it will be removed in the version 17.5.0, please, pass guid parameter to RotatePage method of corresponding ViewerHandler instead as shown in the example below.
+This property compilation is set to fail and it will be removed in the version 17.5.0, please, pass guid parameter to RotatePage method of corresponding ViewerHandler instead as shown in the example below.
 
 #### Obsolete constructors with guid parameter compilation is set to fail:
 
@@ -613,7 +613,7 @@ This property compilation is set to fail and it will be removed in the version 
 
 ##### public RotatePageOptions(string guid, int pageNumber, int rotationAngle)
 
-The compilation of two obsolete constructors with guid parameter is set to fail, they will be removed in version 17.5.0, use the overloaded constructor without guid instead and pass guid parameter to RotatePage method of corresponding ViewerHandler as shown in the example below.
+The compilation of two obsolete constructors with guid parameter is set to fail, they will be removed in version 17.5.0, use the overloaded constructor without guid instead and pass guid parameter to RotatePage method of corresponding ViewerHandler as shown in the example below.
 
 **Using constructors without guid instead of constructors with guid parameter.**
 
@@ -635,7 +635,7 @@ imageHandler.RotatePage(guid, rotateOptions);
 
 ### GroupDocs.Viewer.Domain.Options.WordsDocumentInfoOptions
 
-#### Public GroupDocs.Viewer.Domain.Options.WordsDocumentInfoOptions obsolete class and class public memebers have been removed
+#### Public GroupDocs.Viewer.Domain.Options.WordsDocumentInfoOptions obsolete class and class public memebers have been removed
 
 Please use WordsOptions class instead.
 
@@ -643,7 +643,7 @@ Please use WordsOptions class instead.
 
 #### Obsolete void SaveDocument(CachedDocumentDescription cachedDocumentDescription, Stream documentStream) method copilation is set to fail
 
-If you have created your own implementation of  IInputDataHandler, please use AddFile(string guid, Stream content) method instead.
+If you have created your own implementation of  IInputDataHandler, please use AddFile(string guid, Stream content) method instead.
 
 **Difference in implementation of IInputDataHandler obsolete SaveDocument and replacing AddFile methods for Azure input data handler.**
 
@@ -711,6 +711,6 @@ Compilation for this method is set to fail and it will be removed in the version
 
 Compilation of this method is set to fail, it will be removed in the version 17.5.0, please use RotatePage method with guid parameter instead.
 
-#### Public void ReorderPage(ReorderPageOptions reorderPageOptions) obsolete method  compilation is set to fail
+#### Public void ReorderPage(ReorderPageOptions reorderPageOptions) obsolete method  compilation is set to fail
 
-Compilation of this method is set to fail, it will be removed in the version 17.5.0, please use ReorderPage method with guid parameter instead.
+Compilation of this method is set to fail, it will be removed in the version 17.5.0, please use ReorderPage method with guid parameter instead.
