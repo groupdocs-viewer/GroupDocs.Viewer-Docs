@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Overview
-
 Project files are used for organizing, tracking, and maintaining projects and created by Project Management applications such as Microsoft Project. Project Management files contain a collection of tasks, resources and Gantt charts.
 
 ## Supported Project Management Formats

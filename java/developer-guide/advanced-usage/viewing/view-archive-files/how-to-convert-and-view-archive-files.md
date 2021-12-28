@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Introduction
-
 Archive file formats are related to files compression. There various archive formats:
 Mostly used in Windows: ZIP, RAR
 Mostly used in Linux (Unix): TAR, BZIP2 (BZ2), GZIP

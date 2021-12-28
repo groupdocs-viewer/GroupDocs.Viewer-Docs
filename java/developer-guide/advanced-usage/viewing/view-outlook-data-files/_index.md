@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Overview
-
 Outlook Data Files are created and used by Microsoft Outlook to store messages, contacts, calendars, and other account information.
 
 ## Supported Outlook Data Files

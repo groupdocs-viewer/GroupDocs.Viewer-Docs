@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Overview
-
 Text files contain plain unformatted text. Text files can be opened by text-editor apps such as Microsoft Notepad or text-processing apps like Microsoft Word.
 
 ## Supported Text Files

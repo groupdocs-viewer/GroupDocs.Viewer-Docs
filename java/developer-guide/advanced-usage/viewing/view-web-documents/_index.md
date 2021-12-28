@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Overview
-
 Web documents include formats used by Internet websites and Web servers. These formats contain pages that can include text, graphics, tables, formatting, and other media. The most commonly used applications for Text files are Web browsers: Google chrome, Internet Explorer, Opera, Mozilla Firefox and other.
 
 ## Supported Web Formats

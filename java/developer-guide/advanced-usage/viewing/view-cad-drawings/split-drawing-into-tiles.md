@@ -8,10 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-This article explains how to split CAD drawing into tiles with [GroupDocs.Viewer](https://products.groupdocs.com/viewer) within your Java applications.
-
-## Introduction
-
 Tiled rendering or (rendering by coordinates) is the process of rendering CAD drawings (into an image, HTML or PDF) by dividing into square parts and rendering each part (or tile) separately. The advantage of this process is that the amount of memory involved is reduced as compared to rendering the entire document at once. Generally, DWG documents are divided into pages by Model and Layouts, but when the tiled rendering is enabled, only the Model is rendered and every tile composes a separate page. 
 
 ![](viewer/java/images/split-drawing-into-tiles.jpg)

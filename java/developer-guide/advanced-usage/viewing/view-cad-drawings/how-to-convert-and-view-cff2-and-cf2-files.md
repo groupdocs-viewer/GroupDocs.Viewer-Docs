@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Introduction
-
 CF2 (also CF2, CFF2) is a Common File Format File of revision 2. This file format is designed for exchange of cardboard boxes (goods packaging) drawings. It contains text instructions splitted by sections for the numerical control machine ([NC machine](https://en.wikipedia.org/wiki/Numerical_control)) tool.
 
 ## View CF2 files

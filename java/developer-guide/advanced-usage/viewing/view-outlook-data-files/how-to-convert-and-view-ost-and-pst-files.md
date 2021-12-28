@@ -8,7 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Introduction
 OST (Offline Storage Table) and PST (Personal Storage Table) are formats of Personal Folder File (PFF). Both formats contains e-mail messages, contacts and appoitments.  
 
 * PST files - contain data of user personal Outlook folders  

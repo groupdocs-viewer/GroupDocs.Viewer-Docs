@@ -57,6 +57,7 @@ The [FileCache](https://apireference.groupdocs.com/viewer/java/com.groupdocs.vie
 With [synchronized](https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html) statement we can write quite a simple code to achieve thread-safety in our applications as shown in this tutorial. 
 
 ## More resources
+
 ### GitHub Examples
 You may easily run the code above and see the feature in action in our GitHub examples:
 *   [GroupDocs.Viewer for Java examples, plugins, and showcase](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java)

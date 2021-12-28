@@ -39,10 +39,10 @@ The following example shows how to load a license from a stream.
 
 ```java
     // For complete examples and data files, please go to https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java
-    InputStream fileStream = new FileInputStream("GroupDocs.Viewer.lic");
-    License license = new License();
-    license.setLicense(fileStream);
-    fileStream.close();
+    try (InputStream fileStream = new FileInputStream("GroupDocs.Viewer.lic")){
+        License license=new License();
+        license.setLicense(fileStream);
+    }
 ```
 
 {{< alert style="info" >}}Calling License.setLicense(...) multiple times is not harmful but simply wastes processor time. Call License.setLicense(...) in your startup code, before using [GroupDocs.Viewer](https://products.groupdocs.com/viewer) classes.{{< /alert >}}

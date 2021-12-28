@@ -8,9 +8,11 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Overview
-
 E-mail file formats are used by e-mail applications such as Microsoft Outlook or Apple Mail to store data including email messages, attachments, formatting, and other media. 
+
+## Online E-mail Viewer
+
+To view E-mail messages online please check out free **[E-mail Viewer](https://products.groupdocs.app/viewer/email)**
 
 ## Supported E-Mail Formats
 

@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Introduction
-
 When converting CAD drawings with [GroupDocs.Viewer](https://products.groupdocs.com/viewer) there is no background color set by default but we proved an option that enables you to set any background color.
 
 ## Setting background color when converting CAD Drawings
@@ -39,6 +37,7 @@ And here is output image with blue background color:
 ![](viewer/java/images/how-to-set-background-color-when-converting-cad-drawings_1.png)
 
 ## More resources
+
 ### GitHub Examples
 You may easily run the code above and see the feature in action in our GitHub examples:
 *   [GroupDocs.Viewer for Java examples, plugins, and showcase](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java)

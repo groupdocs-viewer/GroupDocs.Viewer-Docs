@@ -8,8 +8,6 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Retrieving folders
-
 [GroupDocs.Viewer](https://products.groupdocs.com/viewer) provides additional information for Outlook Data Files when calling [getViewInfo(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method. To retrieve view information for Outlook Data File call [getViewInfo(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method and cast output result to [OutlookViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/OutlookViewInfo) type.
 
 Following example demonstrates how to retrieve view information for Outlook Data File.

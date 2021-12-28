@@ -8,9 +8,11 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-## Overview
-
 Presentation files are the files created by Microsoft PowerPoint, LibreOffice Impress, or Apache OpenOffice Impress programs. Typical presentation file contains slides where each slide may contain text, images, formatting, and other media. Presentations are commonly used in conferences in schools and universities.
+
+## Online PowerPoint Viewer
+
+To view PowerPoint files online please check out free **[PowerPoint Viewer](https://products.groupdocs.app/viewer/powerpoint)**
 
 ## Supported Presentation Formats
 
