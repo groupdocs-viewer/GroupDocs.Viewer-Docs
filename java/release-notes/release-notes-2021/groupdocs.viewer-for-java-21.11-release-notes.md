@@ -2,7 +2,7 @@
 id: groupdocs-viewer-for-java-21-11-release-notes
 url: viewer/java/groupdocs-viewer-for-java-21-11-release-notes
 title: GroupDocs.Viewer for Java 21.11 Release Notes
-weight: 114
+weight: 2
 description: "Features, improvements, and bugs-fixes that are shipped in GroupDocs.Viewer for Java 21.11"
 keywords: release notes, groupdocs.viewer, java, 21.11
 productName: GroupDocs.Viewer for Java
