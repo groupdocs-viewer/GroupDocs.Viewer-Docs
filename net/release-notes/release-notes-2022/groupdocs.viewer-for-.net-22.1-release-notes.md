@@ -33,3 +33,14 @@ There are 11 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-3798|Temp files overflow when opening a file from stream for PSD AI files|Bug|
 |VIEWERNET-3291|"Could not load file. File is corrupted or damaged." exception when rendering IGS file to html|Bug|
 |VIEWERNET-3784|AI rendering is slow and output is a white square|Bug|
+
+## Public API Changes
+
+### GroupDocs.Viewer namespace
+
+Following obsolete members were removed:
+
+* `public Viewer(Func<Stream> getFileStream);`
+* `public Viewer(Func<Stream> getFileStream, Func<LoadOptions> getLoadOptions);`
+* `public Viewer(Func<Stream> getFileStream, ViewerSettings settings);`
+* `public Viewer(Func<Stream> getFileStream, Func<LoadOptions> getLoadOptions, ViewerSettings settings);`
