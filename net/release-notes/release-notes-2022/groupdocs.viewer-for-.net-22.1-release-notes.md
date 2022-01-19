@@ -27,7 +27,7 @@ There are 11 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-3014|Not all data rendered|Bug|
 |VIEWERNET-3435|"Failed to render CAD document into PDF." exception when rendering DXF file|Bug|
 |VIEWERNET-3448|"Could not load file. File is corrupted or damaged." exception when rendering DWG file|Bug|
-|VIEWERNET-3620|"CAD document rendering failed.Please check that CadOptions sizing options do not have too low or too high values. exception when rendering DWF file|Bug|
+|VIEWERNET-3620|CAD document rendering failed.Please check that CadOptions sizing options do not have too low or too high values. exception when rendering DWF file|Bug|
 |VIEWERNET-3622|"Could not load file. File is corrupted or damaged." exception when rendering DGN file|Bug|
 |VIEWERNET-3676|Word table formatting issue using Customer XML data|Bug|
 |VIEWERNET-3798|Temp files overflow when opening a file from stream for PSD AI files|Bug|
