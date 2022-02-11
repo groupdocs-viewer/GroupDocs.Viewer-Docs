@@ -3,6 +3,7 @@ id: installation
 url: viewer/net/installation
 title: Installation
 weight: 4
+keywords: installation
 description: "Installation of GroupDocs.Viewer for .NET"
 productName: GroupDocs.Viewer for .NET
 hideChildren: False

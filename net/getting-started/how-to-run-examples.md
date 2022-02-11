@@ -3,7 +3,8 @@ id: how-to-run-examples
 url: viewer/net/how-to-run-examples
 title: How to Run Examples
 weight: 6
-description: "How to run GroupDocs.Viewer for .NET examples and demo projects."
+keywords: visual studio, build a project, .net cli
+description: "You can build a project from scratch using Visual Studio .NET CLI. We'll step you through both cases."
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True

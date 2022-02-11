@@ -3,7 +3,8 @@ id: licensing-and-subscription
 url: viewer/net/licensing-and-subscription
 title: Licensing and Subscription
 weight: 5
-description: "GroupDocs.Viewer for .NET licensing, evaluation limitations and subscription."
+keywords: free, free trial, evaluation, groupdocs.viewer
+description: "GroupDocs.Viewer provides different plans for purchase or offers a Free Trial and a 30-day Temporary License for evaluation."
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True

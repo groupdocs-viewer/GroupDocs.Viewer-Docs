@@ -3,7 +3,8 @@ id: supported-document-formats
 url: viewer/net/supported-document-formats
 title: Supported Document Formats
 weight: 2
-description: "File-formats supported by GroupDocs.Viewer for .NET"
+keywords: Python Script, TAR,ZIP,DGN,DXF
+description: "Supports Python Script, TAR,ZIP,DGN,DXF and many more"
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
