@@ -3,6 +3,7 @@ id: how-to-use-custom-cache-implementation
 url: viewer/net/how-to-use-custom-cache-implementation
 title: Custom cache implementation
 weight: 1
+keywords: custom caching, groupdocs.viewer
 description: "This article explains how to use custom caching implementation with GroupDocs.Viewer within your .NET applications."
 productName: GroupDocs.Viewer for .NET
 hideChildren: False

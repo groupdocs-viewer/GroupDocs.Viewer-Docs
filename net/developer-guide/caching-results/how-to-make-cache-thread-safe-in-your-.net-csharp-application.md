@@ -3,8 +3,8 @@ id: how-to-make-cache-thread-safe-in-your-net-csharp-application
 url: viewer/net/how-to-make-cache-thread-safe-in-your-net-csharp-application
 title: How to make cache thread-safe in your .NET C# application
 weight: 2
-description: "This article explains how to make cache thread-safe with GroupDocs.Viewer within your .NET applications."
-keywords: GroupDocs.Viewer, thread-safe, cache
+description: "This article explains how to make cache thread safe with GroupDocs.Viewer within your .NET applications."
+keywords: GroupDocs.Viewer, thread safe, cache
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---

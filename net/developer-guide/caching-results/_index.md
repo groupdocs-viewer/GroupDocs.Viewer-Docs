@@ -3,6 +3,7 @@ id: caching-results
 url: viewer/net/caching-results
 title: Caching Results
 weight: 5
+keywords: caching,caching results,groupdocs.viewer
 description: "This article contains caching use-cases with GroupDocs.Viewer within your .NET applications."
 productName: GroupDocs.Viewer for .NET
 hideChildren: False

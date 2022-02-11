@@ -3,6 +3,7 @@ id: set-timeout-for-loading-external-resources-contained-by-a-document
 url: viewer/net/set-timeout-for-loading-external-resources-contained-by-a-document
 title: Set timeout for loading external resources
 weight: 4
+keywords: set timeout, Groupdocs.Viewer
 description: "This article explains how to set timeout for loading external resources contained by a document with GroupDocs.Viewer within your .NET applications."
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
