@@ -14,36 +14,36 @@ hideChildren: False
 
 There are features, improvements, and bug-fixes in this release, most notable are:
 
-*   Added support of retrieving an attachment file type
-*   Display folder name in the header when viewing archives
-*   Added support of Microsoft Excel 97-2003 Template (.xlt) file format
-*   Added new option that enables users to set filename when viewing archive files 
-*   [Plotter Document (.plt, .hpg)](https://wiki.fileformat.com/cad/plt/) viewing support added, see [How to view PLT files]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-cad-drawings/how-to-view-plt-files.md" >}}) for more details;
-*   Viewing specific [Design Web Format File (.dwf)](https://wiki.fileformat.com/cad/dwf) layers is now supported, see [How to view DWF file layers]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-cad-drawings/how-to-view-dwf-file-layers.md" >}}) for more details;
-*   Added option to set background color when viewing CAD drawings, see [How to set background color when converting CAD Drawings]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-cad-drawings/how-to-set-background-color-when-converting-cad-drawings.md" >}}) for more details;
-*   Added option to show spreadsheet column headings and row numbers, see [How to show spreadsheet column and row headings]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-excel-spreadsheets/how-to-show-spreadsheet-column-and-row-headings.md" >}}) for more details.
+* Added support of retrieving an attachment file type
+* Display folder name in the header when viewing archives
+* Added support of Microsoft Excel 97-2003 Template (.xlt) file format
+* Added new option that enables users to set filename when viewing archive files 
+* [Plotter Document (.plt, .hpg)](https://wiki.fileformat.com/cad/plt/) viewing support added, see [How to view PLT files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-view-plt-files.md" >}}) for more details;
+* Viewing specific [Design Web Format File (.dwf)](https://wiki.fileformat.com/cad/dwf) layers is now supported, see [How to view DWF file layers]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-view-dwf-file-layers.md" >}}) for more details;
+* Added option to set background color when viewing CAD drawings, see [How to set background color when converting CAD Drawings]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-set-background-color-when-converting-cad-drawings.md" >}}) for more details;
+* Added option to show spreadsheet column headings and row numbers, see [How to show spreadsheet column and row headings]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/how-to-show-spreadsheet-column-and-row-headings.md" >}}) for more details.
     NOTE: This feature is supported when rendering worksheets into a single page when `SpreadsheetOptions` is set to `SpreadsheetOptions.forOnePagePerSheet()`.
-*   When converting CAD drawings to HTML, CAD drawings are converted to SVG instead of PNG   
-*Related article* *[How to convert CAD to HTML]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-cad-drawings/how-to-convert-cad-to-html.md" >}})*
-*   Added Flat XML ODF Template (.fodg) file format support  
-*Related article [How to convert and view ODG and FODG files]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-image-files/how-to-convert-and-view-odg-and-fodg-files.md" >}})*
-*   Added IGES Drawing File (.igs) file format support  
-*Related article [How to convert and view IGS files]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-cad-drawings/how-to-convert-and-view-igs-files.md" >}})*
-*   Added Common File Format File (.cf2) file-format support  
-*Related article [How to convert and view CFF2 and CF2 files]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-cad-drawings/how-to-convert-and-view-cff2-and-cf2-files.md" >}})*
-*   Added Wavefront 3D Object File (.obj) file-format support  
-*Related article [How to convert and view OBJ files]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-cad-drawings/how-to-convert-and-view-obj-files.md" >}})*
-*   Added support viewing MS Project documents with notes  
-*Related article [How to convert and view MS Project documents with notes]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-ms-project-files/how-to-convert-and-view-ms-project-documents-with-notes.md" >}})*
-*   Added support viewing OpenDocument Flat XML Presentation (.fodp) files  
-*Related article [How to convert and view FODP and ODP files]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-powerpoint-presentations/how-to-convert-and-view-fodp-and-odp-files.md" >}})*
-*   Improved default font support when converting PowerPoint files to HTML and PDF  
-*Related article [How to substitute missing font when converting presentations]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-powerpoint-presentations/how-to-substitute-missing-font-when-converting-presentations.md" >}})*
-*   [Fixed High RAM consumption issue when rendering a large text file]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-text-files/how-to-convert-and-view-txt-files.md">}})
-*   [Improved rendering Outlook files (pst, ost) to HTML]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-outlook-data-files/how-to-convert-and-view-ost-and-pst-files.md">}})
-*   [Show spreadsheet column headings and row numbers]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-excel-spreadsheets/how-to-show-spreadsheet-column-and-row-headings.md" >}}) was implemented for all options
-*   [Support file format detection for passed stream]({{< ref "viewer/java/developer-guide/basic-usage/how-to-determine-file-type.md">}})
-*   [Get sheet names from an Excel file]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-excel-spreadsheets/how-to-get-the-names-of-the-worksheets.md">}})
+* When converting CAD drawings to HTML, CAD drawings are converted to SVG instead of PNG
+*Related article* *[How to convert CAD to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-convert-cad-to-html.md" >}})*
+* Added Flat XML ODF Template (.fodg) file format support  
+*Related article [How to convert and view ODG and FODG files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-odg-and-fodg-files.md" >}})*
+* Added IGES Drawing File (.igs) file format support  
+*Related article [How to convert and view IGS files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-convert-and-view-igs-files.md" >}})*
+* Added Common File Format File (.cf2) file-format support  
+*Related article [How to convert and view CFF2 and CF2 files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-convert-and-view-cff2-and-cf2-files.md" >}})*
+* Added Wavefront 3D Object File (.obj) file-format support  
+*Related article [How to convert and view OBJ files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-convert-and-view-obj-files.md" >}})*
+* Added support viewing MS Project documents with notes  
+*Related article [How to convert and view MS Project documents with notes]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-ms-project-files/how-to-convert-and-view-ms-project-documents-with-notes.md" >}})*
+* Added support viewing OpenDocument Flat XML Presentation (.fodp) files  
+*Related article [How to convert and view FODP and ODP files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-powerpoint-presentations/how-to-convert-and-view-fodp-and-odp-files.md" >}})*
+* Improved default font support when converting PowerPoint files to HTML and PDF  
+*Related article [How to substitute missing font when converting presentations]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-powerpoint-presentations/how-to-substitute-missing-font-when-converting-presentations.md" >}})*
+* [Fixed High RAM consumption issue when rendering a large text file]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/how-to-convert-and-view-txt-files.md">}})
+* [Improved rendering Outlook files (pst, ost) to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-outlook-data-files/_index.md">}})
+* [Show spreadsheet column headings and row numbers]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/how-to-show-spreadsheet-column-and-row-headings.md" >}}) was implemented for all options
+* [Support file format detection for passed stream]({{< ref "viewer/java/developer-guide/retrieving-document-information/how-to-determine-file-type.md">}})
+* [Get sheet names from an Excel file]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/how-to-get-the-names-of-the-worksheets.md">}})
 * Support setting margins when converting HTML files
 * Rendering text files into a single HTML page
 * Excel 2003 XML file (SpreadsheetML) (.xml) file-format support
@@ -174,9 +174,9 @@ New methods were added to [PdfOptions](https://apireference.groupdocs.com/viewer
 
 ### Changes in `FileType` class
 
-New constants and methods were added to [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class. 
+New constants and methods were added to [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class.
 
-More details and use cases can be found in [How to determine file type]({{< ref "viewer/java/developer-guide/basic-usage/how-to-determine-file-type.md" >}}) documentation article.
+More details and use cases can be found in [How to determine file type]({{< ref "viewer/java/developer-guide/retrieving-document-information/how-to-determine-file-type.md" >}}) documentation article.
 
 ```java
     enum FileType {
@@ -304,7 +304,7 @@ New constructor was added to [Attachment](https://apireference.groupdocs.com/vie
 ### Changes in `Viewer` class
 
 New methods were added to [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class
-See [How to check if file is encrypted]({{< ref "viewer/java/developer-guide/basic-usage/how-to-check-if-file-is-encrypted.md">}}) for more details and code sample.
+See [How to check if file is encrypted]({{< ref "viewer/java/developer-guide/retrieving-document-information/how-to-check-if-file-is-encrypted.md">}}) for more details and code sample.
 
 ```java
     class Viewer {
@@ -345,7 +345,7 @@ New methods were added to [CadOptions](https://apireference.groupdocs.com/viewer
 #### Changes in `SpreadsheetOptions` class
 
 New methods were added to [SpreadsheetOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions) class
-See [Split worksheets into pages]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-excel-spreadsheets/split-worksheets-into-pages.md" >}}) documentation article for more details and code samples.
+See [Split worksheets into pages]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/split-worksheets-into-pages.md" >}}) documentation article for more details and code samples.
 
 ```java
     class SpreadsheetOptions {
@@ -400,7 +400,7 @@ class FileInfo {
 #### Changes in `HtmlViewOptions` class
 
 New methods were added to [HtmlViewOptions](<https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions>) class
-For more details see [Rendering text files into a single HTML page]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-text-files/how-to-convert-and-view-txt-files.md#convert-txt-to-html">}}).
+For more details see [Rendering text files into a single HTML page]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/how-to-convert-and-view-txt-files.md#convert-txt-to-html">}}).
 
 ```java
     class HtmlViewOptions {
@@ -416,7 +416,7 @@ For more details see [Rendering text files into a single HTML page]({{< ref "vie
 #### Changes in `WordProcessingOptions` class
 
 New methods were added to [WordProcessingOptions](<https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/WordProcessingOptions>) class to support setting margins when rendering Web documents.
- See [How to convert and view HTML files with user defined margins]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-web-documents/how-to-convert-and-view-html-files-with-margins.md" >}}) documentation article for more details and code samples.
+ See [How to convert and view HTML files with user defined margins]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-web-documents/how-to-convert-and-view-html-files-with-margins.md" >}}) documentation article for more details and code samples.
 
 ```java
     class WordProcessingOptions {
@@ -466,16 +466,16 @@ New methods were added to [WordProcessingOptions](<https://apireference.groupdoc
 * Class `ViewInfo` was renamed to [ViewInfoImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ViewInfoImpl) and from it was extracted interface [ViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ViewInfo)
 * Class `Word` was renamed to [WordImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/WordImpl) and from it was extracted interface [Word](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Word)
 
-**This changes were made to implement possibility to use custom serialization functionality with caching. More details you can find in [Using Custom model classes for caching]({{< ref "viewer/java/developer-guide/advanced-usage/caching/how-to-use-custom-cache-implementation.md" >}})**
+**This changes were made to implement possibility to use custom serialization functionality with caching. More details you can find in [Using Custom model classes for caching]({{< ref "viewer/java/developer-guide/caching-results/how-to-use-custom-cache-implementation.md" >}})**
 
 **It is better** to use `CacheableFactory.getInstance().newCadViewInfo(...)`, `CacheableFactory.getInstance().newWord(...)` and so on to create new instances of classes above. But if you are not going to use custom serialization, you can still use `new CadViewInfoImpl(...)`, `new WordImpl(...)`, ...
 
 ### Behavior changes
-*   Starting from 21.2 the CAD drawings are converted to SVG instead of PNG for better quality. Please refer to [How to convert CAD to HTML]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-cad-drawings/how-to-convert-cad-to-html.md" >}}) article for more details.
+* Starting from 21.2 the CAD drawings are converted to SVG instead of PNG for better quality. Please refer to [How to convert CAD to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-convert-cad-to-html.md" >}}) article for more details.
 
-* In this version we've improved viewing of archives and text files - now it could be rendered to multiple and single pages (by default they are rendered to multiple pages). See [How to convert archive files to HTML]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-archive-files/how-to-convert-archive-files-to-html.md" >}}) and [How to convert and view TXT files]({{< ref "viewer/java/developer-guide/advanced-usage/viewing/view-text-files/how-to-convert-and-view-txt-files.md" >}}) for more details.
+* In this version we've improved viewing of archives and text files - now it could be rendered to multiple and single pages (by default they are rendered to multiple pages). See [How to convert archive files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/_index.md" >}}) and [How to convert and view TXT files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/how-to-convert-and-view-txt-files.md" >}}) for more details.
 
-*   In this version we've improved viewing of Personal Storage [OST](https://wiki.fileformat.com/email/ost/)/[PST](https://wiki.fileformat.com/email/pst/) files and as a result, the behavior changed.  
+* In this version we've improved viewing of Personal Storage [OST](https://wiki.fileformat.com/email/ost/)/[PST](https://wiki.fileformat.com/email/pst/) files and as a result, the behavior changed.  
     Now when viewing personal storage OST /PST files the **Inbox** folder is selected and displayed by default as it shown on the screenshot below.
 
 ![](viewer/java/images/groupdocs-viewer-for-net-20-4-release-notes.png)

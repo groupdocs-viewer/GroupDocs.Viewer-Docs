@@ -8,6 +8,8 @@ keywords: GroupDocs.Viewer Developer Guide, GroupDocs.Viewer Java Developer Guid
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}
-This section describes some basic and advanced use cases of [GroupDocs.Viewer for Java](https://products.groupdocs.com/viewer/java). Please refer to [GitHub](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java) repository for more examples and samples.
-{{< /alert >}}
+This section contains information about basic and advanced use cases of GroupDocs.Viewer for .NET.
+
+Refer to our public [repository](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) at GitHub for example and demo projects.
+
+To find out more about the features you're interested in, navigate to the appropriate section:

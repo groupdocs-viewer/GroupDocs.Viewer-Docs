@@ -3,26 +3,67 @@ id: home
 url: viewer/java
 title: GroupDocs.Viewer for Java
 weight: 1
-description: ""
-keywords: 
+description: "GroupDocs.Viewer for Java documentation homepage"
+keywords: "groupdocs viewer java, documentation, docs, homepage"
 productName: GroupDocs.Viewer for Java
 hideChildren: True
 ---
-{{< alert style="info" >}}![](viewer/java/images/home.png) **Welcome to the [GroupDocs.Viewer for Java](https://products.groupdocs.com/viewer/java)**.
+<img src="viewer/java/images/home.png" alt="groupdocs-viewer-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
-[GroupDocs.Viewer](https://products.groupdocs.com/viewer) is a fast, powerful and high-quality [file and document viewer](https://en.wikipedia.org/wiki/File_viewer) API for Java (1.7+) which allows you to display over 140 file formats in your desktop, web or mobile applications. The API provides flexible and fully customizable rendering options with an ability to render documents into HTML5, Image, and PDFto satisfy any requirements for different use cases. Our document viewer API is simple, intuitive and complete.With only a few lines of code, you can render/display your documents without installing any additional software and at the same time configure rendering options to fulfill your needs
-{{< /alert >}}
+GroupDocs.Viewer for Java is a cross-platform class library that enables you to build awesome file viewer applications.
 
-## GroupDocs.Viewer for Java Resources
+GroupDocs.Viewer supports most of the popular document formats such as DOCX, XLSX, PPTX, PDF, ZIP, and others.
 
-Following are the links to some useful resources you may need to accomplish your tasks.
+With GroupDocs.Viewer for Java you can render files to HTML, JPEG, PNG, and PDF formats, list and save attachments and embedded files without third-party libraries and applications.
 
-*   [GroupDocs.Viewer for Java Online Documentation]({{< ref "viewer/java" >}})
-*   [GroupDocs.Viewer for Java Features]({{< ref "viewer/java/getting-started/features-overview.md" >}})
-*   [GroupDocs.Viewer for Java Limitations]({{< ref "viewer/java/getting-started/evaluation-limitations-and-licensing-of-groupdocs.viewer.md" >}})
-*   [GroupDocs.Viewer for Java Release Notes]({{< ref "viewer/java/release-notes/_index.md" >}})
-*   [GroupDocs.Viewer for Java Product Page](https://products.groupdocs.com/viewer/java)
-*   [Download GroupDocs.Viewer for Java](https://artifact.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-viewer)
-*   [GroupDocs.Viewer for Java API Reference Guide](https://apireference.groupdocs.com/java/viewer)
-*   [GroupDocs.Viewer for Java Free Support Forum](https://forum.groupdocs.com/c/viewer)
-*   [GroupDocs.Viewer for Java Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
+------
+
+<div class="row">
+	<div class="col-md-4">
+		<p><b>About GroupDocs.Viewer</b></p>
+		<hr><p>OVERVIEW</p></hr>
+		<ul>
+			<li><a href='{{< ref "product-overview" >}}'>Product Overview</a></li>
+			<li><a href='{{< ref "viewer/java/getting-started/features-overview.md" >}}'>Features Overview</a></li>
+			<li><a href='{{< ref "viewer/java/getting-started/supported-document-formats.md" >}}'>Supported Document Formats</a></li>
+			<li><a href='{{< ref "viewer/java/getting-started/system-requirements.md" >}}'>System Requirements</a></li>
+			<li><a href='{{< ref "viewer/java/getting-started/installation.md" >}}'>Installation</a></li>
+			<li><a href='{{< ref "viewer/java/getting-started/licensing-and-subscription.md" >}}'>Licensing and Subscription</a></li>
+		</ul>
+		<p>TECHNICAL SUPPORT</p>
+		<ul>
+			<li><a href="https://forum.groupdocs.com/">GroupDocs Free Support Forum</a></li>
+			<li><a href="https://helpdesk.groupdocs.com/">GroupDocs Paid Support Helpdesk</a></li>
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<p><b>Get Started</b></p>
+			<hr><p>GUIDE</p></hr>
+			<ul>
+				<li><a href='{{< ref "viewer/java/getting-started/create-a-minimal-app-using-groupdocs-viewer" >}}'>Create a minimal app using GroupDocs.Viewer</a></li>
+				<li><a href='{{< ref "viewer/java/getting-started/how-to-run-examples" >}}'>Run GroupDocs.Viewer Examples</a></li>
+			</ul>
+			<p>USEFUL RESOURCES</p>
+			<ul>
+				<li><a href="https://repository.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-viewer">GroupDocs Artifact Repository</a></li>
+				</li><li><a href="https://downloads.groupdocs.com/viewer/java">GroupDocs.Viewer for Java Downloads</a></li>
+				<li><a href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java">Download Examples and Demos at GitHub</a></li>
+			</ul>
+	</div>
+	<div class="col-md-4">
+		<p><b>Develop Functions</b></p>
+			<hr><p>GUIDE</p></hr>
+			<ul>
+				<li><a href='{{< ref "viewer/java/developer-guide/loading-documents" >}}'>Loading Documents</a></li>
+				<li><a href='{{< ref "viewer/java/developer-guide/retrieving-document-information" >}}'>Retrieving Document Information</a></li>
+				<li><a href='{{< ref "viewer/java/developer-guide/rendering-documents" >}}'>Rendering Documents</a></li>
+				<li><a href='{{< ref "viewer/java/developer-guide/processing-attachments" >}}'>Processing Attachments</a></li>
+				<li><a href='{{< ref "viewer/java/developer-guide/caching-results" >}}'>Caching Results</a></li>
+			</ul>
+			<p>USEFUL RESOURCES</p>
+			<ul>
+				<li><a href="https://apireference.groupdocs.com/viewer/java">GroupDocs.Viewer for Java API Reference</a></li>
+				<li><a href='{{< ref "viewer/java/release-notes" >}}'>GroupDocs.Viewer for Java Release Notes</a></li>
+			</ul>
+	</div>
+</div>
