@@ -75,7 +75,7 @@ GroupDocs.Viewer for .NET public API was designed to be simple and intuitive. Th
 
 ## Pricing and Policies
 
-Please visit the ["Licensing and Subscription"]({{< ref "licensing-and-subscription" >}}) page for information on licenses and review the ["Pricing Information"](https://purchase.groupdocs.com/pricing/viewer/net) page for details on pricing.
+Please visit the ["Licensing and Subscription"]({{< ref "viewer/net/getting-started/licensing-and-subscription.md" >}}) page for information on licenses and review the ["Pricing Information"](https://purchase.groupdocs.com/pricing/viewer/net) page for details on pricing.
 
 ## Technical Support
 
