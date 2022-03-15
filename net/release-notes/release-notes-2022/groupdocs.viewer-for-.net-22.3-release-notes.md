@@ -38,6 +38,7 @@ There are 13 features, improvements, and bug-fixes in this release, most notable
 ## Public API and Backward Incompatible Changes
 
 * Support of .NET Framework 2.0 is dropped.
-Supported frameworks versions are .NET Framework 4.0, .NET Standard 2.1 and .NET 6.0
+  
+  Supported frameworks versions are .NET Framework 4.0, .NET Standard 2.1 and .NET 6.0
 
 
