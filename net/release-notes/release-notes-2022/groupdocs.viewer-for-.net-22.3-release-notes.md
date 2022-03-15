@@ -34,3 +34,10 @@ There are 13 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-3820|"Could not load file. File is corrupted or damaged." exception when rendering ODT file|Bug|
 |VIEWERNET-3874|"Could not load file. File is corrupted or damaged." exception when rendering ODT file|Bug|
 |VIEWERNET-3907|Improve image quality when converting to image and downscale|Bug|
+
+## Public API and Backward Incompatible Changes
+
+* Support of .NET Framework 2.0 is dropped.
+Supported frameworks versions are .NET Framework 4.0, .NET Standard 2.1 and .NET 6.0
+
+
