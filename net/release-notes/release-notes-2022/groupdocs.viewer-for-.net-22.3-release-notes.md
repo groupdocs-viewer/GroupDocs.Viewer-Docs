@@ -2,7 +2,7 @@
 id: groupdocs-viewer-for-net-22-3-release-notes
 url: viewer/net/groupdocs-viewer-for-net-22-3-release-notes
 title: GroupDocs.Viewer for .NET 22.3 Release Notes
-weight: 120
+weight: 110
 description: "Bugs-fixes that are shipped in GroupDocs.Viewer for .NET 22.3"
 keywords: release notes, groupdocs.viewer, .net, 22.3
 productName: GroupDocs.Viewer for .NET
