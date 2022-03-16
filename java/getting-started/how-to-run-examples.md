@@ -1,30 +1,63 @@
 ---
 id: how-to-run-examples
 url: viewer/java/how-to-run-examples
-title: How to Run Examples
-weight: 6
-description: ""
-keywords: 
+title: Run Examples
+weight: 7
+description: "How to run examples using Maven and Eclipse IDE."
+keywords: "groupdocs viewer java, examples, maven, eclipse ide"
 productName: GroupDocs.Viewer for Java
 hideChildren: False
+toc: True
 ---
-{{< alert style="warn" >}} Before running an example make sure that [GroupDocs.Viewer](https://products.groupdocs.com/viewer) has been installed successfully.{{< /alert >}}
 
-## Download from GitHub
+The complete project [GroupDocs.Viewer Examples](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java) with code examples and sample files is hosted at GitHub.
 
-*   The complete examples package of [GroupDocs.Viewer](https://products.groupdocs.com/viewer) is hosted on [GitHub](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java). You can either download the ZIP file or clone the repository of GitHub using your favorite GitHub client.
-*   In case you download the ZIP file, extract the folders on your local disk. The extracted files and folders will look like the following image:
+## Run examples using Maven
 
-![](viewer/java/images/samples_folder_view-viewer.png)
+To get started make sure [Maven](https://maven.apache.org/download.cgi) is installed in your system.
 
-*   Open Eclipse and import the project to get started with it.
-    1. Go to _File_ menu and click _Open Projects from File System..._
-    2. Open _Examples_ folder
-    3. Go to _Run_ menu and click _Run_
+* Clone repository with examples `git clone https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java.git`
+* Navigate to the examples folder `cd ./GroupDocs.Viewer-for-Java/Examples/`
+* Resolve dependencies and build the examples by typing `mvn compile`
+* Run the examples by typing `mvn exec:java`
 
-![](viewer/java/images/samples_eclipse-viewer.png)
+After you run the examples the following output should be printed to the console:
 
-## Contribute
+```bash
+Uncomment the example(s) that you want to run in RunExamples.java file.
+=======================================================================
 
-If you like to add or improve an example, we encourage you to contribute to the project. All examples in this repository are open source and can be freely used in your own applications.
-To contribute, you can fork the repository, edit the source code and create a pull request. We will review the changes and include them in the repository.
+Source document rendered successfully.
+Check output in /src/GroupDocs.Viewer-for-Java/Examples/output/HelloWorld
+
+All done.
+```
+
+By default there is only one `HelloWorld` example is executing and two HTML should be created in `/src/GroupDocs.Viewer-for-Java/Examples/output/HelloWorld` folder.
+
+To check what examples are available open `./src/main/java/com/groupdocs/viewer/examples/RunExamples.java` file using your favorite text editor. Uncomment examples that you want to run and type `mvn compile exec:java` to start them.
+
+## Run examples using Eclipse IDE
+
+To run the examples using Eclipse IDE import the project to get started with it:
+
+* Go to `File` menu and click `Open Projects from File System...`
+* Open `Examples` folder
+* Open `RunExamples.java` file and uncomment the examples you want to run
+* Go to `Run` menu and click `Run`
+
+The following screenshot shows the Examples project opened in Eclipse IDE.
+
+![GroupDocs.Viewer for Java Examples in Eclipse IDE](viewer/java/images/samples_eclipse-viewer.png)
+
+The following text will be printed to the `Console` window:
+
+```bash
+Uncomment the example(s) that you want to run in RunExamples.java file.
+=======================================================================
+
+Source document rendered successfully.
+Check output in /src/GroupDocs.Viewer-for-Java/Examples/output/HelloWorld
+
+All done.
+```
