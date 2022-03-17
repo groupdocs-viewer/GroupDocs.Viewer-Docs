@@ -12,7 +12,7 @@ hideChildren: False
 
 ## Major Features
 
-There are 13 features, improvements, and bug-fixes in this release, most notable are:
+There are 14 features, improvements, and bug-fixes in this release, most notable are:
 
 * Cannot view EPS - The given key ‘Wingdings’ was not present in the dictionary.
 * Smart detect whether text file is csv or tsv
@@ -21,6 +21,7 @@ There are 13 features, improvements, and bug-fixes in this release, most notable
 
 | Key | Summary | Category |
 | --- | --- | --- |
+|VIEWERNET-3814|DSmart detect whether text file is csv or tsv|Improvement|
 |VIEWERNET-2600|Exception: Could not create the bitmap with the specified parameters|Bug|
 |VIEWERNET-2635|Exception: Could not create the bitmap with the specified parameters|Bug|
 |VIEWERNET-3015|Mobi file detected as damaged|Bug|
@@ -29,16 +30,14 @@ There are 13 features, improvements, and bug-fixes in this release, most notable
 |VIEWERNET-3792|Cannot view EPS - The given key ‘Wingdings’ was not present in the dictionary.|Bug|
 |VIEWERNET-3807|TSV/CSV files are not rendered|Bug|
 |VIEWERNET-3813|"Input string was not in a correct format." exception when rendering XLS file|Bug|
-|VIEWERNET-3814|Detect whether text file is csv or tsv|Bug|
 |VIEWERNET-3815|"File type is not supported." exception when rendering XLS file|Bug|
 |VIEWERNET-3820|"Could not load file. File is corrupted or damaged." exception when rendering ODT file|Bug|
 |VIEWERNET-3874|"Could not load file. File is corrupted or damaged." exception when rendering ODT file|Bug|
 |VIEWERNET-3907|Improve image quality when converting to image and downscale|Bug|
+|VIEWERNET-3505|"Specified color model 'Invalid' is not supported." exception when rendering CMX file|Bug|
 
 ## Public API and Backward Incompatible Changes
 
 * Support of .NET Framework 2.0 is dropped.
   
   Supported frameworks versions are .NET Framework 4.0, .NET Standard 2.1 and .NET 6.0
-
-
