@@ -3,7 +3,8 @@ id: home
 url: viewer/net
 title: GroupDocs.Viewer for .NET
 weight: 1
-description: "GroupDocs.Viewer for .NET documentation homepage"
+description: "GroupDocs.Viewer for .NET allows you to render files to HTML, JPEG, PNG, and PDF formats, list and save attachments and embedded files without third-party applications or Office Automation."
+keywords: render files, HTML, JPEG, PNG,PDF
 productName: GroupDocs.Viewer for .NET
 hideChildren: True
 ---

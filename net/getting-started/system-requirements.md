@@ -3,7 +3,8 @@ id: system-requirements
 url: viewer/net/system-requirements
 title: System Requirements
 weight: 3
-description: "GroupDocs.Viewer for .NET system requirements and supported frameworks"
+description: "GroupDocs.Viewer for .NET does not require any external software to be installed such as Microsoft Word, Microsoft Excel or Microsoft PowerPoint for file rendering."
+keywords: file rendering
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
