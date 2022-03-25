@@ -3,14 +3,14 @@ id: show-document-notes
 url: viewer/net/show-document-notes
 title: Render notes
 weight: 5
-description: "This article explains how to show notes when rendering documents with GroupDocs.Viewer within your .NET applications."
-keywords: Show notes when viewer documents with GroupDocs.Viewer .NET API
+description: "This article explains how to show document notes when rendering documents with GroupDocs.Viewer within your .NET applications."
+keywords: notes,document notes,Show notes when viewer documents with GroupDocs.Viewer .NET API
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 ![Notes in PowerPoint](viewer/net/images/show-document-notes.png)
 
-GroupDocs.Viewer does not include notes in the rendering results. If you want to see notes in your rendering result, use `RenderNotes` property of the `ViewOptions` object.
+GroupDocs.Viewer does not include document notes in the rendering results. If you want to see notes in your rendering result, use `RenderNotes` property of the `ViewOptions` object.
 
 The following are the steps to include the notes in the rendering result.
 

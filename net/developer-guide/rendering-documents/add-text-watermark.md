@@ -4,7 +4,7 @@ url: viewer/net/add-text-watermark
 title: Add text watermark
 weight: 9
 description: "This article explains how to add text watermark when rendering documents with GroupDocs.Viewer within your .NET applications."
-keywords: Add watermark with GroupDocs.Viewer for .NET API
+keywords: add text watermark, rendering documents
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---

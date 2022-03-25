@@ -3,8 +3,8 @@ id: flip-or-rotate-pages
 url: viewer/net/flip-or-rotate-pages
 title: Rotate pages
 weight: 6
-description: "This article explains how to flip or rotate pages when rendering documents with GroupDocs.Viewer within your .NET applications."
-keywords: Flip rotate pages with GroupDocs.Viewer for .NET API
+description: "This article explains how to flip or rotate PDF, HTML or Image pages when rendering documents with GroupDocs.Viewer within your .NET applications."
+keywords: rotate pdf, rotate pages
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---

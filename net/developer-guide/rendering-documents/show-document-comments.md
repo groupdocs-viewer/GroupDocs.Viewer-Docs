@@ -3,8 +3,8 @@ id: show-document-comments
 url: viewer/net/show-document-comments
 title: Render comments
 weight: 5
-description: "This article explains how to show comments when rendering documents with GroupDocs.Viewer within your .NET applications."
-keywords: Show document comments when rendering documents with GroupDocs.Viewer .NET API
+description: "The GroupDocs.Viewer enables you to control in simple markup display the contents of the comments word 2016 or other Word versions, Excel, OpenOffice Text and Spreadsheets with GroupDocs.Viewer within your .NET applications."
+keywords: document comments, in simple markup display the contents of the comments word 2016, Excel, OpenOffice Text, Spreadsheets
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---

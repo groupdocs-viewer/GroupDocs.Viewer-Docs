@@ -3,8 +3,8 @@ id:  how-to-convert-and-view-7zip-files
 url: viewer/net/how-to-convert-and-view-7z-files
 title: Render 7-Zip files
 weight: 2
-description: "In this article we show render 7Z files with GroupDocs.Viewer within your .NET applications."
-keywords: 7z archive 7Zip 7-Zip
+description: "Learn how to render 7Z files with GroupDocs.Viewer within your .NET applications."
+keywords: 7z archive, 7Zip, 7-Zip
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---

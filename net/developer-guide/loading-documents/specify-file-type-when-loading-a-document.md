@@ -2,6 +2,7 @@
 id: specify-file-type-when-loading-a-document
 url: viewer/net/specify-file-type-when-loading-a-document
 title: Set file type when loading a document
+keywords: set file type
 weight: 1
 description: "This article explains how to set the file type when loading a document with GroupDocs.Viewer within your .NET applications."
 productName: GroupDocs.Viewer for .NET

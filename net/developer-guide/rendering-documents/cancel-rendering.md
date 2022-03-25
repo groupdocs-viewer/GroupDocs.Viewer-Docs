@@ -3,8 +3,8 @@ id: cancel-rendering
 url: viewer/net/cancel-rendering
 title: Cancel rendering
 weight: 3
-description: "Cancel rendering process with cancellation token"
-keywords: Cancel rendering, cancellation token, cancellation token source
+description: "Cancel or stop rendering rendering process with cancellation token"
+keywords: stop rendering, cancellation token, cancellation token source
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---

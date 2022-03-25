@@ -4,6 +4,7 @@ url: viewer/net/view-n-consecutive-pages
 title: Render N consecutive pages
 weight: 2
 description: "This article explains how to view n consecutive pages when processing documents with GroupDocs.Viewer within your .NET applications."
+keywords: view n consecutive pages, consecutive pages
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
