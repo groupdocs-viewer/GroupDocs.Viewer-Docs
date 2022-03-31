@@ -31,60 +31,60 @@ The following table indicates the input file formats supported by GroupDocs.View
 | [DXF](https://docs.fileformat.com/cad/dxf/) | AutoCAD Drawing Interchange | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [IFC](https://docs.fileformat.com/cad/ifc/) | Industry Foundation Classes | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [STL](https://docs.fileformat.com/cad/stl/) | Stereo Lithography | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| IGS | IGES Drawing File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| CF2 | Common File Format File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| OBJ | Wavefront 3D Object File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [IGS](https://docs.fileformat.com/cad/igs/) | IGES Drawing File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [CF2](https://docs.fileformat.com/cad/cf2/) | Common File Format File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [OBJ](https://docs.fileformat.com/3d/obj/) | Wavefront 3D Object File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [PLT](https://wiki.fileformat.com/cad/plt/) | Plotter Document | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| HPG | Plotter Document | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [HPG]() | Plotter Document | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [CS](https://docs.fileformat.com/programming/cs/) | C# source code | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [VB](https://docs.fileformat.com/programming/vb/) | Visual Basic source code | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| AS | ActionScript File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [AS](https://docs.fileformat.com/programming/as/) | ActionScript File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | AS3 | ActionScript File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | ASM | Assembly Language Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| BAT | DOS Batch File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| C | C/C++ Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| CC | C++ Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [BAT](https://docs.fileformat.com/executable/bat/) | DOS Batch File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [C](https://docs.fileformat.com/programming/c/) | C/C++ Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [CC](https://docs.fileformat.com/programming/c/) | C++ Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | CMAKE | CMake File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| CPP | C++ Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| CSS | Cascading Style Sheet | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| CXX | C++ Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [CPP](https://docs.fileformat.com/programming/cpp/) | C++ Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [CSS](https://docs.fileformat.com/web/css/) | Cascading Style Sheet | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [CXX](https://docs.fileformat.com/programming/cxx/) | C++ Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | DIFF | Patch File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| ERB | Ruby ERB Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [ERB](https://docs.fileformat.com/programming/erb/) | Ruby ERB Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | GROOVY | Groovy Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| H | C/C++/Objective-C Header File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [H](https://docs.fileformat.com/programming/h/) | C/C++/Objective-C Header File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | HAML | Haml Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| HH | C++ Header File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| JAVA | Java Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| JS | JavaScript File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| JSON | JavaScript Object Notation File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [HH](https://docs.fileformat.com/programming/hh/) | C++ Header File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [JAVA](https://docs.fileformat.com/programming/java/) | Java Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [JS](https://docs.fileformat.com/web/js/) | JavaScript File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [JSON](https://docs.fileformat.com/web/json/) | JavaScript Object Notation File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | LESS | LESS Style Sheet | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| LOG | Log File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| M | Objective-C Implementation File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [LOG](https://docs.fileformat.com/database/log/) | Log File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [M](https://docs.fileformat.com/programming/m/)| Objective-C Implementation File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | MAKE | Xcode Makefile Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| MD | Markdown Documentation File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [MD](https://docs.fileformat.com/word-processing/md/) | Markdown Documentation File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | ML | ML Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | MM | Objective-C++ Source File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| PHP | PHP Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| PL | Perl Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [PHP](https://docs.fileformat.com/programming/php/) | PHP Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [PL](https://docs.fileformat.com/programming/pl/) | Perl Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | PROPERTIES | Java Properties File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| PY | Python Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| RB | Ruby Source Code | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [PY](https://docs.fileformat.com/programming/py/) | Python Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [RB](https://docs.fileformat.com/ebook/rb/) | Ruby Source Code | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | RST | reStructuredText File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| SASS | Syntactically Awesome StyleSheets File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [SASS](https://docs.fileformat.com/web/sass/) | Syntactically Awesome StyleSheets File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | SCALA | Scala Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | SCM | Scheme Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | SCRIPT | Generic Script File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| SH | Bash Shell Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [SH](https://docs.fileformat.com/programming/sh/) | Bash Shell Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | SML | Standard ML Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| SQL | Structured Query Language Data File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [SQL](https://docs.fileformat.com/database/sql/) | Structured Query Language Data File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | VIM | Vim Settings File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| YAML | YAML Document | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [YAML](https://docs.fileformat.com/programming/yaml/) | YAML Document | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [VDW](https://docs.fileformat.com/web/vdw/) | Microsoft Visio 2010 Web Drawing | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [VDX](https://docs.fileformat.com/image/vdx/) | Microsoft Visio 2003-2010 XML Drawing | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [VSD](https://docs.fileformat.com/image/vsd/) | Microsoft Visio 2003-2010 Drawing | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [VSDM](https://docs.fileformat.com/image/vsdm/) | Microsoft Visio Macro-Enabled Drawing | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [VSDX](https://docs.fileformat.com/image/vsdx/) | Microsoft Visio Drawing | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| VSS | Microsoft Visio 2003-2010 Stencil | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [VSS](https://docs.fileformat.com/image/vss/) | Microsoft Visio 2003-2010 Stencil | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [VSSM](https://docs.fileformat.com/image/vssm/) | Microsoft Visio Macro-Enabled Stencil | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [VSSX](https://docs.fileformat.com/image/vssx/) | Microsoft Visio Stencil | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [VST](https://docs.fileformat.com/image/vst/) | Microsoft Visio 2003-2010 Template | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
@@ -109,18 +109,18 @@ The following table indicates the input file formats supported by GroupDocs.View
 | [DCM](https://docs.fileformat.com/image/dcm/) | Digital Imaging and Communications in Medicine (DICOM) | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [DJVU](https://docs.fileformat.com/image/djvu/) | Deja Vu (DjVu) | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [DNG](https://docs.fileformat.com/image/dng/) | Digital Negative Specification | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| DIB | Device independent bitmap | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [DIB](https://docs.fileformat.com/image/dib/) | Device independent bitmap | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [EMF](https://docs.fileformat.com/image/emf/) | Windows Enhanced Metafile (EMF) | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [EMZ](https://fileinfo.com/extension/emz) | Windows Enhanced Metafile compressed (EMZ) | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [EPS](https://docs.fileformat.com/page-description-language/eps/) | Encapsulated PostScript | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [GIF](https://docs.fileformat.com/image/gif/) | Graphics Interchange Format (GIF) | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [ICO](https://docs.fileformat.com/image/ico/) | Windows Icon | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [JP2](https://docs.fileformat.com/image/jp2/) | JPEG 2000 Core Image File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| JPF | JPEG 2000 Image File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| JPX | JPEG 2000 Image File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| JPM | JPEG 2000 Image File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| J2C | JPEG 2000 Code Stream | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| J2K | JPEG 2000 Code Stream | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [JPF](https://docs.fileformat.com/image/jpf/) | JPEG 2000 Image File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [JPX](https://docs.fileformat.com/image/jpx/) | JPEG 2000 Image File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [JPM](https://docs.fileformat.com/image/jpm/) | JPEG 2000 Image File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [J2C](https://docs.fileformat.com/image/j2c/) | JPEG 2000 Code Stream | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [J2K](https://docs.fileformat.com/image/j2k/) | JPEG 2000 Code Stream | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | JPC | JPEG 2000 Code Stream | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [JPG](https://docs.fileformat.com/image/jpeg) [JPEG](https://docs.fileformat.com/image/jpeg)   | Joint Photographic Experts Group (JPEG) | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [ODG](https://docs.fileformat.com/image/odg/) | Open Document Graphic (ODG) | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
@@ -146,7 +146,7 @@ The following table indicates the input file formats supported by GroupDocs.View
 | [TGA](https://docs.fileformat.com/image/tga/) | TARGA (Truevision Advanced Raster Adapter) | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [TEX](https://docs.fileformat.com/page-description-language/tex/) | LaTeX Source Document | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [XPS](https://docs.fileformat.com/page-description-language/xps/) | Microsoft XML Paper Specification (XPS) | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| OXPS | OpenXPS File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [OXPS](https://docs.fileformat.com/page-description-language/oxps/) | OpenXPS File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [ODP](https://docs.fileformat.com/presentation/odp/) | OpenDocument Presentation | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | FODP | OpenDocument Flat XML Presentation | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [OTP](https://docs.fileformat.com/presentation/otp/) | OpenDocument Presentation Template | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
@@ -175,7 +175,7 @@ The following table indicates the input file formats supported by GroupDocs.View
 | [XLT](https://docs.fileformat.com/spreadsheet/xlt/) | Microsoft Excel 97-2003 Worksheet Template | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | Supported formats: Excel 2003 (11.0), Excel 2002 (10.0), Excel 2000 (9.0), Excel 97 (8.0). |
 | [XLTX](https://docs.fileformat.com/spreadsheet/xltx/) | Excel Open XML Spreadsheet Template | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [XLTM](https://docs.fileformat.com/spreadsheet/xltm/) | Excel Macro-Enabled Template | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| XLAM | Excel Open XML Macro-Enabled Add-In | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [XLAM](https://docs.fileformat.com/spreadsheet/xlam/) | Excel Open XML Macro-Enabled Add-In | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [DOC](https://docs.fileformat.com/word-processing/doc/) | Microsoft Word 97-2003 Document | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [DOCM](https://docs.fileformat.com/word-processing/docm/) | Microsoft Word Macro-Enabled Document | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [DOCX](https://docs.fileformat.com/word-processing/docx/) | Microsoft Word Document | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
@@ -188,7 +188,7 @@ The following table indicates the input file formats supported by GroupDocs.View
 | [TXT](https://docs.fileformat.com/word-processing/txt/) | Plain Text Document | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [VCF](https://docs.fileformat.com/email/vcf/) | Electronic Business Card (vCard) | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [VCARD](https://docs.fileformat.com/email/vcf/) | Electronic Business Card (vCard) | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| OXPS | OpenXPS File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
-| SXC | StarOffice Calc Spreadsheet | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [OXPS](https://docs.fileformat.com/page-description-language/oxps/) | OpenXPS File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
+| [SXC](https://docs.fileformat.com/spreadsheet/sxc/) | StarOffice Calc Spreadsheet | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [XML](https://fileinfo.com/extension/xml) | Text XML document | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [XML](https://en.wikipedia.org/wiki/SpreadsheetML) | Excel 2003 SpreadSheetML XML file | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
