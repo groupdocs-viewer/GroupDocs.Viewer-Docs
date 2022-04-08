@@ -3,8 +3,8 @@ id: home
 url: viewer/java
 title: GroupDocs.Viewer for Java
 weight: 1
-description: "GroupDocs.Viewer for Java documentation homepage"
-keywords: "groupdocs viewer java, documentation, docs, homepage"
+description: "GroupDocs.Viewer for Java allows you to render files to HTML, JPEG, PNG, and PDF formats, list and save attachments and embedded files without third-party applications or Office Automation."
+keywords: render files, HTML, JPEG, PNG,PDF
 productName: GroupDocs.Viewer for Java
 hideChildren: True
 ---

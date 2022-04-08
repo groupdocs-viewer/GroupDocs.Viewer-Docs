@@ -3,8 +3,8 @@ id: flip-or-rotate-pages
 url: viewer/java/flip-or-rotate-pages
 title: Flip or rotate pages
 weight: 6
-description: "This article explains how to flip or rotate pages when viewing documents with GroupDocs.Viewer within your Java applications."
-keywords: Flip rotate pages with GroupDocs.Viewer for Java API
+description: "This article explains how to flip or rotate PDF, HTML or Image pages when rendering documents with GroupDocs.Viewer within your Java applications."
+keywords: rotate pdf, rotate pages
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---

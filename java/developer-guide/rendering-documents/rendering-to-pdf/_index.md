@@ -3,8 +3,8 @@ id: rendering-to-pdf
 url: viewer/java/rendering-to-pdf
 title: Rendering to PDF
 weight: 103
-description: "Following this guide you will to learn how to display documents of more than 100 types in PDF format with PDF Viewer by GroupDocs."
-keywords: 
+description: "Rendering files to PDF with GroupDocs.Viewer for Java. It means that you can embed PDF in websites or applications by using this Java API"
+keywords: embed pdf in website, rendering to pdf, Java api
 productName: GroupDocs.Viewer for Java
 hideChildren: True
 ---  

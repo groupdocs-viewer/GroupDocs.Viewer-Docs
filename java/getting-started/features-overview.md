@@ -3,7 +3,7 @@ id: features-overview
 url: viewer/java/features-overview
 title: Features Overview
 weight: 1
-description: "GroupDocs.Viewer for Java features."
+description: "With GroupDocs.Viewer for Java you can render files to HTML, PNG, JPEG and PDF formats, list and save attachments, embedded files and compressed files, extract document text and detect file type by it's content."
 keywords: "render, viewer, render to html, render to png, render to jpeg, render to pdf"
 productName: GroupDocs.Viewer for Java
 hideChildren: False

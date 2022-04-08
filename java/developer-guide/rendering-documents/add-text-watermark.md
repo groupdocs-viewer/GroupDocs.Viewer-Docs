@@ -4,7 +4,7 @@ url: viewer/java/add-text-watermark
 title: Add text watermark
 weight: 10
 description: "This article explains how to add text watermark when viewing documents with GroupDocs.Viewer within your Java applications."
-keywords: Add watermark with GroupDocs.Viewer for Java API
+keywords: add text watermark, rendering documents
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---

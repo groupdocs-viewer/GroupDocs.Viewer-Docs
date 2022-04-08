@@ -4,7 +4,7 @@ url: viewer/java/view-specific-pages
 title: Render specific pages
 weight: 1
 description: "This article explains how to view specific pages when processing documents with GroupDocs.Viewer within your Java applications."
-keywords: View specific pages with GroupDocs.Viewer for Java API
+keywords: specific pages, view specific pages
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---

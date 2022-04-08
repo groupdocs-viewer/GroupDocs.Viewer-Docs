@@ -3,8 +3,8 @@ id: show-document-comments
 url: viewer/java/show-document-comments
 title: Render document comments
 weight: 4
-description: "This article explains how to show comments when viewing documents with GroupDocs.Viewer within your Java applications."
-keywords: Show document comments when viewing documents with GroupDocs.Viewer Java API
+description: "The GroupDocs.Viewer enables you to control in simple markup display the contents of the comments word 2016 or other Word versions, Excel, OpenOffice Text and Spreadsheets with GroupDocs.Viewer within your Java applications."
+keywords: document comments, in simple markup display the contents of the comments word 2016, Excel, OpenOffice Text, Spreadsheets
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---

@@ -4,7 +4,7 @@ url: viewer/java/view-n-consecutive-pages
 title: Render N consecutive pages
 weight: 2
 description: "This article explains how to view n consecutive pages when processing documents with GroupDocs.Viewer within your Java applications."
-keywords: View n consecutive pages with GroupDocs.Viewer for Java API
+keywords: view n consecutive pages, consecutive pages
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---

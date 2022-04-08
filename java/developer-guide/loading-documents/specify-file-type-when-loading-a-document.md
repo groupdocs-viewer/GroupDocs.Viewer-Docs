@@ -4,7 +4,7 @@ url: viewer/java/specify-file-type-when-loading-a-document
 title: Set file type when loading a document
 weight: 1
 description: "Set file type when loading document with GroupDocs.Viewer using Java."
-keywords: "groupdocs viewer java, file type, loading"
+keywords: set file type
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---

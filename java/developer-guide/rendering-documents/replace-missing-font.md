@@ -4,7 +4,7 @@ url: viewer/java/replace-missing-font
 title: Replace missing font
 weight: 8
 description: "This article explains how to replace missing font when viewing documents with GroupDocs.Viewer within your Java applications."
-keywords: Replace missing font with GroupDocs.Viewer for Java API
+keywords: missing font,rendering documents
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---

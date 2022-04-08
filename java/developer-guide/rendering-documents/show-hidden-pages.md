@@ -3,8 +3,8 @@ id: show-hidden-pages
 url: viewer/java/show-hidden-pages
 title: Render hidden pages
 weight: 3
-description: "This article explains how to show hidden pages when viewing documents with GroupDocs.Viewer within your Java applications."
-keywords: Show hidden pages with GroupDocs.Viewer for Java
+description: "Learn how to render hidden pages on website or in other c# applications with GroupDocs.Viewer for Java"
+keywords: hidden pages, hidden pages on website
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---

@@ -12,10 +12,10 @@ GroupDocs.Viewer enables users to pass charset when rendering text documents or 
 
 This feature is supported for:
 
-* [Plain-text (.txt) files](https://wiki.fileformat.com/word-processing/txt/)
-* [Comma-separated values (.csv)](https://wiki.fileformat.com/spreadsheet/csv/)
-* [Tab-separated values (.tsv)](https://wiki.fileformat.com/spreadsheet/tsv/)
-* [E-Mail Message (.eml)](https://wiki.fileformat.com/email/eml/)
+* [Plain-text (.txt) files](https://docs.fileformat.com/word-processing/txt/)
+* [Comma-separated values (.csv)](https://docs.fileformat.com/spreadsheet/csv/)
+* [Tab-separated values (.tsv)](https://docs.fileformat.com/spreadsheet/tsv/)
+* [E-Mail Message (.eml)](https://docs.fileformat.com/email/eml/)
 
 Following code snippet sets the document charset.
 
