@@ -3,7 +3,7 @@ id: show-document-notes
 url: viewer/java/show-document-notes
 title: Render document notes
 weight: 5
-description:"This article explains how to show document notes when rendering documents with GroupDocs.Viewer within your Java applications."
+description: "This article explains how to show document notes when rendering documents with GroupDocs.Viewer within your Java applications."
 keywords: notes,document notes,Show notes when viewer documents with GroupDocs.Viewer Java API
 hideChildren: False
 ---
