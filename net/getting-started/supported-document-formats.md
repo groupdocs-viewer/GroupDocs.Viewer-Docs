@@ -40,44 +40,44 @@ The following table indicates the input file formats supported by GroupDocs.View
 | [VB](https://docs.fileformat.com/programming/vb/) | Visual Basic source code | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [AS](https://docs.fileformat.com/programming/as/) | ActionScript File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | AS3 | ActionScript File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| ASM | Assembly Language Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [ASM](https://docs.fileformat.com/programming/asm/) | Assembly Language Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [BAT](https://docs.fileformat.com/executable/bat/) | DOS Batch File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [C](https://docs.fileformat.com/programming/c/) | C/C++ Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [CC](https://docs.fileformat.com/programming/c/) | C++ Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| CMAKE | CMake File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [CMAKE](https://docs.fileformat.com/programming/cmake/) | CMake File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [CPP](https://docs.fileformat.com/programming/cpp/) | C++ Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [CSS](https://docs.fileformat.com/web/css/) | Cascading Style Sheet | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [CXX](https://docs.fileformat.com/programming/cxx/) | C++ Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| DIFF | Patch File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [DIFF](https://docs.fileformat.com/programming/diff/) | Patch File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [ERB](https://docs.fileformat.com/programming/erb/) | Ruby ERB Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| GROOVY | Groovy Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [GROOVY](https://docs.fileformat.com/programming/groovy/) | Groovy Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [H](https://docs.fileformat.com/programming/h/) | C/C++/Objective-C Header File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| HAML | Haml Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [HAML](https://docs.fileformat.com/programming/haml/) | Haml Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [HH](https://docs.fileformat.com/programming/hh/) | C++ Header File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [JAVA](https://docs.fileformat.com/programming/java/) | Java Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [JS](https://docs.fileformat.com/web/js/) | JavaScript File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [JSON](https://docs.fileformat.com/web/json/) | JavaScript Object Notation File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| LESS | LESS Style Sheet | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [LESS](https://docs.fileformat.com/web/less/) | LESS Style Sheet | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [LOG](https://docs.fileformat.com/database/log/) | Log File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [M](https://docs.fileformat.com/programming/m/)| Objective-C Implementation File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| MAKE | Xcode Makefile Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [MAKE](https://docs.fileformat.com/programming/make/) | Xcode Makefile Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [MD](https://docs.fileformat.com/word-processing/md/) | Markdown Documentation File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| ML | ML Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| MM | Objective-C++ Source File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [ML](https://docs.fileformat.com/programming/ml/) | ML Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [MM](https://docs.fileformat.com/programming/mm/) | Objective-C++ Source File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [PHP](https://docs.fileformat.com/programming/php/) | PHP Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [PL](https://docs.fileformat.com/programming/pl/) | Perl Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | PROPERTIES | Java Properties File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [PY](https://docs.fileformat.com/programming/py/) | Python Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [RB](https://docs.fileformat.com/ebook/rb/) | Ruby Source Code | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| RST | reStructuredText File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [RST](https://docs.fileformat.com/programming/rst/) | reStructuredText File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [SASS](https://docs.fileformat.com/web/sass/) | Syntactically Awesome StyleSheets File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| SCALA | Scala Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| SCM | Scheme Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| SCRIPT | Generic Script File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [SCALA](https://docs.fileformat.com/programming/scala/) | Scala Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [SCM](https://docs.fileformat.com/programming/scm/) | Scheme Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [SCRIPT](https://docs.fileformat.com/programming/script/) | Generic Script File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [SH](https://docs.fileformat.com/programming/sh/) | Bash Shell Script | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | SML | Standard ML Source Code File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [SQL](https://docs.fileformat.com/database/sql/) | Structured Query Language Data File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
-| VIM | Vim Settings File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
+| [VIM](https://docs.fileformat.com/misc/vim/) | Vim Settings File | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [YAML](https://docs.fileformat.com/programming/yaml/) | YAML Document | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |   |
 | [VDW](https://docs.fileformat.com/web/vdw/) | Microsoft Visio 2010 Web Drawing | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
 | [VDX](https://docs.fileformat.com/image/vdx/) | Microsoft Visio 2003-2010 XML Drawing | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} | {{< figure src="viewer/net/images/check-square.svg" width="15px" alt="tick" >}} |   |
