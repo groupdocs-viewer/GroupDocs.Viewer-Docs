@@ -33,11 +33,16 @@ There are 9 features, improvements, and bug-fixes in this release, most notable 
 |VIEWERNET-3951|Dwfx to Pdf produce empty result|Bug|
 |VIEWERNET-3952|Viewer font issue when rendering DOCX to PDF|Bug|
 
+## Public API Changes
 
+### GroupDocs.Viewer.Options.WordProcessingOptions class
 
+Added new `EnableOpenTypeFeatures` boolean property. Setting this property to `true` enables kerning and other OpenType Features when rendering Arabic, Hebrew, Indian scripts, Latin-based or Cyrillic-based scripts
 
-
-## Public API and Backward Incompatible Changes
-
-No public API and backward-incompatible changes in this hot-fix release.
+```cs
+/// <summary>
+/// This option enables kerning and other OpenType Features when rendering Arabic, Hebrew, Indian scripts, Latin-based or Cyrillic-based scripts.
+/// </summary>
+public bool EnableOpenTypeFeatures { get; set; }
+```
 
