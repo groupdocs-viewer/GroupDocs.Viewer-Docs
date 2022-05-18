@@ -4,7 +4,7 @@ url: viewer/net/render-archive-folder
 title: Render archive folder
 weight: 2
 description: "This article explains how to view an archive file folder with GroupDocs.Viewer within your .NET applications."
-keywords: 
+keywords: renders items from the root, archive file folder
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---

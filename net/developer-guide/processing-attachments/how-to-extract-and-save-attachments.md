@@ -4,6 +4,7 @@ url: viewer/net/how-to-extract-and-save-attachments
 title: Save attachments
 weight: 2
 description: "Save attachments and embedded files from PDF, Outlook data file or email"
+keywords: Save attachments, embedded files from PDF, Outlook data file
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---

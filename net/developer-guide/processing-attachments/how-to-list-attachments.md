@@ -3,7 +3,8 @@ id: how-to-list-attachments
 url: viewer/net/how-to-list-attachments
 title: List attachments
 weight: 1
-description: "List attachments with GroupDocs.Viewer for .NET"
+description: "Retrieve a list of document attachments from your emails, Outlook data files, archives and PDF documents with GroupDocs.Viewer for .NET"
+keywords: document attachments, Outlook data files, archives, PDF documents
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---

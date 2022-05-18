@@ -4,7 +4,7 @@ url: viewer/net/navigation-in-archive-files
 title: Navigation in archive files
 weight: 2
 description: "This article describes folder navigation in the archive with GroupDocs.Viewer within your .NET applications."
-keywords: folder windows explorer navigation
+keywords: folder, windows explorer navigation, archive to single-page HTML, Windows Explorer style
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
