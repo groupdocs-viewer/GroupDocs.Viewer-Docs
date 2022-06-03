@@ -24,7 +24,7 @@ To render to HTML with external resources use following code:
 
 ```java
     try (Viewer viewer = new Viewer("document.dwg")) {
-        HtmlViewOptions viewOptions = HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{1}", "page_{0}/resources");
+        HtmlViewOptions viewOptions = HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{1}", "page_{0}/resources_{1}");
 
         viewer.view(viewOptions);
     }
