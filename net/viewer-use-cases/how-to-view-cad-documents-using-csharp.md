@@ -31,6 +31,8 @@ Use the [downloads section](https://downloads.groupdocs.com/viewer/net) to downl
 PM> Install-Package GroupDocs.Viewer
 ```
 
+![Source CAD document preview](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/source_image_preview.jpg)
+
 ## How to render CAD files into HTML, JPG, PNG, or PDF
 
 ### Rendering to HTML with Embedded Resources in C\#
@@ -38,30 +40,40 @@ PM> Install-Package GroupDocs.Viewer
 To render your file to HTML file(s) with embedded resources do the following steps:
 
 * With Viewer class load your document.
-* With the ForExternalResources method create the HtmlViewOptions instance and type output file name.
+* With the ForEmbeddedResources method create the HtmlViewOptions instance and type output file name.
 * Call View method to render your document to HTML, resources will be embedded in to file.
 
 ```cs
-using (Viewer viewer = new Viewer("document.dwg"))
+using (Viewer viewer = new Viewer("sample.dwf"))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
     viewer.View(viewOptions);
 }
 ```
 
+![Rendering CAD document to HTML](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/rendering_to_html_with_embed.jpg)
+
 ### Rendering to HTML with External Resources in C\#
 
 To render your file to HTML file(s) with external resources do the following steps:
 
 * With Viewer class load your document.
-* with ForExternalResources method create HtmlViewOptions instance and type the output file name.
+* with ForExternalResources method create HtmlViewOptions instance and type:
+  * the output file name mask
+  * external resources folder file path mask
+  * url for resources mask format
+
 * Call View method to render your document to HTML.
 
+Resources will be placed to separate folder.
+
+![Resources placed into separate folder](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/resources_placed_to_separate_folder.jpg)
+
 ```cs
-using (Viewer viewer = new Viewer("document.dwg"))
+using (Viewer viewer = new Viewer("sample.dwf"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForExternalResources(
-        "page_{0}.html","page_{0}/resource_{1}","page_{0}/resources");
+    HtmlViewOptions viewOptions = 
+        HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
 
     viewer.View(viewOptions);
 }
@@ -74,12 +86,14 @@ using (Viewer viewer = new Viewer("document.dwg"))
 * Call View method to render your document to JPEG.
 
 ```cs
-using (Viewer viewer = new Viewer("document.dwg"))
+using (Viewer viewer = new Viewer("sample.dwf"))
 {
-    JpgViewOptions viewOptions = JpgViewOptions("output.jpg");
+    JpgViewOptions viewOptions = new JpgViewOptions("output.jpg");
     viewer.View(viewOptions);
 }
 ```
+
+![Rendering CAD document to JPEG](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/rendering_cad_to_jpeg.jpg)
 
 ### Rendering to PNG in C\#
 
@@ -88,12 +102,14 @@ using (Viewer viewer = new Viewer("document.dwg"))
 * Call View method to render your document to PNG.
 
 ```cs
-using (Viewer viewer = new Viewer("document.dwg"))
+using (Viewer viewer = new Viewer("sample.dwf"))
 {
-    PngViewOptions viewOptions = PngViewOptions("output.png");
+    PngViewOptions viewOptions = new PngViewOptions("output.png");
     viewer.View(viewOptions);
 }
 ```
+
+![Rendering CAD document to PNG](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/rendering_cad_to_png.jpg)
 
 ### Rendering to PDF in C\#
 
@@ -102,12 +118,14 @@ using (Viewer viewer = new Viewer("document.dwg"))
 * Call View method to render your document to PDF.
 
 ```cs
-using (Viewer viewer = new Viewer("document.dwg"))
+using (Viewer viewer = new Viewer("sample.dwf"))
 {
-    PdfViewOptions viewOptions = PdfViewOptions("output.pdf");
+    PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
 ```
+
+![Rendering CAD document to PDF](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/rendering_cad_to_pdf.jpg)
 
 ## Getting layouts/layers information
 
@@ -120,7 +138,7 @@ CAD files often consist of many layouts and layers. You can obtain information o
 * Layouts and layers Lists are located in resulted CadViewInfo object.
 
 ```cs
-using (Viewer viewer = new Viewer("document.dwg"))
+using (Viewer viewer = new Viewer("sample.dwf"))
 {
     ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForHtmlView();
     CadViewInfo viewInfo = viewer.GetViewInfo(viewInfoOptions) as CadViewInfo;
@@ -130,7 +148,7 @@ using (Viewer viewer = new Viewer("document.dwg"))
 
     Console.WriteLine("Layouts list:");
     foreach (Layout layout in viewInfo.Layouts)
-        Console.WriteLine(layout);
+        Console.WriteLine(layout.Name);
 
     Console.WriteLine("Layers list:");
     foreach (Layer layer in viewInfo.Layers)
@@ -139,6 +157,8 @@ using (Viewer viewer = new Viewer("document.dwg"))
 ```
 
 You can use this information to specify what layers/layouts render in the output file.
+
+![Layouts and layers information](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/layouts_and_layers_information.jpg)
 
 ### Layers rendering
 
@@ -154,18 +174,22 @@ To render your file with specific layers please do the following steps:
 * Call View method to render your document with specified layers.
 
 ```cs
-using (Viewer viewer = new Viewer("document.dwg"))
+using (Viewer viewer = new Viewer("sample.dwf"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
-    viewOptions.CadOptions.Layers = new List<Layer>
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+     viewOptions.CadOptions.Layers = new List<Layer>
     {
-        new Layer("Labels"),
-        new Layer("Remarks")
+         new Layer("CIRCLE"),
     };
 
     viewer.View(viewOptions);
 }
 ```
+
+This drawing contains two layers: "0" - with a rectangle and "CIRCLE" with a circle. We want to render circle only,
+so we added a layer with the name "CIRCLE" in the layers list.
+
+![Render specific layer](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/render_specific_layer.jpg)
 
 ### Layouts rendering
 
@@ -180,13 +204,18 @@ To render your file with specific layouts please do the following steps:
 * Call View method to render your document with a specified layout.
 
 ```cs
-using (Viewer viewer = new Viewer("document.dwg"))
+using (Viewer viewer = new Viewer("sample.dwf"))
 {
    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
-   viewOptions.CadOptions.LayoutName = "FinalLayout";
+   viewOptions.CadOptions.LayoutName = "three-layouts-with-layers-Layout2";
    viewer.View(viewOptions);
 }
 ```
+
+This drawing contains three layouts: "three-layouts-with-layers-Layout1", "three-layouts-with-layers-Layout2", "three-layouts-with-layers-Layout3".
+We select "three-layouts-with-layers-Layout2" layout name with rectangle, we set this layer name in LayoutName property.
+
+![Specific layout rendering](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/specific_layout_rendering.jpg)
 
 ## Get a Free API License
 
