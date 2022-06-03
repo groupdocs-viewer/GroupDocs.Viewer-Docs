@@ -4,7 +4,7 @@ url: viewer/net/adjust-output-image-size
 title: Adjust output image size
 weight: 1
 description: "This article explains how to adjust output image size when rendering CAD drawings with GroupDocs.Viewer within your .NET applications."
-keywords: 
+keywords: rendering CAD drawings, rendering by width or height
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---

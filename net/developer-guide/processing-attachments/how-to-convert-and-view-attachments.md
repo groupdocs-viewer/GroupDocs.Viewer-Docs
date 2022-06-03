@@ -3,7 +3,8 @@ id: how-to-convert-and-view-attachments
 url: viewer/net/how-to-convert-and-view-attachments
 title: Render attachments
 weight: 3
-description: "Render attachments with GroupDocs.Viewer for .NET"
+description: "Render email attachments with GroupDocs.Viewer for .NET in the same way as you would render any other documents"
+keywords: Render email attachments
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---

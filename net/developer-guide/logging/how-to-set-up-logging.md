@@ -4,7 +4,7 @@ url: viewer/net/how-to-set-up-logging
 title: Setting up logging
 weight: 1
 description: "This article explains how to set up logging when rendering a document with GroupDocs.Viewer within your .NET applications."
-keywords: logging logger rendering converting
+keywords: logging, logger, rendering, converting
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
