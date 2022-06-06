@@ -31,7 +31,7 @@ Use the [downloads section](https://downloads.groupdocs.com/viewer/net) to downl
 PM> Install-Package GroupDocs.Viewer
 ```
 
-![Source CAD document preview](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/source_image_preview.jpg)
+![Source CAD document preview](viewer/net/images/viewer-use-cases/how-to-view-cad-using-csharp/source_image_preview.jpg)
 
 ## How to render CAD files into HTML, JPG, PNG, or PDF
 
@@ -51,7 +51,7 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 }
 ```
 
-![Rendering CAD document to HTML](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/rendering_to_html_with_embed.jpg)
+![Rendering CAD document to HTML](viewer/net/images/viewer-use-cases/how-to-view-cad-using-csharp/rendering_to_html_with_embed.jpg)
 
 ### Rendering to HTML with External Resources in C\#
 
@@ -67,7 +67,7 @@ To render your file to HTML file(s) with external resources do the following ste
 
 Resources will be placed to separate folder.
 
-![Resources placed into separate folder](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/resources_placed_to_separate_folder.jpg)
+![Resources placed into separate folder](viewer/net/images/viewer-use-cases/how-to-view-cad-using-csharp/resources_placed_to_separate_folder.jpg)
 
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
@@ -93,7 +93,7 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 }
 ```
 
-![Rendering CAD document to JPEG](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/rendering_cad_to_jpeg.jpg)
+![Rendering CAD document to JPEG](viewer/net/images/viewer-use-cases/how-to-view-cad-using-csharp/rendering_cad_to_jpeg.jpg)
 
 ### Rendering to PNG in C\#
 
@@ -109,7 +109,7 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 }
 ```
 
-![Rendering CAD document to PNG](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/rendering_cad_to_png.jpg)
+![Rendering CAD document to PNG](viewer/net/images/viewer-use-cases/how-to-view-cad-using-csharp/rendering_cad_to_png.jpg)
 
 ### Rendering to PDF in C\#
 
@@ -125,7 +125,7 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 }
 ```
 
-![Rendering CAD document to PDF](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/rendering_cad_to_pdf.jpg)
+![Rendering CAD document to PDF](viewer/net/images/viewer-use-cases/how-to-view-cad-using-csharp/rendering_cad_to_pdf.jpg)
 
 ## Getting layouts/layers information
 
@@ -158,7 +158,7 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 
 You can use this information to specify what layers/layouts render in the output file.
 
-![Layouts and layers information](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/layouts_and_layers_information.jpg)
+![Layouts and layers information](viewer/net/images/viewer-use-cases/how-to-view-cad-using-csharp/layouts_and_layers_information.jpg)
 
 ### Layers rendering
 
@@ -189,7 +189,7 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 This drawing contains two layers: "0" - with a rectangle and "CIRCLE" with a circle. We want to render circle only,
 so we added a layer with the name "CIRCLE" in the layers list.
 
-![Render specific layer](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/render_specific_layer.jpg)
+![Render specific layer](viewer/net/images/viewer-use-cases/how-to-view-cad-using-csharp/render_specific_layer.jpg)
 
 ### Layouts rendering
 
@@ -215,7 +215,7 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 This drawing contains three layouts: "three-layouts-with-layers-Layout1", "three-layouts-with-layers-Layout2", "three-layouts-with-layers-Layout3".
 We select "three-layouts-with-layers-Layout2" layout name with rectangle, we set this layer name in LayoutName property.
 
-![Specific layout rendering](viewer/net/images/viewer-use-cases/how-to-view-docx-using-csharp/specific_layout_rendering.jpg)
+![Specific layout rendering](viewer/net/images/viewer-use-cases/how-to-view-cad-using-csharp/specific_layout_rendering.jpg)
 
 ## Get a Free API License
 
