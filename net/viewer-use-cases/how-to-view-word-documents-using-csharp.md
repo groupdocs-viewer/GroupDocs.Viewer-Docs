@@ -15,8 +15,8 @@ In this article, we will discuss how to convert Word to pdf and other formats us
 
 The following topics are covered below in brief:
 
-* [.NET API for rendering Word files](#viewer/net/how-to-view-word-documents-using-csharp/#net-api-for-rendering-word-files)
-* [How to render Word files into HTML, JPG, PNG, or PDF](#viewer/net/how-to-view-word-documents-using-csharp/how-to-render-word-files-into-html-jpg-png-or-pdf)
+* [.NET API for rendering Word files](viewer/net/how-to-view-word-documents-using-csharp/#net-api-for-rendering-word-files)
+* [How to render Word files into HTML, JPG, PNG, or PDF](viewer/net/how-to-view-word-documents-using-csharp/#how-to-render-word-files-into-html-jpg-png-or-pdf)
 
 ## .NET API for rendering Word files
 
@@ -28,6 +28,8 @@ Use the [downloads section](https://downloads.groupdocs.com/viewer/net) to downl
 ```nuget
 PM> Install-Package GroupDocs.Viewer
 ```
+
+Here is a sample document to demonstrate rendering results:
 
 ![Source Word preview](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/source_docx_preview.jpg)
 
