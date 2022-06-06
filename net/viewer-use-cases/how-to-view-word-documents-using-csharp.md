@@ -1,7 +1,7 @@
 ---
 id: how-to-view-word-documents-using-csharp
 url: viewer/net/how-to-view-word-documents-using-csharp
-title: How to view word documents using C#
+title: How to view Word documents using C#
 weight: 2
 description: "This guide describes how to build your Word files viewer in C#. View Word files to render as HTML, JPG, PNG, or PDF using GroupDocs.Viewer .NET API by GroupDocs."
 keywords: convert word to pdf, convert doc to pdf, convert docx to pdf, convert word to jpg, convert word into jpeg,
@@ -77,7 +77,9 @@ using (Viewer viewer = new Viewer("sample.doc"))
 }
 ```
 
-### Rendering to JPEG in C\#
+### Rendering Word to JPEG in C\#
+
+To render your file to JPEG file do the following steps:
 
 * With Viewer class load your document.
 * Сreate JpegViewOptions instance and type output file name.
@@ -95,6 +97,8 @@ using (Viewer viewer = new Viewer("sample.doc"))
 
 ### Rendering to PNG in C\#
 
+To render your file to PNG file do the following steps:
+
 * With Viewer class load your document.
 * Сreate PngViewOptions instance and type output file name.
 * Call View method to render your document to PNG.
@@ -110,6 +114,9 @@ using (Viewer viewer = new Viewer("sample.doc"))
 ![Rendering Word to PNG](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/rendering_word_to_png.jpg)
 
 ### Rendering Word to PDF in C\#
+
+You can render your Word documents such as DOCX, RTF or DOC to pdf.
+To render your file to a PDF file do the following steps:
 
 * With Viewer class load your document.
 * Сreate PngViewOptions instance and type output file name.
