@@ -146,5 +146,3 @@ You can learn how to use GroupDocs.Viewer in your applications with [documentati
 ## See also
 
 * [View CAD document preview](net/viewer-use-cases/how-to-view-cad-documents-using-csharp.md)
-* How to view DOCX using C#
-* How to view PDF using C#

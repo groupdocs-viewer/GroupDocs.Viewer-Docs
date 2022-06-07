@@ -10,9 +10,3 @@ toc: True
 
 This section will describe typical problems with comparing files and ways to solve them using GroupDocs.Viewer API.
 Learn more about advanced GroupDocs.Comparison features and use case from the guides below.
-
-* [How to view CAD Documents using C#](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/ASP.NET%20Core)
-* [How to view docx using C#](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/MVC)
-* [how to view PDF using C#](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/WebForms)
-* [View Word documents using C#](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/WPF)
-* [View Excel SpreadSheets using C#](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/WinForms)

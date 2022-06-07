@@ -15,11 +15,11 @@ The most used formats in the CAD design industry are DWG, DWF, DXF, DGN. In this
 
 The following topics are covered below in brief:
 
-* [.NET API for rendering CAD files](#net-api-for-rendering-cad-files)
-* [How to render CAD files into HTML, JPG, PNG, or PDF](#how-to-render-cad-files-into-html-jpg-png-or-pdf)
-* [Getting layouts/layers information](#getting-layouts-layers-information)
-* [Layers rendering](#layers-rendering)
-* [Layouts rendering](#layouts-rendering)
+* [.NET API for rendering CAD files](viewer/net/how-to-view-cad-documents-using-csharp/#net-api-for-rendering-cad-files)
+* [How to render CAD files into HTML, JPG, PNG, or PDF](viewer/net/how-to-view-cad-documents-using-csharp/#how-to-render-cad-files-into-html-jpg-png-or-pdf)
+* [Getting layouts/layers information](viewer/net/how-to-view-cad-documents-using-csharp/#getting-layoutslayers-information)
+* [Layers rendering](viewer/net/how-to-view-cad-documents-using-csharp/#layers-rendering)
+* [Layouts rendering](viewer/net/how-to-view-cad-documents-using-csharp/#layouts-rendering)
 
 ## .NET API for rendering CAD files
 
@@ -230,6 +230,4 @@ You can learn how to use GroupDocs.Viewer in your applications with [documentati
 
 ## See also
 
-* How to view DOCX using C#
-* How to view PDF using C#
-* View word documents using C#
+* [View Word documents using C#](net/viewer-use-cases/how-to-view-word-documents-using-csharp.md)
