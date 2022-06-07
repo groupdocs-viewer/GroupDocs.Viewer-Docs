@@ -145,4 +145,4 @@ You can learn how to use GroupDocs.Viewer in your applications with [documentati
 
 ## See also
 
-* [View CAD document preview](net/viewer-use-cases/how-to-view-cad-documents-using-csharp.md)
+* [View CAD document preview](viewer/net/how-to-view-cad-documents-using-csharp/)

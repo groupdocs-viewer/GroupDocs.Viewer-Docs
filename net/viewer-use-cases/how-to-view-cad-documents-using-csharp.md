@@ -230,4 +230,4 @@ You can learn how to use GroupDocs.Viewer in your applications with [documentati
 
 ## See also
 
-* [View Word documents using C#](net/viewer-use-cases/how-to-view-word-documents-using-csharp.md)
+* [View Word documents using C#](viewer/net/how-to-view-word-documents-using-csharp/)
