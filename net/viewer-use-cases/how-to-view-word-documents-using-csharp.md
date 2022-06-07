@@ -4,7 +4,7 @@ url: viewer/net/how-to-view-word-documents-using-csharp
 title: How to view Word documents using C#
 weight: 2
 description: "This guide describes how to build your Word files viewer in C#. View Word files to render as HTML, JPG, PNG, or PDF using GroupDocs.Viewer .NET API by GroupDocs."
-keywords: convert word to pdf, convert word to jpeg, convert doc to pdf, convert docx to pdf, convert word to jpg, convert word into jpeg,
+keywords: convert word to pdf, convert word to jpeg, convert doc to pdf, convert docx to pdf, convert word to jpg, convert word into jpeg
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
