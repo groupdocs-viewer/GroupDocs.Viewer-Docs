@@ -16,6 +16,9 @@ Design Web Format File (.dwf) consists of various user layers. Layers represent 
 
 Let's take a sample DWF described above and then we'll process with GroupDocs.Viewer and compare results.
 
+## What is DWF file
+It contains graphics and text as part of design data and reduce the size of the file due to its compressed format. [Read more](https://docs.fileformat.com/cad/dwf/). 
+
 By default GroupDocs.Viewer renders all layers:
 
 ![](viewer/net/images/how-to-view-dwf-file-layers_1.png)

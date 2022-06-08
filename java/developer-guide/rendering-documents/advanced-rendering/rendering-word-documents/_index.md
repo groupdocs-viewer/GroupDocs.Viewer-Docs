@@ -3,8 +3,8 @@ id: view-word-documents
 url: viewer/java/view-word-documents
 title: Rendering Word Documents
 weight: 11
-description: "This article contains use-cases of viewing Text files with GroupDocs.Viewer within your Java applications."
-keywords: 
+description: "This article contains use-cases of viewing Text files or an application like Word documents viewer with GroupDocs.Viewer within your Java applications."
+keywords: word documents viewer, Online Word Viewer
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---

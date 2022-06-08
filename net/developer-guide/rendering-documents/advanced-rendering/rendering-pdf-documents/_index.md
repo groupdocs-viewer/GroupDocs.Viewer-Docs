@@ -4,6 +4,7 @@ url: viewer/net/view-pdf-documents
 title: Render PDF Documents
 weight: 4
 description: "This article contains use-cases of rendering Page Layout documents with GroupDocs.Viewer within your .NET applications."
+keywords: rendering Page Layout, Online PDF Viewer
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
