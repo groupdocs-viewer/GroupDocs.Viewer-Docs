@@ -3,8 +3,8 @@ id: rendering-to-html
 url: viewer/net/rendering-to-html
 title: Rendering to HTML
 weight: 11
-description: "With GroupDocs.Viewer for .NET you can render files to HTML format."
-keywords: 
+description: "With GroupDocs.Viewer for .NET you can render files to HTML format. As a simple usecase please see how easily you can convert Microsoft Word to clean html."
+keywords: render files, rendering pdf, convert word to clean html
 productName: GroupDocs.Viewer for .NET
 hideChildren: True
 toc: True
@@ -19,7 +19,7 @@ GroupDocs.Viewer for .NET provides two resources management options for CSS, fon
 
 ## Rendering to HTML with external resources
 
-The following code shows how to render document to HTML with external resources.  
+The following code shows how to render DOCX to HTML with external resources.  
 
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))

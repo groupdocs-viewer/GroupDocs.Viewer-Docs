@@ -4,7 +4,7 @@ url: viewer/net/adjust-output-image-size
 title: Adjust output image size
 weight: 1
 description: "This article explains how to adjust output image size when rendering CAD drawings with GroupDocs.Viewer within your .NET applications."
-keywords: rendering CAD drawings, rendering by width or height
+keywords: rendering CAD drawings, rendering by width or height, view dwg files
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
@@ -33,7 +33,7 @@ When rendering CAD drawings GroupDocs.Viewer provides following options:
 
 DWF drawing format consists of sheets, that may have different sizes, DWG and DXF drawing formats consists of the Model and Layouts. Refer to [Adjust output image size]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-get-cad-layers-and-layouts" >}}) article that describes layouts rendering. Sizing rules described above, work for the drawings that consist of a one sheet or rendered without layouts and provide only one page as an output. In this section we will review how sizing works when the output consist of several pages. Later in this article, for convenience, we will refer to Model and layouts as sheets.
 
-By default, when we render DWF format with several sheets, or DWG and DXF formats with layouts,  each sheet is rendered into separate page, that has it's own size.
+By default, when we view DWG files with several sheets, or DWF and DXF formats with layouts,  each sheet is rendered into separate page, that has it's own size.
 
 If only one of *Height* or *Width* is set, value of another side for every sheet will be calculated from the ratio in size of that sheet. For example if *Height* is set as 600 and the ratio of the height to width in first sheet is 6 to 5 and second sheet is 6 to 4, then the width of the resulting pages will be 500px and 400px respectively.
 

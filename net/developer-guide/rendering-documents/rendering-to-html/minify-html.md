@@ -4,6 +4,7 @@ url: viewer/net/minify-html
 title: Minify HTML
 weight: 4
 description: "Learn how to minify HTML and CSS when rendering of documents into HTML and make your HTML documents load faster with GroupDocs.Viewer."
+keywords: minify HTML, HTML, CSS 
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
