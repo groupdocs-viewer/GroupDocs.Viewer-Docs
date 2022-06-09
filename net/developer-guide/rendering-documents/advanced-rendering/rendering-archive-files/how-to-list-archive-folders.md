@@ -4,7 +4,7 @@ url: viewer/net/how-to-list-archive-folders
 title: List archive folders
 weight: 1
 description: "This article explains how to get information about an archive with GroupDocs.Viewer within your .NET applications."
-keywords: 
+keywords: list of folders,Archive File, print out archive contents
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---

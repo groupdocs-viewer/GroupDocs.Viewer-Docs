@@ -4,7 +4,7 @@ url: viewer/net/how-to-integrate-groupdocs-viewer-in-asp-net-core-web-app
 title: How to integrate GroupDocs.Viewer in ASP.NET Core Web app
 weight: 1
 description: "This guide steps through integration process of GroupDocs.Viewer.UI in ASP.NET Core Web application"
-keywords: 
+keywords: integration process, ASP.NET Core Web application
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
