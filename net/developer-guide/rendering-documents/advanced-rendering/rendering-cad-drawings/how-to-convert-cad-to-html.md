@@ -4,11 +4,11 @@ url: viewer/net/how-to-convert-cad-to-html
 title: Rendering CAD to HTML
 weight: 5
 description: "This article demonstrates how to convert CAD drawings to HTML with GroupDocs.Viewer within your .NET applications."
-keywords: 
+keywords: dwg file viewer, convert CAD drawings
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-[CAD drawings](https://wiki.fileformat.com/cad/) are vector format images that contain points with x,y, z coordinates, and associated lines definitions. CAD drawings also may contain layers and layouts.
+[CAD drawings](https://docs.fileformat.com/cad/) are vector format images that contain points with x,y, z coordinates, and associated lines definitions. CAD drawings also may contain layers and layouts.
 
 ## Background
 
