@@ -24,7 +24,7 @@ The following topics are covered below in brief:
 
 ## .NET API for rendering PDF files
 
-[GroupDocs.Viewer for .NET](#https://products.groupdocs.com/viewer/net) provides API to render PDF documents formats to PNG, PDF, JPEG, and HTML. Also, API includes special options for additional result image processing and [many other supported formats](https://docs.groupdocs.com/viewer/net/supported-document-formats/).
+[GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) provides API to render PDF documents formats to PNG, PDF, JPEG, and HTML. Also, API includes special options for additional result image processing and [many other supported formats](https://docs.groupdocs.com/viewer/net/supported-document-formats/).
 
 Use the [downloads section](https://downloads.groupdocs.com/viewer/net) to download API DLLs or MSI installer or NuGet:
 
@@ -40,9 +40,9 @@ PM> Install-Package GroupDocs.Viewer
 
 To render your file to HTML file(s) with embedded resources do the following steps:
 
-* With Viewer class load your document.
-* With the ForEmbeddedResources method create the HtmlViewOptions instance and type output file name.
-* Call View method to render your document to HTML, resources will be embedded in to file.
+* With `Viewer` class load your document.
+* With the `ForEmbeddedResources` method create the `HtmlViewOptions` instance and type output file name.
+* Call `View` method to render your document to HTML, resources will be embedded in to file.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.pdf"))
@@ -58,13 +58,13 @@ using (Viewer viewer = new Viewer("sample.pdf"))
 
 To render your file to HTML file(s) with external resources do the following steps:
 
-* With Viewer class load your document.
-* with ForExternalResources method create HtmlViewOptions instance and type:
+* With `Viewer` class load your document.
+* with `ForExternalResources` method create `HtmlViewOptions` instance and type:
   * the output file name mask
   * external resources folder file path mask
   * URL for resources mask format
 
-* Call View method to render your document to HTML.
+* Call `View` method to render your document to HTML.
 
 Resources will be placed in a separate folder.
 
@@ -74,7 +74,8 @@ Resources will be placed in a separate folder.
 using (Viewer viewer = new Viewer("sample.pdf"))
 {
     HtmlViewOptions viewOptions = 
-        HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+        HtmlViewOptions.ForExternalResources(
+            "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
 
     viewer.View(viewOptions);
 }
@@ -84,9 +85,9 @@ using (Viewer viewer = new Viewer("sample.pdf"))
 
 To render your file to a JPEG file do the following steps:
 
-* With Viewer class load your document.
-* Сreate JpegViewOptions instance and type output file name.
-* Call View method to render your document to JPEG.
+* With `Viewer` class load your document.
+* Сreate `JpegViewOptions` instance and type output file name.
+* Call `View` method to render your document to JPEG.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.pdf"))
@@ -102,9 +103,9 @@ using (Viewer viewer = new Viewer("sample.pdf"))
 
 To render your file to a PNG file do the following steps:
 
-* With Viewer class load your document.
-* Сreate PngViewOptions instance and type output file name.
-* Call View method to render your document to PNG.
+* With `Viewer` class load your document.
+* Сreate `PngViewOptions` instance and type output file name.
+* Call `View` method to render your document to PNG.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.pdf"))
@@ -121,10 +122,10 @@ using (Viewer viewer = new Viewer("sample.pdf"))
 You can get the following information about PDF file: number of pages, page size, and printing permission.
 To do it please do the following steps:
 
-* With Viewer class load your document.
-* Сreate PngViewOptions instance and type output file name.
-* Call View method to render your document to PDF.
-* Call GetViewInfo to get PDF file information and get PdfViewInfo object result.
+* With `Viewer` class load your document.
+* Сreate `PngViewOptions` instance and type output file name.
+* Call `View` method to render your document to PDF.
+* Call `GetViewInfo` to get PDF file information and get `PdfViewInfo` object result.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.pdf"))
@@ -143,8 +144,6 @@ using (Viewer viewer = new Viewer("sample.pdf"))
 }
 ```
 
-You can use this information to specify what layers/layouts render in the output file.
-
 ![Get information about PDF file](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/get-information-about-pdf-file.jpg)
 
 ## How to extract text from PDF
@@ -153,10 +152,10 @@ To extract text to PDF you should set ExtractText property to True. You can acce
 
 To do it:
 
-* With Viewer class load your document.
-* Сreate ViewInfoOptions instance with ViewInfoOptions.ForHtmlView()/ViewInfoOptions.ForJpgView()/ViewInfoOptions.ForPngView() method.
-* Initialize viewOptions.ExtractText property to true.
-* Call GetViewInfo method to get PDF file information with extracted text.
+* With `Viewer` class load your document.
+* Сreate `ViewInfoOptions` instance with `ViewInfoOptions.ForHtmlView()/ViewInfoOptions.ForJpgView()/ViewInfoOptions.ForPngView()` method.
+* Initialize `viewOptions.ExtractText` property to `true`.
+* Call `GetViewInfo` method to get PDF file information with extracted text.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.pdf"))
