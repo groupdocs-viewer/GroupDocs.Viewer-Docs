@@ -375,7 +375,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
      /**
       * <p>
       * Photoshop Large Document Format (.psb) represents Photoshop Large Document Format used for graphics designing and development.
-      * Learn more about this file format <a href="https://wiki.fileformat.com/image/psb">here</a>.
+      * Learn more about this file format <a href="https://docs.fileformat.com/image/psb">here</a>.
       * </p>
       */
      PSB("Photoshop Large Document Format", ".psb")
@@ -383,7 +383,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
      /**
       * <p>
       * Corel Exchange (.cmx) is a drawing image file that may contain vector graphics as well as bitmap graphics.
-      * Learn more about this file format <a href="https://wiki.fileformat.com/image/cmx">here</a>.
+      * Learn more about this file format <a href="https://docs.fileformat.com/image/cmx">here</a>.
       * </p>
       */
      CMX("Corel Metafile exchange", ".cmx")
@@ -391,7 +391,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
      /**
       * <p>
       * Enhanced Windows Metafile compressed (.emz) represents graphical images device-independently compressed by GZIP. Metafiles of EMF comprises of variable-length records in chronological order that can render the stored image after parsing on any output device.
-      * Learn more about this file format <a href="https://wiki.fileformat.com/image/emz">here</a>.
+      * Learn more about this file format <a href="https://docs.fileformat.com/image/emz">here</a>.
       * </p>
       */
      EMZ("Windows Compressed Enhanced Metafile", ".emz")
@@ -418,13 +418,13 @@ There are lots of features, improvements, and bug-fixes in this release, most no
   
      /**
       * Truevision TGA (Truevision Advanced Raster Adapter - TARGA) is used to store bitmap digital images developed by TRUEVISION.
-      * Learn more about this file format <a href="https://wiki.fileformat.com/image/tga">here</a>.
+      * Learn more about this file format <a href="https://docs.fileformat.com/image/tga">here</a>.
       */
      TGA("Truevision TGA (TARGA)", ".tga")
   
      /**
       * Animated Portable Network Graphic (.apng) is extension of  PNG format that support animation.
-      * Learn more about this file format <a href="https://wiki.fileformat.com/image/apng">here</a>.
+      * Learn more about this file format <a href="https://docs.fileformat.com/image/apng">here</a>.
       */
      APNG("Animated Portable Network Graphic", ".apng")
   

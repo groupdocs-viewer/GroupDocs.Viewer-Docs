@@ -22,21 +22,21 @@ Auto Detection means that GroupDocs.Viewer for .NET can determine the type of th
 
 | File Extension | File Type | Auto Detection |
 | --- | --- | --- |
-| [.XLSX](https://wiki.fileformat.com/spreadsheet/xlsx) | [Microsoft Excel Worksheet](https://wiki.fileformat.com/spreadsheet/xlsx) | Yes |
-| [.XLS](https://wiki.fileformat.com/spreadsheet/xls) | [Microsoft Excel 97-2003 Worksheet](https://wiki.fileformat.com/spreadsheet/xls) | Yes |
-| [.ODS](https://wiki.fileformat.com/spreadsheet/ods) | [OpenDocument Spreadsheet](https://wiki.fileformat.com/spreadsheet/ods) | Yes |
+| [.XLSX](https://docs.fileformat.com/spreadsheet/xlsx) | [Microsoft Excel Worksheet](https://docs.fileformat.com/spreadsheet/xlsx) | Yes |
+| [.XLS](https://docs.fileformat.com/spreadsheet/xls) | [Microsoft Excel 97-2003 Worksheet](https://docs.fileformat.com/spreadsheet/xls) | Yes |
+| [.ODS](https://docs.fileformat.com/spreadsheet/ods) | [OpenDocument Spreadsheet](https://docs.fileformat.com/spreadsheet/ods) | Yes |
 | .FODS | OpenDocument Flat XML Spreadsheet | Yes |
 | .OTS | OpenDocument Spreadsheet Template | Yes |
-| [.CSV](https://wiki.fileformat.com/spreadsheet/csv) | [Comma Separated Values File](https://wiki.fileformat.com/spreadsheet/csv) | Yes |
-| [.TSV](https://wiki.fileformat.com/spreadsheet/tsv) | [Tab Separated Values File](https://wiki.fileformat.com/spreadsheet/tsv) | Yes |
-| [.XLSB](https://wiki.fileformat.com/spreadsheet/xlsb) | [Microsoft Excel Binary Worksheet](https://wiki.fileformat.com/spreadsheet/xlsb) | Yes |
-| [.XLSM](https://wiki.fileformat.com/spreadsheet/xlsm) | [Microsoft Excel Macro-Enabled Worksheet](https://wiki.fileformat.com/spreadsheet/xlsm) | Yes |
-| [.XLT](https://wiki.fileformat.com/spreadsheet/xlt) | [Microsoft Excel Template](https://wiki.fileformat.com/spreadsheet/xlt) | Yes |
-| [.XLTX](https://wiki.fileformat.com/spreadsheet/xltx) | [Excel Open XML Spreadsheet Template](https://wiki.fileformat.com/spreadsheet/xltx) | Yes |
-| [.XLTM](https://wiki.fileformat.com/spreadsheet/xltm) | [Microsoft Excel Macro-Enabled Template](https://wiki.fileformat.com/spreadsheet/xltm) | Yes |
+| [.CSV](https://docs.fileformat.com/spreadsheet/csv) | [Comma Separated Values File](https://docs.fileformat.com/spreadsheet/csv) | Yes |
+| [.TSV](https://docs.fileformat.com/spreadsheet/tsv) | [Tab Separated Values File](https://docs.fileformat.com/spreadsheet/tsv) | Yes |
+| [.XLSB](https://docs.fileformat.com/spreadsheet/xlsb) | [Microsoft Excel Binary Worksheet](https://docs.fileformat.com/spreadsheet/xlsb) | Yes |
+| [.XLSM](https://docs.fileformat.com/spreadsheet/xlsm) | [Microsoft Excel Macro-Enabled Worksheet](https://docs.fileformat.com/spreadsheet/xlsm) | Yes |
+| [.XLT](https://docs.fileformat.com/spreadsheet/xlt) | [Microsoft Excel Template](https://docs.fileformat.com/spreadsheet/xlt) | Yes |
+| [.XLTX](https://docs.fileformat.com/spreadsheet/xltx) | [Excel Open XML Spreadsheet Template](https://docs.fileformat.com/spreadsheet/xltx) | Yes |
+| [.XLTM](https://docs.fileformat.com/spreadsheet/xltm) | [Microsoft Excel Macro-Enabled Template](https://docs.fileformat.com/spreadsheet/xltm) | Yes |
 | .XLAM | Excel Open XML Macro-Enabled Add-In | Yes |
 | .SXC | StarOffice Calc Spreadsheet | Yes |
-| [.NUMBERS](https://wiki.fileformat.com/spreadsheet/numbers) | [Apple numbers](https://wiki.fileformat.com/spreadsheet/numbers) | Yes |
+| [.NUMBERS](https://docs.fileformat.com/spreadsheet/numbers) | [Apple numbers](https://docs.fileformat.com/spreadsheet/numbers) | Yes |
 
 ## In this section
 

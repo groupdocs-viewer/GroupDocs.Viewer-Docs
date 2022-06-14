@@ -22,38 +22,38 @@ Auto Detection means that GroupDocs.Viewer can determine the type of the image f
 
 | File Extension | File Type | Auto Detection |
 | --- | --- | --- |
-| [.BMP](https://wiki.fileformat.com/image/bmp) | [Bitmap Picture (BMP)](https://wiki.fileformat.com/image/bmp) | Yes |
-| [.CGM](https://wiki.fileformat.com/page-description-language/cgm) | [Computer Graphics Metafile](https://wiki.fileformat.com/page-description-language/cgm) | Yes |
-| [.CDR](https://wiki.fileformat.com/image/cdr) | [CorelDraw Vector Graphic Drawing (CDR)](https://wiki.fileformat.com/image/cdr)[](https://wiki.fileformat.com/image/cdr/) | Yes |
-| [.CMX](https://wiki.fileformat.com/image/cmx) | [Corel Metafile Exchange (CMX)](https://wiki.fileformat.com/image/cmx)[](https://wiki.fileformat.com/image/cmx/) | Yes |
-| [.DCM](https://wiki.fileformat.com/image/dcm) | [Digital Imaging and Communications in Medicine (DICOM)](https://wiki.fileformat.com/image/dicom) | Yes |
-| [.DJVU](https://wiki.fileformat.com/image/djvu) | [Deja Vu (DjVu)](https://wiki.fileformat.com/image/djvu) | Yes |
-| [.DNG](https://wiki.fileformat.com/image/dng) | [Digital Negative Specification](https://wiki.fileformat.com/image/dng) | Yes |
-| [.DIB](https://wiki.fileformat.com/image/dib) | [Device-independent bitmap](https://wiki.fileformat.com/image/dib) | Yes |
-| [.EPS](https://wiki.fileformat.com/page-description-language/eps) | [Encapsulated PostScript](https://wiki.fileformat.com/page-description-language/eps) | Yes |
-| [.GIF](https://wiki.fileformat.com/image/gif) | [Graphics Interchange Format (GIF)](https://wiki.fileformat.com/image/gif) | Yes |
-| [.ICO](https://wiki.fileformat.com/image/ico) | [Windows Icon](https://wiki.fileformat.com/image/ico) | Yes |
-| [.JP2](https://wiki.fileformat.com/image/jp2) | [JPEG 2000 Core Image File](https://wiki.fileformat.com/image/jp2) | Yes |
+| [.BMP](https://docs.fileformat.com/image/bmp) | [Bitmap Picture (BMP)](https://docs.fileformat.com/image/bmp) | Yes |
+| [.CGM](https://docs.fileformat.com/page-description-language/cgm) | [Computer Graphics Metafile](https://docs.fileformat.com/page-description-language/cgm) | Yes |
+| [.CDR](https://docs.fileformat.com/image/cdr) | [CorelDraw Vector Graphic Drawing (CDR)](https://docs.fileformat.com/image/cdr)[](https://docs.fileformat.com/image/cdr/) | Yes |
+| [.CMX](https://docs.fileformat.com/image/cmx) | [Corel Metafile Exchange (CMX)](https://docs.fileformat.com/image/cmx)[](https://docs.fileformat.com/image/cmx/) | Yes |
+| [.DCM](https://docs.fileformat.com/image/dcm) | [Digital Imaging and Communications in Medicine (DICOM)](https://docs.fileformat.com/image/dicom) | Yes |
+| [.DJVU](https://docs.fileformat.com/image/djvu) | [Deja Vu (DjVu)](https://docs.fileformat.com/image/djvu) | Yes |
+| [.DNG](https://docs.fileformat.com/image/dng) | [Digital Negative Specification](https://docs.fileformat.com/image/dng) | Yes |
+| [.DIB](https://docs.fileformat.com/image/dib) | [Device-independent bitmap](https://docs.fileformat.com/image/dib) | Yes |
+| [.EPS](https://docs.fileformat.com/page-description-language/eps) | [Encapsulated PostScript](https://docs.fileformat.com/page-description-language/eps) | Yes |
+| [.GIF](https://docs.fileformat.com/image/gif) | [Graphics Interchange Format (GIF)](https://docs.fileformat.com/image/gif) | Yes |
+| [.ICO](https://docs.fileformat.com/image/ico) | [Windows Icon](https://docs.fileformat.com/image/ico) | Yes |
+| [.JP2](https://docs.fileformat.com/image/jp2) | [JPEG 2000 Core Image File](https://docs.fileformat.com/image/jp2) | Yes |
 | .JPF | JPEG 2000 Image File | Yes |
-| [.JPX](https://wiki.fileformat.com/image/jp2) | [JPEG 2000 Image File](https://wiki.fileformat.com/image/jp2) | Yes |
+| [.JPX](https://docs.fileformat.com/image/jp2) | [JPEG 2000 Image File](https://docs.fileformat.com/image/jp2) | Yes |
 | .JPM | JPEG 2000 Image File | Yes |
 | .J2C | JPEG 2000 Code Stream | Yes |
-| [.J2K](https://wiki.fileformat.com/image/jp2) | [JPEG 2000 Code Stream](https://wiki.fileformat.com/image/jp2) | Yes |
-| [.JPC](https://wiki.fileformat.com/image/jp2) | [JPEG 2000 Code Stream](https://wiki.fileformat.com/image/jp2) | Yes |
-| [.JPG, .JPEG](https://wiki.fileformat.com/image/jpeg) | [Joint Photographic Experts Group (JPEG)](https://wiki.fileformat.com/image/jpeg) | Yes |
-| [.ODG](https://wiki.fileformat.com/image/odg) | [Open Document Graphic (ODG)](https://wiki.fileformat.com/image/odg) | Yes |
+| [.J2K](https://docs.fileformat.com/image/jp2) | [JPEG 2000 Code Stream](https://docs.fileformat.com/image/jp2) | Yes |
+| [.JPC](https://docs.fileformat.com/image/jp2) | [JPEG 2000 Code Stream](https://docs.fileformat.com/image/jp2) | Yes |
+| [.JPG, .JPEG](https://docs.fileformat.com/image/jpeg) | [Joint Photographic Experts Group (JPEG)](https://docs.fileformat.com/image/jpeg) | Yes |
+| [.ODG](https://docs.fileformat.com/image/odg) | [Open Document Graphic (ODG)](https://docs.fileformat.com/image/odg) | Yes |
 | .FODG | Flat XML ODF Template | Yes |
-| [.PCL](https://wiki.fileformat.com/page-description-language/pcl) | [Printer Command Language (PCL)](https://wiki.fileformat.com/page-description-language/pcl) | Yes |
-| [.PNG](https://wiki.fileformat.com/image/png) | [Portable Network Graphics (PNG)](https://wiki.fileformat.com/image/png) | Yes |
-| [.PS](https://wiki.fileformat.com/page-description-language/ps) | [PostScript (PS)](https://wiki.fileformat.com/page-description-language/ps) | Yes |
-| [.PSD](https://wiki.fileformat.com/image/psd) | [Adobe Photoshop Document (PSD)](https://wiki.fileformat.com/image/psd) | Yes |
-| [.PSB](https://wiki.fileformat.com/image/psb) | [Photoshop Large Document Format (PSB)](https://wiki.fileformat.com/image/psb) | Yes |
-| [.SVG](https://wiki.fileformat.com/page-description-language/svg) | [Scalable Vector Graphics (SVG)](https://wiki.fileformat.com/page-description-language/svg) | Yes |
+| [.PCL](https://docs.fileformat.com/page-description-language/pcl) | [Printer Command Language (PCL)](https://docs.fileformat.com/page-description-language/pcl) | Yes |
+| [.PNG](https://docs.fileformat.com/image/png) | [Portable Network Graphics (PNG)](https://docs.fileformat.com/image/png) | Yes |
+| [.PS](https://docs.fileformat.com/page-description-language/ps) | [PostScript (PS)](https://docs.fileformat.com/page-description-language/ps) | Yes |
+| [.PSD](https://docs.fileformat.com/image/psd) | [Adobe Photoshop Document (PSD)](https://docs.fileformat.com/image/psd) | Yes |
+| [.PSB](https://docs.fileformat.com/image/psb) | [Photoshop Large Document Format (PSB)](https://docs.fileformat.com/image/psb) | Yes |
+| [.SVG](https://docs.fileformat.com/page-description-language/svg) | [Scalable Vector Graphics (SVG)](https://docs.fileformat.com/page-description-language/svg) | Yes |
 | [.SVGZ](https://fileinfo.com/extension/svgz) | [Scalable Vector Graphics gZipped (SVGZ)](https://fileinfo.com/extension/svgz) | Yes |
-| [.TIF, .TIFF](https://wiki.fileformat.com/image/tiff) | [Tagged Image File Format (TIFF)](https://wiki.fileformat.com/image/tiff) | Yes |
-| [.WEBP](https://wiki.fileformat.com/image/webp) | [WebP Image](https://wiki.fileformat.com/image/webp) | Yes |
-| [.EMF](https://wiki.fileformat.com/image/emf) | [Windows Enhanced Metafile (EMF)](https://wiki.fileformat.com/image/emf)  | Yes |
-| [.WMF](https://wiki.fileformat.com/image/wmf) | [Windows Metafile (WMF)](https://wiki.fileformat.com/image/wmf) | Yes |
+| [.TIF, .TIFF](https://docs.fileformat.com/image/tiff) | [Tagged Image File Format (TIFF)](https://docs.fileformat.com/image/tiff) | Yes |
+| [.WEBP](https://docs.fileformat.com/image/webp) | [WebP Image](https://docs.fileformat.com/image/webp) | Yes |
+| [.EMF](https://docs.fileformat.com/image/emf) | [Windows Enhanced Metafile (EMF)](https://docs.fileformat.com/image/emf)  | Yes |
+| [.WMF](https://docs.fileformat.com/image/wmf) | [Windows Metafile (WMF)](https://docs.fileformat.com/image/wmf) | Yes |
 
 *Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
 

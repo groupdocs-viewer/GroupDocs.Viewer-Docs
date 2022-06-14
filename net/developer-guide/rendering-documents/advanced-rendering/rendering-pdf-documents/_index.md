@@ -23,9 +23,9 @@ Auto Detection means that GroupDocs.Viewer for .NET can determine the type of th
 
 | File Type | File Extension | Auto Detection |
 | --- | --- | --- |
-| [.PDF](https://wiki.fileformat.com/view/pdf) | [Adobe Portable Document Format (PDF)](https://wiki.fileformat.com/view/pdf) | Yes |
-| [.TEX](https://wiki.fileformat.com/page-description-language/tex/) | [LaTeX Source Document](https://wiki.fileformat.com/page-description-language/tex/) | Yes |
-| [.XPS](https://wiki.fileformat.com/page-description-language/xps) | [Microsoft XML Paper Specification (XPS)](https://wiki.fileformat.com/page-description-language/xps) | Yes |
+| [.PDF](https://docs.fileformat.com/view/pdf) | [Adobe Portable Document Format (PDF)](https://docs.fileformat.com/view/pdf) | Yes |
+| [.TEX](https://docs.fileformat.com/page-description-language/tex/) | [LaTeX Source Document](https://docs.fileformat.com/page-description-language/tex/) | Yes |
+| [.XPS](https://docs.fileformat.com/page-description-language/xps) | [Microsoft XML Paper Specification (XPS)](https://docs.fileformat.com/page-description-language/xps) | Yes |
 | .OXPS | OpenXPS File | Yes |
 
 ## In this section

@@ -12,7 +12,7 @@ hideChildren: False
 
 ## Background
 
-If you convert your CAD drawings to HTML it's better to leave them in vector format rather rasterization to get better rendering and zooming. While converting your CAD drawings to HTML GroupDocs.Viewer converts a drawing to [SVG (Scalable Vector Graphics format)](https://wiki.fileformat.com/page-description-language/svg/) and embeds it to [HTML](https://wiki.fileformat.com/web/html/).
+If you convert your CAD drawings to HTML it's better to leave them in vector format rather rasterization to get better rendering and zooming. While converting your CAD drawings to HTML GroupDocs.Viewer converts a drawing to [SVG (Scalable Vector Graphics format)](https://docs.fileformat.com/page-description-language/svg/) and embeds it to [HTML](https://docs.fileformat.com/web/html/).
 
 ![](viewer/net/images/how-to-convert-cad-to-html.png)
 

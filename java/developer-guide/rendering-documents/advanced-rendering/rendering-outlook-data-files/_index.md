@@ -18,8 +18,8 @@ Auto Detection means that GroupDocs.Viewer can determine the type of the Outloo
 
 | File Extension | File Type | Auto Detection |
 | --- | --- | --- |
-| [.OST](https://wiki.fileformat.com/email/ost) | [Microsoft Outlook Offline Storage Table](https://wiki.fileformat.com/email/ost) | Yes |
-| [.PST](https://wiki.fileformat.com/email/pst) | [Microsoft Outlook Personal Storage Table](https://wiki.fileformat.com/email/pst) | Yes |
+| [.OST](https://docs.fileformat.com/email/ost) | [Microsoft Outlook Offline Storage Table](https://docs.fileformat.com/email/ost) | Yes |
+| [.PST](https://docs.fileformat.com/email/pst) | [Microsoft Outlook Personal Storage Table](https://docs.fileformat.com/email/pst) | Yes |
 
 ## Rendering OST and PST files
 
