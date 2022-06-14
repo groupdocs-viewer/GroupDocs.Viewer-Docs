@@ -3,11 +3,16 @@ id: how-to-view-dwf-file-layers
 url: viewer/java/how-to-view-dwf-file-layers
 title: Rendering DWF file layers
 weight: 8
-description: "This article explains how to view a specific DWF file layers with GroupDocs.Viewer within your Java / C# applications."
-keywords: 
+description: "This article explains how to view a specific DWF file layers with GroupDocs.Viewer within your Java applications."
+keywords: What is DWF file, DWF file, DWF file layers
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
+
+## What is DWF file
+It contains graphics and text as part of design data and reduce the size of the file due to its compressed format. [Read more](https://docs.fileformat.com/cad/dwf/). 
+
+
 Design Web Format File (.dwf) consists of various user layers. Layers represent various parts of the entire drawing, for example, this drawing describes a plan of a building and it's parts like stairs, walls, doors located in different layers.
 
 ![](viewer/java/images/how-to-view-dwf-file-layers.png)

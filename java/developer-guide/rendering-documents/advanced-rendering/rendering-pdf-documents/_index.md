@@ -4,7 +4,7 @@ url: viewer/java/view-pdf-documents
 title: Rendering PDF Documents
 weight: 12
 description: "This article contains use-cases of viewing Page Layout documents with GroupDocs.Viewer within your Java applications."
-keywords: 
+keywords: rendering Page Layout, Online PDF Viewer
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---

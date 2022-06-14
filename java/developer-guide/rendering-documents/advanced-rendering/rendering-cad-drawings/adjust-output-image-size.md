@@ -4,13 +4,13 @@ url: viewer/java/adjust-output-image-size
 title: Adjust output image size
 weight: 1
 description: "This article explains how to adjust output image size when viewing CAD drawings with GroupDocs.Viewer within your Java applications."
-keywords: 
+keywords: rendering CAD drawings, rendering by width or height, view dwg files
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
 ![Adjust output image size](viewer/java/images/adjust-output-image-size.jpg)
 
-When CAD drawings are rendered, the size of the render result is adjusted by API automatically, the biggest side (width or height depending on which one is bigger) is set 2000 px, another side is set value based on width-to-length ratio. You may adjust the size of resulting document by setting [CadOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions) as show in example.
+By default, when we view DWG files with several sheets, or DWF and DXF formats with layouts,  each sheet is rendered into separate page, that has it's own size. The biggest side (width or height depending on which one is bigger) is set 2000 px, another side is set value based on width-to-length ratio. You may adjust the size of resulting document by setting [CadOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions) as show in example.
 
 ```java
      try (Viewer viewer = new Viewer("sample.dwg")) {
