@@ -38,9 +38,9 @@ Here is a sample document to demonstrate rendering results:
 
 To render your file to HTML file(s) with embedded resources do the following steps:
 
-* With Viewer class load your document.
-* With the ForEmbeddedResources method create the HtmlViewOptions instance and type the output file name.
-* Call View method to render your document to HTML, resources will be embedded in to file.
+* With `Viewer` class load your document.
+* With the `ForEmbeddedResources` method create the `HtmlViewOptions` instance and type the output file name.
+* Call `View` method to render your document to HTML, resources will be embedded in to file.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.xls"))
@@ -56,13 +56,13 @@ using (Viewer viewer = new Viewer("sample.xls"))
 
 To render your file to HTML file(s) with external resources do the following steps:
 
-* With Viewer class load your document.
-* with ForExternalResources method create HtmlViewOptions instance and type:
+* With `Viewer` class load your document.
+* with `ForExternalResources` method create `HtmlViewOptions` instance and type:
   * the output file name mask
   * external resources folder file path mask
   * URL for resources mask format
 
-* Call View method to render your document to HTML.
+* Call `View` method to render your document to HTML.
 
 Resources will be placed in a separate folder.
 
@@ -82,9 +82,9 @@ using (Viewer viewer = new Viewer("sample.xls"))
 
 To render Excel to JPG file do the following steps:
 
-* With Viewer class load your document.
-* Сreate the JpegViewOptions instance and type the output file name.
-* Call View method to render your document to JPEG.
+* With `Viewer` class load your document.
+* Сreate the `pegViewOptions` instance and type the output file name.
+* Call `View` method to render your document to JPEG.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.xls"))
@@ -100,9 +100,9 @@ using (Viewer viewer = new Viewer("sample.xls"))
 
 To render your file to a PNG file do the following steps:
 
-* With Viewer class load your document.
-* Сreate PngViewOptions instance and type the output file name.
-* Call View method to render your document to PNG.
+* With `Viewer` class load your document.
+* Сreate `PngViewOptions` instance and type the output file name.
+* Call `View` method to render your document to PNG.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.xls"))
@@ -119,9 +119,9 @@ using (Viewer viewer = new Viewer("sample.xls"))
 In this example we are going to convert XLS to PDF.
 For it do the following steps:
 
-* With Viewer class load your document.
-* Сreate PngViewOptions instance and type the output file name.
-* Call View method to render your document to PDF.
+* With `Viewer` class load your document.
+* Сreate `PngViewOptions` instance and type the output file name.
+* Call `View` method to render your document to PDF.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.xls"))
