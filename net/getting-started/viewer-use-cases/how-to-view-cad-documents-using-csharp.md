@@ -23,7 +23,7 @@ The following topics are covered below in brief:
 
 ## .NET API for rendering CAD files
 
-[GroupDocs.Viewer for .NET](#https://products.groupdocs.com/viewer/net) provides API to render CAD documents formats to PNG, PDF, JPEG, and HTML. Also, API includes special options for additional result image processing. Supported formats are DWF, DXF, DGN, IFC, STL, DWT, Plotter documents, and [many others](https://docs.groupdocs.com/viewer/net/supported-document-formats/).
+[GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) provides API to render CAD documents formats to PNG, PDF, JPEG, and HTML. Also, API includes special options for additional result image processing. Supported formats are DWF, DXF, DGN, IFC, STL, DWT, Plotter documents, and [many others](https://docs.groupdocs.com/viewer/net/supported-document-formats/).
 
 Use the [downloads section](https://downloads.groupdocs.com/viewer/net) to download API DLLs or MSI installer or NuGet:
 
@@ -39,9 +39,9 @@ PM> Install-Package GroupDocs.Viewer
 
 To render your file to HTML file(s) with embedded resources do the following steps:
 
-* With Viewer class load your document.
-* With the ForEmbeddedResources method create the HtmlViewOptions instance and type output file name.
-* Call View method to render your document to HTML, resources will be embedded in to file.
+* With Viewer` class load your document.
+* With the `ForEmbeddedResources` method create the `HtmlViewOptions` instance and type output file name.
+* Call `View` method to render your document to HTML, resources will be embedded in to file.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
@@ -57,13 +57,13 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 
 To render your file to HTML file(s) with external resources do the following steps:
 
-* With Viewer class load your document.
-* with ForExternalResources method create HtmlViewOptions instance and type:
+* With `Viewer` class load your document.
+* with `ForExternalResources` method create `HtmlViewOptions` instance and type:
   * the output file name mask
   * external resources folder file path mask
   * url for resources mask format
 
-* Call View method to render your document to HTML.
+* Call `View` method to render your document to HTML.
 
 Resources will be placed to separate folder.
 
@@ -73,7 +73,8 @@ Resources will be placed to separate folder.
 using (Viewer viewer = new Viewer("sample.dwf"))
 {
     HtmlViewOptions viewOptions = 
-        HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+        HtmlViewOptions.ForExternalResources(
+            "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
 
     viewer.View(viewOptions);
 }
@@ -81,9 +82,9 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 
 ### Rendering to JPEG in C\#
 
-* With Viewer class load your document.
-* Сreate JpegViewOptions instance and type output file name.
-* Call View method to render your document to JPEG.
+* With `Viewer` class load your document.
+* Сreate `JpegViewOptions` instance and type output file name.
+* Call `View` method to render your document to JPEG.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
@@ -97,9 +98,9 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 
 ### Rendering to PNG in C\#
 
-* With Viewer class load your document.
-* Сreate PngViewOptions instance and type output file name.
-* Call View method to render your document to PNG.
+* With `Viewer` class load your document.
+* Сreate `PngViewOptions` instance and type output file name.
+* Call `View` method to render your document to PNG.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
@@ -113,9 +114,9 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 
 ### Rendering to PDF in C\#
 
-* With Viewer class load your document.
-* Сreate PngViewOptions instance and type output file name.
-* Call View method to render your document to PDF.
+* With `Viewer` class load your document.
+* Сreate `PngViewOptions` instance and type output file name.
+* Call `View` method to render your document to PDF.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
@@ -131,11 +132,11 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 
 CAD files often consist of many layouts and layers. You can obtain information on what layouts and layers are in a specific file with the following code:
 
-* With Viewer class load your document.
-* Сreate PngViewOptions instance and type output file name.
-* Call View method to render your document to PDF.
-* Call GetViewInfo to get layers/layouts information and get CadViewInfo object result.
-* Layouts and layers Lists are located in resulted CadViewInfo object.
+* With `Viewer` class load your document.
+* Сreate `PngViewOptions` instance and type output file name.
+* Call `View` method to render your document to PDF.
+* Call `GetViewInfo` to get layers/layouts information and get `CadViewInfo` object result.
+* Layouts and layers Lists are located in resulted `CadViewInfo` object.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
@@ -168,10 +169,10 @@ other additional information that should not be in the final drawing.
 
 To render your file with specific layers please do the following steps:
 
-* With Viewer class load your document.
-* Сreate HtmlViewOptions/JpgViewOptions/PngViewOptions/PdfViewOptions instance and type output file name.
-* Initialize viewOptions.CadOptions.Layers property with a list of required layers information.
-* Call View method to render your document with specified layers.
+* With `Viewer` class load your document.
+* Сreate `HtmlViewOptions/JpgViewOptions/PngViewOptions/PdfViewOptions` instance and type output file name.
+* Initialize `viewOptions.CadOptions.Layers` property with a list of required layers information.
+* Call `View` method to render your document with specified layers.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
@@ -198,10 +199,10 @@ If you want to choose a different layout you can set the layout name to render.
 
 To render your file with specific layouts please do the following steps:
 
-* With Viewer class load your document.
-* Сreate HtmlViewOptions/JpgViewOptions/PngViewOptions/PdfViewOptions instance and type output file name.
-* Set required layout name in viewOptions.CadOptions.LayoutName property.
-* Call View method to render your document with a specified layout.
+* With `Viewer` class load your document.
+* Сreate `HtmlViewOptions/JpgViewOptions/PngViewOptions/PdfViewOptions` instance and type output file name.
+* Set required layout name in `viewOptions.CadOptions.LayoutName` property.
+* Call `View` method to render your document with a specified layout.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))

@@ -3,8 +3,8 @@ id: how-to-get-cad-layers-and-layouts
 url: viewer/java/how-to-get-cad-layers-and-layouts
 title: Rendering CAD layers and layouts
 weight: 6
-description: "This article explains how to retrieve information about CAD drawings with GroupDocs.Viewer within your Java applications."
-keywords: 
+description: "This article explains how to retrieve information about CAD drawings with GroupDocs.Viewer within your Java applications when we are going to create a DWG Viewer."
+keywords: how to retrieve view information for CAD drawing, DWG Viewer
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---

@@ -4,7 +4,7 @@ url: viewer/java/html-viewer-minify-html
 title: Minify HTML
 weight: 2
 description: "Learn how to minify HTML markup and CSS when rendering of documents into HTML and make your HTML documents load faster with GroupDocs.Viewer."
-keywords: 
+keywords: minify HTML, HTML, CSS 
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True

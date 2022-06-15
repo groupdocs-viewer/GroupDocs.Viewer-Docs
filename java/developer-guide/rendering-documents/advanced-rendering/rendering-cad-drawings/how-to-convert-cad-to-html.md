@@ -8,11 +8,11 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-[CAD drawings](https://wiki.fileformat.com/cad/) are vector format images that contain points with X, Y and Z coordinates, and associated lines definitions. CAD drawings also may contain layers and layouts. 
+[CAD drawings](https://docs.fileformat.com/cad/) are vector format images that contain points with X, Y and Z coordinates, and associated lines definitions. CAD drawings also may contain layers and layouts. 
 
 ## Background
 
-If you convert your CAD drawings to HTML it's better to leave them in vector format rather rasterization to get better viewing and zooming. While converting your CAD drawings to HTML GroupDocs.Viewer converts a drawing to [SVG (Scalable Vector Graphics format)](https://wiki.fileformat.com/page-description-language/svg/) and embeds it to [HTML](https://wiki.fileformat.com/web/html/).
+If you convert your CAD drawings to HTML it's better to leave them in vector format rather rasterization to get better viewing and zooming. While converting your CAD drawings to HTML GroupDocs.Viewer converts a drawing to [SVG (Scalable Vector Graphics format)](https://docs.fileformat.com/page-description-language/svg/) and embeds it to [HTML](https://docs.fileformat.com/web/html/).
 
 ![](viewer/java/images/how-to-convert-cad-to-html.png)
 

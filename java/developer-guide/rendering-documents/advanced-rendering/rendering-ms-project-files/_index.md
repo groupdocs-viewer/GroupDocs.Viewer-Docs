@@ -18,9 +18,9 @@ Auto Detection means that GroupDocs.Viewer can determine the type of the Projec
 
 | File Extension | File Type | Auto Detection |
 | --- | --- | --- |
-| [.MPP](https://wiki.fileformat.com/project-management/mpp) | [Microsoft Project Document](https://wiki.fileformat.com/project-management/mpp) | Yes |
-| [.MPT](https://wiki.fileformat.com/project-management/mpt) | [Microsoft Project Template](https://wiki.fileformat.com/project-management/mpt) | Yes |
-| [.MPX](https://wiki.fileformat.com/project-management/mpx) | [Microsoft Project Exchange File](https://wiki.fileformat.com/project-management/mpx) | Yes |
+| [.MPP](https://docs.fileformat.com/project-management/mpp) | [Microsoft Project Document](https://docs.fileformat.com/project-management/mpp) | Yes |
+| [.MPT](https://docs.fileformat.com/project-management/mpt) | [Microsoft Project Template](https://docs.fileformat.com/project-management/mpt) | Yes |
+| [.MPX](https://docs.fileformat.com/project-management/mpx) | [Microsoft Project Exchange File](https://docs.fileformat.com/project-management/mpx) | Yes |
 
 *Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
 

@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Introduction
 
-[CHM](https://wiki.fileformat.com/web/chm/) is Microsoft Compiled Help format. These formats are designed for context help (usually activated by the F1 key) in applications. Format power allows to use of HTML content with images and CSS styling, also this format provides "table of contents" feature. To reduce the size of the final CHM file LZX is used.
+[CHM](https://docs.fileformat.com/web/chm/) is Microsoft Compiled Help format. These formats are designed for context help (usually activated by the F1 key) in applications. Format power allows to use of HTML content with images and CSS styling, also this format provides "table of contents" feature. To reduce the size of the final CHM file LZX is used.
 
 ![CHM compiled file example](viewer/java/images/how-to-convert-and-view-chm-files/chm-file-example.jpg)
 

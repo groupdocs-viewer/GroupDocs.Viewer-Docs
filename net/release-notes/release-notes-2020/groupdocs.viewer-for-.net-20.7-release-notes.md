@@ -94,13 +94,13 @@ Three new fields added to [GroupDocs.Viewer.FileType](<https://apireference.grou
 ```csharp
 /// <summary>
 /// Roshal ARchive (.rar) are compressed files generated using the RAR (WINRAR) compression method.
-/// Learn more about this file format <a href="https://wiki.fileformat.com/compression/rar">here</a>.
+/// Learn more about this file format <a href="https://docs.fileformat.com/compression/rar">here</a>.
 /// </summary>
 public static readonly FileType RAR = new FileType("Rar Compressed File", ".rar");
 
 /// <summary>
 /// Excel 2003 XML (SpreadsheetML) represents Excel Binary File Format. Such files can be created by Microsoft Excel as well as other similar spreadsheet programs such as OpenOffice Calc or Apple Numbers.
-/// Learn more about this file format <a href="https://wiki.fileformat.com/spreadsheet/xls">here</a>.
+/// Learn more about this file format <a href="https://docs.fileformat.com/spreadsheet/xls">here</a>.
 /// </summary>
 public static readonly FileType Excel2003XML = new FileType("Excel 2003 XML (SpreadsheetML)", ".xml");
 

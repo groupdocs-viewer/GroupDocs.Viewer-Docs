@@ -22,11 +22,11 @@ Auto Detection means that GroupDocs.Viewer for .NET can determine the type of th
 
 | File Extension | File Type | Auto Detection |
 | --- | --- | --- |
-| [.TXT](https://wiki.fileformat.com/word-processing/txt/) | [Plain Text File](https://wiki.fileformat.com/word-processing/txt/) | ![(tick)](viewer/net/images/check.png) |
-| [.XML](https://wiki.fileformat.com/web/xml/) | [XML File](https://wiki.fileformat.com/web/xml/) | ![(tick)](viewer/net/images/check.png) |
+| [.TXT](https://docs.fileformat.com/word-processing/txt/) | [Plain Text File](https://docs.fileformat.com/word-processing/txt/) | ![(tick)](viewer/net/images/check.png) |
+| [.XML](https://docs.fileformat.com/web/xml/) | [XML File](https://docs.fileformat.com/web/xml/) | ![(tick)](viewer/net/images/check.png) |
 | .LOG | Log File |   |
-| [.CS](https://wiki.fileformat.com/specification/programming/cs/) | C# source code |   |
-| [.VB](https://wiki.fileformat.com/specification/programming/vb/) | Visual Basic source code |   |
+| [.CS](https://docs.fileformat.com/specification/programming/cs/) | C# source code |   |
+| [.VB](https://docs.fileformat.com/specification/programming/vb/) | Visual Basic source code |   |
 | .AS | ActionScript File |   |
 | .AS3 | ActionScript File |   |
 | .ASM | Assembly Language Source Code File |   |

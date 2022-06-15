@@ -4,11 +4,11 @@ url: viewer/java/how-to-view-plt-files
 title: Rendering PLT files
 weight: 9
 description: "This article explains how to convert PLT files with GroupDocs.Viewer within your Java applications."
-keywords: 
+keywords: convert PLT files
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-[PLT](https://wiki.fileformat.com/cad/plt/) and HPG formats are based on the plotter language developed by Hewlett-Packard (HP-GL). These formats are designed for sending information to plotter printers, contain text/binary instructions on HPGL language to draw vector images on paper.
+[PLT](https://docs.fileformat.com/cad/plt/) and HPG formats are based on the plotter language developed by Hewlett-Packard (HP-GL). These formats are designed for sending information to plotter printers, contain text/binary instructions on HPGL language to draw vector images on paper.
 
 ## How to view PLT files
 

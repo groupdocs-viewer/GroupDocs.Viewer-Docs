@@ -23,11 +23,11 @@ Auto Detection means that GroupDocs.Viewer can determine the type of the archive
 
 | File Extension | File Type | Auto Detection |
 | --- | --- | --- |
-| [.ZIP](https://wiki.fileformat.com/compression/zip) | [Archive file format](https://wiki.fileformat.com/compression/zip) | Yes |
-| [.TAR](https://wiki.fileformat.com/compression/tar) | [Consolidated Unix File Archive](https://wiki.fileformat.com/compression/tar) | Yes |
-| [.BZ2](https://wiki.fileformat.com/compression/bz2) | [Bzip2 compressed file](https://wiki.fileformat.com/compression/bz2) | Yes |
-| [.GZ](https://wiki.fileformat.com/compression/gz) | [Gnu Zipped File](https://wiki.fileformat.com/compression/gz) | Yes |
-| [.RAR](https://wiki.fileformat.com/compression/rar) | [Roshal ARchive File](https://wiki.fileformat.com/compression/rar) | Yes |
+| [.ZIP](https://docs.fileformat.com/compression/zip) | [Archive file format](https://docs.fileformat.com/compression/zip) | Yes |
+| [.TAR](https://docs.fileformat.com/compression/tar) | [Consolidated Unix File Archive](https://docs.fileformat.com/compression/tar) | Yes |
+| [.BZ2](https://docs.fileformat.com/compression/bz2) | [Bzip2 compressed file](https://docs.fileformat.com/compression/bz2) | Yes |
+| [.GZ](https://docs.fileformat.com/compression/gz) | [Gnu Zipped File](https://docs.fileformat.com/compression/gz) | Yes |
+| [.RAR](https://docs.fileformat.com/compression/rar) | [Roshal ARchive File](https://docs.fileformat.com/compression/rar) | Yes |
 
 *Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
 

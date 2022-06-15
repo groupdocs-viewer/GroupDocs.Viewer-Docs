@@ -20,7 +20,7 @@ The following topics are covered below in brief:
 
 ## .NET API for rendering Word files
 
-[GroupDocs.Viewer for .NET](#https://products.groupdocs.com/viewer/net) provides API to render Word document formats to PNG, PDF, JPEG, and HTML. Supported formats are DOC, DOCX, DOCM, DOT, DOTM, DOTX,
+[GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) provides API to render Word document formats to PNG, PDF, JPEG, and HTML. Supported formats are DOC, DOCX, DOCM, DOT, DOTM, DOTX,
 RTF, TXT documents, and [many others](https://docs.groupdocs.com/viewer/net/supported-document-formats/).
 
 Use the [downloads section](https://downloads.groupdocs.com/viewer/net) to download API DLLs or MSI installer or NuGet:
@@ -39,9 +39,9 @@ Here is a sample document to demonstrate rendering results:
 
 To render your file to HTML file(s) with embedded resources do the following steps:
 
-* With Viewer class load your document.
-* With the ForEmbeddedResources method create the HtmlViewOptions instance and type output file name.
-* Call View method to render your document to HTML, resources will be embedded in to file.
+* With `Viewer` class load your document.
+* With the `ForEmbeddedResources` method create the `HtmlViewOptions` instance and type output file name.
+* Call `View` method to render your document to HTML, resources will be embedded in to file.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.doc"))
@@ -57,13 +57,13 @@ using (Viewer viewer = new Viewer("sample.doc"))
 
 To render your file to HTML file(s) with external resources do the following steps:
 
-* With Viewer class load your document.
-* with ForExternalResources method create HtmlViewOptions instance and type:
+* With `Viewer` class load your document.
+* with `ForExternalResources` method create HtmlViewOptions instance and type:
   * the output file name mask
   * external resources folder file path mask
   * URL for resources mask format
 
-* Call View method to render your document to HTML.
+* Call `View` method to render your document to HTML.
 
 Resources will be placed in a separate folder.
 
@@ -73,7 +73,8 @@ Resources will be placed in a separate folder.
 using (Viewer viewer = new Viewer("sample.doc"))
 {
     HtmlViewOptions viewOptions = 
-        HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+        HtmlViewOptions.ForExternalResources(
+            "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
 
     viewer.View(viewOptions);
 }
@@ -83,9 +84,9 @@ using (Viewer viewer = new Viewer("sample.doc"))
 
 To render your file to JPEG file do the following steps:
 
-* With Viewer class load your document.
-* Сreate JpegViewOptions instance and type output file name.
-* Call View method to render your document to JPEG.
+* With `Viewer` class load your document.
+* Сreate `JpegViewOptions` instance and type output file name.
+* Call `View` method to render your document to JPEG.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.doc"))
@@ -101,9 +102,9 @@ using (Viewer viewer = new Viewer("sample.doc"))
 
 To render your file to PNG file do the following steps:
 
-* With Viewer class load your document.
-* Сreate PngViewOptions instance and type output file name.
-* Call View method to render your document to PNG.
+* With `Viewer` class load your document.
+* Сreate `PngViewOptions` instance and type output file name.
+* Call `View` method to render your document to PNG.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.doc"))
@@ -120,9 +121,9 @@ using (Viewer viewer = new Viewer("sample.doc"))
 You can render your Word documents such as DOCX, RTF or DOC to pdf.
 To render your file to a PDF file do the following steps:
 
-* With Viewer class load your document.
-* Сreate PngViewOptions instance and type output file name.
-* Call View method to render your document to PDF.
+* With `Viewer` class load your document.
+* Сreate `PngViewOptions` instance and type output file name.
+* Call `View` method to render your document to PDF.
 
 ```cs
 using (Viewer viewer = new Viewer("sample.doc"))

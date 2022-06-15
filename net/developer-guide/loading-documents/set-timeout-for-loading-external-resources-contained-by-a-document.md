@@ -16,7 +16,7 @@ In v19.12 we've set default timeout to 30 seconds and enabled users to specify t
 
 This feature is supported for:
 
-* [Word Processing File Formats](https://wiki.fileformat.com/word-processing/)
+* [Word Processing File Formats](https://docs.fileformat.com/word-processing/)
 
 The following code snippet shows how to set a timeout for loading external resources:
 

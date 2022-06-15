@@ -4,7 +4,7 @@ url: viewer/java/view-pdf-documents
 title: Rendering PDF Documents
 weight: 12
 description: "This article contains use-cases of viewing Page Layout documents with GroupDocs.Viewer within your Java applications."
-keywords: 
+keywords: rendering Page Layout, Online PDF Viewer
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
@@ -22,9 +22,9 @@ Auto Detection means that GroupDocs.Viewer for Java can determine the type of th
 
 | File Type | File Extension | Auto Detection |
 | --- | --- | --- |
-| [.PDF](https://wiki.fileformat.com/view/pdf) | [Adobe Portable Document Format (PDF)](https://wiki.fileformat.com/view/pdf) | Yes |
-| [.TEX](https://wiki.fileformat.com/page-description-language/tex/) | [LaTeX Source Document](https://wiki.fileformat.com/page-description-language/tex/) | Yes |
-| [.XPS](https://wiki.fileformat.com/page-description-language/xps) | [Microsoft XML Paper Specification (XPS)](https://wiki.fileformat.com/page-description-language/xps) | Yes |
+| [.PDF](https://docs.fileformat.com/view/pdf) | [Adobe Portable Document Format (PDF)](https://docs.fileformat.com/view/pdf) | Yes |
+| [.TEX](https://docs.fileformat.com/page-description-language/tex/) | [LaTeX Source Document](https://docs.fileformat.com/page-description-language/tex/) | Yes |
+| [.XPS](https://docs.fileformat.com/page-description-language/xps) | [Microsoft XML Paper Specification (XPS)](https://docs.fileformat.com/page-description-language/xps) | Yes |
 | .OXPS | OpenXPS File | Yes |
 
 *Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_

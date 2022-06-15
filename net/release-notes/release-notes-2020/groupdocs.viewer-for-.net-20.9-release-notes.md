@@ -47,7 +47,7 @@ Field was added to [GroupDocs.Viewer.FileType](<https://apireference.groupdocs.c
 ```csharp
 /// <summary>
 /// Photoshop Large Document Format (.psb) represents Photoshop Large Document Format used for graphics designing and development.
-/// Learn more about this file format <a href="https://wiki.fileformat.com/image/psb">here</a>.
+/// Learn more about this file format <a href="https://docs.fileformat.com/image/psb">here</a>.
 /// </summary>
 public static readonly FileType PSB = new FileType("Photoshop Large Document Format", ".psb");
 ```

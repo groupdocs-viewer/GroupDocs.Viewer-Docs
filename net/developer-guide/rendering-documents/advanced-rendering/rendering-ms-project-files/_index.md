@@ -22,9 +22,9 @@ Auto Detection means that GroupDocs.Viewer for .NET can determine the type of th
 
 | File Extension | File Type | Auto Detection |
 | --- | --- | --- |
-| [.MPP](https://wiki.fileformat.com/project-management/mpp) | [Microsoft Project Document](https://wiki.fileformat.com/project-management/mpp) | Yes |
-| [.MPT](https://wiki.fileformat.com/project-management/mpt) | [Microsoft Project Template](https://wiki.fileformat.com/project-management/mpt) | Yes |
-| [.MPX](https://wiki.fileformat.com/project-management/mpx) | [Microsoft Project Exchange File](https://wiki.fileformat.com/project-management/mpx) | Yes |
+| [.MPP](https://docs.fileformat.com/project-management/mpp) | [Microsoft Project Document](https://docs.fileformat.com/project-management/mpp) | Yes |
+| [.MPT](https://docs.fileformat.com/project-management/mpt) | [Microsoft Project Template](https://docs.fileformat.com/project-management/mpt) | Yes |
+| [.MPX](https://docs.fileformat.com/project-management/mpx) | [Microsoft Project Exchange File](https://docs.fileformat.com/project-management/mpx) | Yes |
 
 ## In this section
 

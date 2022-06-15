@@ -18,8 +18,8 @@ There are features, improvements, and bug-fixes in this release, most notable ar
 * Display folder name in the header when viewing archives
 * Added support of Microsoft Excel 97-2003 Template (.xlt) file format
 * Added new option that enables users to set filename when viewing archive files 
-* [Plotter Document (.plt, .hpg)](https://wiki.fileformat.com/cad/plt/) viewing support added, see [How to view PLT files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-view-plt-files.md" >}}) for more details;
-* Viewing specific [Design Web Format File (.dwf)](https://wiki.fileformat.com/cad/dwf) layers is now supported, see [How to view DWF file layers]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-view-dwf-file-layers.md" >}}) for more details;
+* [Plotter Document (.plt, .hpg)](https://docs.fileformat.com/cad/plt/) viewing support added, see [How to view PLT files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-view-plt-files.md" >}}) for more details;
+* Viewing specific [Design Web Format File (.dwf)](https://docs.fileformat.com/cad/dwf) layers is now supported, see [How to view DWF file layers]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-view-dwf-file-layers.md" >}}) for more details;
 * Added option to set background color when viewing CAD drawings, see [How to set background color when converting CAD Drawings]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-set-background-color-when-converting-cad-drawings.md" >}}) for more details;
 * Added option to show spreadsheet column headings and row numbers, see [How to show spreadsheet column and row headings]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/how-to-show-spreadsheet-column-and-row-headings.md" >}}) for more details.
     NOTE: This feature is supported when rendering worksheets into a single page when `SpreadsheetOptions` is set to `SpreadsheetOptions.forOnePagePerSheet()`.
@@ -475,7 +475,7 @@ New methods were added to [WordProcessingOptions](<https://apireference.groupdoc
 
 * In this version we've improved viewing of archives and text files - now it could be rendered to multiple and single pages (by default they are rendered to multiple pages). See [How to convert archive files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/_index.md" >}}) and [How to convert and view TXT files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/how-to-convert-and-view-txt-files.md" >}}) for more details.
 
-* In this version we've improved viewing of Personal Storage [OST](https://wiki.fileformat.com/email/ost/)/[PST](https://wiki.fileformat.com/email/pst/) files and as a result, the behavior changed.  
+* In this version we've improved viewing of Personal Storage [OST](https://docs.fileformat.com/email/ost/)/[PST](https://docs.fileformat.com/email/pst/) files and as a result, the behavior changed.  
     Now when viewing personal storage OST /PST files the **Inbox** folder is selected and displayed by default as it shown on the screenshot below.
 
 ![](viewer/java/images/groupdocs-viewer-for-net-20-4-release-notes.png)

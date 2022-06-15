@@ -112,13 +112,13 @@ public static readonly FileType AI = new FileType("Adobe Illustrator", ".ai");
 
 /// <summary>
 /// Truevision TGA (Truevision Advanced Raster Adapter - TARGA) is used to store bitmap digital images developed by TRUEVISION.
-/// Learn more about this file format <a href="https://wiki.fileformat.com/image/tga">here</a>. 
+/// Learn more about this file format <a href="https://docs.fileformat.com/image/tga">here</a>. 
 /// </summary>
 public static readonly FileType TGA = new FileType("Truevision TGA (TARGA)", ".tga");
 
 /// <summary>
 /// Animated Portable Network Graphic (.apng) is extension of  PNG format that supports animation.
-/// Learn more about this file format <a href="https://wiki.fileformat.com/image/apng">here</a>. 
+/// Learn more about this file format <a href="https://docs.fileformat.com/image/apng">here</a>. 
 /// </summary>
 public static readonly FileType APNG = new FileType("Animated Portable Network Graphic", ".apng");
 ```

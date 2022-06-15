@@ -68,13 +68,13 @@ Fields were added to [GroupDocs.Viewer.FileType](<https://apireference.groupdocs
 ```csharp
 /// <summary>
 /// Corel Exchange (.cmx) is a drawing image file that may contain vector graphics as well as bitmap graphics.
-/// Learn more about this file format <a href="https://wiki.fileformat.com/image/cmx">here</a>.
+/// Learn more about this file format <a href="https://docs.fileformat.com/image/cmx">here</a>.
 /// </summary>
 public static readonly FileType CMX = new FileType("Corel Metafile exchange", ".cmx");
 
 /// <summary>
 /// Enhanced Windows Metafile compressed (.emz) represents graphical images device-independently compressed by GZIP. Metafiles of EMF comprises of variable-length records in chronological order that can render the stored image after parsing on any output device.
-/// Learn more about this file format <a href="https://wiki.fileformat.com/image/emz">here</a>.
+/// Learn more about this file format <a href="https://docs.fileformat.com/image/emz">here</a>.
 /// </summary>
 
 public static readonly FileType EMZ = new FileType("Windows Compressed Enhanced Metafile", ".emz");

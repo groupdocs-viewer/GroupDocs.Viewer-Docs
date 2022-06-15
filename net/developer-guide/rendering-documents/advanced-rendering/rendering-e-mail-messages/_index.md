@@ -22,9 +22,9 @@ Auto Detection means that GroupDocs.Viewer for .NET can determine the type of th
 
 | File Type | File Extension | Auto Detection |
 | --- | --- | --- |
-| [.EML](https://wiki.fileformat.com/email/eml) | [E-mail Message](https://wiki.fileformat.com/email/eml) | Yes |
-| [.EMLX](https://wiki.fileformat.com/email/emlx) | [Apple Mail E-mail File](https://wiki.fileformat.com/email/emlx) | Yes |
-| [.MSG](https://wiki.fileformat.com/email/msg) | [Microsoft Outlook E-mail Message](https://wiki.fileformat.com/email/msg) | Yes |
+| [.EML](https://docs.fileformat.com/email/eml) | [E-mail Message](https://docs.fileformat.com/email/eml) | Yes |
+| [.EMLX](https://docs.fileformat.com/email/emlx) | [Apple Mail E-mail File](https://docs.fileformat.com/email/emlx) | Yes |
+| [.MSG](https://docs.fileformat.com/email/msg) | [Microsoft Outlook E-mail Message](https://docs.fileformat.com/email/msg) | Yes |
 
 ## In this section
 
