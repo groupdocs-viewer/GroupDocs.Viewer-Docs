@@ -178,7 +178,7 @@ To render your file with specific layers please do the following steps:
 using (Viewer viewer = new Viewer("sample.dwf"))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
-    viewOptions.CadOptions.Layers = new List<Layer>
+     viewOptions.CadOptions.Layers = new List<Layer>
     {
          new Layer("CIRCLE"),
     };
@@ -233,3 +233,4 @@ You can learn how to use GroupDocs.Viewer in your applications with [documentati
 
 * [How to view Word documents using C#](viewer/net/how-to-view-word-documents-using-csharp/)
 * [How to view PDF documents using C#](viewer/net/how-to-view-pdf-documents-using-csharp/)
+* [How to view Excel spreadsheets using C#](viewer/net/how-to-view-excel-spreadsheets-using-csharp/)
