@@ -10,4 +10,4 @@ toc: False
 ---
 
 This section will describe typical problems with comparing files and ways to solve them using GroupDocs.Viewer API.
-Learn more about advanced GroupDocs.Comparison features and use case from the guides below.
+Learn more about advanced GroupDocs.Viewer features and use case from the guides below.
