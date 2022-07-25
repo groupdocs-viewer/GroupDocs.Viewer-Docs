@@ -1,151 +1,166 @@
 ---
-id: how-to-view-word-documents-using-csharp
+id: how-to-view-word-documents
 url: viewer/net/how-to-view-word-documents-using-csharp
-title: How to view Word documents using C#
+title: Render Word documents as HTML, PDF, or image files
+linkTitle: Render Word documents
 weight: 2
-description: "This guide describes how to build your Word files viewer in C#. View Word files to render as HTML, JPG, PNG, or PDF using GroupDocs.Viewer .NET API by GroupDocs."
-keywords: convert word to pdf, convert word to jpeg, convert doc to pdf, convert docx to pdf, convert word to jpg, convert word into jpeg
+description: "This topic describes how to use the GroupDocs.Viewer .NET API to convert Word documents to HTML, PDF, PNG, and JPEG formats."
+keywords: convert word to pdf, convert word to jpeg, convert doc to pdf, convert docx to pdf, convert word to jpg, convert word to jpeg
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
 ---
+[GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) allows you to render your Microsoft Word documents in HTML, PDF, PNG, and JPEG formats. You do not need to use Microsoft Word or other word processors to load and view Word documents within your .NET application (web or desktop). 
 
-Word document formats are documents formats of Microsoft Word. It might contain text, images, excel diagrams, and also OLE (Object Linking and Embedding) objects.
-In this article, we will discuss how to convert Word to pdf and other formats using C# in .NET applications.
+To start using the GroupDocs.Viewer API, create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
 
-The following topics are covered below in brief:
+## Supported Microsoft Word formats
 
-* [.NET API for rendering Word files](viewer/net/how-to-view-word-documents-using-csharp/#net-api-for-rendering-word-files)
-* [How to render Word files into HTML, JPG, PNG, or PDF](viewer/net/how-to-view-word-documents-using-csharp/#how-to-render-word-files-into-html-jpg-png-or-pdf)
+With GroupDocs.Viewer, you can load and view  documents in the following file formats:
 
-## .NET API for rendering Word files
+* [Microsoft Word Document](https://docs.fileformat.com/word-processing/docx) (.DOCX)
+* [Microsoft Word 97-2003 Document](https://docs.fileformat.com/word-processing/doc) (.DOC)
+* [Microsoft Word Macro-Enabled Document](https://docs.fileformat.com/word-processing/docm) (.DOCM)
+* [Microsoft Word 97-2003 Template](https://docs.fileformat.com/word-processing/dot) (.DOT)
+* [Microsoft Word Macro-Enabled Template](https://docs.fileformat.com/word-processing/dotm) (.DOTM)
+* [Microsoft Word Template](https://docs.fileformat.com/word-processing/dotx) (.DOTX)
+* [OpenDocument Text](https://docs.fileformat.com/word-processing/odt) (.ODT)
+* [OpenDocument Text Template](https://docs.fileformat.com/word-processing/ott) (.OTT)
+* [Rich Text Document](https://docs.fileformat.com/word-processing/rtf) (.RTF)
+* [Plain Text Document](https://docs.fileformat.com/word-processing/txt) (.TXT)
 
-[GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) provides API to render Word document formats to PNG, PDF, JPEG, and HTML. Supported formats are DOC, DOCX, DOCM, DOT, DOTM, DOTX,
-RTF, TXT documents, and [many others](https://docs.groupdocs.com/viewer/net/supported-document-formats/).
+GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 
-Use the [downloads section](https://downloads.groupdocs.com/viewer/net) to download API DLLs or MSI installer or NuGet:
+## Render Word documents as HTML
 
-```nuget
-PM> Install-Package GroupDocs.Viewer
-```
+Create an [HtmlViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Word file to HTML. The **HtmlViewOptions** class properties allow you to control the conversion process. For instance, you can specify whether to embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
 
-Here is a sample document to demonstrate rendering results:
+### Create an HTML file with embedded resources
 
-![Source Word preview](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/source_docx_preview.jpg)
-
-## How to render Word files into HTML, JPG, PNG, or PDF
-
-### Rendering to HTML with Embedded Resources in C\#
-
-To render your file to HTML file(s) with embedded resources do the following steps:
-
-* With `Viewer` class load your document.
-* With the `ForEmbeddedResources` method create the `HtmlViewOptions` instance and type output file name.
-* Call `View` method to render your document to HTML, resources will be embedded in to file.
+To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
 ```cs
-using (Viewer viewer = new Viewer("sample.doc"))
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.docx"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
     viewer.View(viewOptions);
 }
 ```
 
-![Rendering Word to HTML](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/rendering_to_html_with_embed.jpg)
+The following image demonstrates the result:
 
-### Rendering to HTML with External Resources in C\#
+![Render a Word file to HTML](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/render-to-html-embedded-resources.png)
 
-To render your file to HTML file(s) with external resources do the following steps:
+### Create an HTML file with external resources
 
-* With `Viewer` class load your document.
-* with `ForExternalResources` method create HtmlViewOptions instance and type:
-  * the output file name mask
-  * external resources folder file path mask
-  * URL for resources mask format
+If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.ForExternalResources](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forexternalresources/index) method and pass the following parameters:
 
-* Call `View` method to render your document to HTML.
-
-Resources will be placed in a separate folder.
-
-![Resources placed into separate folder](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/resources_placed_to_separate_folder.jpg)
+  * The output file path format
+  * The path format for the folder with external resources
+  * The resource URL format
 
 ```cs
-using (Viewer viewer = new Viewer("sample.doc"))
-{
-    HtmlViewOptions viewOptions = 
-        HtmlViewOptions.ForExternalResources(
-            "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
 
+using (var viewer = new Viewer("resume.docx"))
+{
+    var viewOptions = HtmlViewOptions.ForExternalResources(
+        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
 
-### Rendering Word to JPEG in C\#
+The image below demonstrates the result. External resources are placed in a separate folder.
 
-To render your file to JPEG file do the following steps:
+![Place HTML resources in a separate folder](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/render-to-html-external-resources.png)
 
-* With `Viewer` class load your document.
-* Сreate `JpegViewOptions` instance and type output file name.
-* Call `View` method to render your document to JPEG.
+## Render Word documents as PDF
+
+Create a [PdfViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Word file to PDF. The **PdfViewOptions** class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
 ```cs
-using (Viewer viewer = new Viewer("sample.doc"))
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.docx"))
 {
-    JpgViewOptions viewOptions = new JpgViewOptions("output_{0}.jpg");
+    var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
 ```
 
-![Rendering Word to JPEG](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/rendering_word_to_jpeg.jpg)
+The following image demonstrates the result:
 
-### Rendering to PNG in C\#
+![Render a Word file to PDF](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/render-to-pdf.png)
 
-To render your file to PNG file do the following steps:
+## Render Word documents as PNG
 
-* With `Viewer` class load your document.
-* Сreate `PngViewOptions` instance and type output file name.
-* Call `View` method to render your document to PNG.
+Create a [PngViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Word file to PNG. Use the [PngViewOptions.Height](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
 ```cs
-using (Viewer viewer = new Viewer("sample.doc"))
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.docx"))
 {
-    PngViewOptions viewOptions = new PngViewOptions("output_{0}.png");
+    var viewOptions = new PngViewOptions("output_{0}.png");
+    viewOptions.Width = 800;
+    viewOptions.Height = 900;
+    viewer.View(viewOptions);
+}
+```
+The following image demonstrates the result:
+
+![Render a Word file to PNG](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/render-to-png-image.png)
+
+## Render Word documents as JPEG
+
+Create a [JpgViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Word file to JPEG. Use the [JpgViewOptions.Height](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
+
+```cs
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.docx"))
+{
+    var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    viewOptions.Width = 800;
+    viewOptions.Height = 900;
     viewer.View(viewOptions);
 }
 ```
 
-![Rendering Word to PNG](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/rendering_word_to_png.jpg)
+## Render tracked changes in Word documents
 
-### Rendering Word to PDF in C\#
+GroupDocs.Viewer does not render tracked changes (revisions made to a Word document) by default. If you want to display tracked changes in the output file, enable the [WordProcessingOptions.RenderTrackedChanges](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/wordprocessingoptions/properties/rendertrackedchanges) property for one of the following classes (depending on the output file format):
 
-You can render your Word documents such as DOCX, RTF or DOC to pdf.
-To render your file to a PDF file do the following steps:
+* [HtmlViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) 
+* [PdfViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions)
+* [PngViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions)
+* [JpgViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions)
 
-* With `Viewer` class load your document.
-* Сreate `PngViewOptions` instance and type output file name.
-* Call `View` method to render your document to PDF.
+The code example below demonstrates how to render a Word document that contains tracked changes.
 
-```cs
-using (Viewer viewer = new Viewer("sample.doc"))
+![Render tracked changes to PDF](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/render-track-changes-to-pdf.png)
+
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("TrackChanges.docx"))
 {
-    PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("output.pdf");
+    viewOptions.WordProcessingOptions.RenderTrackedChanges = true;
     viewer.View(viewOptions);
 }
 ```
-
-## Get a Free API License
-
-In order to use the API without evaluation limitations, you can get a free [temporary license](https://purchase.groupdocs.com/temporary-license).
-
-## Conclusion
-
-In conclusion, I hope you now know how to view Word files in C# with .NET applications, in this article you have seen how to convert Word to PDF, how to convert Word to jpg, and other formats in your application.
-Also, you can use [Online Applications to view your files](https://products.groupdocs.app/viewer/family) these applications are built with GroupDocs.Viewer.
-
-You can learn how to use GroupDocs.Viewer in your applications with [documentation](https://docs.groupdocs.com/viewer/net/) and if you have any questions or issues you feel free to send these via our [forum](https://forum.groupdocs.com/).
-
-## See also
-
-* [How to view CAD documents using C#](viewer/net/how-to-view-cad-documents-using-csharp/)
-* [How to view PDF documents using C#](viewer/net/how-to-view-pdf-documents-using-csharp/)
-* [How to view Excel spreadsheets using C#](viewer/net/how-to-view-excel-spreadsheets-using-csharp/)
