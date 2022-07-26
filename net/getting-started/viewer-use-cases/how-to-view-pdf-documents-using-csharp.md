@@ -1,8 +1,9 @@
 ---
 id: how-to-view-pdf-documents-using-csharp
 url: viewer/net/how-to-view-pdf-documents-using-csharp
-title: How to view PDF documents using C#
-weight: 1
+title: Render PDF documents as HTML and image files
+linkTitle: Render PDF documents
+weight: 2
 description: "This guide describes how to build your PDF files viewer in C#. View PDF files to render as HTML, JPG, PNG, or PDF using GroupDocs.Viewer .NET API by GroupDocs."
 keywords: pdf view, pdf to html, pdf to jpeg, pdf to jpg, pdf to png 
 productName: GroupDocs.Viewer for .NET

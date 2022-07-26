@@ -1,8 +1,9 @@
 ---
 id: how-to-view-excel-spreadsheets-using-csharp
 url: viewer/net/how-to-view-excel-spreadsheets-using-csharp
-title: How to view Excel SpreadSheets documents using C#
-weight: 2
+title: Render Excel spreadsheets as HTML, PDF, and image files
+linkTitle: Render Excel spreadsheets
+weight: 3
 description: "This guide describes how to build your Excel spreadsheets files viewer in C#. View Excel spreadsheets to render as HTML, JPG, PNG, or PDF using GroupDocs.Viewer .--NET API by GroupDocs."
 keywords: excel to pdf, excel to jpg, xlsx to pdf, xls to pdf, excel to pdf online, convert xls to pdf, convert xlsx to pdf
 productName: GroupDocs.Viewer for .NET

@@ -1,9 +1,9 @@
 ---
 id: how-to-view-word-documents
 url: viewer/net/how-to-view-word-documents-using-csharp
-title: Render Word documents as HTML, PDF, or image files
+title: Render Word documents as HTML, PDF, and image files
 linkTitle: Render Word documents
-weight: 2
+weight: 1
 description: "This topic describes how to use the GroupDocs.Viewer .NET API to convert Word documents to HTML, PDF, PNG, and JPEG formats."
 keywords: convert word to pdf, convert word to jpeg, convert doc to pdf, convert docx to pdf, convert word to jpg, convert word to jpeg
 productName: GroupDocs.Viewer for .NET
@@ -33,7 +33,7 @@ GroupDocs.Viewer can detect the document format automatically based on informati
 
 ## Render Word documents as HTML
 
-Create an [HtmlViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Word file to HTML. The **HtmlViewOptions** class properties allow you to control the conversion process. For instance, you can specify whether to embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
+Create an [HtmlViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Word file to HTML. The **HtmlViewOptions** class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
 
 ### Create an HTML file with embedded resources
 
@@ -148,9 +148,7 @@ GroupDocs.Viewer does not render tracked changes (revisions made to a Word docum
 * [PngViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions)
 * [JpgViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions)
 
-The code example below demonstrates how to render a Word document that contains tracked changes.
-
-![Render tracked changes to PDF](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/render-track-changes-to-pdf.png)
+The following code example demonstrates how to render a Word document with tracked changes:
 
 ```csharp
 using GroupDocs.Viewer;
@@ -164,3 +162,7 @@ using (var viewer = new Viewer("TrackChanges.docx"))
     viewer.View(viewOptions);
 }
 ```
+
+The following image illustrates the result:
+
+![Render tracked changes to PDF](viewer/net/images/viewer-use-cases/how-to-view-word-using-csharp/render-track-changes-to-pdf.png)
