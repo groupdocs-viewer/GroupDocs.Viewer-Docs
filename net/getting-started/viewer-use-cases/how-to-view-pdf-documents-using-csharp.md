@@ -4,195 +4,309 @@ url: viewer/net/how-to-view-pdf-documents-using-csharp
 title: Render PDF documents as HTML and image files
 linkTitle: Render PDF documents
 weight: 2
-description: "This guide describes how to build your PDF files viewer in C#. View PDF files to render as HTML, JPG, PNG, or PDF using GroupDocs.Viewer .NET API by GroupDocs."
-keywords: pdf view, pdf to html, pdf to jpeg, pdf to jpg, pdf to png 
+description: "This topic describes how to use the GroupDocs.Viewer .NET API (C#) to convert PDF files to HTML, PNG, and JPEG formats."
+keywords: view pdf, pdf viewer, pdf to html, pdf to jpeg, pdf to jpg, pdf to png, pdf to image, convert pdf
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
 ---
+[GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) allows you to render your PDF files in HTML, PNG, and JPEG formats. Use this library to implement a simple PDF viewer within your .NET application (web or desktop).
 
-PDF (Portable-Document-Format) document format is designed to create a common document standard that can be viewed on multiple platforms.
-This format is used for saving documents and publications. PDF documents can be signed with the digital signature, embed fonts, vector and raster images, forms, and multimedia extensions.
-Also, this format contains special technical formats for polygraphy such as PDF/X-1a and PDF/X-3.
-In this article, we will discuss how to view PDF files using C# in .NET applications.
+Create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance to get started with the GroupDocs.Viewer API. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the document to HTML or image format. These methods allow you to render the entire document or specific pages.
 
-The following topics are covered below in brief:
+## Supported Page Layout formats
 
-* [.NET API for rendering PDF files](viewer/net/how-to-view-pdf-documents-using-csharp/#net-api-for-rendering-pdf-files)
-* [How to render PDF files into HTML, JPG, PNG, or PDF](viewer/net/how-to-view-pdf-documents-using-csharp/#how-to-render-pdf-files-into-html-jpg-png-or-pdf)
-* [Getting information about PDF file](viewer/net/how-to-view-pdf-documents-using-csharp/#getting-information-about-pdf-file)
-* [How to extract text from PDF](viewer/net/how-to-view-pdf-documents-using-csharp/#how-to-extract-text-from-pdf)
+With GroupDocs.Viewer, you can load and view documents in the following file formats:
 
-## .NET API for rendering PDF files
+* [Portable Document Format](https://docs.fileformat.com/pdf/) (.PDF)
+* [Microsoft XML Paper Specification](https://docs.fileformat.com/page-description-language/xps/) (.XPS)
+* [Open XML Paper Specification](https://docs.fileformat.com/page-description-language/oxps/) (.OXPS)
+* [LaTeX Source Document](https://docs.fileformat.com/page-description-language/tex/) (.TEX)
 
-[GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) provides API to render PDF documents formats to PNG, PDF, JPEG, and HTML. Also, API includes special options for additional result image processing and [many other supported formats](https://docs.groupdocs.com/viewer/net/supported-document-formats/).
+GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 
-Use the [downloads section](https://downloads.groupdocs.com/viewer/net) to download API DLLs or MSI installer or NuGet:
+## Render PDF files as HTML
 
-```nuget
-PM> Install-Package GroupDocs.Viewer
-```
+Create an [HtmlViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a PDF file to HTML. The **HtmlViewOptions** class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}).
 
-![Source PDF document preview](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/source_image_preview.jpg)
+### Create an HTML file with embedded resources
 
-## How to render PDF files into HTML, JPG, PNG, or PDF
-
-### Rendering PDF to HTML with Embedded Resources in C\#
-
-To render your file to HTML file(s) with embedded resources do the following steps:
-
-* With `Viewer` class load your document.
-* With the `ForEmbeddedResources` method create the `HtmlViewOptions` instance and type output file name.
-* Call `View` method to render your document to HTML, resources will be embedded in to file.
+To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
 ```cs
-using (Viewer viewer = new Viewer("sample.pdf"))
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.pdf"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    // Create an HTML file for each PDF page.
+    // {0} is replaced with the current page number in the file name.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
     viewer.View(viewOptions);
 }
 ```
 
-![Rendering PDF document to HTML](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/rendering_to_html_with_embed.jpg)
+The following image demonstrates the result:
 
-### Rendering PDF to HTML with External Resources in C\#
+![Render a PDF file to HTML](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/render-pdf-to-html.png)
 
-To render your file to HTML file(s) with external resources do the following steps:
+### Create an HTML file with external resources
 
-* With `Viewer` class load your document.
-* with `ForExternalResources` method create `HtmlViewOptions` instance and type:
-  * the output file name mask
-  * external resources folder file path mask
-  * URL for resources mask format
+If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.ForExternalResources](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forexternalresources/index) method and pass the following parameters:
 
-* Call `View` method to render your document to HTML.
-
-Resources will be placed in a separate folder.
-
-![Resources placed into separate folder](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/resources_placed_to_separate_folder.jpg)
+  * The output file path format
+  * The path format for the folder with external resources
+  * The resource URL format
 
 ```cs
-using (Viewer viewer = new Viewer("sample.pdf"))
-{
-    HtmlViewOptions viewOptions = 
-        HtmlViewOptions.ForExternalResources(
-            "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
 
+using (var viewer = new Viewer("resume.pdf"))
+{
+    // Create an HTML file for each PDF page.
+    // Specify the HTML file names and location of external resources.
+    // {0} and {1} are replaced with the current page number and resource name, respectively.
+    var viewOptions = HtmlViewOptions.ForExternalResources(
+        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
 
-### Rendering PDF to JPEG in C\#
+The image below demonstrates the result. External resources are placed in a separate folder.
 
-To render your file to a JPEG file do the following steps:
+![Place HTML resources in a separate folder](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/render-to-html-external-resources.png)
 
-* With `Viewer` class load your document.
-* Сreate `JpegViewOptions` instance and type output file name.
-* Call `View` method to render your document to JPEG.
+### Adjust image quality in the output HTML file
 
-```cs
-using (Viewer viewer = new Viewer("sample.pdf"))
+The [HtmlViewOptions.PdfOptions.ImageQuality](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/imagequality) option allows you to specify the quality of images in the output HTML file. You can set this property to one of the following values:
+
+* [ImageQuality.Low](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/imagequality) --- The image resolution is low (96 DPI), and the image size is small. Use this value to increase the conversion performance.
+* [ImageQuality.Medium](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/imagequality) --- The image resolution is medium (192 DPI), and the image size is larger compared to the low quality images.
+* [ImageQuality.High](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/imagequality) --- The image resolution is high (300 DPI), and the image size is big. Use of this value may decrease the conversion performance.
+
+The following code snippet uses the medium image quality when rendering a PDF document to HTML.
+
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.pdf"))
 {
-    JpgViewOptions viewOptions = new JpgViewOptions("output_{0}.jpg");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    viewOptions.PdfOptions.ImageQuality = ImageQuality.Medium;
     viewer.View(viewOptions);
 }
 ```
 
-![Rendering PDF into JPEG](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/rendering_pdf_to_jpeg.jpg)
+### Render text as an image
 
-### Rendering PDF to PNG in C\#
+GroupDocs.Viewer supports the [HtmlViewOptions.PdfOptions.RenderTextAsImage](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptions/properties/rendertextasimage) option that allows you to render text as an image when you convert a PDF file to HTML. In this case, the layout of the output HTML file closely mirrors the layout of the source PDF document.
 
-To render your file to a PNG file do the following steps:
+The following example demonstrates how to enable this option in code:
 
-* With `Viewer` class load your document.
-* Сreate `PngViewOptions` instance and type output file name.
-* Call `View` method to render your document to PNG.
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
 
-```cs
-using (Viewer viewer = new Viewer("sample.pdf"))
+using (var viewer = new Viewer("resume.pdf"))
 {
-    PngViewOptions viewOptions = new PngViewOptions("output_{0}.png");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("text-as-image.html");
+    viewOptions.PdfOptions.RenderTextAsImage = true;
     viewer.View(viewOptions);
 }
 ```
 
-![Rendering PDF document to PNG](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/rendering_pdf_to_png.jpg)
+The image below illustrates the result. PDF content is exported to HTML as an image, so users cannot select or copy document text.  
 
-## Getting information about PDF file
+![Render PDF content as an image in the output HTML file](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/render-pdf-to-html-as-image.png)
 
-You can get the following information about PDF file: number of pages, page size, and printing permission.
-To do it please do the following steps:
+### Enable multi-layer rendering
 
-* With `Viewer` class load your document.
-* Сreate `PngViewOptions` instance and type output file name.
-* Call `View` method to render your document to PDF.
-* Call `GetViewInfo` to get PDF file information and get `PdfViewInfo` object result.
+When you convert a PDF file to HTML, GroupDocs.Viewer creates an HTML document with a single layer (the **z-index** is not specified for document elements). This helps increase performance and reduce the output file size. If you convert a PDF document with multiple layers and want to improve the position of document elements in the output HTML file, activate the [HtmlViewOptions.PdfOptions.EnableLayeredRendering](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/enablelayeredrendering) property to render text and graphics in the HTML file according to the z-order in the source PDF document.
+
+The following example demonstrates how to enable this option in code:
+
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("sample.pdf"))
+{
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    viewOptions.PdfOptions.EnableLayeredRendering = true;
+    viewer.View(viewOptions);
+}
+```
+
+## Render PDF files as images
+### Convert PDF files to PNG
+
+Create a [PngViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a PDF file to PNG. Use the [PngViewOptions.Height](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
 ```cs
-using (Viewer viewer = new Viewer("sample.pdf"))
-{
-    ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForHtmlView();
-    PdfViewInfo viewInfo = viewer.GetViewInfo(viewInfoOptions) as PdfViewInfo;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
 
-    Console.WriteLine($"File type: {viewInfo.FileType}, pages count {viewInfo.Pages.Count}.");
+using (var viewer = new Viewer("resume.pdf"))
+{
+    // Create a PNG image for each PDF page.
+    // {0} is replaced with the current page number in the image name.
+    var viewOptions = new PngViewOptions("output_{0}.png");
+    viewOptions.Width = 800;
+    viewOptions.Height = 900;
+    viewer.View(viewOptions);
+}
+```
+
+The following image demonstrates the result:
+
+![Render a PDF file to PNG](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/render-pdf-to-png.png)
+
+### Convert PDF files to JPEG
+
+Create a [JpgViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a PDF file to JPEG. Use the [JpgViewOptions.Height](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
+
+```cs
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.pdf"))
+{
+    // Create a JPEG image for each PDF page.
+    // {0} is replaced with the current page number in the image name.
+    var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    viewOptions.Width = 800;
+    viewOptions.Height = 900;
+    viewer.View(viewOptions);
+}
+```
+
+### Preserve the size of document pages
+
+When you render PDF documents as images, GroupDocs.Viewer calculates the optimal image size to achieve better rendering quality. If you want the generated images to be the same size as pages in the source PDF document, enable the [PdfOptions.RenderOriginalPageSize](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/renderoriginalpagesize) property for the [PngViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) or [JpgViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class (depending on the output image format).
+
+
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.pdf"))
+{
+    var viewOptions = new PngViewOptions("output_{0}.png");
+    viewOptions.PdfOptions.RenderOriginalPageSize = true;
+    viewer.View(viewOptions);
+}
+```
+
+### Enable font hinting
+
+To adjust the display of outline fonts when you convert PDF documents to PNG or JPEG, activate the [PdfOptions.EnableFontHinting](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/enablefonthinting) option, as shown below:
+
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.pdf"))
+{
+    var viewOptions = new PngViewOptions("output_{0}.png");
+    viewOptions.PdfOptions.EnableFontHinting = true;
+    viewer.View(viewOptions);
+}
+```
+
+Refer to the following article for more information on font hinting: [Font hinting](https://en.wikipedia.org/wiki/Font_hinting).
+
+## Disable character grouping
+
+When you render PDF files in other formats, GroupDocs.Viewer groups separate characters into words to improve rendering performance. If your document contains hieroglyphic or special symbols, you may need to disable character grouping to generate a more precise layout. To do this, use the [PdfOptions.DisableCharsGrouping](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/disablecharsgrouping) option, as shown below:
+
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("sample.pdf"))
+{
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    viewOptions.PdfOptions.DisableCharsGrouping = true;
+    viewer.View(viewOptions);
+}
+```
+
+## Obtain information about a PDF file
+
+Follow the steps below to obtain information about a PDF file (the number of pages, page size, and printing permissions): 
+
+1. Create a [ViewInfoOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/viewinfooptions) instance for a specific view.
+2. Call the [Viewer.GetViewInfo](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method, pass the **ViewInfoOptions** instance to this method as a parameter, and cast the returned object to the [PdfViewInfo](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.results/pdfviewinfo) type.
+3. Use the **PdfViewInfo** class properties to retrieve document-specific information.
+
+```cs
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Results;
+// ...
+
+using (var viewer = new Viewer("resume.pdf"))
+{
+    var viewInfoOptions = ViewInfoOptions.ForHtmlView();
+    viewInfoOptions.ExtractText = true;
+    var viewInfo = viewer.GetViewInfo(viewInfoOptions) as PdfViewInfo;
+
+    // Display information about the PDF document.
+    Console.WriteLine($"File type: {viewInfo.FileType}");
+    Console.WriteLine($"The number of pages: {viewInfo.Pages.Count}");
+    Console.WriteLine($"Is printing allowed: {viewInfo.PrintingAllowed}");
     
-    Console.WriteLine("Pages information");
+    // Display information about all document pages.
+    Console.WriteLine("Page information:");
     foreach (Page page in viewInfo.Pages)
     {
-        // ToString method is overriden and will display: "Page {Number} ({visibility}) {Width}x{Height}px with {Lines.Count} line(s)."
+        // The Page.ToString method is overriden to display the following page information: 
+        // "Page {Number} ({visibility}) {Width}x{Height}px with {Lines.Count} line(s)."
         Console.WriteLine(page);
     }
 }
 ```
 
-![Get information about PDF file](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/get-information-about-pdf-file.jpg)
+The following image demonstrates a sample console output:
 
-## How to extract text from PDF
+![Get information about a PDF file](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/retrieve-pdf-file-information.png)
 
-To extract text to PDF you should set ExtractText property to True. You can access the result text in a list of text lines on the Page.Lines property.
+### Extract text from a PDF file
 
-To do it:
-
-* With `Viewer` class load your document.
-* Сreate `ViewInfoOptions` instance with `ViewInfoOptions.ForHtmlView()/ViewInfoOptions.ForJpgView()/ViewInfoOptions.ForPngView()` method.
-* Initialize `viewOptions.ExtractText` property to `true`.
-* Call `GetViewInfo` method to get PDF file information with extracted text.
+Set the [ViewInfoOptions.ExtractText]() property to **true** to enable PDF text extraction. Use the [PdfViewInfo.Pages](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/properties/pages) property to obtain the list of all document pages, and iterate through the collection of lines on each page ([Page.Lines](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/page/properties/lines)) to retrieve text for each line.
 
 ```cs
-using (Viewer viewer = new Viewer("sample.pdf"))
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Results;
+// ...
+
+using (var viewer = new Viewer("resume.pdf"))
 {
-    ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForHtmlView();
-
-
-    // To extract text from PDF, please set ExtractText to true.    
-    viewInfo.ExtractText = true;
-    PdfViewInfo viewInfo = viewer.GetViewInfo(viewInfoOptions) as PdfViewInfo;
+    var viewInfoOptions = ViewInfoOptions.ForHtmlView();
+    viewInfoOptions.ExtractText = true;
+    var viewInfo = viewer.GetViewInfo(viewInfoOptions) as PdfViewInfo;
     
-    Console.WriteLine($"File type: {viewInfo.FileType}, pages count {viewInfo.Pages.Count}.");
-    
-    Console.WriteLine("Pages information");
+    // Retrieve text from the PDF file.
+    Console.WriteLine("Extracted document text:");
     foreach (Page page in viewInfo.Pages)
-    foreach (Line line in page.Lines)
-    {
-        Console.WriteLine(line.Value);
-    }
+        foreach (Line line in page.Lines)
+        {
+            Console.WriteLine(line.Value);
+        }
 }
 ```
 
-![PDF text extraction results](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/pdf-text-extraction-results.jpg)
-
-## Get a Free API License
-
-In order to use the API without evaluation limitations, you can get a free [temporary license](https://purchase.groupdocs.com/temporary-license).
-
-## Conclusion
-
-In conclusion, I hope you now know how to view PDF files in C# with .NET applications, n this article you have seen how to convert Word to PDF, how to convert Word to jpg, and other formats in your application.
-Also, you can use [Online Applications to view your files](https://products.groupdocs.app/viewer/family) these applications are built with GroupDocs.Viewer.
-
-You can learn how to use GroupDocs.Viewer in your applications with [documentation](https://docs.groupdocs.com/viewer/net/) and if you have any questions or issues you feel free to send these via our [forum](https://forum.groupdocs.com/).
-
-## See also
-
-* [How to view Word documents using C#](viewer/net/how-to-view-word-documents-using-csharp/)
-* [How to view CAD documents using C#](viewer/net/how-to-view-cad-documents-using-csharp/)
+![Extract and display PDF text](viewer/net/images/viewer-use-cases/how-to-view-pdf-using-csharp/extract-pdf-text.png)
