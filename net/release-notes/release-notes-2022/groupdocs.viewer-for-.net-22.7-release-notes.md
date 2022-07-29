@@ -32,3 +32,42 @@ There are 8 features, improvements, and bug-fixes in this release, most notable 
 |VIEWERNET-4024|"Object reference not set to an instance of an object." exception when open PS document|Bug|
 |VIEWERNET-3989|ReadFileAsync and ResolveFileTypeAsync are called several times for one file that should be displayed|Bug|
 |VIEWERNET-3984|Viewer Print button not working properly|Bug|
+
+
+## Public API changes
+
+In context of new feature `VIEWERNET-4021 - Support setting margins for Word documents` we have changed the file type from `float` to `float?` in `GroupDocs.Viewer.Options.WordProcessingOptions`. Starting from this version you can set margins for the Word documents same as you adjust margins using `Page Setup` in Microsoft Word.
+
+```cs
+/// <summary>
+/// The distance (in points) between the left edge of the page and the left boundary of the body text.
+/// </summary>
+/// <remarks>
+/// By default, the Left Margin value that is set in the Page Setup of the source document will be used.
+/// </remarks>
+public float? LeftMargin { get; set; }
+
+/// <summary>
+/// The distance (in points) between the right edge of the page and the right boundary of the body text.
+/// </summary>
+/// <remarks>
+/// By default, the Right Margin value that is set in the Page Setup of the source document will be used.
+/// </remarks>
+public float? RightMargin { get; set; }
+
+/// <summary>
+/// The distance (in points) between the top edge of the page and the top boundary of the body text.
+/// </summary>
+/// <remarks>
+/// By default, the Top Margin value that is set in the Page Setup of the source document will be used.
+/// </remarks>
+public float? TopMargin { get; set; }
+
+/// <summary>
+/// The distance (in points) between the bottom edge of the page and the bottom boundary of the body text.
+/// </summary>
+/// <remarks>
+/// By default, the Bottom Margin value that is set in the Page Setup of the source document will be used.
+/// </remarks>
+public float? BottomMargin { get; set; }
+```
