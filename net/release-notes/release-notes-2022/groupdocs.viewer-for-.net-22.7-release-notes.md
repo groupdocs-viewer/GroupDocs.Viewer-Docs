@@ -12,7 +12,7 @@ hideChildren: False
 
 ## Major Features
 
-There are 8 features, improvements, and bug-fixes in this release, most notable are:
+There are 9 features, improvements, and bug-fixes in this release, most notable are:
 
 * GroupDocs.Viewer now render the page when it’s a full page image in a PDF
 * "Output space is undefined" fix when rendering TEX files from MemoryStream
@@ -24,6 +24,7 @@ There are 8 features, improvements, and bug-fixes in this release, most notable 
 
 | Key | Summary | Category |
 | --- | --- | --- |
+|VIEWERNET-3973|Characters written on objects such as shapes and text boxes are garbled|Bug|
 |VIEWERNET-3919|GroupDocs.Viewer doesn’t render the page when it’s a full page image in a PDF|Bug|
 |VIEWERNET-3969|"Output space is undefined" when rendering TEX files from MemoryStream|Bug|
 |VIEWERNET-3990|Output page size is 55 mb when rendering PPTX to HTML|Bug|
