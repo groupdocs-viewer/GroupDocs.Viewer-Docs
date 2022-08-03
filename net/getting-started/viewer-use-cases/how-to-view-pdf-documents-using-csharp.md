@@ -14,9 +14,9 @@ toc: True
 
 Create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance to get started with the GroupDocs.Viewer API. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the document to HTML or image format. These methods allow you to render the entire document or specific pages.
 
-## Supported Page Layout formats
+## Supported Page Layout file formats
 
-With GroupDocs.Viewer, you can load and view documents in the following file formats:
+GroupDocs.Viewer supports the following file formats:
 
 * [Portable Document Format](https://docs.fileformat.com/pdf/) (.PDF)
 * [Microsoft XML Paper Specification](https://docs.fileformat.com/page-description-language/xps/) (.XPS)
@@ -228,7 +228,7 @@ Refer to the following article for more information on font hinting: [Font hinti
 
 ## Disable character grouping
 
-When you render PDF files in other formats, GroupDocs.Viewer groups separate characters into words to improve rendering performance. If your document contains hieroglyphic or special symbols, you may need to disable character grouping to generate a more precise layout. To do this, use the [PdfOptions.DisableCharsGrouping](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/disablecharsgrouping) option, as shown below:
+When you render PDF files in other formats, GroupDocs.Viewer groups individual characters into words to improve rendering performance. If your document contains hieroglyphic or special symbols, you may need to disable character grouping to generate a more precise layout. To do this, use the [PdfOptions.DisableCharsGrouping](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/disablecharsgrouping) option, as shown below:
 
 ```csharp
 using GroupDocs.Viewer;
@@ -285,7 +285,7 @@ The following image demonstrates a sample console output:
 
 ### Extract text from a PDF file
 
-Set the [ViewInfoOptions.ExtractText]() property to **true** to enable PDF text extraction. Use the [PdfViewInfo.Pages](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/properties/pages) property to obtain the list of all document pages, and iterate through the collection of lines on each page ([Page.Lines](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/page/properties/lines)) to retrieve text for each line.
+Set the [ViewInfoOptions.ExtractText](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/viewinfooptions/properties/extracttext) property to **true** to enable PDF text extraction. Use the [PdfViewInfo.Pages](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/properties/pages) property to obtain the list of all document pages, and iterate through the collection of lines on each page ([Page.Lines](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/page/properties/lines)) to retrieve text for each line.
 
 ```cs
 using GroupDocs.Viewer;
