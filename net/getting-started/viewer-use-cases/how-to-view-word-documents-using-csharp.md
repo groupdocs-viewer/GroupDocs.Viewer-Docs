@@ -4,7 +4,7 @@ url: viewer/net/how-to-view-word-documents-using-csharp
 title: Render Word documents as HTML, PDF, and image files
 linkTitle: Render Word documents
 weight: 1
-description: "This topic describes how to use the GroupDocs.Viewer .NET API to convert Word documents to HTML, PDF, PNG, and JPEG formats."
+description: "This topic describes how to use the GroupDocs.Viewer .NET API (C#) to convert Word documents to HTML, PDF, PNG, and JPEG formats."
 keywords: convert word to pdf, convert word to jpeg, convert doc to pdf, convert docx to pdf, convert word to jpg, convert word to jpeg
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
@@ -16,7 +16,7 @@ To start using the GroupDocs.Viewer API, create a [Viewer](https://apireference.
 
 ## Supported Microsoft Word formats
 
-With GroupDocs.Viewer, you can load and view  documents in the following file formats:
+GroupDocs.Viewer supports the following file formats:
 
 * [Microsoft Word Document](https://docs.fileformat.com/word-processing/docx) (.DOCX)
 * [Microsoft Word 97-2003 Document](https://docs.fileformat.com/word-processing/doc) (.DOC)
@@ -46,6 +46,8 @@ using GroupDocs.Viewer.Options;
 
 using (var viewer = new Viewer("resume.docx"))
 {
+    // Create an HTML file for each document page.
+    // {0} is replaced with the current page number in the file name.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
     viewer.View(viewOptions);
 }
@@ -70,6 +72,9 @@ using GroupDocs.Viewer.Options;
 
 using (var viewer = new Viewer("resume.docx"))
 {
+    // Create an HTML file for each document page.
+    // Specify the HTML file names and location of external resources.
+    // {0} and {1} are replaced with the current page number and resource name, respectively.
     var viewOptions = HtmlViewOptions.ForExternalResources(
         "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
@@ -111,6 +116,8 @@ using GroupDocs.Viewer.Options;
 
 using (var viewer = new Viewer("resume.docx"))
 {
+    // Create a PNG image for each document page.
+    // {0} is replaced with the current page number in the image name.
     var viewOptions = new PngViewOptions("output_{0}.png");
     viewOptions.Width = 800;
     viewOptions.Height = 900;
@@ -132,6 +139,8 @@ using GroupDocs.Viewer.Options;
 
 using (var viewer = new Viewer("resume.docx"))
 {
+    // Create a JPEG image for each document page.
+    // {0} is replaced with the current page number in the image name.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
     viewOptions.Width = 800;
     viewOptions.Height = 900;
