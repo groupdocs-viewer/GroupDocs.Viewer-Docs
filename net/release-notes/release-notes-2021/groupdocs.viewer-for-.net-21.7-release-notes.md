@@ -19,7 +19,7 @@ There are 20 features, improvements, and bug-fixes in this release, most notable
 * Improved rendering Spreadsheet files
 * Render Text files to responsive HTML
 * Fixed exception when invalid or expired license provided
-* [Separator detection for CSV/TSV files]({{< ref "separator-detection">}})
+* [Separator detection for CSV/TSV files]({{< ref "viewer/net/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets.md">}})
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -59,4 +59,4 @@ Added new `DetectSeparator` property.
 public bool DetectSeparator { get; set; } = false;
 ```
 
-See how to use new properties in [Separator detection for CSV/TSV files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/separator-detection.md">}})
+See how to use new properties in the following help topic: [Detect a CSV/TSV separator]({{< ref "viewer/net/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets.md">}}).
