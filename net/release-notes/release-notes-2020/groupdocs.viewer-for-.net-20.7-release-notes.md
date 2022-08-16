@@ -182,7 +182,7 @@ public bool RenderSinglePage { get; set; }
 
 #### GroupDocs.Viewer.Options.SpreadsheetOptions
 
-The new factory method _ForSplitSheetIntoPages()_ and property _CountColumnsPerPage_ has been added to [GroupDocs.Viewer.Options.SpreadsheetOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions>) to support partial rendering of Excel spreadsheets by splitting worksheets into pages by rows and columns. See [Split worksheets into pages]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/split-worksheets-into-pages.md" >}}) documentation article for more details and code samples.
+The new factory method _ForSplitSheetIntoPages()_ and property _CountColumnsPerPage_ has been added to [GroupDocs.Viewer.Options.SpreadsheetOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions>) to support partial rendering of Excel spreadsheets by splitting worksheets into pages by rows and columns. See the [Split worksheets into pages]({{< ref "viewer/net/rendering-basics/render-spreadsheets/split-worksheet-into-pages.md" >}}) article for more details and code samples.
 
 ```csharp
 /// <summary>
