@@ -1,7 +1,7 @@
 ---
 id: how-to-run-examples
 url: viewer/net/how-to-run-examples
-title: How to Run Examples
+title: How to run examples
 weight: 6
 keywords: visual studio, build a project, .net cli
 description: "You can build a project from scratch using Visual Studio .NET CLI. We'll step you through both cases."

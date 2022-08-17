@@ -1,7 +1,7 @@
 ---
 id: advanced-rendering
 url: viewer/net/advanced-rendering
-title: Advanced Rendering
+title: Advanced rendering
 weight: 14
 description: "GroupDocs.Viewer advanced rendering options"
 productName: GroupDocs.Viewer for .NET
