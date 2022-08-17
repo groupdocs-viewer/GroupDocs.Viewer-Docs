@@ -1,7 +1,7 @@
 ---
 id: retrieving-document-information
 url: viewer/net/retrieving-document-information
-title: Retrieving Document Information
+title: Retrieving document information
 weight: 2
 description: "Retrieving information about a document with GroupDocs.Viewer for .NET"
 productName: GroupDocs.Viewer for .NET

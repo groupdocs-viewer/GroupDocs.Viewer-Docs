@@ -135,7 +135,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 }
 ```
 
-The image below demonstrates the result. Hidden row and columns appear in the generated PDF file.
+The image below demonstrates the result. Hidden rows and columns appear in the generated PDF file.
 
 ![Hidden rows and columns in a worksheet](viewer/net/images/rendering-basics/render-spreadsheets/render-excel-with-hidden-columns-and-rows-to-pdf.png)
 

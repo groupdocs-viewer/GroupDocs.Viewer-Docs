@@ -1,7 +1,7 @@
 ---
 id: features-overview
 url: viewer/net/features-overview
-title: Features Overview
+title: Features overview
 weight: 1
 keywords: render files,viewer,html,PNG,JPEG,PDF
 description: "With GroupDocs.Viewer for .NET you can render files to HTML, PNG, JPEG and PDF formats, list and save attachments, embedded files and compressed files, extract document text and detect file type by it's content"

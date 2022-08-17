@@ -1,7 +1,7 @@
 ---
 id: technical-support
 url: /viewer/net/technical-support
-title: Technical Support
+title: Technical support
 description: "GroupDocs.Viewer for .NET provides free technical support available to all users. Please report your question, issue, or feature request using GroupDocs Free Support Forum."
 productName: GroupDocs.Viewer for .NET
 weight: 10

@@ -1,7 +1,7 @@
 ---
 id: supported-document-formats
 url: viewer/net/supported-document-formats
-title: Supported Document Formats
+title: Supported document formats
 weight: 2
 keywords: Python Script, TAR,ZIP,DGN,DXF
 description: "Supports Python Script, TAR,ZIP,DGN,DXF and many more"
