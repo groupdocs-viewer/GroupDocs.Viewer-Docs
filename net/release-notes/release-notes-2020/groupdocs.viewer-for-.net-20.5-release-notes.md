@@ -27,7 +27,7 @@ There are 13 features, improvements, and bug-fixes in this release, most notable
 * Added support rendering MS Project documents with notes  
 *Related article [Render MS Project documents with notes]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-ms-project-files/how-to-convert-and-view-ms-project-documents-with-notes" >}})*
 * Added support for rendering OpenDocument Flat XML Presentation files (.fodp)
-*Related article [Render presentations]({{< ref "viewer/net/developer-guide/rendering-basics/render-presentations" >}})*
+*Related article [Render presentations]({{< ref "viewer/net/rendering-basics/render-presentations" >}})*
 * Improved default font support when converting PowerPoint files to HTML and PDF  
 *Related article [How to substitute missing font]({{< ref "viewer/net/developer-guide/rendering-documents/replace-missing-font.md" >}})*
 
