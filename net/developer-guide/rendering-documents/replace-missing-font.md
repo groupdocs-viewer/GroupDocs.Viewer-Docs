@@ -7,6 +7,8 @@ description: "This article explains how to replace missing font when rendering d
 keywords: missing font,rendering documents
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
+aliases:
+    - /viewer/net/how-to-substitute-missing-font-when-converting-presentations/
 ---
 GroupDocs.Viewer enables you to set default font name which may be useful in following cases:
 
