@@ -26,10 +26,10 @@ There are 13 features, improvements, and bug-fixes in this release, most notable
 *Related article [Render OBJ files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-convert-and-view-obj-files" >}})*
 * Added support rendering MS Project documents with notes  
 *Related article [Render MS Project documents with notes]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-ms-project-files/how-to-convert-and-view-ms-project-documents-with-notes" >}})*
-* Added support rendering OpenDocument Flat XML Presentation (.fodp) files  
-*Related article [Render FODP and ODP files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-powerpoint-presentations/how-to-convert-and-view-fodp-and-odp-files" >}})*
+* Added support for rendering OpenDocument Flat XML Presentation files (.fodp)
+*Related article [Render presentations]({{< ref "viewer/net/developer-guide/rendering-basics/render-presentations" >}})*
 * Improved default font support when converting PowerPoint files to HTML and PDF  
-*Related article [How to substitute missing font when converting presentations]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-powerpoint-presentations/how-to-substitute-missing-font-when-converting-presentations.md" >}})*
+*Related article [How to substitute missing font]({{< ref "viewer/net/developer-guide/rendering-documents/replace-missing-font.md" >}})*
 
 ## Full List of Issues Covering all Changes in this Release
 
