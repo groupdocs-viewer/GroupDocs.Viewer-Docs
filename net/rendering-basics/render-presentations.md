@@ -24,18 +24,18 @@ Create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer
 
 GroupDocs.Viewer supports the following file formats:
 
-* [Microsoft PowerPoint Presentation](https://docs.fileformat.com/presentation/pptx/) (.PPTX)
-* [Microsoft PowerPoint 97-2003 Presentation](https://docs.fileformat.com/presentation/ppt/) (.PPT)
-* [Microsoft PowerPoint Template](https://docs.fileformat.com/presentation/potx) (.POTX)
-* [Microsoft PowerPoint 97-2003 Template](https://docs.fileformat.com/presentation/pot) (.POT)
-* [Microsoft PowerPoint Macro-Enabled Template](https://docs.fileformat.com/presentation/potm) (.POTM)
-* [Microsoft PowerPoint Slide Show](https://docs.fileformat.com/presentation/ppsx) (.PPSX)
-* [Microsoft PowerPoint Macro-Enabled Slide Show](https://docs.fileformat.com/presentation/ppsm) (.PPSM)
-* [Microsoft PowerPoint 97-2003 Slide Show](https://docs.fileformat.com/presentation/pps) (.PPS)
-* [Microsoft PowerPoint Macro-Enabled Presentation](https://docs.fileformat.com/presentation/pptm) (.PPTM)
-* [OpenDocument Presentation](https://docs.fileformat.com/presentation/odp) (.ODP)
-* [OpenDocument Presentation Template](https://docs.fileformat.com/presentation/otp) (.OTP)
-* [OpenDocument Flat XML Presentation](https://fileinfo.com/extension/fodp) (.FODP)
+* {{% closedlink title="Microsoft PowerPoint Presentation" href="https://docs.fileformat.com/presentation/pptx/" %}} (.PPTX)
+* {{% closedlink title="Microsoft PowerPoint 97-2003 Presentation" href="https://docs.fileformat.com/presentation/ppt/" %}} (.PPT)
+* {{% closedlink title="Microsoft PowerPoint Template" href="https://docs.fileformat.com/presentation/potx" %}} (.POTX)
+* {{% closedlink title="Microsoft PowerPoint 97-2003 Template" href="https://docs.fileformat.com/presentation/pot" %}} (.POT)
+* {{% closedlink title="Microsoft PowerPoint Macro-Enabled Template" href="https://docs.fileformat.com/presentation/potm" %}} (.POTM)
+* {{% closedlink title="Microsoft PowerPoint Slide Show" href="https://docs.fileformat.com/presentation/ppsx" %}} (.PPSX)
+* {{% closedlink title="Microsoft PowerPoint Macro-Enabled Slide Show" href="https://docs.fileformat.com/presentation/ppsm" %}} (.PPSM)
+* {{% closedlink title="Microsoft PowerPoint 97-2003 Slide Show" href="https://docs.fileformat.com/presentation/pps" %}} (.PPS)
+* {{% closedlink title="Microsoft PowerPoint Macro-Enabled Presentation" href="https://docs.fileformat.com/presentation/pptmx" %}} (.PPTM)
+* {{% closedlink title="OpenDocument Presentation" href="https://docs.fileformat.com/presentation/odp" %}} (.ODP)
+* {{% closedlink title="OpenDocument Presentation Template" href="https://docs.fileformat.com/presentation/otp" %}} (.OTP)
+* {{% closedlink title="OpenDocument Flat XML Presentation" href="https://fileinfo.com/extension/fodp" %}} (.FODP)
 
 GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 

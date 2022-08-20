@@ -20,10 +20,10 @@ Create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer
 
 GroupDocs.Viewer supports the following file formats:
 
-* [Portable Document Format](https://docs.fileformat.com/pdf/) (.PDF)
-* [Microsoft XML Paper Specification](https://docs.fileformat.com/page-description-language/xps/) (.XPS)
-* [Open XML Paper Specification](https://docs.fileformat.com/page-description-language/oxps/) (.OXPS)
-* [LaTeX Source Document](https://docs.fileformat.com/page-description-language/tex/) (.TEX)
+* {{% closedlink title="Portable Document Format" href="https://docs.fileformat.com/pdf/" %}} (.PDF)
+* {{% closedlink title="Microsoft XML Paper Specification" href="https://docs.fileformat.com/page-description-language/xps/" %}} (.XPS)
+* {{% closedlink title="Open XML Paper Specification" href="https://docs.fileformat.com/page-description-language/oxps/" %}} (.OXPS)
+* {{% closedlink title="LaTeX Source Document" href="https://docs.fileformat.com/page-description-language/tex/" %}} (.TEX)
 
 GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 

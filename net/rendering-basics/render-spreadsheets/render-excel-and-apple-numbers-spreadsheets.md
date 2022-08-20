@@ -24,22 +24,22 @@ To start with the GroupDocs.Viewer API, create a [Viewer](https://apireference.g
 
 GroupDocs.Viewer supports the following file formats:
 
-* [Microsoft Excel Workbook](https://docs.fileformat.com/spreadsheet/xlsx) (.XLSX)
-* [Microsoft Excel 97-2003 Workbook](https://docs.fileformat.com/spreadsheet/xls) (.XLS)
-* [Microsoft Excel Binary Workbook](https://docs.fileformat.com/spreadsheet/xlsb) (.XLSB)
-* [Microsoft Excel Macro-Enabled Workbook](https://docs.fileformat.com/spreadsheet/xlsm) (.XLSM)
-* [Microsoft Excel Template](https://docs.fileformat.com/spreadsheet/xltx) (.XLTX)
-* [Microsoft Excel 97-2003 Template](https://docs.fileformat.com/spreadsheet/xlt) (.XLT)
-* [Microsoft Excel Macro-Enabled Template](https://docs.fileformat.com/spreadsheet/xltm) (.XLTM)
-* [Microsoft Excel Add-In](https://docs.fileformat.com/spreadsheet/xlam/) (.XLAM)
-* [XML Spreadsheet 2003](https://en.wikipedia.org/wiki/SpreadsheetML) (.XML)
-* [OpenDocument Spreadsheet](https://docs.fileformat.com/spreadsheet/ods) (.ODS) 
-* [OpenDocument Spreadsheet Template](https://docs.fileformat.com/spreadsheet/ots/) (.OTS)
-* [OpenDocument Flat XML Spreadsheet](https://docs.fileformat.com/spreadsheet/fods/) (.FODS)
-* [Comma Separated Values File](https://docs.fileformat.com/spreadsheet/csv) (.CSV)
-* [Tab Separated Values File](https://docs.fileformat.com/spreadsheet/tsv) (.TSV)
-* [StarOffice Calc Spreadsheet](https://docs.fileformat.com/spreadsheet/sxc/) (.SXC)
-* [Apple Numbers Spreadsheet](https://docs.fileformat.com/spreadsheet/numbers) (.NUMBERS)
+* {{% closedlink title="Microsoft Excel Workbook" href="https://docs.fileformat.com/spreadsheet/xlsx" %}} (.XLSX)
+* {{% closedlink title="Microsoft Excel 97-2003 Workbook" href="https://docs.fileformat.com/spreadsheet/xls" %}} (.XLS)
+* {{% closedlink title="Microsoft Excel Binary Workbook" href="https://docs.fileformat.com/spreadsheet/xlsb" %}} (.XLSB)
+* {{% closedlink title="Microsoft Excel Macro-Enabled Workbook" href="https://docs.fileformat.com/spreadsheet/xlsm" %}} (.XLSM)
+* {{% closedlink title="Microsoft Excel Template" href="https://docs.fileformat.com/spreadsheet/xltx" %}} (.XLTX)
+* {{% closedlink title="Microsoft Excel 97-2003 Template" href="https://docs.fileformat.com/spreadsheet/xlt" %}} (.XLT)
+* {{% closedlink title="Microsoft Excel Macro-Enabled Template" href="https://docs.fileformat.com/spreadsheet/xltm" %}} (.XLTM)
+* {{% closedlink title="Microsoft Excel Add-In" href="https://docs.fileformat.com/spreadsheet/xlam/" %}} (.XLAM)
+* {{% closedlink title="XML Spreadsheet 2003" href="https://en.wikipedia.org/wiki/SpreadsheetML" %}} (.XML)
+* {{% closedlink title="OpenDocument Spreadsheet" href="https://docs.fileformat.com/spreadsheet/ods" %}} (.ODS)
+* {{% closedlink title="OpenDocument Spreadsheet Template" href="https://docs.fileformat.com/spreadsheet/ots/" %}} (.OTS)
+* {{% closedlink title="OpenDocument Flat XML Spreadsheet" href="https://docs.fileformat.com/spreadsheet/fods/" %}} (.FODS)
+* {{% closedlink title="Comma Separated Values File" href="https://docs.fileformat.com/spreadsheet/csv" %}} (.CSV)
+* {{% closedlink title="Tab Separated Values File" href="https://docs.fileformat.com/spreadsheet/tsv" %}} (.TSV)
+* {{% closedlink title="StarOffice Calc Spreadsheet" href="https://docs.fileformat.com/spreadsheet/sxc/" %}} (.SXC)
+* {{% closedlink title="Apple Numbers Spreadsheet" href="https://docs.fileformat.com/spreadsheet/numbers" %}} (.NUMBERS)
 
 GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 
