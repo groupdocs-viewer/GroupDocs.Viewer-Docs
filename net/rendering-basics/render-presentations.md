@@ -20,6 +20,8 @@ aliases:
 
 Create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance to get started with the GroupDocs.Viewer API. Pass a presentation you want to view to the class constructor. You can load the presentation from a file or stream. Call one of the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the presentation to HTML, PDF, or image format. These methods allow you to render the entire presentation or specific slides.
 
+{{< button style="primary" link="https://products.groupdocs.app/viewer/powerpoint" >}} View PowerPoint files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} View demos and examples on GitHub {{< /button >}}
+
 ## Supported Presentation file formats
 
 GroupDocs.Viewer supports the following file formats:

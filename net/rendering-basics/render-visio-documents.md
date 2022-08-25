@@ -17,6 +17,8 @@ aliases:
 
 To start using the GroupDocs.Viewer API, create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
 
+{{< button style="primary" link="https://products.groupdocs.app/viewer/visio" >}} View Visio files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} View demos and examples on GitHub {{< /button >}}
+
 ## Supported Visio file formats
 
 GroupDocs.Viewer supports the following file formats:
