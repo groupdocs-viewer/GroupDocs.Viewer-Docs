@@ -16,6 +16,8 @@ aliases:
 
 To start using the GroupDocs.Viewer API, create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
 
+{{< button style="primary" link="https://products.groupdocs.app/viewer/word" >}} View Word files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} View demos and examples on GitHub {{< /button >}}
+
 ## Supported Word Processing file formats
 
 GroupDocs.Viewer supports the following file formats:
@@ -187,29 +189,6 @@ using (var viewer = new Viewer("resume.docx"))
 }
 ```
 
-## Render comments in Word documents
-
-Enable the [ViewOptions.RenderComments](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option for a target view to display comments in the output file when you convert your document to HTML, PDF, PNG, or JPEG format.
-
-The code example below renders a Word document with comments to PDF.
-
-```csharp
-using GroupDocs.Viewer;
-using GroupDocs.Viewer.Options;
-// ...
-
-using (var viewer = new Viewer("resume.docx"))
-{
-    var viewOptions = new PdfViewOptions("output.pdf");
-    viewOptions.RenderComments = true;
-    viewer.View(viewOptions);
-}
-```
-
-The following image illustrates the result:
-
-![Render comments to PDF](viewer/net/images/rendering-basics/render-word-documents/render-comments-to-pdf.png)
-
 ## Render tracked changes in Word documents
 
 GroupDocs.Viewer does not render tracked changes (revisions made to a Word document) by default. If you want to display tracked changes in the output file, enable the [WordProcessingOptions.RenderTrackedChanges](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/wordprocessingoptions/properties/rendertrackedchanges) property for one of the following classes (depending on the output file format):
@@ -237,3 +216,26 @@ using (var viewer = new Viewer("TrackChanges.docx"))
 The following image illustrates the result:
 
 ![Render tracked changes to PDF](viewer/net/images/rendering-basics/render-word-documents/render-track-changes-to-pdf.png)
+
+## Render comments in Word documents
+
+Enable the [ViewOptions.RenderComments](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option for a target view to display comments in the output file when you convert your document to HTML, PDF, PNG, or JPEG format.
+
+The code example below renders a Word document with comments to PDF.
+
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.docx"))
+{
+    var viewOptions = new PdfViewOptions("output.pdf");
+    viewOptions.RenderComments = true;
+    viewer.View(viewOptions);
+}
+```
+
+The following image illustrates the result:
+
+![Render comments to PDF](viewer/net/images/rendering-basics/render-word-documents/render-comments-to-pdf.png)

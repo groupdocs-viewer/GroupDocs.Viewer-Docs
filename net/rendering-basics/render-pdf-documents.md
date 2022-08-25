@@ -16,6 +16,8 @@ aliases:
 
 Create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance to get started with the GroupDocs.Viewer API. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the document to HTML or image format. These methods allow you to render the entire document or specific pages.
 
+{{< button style="primary" link="https://products.groupdocs.app/viewer/pdf" >}} View PDF files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} View demos and examples on GitHub {{< /button >}}
+
 ## Supported Page Layout file formats
 
 GroupDocs.Viewer supports the following file formats:
