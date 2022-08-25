@@ -150,6 +150,66 @@ using (var viewer = new Viewer("resume.docx"))
 }
 ```
 
+## Define page margins
+
+Use the following properties to specify the size of page margins in the output files when you convert your Word documents to HTML, PDF, and image formats: 
+
+* [WordProcessingOptions.TopMargin](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/topmargin)
+* [WordProcessingOptions.BottomMargin](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/bottommargin)
+* [WordProcessingOptions.LeftMargin](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/leftmargin)
+* [WordProcessingOptions.RightMargin](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/rightmargin)
+
+You can access these properties for the following classes:
+
+* [HtmlViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions)
+* [PdfViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions)
+* [PngViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions)
+* [JpgViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions)
+
+The following example converts a Word document to HTML and specifies page margins for the output file: 
+
+```cs
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.docx"))
+{
+    // Create an HTML file for each document page.
+    // {0} is replaced with the current page number in the file name.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    // Specify the size of page margins in points.
+    viewOptions.WordProcessingOptions.TopMargin = 72;
+    viewOptions.WordProcessingOptions.BottomMargin = 72;
+    viewOptions.WordProcessingOptions.LeftMargin = 54;
+    viewOptions.WordProcessingOptions.RightMargin = 54;
+    viewer.View(viewOptions);
+}
+```
+
+## Render comments in Word documents
+
+Enable the [ViewOptions.RenderComments](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option for a target view to display comments in the output file when you convert your document to HTML, PDF, PNG, or JPEG format.
+
+The code example below renders a Word document with comments to PDF.
+
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.docx"))
+{
+    var viewOptions = new PdfViewOptions("output.pdf");
+    viewOptions.RenderComments = true;
+    viewer.View(viewOptions);
+}
+```
+
+The following image illustrates the result:
+
+![Render comments to PDF](viewer/net/images/rendering-basics/render-word-documents/render-comments-to-pdf.png)
+
 ## Render tracked changes in Word documents
 
 GroupDocs.Viewer does not render tracked changes (revisions made to a Word document) by default. If you want to display tracked changes in the output file, enable the [WordProcessingOptions.RenderTrackedChanges](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/wordprocessingoptions/properties/rendertrackedchanges) property for one of the following classes (depending on the output file format):
