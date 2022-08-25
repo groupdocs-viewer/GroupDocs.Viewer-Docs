@@ -15,7 +15,7 @@ hideChildren: False
 There are 10 features, improvements, and bug-fixes in this release, most notable are:
 
 * Added Adobe Photoshop Large Document Format (.psb) file format support
-* [Added feature to render only figures without scheme for Visio files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-visio-documents/how-to-render-visio-files-figures.md">}})
+* Implemented the ability to [render shapes used in a Visio diagram rather than the diagram itself]({{< ref "viewer/net/rendering-basics/render-visio-documents.md">}})
 
 ## Full List of Issues Covering all Changes in this Release
 
@@ -54,7 +54,7 @@ public static readonly FileType PSB = new FileType("Photoshop Large Document For
 
 #### GroupDocs.Viewer.Options.VisioRenderingOptions
 
-public class [VisioRenderingOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/visiorenderingoptions>) class added to GroupDocs.Viewer.Options namespace. This class provides options for rendering Lotus Notes data files.
+The [VisioRenderingOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/visiorenderingoptions) public class is added to the **GroupDocs.Viewer.Options** namespace. This class contains options used to render Visio files.
 
 ```csharp
 /// <summary>
