@@ -11,6 +11,7 @@ hideChildren: False
 toc: True
 aliases:
     - /viewer/net/how-to-view-word-documents-using-csharp/
+    - /viewer/net/show-document-comments
 ---
 [GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) allows you to render your Microsoft Word documents in HTML, PDF, PNG, and JPEG formats. You do not need to use Microsoft Word or other word processors to load and view Word documents within your .NET application (web or desktop). 
 
@@ -168,7 +169,7 @@ You can access these properties for the following classes:
 * [PngViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions)
 * [JpgViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions)
 
-The following example converts a Word document to HTML and specifies page margins for the output file: 
+The example below converts a Word document to HTML and specifies page margins for the output file. 
 
 ```cs
 using GroupDocs.Viewer;
@@ -189,7 +190,7 @@ using (var viewer = new Viewer("resume.docx"))
 }
 ```
 
-## Render tracked changes in Word documents
+## Render tracked changes
 
 GroupDocs.Viewer does not render tracked changes (revisions made to a Word document) by default. If you want to display tracked changes in the output file, enable the [WordProcessingOptions.RenderTrackedChanges](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/wordprocessingoptions/properties/rendertrackedchanges) property for one of the following classes (depending on the output file format):
 
@@ -217,7 +218,7 @@ The following image illustrates the result:
 
 ![Render tracked changes to PDF](viewer/net/images/rendering-basics/render-word-documents/render-track-changes-to-pdf.png)
 
-## Render comments in Word documents
+## Render comments
 
 Enable the [ViewOptions.RenderComments](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option for a target view to display comments in the output file when you convert your document to HTML, PDF, PNG, or JPEG format.
 

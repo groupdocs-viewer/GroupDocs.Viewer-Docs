@@ -228,7 +228,7 @@ using (var viewer = new Viewer("resume.pdf"))
 }
 ```
 
-Refer to the following article for more information on font hinting: [Font hinting](https://en.wikipedia.org/wiki/Font_hinting).
+Refer to the following article for more information on font hinting: {{% closedlink title="Font hinting" href="https://en.wikipedia.org/wiki/Font_hinting" %}}.
 
 ## Disable character grouping
 
@@ -246,6 +246,29 @@ using (var viewer = new Viewer("sample.pdf"))
     viewer.View(viewOptions);
 }
 ```
+
+## Render text comments
+
+Enable the [ViewOptions.RenderComments](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option for a target view to display textual annotations (such as text comments, sticky notes, text boxes and callouts) in the output HTML, PNG, or JPEG files.
+
+The code example below renders a PDF file with text comments as an image.
+
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume_commented.pdf"))
+{
+    var viewOptions = new PngViewOptions("output.png");
+    viewOptions.RenderComments = true;
+    viewer.View(viewOptions);
+}
+```
+
+The following image illustrates the result:
+
+![Render PDF comments to PNG](viewer/net/images/rendering-basics/render-pdf-documents/render-pdf-comments.png)
 
 ## Obtain information about a PDF file
 
