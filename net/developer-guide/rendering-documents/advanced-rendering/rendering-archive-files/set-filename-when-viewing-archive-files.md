@@ -8,7 +8,7 @@ keywords: archive files, rendering archive files
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-![Set filename when rendering archive files](viewer/net/images/set-filename-when-rendering-archive-files.png)
+![Set filename when rendering archive files](/viewer/net/images/set-filename-when-rendering-archive-files.png)
 
 When rendering the archive files GroupDocs.Viewer displays an archive filename in the header of each page, like it is shown on the screenshot above. By default, the name of the original file is used. The GroupDocs.Viewer enables you to change or hide filename by setting [FileName](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/archiveoptions/properties/filename) option of the [ArchiveOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/archiveoptions) class. The [FileName](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/archiveoptions/properties/filename) option can be set to:
 

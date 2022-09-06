@@ -17,7 +17,7 @@ OST files - contain data, that downloaded from Exchange Server.
 
 The OST/PST can be opened with Microsoft Outlook.
 In case you need to view a PST/OST file in a browser or in a standard image or PDF viewer application, you can convert it to HTML, JPEG, PNG  PDF format with GroupDocs.Viewer for .NET.
-![](viewer/net/images/how-to-convert-and-view-ost-and-pst-files.png)
+![](/viewer/net/images/how-to-convert-and-view-ost-and-pst-files.png)
 
 ### Convert OST and PST to HTML
 
@@ -34,7 +34,7 @@ using (Viewer viewer = new Viewer("sample.pst"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![](viewer/net/images/how-to-convert-and-view-ost-and-pst-files_1.png)
+![](/viewer/net/images/how-to-convert-and-view-ost-and-pst-files_1.png)
 
 ### Convert OST and PST to JPG
 
@@ -51,7 +51,7 @@ using (Viewer viewer = new Viewer("sample.pst"))
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![](viewer/net/images/how-to-convert-and-view-ost-and-pst-files_2.png)
+![](/viewer/net/images/how-to-convert-and-view-ost-and-pst-files_2.png)
 
 ### Convert OST and PST to PNG
 
@@ -67,7 +67,7 @@ using (Viewer viewer = new Viewer("sample.pst"))
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![](viewer/net/images/how-to-convert-and-view-ost-and-pst-files_3.png)
+![](/viewer/net/images/how-to-convert-and-view-ost-and-pst-files_3.png)
 
 ### Convert OST and PST files to PDF
 
@@ -83,4 +83,4 @@ using (Viewer viewer = new Viewer("sample.pst"))
 
 The following screenshot shows the output PDF file opened in a browser.
 
-![](viewer/net/images/how-to-convert-and-view-ost-and-pst-files_4.png)
+![](/viewer/net/images/how-to-convert-and-view-ost-and-pst-files_4.png)

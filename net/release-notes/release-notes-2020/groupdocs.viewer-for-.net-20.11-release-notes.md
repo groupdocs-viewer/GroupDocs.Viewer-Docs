@@ -50,6 +50,6 @@ There are 21 features, improvements, and bug-fixes in this release, most notable
 
 In this version we've improved rendering of archives - now you can navigate between archive folder with Windows explorer behavior:
 
-![Windows explorer navigation style](viewer/net/images/navigation-in-archive-files/navigation.gif)
+![Windows explorer navigation style](/viewer/net/images/navigation-in-archive-files/navigation.gif)
 
 For more details and code snippets check [Folder navigation in archive files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/navigation-in-archive-files.md">}}) documentation article.

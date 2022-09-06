@@ -42,7 +42,7 @@ There are 10 features, improvements, and bug-fixes in this release, most notable
 *   In this version we've improved rendering of Presonal Storage [OST](https://docs.fileformat.com/email/ost/)/[PST](https://docs.fileformat.com/email/pst/) files and as a result, the behavior changed.  
     Now when rendering personal storage OST /PST files the **Inbox** folder is selected and displayed by default as it shown on the screenshot below.
 
-![](viewer/net/images/groupdocs-viewer-for-net-20-4-release-notes.png)
+![](/viewer/net/images/groupdocs-viewer-for-net-20-4-release-notes.png)
 
 ### Changes in the public API 
 

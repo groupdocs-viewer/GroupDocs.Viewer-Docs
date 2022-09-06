@@ -71,7 +71,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 
 The following image demonstrates the result:
 
-![Render an Excel file to HTML](viewer/net/images/rendering-basics/render-spreadsheets/convert-excel-to-html.png)
+![Render an Excel file to HTML](/viewer/net/images/rendering-basics/render-spreadsheets/convert-excel-to-html.png)
 
 **Example  2: Convert an Apple Numbers spreadsheet to HTML**
 
@@ -91,7 +91,7 @@ using (var viewer = new Viewer("Products.numbers"))
 
 The following image demonstrates the result:
 
-![Render an Apple Numbers spreadsheet to HTML](viewer/net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-html.png)
+![Render an Apple Numbers spreadsheet to HTML](/viewer/net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-html.png)
 
 ### Create an HTML file with external resources
 
@@ -139,7 +139,7 @@ using (var viewer = new Viewer("Products.numbers"))
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
-![Place HTML resources in a separate folder](viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-html-external-resources.png)
 
 ## Render spreadsheets as PDF
 
@@ -162,7 +162,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 
 The following image demonstrates the result:
 
-![Render an Excel file to PDF](viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-pdf.png)
+![Render an Excel file to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-pdf.png)
 
 **Example  2: Convert an Apple Numbers spreadsheet to PDF**
 
@@ -181,7 +181,7 @@ using (var viewer = new Viewer("Products.numbers"))
 
 The following image demonstrates the result:
 
-![Render an Apple Numbers spreadsheet to PDF](viewer/net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-pdf.png)
+![Render an Apple Numbers spreadsheet to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-pdf.png)
 
 ## Render spreadsheets as PNG
 
@@ -206,7 +206,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 ```
 The following image demonstrates the result:
 
-![Render an Excel file to PNG](viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-png.png)
+![Render an Excel file to PNG](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-png.png)
 
 **Example  2: Convert an Apple Numbers spreadsheet to PNG**
 
@@ -228,7 +228,7 @@ using (var viewer = new Viewer("Products.numbers"))
 
 The following image demonstrates the result:
 
-![Render an Apple Numbers spreadsheet to PNG](viewer/net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-png.png)
+![Render an Apple Numbers spreadsheet to PNG](/viewer/net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-png.png)
 
 ## Render spreadsheets as JPEG
 
@@ -325,7 +325,7 @@ using (var viewer = new Viewer("sample.xlsx"))
 
 The following image demonstrates a sample console output:
 
-![Retrieve worksheet names](viewer/net/images/rendering-basics/render-spreadsheets/retrieve-worksheet-names.png)
+![Retrieve worksheet names](/viewer/net/images/rendering-basics/render-spreadsheets/retrieve-worksheet-names.png)
 
 ## See also
 

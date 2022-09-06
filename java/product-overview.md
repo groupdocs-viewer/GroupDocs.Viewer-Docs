@@ -9,7 +9,7 @@ productName: GroupDocs.Viewer for Java
 toc: True
 ---
 
-<img src="viewer/java/images/home.png" alt="groupdocs-viewer-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
+<img src="/viewer/java/images/home.png" alt="groupdocs-viewer-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
 GroupDocs.Viewer for Java is a cross-platform class library that enables you to build awesome file viewer applications.
 

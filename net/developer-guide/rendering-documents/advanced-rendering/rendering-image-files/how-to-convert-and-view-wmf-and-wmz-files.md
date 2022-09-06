@@ -28,7 +28,7 @@ See [Render EMF and EMZ files]({{< ref "how-to-convert-and-view-emf-and-emz-file
 
 In case you need to view a WMF(WMZ) file in a browser or a standard image or PDF viewer application, you can convert it to HTML, JPEG, PNG  PDF format with GroupDocs.Viewer for .NET.
 
-![WMF and WMZ](viewer/net/images/how-to-convert-and-view-wmf-and-wmz-files/sample.jpg)
+![WMF and WMZ](/viewer/net/images/how-to-convert-and-view-wmf-and-wmz-files/sample.jpg)
 
 ## How to convert WMZ files
 
@@ -48,7 +48,7 @@ using (Viewer viewer = new Viewer("sample.WMZ"))
 \
 The following screenshot shows the output HTML file opened in a browser.
 
-![WMF/WMZ in HTML](viewer/net/images/how-to-convert-and-view-wmf-and-wmz-files/html.jpg)
+![WMF/WMZ in HTML](/viewer/net/images/how-to-convert-and-view-wmf-and-wmz-files/html.jpg)
 
 ### Convert WMZ to JPG
 
@@ -66,7 +66,7 @@ using (Viewer viewer = new Viewer("sample.WMZ"))
 \
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![WMF/WMZ in JPG](viewer/net/images/how-to-convert-and-view-wmf-and-wmz-files/jpg.jpg)
+![WMF/WMZ in JPG](/viewer/net/images/how-to-convert-and-view-wmf-and-wmz-files/jpg.jpg)
 
 ### Convert WMZ to PNG
 
@@ -84,7 +84,7 @@ using (Viewer viewer = new Viewer("sample.WMZ"))
 \
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![WMF/WMZ in PNG](viewer/net/images/how-to-convert-and-view-wmf-and-wmz-files/png.jpg)
+![WMF/WMZ in PNG](/viewer/net/images/how-to-convert-and-view-wmf-and-wmz-files/png.jpg)
 
 ### Convert WMZ to PDF
 
@@ -102,4 +102,4 @@ using (Viewer viewer = new Viewer("sample.WMZ"))
 \
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![WMF/WMZ in PDF](viewer/net/images/how-to-convert-and-view-wmf-and-wmz-files/pdf.jpg)
+![WMF/WMZ in PDF](/viewer/net/images/how-to-convert-and-view-wmf-and-wmz-files/pdf.jpg)

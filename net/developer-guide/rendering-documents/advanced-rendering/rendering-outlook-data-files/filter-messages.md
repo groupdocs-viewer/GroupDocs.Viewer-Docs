@@ -10,7 +10,7 @@ hideChildren: False
 ---
 MS Outlook allows to filter messages inside folders by some text value from message content and by part of the sender's or recipient's address.
 
-![](viewer/net/images/filter-messages.png)
+![](/viewer/net/images/filter-messages.png)
 
 GroupDocs.Viewer also allows filtering the rendered messages using the following filters:
 

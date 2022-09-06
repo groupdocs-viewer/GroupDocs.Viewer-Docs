@@ -12,7 +12,7 @@ hideChildren: False
 
 [AI](https://fileinfo.com/extension/ai#adobe_illustrator_file) is an Adobe vector graphics format. Typically used for logos and print media, illustrations.
 
-![AI file example](viewer/net/images/how-to-convert-and-view-ai-files/ai-file-example.jpg)
+![AI file example](/viewer/net/images/how-to-convert-and-view-ai-files/ai-file-example.jpg)
 
 ## How to view AI files
 
@@ -35,7 +35,7 @@ using (Viewer viewer = new Viewer("sample.ai"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![AI file converted in HTML](viewer/net/images/how-to-convert-and-view-ai-files/ai-file-in-html.jpg)
+![AI file converted in HTML](/viewer/net/images/how-to-convert-and-view-ai-files/ai-file-in-html.jpg)
 
 ### Convert AI to JPG
 
@@ -52,7 +52,7 @@ using (Viewer viewer = new Viewer("sample.ai"))
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![AI file converted in JPG](viewer/net/images/how-to-convert-and-view-ai-files/ai-file-in-jpg.jpg)
+![AI file converted in JPG](/viewer/net/images/how-to-convert-and-view-ai-files/ai-file-in-jpg.jpg)
 
 ### Convert AI to PNG
 
@@ -69,7 +69,7 @@ using (Viewer viewer = new Viewer("sample.ai"))
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![AI file converted in PNG](viewer/net/images/how-to-convert-and-view-ai-files/ai-file-in-png.jpg)
+![AI file converted in PNG](/viewer/net/images/how-to-convert-and-view-ai-files/ai-file-in-png.jpg)
 
 ### Convert AI to PDF
 
@@ -86,5 +86,5 @@ using (Viewer viewer = new Viewer("sample.ai"))
 
 The following screenshot shows the output PDF file opened in a browser.
 
-![AI file converted in PDF](viewer/net/images/how-to-convert-and-view-ai-files/ai-file-in-pdf.jpg)
+![AI file converted in PDF](/viewer/net/images/how-to-convert-and-view-ai-files/ai-file-in-pdf.jpg)
 

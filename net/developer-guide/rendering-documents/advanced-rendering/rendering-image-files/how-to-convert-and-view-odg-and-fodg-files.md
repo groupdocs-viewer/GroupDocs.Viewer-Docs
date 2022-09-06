@@ -14,7 +14,7 @@ These files can be opened with LibreOffice(OpenOffice) draw.
 
 In case you need to view a ODG(FODG) file in a browser or in a standard image or PDF viewer application, you can convert it to HTML, JPEG, PNG  PDF format with GroupDocs.Viewer for .NET. 
 
-![](viewer/net/images/how-to-convert-and-view-odg-and-fodg-files.png)
+![](/viewer/net/images/how-to-convert-and-view-odg-and-fodg-files.png)
 
 ## How to convert FODG files
 
@@ -33,7 +33,7 @@ using (Viewer viewer = new Viewer("sample.fodg"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![](viewer/net/images/how-to-convert-and-view-odg-and-fodg-files_1.png)
+![](/viewer/net/images/how-to-convert-and-view-odg-and-fodg-files_1.png)
 
 ### Convert FODG to JPG
 
@@ -50,7 +50,7 @@ using (Viewer viewer = new Viewer("sample.fodg"))
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![](viewer/net/images/how-to-convert-and-view-odg-and-fodg-files_2.png)
+![](/viewer/net/images/how-to-convert-and-view-odg-and-fodg-files_2.png)
 
 ### Convert FODG to PNG
 
@@ -67,7 +67,7 @@ using (Viewer viewer = new Viewer("sample.fodg"))
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![](viewer/net/images/how-to-convert-and-view-odg-and-fodg-files_3.png)
+![](/viewer/net/images/how-to-convert-and-view-odg-and-fodg-files_3.png)
 
 ### Convert FODG to PDF
 
@@ -84,4 +84,4 @@ using (Viewer viewer = new Viewer("sample.fodg"))
 
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![](viewer/net/images/how-to-convert-and-view-odg-and-fodg-files_4.png)
+![](/viewer/net/images/how-to-convert-and-view-odg-and-fodg-files_4.png)

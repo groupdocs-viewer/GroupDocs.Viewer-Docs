@@ -14,7 +14,7 @@ CDR files can be opened with Corel Draw, Corel PaintShop, Adobe Illustrator, Ink
 
 In case you need to view a CDR file in a browser or a standard image or PDF viewer application, you can convert it to HTML, JPEG, PNG  PDF format with GroupDocs.Viewer for .NET.
 
-![CDR](viewer/net/images/how-to-convert-and-view-cdr-files/sample.jpg)
+![CDR](/viewer/net/images/how-to-convert-and-view-cdr-files/sample.jpg)
 
 ## How to convert CDR files
 
@@ -37,7 +37,7 @@ using (Viewer viewer = new Viewer("sample.cdr"))
 \
 The following screenshot shows the output HTML file opened in a browser.
 
-![CDR in HTML](viewer/net/images/how-to-convert-and-view-cdr-files/html.jpg)
+![CDR in HTML](/viewer/net/images/how-to-convert-and-view-cdr-files/html.jpg)
 
 ### Convert CDR to JPG
 
@@ -58,7 +58,7 @@ using (Viewer viewer = new Viewer("sample.cdr"))
 \
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![CDR in JPG](viewer/net/images/how-to-convert-and-view-cdr-files/jpg.jpg)
+![CDR in JPG](/viewer/net/images/how-to-convert-and-view-cdr-files/jpg.jpg)
 
 ### Convert CDR to PNG
 
@@ -79,7 +79,7 @@ using (Viewer viewer = new Viewer("sample.cdr"))
 \
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![CDR in PNG](viewer/net/images/how-to-convert-and-view-cdr-files/png.jpg)
+![CDR in PNG](/viewer/net/images/how-to-convert-and-view-cdr-files/png.jpg)
 
 ### Convert CDR to PDF
 
@@ -100,4 +100,4 @@ using (Viewer viewer = new Viewer("sample.cdr"))
 \
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![CDR in PDF](viewer/net/images/how-to-convert-and-view-cdr-files/pdf.jpg)
+![CDR in PDF](/viewer/net/images/how-to-convert-and-view-cdr-files/pdf.jpg)

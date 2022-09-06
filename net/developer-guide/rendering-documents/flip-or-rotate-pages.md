@@ -8,7 +8,7 @@ keywords: rotate pdf, rotate pages
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-![Flip or rotate pages](viewer/net/images/flip-or-rotate-pages.png)
+![Flip or rotate pages](/viewer/net/images/flip-or-rotate-pages.png)
 
 The GroupDocs.Viewer enables you to rotate individual pages when rendering documents in HTML/PDF/JPG/PNG formats. To flip/rotate pages use the [RotatePage](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewoptions/methods/rotatepage) method of [ViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewoptions) class.  The method accepts page number as the first parameter and rotation angle as the second parameter. There are three options that you can pass as the second parameter into [RotatePage](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewoptions/methods/rotatepage) method:
 

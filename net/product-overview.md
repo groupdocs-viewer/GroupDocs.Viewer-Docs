@@ -9,7 +9,7 @@ productName: GroupDocs.Viewer for .NET
 toc: True
 ---
 
-<img src="viewer/net/images/home.png" alt="groupdocs-viewer-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
+<img src="/viewer/net/images/home.png" alt="groupdocs-viewer-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
 GroupDocs.Viewer for .NET is a cross-platform class library that enables you to build awesome [file viewer](https://en.wikipedia.org/wiki/File_viewer) applications.
 

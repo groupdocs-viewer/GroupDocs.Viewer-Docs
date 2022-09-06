@@ -16,7 +16,7 @@ Let's check how does output looks when converting sample CAD drawing with GroupD
 
 And as you can see the background color of the output image below is white.
 
-![](viewer/net/images/how-to-set-background-color-when-converting-cad-drawings.png)
+![](/viewer/net/images/how-to-set-background-color-when-converting-cad-drawings.png)
 
 Now, lets set background color and convert CAD drawing one more time.
 
@@ -35,6 +35,6 @@ using (Viewer viewer = new Viewer("input.dwg"))
 
 And here is output image with blue background color:
 
-![](viewer/net/images/how-to-set-background-color-when-converting-cad-drawings_1.png)
+![](/viewer/net/images/how-to-set-background-color-when-converting-cad-drawings_1.png)
 
 

@@ -35,7 +35,7 @@ using (Viewer viewer = new Viewer("sample.plt"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![](viewer/net/images/how-to-view-plt-files.png)
+![](/viewer/net/images/how-to-view-plt-files.png)
 
 ### Convert PLT to JPG
 
@@ -56,7 +56,7 @@ using (Viewer viewer = new Viewer("sample.plt"))
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![](viewer/net/images/how-to-view-plt-files_1.png)
+![](/viewer/net/images/how-to-view-plt-files_1.png)
 
 ### Convert PLT to PNG
 
@@ -77,7 +77,7 @@ using (Viewer viewer = new Viewer("sample.plt"))
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![](viewer/net/images/how-to-view-plt-files_2.png)
+![](/viewer/net/images/how-to-view-plt-files_2.png)
 
 ### Convert PLT to PDF
 
@@ -98,5 +98,5 @@ using (Viewer viewer = new Viewer("sample.plt"))
 
 The following screenshot shows the output PDF file opened in a browser.
 
-![](viewer/net/images/how-to-view-plt-files_3.png)
+![](/viewer/net/images/how-to-view-plt-files_3.png)
 

@@ -22,4 +22,4 @@ using (Viewer viewer = new Viewer("sample.zip"))
 
 To see the contents of a particular folder, just click on it. To get back in-depth, click on the required folder in the header near the archive name.
 
-![Windows explorer navigation style](viewer/net/images/navigation-in-archive-files/navigation.gif)
+![Windows explorer navigation style](/viewer/net/images/navigation-in-archive-files/navigation.gif)

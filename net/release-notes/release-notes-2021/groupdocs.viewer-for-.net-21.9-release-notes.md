@@ -98,7 +98,7 @@ Now when rendering source code files, they will be colorized. This feature is su
 C++, CSS, HTML, JAVA, Javascript, JSON, PHP, SQL, XML, PSM1, PS1, PSD1
 
 C# colorizing example: \
-![C# coloring](viewer/net/images/code-coloring/cs-document-coloring.png)
+![C# coloring](/viewer/net/images/code-coloring/cs-document-coloring.png)
 
 SQL colorizing example: \
-![SQL coloring](viewer/net/images/code-coloring/sql-document-coloring.png)
+![SQL coloring](/viewer/net/images/code-coloring/sql-document-coloring.png)

@@ -65,7 +65,7 @@ using (var viewer = new Viewer("sample.pptx"))
 
 The following image demonstrates the result:
 
-![Render a presentation file to HTML](viewer/net/images/rendering-basics/render-presentations/render-to-html-embedded-resources.png)
+![Render a presentation file to HTML](/viewer/net/images/rendering-basics/render-presentations/render-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -93,7 +93,7 @@ using (var viewer = new Viewer("sample.pptx"))
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
-![Place HTML resources in a separate folder](viewer/net/images/rendering-basics/render-presentations/render-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-presentations/render-to-html-external-resources.png)
 
 ## Render presentations as PDF
 
@@ -113,7 +113,7 @@ using (var viewer = new Viewer("sample.pptx"))
 
 The following image demonstrates the result:
 
-![Render a presentation file to PDF](viewer/net/images/rendering-basics/render-presentations/render-to-pdf.png)
+![Render a presentation file to PDF](/viewer/net/images/rendering-basics/render-presentations/render-to-pdf.png)
 
 ## Render presentations as PNG
 
@@ -137,7 +137,7 @@ using (var viewer = new Viewer("sample.pptx"))
 
 The following image demonstrates the result:
 
-![Render a presentation file to PNG](viewer/net/images/rendering-basics/render-presentations/render-to-png-image.png)
+![Render a presentation file to PNG](/viewer/net/images/rendering-basics/render-presentations/render-to-png-image.png)
 
 ## Render presentations as JPEG
 
@@ -228,13 +228,13 @@ using (var viewer = new Viewer("sample.pptx"))
 
 The following image demonstrates the result:
 
-![Render a presentation with comments](viewer/net/images/rendering-basics/render-presentations/render-presentation-comments-to-pdf.png)
+![Render a presentation with comments](/viewer/net/images/rendering-basics/render-presentations/render-presentation-comments-to-pdf.png)
 
 ## Render speaker notes
 
 A presentation file can contain speaker notes that help presenters recall important information during the presentation. Speaker notes appear in the **Notes** pane below each slide.
 
-![Speaker notes in Microsoft PowerPoint](viewer/net/images/rendering-basics/render-presentations/presentation-speaker-notes.png)
+![Speaker notes in Microsoft PowerPoint](/viewer/net/images/rendering-basics/render-presentations/presentation-speaker-notes.png)
 
 Enable the [ViewOptions.RenderNotes](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendernotes) property for a target view to display speaker notes in the output HTML, PDF, or image files.
 
@@ -255,4 +255,4 @@ using (var viewer = new Viewer("sample.pptx"))
 
 The image below demonstrates the result.
 
-![Render a presentation with notes](viewer/net/images/rendering-basics/render-presentations/render-presentation-notes-to-pdf.png)
+![Render a presentation with notes](/viewer/net/images/rendering-basics/render-presentations/render-presentation-notes-to-pdf.png)

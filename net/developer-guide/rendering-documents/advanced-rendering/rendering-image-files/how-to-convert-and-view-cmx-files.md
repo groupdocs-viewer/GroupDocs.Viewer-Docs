@@ -14,7 +14,7 @@ CMX files can be opened with Corel Draw, Corel PaintShop, Adobe Illustrator, Ink
 
 In case you need to view a CMX file in a browser or a standard image or PDF viewer application, you can convert it to HTML, JPEG, PNG  PDF format with GroupDocs.Viewer for .NET.
 
-![CMX](viewer/net/images/how-to-convert-and-view-cmx-files/sample.jpg)
+![CMX](/viewer/net/images/how-to-convert-and-view-cmx-files/sample.jpg)
 
 ## How to convert CMX files
 
@@ -38,7 +38,7 @@ using (Viewer viewer = new Viewer("sample.cmx"))
 \
 The following screenshot shows the output HTML file opened in a browser.
 
-![CMX in HTML](viewer/net/images/how-to-convert-and-view-cmx-files/html.jpg)
+![CMX in HTML](/viewer/net/images/how-to-convert-and-view-cmx-files/html.jpg)
 
 ### Convert CMX to JPG
 
@@ -60,7 +60,7 @@ using (Viewer viewer = new Viewer("sample.cmx"))
 \
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![CMX in JPG](viewer/net/images/how-to-convert-and-view-cmx-files/jpg.jpg)
+![CMX in JPG](/viewer/net/images/how-to-convert-and-view-cmx-files/jpg.jpg)
 
 ### Convert CMX to PNG
 
@@ -82,7 +82,7 @@ using (Viewer viewer = new Viewer("sample.cmx"))
 \
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![CMX in PNG](viewer/net/images/how-to-convert-and-view-cmx-files/png.jpg)
+![CMX in PNG](/viewer/net/images/how-to-convert-and-view-cmx-files/png.jpg)
 
 ### Convert CMX to PDF
 
@@ -103,4 +103,4 @@ using (Viewer viewer = new Viewer("sample.cmx"))
 \
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![CMX in PDF](viewer/net/images/how-to-convert-and-view-cmx-files/pdf.jpg)
+![CMX in PDF](/viewer/net/images/how-to-convert-and-view-cmx-files/pdf.jpg)

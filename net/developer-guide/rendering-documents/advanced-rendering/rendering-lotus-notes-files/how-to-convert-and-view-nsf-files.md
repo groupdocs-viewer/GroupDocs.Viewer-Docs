@@ -15,7 +15,7 @@ NSF (Notes Storage Facility) is a database format, developed by IBM. It contains
 The NSF files can be opened with IBM Notes.
 In case you need to view an NSF file in a browser or in a standard image or PDF viewer application, you can convert it to HTML, JPEG, PNG  PDF format with GroupDocs.Viewer for .NET.
 
-![NSF files in IBM Notes application](viewer/net/images/how-to-convert-and-view-nsf-files/nsf-files-in-ibm-notes.jpg)
+![NSF files in IBM Notes application](/viewer/net/images/how-to-convert-and-view-nsf-files/nsf-files-in-ibm-notes.jpg)
 
 ### Convert NSF to HTML
 
@@ -32,7 +32,7 @@ using (Viewer viewer = new Viewer("sample.nsf"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![NSF files](viewer/net/images/how-to-convert-and-view-nsf-files/nsf-file-in-browser.jpg)
+![NSF files](/viewer/net/images/how-to-convert-and-view-nsf-files/nsf-file-in-browser.jpg)
 
 ### Convert NSF to JPG
 
@@ -49,7 +49,7 @@ using (Viewer viewer = new Viewer("sample.nsf"))
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![NSF file converted to JPG in Photo Viewer](viewer/net/images/how-to-convert-and-view-nsf-files/nsf-file-in-photo-viewer-jpg.jpg)
+![NSF file converted to JPG in Photo Viewer](/viewer/net/images/how-to-convert-and-view-nsf-files/nsf-file-in-photo-viewer-jpg.jpg)
 
 ### Convert NSF to PNG
 
@@ -66,7 +66,7 @@ using (Viewer viewer = new Viewer("sample.nsf"))
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![NSF file converted to PNG in Photo Viewer](viewer/net/images/how-to-convert-and-view-nsf-files/nsf-file-in-photo-viewer-png.jpg)
+![NSF file converted to PNG in Photo Viewer](/viewer/net/images/how-to-convert-and-view-nsf-files/nsf-file-in-photo-viewer-png.jpg)
 
 ### Convert NSF files to PDF
 
@@ -83,4 +83,4 @@ using (Viewer viewer = new Viewer("sample.nsf"))
 
 The following screenshot shows the output PDF file opened in a browser.
 
-![NSF file converted to PDF in Acrobat reader](viewer/net/images/how-to-convert-and-view-nsf-files/nsf-file-in-photo-viewer-pdf.jpg)
+![NSF file converted to PDF in Acrobat reader](/viewer/net/images/how-to-convert-and-view-nsf-files/nsf-file-in-photo-viewer-pdf.jpg)

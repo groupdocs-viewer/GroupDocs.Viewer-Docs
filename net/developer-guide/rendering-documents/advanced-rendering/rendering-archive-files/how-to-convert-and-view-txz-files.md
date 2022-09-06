@@ -15,7 +15,7 @@ Extension: TXZ or TAR.XZ.
 
 TXZ archives can be opened with WinRar.
 
-![Archive in WinRar](viewer/net/images/how-to-convert-and-view-txz-files/txz-in-winrar.png)
+![Archive in WinRar](/viewer/net/images/how-to-convert-and-view-txz-files/txz-in-winrar.png)
 
 ## How to convert TXZ archive files
 
@@ -33,7 +33,7 @@ using (Viewer viewer = new Viewer("sample.txz"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![Multiple pages HTML converted archive](viewer/net/images/how-to-convert-and-view-txz-files/txz-to-multiple-html.png)
+![Multiple pages HTML converted archive](/viewer/net/images/how-to-convert-and-view-txz-files/txz-to-multiple-html.png)
 
 ### Convert archive files to single HTML
 
@@ -50,7 +50,7 @@ using (Viewer viewer = new Viewer("sample.txz"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![Single page HTML converted zip](viewer/net/images/how-to-convert-and-view-txz-files/txz-to-single-html.png)
+![Single page HTML converted zip](/viewer/net/images/how-to-convert-and-view-txz-files/txz-to-single-html.png)
 
 ### Convert archive files to JPG
 
@@ -66,7 +66,7 @@ using (Viewer viewer = new Viewer("sample.txz"))
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![JPEG converted archive](viewer/net/images/how-to-convert-and-view-txz-files/txz-in-jpg.png)
+![JPEG converted archive](/viewer/net/images/how-to-convert-and-view-txz-files/txz-in-jpg.png)
 
 ### Convert archive files to PNG
 
@@ -82,7 +82,7 @@ using (Viewer viewer = new Viewer("sample.txz"))
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![PNG converted archive](viewer/net/images/how-to-convert-and-view-txz-files/txz-in-png.png)
+![PNG converted archive](/viewer/net/images/how-to-convert-and-view-txz-files/txz-in-png.png)
 
 ### Convert archive to PDF
 
@@ -98,4 +98,4 @@ using (Viewer viewer = new Viewer("sample.txz"))
 
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![PDF converted archive](viewer/net/images/how-to-convert-and-view-txz-files/txz-in-pdf.png)
+![PDF converted archive](/viewer/net/images/how-to-convert-and-view-txz-files/txz-in-pdf.png)

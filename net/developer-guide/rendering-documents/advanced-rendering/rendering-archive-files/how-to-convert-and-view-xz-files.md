@@ -19,7 +19,7 @@ Extension: XZ
 
 XZ archives can be opened with WinRar.
 
-![Archive in WinRar](viewer/net/images/how-to-convert-and-view-xz-files/xz-in-winrar.png)
+![Archive in WinRar](/viewer/net/images/how-to-convert-and-view-xz-files/xz-in-winrar.png)
 
 ## How to convert XZ archive files
 
@@ -37,7 +37,7 @@ using (Viewer viewer = new Viewer("sample.vb.xz"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![Multiple pages HTML converted archive](viewer/net/images/how-to-convert-and-view-xz-files/xz-to-html.png)
+![Multiple pages HTML converted archive](/viewer/net/images/how-to-convert-and-view-xz-files/xz-to-html.png)
 
 ### Convert archive files to JPG
 
@@ -53,7 +53,7 @@ using (Viewer viewer = new Viewer("sample.vb.xz"))
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![JPEG converted archive](viewer/net/images/how-to-convert-and-view-xz-files/xz-in-jpg.png)
+![JPEG converted archive](/viewer/net/images/how-to-convert-and-view-xz-files/xz-in-jpg.png)
 
 ### Convert archive files to PNG
 
@@ -69,7 +69,7 @@ using (Viewer viewer = new Viewer("sample.vb.xz"))
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![PNG converted archive](viewer/net/images/how-to-convert-and-view-xz-files/xz-in-png.png)
+![PNG converted archive](/viewer/net/images/how-to-convert-and-view-xz-files/xz-in-png.png)
 
 ### Convert archive to PDF
 
@@ -85,4 +85,4 @@ using (Viewer viewer = new Viewer("sample.vb.xz"))
 
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![PDF converted archive](viewer/net/images/how-to-convert-and-view-xz-files/xz-in-pdf.png)
+![PDF converted archive](/viewer/net/images/how-to-convert-and-view-xz-files/xz-in-pdf.png)

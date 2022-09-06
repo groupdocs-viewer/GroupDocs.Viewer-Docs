@@ -10,7 +10,7 @@ hideChildren: False
 ---
 Wavefront 3D Object Files (.obj) are 3D format images developed by Wavefront Technologies for the Advanced Visualizer (TAV) software. It contains text descriptions of vertexes, texture vertices and texture mapping (UV-position).
 
-![](viewer/net/images/how-to-convert-and-view-obj-files.png)
+![](/viewer/net/images/how-to-convert-and-view-obj-files.png)
 
 ## How to convert OBJ files
 
@@ -33,7 +33,7 @@ using (Viewer viewer = new Viewer("sample.obj"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![](viewer/net/images/how-to-convert-and-view-obj-files_1.png)
+![](/viewer/net/images/how-to-convert-and-view-obj-files_1.png)
 
 ### Convert OBJ to JPG
 
@@ -54,7 +54,7 @@ using (Viewer viewer = new Viewer("sample.obj"))
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![](viewer/net/images/how-to-convert-and-view-obj-files_2.png)
+![](/viewer/net/images/how-to-convert-and-view-obj-files_2.png)
 
 ### Convert OBJ to PNG
 
@@ -75,7 +75,7 @@ using (Viewer viewer = new Viewer("sample.obj"))
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![](viewer/net/images/how-to-convert-and-view-obj-files_3.png)
+![](/viewer/net/images/how-to-convert-and-view-obj-files_3.png)
 
 ### Convert OBJ to PDF
 
@@ -96,5 +96,5 @@ using (Viewer viewer = new Viewer("sample.obj"))
 
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![](viewer/net/images/how-to-convert-and-view-obj-files_4.png)
+![](/viewer/net/images/how-to-convert-and-view-obj-files_4.png)
 

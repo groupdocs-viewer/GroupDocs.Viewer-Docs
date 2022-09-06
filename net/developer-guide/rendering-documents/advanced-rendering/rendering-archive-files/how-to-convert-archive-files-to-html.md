@@ -15,7 +15,7 @@ Mostly used in Linux (Unix): TAR, BZIP2 (BZ2), GZIP
 ZIP archives can be opened with Windows explorer,
 RAR, TAR, BZIP2, GZIP formats can be opened with WinRar,
 
-![Archive in windows explorer](viewer/net/images/how-to-convert-archive-files-to-html/zip-in-explorer.png)
+![Archive in windows explorer](/viewer/net/images/how-to-convert-archive-files-to-html/zip-in-explorer.png)
 
 If you convert archive files to HTML, you can choose beetween multiple and single pages conversion.
 
@@ -38,7 +38,7 @@ using (Viewer viewer = new Viewer("sample.zip"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![Multiple pages HTML converted archive](viewer/net/images/how-to-convert-archive-files-to-html/zip-to-multiple-html.png)
+![Multiple pages HTML converted archive](/viewer/net/images/how-to-convert-archive-files-to-html/zip-to-multiple-html.png)
 
 ### Convert archive files to single HTML
 
@@ -55,4 +55,4 @@ using (Viewer viewer = new Viewer("sample.zip"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![Single page HTML converted zip](viewer/net/images/how-to-convert-archive-files-to-html/zip-to-single-html.png)
+![Single page HTML converted zip](/viewer/net/images/how-to-convert-archive-files-to-html/zip-to-single-html.png)

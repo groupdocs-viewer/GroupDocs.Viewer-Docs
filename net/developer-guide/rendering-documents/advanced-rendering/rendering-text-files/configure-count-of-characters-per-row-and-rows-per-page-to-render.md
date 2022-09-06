@@ -23,4 +23,4 @@ using (Viewer viewer = new Viewer("sample.txt"))
 
 The following screenshot shows the difference when setting *MaxRowsPerPage=30*.
 
-![Comparing output of default and adjusted value of MaxRowsPerPage parameter](viewer/net/images/configure-count-of-characters-per-row-and-rows-per-page-to-render/max_row_per_page.png)
+![Comparing output of default and adjusted value of MaxRowsPerPage parameter](/viewer/net/images/configure-count-of-characters-per-row-and-rows-per-page-to-render/max_row_per_page.png)

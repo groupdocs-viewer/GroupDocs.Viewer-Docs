@@ -63,7 +63,7 @@ using (var viewer = new Viewer("flowchart.vsdx"))
 
 The following image demonstrates the result:
 
-![Render a Visio file to HTML](viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-html-embedded-resources.png)
+![Render a Visio file to HTML](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -91,7 +91,7 @@ using (var viewer = new Viewer("flowchart.vsdx"))
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
-![Place HTML resources in a separate folder](viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-html-external-resources.png)
 
 ## Render Visio files as PDF
 
@@ -111,7 +111,7 @@ using (var viewer = new Viewer("flowchart.vsdx"))
 
 The following image demonstrates the result:
 
-![Render a Visio file to PDF](viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-pdf.png)
+![Render a Visio file to PDF](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-pdf.png)
 
 ## Render Visio files as PNG
 
@@ -134,7 +134,7 @@ using (var viewer = new Viewer("flowchart.vsdx"))
 ```
 The following image demonstrates the result:
 
-![Render a Visio file to PNG](viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-png-image.png)
+![Render a Visio file to PNG](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-png-image.png)
 
 ## Render Visio files as JPEG
 
@@ -160,7 +160,7 @@ using (var viewer = new Viewer("flowchart.vsdx"))
 
 GroupDocs.Viewer allows you to render shapes used in a Visio diagram or stored in a Visio stencil file. These shapes are displayed in the **Document Stencil** pane in Microsoft Visio.
 
-![Document Stencil pane in Visio](viewer/net/images/rendering-basics/render-visio-documents/visio-document-stencil.png)
+![Document Stencil pane in Visio](/viewer/net/images/rendering-basics/render-visio-documents/visio-document-stencil.png)
 
 To render only master shapes contained in your Visio file, enable the [VisioRenderingOptions.RenderFiguresOnly](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/visiorenderingoptions/properties/renderfiguresonly) property for one of the following classes (depending on the output file format):
 
@@ -187,4 +187,4 @@ using (var viewer = new Viewer("map.vsdx"))
 
 The image below demonstrates the result.
 
-![Render master shapes only](viewer/net/images/rendering-basics/render-visio-documents/render-visio-shapes.png)
+![Render master shapes only](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-shapes.png)

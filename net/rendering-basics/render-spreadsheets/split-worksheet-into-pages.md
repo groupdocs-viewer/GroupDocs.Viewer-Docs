@@ -45,7 +45,7 @@ using (var viewer = new Viewer("two-pages.xlsx"))
 
 The image below demonstrates the output PDF file.
 
-![Break a worksheet into two pages](viewer/net/images/rendering-basics/render-spreadsheets/render-two-pages.png)
+![Break a worksheet into two pages](/viewer/net/images/rendering-basics/render-spreadsheets/render-two-pages.png)
 
 ## Split a worksheet into pages by rows and columns
 
@@ -69,7 +69,7 @@ using (var viewer = new Viewer("two-pages.xlsx"))
 
 The image below demonstrates the output PDF file.
 
-![Break a worksheet into four pages](viewer/net/images/rendering-basics/render-spreadsheets/render-four-pages.png)
+![Break a worksheet into four pages](/viewer/net/images/rendering-basics/render-spreadsheets/render-four-pages.png)
 
 ## Use page breaks
 
@@ -77,7 +77,7 @@ GroupDocs.Viewer allows you to use page breaks to split a worksheet into separat
 
 In the image below, the vertical page break is inserted after the column **E**, and the horizontal page break is located under the row **30**.
 
-![Preview page breaks in Microsoft Excel](viewer/net/images/rendering-basics/render-spreadsheets/excel-page-break-preview.png)
+![Preview page breaks in Microsoft Excel](/viewer/net/images/rendering-basics/render-spreadsheets/excel-page-break-preview.png)
 
 To render a worksheet based on the inserted page breaks, call the [SpreadsheetOptions.ForRenderingByPageBreaks](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/methods/forrenderingbypagebreaks) static method and assign the returned **SpreadsheetOptions** instance to the [ViewOptions.SpreadsheetOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property of your view (depending on the output file format).
 
@@ -98,13 +98,13 @@ using (var viewer = new Viewer("products.xlsx"))
 
 The image below illustrates the result.
 
-![Render a worksheet to PDF based on page breaks](viewer/net/images/rendering-basics/render-spreadsheets/render-by-page-breaks.png)
+![Render a worksheet to PDF based on page breaks](/viewer/net/images/rendering-basics/render-spreadsheets/render-by-page-breaks.png)
 
 ## Render a print area
 
 In Microsoft Excel, you can designate one or more cell ranges in a worksheet as the only region to print (a _print area_). A worksheet can contain multiple print areas. Each print area prints on its own page.
 
-![Specify a print area in Microsoft Excel](viewer/net/images/rendering-basics/render-spreadsheets/excel-set-print-area.png)
+![Specify a print area in Microsoft Excel](/viewer/net/images/rendering-basics/render-spreadsheets/excel-set-print-area.png)
 
 GroupDocs.Viewer also supports this option. Call the [SpreadsheetOptions.ForRenderingPrintArea](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/methods/forrenderingprintarea) static method and assign the returned **SpreadsheetOptions** instance to the [ViewOptions.SpreadsheetOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property to display only the worksheet's print area in the output HTML, PDF, or image file.
 
@@ -125,4 +125,4 @@ using (var viewer = new Viewer("invoice.xlsx"))
 
 The image below illustrates the result.
 
-![Render the print area to PDF](viewer/net/images/rendering-basics/render-spreadsheets/render-print-area.png)
+![Render the print area to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-print-area.png)

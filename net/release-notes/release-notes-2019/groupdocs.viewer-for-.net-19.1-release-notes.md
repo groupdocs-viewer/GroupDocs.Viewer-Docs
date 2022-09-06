@@ -92,7 +92,7 @@ foreach (AttachmentBase attachment in info.Attachments)
 
 ### Filtering Outlook messages when rendering into HTML, image, and PDF
 
-![](viewer/net/images/groupdocs-viewer-for-net-19-1-release-notes.png)
+![](/viewer/net/images/groupdocs-viewer-for-net-19-1-release-notes.png)
 
 Since version 19.1, GroupDocs.Viewer for .NET allows filtering rendered messages by subject and content or by sender and recipient email address. As an example, when you set **OutlookOptions.TextFilter** as 'Susan' you get rendered all messages that contain text 'Susan' in the message subject or body. When you set **OutlookOptions.AddressFilter** as 'susan' you are filtering messages that contain 'susan' as a part of the sender or recipient address. The examples below show how to filter the rendered items.
 

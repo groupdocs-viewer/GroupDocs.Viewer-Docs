@@ -16,7 +16,7 @@ The CF2 can be opened with desktop applications like e.g. PicView 8.
 
 In case you need to view a CF2 file in a browser or in a standard image or PDF viewer application, you can convert it to HTML, JPEG, PNG  PDF format with GroupDocs.Viewer for .NET. 
 
-![](viewer/net/images/how-to-convert-and-view-cff2-and-cf2-files.png)
+![](/viewer/net/images/how-to-convert-and-view-cff2-and-cf2-files.png)
 
 ### Convert CF2 to HTML
 
@@ -37,7 +37,7 @@ using (Viewer viewer = new Viewer("sample.cf2"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![](viewer/net/images/how-to-convert-and-view-cff2-and-cf2-files_1.png)
+![](/viewer/net/images/how-to-convert-and-view-cff2-and-cf2-files_1.png)
 
 ### Convert CF2 to JPG
 
@@ -57,7 +57,7 @@ using (Viewer viewer = new Viewer("sample.cf2"))
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![](viewer/net/images/how-to-convert-and-view-cff2-and-cf2-files_2.png)
+![](/viewer/net/images/how-to-convert-and-view-cff2-and-cf2-files_2.png)
 
 ### Convert CF2 to PNG
 
@@ -77,7 +77,7 @@ using (Viewer viewer = new Viewer("sample.cf2"))
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![](viewer/net/images/how-to-convert-and-view-cff2-and-cf2-files_3.png)
+![](/viewer/net/images/how-to-convert-and-view-cff2-and-cf2-files_3.png)
 
 ### Convert CF2 to PDF
 
@@ -97,4 +97,4 @@ using (Viewer viewer = new Viewer("sample.cf2"))
 
 The following screenshot shows the output PDF file opened in a browser.
 
-![](viewer/net/images/how-to-convert-and-view-cff2-and-cf2-files_4.png)
+![](/viewer/net/images/how-to-convert-and-view-cff2-and-cf2-files_4.png)

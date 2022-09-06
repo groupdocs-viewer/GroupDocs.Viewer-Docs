@@ -8,7 +8,7 @@ keywords: "Renderdateien, HTML, JPEG, PNG, PDF"
 Produktname: GroupDocs.Viewer für .NET
 ausblendenKinder: Stimmt
 ---
-<img src="viewer/net/images/home.png" alt="groupdocs-viewer-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
+<img src="/viewer/net/images/home.png" alt="groupdocs-viewer-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
 GroupDocs.Viewer für .NET ist eine plattformübergreifende Klassenbibliothek, mit der Sie großartige [Dateibetrachter](https://en.wikipedia.org/wiki/File_viewer)-Anwendungen erstellen können.
 

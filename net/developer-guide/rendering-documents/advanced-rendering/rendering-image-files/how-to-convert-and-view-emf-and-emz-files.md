@@ -28,7 +28,7 @@ EMZ - Windows Metafile Enhanced Compressed (GZipped) Format
 
 In case you need to view an EMF(EMZ) file in a browser or a standard image or PDF viewer application, you can convert it to HTML, JPEG, PNG  PDF format with GroupDocs.Viewer for .NET.
 
-![EMF and EMZ](viewer/net/images/how-to-convert-and-view-emf-and-emz-files/sample.jpg)
+![EMF and EMZ](/viewer/net/images/how-to-convert-and-view-emf-and-emz-files/sample.jpg)
 
 ## How to convert EMZ files
 
@@ -48,7 +48,7 @@ using (Viewer viewer = new Viewer("sample.emz"))
 \
 The following screenshot shows the output HTML file opened in a browser.
 
-![EMF/EMZ in HTML](viewer/net/images/how-to-convert-and-view-emf-and-emz-files/html.jpg)
+![EMF/EMZ in HTML](/viewer/net/images/how-to-convert-and-view-emf-and-emz-files/html.jpg)
 
 ### Convert EMZ to JPG
 
@@ -66,7 +66,7 @@ using (Viewer viewer = new Viewer("sample.emz"))
 \
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![EMF/EMZ in JPG](viewer/net/images/how-to-convert-and-view-emf-and-emz-files/jpg.jpg)
+![EMF/EMZ in JPG](/viewer/net/images/how-to-convert-and-view-emf-and-emz-files/jpg.jpg)
 
 ### Convert EMZ to PNG
 
@@ -84,7 +84,7 @@ using (Viewer viewer = new Viewer("sample.emz"))
 \
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![EMF/EMZ in PNG](viewer/net/images/how-to-convert-and-view-emf-and-emz-files/png.jpg)
+![EMF/EMZ in PNG](/viewer/net/images/how-to-convert-and-view-emf-and-emz-files/png.jpg)
 
 ### Convert EMZ to PDF
 
@@ -102,4 +102,4 @@ using (Viewer viewer = new Viewer("sample.emz"))
 \
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![EMF/EMZ in PDF](viewer/net/images/how-to-convert-and-view-emf-and-emz-files/pdf.jpg)
+![EMF/EMZ in PDF](/viewer/net/images/how-to-convert-and-view-emf-and-emz-files/pdf.jpg)

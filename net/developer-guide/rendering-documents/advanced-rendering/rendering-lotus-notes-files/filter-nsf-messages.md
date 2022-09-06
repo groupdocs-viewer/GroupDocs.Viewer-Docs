@@ -10,7 +10,7 @@ hideChildren: False
 ---
  Lotus Notes allows filtering messages inside folders by some text value from message content and by part of the sender's or recipient's address.
 
-![Filter NSF messages](viewer/net/images/filter-nsf-messages/filter-nsf-messages.jpg)
+![Filter NSF messages](/viewer/net/images/filter-nsf-messages/filter-nsf-messages.jpg)
 
 GroupDocs.Viewer also allows filtering the rendered messages using the following filters:
 

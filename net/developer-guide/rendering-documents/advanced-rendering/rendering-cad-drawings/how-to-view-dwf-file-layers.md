@@ -10,7 +10,7 @@ hideChildren: False
 ---
 Design Web Format File (.dwf) consists of various user layers. Layers represent various parts of the entire drawing, for example, this drawing describes a plan of a building and it's parts like stairs, walls, doors located in different layers.
 
-![](viewer/net/images/how-to-view-dwf-file-layers.png)
+![](/viewer/net/images/how-to-view-dwf-file-layers.png)
 
 ## Background
 
@@ -21,7 +21,7 @@ It contains graphics and text as part of design data and reduce the size of the 
 
 By default GroupDocs.Viewer renders all layers:
 
-![](viewer/net/images/how-to-view-dwf-file-layers_1.png)
+![](/viewer/net/images/how-to-view-dwf-file-layers_1.png)
 
 ## How to view only specific layers
 
@@ -44,5 +44,5 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 
 Now GroupDocs.Viewer will render only these layers:
 
-![](viewer/net/images/how-to-view-dwf-file-layers_2.png)
+![](/viewer/net/images/how-to-view-dwf-file-layers_2.png)
 

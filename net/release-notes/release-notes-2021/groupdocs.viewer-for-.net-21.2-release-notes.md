@@ -164,4 +164,4 @@ public TimeSpan TimeZoneOffset { get; set; }
 
 Now when rendering APNG and GIF to HTML you will get a page with an animated picture. If an animated file contains only one frame, HTML with static image will be generated.
 
-![Animated PNG in HTML](viewer/net/images/apng_animated.gif)
+![Animated PNG in HTML](/viewer/net/images/apng_animated.gif)

@@ -33,7 +33,7 @@ Console.WriteLine($"\nExtension {extension}; File type: {fileType}.");
 
 As you can see from the screenshot below the file type detected correctly.
 
-![](viewer/net/images/how-to-determine-file-type.png)
+![](/viewer/net/images/how-to-determine-file-type.png)
 
 ### Determine file-type by media-type
 
@@ -47,7 +47,7 @@ Console.WriteLine($"\nMedia-type {mediaType}; File type: {fileType}.");
 
 The media-type will be mapped to the file type as shown on the screenshot below.
 
-![](viewer/net/images/how-to-determine-file-type_1.png)
+![](/viewer/net/images/how-to-determine-file-type_1.png)
 
 ### Determine file type by stream or bytes
 
@@ -64,4 +64,4 @@ using (Stream stream = File.OpenRead("sample.docx"))
 
 A similar output would be printed in case of GroupDocs.Viewer detected the file type successfully.
 
-![](viewer/net/images/how-to-determine-file-type_2.png)
+![](/viewer/net/images/how-to-determine-file-type_2.png)

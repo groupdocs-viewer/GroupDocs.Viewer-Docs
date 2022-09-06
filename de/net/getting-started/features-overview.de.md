@@ -14,7 +14,7 @@ tok: Stimmt
 
 Wir verwenden den Begriff ["Rendering"]({{< ref "viewer/net/developer-guide/rendering-documents/_index.md" >}}) in GroupDocs.Viewer, um den Prozess der Konvertierung eines Dokuments in eine Datei zu beschreiben formatiert, paginiert oder das Konzept von Seiten hat. Wenn Sie beispielsweise eine DOCX-Datei mit drei Seiten haben, erhalten Sie nach dem Rendern dieser Datei in HTML drei HTML-Dateien in der Ausgabe, die jede der Seiten im Dokument darstellen.
 
-![Rendering diagram](viewer/net/images/getting-started/features-overview/rendering.png)
+![Rendering diagram](/viewer/net/images/getting-started/features-overview/rendering.png)
 
 ### Rendern in HTML
 

@@ -12,7 +12,7 @@ toc: True
 
 We're going to build simple ASP.NET Core Web app that will be using GroupDocs.Viewer for .NET as a rendering engine. For the simplicity we'll use terminal to create the app and to add required packages but you can do the same with Visual Studio. The following image demonstrates simplified application diagram.
 
-![Simplified diagram of the web app that we're going to build](viewer/net/images/showcases/how-to-integrate-groupdocs-viewer-ui-in-asp-net-core-web-app/simplified-app-diagram.png)
+![Simplified diagram of the web app that we're going to build](/viewer/net/images/showcases/how-to-integrate-groupdocs-viewer-ui-in-asp-net-core-web-app/simplified-app-diagram.png)
 
 This sample application can be found in our [demo projects](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/ASP.NET%20Core) at GitHub.
 
@@ -194,7 +194,7 @@ info: Microsoft.Hosting.Lifetime[0]
 
 Now, we can navigate in our browser to one of the endpoints listed in the output above and add `/viewer` path to it to see our viewer app in action.
 
-![GroupDocs.Viewer.Ui in ASP.NET Core Web app](viewer/net/images/showcases/how-to-integrate-groupdocs-viewer-ui-in-asp-net-core-web-app/groupdocs-viewer-ui-asp-net-core-web-app.png)
+![GroupDocs.Viewer.Ui in ASP.NET Core Web app](/viewer/net/images/showcases/how-to-integrate-groupdocs-viewer-ui-in-asp-net-core-web-app/groupdocs-viewer-ui-asp-net-core-web-app.png)
 
 Start using the app by clicking at the folder icon to upload your files, you can also copy your files to the `Files` directory or point a Viewer to read files from any directory on your local drive by passing the path to the directory in `AddLocalStorage` extension method.
 

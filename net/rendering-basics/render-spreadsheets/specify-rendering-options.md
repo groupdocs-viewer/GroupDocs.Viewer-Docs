@@ -28,7 +28,7 @@ GroupDocs.Viewer ships with the [SpreadsheetOptions](https://apireference.groupd
 
 Rows and columns in a worksheet have unique names displayed on the worksheet's left and top side. Rows are numbered (1, 2, 3, ..., 1048576), and columns are lettered (A, B, C, ..., XFD).
 
-![Row and column headings in a worksheet](viewer/net/images/rendering-basics/render-spreadsheets/excel-row-and-column-headings.png)
+![Row and column headings in a worksheet](/viewer/net/images/rendering-basics/render-spreadsheets/excel-row-and-column-headings.png)
 
 Enable the [SpreadsheetOptions.RenderHeadings](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/renderheadings) property to display row and column headings in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
 
@@ -49,7 +49,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 
 The following image demonstrates the result:
 
-![Render an Excel file with row and column headings to PDF](viewer/net/images/rendering-basics/render-spreadsheets/render-row-and-column-headings-to-pdf.png)
+![Render an Excel file with row and column headings to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-row-and-column-headings-to-pdf.png)
 
 ## Render worksheet gridlines
 
@@ -72,31 +72,31 @@ using (var viewer = new Viewer("invoice.xlsx"))
 
 The following image demonstrates the result:
 
-![Render an Excel file with gridlines to PDF](viewer/net/images/rendering-basics/render-spreadsheets/render-excel-gridlines-to-pdf.png)
+![Render an Excel file with gridlines to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-gridlines-to-pdf.png)
 
 ## Control cell text overflow
 
 The [SpreadsheetOptions.TextOverflowMode](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/textoverflowmode) option allows you to prevent text overflow in worksheet cells (see the image below) when you convert your spreadsheet file to HTML, PDF, or image format.
 
-![Text overflow in a cell](viewer/net/images/rendering-basics/render-spreadsheets/excel-text-overflow.png)
+![Text overflow in a cell](/viewer/net/images/rendering-basics/render-spreadsheets/excel-text-overflow.png)
 
 You can set the [TextOverflowMode](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/textoverflowmode) property to one of the following values:
 
 * [TextOverflowMode.OverlayIfNextIsEmpty](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoverflowmode) (default) --- Allows text to overflow into adjacent cells if these cells have no data. If adjacent cells are not empty, the overflowing text is truncated.
 
-    ![TextOverflowMode.OverlayIfNextIsEmpty](viewer/net/images/rendering-basics/render-spreadsheets/text-overflow-mode-overlay-if-empty.png)
+    ![TextOverflowMode.OverlayIfNextIsEmpty](/viewer/net/images/rendering-basics/render-spreadsheets/text-overflow-mode-overlay-if-empty.png)
 
 * [TextOverflowMode.Overlay](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoverflowmode) --- Text always overflows into adjacent cells even if these cells contain data.
 
-    ![TextOverflowMode.Overlay](viewer/net/images/rendering-basics/render-spreadsheets/text-overflow-mode-overlay.png)
+    ![TextOverflowMode.Overlay](/viewer/net/images/rendering-basics/render-spreadsheets/text-overflow-mode-overlay.png)
 
 * [TextOverflowMode.AutoFitColumn](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoverflowmode) --- Increases the column width to fit cell text.
 
-    ![TextOverflowMode.AutoFitColum](viewer/net/images/rendering-basics/render-spreadsheets/text-overflow-mode-autofit-column.png)
+    ![TextOverflowMode.AutoFitColum](/viewer/net/images/rendering-basics/render-spreadsheets/text-overflow-mode-autofit-column.png)
 
 * [TextOverflowMode.HideText](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoverflowmode) --- Hides text that overflows the cell boundaries.
   
-    ![TextOverflowMode.HideText](viewer/net/images/rendering-basics/render-spreadsheets/text-overflow-mode-hide-text.png)
+    ![TextOverflowMode.HideText](/viewer/net/images/rendering-basics/render-spreadsheets/text-overflow-mode-hide-text.png)
 
 The following example demonstrates how to set this option in code:
 
@@ -119,7 +119,7 @@ Use the [ViewOptions.SpreadsheetOptions.RenderHiddenRows](https://apireference.g
 
 The example below demonstrates how to set this option in code. The rows **20** and **21** and the column **E** are hidden in the source Excel workbook. 
 
-![Hidden rows and columns in a worksheet](viewer/net/images/rendering-basics/render-spreadsheets/excel-hidden-columns-and-rows.png)
+![Hidden rows and columns in a worksheet](/viewer/net/images/rendering-basics/render-spreadsheets/excel-hidden-columns-and-rows.png)
 
 ```cs
 using GroupDocs.Viewer;
@@ -137,7 +137,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 
 The image below demonstrates the result. Hidden rows and columns appear in the generated PDF file.
 
-![Hidden rows and columns in a worksheet](viewer/net/images/rendering-basics/render-spreadsheets/render-excel-with-hidden-columns-and-rows-to-pdf.png)
+![Hidden rows and columns in a worksheet](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-with-hidden-columns-and-rows-to-pdf.png)
 
 ## Render hidden worksheets
 
@@ -178,7 +178,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 
 The following image demonstrates the result:
 
-![Skip empty columns and rows](viewer/net/images/rendering-basics/render-spreadsheets/excel-skip-empty-columns-and-rows.png)
+![Skip empty columns and rows](/viewer/net/images/rendering-basics/render-spreadsheets/excel-skip-empty-columns-and-rows.png)
 
 ## Render cell comments
 
@@ -199,4 +199,4 @@ using (var viewer = new Viewer("invoice.xlsx"))
 
 The following image demonstrates the result:
 
-![Render cell comments](viewer/net/images/rendering-basics/render-spreadsheets/render-excel-comments-to-png.png)
+![Render cell comments](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-comments-to-png.png)

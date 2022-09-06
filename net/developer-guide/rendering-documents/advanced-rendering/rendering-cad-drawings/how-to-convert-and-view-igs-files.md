@@ -30,7 +30,7 @@ using (Viewer viewer = new Viewer("sample.igs"))
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![](viewer/net/images/how-to-convert-and-view-igs-files.png)
+![](/viewer/net/images/how-to-convert-and-view-igs-files.png)
 
 ### Convert IGS to JPG
 
@@ -46,7 +46,7 @@ using (Viewer viewer = new Viewer("sample.igs"))
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![](viewer/net/images/how-to-convert-and-view-igs-files_1.png)
+![](/viewer/net/images/how-to-convert-and-view-igs-files_1.png)
 
 ### Convert IGS to PNG
 
@@ -62,7 +62,7 @@ using (Viewer viewer = new Viewer("sample.igs"))
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![](viewer/net/images/how-to-convert-and-view-igs-files_2.png)
+![](/viewer/net/images/how-to-convert-and-view-igs-files_2.png)
 
 ### Convert IGS to PDF
 
@@ -78,6 +78,6 @@ using (Viewer viewer = new Viewer("sample.igs"))
 
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![](viewer/net/images/how-to-convert-and-view-igs-files_3.png)
+![](/viewer/net/images/how-to-convert-and-view-igs-files_3.png)
 
 

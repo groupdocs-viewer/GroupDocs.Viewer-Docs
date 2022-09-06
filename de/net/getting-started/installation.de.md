@@ -37,7 +37,7 @@ Befolgen Sie diese Schritte, um GroupDocs.Viewer mit der Paket-Manager-GUI zu re
 * Wählen Sie **Registerkarte durchsuchen** und geben Sie **"GroupDocs.Viewer"** in das Suchtextfeld ein.
 * Klicken Sie auf die Schaltfläche **Installieren**, um die neueste Version der API in Ihrem Projekt zu installieren, wie im folgenden Screenshot gezeigt.
 
-![](viewer/net/images/getting-started/installation/install-via-package-manager-gui.png)
+![](/viewer/net/images/getting-started/installation/install-via-package-manager-gui.png)
 
 ### Verwenden der Paket-Manager-Konsole
 
@@ -47,7 +47,7 @@ Sie können die folgenden Schritte ausführen, um mit der Paket-Manager-Konsole 
 * Geben Sie den Befehl „Install-Package GroupDocs.Viewer“ ein und drücken Sie die Eingabetaste, um die neueste Version in Ihrer Anwendung zu installieren.
 * Nach erfolgreicher Installation wird GroupDocs.Viewer in Ihrer Anwendung referenziert.
 
-![](viewer/net/images/getting-started/installation/using-package-manager-console.png)
+![](/viewer/net/images/getting-started/installation/using-package-manager-console.png)
 
 ## Von der offiziellen GroupDocs-Website installieren
 

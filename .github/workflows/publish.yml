@@ -28,8 +28,8 @@ jobs:
 
       - name: Install Hugo
         run: |
-          curl -LO https://github.com/gohugoio/hugo/releases/download/v0.67.1/hugo_extended_0.67.1_Linux-64bit.deb
-          sudo dpkg -i hugo_extended_0.67.1_Linux-64bit.deb
+          curl -LO https://github.com/gohugoio/hugo/releases/download/v0.101.0/hugo_extended_0.101.0_Linux-64bit.deb
+          sudo dpkg -i hugo_extended_0.101.0_Linux-64bit.deb
           
       - name: Run and build Hugo
         run: |
@@ -37,7 +37,7 @@ jobs:
           cp -r java common/content/${{ env.PRODUCT }}
           cp -r net common/content/${{ env.PRODUCT }}
           cp _index.md common/content/${{ env.PRODUCT }}
-          hugo --source common --minify --config config.toml,ignore-total-config.toml,show-feedback-config.toml
+          hugo --source common --minify --config config-geekdoc.toml,ignore-total-config.toml,show-feedback-config.toml
 
       - name: Deploy sitemap
         uses: nogsantos/scp-deploy@master
