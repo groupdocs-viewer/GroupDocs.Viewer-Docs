@@ -15,11 +15,11 @@ The most used formats in the CAD design industry are DWG, DWF, DXF, DGN. In this
 
 The following topics are covered below in brief:
 
-* [Java API for rendering CAD files](viewer/java/how-to-view-cad-documents-using-java/#java-api-for-rendering-cad-files)
-* [How to render CAD files into HTML, JPG, PNG, or PDF](viewer/java/how-to-view-cad-documents-using-java/#how-to-render-cad-files-into-html-jpg-png-or-pdf)
-* [Getting layouts/layers information](viewer/java/how-to-view-cad-documents-using-java/#getting-layoutslayers-information)
-* [Layers rendering](viewer/java/how-to-view-cad-documents-using-java/#layers-rendering)
-* [Layouts rendering](viewer/java/how-to-view-cad-documents-using-java/#layouts-rendering)
+* [Java API for rendering CAD files](/viewer/java/how-to-view-cad-documents-using-java/#java-api-for-rendering-cad-files)
+* [How to render CAD files into HTML, JPG, PNG, or PDF](/viewer/java/how-to-view-cad-documents-using-java/#how-to-render-cad-files-into-html-jpg-png-or-pdf)
+* [Getting layouts/layers information](/viewer/java/how-to-view-cad-documents-using-java/#getting-layoutslayers-information)
+* [Layers rendering](/viewer/java/how-to-view-cad-documents-using-java/#layers-rendering)
+* [Layouts rendering](/viewer/java/how-to-view-cad-documents-using-java/#layouts-rendering)
 
 ## Java API for rendering CAD files
 
@@ -27,7 +27,7 @@ The following topics are covered below in brief:
 
 Follow one of the ways as described in the [Installation]({{< ref "/viewer/java/getting-started/installation" >}}) section to install and reference GroupDocs.Viewer for Java.
 
-![Source CAD document preview](viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/source_image_preview.jpg)
+![Source CAD document preview](/viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/source_image_preview.jpg)
 
 ## How to render CAD files into HTML, JPG, PNG, or PDF
 
@@ -47,7 +47,7 @@ try (Viewer viewer = new Viewer("sample.dwf"))
 }
 ```
 
-![Rendering CAD document to HTML](viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/rendering_to_html_with_embed.jpg)
+![Rendering CAD document to HTML](/viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/rendering_to_html_with_embed.jpg)
 
 ### Rendering to HTML with External Resources in Java
 
@@ -63,7 +63,7 @@ To render your file to HTML file(s) with external resources do the following ste
 
 Resources will be placed to separate folder.
 
-![Resources placed into separate folder](viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/resources_placed_to_separate_folder.jpg)
+![Resources placed into separate folder](/viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/resources_placed_to_separate_folder.jpg)
 
 ```java
 try (Viewer viewer = new Viewer("sample.dwf"))
@@ -89,7 +89,7 @@ try (Viewer viewer = new Viewer("sample.dwf"))
 }
 ```
 
-![Rendering CAD document to JPEG](viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/rendering_cad_to_jpeg.jpg)
+![Rendering CAD document to JPEG](/viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/rendering_cad_to_jpeg.jpg)
 
 ### Rendering to PNG in Java
 
@@ -105,7 +105,7 @@ try (Viewer viewer = new Viewer("sample.dwf"))
 }
 ```
 
-![Rendering CAD document to PNG](viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/rendering_cad_to_png.jpg)
+![Rendering CAD document to PNG](/viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/rendering_cad_to_png.jpg)
 
 ### Rendering to PDF in Java
 
@@ -121,7 +121,7 @@ try (Viewer viewer = new Viewer("sample.dwf"))
 }
 ```
 
-![Rendering CAD document to PDF](viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/rendering_cad_to_pdf.jpg)
+![Rendering CAD document to PDF](/viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/rendering_cad_to_pdf.jpg)
 
 ## Getting layouts/layers information
 
@@ -195,7 +195,7 @@ try (Viewer viewer = new Viewer("sample.dwf"))
 This drawing contains two layers: "0" - with a rectangle and "CIRCLE" with a circle. We want to render circle only,
 so we added a layer with the name "CIRCLE" in the layers list.
 
-![Render specific layer](viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/render_specific_layer.jpg)
+![Render specific layer](/viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/render_specific_layer.jpg)
 
 ### Layouts rendering
 
@@ -221,7 +221,7 @@ try (Viewer viewer = new Viewer("sample.dwf"))
 This drawing contains three layouts: "three-layouts-with-layers-Layout1", "three-layouts-with-layers-Layout2", "three-layouts-with-layers-Layout3".
 We select "three-layouts-with-layers-Layout2" layout name with rectangle, we set this layer name in LayoutName property.
 
-![Specific layout rendering](viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/specific_layout_rendering.jpg)
+![Specific layout rendering](/viewer/java/images/viewer-use-cases/how-to-view-cad-using-java/specific_layout_rendering.jpg)
 
 ## Get a Free API License
 
@@ -236,5 +236,5 @@ You can learn how to use GroupDocs.Viewer in your applications with [documentati
 
 ## See also
 
-* [How to view Word documents using Java](viewer/java/how-to-view-word-documents-using-java/)
-* [How to view PDF documents using Java](viewer/java/how-to-view-pdf-documents-using-java/)
+* [How to view Word documents using Java](/viewer/java/how-to-view-word-documents-using-java/)
+* [How to view PDF documents using Java](/viewer/java/how-to-view-pdf-documents-using-java/)

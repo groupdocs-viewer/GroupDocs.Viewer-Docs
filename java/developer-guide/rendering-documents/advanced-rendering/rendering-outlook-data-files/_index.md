@@ -25,7 +25,7 @@ Auto Detection means that GroupDocs.Viewer can determine the type of the Outloo
 
 In case you need to view a PST/OST file in a browser or in a standard image or PDF viewer application, you can convert it to HTML, JPEG, PNG  PDF format with GroupDocs.Viewer for Java.
 
-![](viewer/java/images/how-to-convert-and-view-ost-and-pst-files.png)
+![](/viewer/java/images/how-to-convert-and-view-ost-and-pst-files.png)
 
 ### Rendering OST and PST to HTML
 
@@ -41,7 +41,7 @@ To convert OST and PST files to HTML with GroupDocs.Viewer for Java use followin
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![](viewer/java/images/how-to-convert-and-view-ost-and-pst-files_1.png)
+![](/viewer/java/images/how-to-convert-and-view-ost-and-pst-files_1.png)
 
 ### Rendering OST and PST to JPG
 
@@ -57,7 +57,7 @@ To convert OST and PST files to JPG with GroupDocs.Viewer for Java use following
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![](viewer/java/images/how-to-convert-and-view-ost-and-pst-files_2.png)
+![](/viewer/java/images/how-to-convert-and-view-ost-and-pst-files_2.png)
 
 ### Rendering OST and PST to PNG
 
@@ -73,7 +73,7 @@ To convert OST and PST files to PNG with GroupDocs.Viewer for Java use following
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![](viewer/java/images/how-to-convert-and-view-ost-and-pst-files_3.png)
+![](/viewer/java/images/how-to-convert-and-view-ost-and-pst-files_3.png)
 
 ### Rendering OST and PST files to PDF
 
@@ -89,7 +89,7 @@ To convert OST/PST files to PDF with GroupDocs.Viewer for Java use following co
 
 The following screenshot shows the output PDF file opened in a browser.
 
-![](viewer/java/images/how-to-convert-and-view-ost-and-pst-files_4.png)
+![](/viewer/java/images/how-to-convert-and-view-ost-and-pst-files_4.png)
 
 ## More resources
 

@@ -48,7 +48,7 @@ To run the examples using Eclipse IDE import the project to get started with it:
 
 The following screenshot shows the Examples project opened in Eclipse IDE.
 
-![GroupDocs.Viewer for Java Examples in Eclipse IDE](viewer/java/images/samples_eclipse-viewer.png)
+![GroupDocs.Viewer for Java Examples in Eclipse IDE](/viewer/java/images/samples_eclipse-viewer.png)
 
 The following text will be printed to the `Console` window:
 

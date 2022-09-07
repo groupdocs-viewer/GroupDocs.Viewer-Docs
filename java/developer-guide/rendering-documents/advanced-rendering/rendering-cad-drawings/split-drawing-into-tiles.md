@@ -10,7 +10,7 @@ hideChildren: False
 ---
 Tiled rendering or (rendering by coordinates) is the process of rendering CAD drawings (into an image, HTML or PDF) by dividing into square parts and rendering each part (or tile) separately. The advantage of this process is that the amount of memory involved is reduced as compared to rendering the entire document at once. Generally, DWG documents are divided into pages by Model and Layouts, but when the tiled rendering is enabled, only the Model is rendered and every tile composes a separate page.
 
-![](viewer/java/images/split-drawing-into-tiles.jpg)
+![](/viewer/java/images/split-drawing-into-tiles.jpg)
 
 ## Rendering by Coordinates
 
@@ -18,7 +18,7 @@ Before you start rendering by coordinates, you should obtain the overall width a
 
 Overall size of the document is 650px height and 750px width. The selected tile starts at coordinate X: 250 and Y: 100 and has a width 150px, height: 200px
 
-![](viewer/java/images/split-drawing-into-tiles_1.jpg)
+![](/viewer/java/images/split-drawing-into-tiles_1.jpg)
 
 You can add as many tiles as you need.  
 The following code sample demonstrates how to render DWG drawing into an image by dividing into four equal parts.

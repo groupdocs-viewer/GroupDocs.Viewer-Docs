@@ -29,7 +29,7 @@ To convert IGS files to HTML with GroupDocs.Viewer for Java use following code
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![](viewer/java/images/how-to-convert-and-view-igs-files.png)
+![](/viewer/java/images/how-to-convert-and-view-igs-files.png)
 
 ### Convert IGS to JPG
 
@@ -44,7 +44,7 @@ To convert IGS files to JPG with GroupDocs.Viewer for Java use following code:
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![](viewer/java/images/how-to-convert-and-view-igs-files_1.png)
+![](/viewer/java/images/how-to-convert-and-view-igs-files_1.png)
 
 ### Convert IGS to PNG
 
@@ -59,7 +59,7 @@ To convert IGS files to PNG with GroupDocs.Viewer for Java use following code: 
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![](viewer/java/images/how-to-convert-and-view-igs-files_2.png)
+![](/viewer/java/images/how-to-convert-and-view-igs-files_2.png)
 
 ### Convert IGS to PDF
 
@@ -75,4 +75,4 @@ To convert IGS files to PDF with GroupDocs.Viewer for Java use following code:
 
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![](viewer/java/images/how-to-convert-and-view-igs-files_3.png)
+![](/viewer/java/images/how-to-convert-and-view-igs-files_3.png)

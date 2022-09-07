@@ -22,5 +22,5 @@ When processing text files you can adjust page parameters like max characters pe
 
 The following screenshot shows the difference when setting `setMaxRowsPerPage(30)`.
 
-![Comparing output of default and adjusted value of MaxRowsPerPage parameter](viewer/java/images/configure-count-of-characters-per-row-and-rows-per-page-to-render/max_row_per_page.png)
+![Comparing output of default and adjusted value of MaxRowsPerPage parameter](/viewer/java/images/configure-count-of-characters-per-row-and-rows-per-page-to-render/max_row_per_page.png)
 

@@ -34,6 +34,8 @@ Enable the [SpreadsheetOptions.RenderHeadings](https://apireference.groupdocs.co
 
 The following example demonstrates how to convert an Excel workbook to PDF and display row and column headings in the output PDF file:
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -46,6 +48,8 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -57,6 +61,8 @@ Use the [SpreadsheetOptions.RenderGridLines](https://apireference.groupdocs.com/
 
 The following code example demonstrates how to convert an Excel workbook to PDF and display gridlines in the output PDF file:
 
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -69,6 +75,8 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -100,6 +108,8 @@ You can set the [TextOverflowMode](https://apireference.groupdocs.com/viewer/net
 
 The following example demonstrates how to set this option in code:
 
+{{< tabs "example3">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -112,6 +122,8 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Render hidden rows and columns
 
@@ -121,6 +133,8 @@ The example below demonstrates how to set this option in code. The rows **20** a
 
 ![Hidden rows and columns in a worksheet](/viewer/net/images/rendering-basics/render-spreadsheets/excel-hidden-columns-and-rows.png)
 
+{{< tabs "example4">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -134,6 +148,8 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The image below demonstrates the result. Hidden rows and columns appear in the generated PDF file.
 
@@ -145,6 +161,8 @@ If your spreadsheet file contains hidden worksheets, enable the [ViewOptions.Ren
 
 The following example demonstrates how to set this option in code:
 
+{{< tabs "example5">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -157,11 +175,15 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Skip empty rows and columns
 
 GroupDocs.Viewer supports the [SpreadsheetOptions.SkipEmptyRows](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/skipemptyrows) and [SpreadsheetOptions.SkipEmptyColumns](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/skipemptycolumns) properties that allow you to skip blank rows and columns when you convert your spreadsheet file to HTML, PDF, or image format.
 
+{{< tabs "example6">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -175,6 +197,8 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -184,6 +208,8 @@ The following image demonstrates the result:
 
 Use the [ViewOptions.RenderComments](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option to display cell comments in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
 
+{{< tabs "example7">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -196,6 +222,8 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 

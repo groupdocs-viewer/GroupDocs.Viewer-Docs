@@ -478,4 +478,4 @@ New methods were added to [WordProcessingOptions](<https://apireference.groupdoc
 * In this version we've improved viewing of Personal Storage [OST](https://docs.fileformat.com/email/ost/)/[PST](https://docs.fileformat.com/email/pst/) files and as a result, the behavior changed.  
     Now when viewing personal storage OST /PST files the **Inbox** folder is selected and displayed by default as it shown on the screenshot below.
 
-![](viewer/java/images/groupdocs-viewer-for-net-20-4-release-notes.png)
+![](/viewer/java/images/groupdocs-viewer-for-net-20-4-release-notes.png)

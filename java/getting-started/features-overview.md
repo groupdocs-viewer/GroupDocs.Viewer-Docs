@@ -14,7 +14,7 @@ toc: True
 
 We use the term ["rendering"]({{< ref "viewer/java/developer-guide/rendering-documents/_index.md" >}}) in GroupDocs.Viewer to describe the process of converting a document into a file format, paginated, or that has the concept of pages. For example, when you have a DOCX file with three pages then after rendering this file to HTML you'll get three HTML files on the output that represent each of the pages in the document.
 
-![Rendering diagram](viewer/java/images/getting-started/features-overview/rendering.png)
+![Rendering diagram](/viewer/java/images/getting-started/features-overview/rendering.png)
 
 ### Rendering to HTML
 

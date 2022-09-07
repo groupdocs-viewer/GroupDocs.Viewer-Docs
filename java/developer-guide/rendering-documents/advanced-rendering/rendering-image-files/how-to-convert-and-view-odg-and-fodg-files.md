@@ -16,7 +16,7 @@ These files can be opened with LibreOffice(OpenOffice) draw.
 
 In case you need to view a ODG(FODG) file in a browser or in a standard image or PDF viewer application, you can convert it to HTML, JPEG, PNG  PDF format with GroupDocs.Viewer for Java. 
 
-![](viewer/java/images/how-to-convert-and-view-odg-and-fodg-files.png)
+![](/viewer/java/images/how-to-convert-and-view-odg-and-fodg-files.png)
 
 ## How to convert FODG files
 
@@ -34,7 +34,7 @@ To convert FODG files to HTML with GroupDocs.Viewer for Java use following code
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![](viewer/java/images/how-to-convert-and-view-odg-and-fodg-files_1.png)
+![](/viewer/java/images/how-to-convert-and-view-odg-and-fodg-files_1.png)
 
 ### Convert FODG to JPG
 
@@ -51,7 +51,7 @@ To convert FODG files to JPG with GroupDocs.Viewer for Java use following code:
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![](viewer/java/images/how-to-convert-and-view-odg-and-fodg-files_2.png)
+![](/viewer/java/images/how-to-convert-and-view-odg-and-fodg-files_2.png)
 
 ### Convert FODG to PNG
 
@@ -67,7 +67,7 @@ To convert PLT/HPG files to PNG with GroupDocs.Viewer for Java use following c
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![](viewer/java/images/how-to-convert-and-view-odg-and-fodg-files_3.png)
+![](/viewer/java/images/how-to-convert-and-view-odg-and-fodg-files_3.png)
 
 ### Convert FODG to PDF
 
@@ -83,4 +83,4 @@ To convert FODG files to PDF with GroupDocs.Viewer for Java use following code:
 
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![](viewer/java/images/how-to-convert-and-view-odg-and-fodg-files_4.png)
+![](/viewer/java/images/how-to-convert-and-view-odg-and-fodg-files_4.png)

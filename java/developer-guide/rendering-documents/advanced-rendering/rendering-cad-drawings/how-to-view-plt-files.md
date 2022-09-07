@@ -34,7 +34,7 @@ To convert PLT/HPG files to HTML with GroupDocs.Viewer for Java use following c
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![](viewer/java/images/how-to-view-plt-files.png)
+![](/viewer/java/images/how-to-view-plt-files.png)
 
 ### Convert PLT to JPG
 
@@ -54,7 +54,7 @@ To convert PLT/HPG files to JPG with GroupDocs.Viewer for Java use following c
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![](viewer/java/images/how-to-view-plt-files_1.png)
+![](/viewer/java/images/how-to-view-plt-files_1.png)
 
 ### Convert PLT to PNG
 
@@ -74,7 +74,7 @@ To convert PLT/HPG files to PNG with GroupDocs.Viewer for Java use following c
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![](viewer/java/images/how-to-view-plt-files_2.png)
+![](/viewer/java/images/how-to-view-plt-files_2.png)
 
 ### Convert PLT to PDF
 
@@ -94,4 +94,4 @@ To convert PLT/HPG files to PDF with GroupDocs.Viewer for Java use following c
 
 The following screenshot shows the output PDF file opened in a browser.
 
-![](viewer/java/images/how-to-view-plt-files_3.png)
+![](/viewer/java/images/how-to-view-plt-files_3.png)

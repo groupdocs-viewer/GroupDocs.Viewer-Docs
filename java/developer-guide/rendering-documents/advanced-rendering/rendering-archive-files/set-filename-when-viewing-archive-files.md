@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-![](viewer/java/images/set-filename-when-viewing-archive-files.png)
+![](/viewer/java/images/set-filename-when-viewing-archive-files.png)
 
 When viewing the archive files [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) displays an archive filename in the header of each page, like it is shown on the screenshot above. By default, the name of the original file is used. The GroupDocs.Viewer for Java enables you to change or hide filename by setting [setFileName()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ArchiveOptions#setFileName(com.groupdocs.viewer.options.FileName)) option of the [ArchiveOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ArchiveOptions) class. The [setFileName()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ArchiveOptions#setFileName(com.groupdocs.viewer.options.FileName)) option can be set to:
 

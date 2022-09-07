@@ -18,7 +18,7 @@ Final margin value is calculated as:
 
 Final margin value = **[HTML page margin value]** + **[margin value in viewer]**
 
-![Page in Internet Explorer](viewer/java/images/how-to-convert-and-view-html-files-with-margins/page-in-explorer.jpg)
+![Page in Internet Explorer](/viewer/java/images/how-to-convert-and-view-html-files-with-margins/page-in-explorer.jpg)
 
 ## How to set margins values
 
@@ -40,7 +40,7 @@ To set margins values when converting HTML files to PNG with GroupDocs.Viewer fo
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![Output PNG result](viewer/java/images/how-to-convert-and-view-html-files-with-margins/png-result.jpg)
+![Output PNG result](/viewer/java/images/how-to-convert-and-view-html-files-with-margins/png-result.jpg)
 
 ### Setting margins values when converting to JPG
 
@@ -60,7 +60,7 @@ To set margins values when converting HTML files to PNG with GroupDocs.Viewer fo
 
 The following screenshot shows the output JPEG file opened in a Windows Photo Viewer application.
 
-![Output JPEG result](viewer/java/images/how-to-convert-and-view-html-files-with-margins/jpg-result.jpg)
+![Output JPEG result](/viewer/java/images/how-to-convert-and-view-html-files-with-margins/jpg-result.jpg)
 
 ### Setting margins values when converting to PDF
 
@@ -80,4 +80,4 @@ To set margins values when converting HTML files to PDF with GroupDocs.Viewer fo
 
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![Output PDF result](viewer/java/images/how-to-convert-and-view-html-files-with-margins/pdf-result.jpg)
+![Output PDF result](/viewer/java/images/how-to-convert-and-view-html-files-with-margins/pdf-result.jpg)

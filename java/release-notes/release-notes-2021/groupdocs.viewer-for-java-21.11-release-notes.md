@@ -325,7 +325,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
 
 * In this version we've improved viewing of archives - now you can navigate between archive folder with Windows explorer behavior:
   
-    ![Windows explorer navigation style](viewer/java/images/navigation-in-archive-files/navigation.gif)
+    ![Windows explorer navigation style](/viewer/java/images/navigation-in-archive-files/navigation.gif)
   
     For more details and code snippets check [Folder navigation in archive files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/navigation-in-archive-files.md">}}) documentation article.
 
@@ -349,7 +349,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
 
 * Now when rendering APNG and GIF to HTML you will get a page with an animated picture. If an animated file contains only one frame, HTML with static image will be generated.
 
-  ![Animated PNG in HTML](viewer/java/images/apng_animated.gif)
+  ![Animated PNG in HTML](/viewer/java/images/apng_animated.gif)
 
 ## Public API Changes
 

@@ -16,7 +16,7 @@ The MPP can be opened with desktop application like e.g. Microsoft Project.
 
 In case you need to view a MPP file in a browser or in a standard image or PDF viewer application, you can convert it to HTML, JPEG, PNG  PDF format with GroupDocs.Viewer for Java. 
 
-![](viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes.png)
+![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes.png)
 
 ### Convert MPP to HTML with notes
 
@@ -33,13 +33,13 @@ To convert MPP files to HTML with GroupDocs.Viewer for Java use following code:
 
 The following screenshot shows the output HTML with the tasks file opened in a browser.
 
-![](viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_1.png)
+![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_1.png)
 
 If [setRenderNotes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setRenderNotes(boolean)) property set to true, notes will be rendered on a separate page.
 
 The following screenshot shows the output HTML with the notes file opened in a browser.
 
-![](viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_2.png)
+![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_2.png)
 
 ### Convert MPP to JPG with notes
 
@@ -56,13 +56,13 @@ To convert MPP files to JPG with GroupDocs.Viewer for Java use following code: 
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![](viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_3.png)
+![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_3.png)
 
 If [setRenderNotes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setRenderNotes(boolean)) property set to true, notes will be rendered on a separate page.
 
 The following screenshot shows the output JPEG with notes file opened in a Windows Photo Viewer application.
 
-![](viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_4.png)
+![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_4.png)
 
 ### Convert MPP to PNG with notes
 
@@ -79,13 +79,13 @@ To convert MPP files to PNG with GroupDocs.Viewer for Java use following code: 
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![](viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_5.png)
+![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_5.png)
 
 If [setRenderNotes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setRenderNotes(boolean)) property set to true, notes will be rendered on a separate page.
 
 The following screenshot shows the output PNG with notes file opened in a Windows Photo Viewer application.
 
-![](viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_6.png)
+![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_6.png)
 
 ### Convert MPP to PDF with notes
 
@@ -101,10 +101,10 @@ To convert MPP files to PDF with GroupDocs.Viewer for Java use following code: 
 
 The following screenshot shows the output PDF file opened in an Adobe Acrobat Reader.
 
-![](viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_7.png)
+![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_7.png)
 
 If [setRenderNotes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setRenderNotes(boolean)) property set to true, notes will be rendered on a separate page.
 
 The following screenshot shows the page of output PDF with notes file opened in an Adobe Acrobat Reader.
 
-![](viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_8.png)
+![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_8.png)

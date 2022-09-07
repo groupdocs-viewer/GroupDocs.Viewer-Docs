@@ -14,7 +14,7 @@ hideChildren: False
 
 If you convert your CAD drawings to HTML it's better to leave them in vector format rather rasterization to get better viewing and zooming. While converting your CAD drawings to HTML GroupDocs.Viewer converts a drawing to [SVG (Scalable Vector Graphics format)](https://docs.fileformat.com/page-description-language/svg/) and embeds it to [HTML](https://docs.fileformat.com/web/html/).
 
-![](viewer/java/images/how-to-convert-cad-to-html.png)
+![](/viewer/java/images/how-to-convert-cad-to-html.png)
 
 ## How to convert CAD drawings to HTML
 
@@ -32,9 +32,9 @@ To render to HTML with external resources use following code:
 
 Result:
 
-![](viewer/java/images/how-to-convert-cad-to-html_1.png)
+![](/viewer/java/images/how-to-convert-cad-to-html_1.png)
 
-![](viewer/java/images/how-to-convert-cad-to-html_2.png)
+![](/viewer/java/images/how-to-convert-cad-to-html_2.png)
 
 Output SVG and HTML styles are located in the separate resources folder.
 
@@ -50,6 +50,6 @@ To render to HTML with embedded resources use following code:
 
 Result:
 
-![](viewer/java/images/how-to-convert-cad-to-html_3.png)
+![](/viewer/java/images/how-to-convert-cad-to-html_3.png)
 
 HTML content, SVG and HTML styles are located in one HTML file.

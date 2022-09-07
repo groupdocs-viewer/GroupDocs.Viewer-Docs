@@ -10,7 +10,7 @@ hideChildren: False
 ---
 {{< alert style="info" >}}This option is supported when rendering to JPG and PNG only.{{< /alert >}}
 
-![](viewer/java/images/rendering-pages-to-the-same-size-as-the-size-of-pages-in-a-source-document.png)
+![](/viewer/java/images/rendering-pages-to-the-same-size-as-the-size-of-pages-in-a-source-document.png)
 
 When viewing PDF documents in JPG and PNG formats by default GroupDocs.Viewer calculates output image size for better viewing quality. In case you want to make output JPG and PNG images to be the same size in pixels as the size of pages in a source PDF document GroupDocs.Viewer for Java provides a new option called [setRenderOriginalPageSize()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfOptions#setRenderOriginalPageSize(boolean)) of the [PdfOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfOptions) class. 
 

@@ -12,7 +12,7 @@ This article explains how to adjust text-overflow in cells when viewing Spreadsh
 
 ## Introduction
 
-![](viewer/java/images/adjust-text-overflow-in-cells.png)
+![](/viewer/java/images/adjust-text-overflow-in-cells.png)
 
 When Spreadsheet is rendered overflowed text inside the cell overlays subsequent cells until it meets non-empty cell. GroupDocs.Viewer provides a setting to configure the mode which will be used for rendering overflowed text:
 
