@@ -15,7 +15,7 @@ It contains graphics and text as part of design data and reduce the size of the 
 
 Design Web Format File (.dwf) consists of various user layers. Layers represent various parts of the entire drawing, for example, this drawing describes a plan of a building and it's parts like stairs, walls, doors located in different layers.
 
-![](viewer/java/images/how-to-view-dwf-file-layers.png)
+![](/viewer/java/images/how-to-view-dwf-file-layers.png)
 
 ## Background
 
@@ -23,7 +23,7 @@ Let's take a sample DWF described above and then we'll process with GroupDocs.Vi
 
 By default GroupDocs.Viewer renders all layers:
 
-![](viewer/java/images/how-to-view-dwf-file-layers_1.png)
+![](/viewer/java/images/how-to-view-dwf-file-layers_1.png)
 
 ## How to view only specific layers
 
@@ -45,4 +45,4 @@ Let's view only "Doors", "Stairs", "Walls" layers, to do that use following cod
 
 Now GroupDocs.Viewer will render only these layers:
 
-![](viewer/java/images/how-to-view-dwf-file-layers_2.png)
+![](/viewer/java/images/how-to-view-dwf-file-layers_2.png)

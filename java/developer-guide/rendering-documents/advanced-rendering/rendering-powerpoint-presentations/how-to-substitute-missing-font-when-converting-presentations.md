@@ -36,11 +36,11 @@ When converting to HTML with external resources:
 
 Output HTML with default font:
 
-![](viewer/java/images/how-to-substitute-missing-font-when-converting-presentations.png)
+![](/viewer/java/images/how-to-substitute-missing-font-when-converting-presentations.png)
 
 Output HTML with "Times New Roman" font:
 
-![](viewer/java/images/how-to-substitute-missing-font-when-converting-presentations_1.png)
+![](/viewer/java/images/how-to-substitute-missing-font-when-converting-presentations_1.png)
 
 When converting to PDF:
 
@@ -54,8 +54,8 @@ When converting to PDF:
 
 Output PDF with default font:
 
-![](viewer/java/images/how-to-substitute-missing-font-when-converting-presentations_2.png)
+![](/viewer/java/images/how-to-substitute-missing-font-when-converting-presentations_2.png)
 
 Output PDF with "Times New Roman" font:
 
-![](viewer/java/images/how-to-substitute-missing-font-when-converting-presentations_3.png)
+![](/viewer/java/images/how-to-substitute-missing-font-when-converting-presentations_3.png)

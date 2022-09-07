@@ -11,7 +11,7 @@ hideChildren: False
 When you are converting Visio files, you can choose what you want to render: Visio scheme pages or figures of Visio scheme.
 If Visio scheme does not contain pages - only figures will be rendered.
 
-![Fugures in VSS scheme](viewer/java/images/how-to-render-visio-files-figures/figures-in-visio.jpg)
+![Fugures in VSS scheme](/viewer/java/images/how-to-render-visio-files-figures/figures-in-visio.jpg)
 
 ## How to render Visio figures
 
@@ -35,7 +35,7 @@ To render Visio figures to PNG with GroupDocs.Viewer for Java use following code
 \
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![Output PNG result](viewer/java/images/how-to-render-visio-files-figures/png-result.jpg)
+![Output PNG result](/viewer/java/images/how-to-render-visio-files-figures/png-result.jpg)
 
 ### Rendering Visio figures when converting to JPG
 
@@ -54,7 +54,7 @@ To render Visio figures to JPG with GroupDocs.Viewer for Java use following code
 \
 The following screenshot shows the output JPEG file opened in a Windows Photo Viewer application.\
 \
-![Output JPEG result](viewer/java/images/how-to-render-visio-files-figures/jpg-result.jpg)
+![Output JPEG result](/viewer/java/images/how-to-render-visio-files-figures/jpg-result.jpg)
 
 ### Rendering Visio figures when converting to PDF
 
@@ -73,7 +73,7 @@ To set margins values when converting HTML files to PDF with GroupDocs.Viewer fo
 \
 The following screenshot shows the output PDF file opened in an Acrobat Reader.\
 \
-![Output PDF result](viewer/java/images/how-to-render-visio-files-figures/pdf-result.jpg)
+![Output PDF result](/viewer/java/images/how-to-render-visio-files-figures/pdf-result.jpg)
 
 ### Rendering Visio figures when converting to HTML
 
@@ -92,4 +92,4 @@ To set margins values when converting HTML files to PDF with GroupDocs.Viewer fo
 \
 The following screenshot shows the output HTML file opened in browser.\
 \
-![Output HTML result](viewer/java/images/how-to-render-visio-files-figures/html-result.jpg)
+![Output HTML result](/viewer/java/images/how-to-render-visio-files-figures/html-result.jpg)

@@ -18,11 +18,11 @@ The most used formats in the CAD design industry are DWG, DWF, DXF, DGN. In this
 
 The following topics are covered below in brief:
 
-* [.NET API for rendering CAD files](viewer/net/render-cad-documents/#net-api-for-rendering-cad-files)
-* [How to render CAD files into HTML, JPG, PNG, or PDF](viewer/net/render-cad-documents/#how-to-render-cad-files-into-html-jpg-png-or-pdf)
-* [Getting layouts/layers information](viewer/net/render-cad-documents/#getting-layoutslayers-information)
-* [Layers rendering](viewer/net/render-cad-documents/#layers-rendering)
-* [Layouts rendering](viewer/net/render-cad-documents/#layouts-rendering)
+* [.NET API for rendering CAD files](/viewer/net/render-cad-documents/#net-api-for-rendering-cad-files)
+* [How to render CAD files into HTML, JPG, PNG, or PDF](/viewer/net/render-cad-documents/#how-to-render-cad-files-into-html-jpg-png-or-pdf)
+* [Getting layouts/layers information](/viewer/net/render-cad-documents/#getting-layoutslayers-information)
+* [Layers rendering](/viewer/net/render-cad-documents/#layers-rendering)
+* [Layouts rendering](/viewer/net/render-cad-documents/#layouts-rendering)
 
 ## .NET API for rendering CAD files
 
@@ -46,6 +46,8 @@ To render your file to HTML file(s) with embedded resources do the following ste
 * With the `ForEmbeddedResources` method create the `HtmlViewOptions` instance and type output file name.
 * Call `View` method to render your document to HTML, resources will be embedded in to file.
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
 {
@@ -53,6 +55,8 @@ using (Viewer viewer = new Viewer("sample.dwf"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ![Rendering CAD document to HTML](/viewer/net/images/rendering-basics/render-cad-documents/rendering_to_html_with_embed.jpg)
 
@@ -72,6 +76,8 @@ Resources will be placed to separate folder.
 
 ![Resources placed into separate folder](/viewer/net/images/rendering-basics/render-cad-documents/resources_placed_to_separate_folder.jpg)
 
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
 {
@@ -82,6 +88,8 @@ using (Viewer viewer = new Viewer("sample.dwf"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Rendering to JPEG in C\#
 
@@ -89,6 +97,8 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 * Сreate `JpegViewOptions` instance and type output file name.
 * Call `View` method to render your document to JPEG.
 
+{{< tabs "example3">}}
+{{< tab "C#" >}}
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
 {
@@ -96,6 +106,8 @@ using (Viewer viewer = new Viewer("sample.dwf"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ![Rendering CAD document to JPEG](/viewer/net/images/rendering-basics/render-cad-documents/rendering_cad_to_jpeg.jpg)
 
@@ -105,6 +117,8 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 * Сreate `PngViewOptions` instance and type output file name.
 * Call `View` method to render your document to PNG.
 
+{{< tabs "example4">}}
+{{< tab "C#" >}}
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
 {
@@ -112,6 +126,8 @@ using (Viewer viewer = new Viewer("sample.dwf"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ![Rendering CAD document to PNG](/viewer/net/images/rendering-basics/render-cad-documents/rendering_cad_to_png.jpg)
 
@@ -121,6 +137,8 @@ using (Viewer viewer = new Viewer("sample.dwf"))
 * Сreate `PngViewOptions` instance and type output file name.
 * Call `View` method to render your document to PDF.
 
+{{< tabs "example5">}}
+{{< tab "C#" >}}
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
 {
@@ -128,6 +146,8 @@ using (Viewer viewer = new Viewer("sample.dwf"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ![Rendering CAD document to PDF](/viewer/net/images/rendering-basics/render-cad-documents/rendering_cad_to_pdf.jpg)
 
@@ -141,6 +161,8 @@ CAD files often consist of many layouts and layers. You can obtain information o
 * Call `GetViewInfo` to get layers/layouts information and get `CadViewInfo` object result.
 * Layouts and layers Lists are located in resulted `CadViewInfo` object.
 
+{{< tabs "example6">}}
+{{< tab "C#" >}}
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
 {
@@ -159,6 +181,8 @@ using (Viewer viewer = new Viewer("sample.dwf"))
         Console.WriteLine(layer);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 You can use this information to specify what layers/layouts render in the output file.
 
@@ -177,6 +201,8 @@ To render your file with specific layers please do the following steps:
 * Initialize `viewOptions.CadOptions.Layers` property with a list of required layers information.
 * Call `View` method to render your document with specified layers.
 
+{{< tabs "example7">}}
+{{< tab "C#" >}}
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
 {
@@ -189,6 +215,8 @@ using (Viewer viewer = new Viewer("sample.dwf"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 This drawing contains two layers: "0" - with a rectangle and "CIRCLE" with a circle. We want to render circle only,
 so we added a layer with the name "CIRCLE" in the layers list.
@@ -207,6 +235,8 @@ To render your file with specific layouts please do the following steps:
 * Set required layout name in `viewOptions.CadOptions.LayoutName` property.
 * Call `View` method to render your document with a specified layout.
 
+{{< tabs "example8">}}
+{{< tab "C#" >}}
 ```cs
 using (Viewer viewer = new Viewer("sample.dwf"))
 {
@@ -215,6 +245,8 @@ using (Viewer viewer = new Viewer("sample.dwf"))
    viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 This drawing contains three layouts: "three-layouts-with-layers-Layout1", "three-layouts-with-layers-Layout2", "three-layouts-with-layers-Layout3".
 We select "three-layouts-with-layers-Layout2" layout name with rectangle, we set this layer name in LayoutName property.
@@ -234,6 +266,6 @@ You can learn how to use GroupDocs.Viewer in your applications with [documentati
 
 ## See also
 
-* [How to view Word documents](viewer/net/render-word-documents/)
-* [How to view PDF documents](viewer/net/render-pdf-documents/)
-* [How to view Excel spreadsheets](viewer/net/render-excel-and-apple-numbers-spreadsheets/)
+* [How to view Word documents](/viewer/net/render-word-documents/)
+* [How to view PDF documents](/viewer/net/render-pdf-documents/)
+* [How to view Excel spreadsheets](/viewer/net/render-excel-and-apple-numbers-spreadsheets/)

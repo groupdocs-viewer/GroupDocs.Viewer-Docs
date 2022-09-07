@@ -14,7 +14,7 @@ Excel worksheet columns and rows numeration are described by letters (A, B, C, 
 
 The column and row headings are highlighted in the following screenshot. 
 
-![](viewer/java/images/how-to-show-spreadsheet-column-and-row-headings.png)
+![](/viewer/java/images/how-to-show-spreadsheet-column-and-row-headings.png)
 
 ## Background
 
@@ -22,13 +22,13 @@ Let's take a sample workbook and open it with Excel. Then we'll process the same
 
 The following screenshot shows the default spreadsheet view in Excel.
 
-![](viewer/java/images/how-to-show-spreadsheet-column-and-row-headings_1.png)
+![](/viewer/java/images/how-to-show-spreadsheet-column-and-row-headings_1.png)
 
 When processing spreadsheets with GroupDocs.Viewer the row and column headings are not shown by default.
 
 The following screenshot shows the default spreadsheet HTML view in a browser. 
 
-![](viewer/java/images/how-to-show-spreadsheet-column-and-row-headings_2.png)
+![](/viewer/java/images/how-to-show-spreadsheet-column-and-row-headings_2.png)
 
 ## How to show spreadsheet column and row headings
 
@@ -49,4 +49,4 @@ The following code sample shows how to enable rendering of column and row headin
 
 When headings rendering is enabled, the spreadsheet HTML view in a browser will contain row and column headings as shown in the screenshot below.
 
-![](viewer/java/images/how-to-show-spreadsheet-column-and-row-headings_3.png)
+![](/viewer/java/images/how-to-show-spreadsheet-column-and-row-headings_3.png)

@@ -28,7 +28,7 @@ See [How to convert and view EMF and EMZ files]({{< ref "viewer/java/developer-g
 
 In case you need to view a WMF(WMZ) file in a browser or a standard image or PDF viewer application, you can convert it to HTML, JPEG, PNG  PDF format with GroupDocs.Viewer for Java.
 
-![WMF and WMZ](viewer/java/images/how-to-convert-and-view-wmf-and-wmz-files/sample.jpg)
+![WMF and WMZ](/viewer/java/images/how-to-convert-and-view-wmf-and-wmz-files/sample.jpg)
 
 ## How to convert WMZ files
 
@@ -47,7 +47,7 @@ To convert WMZ files to HTML with GroupDocs.Viewer for Java use following code:
 \
 The following screenshot shows the output HTML file opened in a browser.
 
-![WMF/WMZ in HTML](viewer/java/images/how-to-convert-and-view-wmf-and-wmz-files/html.jpg)
+![WMF/WMZ in HTML](/viewer/java/images/how-to-convert-and-view-wmf-and-wmz-files/html.jpg)
 
 ### Convert WMZ to JPG
 
@@ -64,7 +64,7 @@ To convert WMZ files to JPG with GroupDocs.Viewer for Java use following code:
 \
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![WMF/WMZ in JPG](viewer/java/images/how-to-convert-and-view-wmf-and-wmz-files/jpg.jpg)
+![WMF/WMZ in JPG](/viewer/java/images/how-to-convert-and-view-wmf-and-wmz-files/jpg.jpg)
 
 ### Convert WMZ to PNG
 
@@ -81,7 +81,7 @@ To convert PLT/HPG files to PNG with GroupDocs.Viewer for Java use following c
 \
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![WMF/WMZ in PNG](viewer/java/images/how-to-convert-and-view-wmf-and-wmz-files/png.jpg)
+![WMF/WMZ in PNG](/viewer/java/images/how-to-convert-and-view-wmf-and-wmz-files/png.jpg)
 
 ### Convert WMZ to PDF
 
@@ -98,4 +98,4 @@ To convert WMZ files to PDF with GroupDocs.Viewer for Java use following code:
 \
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![WMF/WMZ in PDF](viewer/java/images/how-to-convert-and-view-wmf-and-wmz-files/pdf.jpg)
+![WMF/WMZ in PDF](/viewer/java/images/how-to-convert-and-view-wmf-and-wmz-files/pdf.jpg)

@@ -19,7 +19,7 @@ The language support packages for the Ubuntu 20.04 LTS can be found at [package
 
 Let's search for Japanese language support packages and as you can see on the screenshot below there are two packages found that have a name which starts with **language-pack-**.
 
-![](viewer/java/images/how-to-install-asian-fonts-on-ubuntu.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-ubuntu.png)
 
 We'll install the first one called **[language-pack-ja](https://packages.ubuntu.com/focal/translations/language-pack-ja)** and the second one will be installed automatically as first one depends on second.
 
@@ -27,7 +27,7 @@ We'll install the first one called **[language-pack-ja](https://packages.ubuntu
 
 Let's run Ubuntu in a Docker container and then install the **language-pack-ja** package.
 
-![](viewer/java/images/how-to-install-asian-fonts-on-ubuntu_1.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-ubuntu_1.png)
 
 Type the following command to update the packages list with updates and new packages.
 
@@ -35,7 +35,7 @@ Type the following command to update the packages list with updates and new pack
 apt-get update
 ```
 
-![](viewer/java/images/how-to-install-asian-fonts-on-ubuntu_2.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-ubuntu_2.png)
 
 And type the following to install the Japanese language support.
 
@@ -43,11 +43,11 @@ And type the following to install the Japanese language support.
 apt-get install -y language-pack-ja
 ```
 
-![](viewer/java/images/how-to-install-asian-fonts-on-ubuntu_3.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-ubuntu_3.png)
 
 When installation will be completed you should see "Generation complete." message.
 
-![](viewer/java/images/how-to-install-asian-fonts-on-ubuntu_4.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-ubuntu_4.png)
 
 That's all, language support is installed.
 

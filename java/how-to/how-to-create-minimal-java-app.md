@@ -14,7 +14,7 @@ In this article we'll guide you through building a minimal java application from
 
 {{< alert style="info" >}}
 
-The [hello-world.zip](viewer/java/resources/how-to/how-to-create-minimal-java-app/hello-world.zip) contains source code of the application that we're going to build.
+The [hello-world.zip](/viewer/java/resources/how-to/how-to-create-minimal-java-app/hello-world.zip) contains source code of the application that we're going to build.
 
 {{< /alert >}}
 

@@ -15,8 +15,8 @@ In this article, we will discuss how to convert Word to pdf and other formats in
 
 The following topics are covered below in brief:
 
-* [Java API for rendering Word files](viewer/java/how-to-view-word-documents-using-java/#java-api-for-rendering-word-files)
-* [How to render Word files into HTML, JPG, PNG, or PDF](viewer/java/how-to-view-word-documents-using-java/#how-to-render-word-files-into-html-jpg-png-or-pdf)
+* [Java API for rendering Word files](/viewer/java/how-to-view-word-documents-using-java/#java-api-for-rendering-word-files)
+* [How to render Word files into HTML, JPG, PNG, or PDF](/viewer/java/how-to-view-word-documents-using-java/#how-to-render-word-files-into-html-jpg-png-or-pdf)
 
 ## Java API for rendering Word files
 
@@ -27,7 +27,7 @@ Follow one of the ways as described in the [Installation]({{< ref "/viewer/java/
 
 Here is a sample document to demonstrate rendering results:
 
-![Source Word preview](viewer/java/images/viewer-use-cases/how-to-view-word-using-java/source_docx_preview.jpg)
+![Source Word preview](/viewer/java/images/viewer-use-cases/how-to-view-word-using-java/source_docx_preview.jpg)
 
 ## How to render Word files into HTML, JPG, PNG, or PDF
 
@@ -48,7 +48,7 @@ try (Viewer viewer = new Viewer("sample.doc"))
 }
 ```
 
-![Rendering Word to HTML](viewer/java/images/viewer-use-cases/how-to-view-word-using-java/rendering_to_html_with_embed.jpg)
+![Rendering Word to HTML](/viewer/java/images/viewer-use-cases/how-to-view-word-using-java/rendering_to_html_with_embed.jpg)
 
 ### Rendering to HTML with External Resources in Java
 
@@ -64,7 +64,7 @@ To render your file to HTML file(s) with external resources do the following ste
 
 Resources will be placed in a separate folder.
 
-![Resources placed into separate folder](viewer/java/images/viewer-use-cases/how-to-view-word-using-java/resources_placed_to_separate_folder.jpg)
+![Resources placed into separate folder](/viewer/java/images/viewer-use-cases/how-to-view-word-using-java/resources_placed_to_separate_folder.jpg)
 
 ```java
 try (Viewer viewer = new Viewer("sample.doc"))
@@ -92,7 +92,7 @@ try (Viewer viewer = new Viewer("sample.doc"))
 }
 ```
 
-![Rendering Word to JPEG](viewer/java/images/viewer-use-cases/how-to-view-word-using-java/rendering_word_to_jpeg.jpg)
+![Rendering Word to JPEG](/viewer/java/images/viewer-use-cases/how-to-view-word-using-java/rendering_word_to_jpeg.jpg)
 
 ### Rendering to PNG in Java
 
@@ -110,7 +110,7 @@ try (Viewer viewer = new Viewer("sample.doc"))
 }
 ```
 
-![Rendering Word to PNG](viewer/java/images/viewer-use-cases/how-to-view-word-using-java/rendering_word_to_png.jpg)
+![Rendering Word to PNG](/viewer/java/images/viewer-use-cases/how-to-view-word-using-java/rendering_word_to_png.jpg)
 
 ### Rendering Word to PDF in Java
 
@@ -142,5 +142,5 @@ You can learn how to use GroupDocs.Viewer in your applications with [documentati
 
 ## See also
 
-* [How to view CAD documents using Java](viewer/java/how-to-view-cad-documents-using-java/)
-* [How to view PDF documents using Java](viewer/java/how-to-view-pdf-documents-using-java/)
+* [How to view CAD documents using Java](/viewer/java/how-to-view-cad-documents-using-java/)
+* [How to view PDF documents using Java](/viewer/java/how-to-view-pdf-documents-using-java/)

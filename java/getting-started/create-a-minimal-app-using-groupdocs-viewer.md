@@ -16,7 +16,7 @@ In this article we'll guide you through building sample java application from sc
 
 {{< alert style="info" >}}
 
-The [hello-world-java.zip](viewer/java/resources/how-to-run-examples/hello-world-java.zip) contains source code of the application that we're going to build.
+The [hello-world-java.zip](/viewer/java/resources/how-to-run-examples/hello-world-java.zip) contains source code of the application that we're going to build.
 
 {{< /alert >}}
 
@@ -118,7 +118,7 @@ App.class  App.java  groupdocs-viewer-21.11.1.jar  p_1.html  p_2.html  sample.do
 
 {{< alert style="info" >}}
 
-The [hello-world-maven.zip](viewer/java/resources/how-to-run-examples/hello-world-maven.zip) contains source code of the application that we're going to build.
+The [hello-world-maven.zip](/viewer/java/resources/how-to-run-examples/hello-world-maven.zip) contains source code of the application that we're going to build.
 
 {{< /alert >}}
 

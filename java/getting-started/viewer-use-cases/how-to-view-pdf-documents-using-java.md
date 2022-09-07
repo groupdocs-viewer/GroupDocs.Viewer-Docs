@@ -17,10 +17,10 @@ In this article, we will discuss how to view PDF files using Java.
 
 The following topics are covered below in brief:
 
-* [Java API for rendering PDF files](viewer/java/how-to-view-pdf-documents-using-java/#java-api-for-rendering-pdf-files)
-* [How to render PDF files into HTML, JPG, PNG, or PDF](viewer/java/how-to-view-pdf-documents-using-java/#how-to-render-pdf-files-into-html-jpg-png-or-pdf)
-* [Getting information about PDF file](viewer/java/how-to-view-pdf-documents-using-java/#getting-information-about-pdf-file)
-* [How to extract text from PDF](viewer/java/how-to-view-pdf-documents-using-java/#how-to-extract-text-from-pdf)
+* [Java API for rendering PDF files](/viewer/java/how-to-view-pdf-documents-using-java/#java-api-for-rendering-pdf-files)
+* [How to render PDF files into HTML, JPG, PNG, or PDF](/viewer/java/how-to-view-pdf-documents-using-java/#how-to-render-pdf-files-into-html-jpg-png-or-pdf)
+* [Getting information about PDF file](/viewer/java/how-to-view-pdf-documents-using-java/#getting-information-about-pdf-file)
+* [How to extract text from PDF](/viewer/java/how-to-view-pdf-documents-using-java/#how-to-extract-text-from-pdf)
 
 ## Java API for rendering PDF files
 
@@ -28,7 +28,7 @@ The following topics are covered below in brief:
 
 Follow one of the ways as described in the [Installation]({{< ref "/viewer/java/getting-started/installation" >}}) section to install and reference GroupDocs.Viewer for Java.
 
-![Source PDF document preview](viewer/java/images/viewer-use-cases/how-to-view-pdf-using-java/source_image_preview.jpg)
+![Source PDF document preview](/viewer/java/images/viewer-use-cases/how-to-view-pdf-using-java/source_image_preview.jpg)
 
 ## How to render PDF files into HTML, JPG, PNG, or PDF
 
@@ -48,7 +48,7 @@ try (Viewer viewer = new Viewer("sample.pdf"))
 }
 ```
 
-![Rendering PDF document to HTML](viewer/java/images/viewer-use-cases/how-to-view-pdf-using-java/rendering_to_html_with_embed.jpg)
+![Rendering PDF document to HTML](/viewer/java/images/viewer-use-cases/how-to-view-pdf-using-java/rendering_to_html_with_embed.jpg)
 
 ### Rendering PDF to HTML with External Resources in Java
 
@@ -64,7 +64,7 @@ To render your file to HTML file(s) with external resources do the following ste
 
 Resources will be placed in a separate folder.
 
-![Resources placed into separate folder](viewer/java/images/viewer-use-cases/how-to-view-pdf-using-java/resources_placed_to_separate_folder.jpg)
+![Resources placed into separate folder](/viewer/java/images/viewer-use-cases/how-to-view-pdf-using-java/resources_placed_to_separate_folder.jpg)
 
 ```java
 try (Viewer viewer = new Viewer("sample.pdf"))
@@ -92,7 +92,7 @@ try (Viewer viewer = new Viewer("sample.pdf"))
 }
 ```
 
-![Rendering PDF into JPEG](viewer/java/images/viewer-use-cases/how-to-view-pdf-using-java/rendering_pdf_to_jpeg.jpg)
+![Rendering PDF into JPEG](/viewer/java/images/viewer-use-cases/how-to-view-pdf-using-java/rendering_pdf_to_jpeg.jpg)
 
 ### Rendering PDF to PNG in Java
 
@@ -110,7 +110,7 @@ try (Viewer viewer = new Viewer("sample.pdf"))
 }
 ```
 
-![Rendering PDF document to PNG](viewer/java/images/viewer-use-cases/how-to-view-pdf-using-java/rendering_pdf_to_png.jpg)
+![Rendering PDF document to PNG](/viewer/java/images/viewer-use-cases/how-to-view-pdf-using-java/rendering_pdf_to_png.jpg)
 
 ## Getting information about PDF file
 
@@ -214,5 +214,5 @@ You can learn how to use GroupDocs.Viewer in your applications with [documentati
 
 ## See also
 
-* [How to view Word documents using Java](viewer/java/how-to-view-word-documents-using-java/)
-* [How to view CAD documents using Java](viewer/java/how-to-view-cad-documents-using-java/)
+* [How to view Word documents using Java](/viewer/java/how-to-view-word-documents-using-java/)
+* [How to view CAD documents using Java](/viewer/java/how-to-view-cad-documents-using-java/)

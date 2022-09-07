@@ -20,7 +20,7 @@ aliases:
 
 To start with the GroupDocs.Viewer API, create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance. Pass a spreadsheet file you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
 
-{{< button style="primary" link="https://products.groupdocs.app/viewer/excel" >}} View Excel files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} View demos and examples on GitHub {{< /button >}}
+{{< button style="primary" link="https://products.groupdocs.app/viewer/excel" >}} {{< icon "gdoc_person" >}} View Excel files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
 ## Supported Spreadsheet file formats
 
@@ -47,7 +47,7 @@ GroupDocs.Viewer can detect the document format automatically based on informati
 
 ## Render spreadsheets as HTML
 
-Create an [HtmlViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a spreadsheet file to HTML. The **HtmlViewOptions** class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
+Create an [HtmlViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a spreadsheet file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
 
 ### Create an HTML file with embedded resources
 
@@ -55,6 +55,8 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 
 **Example  1: Convert an Excel workbook to HTML**
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -68,6 +70,8 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -75,6 +79,8 @@ The following image demonstrates the result:
 
 **Example  2: Convert an Apple Numbers spreadsheet to HTML**
 
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -88,6 +94,8 @@ using (var viewer = new Viewer("Products.numbers"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -103,6 +111,8 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 
 **Example  1: Convert an Excel workbook to HTML**
 
+{{< tabs "example3">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -118,9 +128,13 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 **Example  2: Convert an Apple Numbers spreadsheet to HTML**
 
+{{< tabs "example4">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -136,6 +150,8 @@ using (var viewer = new Viewer("Products.numbers"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
@@ -143,10 +159,12 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 ## Render spreadsheets as PDF
 
-Create a [PdfViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a spreadsheet file to PDF. The **PdfViewOptions** class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
+Create a [PdfViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a spreadsheet file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
 **Example  1: Convert an Excel workbook to PDF**
 
+{{< tabs "example5">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -159,6 +177,8 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -166,6 +186,8 @@ The following image demonstrates the result:
 
 **Example  2: Convert an Apple Numbers spreadsheet to PDF**
 
+{{< tabs "example6">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -178,6 +200,8 @@ using (var viewer = new Viewer("Products.numbers"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -189,6 +213,8 @@ Create a [PngViewOptions](https://apireference.groupdocs.com/viewer/net/groupdoc
 
 **Example  1: Convert an Excel workbook to PNG**
 
+{{< tabs "example7">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -204,12 +230,16 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 The following image demonstrates the result:
 
 ![Render an Excel file to PNG](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-png.png)
 
 **Example  2: Convert an Apple Numbers spreadsheet to PNG**
 
+{{< tabs "example8">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -225,6 +255,8 @@ using (var viewer = new Viewer("Products.numbers"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -236,6 +268,8 @@ Create a [JpgViewOptions](https://apireference.groupdocs.com/viewer/net/groupdoc
 
 **Example  1: Convert an Excel workbook to JPEG**
 
+{{< tabs "example9">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -251,9 +285,13 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 **Example  2: Convert an Apple Numbers spreadsheet to JPEG**
 
+{{< tabs "example10">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -269,6 +307,8 @@ using (var viewer = new Viewer("Products.numbers"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Detect a CSV/TSV separator
 
@@ -279,6 +319,8 @@ GroupDocs.Viewer can detect the following separators:
 * A comma (the default separator)
 * A semicolon
 
+{{< tabs "example11">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -291,15 +333,19 @@ using (var viewer = new Viewer(@"sample.csv"))
     viewer.View(viewOptions);
 }          
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Obtain worksheet names
 
 GroupDocs.Viewer allows you to obtain information about the source spreadsheet file. For example, you can retrieve worksheet names, as described below:
 
 1. Create a [ViewInfoOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/viewinfooptions) instance for a specific view.
-2. Call the [Viewer.GetViewInfo](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method and pass the **ViewInfoOptions** instance to this method as a parameter.
+2. Call the [Viewer.GetViewInfo](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method and pass the `ViewInfoOptions` instance to this method as a parameter.
 3. Use the [Pages](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/properties/pages) property of the returned [ViewInfo](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo) object to iterate through the list of worksheets and retrieve the worksheet names.
 
+{{< tabs "example12">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -322,6 +368,8 @@ using (var viewer = new Viewer("sample.xlsx"))
     }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates a sample console output:
 
@@ -329,5 +377,5 @@ The following image demonstrates a sample console output:
 
 ## See also
 
-* [Split a worksheet into pages](viewer/net/split-worksheet-into-pages/)
-* [Specify spreadsheet rendering options](viewer/net/specify-rendering-options/)
+* [Split a worksheet into pages](/viewer/net/split-worksheet-into-pages/)
+* [Specify spreadsheet rendering options](/viewer/net/specify-rendering-options/)

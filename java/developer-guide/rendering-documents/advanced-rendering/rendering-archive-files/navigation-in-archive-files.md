@@ -21,4 +21,4 @@ When rendering contents of the archive to single-page HTML, Windows Explorer sty
 
 To see the contents of a particular folder, just click on it. To get back in-depth, click on the required folder in the header near the archive name.
 
-![Windows explorer navigation style](viewer/java/images/navigation-in-archive-files/navigation.gif)
+![Windows explorer navigation style](/viewer/java/images/navigation-in-archive-files/navigation.gif)

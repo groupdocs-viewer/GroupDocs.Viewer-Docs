@@ -12,7 +12,7 @@ hideChildren: False
 
 SpreadsheetML is Excel 2003 document format in XML file. It can be opened by Microsoft Excel 2003 or later applications.
 
-![ExcelSpreadSheetML opened in Excel](viewer/java/images/how-to-convert-and-view-excel-spreadsheetml-files/spreadsheetml-in-excel.png)
+![ExcelSpreadSheetML opened in Excel](/viewer/java/images/how-to-convert-and-view-excel-spreadsheetml-files/spreadsheetml-in-excel.png)
 
 ## How to convert Excel 2003 SpreadSheetML files
 
@@ -29,7 +29,7 @@ To convert Excel 2003 SpreadSheetML files to HTML with GroupDocs.Viewer for Jav
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![HTML converted Excel 2003 SpreadSheetML](viewer/java/images/how-to-convert-and-view-excel-spreadsheetml-files/spreadsheetml-in-html.png)
+![HTML converted Excel 2003 SpreadSheetML](/viewer/java/images/how-to-convert-and-view-excel-spreadsheetml-files/spreadsheetml-in-html.png)
 
 ### Convert Excel 2003 SpreadSheetML to JPG
 
@@ -44,7 +44,7 @@ To convert Excel 2003 SpreadSheetML files to JPG with GroupDocs.Viewer for Java
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![JPEG converted Excel 2003 SpreadSheetML](viewer/java/images/how-to-convert-and-view-excel-spreadsheetml-files/spreadsheetml-in-jpg.png)
+![JPEG converted Excel 2003 SpreadSheetML](/viewer/java/images/how-to-convert-and-view-excel-spreadsheetml-files/spreadsheetml-in-jpg.png)
 
 ### Convert Excel 2003 SpreadSheetML to PNG
 
@@ -59,7 +59,7 @@ To convert Excel 2003 SpreadSheetML files to PNG with GroupDocs.Viewer for Java 
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![PNG converted Excel 2003 SpreadSheetML](viewer/java/images/how-to-convert-and-view-excel-spreadsheetml-files/spreadsheetml-in-png.png)
+![PNG converted Excel 2003 SpreadSheetML](/viewer/java/images/how-to-convert-and-view-excel-spreadsheetml-files/spreadsheetml-in-png.png)
 
 ### Convert Excel 2003 SpreadSheetML to PDF
 
@@ -74,4 +74,4 @@ To convert Excel 2003 SpreadSheetML files to PDF with GroupDocs.Viewer for Java
 
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![PDF converted Excel 2003 SpreadSheetML](viewer/java/images/how-to-convert-and-view-excel-spreadsheetml-files/spreadsheetml-in-pdf.png)
+![PDF converted Excel 2003 SpreadSheetML](/viewer/java/images/how-to-convert-and-view-excel-spreadsheetml-files/spreadsheetml-in-pdf.png)

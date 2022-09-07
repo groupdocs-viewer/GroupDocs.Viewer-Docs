@@ -20,7 +20,7 @@ aliases:
 
 Create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance to get started with the GroupDocs.Viewer API. Pass a presentation you want to view to the class constructor. You can load the presentation from a file or stream. Call one of the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the presentation to HTML, PDF, or image format. These methods allow you to render the entire presentation or specific slides.
 
-{{< button style="primary" link="https://products.groupdocs.app/viewer/powerpoint" >}} View PowerPoint files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} View demos and examples on GitHub {{< /button >}}
+{{< button style="primary" link="https://products.groupdocs.app/viewer/powerpoint" >}} {{< icon "gdoc_person" >}} View PowerPoint files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
 ## Supported Presentation file formats
 
@@ -43,12 +43,14 @@ GroupDocs.Viewer can detect the document format automatically based on informati
 
 ## Render presentations as HTML
 
-Create an [HtmlViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a presentation file to HTML. The **HtmlViewOptions** class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
+Create an [HtmlViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a presentation file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
 
 ### Create an HTML file with embedded resources
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -62,6 +64,8 @@ using (var viewer = new Viewer("sample.pptx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -75,6 +79,8 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -90,6 +96,8 @@ using (var viewer = new Viewer("sample.pptx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
@@ -97,8 +105,10 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 ## Render presentations as PDF
 
-Create a [PdfViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a presentation file to PDF. The **PdfViewOptions** class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
+Create a [PdfViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a presentation file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
+{{< tabs "example3">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -110,6 +120,8 @@ using (var viewer = new Viewer("sample.pptx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -119,6 +131,8 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a presentation file to PNG. Use the [PngViewOptions.Height](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
+{{< tabs "example4">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -134,6 +148,8 @@ using (var viewer = new Viewer("sample.pptx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -144,6 +160,8 @@ The following image demonstrates the result:
 Create a [JpgViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a presentation file to JPEG. Use the [JpgViewOptions.Height](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
 
+{{< tabs "example5">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -159,6 +177,8 @@ using (var viewer = new Viewer("sample.pptx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Specify image resolution
 
@@ -177,7 +197,9 @@ You can set the [PresentationOptions.Resolution](https://apireference.groupdocs.
 
 The following example demonstrates how to specify image resolution in code: 
 
-```csharp
+{{< tabs "example6">}}
+{{< tab "C#" >}}
+```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -189,6 +211,8 @@ using (var viewer = new Viewer("sample.pptx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Render hidden slides
 
@@ -196,6 +220,8 @@ If your presentation contains hidden slides, enable the [ViewOptions.RenderHidde
 
 The following code example uses this option to display hidden slides in the generated PDF file:
 
+{{< tabs "example7">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -208,11 +234,15 @@ using (var viewer = new Viewer("sample.pptx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Render comments
 
 Enable the [ViewOptions.RenderComments](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option for a target view to display comments in the output file when you convert your presentation to HTML, PDF, PNG, or JPEG format.
 
+{{< tabs "example8">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -225,6 +255,8 @@ using (var viewer = new Viewer("sample.pptx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -240,7 +272,9 @@ Enable the [ViewOptions.RenderNotes](https://apireference.groupdocs.com/viewer/n
 
 The following code sample renders a presentation with speaker notes to PDF:
 
-```csharp
+{{< tabs "example9">}}
+{{< tab "C#" >}}
+```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -252,6 +286,8 @@ using (var viewer = new Viewer("sample.pptx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The image below demonstrates the result.
 

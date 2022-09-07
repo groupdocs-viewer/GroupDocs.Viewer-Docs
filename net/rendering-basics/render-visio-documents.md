@@ -17,7 +17,7 @@ aliases:
 
 To start using the GroupDocs.Viewer API, create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
 
-{{< button style="primary" link="https://products.groupdocs.app/viewer/visio" >}} View Visio files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} View demos and examples on GitHub {{< /button >}}
+{{< button style="primary" link="https://products.groupdocs.app/viewer/visio" >}} {{< icon "gdoc_person" >}} View Visio files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
 ## Supported Visio file formats
 
@@ -41,12 +41,14 @@ GroupDocs.Viewer can detect the document format automatically based on informati
 
 ## Render Visio files as HTML
 
-Create an [HtmlViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Visio file to HTML. The **HtmlViewOptions** class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
+Create an [HtmlViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Visio file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
 
 ### Create an HTML file with embedded resources
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -60,6 +62,8 @@ using (var viewer = new Viewer("flowchart.vsdx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -73,6 +77,8 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -88,6 +94,8 @@ using (var viewer = new Viewer("flowchart.vsdx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
@@ -95,8 +103,10 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 ## Render Visio files as PDF
 
-Create a [PdfViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Visio file to PDF. The **PdfViewOptions** class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
+Create a [PdfViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Visio file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
+{{< tabs "example3">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -108,6 +118,8 @@ using (var viewer = new Viewer("flowchart.vsdx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 
@@ -117,6 +129,8 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Visio file to PNG. Use the [PngViewOptions.Height](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
+{{< tabs "example4">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -132,6 +146,8 @@ using (var viewer = new Viewer("flowchart.vsdx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 The following image demonstrates the result:
 
 ![Render a Visio file to PNG](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-png-image.png)
@@ -140,6 +156,8 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Visio file to JPEG. Use the [JpgViewOptions.Height](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
+{{< tabs "example5">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -155,6 +173,8 @@ using (var viewer = new Viewer("flowchart.vsdx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Render only diagram shapes
 
@@ -171,6 +191,8 @@ To render only master shapes contained in your Visio file, enable the [VisioRend
 
 The [VisioRenderingOptions.FigureWidth](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/visiorenderingoptions/properties/figurewidth) property allows you to specify the shape width in pixels. The height is calculated automatically based on the aspect ratio of each shape.
 
+{{< tabs "example6">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -184,6 +206,8 @@ using (var viewer = new Viewer("map.vsdx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 The image below demonstrates the result.
 

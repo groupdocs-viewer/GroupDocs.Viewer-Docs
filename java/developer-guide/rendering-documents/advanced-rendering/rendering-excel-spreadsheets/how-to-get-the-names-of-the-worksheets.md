@@ -12,7 +12,7 @@ hideChildren: False
 
 Excel worksheets have names that are used to simplify navigation and make it possible to reference data from other worksheets. When you do create a new workbook in Excel it already has with the name "Sheet1".
 I've created three worksheets and left their default names that is shown on the screenshot below.
-![](viewer/java/images/how-to-get-the-names-of-the-worksheets.png)
+![](/viewer/java/images/how-to-get-the-names-of-the-worksheets.png)
 
 ## Retrieving the names of the worksheets
 
@@ -34,4 +34,4 @@ The following code sample shows how to get and print out the names of the worksh
 ```  
 
 After running this sample code the names of the worksheets are printed into a console as shown on the screenshot below.
-![](viewer/java/images/how-to-get-the-names-of-the-worksheets_1.png)
+![](/viewer/java/images/how-to-get-the-names-of-the-worksheets_1.png)

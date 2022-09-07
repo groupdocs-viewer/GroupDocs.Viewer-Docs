@@ -9,7 +9,7 @@ productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
 
-![](viewer/java/images/html-viewer-responsive-layout.jpg)
+![](/viewer/java/images/html-viewer-responsive-layout.jpg)
 
 GroupDocs.Viewer also enables you to make your rendering into HTML look well across all types of devices. To achieve this, the API provides [setRenderResponsive()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#setRenderResponsive(boolean)) property of [HtmlViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) class as shown in below sample code.
 

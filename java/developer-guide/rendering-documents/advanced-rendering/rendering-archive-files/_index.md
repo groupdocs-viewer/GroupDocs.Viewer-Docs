@@ -47,7 +47,7 @@ To convert archive files to multiple pages HTML with GroupDocs.Viewer for Java 
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![Multiple pages HTML converted archive](viewer/java/images/how-to-convert-and-view-archive-files/zip-to-multiple-html.png)
+![Multiple pages HTML converted archive](/viewer/java/images/how-to-convert-and-view-archive-files/zip-to-multiple-html.png)
 
 ### Render archive files to single HTML
 
@@ -63,7 +63,7 @@ To convert archive files to single page HTML with GroupDocs.Viewer for Java use
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![Single page HTML converted zip](viewer/java/images/how-to-convert-and-view-archive-files/zip-to-single-html.png)
+![Single page HTML converted zip](/viewer/java/images/how-to-convert-and-view-archive-files/zip-to-single-html.png)
 
 ### Render archive files to JPG
 
@@ -78,7 +78,7 @@ To convert archive files to JPG with GroupDocs.Viewer for Java use following co
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![JPEG converted archive](viewer/java/images/how-to-convert-and-view-archive-files/zip-in-jpg.png)
+![JPEG converted archive](/viewer/java/images/how-to-convert-and-view-archive-files/zip-in-jpg.png)
 
 ### Render archive files to PNG
 
@@ -93,7 +93,7 @@ To convert archive files to PNG with GroupDocs.Viewer for Java use following cod
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![PNG converted archive](viewer/java/images/how-to-convert-and-view-archive-files/zip-in-png.png)
+![PNG converted archive](/viewer/java/images/how-to-convert-and-view-archive-files/zip-in-png.png)
 
 ### Render archive to PDF
 
@@ -108,7 +108,7 @@ To convert Roshal Archive files to PDF with GroupDocs.Viewer for Java use follo
 
 The following screenshot shows the output PDF file opened in an Acrobat Reader.
 
-![PDF converted archive](viewer/java/images/how-to-convert-and-view-archive-files/zip-in-pdf.png)
+![PDF converted archive](/viewer/java/images/how-to-convert-and-view-archive-files/zip-in-pdf.png)
 
 ## Articles in this section
 

@@ -12,7 +12,7 @@ hideChildren: False
 
 [CHM](https://docs.fileformat.com/web/chm/) is Microsoft Compiled Help format. These formats are designed for context help (usually activated by the F1 key) in applications. Format power allows to use of HTML content with images and CSS styling, also this format provides "table of contents" feature. To reduce the size of the final CHM file LZX is used.
 
-![CHM compiled file example](viewer/java/images/how-to-convert-and-view-chm-files/chm-file-example.jpg)
+![CHM compiled file example](/viewer/java/images/how-to-convert-and-view-chm-files/chm-file-example.jpg)
 
 ## How to view CHM files
 
@@ -36,7 +36,7 @@ To convert CHM files to HTML with GroupDocs.Viewer for Java use following code:
 
 The following screenshot shows the output HTML file opened in a browser.
 
-![CHM file converted in HTML](viewer/java/images/how-to-convert-and-view-chm-files/chm-file-in-html.jpg)
+![CHM file converted in HTML](/viewer/java/images/how-to-convert-and-view-chm-files/chm-file-in-html.jpg)
 
 ### Convert CHM to JPG
 
@@ -53,7 +53,7 @@ To convert CHM files to JPG with GroupDocs.Viewer for Java use following code:
 
 The following screenshot shows the output JPG file opened in a Windows Photo Viewer application.
 
-![CHM file converted in JPG](viewer/java/images/how-to-convert-and-view-chm-files/chm-file-in-jpg.jpg)
+![CHM file converted in JPG](/viewer/java/images/how-to-convert-and-view-chm-files/chm-file-in-jpg.jpg)
 
 ### Convert CHM to PNG
 
@@ -70,7 +70,7 @@ To convert CHM/HPG files to PNG with GroupDocs.Viewer for Java use following c
 
 The following screenshot shows the output PNG file opened in a Windows Photo Viewer application.
 
-![CHM file converted in PNG](viewer/java/images/how-to-convert-and-view-chm-files/chm-file-in-png.jpg)
+![CHM file converted in PNG](/viewer/java/images/how-to-convert-and-view-chm-files/chm-file-in-png.jpg)
 
 ### Convert CHM to PDF
 
@@ -86,4 +86,4 @@ To convert CHM files to PDF with GroupDocs.Viewer for Java use following code:
 
 The following screenshot shows the output PDF file opened in a browser.
 
-![CHM file converted in PDF](viewer/java/images/how-to-convert-and-view-chm-files/chm-file-in-pdf.jpg)
+![CHM file converted in PDF](/viewer/java/images/how-to-convert-and-view-chm-files/chm-file-in-pdf.jpg)

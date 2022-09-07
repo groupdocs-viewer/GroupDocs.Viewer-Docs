@@ -21,7 +21,7 @@ We have to install a group of packages called Fonts that includes fonts for Asia
 
 Let's take CentOS 8 and run it in Docker container and install the fonts. 
 
-![](viewer/java/images/how-to-install-asian-fonts-on-centos.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-centos.png)
 
 Type the following command to install a group of packages that includes Asian fonts.
 
@@ -29,11 +29,11 @@ Type the following command to install a group of packages that includes Asian fo
 yum group install -y Fonts
 ```
 
-![](viewer/java/images/how-to-install-asian-fonts-on-centos_1.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-centos_1.png)
 
 When installation will be completed you should see "Complete!" message.
 
-![](viewer/java/images/how-to-install-asian-fonts-on-centos_2.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-centos_2.png)
 
 That's all, the fonts are installed.
 
@@ -41,7 +41,7 @@ That's all, the fonts are installed.
 
 For the CentOS 6 the installation process is quite different, so let's run it in Docker container and walk through all the steps.
 
-![](viewer/java/images/how-to-install-asian-fonts-on-centos_3.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-centos_3.png)
 
 The fonts packages are separated into groups that we can list by typing the following command. 
 
@@ -49,13 +49,13 @@ The fonts packages are separated into groups that we can list by typing the foll
 yum grouplist
 ```
 
-![](viewer/java/images/how-to-install-asian-fonts-on-centos_4.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-centos_4.png)
 
 First, check what language packages that already installed under "Installed Language Packs" and then check the "Available Language Groups" section that lists the package bundles that can be installed.
 
 Among others, you'll find the "Chinese Support \[zh\]" language group.
 
-![](viewer/java/images/how-to-install-asian-fonts-on-centos_5.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-centos_5.png)
 
 Type the following command to install Chinese language support.
 
@@ -63,11 +63,11 @@ Type the following command to install Chinese language support.
 yum groupinstall -y "Chinese Support"
 ```
 
-![](viewer/java/images/how-to-install-asian-fonts-on-centos_6.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-centos_6.png)
 
 When the language will be installed you should see "Complete!" message.
 
-![](viewer/java/images/how-to-install-asian-fonts-on-centos_7.png)
+![](/viewer/java/images/how-to-install-asian-fonts-on-centos_7.png)
 
 You can also install other Asian languages support by typing:
 
