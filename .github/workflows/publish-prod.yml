@@ -1,15 +1,9 @@
 # Build and publish documentation
 
-name: publish
+name: publish-prod
 
 # Controls when the workflow will run
-on:
-  workflow_run:
-    workflows: ["build"]
-    branches: [master]
-    types:
-      - completed
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
 
