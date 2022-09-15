@@ -14,9 +14,9 @@ hideChildren: False
 
 There are 10 features, improvements, and bug-fixes in this release, most notable are:
 
-* [Plotter Document (.plt, .hpg)](https://docs.fileformat.com/cad/plt/) rendering support added, see [How to view PLT files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-view-plt-files" >}}) for more details;
-* Rendering specific [Design Web Format File (.dwf)](https://docs.fileformat.com/cad/dwf) layers is now supported, see [How to view DWF file layers]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-view-dwf-file-layers" >}}) for more details;
-* Added option to set background color when rendering CAD drawings, see [How to set background color when converting CAD Drawings]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-set-background-color-when-converting-cad-drawings.md" >}}) for more details;
+* [Plotter Document (.plt, .hpg)](https://docs.fileformat.com/cad/plt/) rendering support added. See the [Render CAD drawings and models]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}}) topic for details.
+* Rendering specific [Design Web Format File (.dwf)](https://docs.fileformat.com/cad/dwf) layers is now supported. See the [Render CAD drawings and models]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}}) topic for details.
+* Added option to set background color when rendering CAD drawings. See the [Specify rendering options for CAD files]({{< ref "/viewer/net/rendering-basics/render-cad-documents/specify-rendering-options.md" >}}) topic for details.
 * Added option to show spreadsheet column headings and row numbers. See the [Render row and column headings]({{< ref "/viewer/net/rendering-basics/render-spreadsheets/specify-rendering-options.md" >}}) topic for details.
     NOTE: This feature is supported when rendering worksheets into a single page when *SpreadsheetOptions* is set to SpreadsheetOptions.ForOnePagePerSheet().
 

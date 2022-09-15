@@ -14,16 +14,16 @@ hideChildren: False
 
 There are 13 features, improvements, and bug-fixes in this release, most notable are:
 
-* When converting CAD drawings to HTML, CAD drawings are converted to SVG instead of PNG
-*Related article* *[How to convert CAD to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-convert-cad-to-html.md" >}})*
+* When rendering CAD drawings to HTML, CAD drawings are converted to SVG instead of PNG
+*Related article [Render CAD drawings as HTML]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}})*
 * Added Flat XML ODF Template (.fodg) file format support  
 *Related article [Render ODG and FODG files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-odg-and-fodg-files.md" >}})*
 * Added IGES Drawing File (.igs) file format support  
-*Related article [Render IGS files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-convert-and-view-igs-files" >}})*
-* Added Common File Format File (.cf2) file-format support  
-*Related article [Render CFF2 and CF2 files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-convert-and-view-cff2-and-cf2-files" >}})*
-* Added Wavefront 3D Object File (.obj) file-format support  
-*Related article [Render OBJ files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-convert-and-view-obj-files" >}})*
+*Related article [Render CAD drawings and models]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}})*
+* Added Common File Format (.cf2) support  
+*Related article [Render CAD drawings and models]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}})*
+* Added Wavefront 3D Object File (.obj) file format support  
+*Related article [Render CAD drawings and models]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}})*
 * Added support rendering MS Project documents with notes  
 *Related article [Render MS Project documents with notes]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-ms-project-files/how-to-convert-and-view-ms-project-documents-with-notes" >}})*
 * Added support for rendering OpenDocument Flat XML Presentation files (.fodp)
@@ -53,4 +53,4 @@ There are 13 features, improvements, and bug-fixes in this release, most notable
 
 ### Behavior changes
 
-* Starting from 20.5 the CAD drawings are converted to SVG instead of PNG for better quality please refer to [How to convert CAD to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-convert-cad-to-html.md" >}}) article for more details.
+* Starting with 20.5, CAD drawings are converted to SVG instead of PNG for better quality. Refer to the following article for details: [Render CAD drawings as HTML]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}}) article for more details.
