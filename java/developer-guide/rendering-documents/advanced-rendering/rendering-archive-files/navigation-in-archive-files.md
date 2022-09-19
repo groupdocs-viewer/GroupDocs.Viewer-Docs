@@ -2,7 +2,7 @@
 id: navigation-in-archive-files
 url: viewer/java/navigation-in-archive-files
 title: Folder navigation in archive files
-weight: 2
+weight: 4
 description: "This article describes folder navigation in the archive with GroupDocs.Viewer within your Java applications."
 keywords: folder windows explorer navigation
 productName: GroupDocs.Viewer for Java

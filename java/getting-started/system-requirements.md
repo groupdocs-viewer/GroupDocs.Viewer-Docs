@@ -36,9 +36,7 @@ GroupDocs.Viewer for Java can be used on any 32-bit or 64-bit operating system w
 
 GroupDocs.Viewer for Java supports Java versions listed below. For more platform support please check [GroupDocs.Viewer](https://products.groupdocs.com/viewer) page.
 
-* J2SE 7.0 (1.7)
-* J2SE 8.0 (1.8)
-* or above (*for example Java 17*)
+* J2SE 8.0 (1.8) or above (*for example Java 17*)
 
 ## Development Environments
 
