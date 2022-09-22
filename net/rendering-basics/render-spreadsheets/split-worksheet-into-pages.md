@@ -13,7 +13,7 @@ aliases:
     - /viewer/net/render-spreadsheets-by-page-breaks/
     - /viewer/net/render-print-areas/
 ---
-If a worksheet contains a large amount of data, you may need to break this worksheet into pages before rendering it HTML, PDF, or image format. GroupDocs.Viewer allows you to specify the number of rows and columns to display on each page. The default number of rows per page is **40**, and the number of columns is not limited.
+If a worksheet contains a large amount of data, you may need to break this worksheet into pages before rendering it in HTML, PDF, or image format. GroupDocs.Viewer allows you to specify the number of rows and columns to display on each page. The default number of rows per page is **40**, and the number of columns is not limited.
 
 To break a worksheet into pages, call one of the [SpreadsheetOptions.ForSplitSheetIntoPages](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/methods/forsplitsheetintopages/index) method overloads and assign the returned `SpreadsheetOptions` instance to the [SpreadsheetOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property accessed for one of the following classes (depending on the output file format):
 

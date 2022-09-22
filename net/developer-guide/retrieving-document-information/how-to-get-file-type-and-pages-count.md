@@ -16,7 +16,7 @@ For the following document types GroupDocs.Viewer provides additional informatio
 * CAD drawings - a collection of layouts and layers (see [Obtain information about existing layouts and layers]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}}));
 * Outlook Data files - a collection of folders inside Outlook Data file (see [How to get Outlook Data file folders]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-outlook-data-files/how-to-get-outlook-data-file-folders.md" >}}));
 * PDF documents - a flag that indicates whether document printing is allowed or not (see [Obtain information about a PDF file]({{< ref "/viewer/net/rendering-basics/render-pdf-documents.md" >}}));
-* MS Project documents - project start/end dates (see [How to get MS Project start and end dates]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-ms-project-files/how-to-get-ms-project-start-and-end-dates.md" >}})).
+* Microsoft Project files - the project's start and end dates (see [Obtain information about a Project file]({{< ref "/viewer/net/rendering-basics/render-ms-project-files.md" >}})).
 
 ## Get file type and pages count from file
 
