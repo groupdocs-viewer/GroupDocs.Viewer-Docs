@@ -294,14 +294,14 @@ A CAD drawing can contain many layers. Each layer is used to draw a specific obj
 
 When you convert a CAD drawing to HTML, PDF, or image format, GroupDocs.Viewer renders all available layers. You can specify which layers to display in the output file, as described below:
 
-* Access the [CadOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/cadoptions) property for a target view:
+1. Access the [CadOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/cadoptions) property for a target view:
 
   * [HtmlViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) 
   * [PdfViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions)
   * [PngViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions)
   * [JpgViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions)
 
-* Assign the list of layers you want to render to the [CadOptions.Layers](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/properties/layers) property.
+2. Assign the list of layers you want to render to the [CadOptions.Layers](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/properties/layers) property.
 
 The following example renders layers with walls and furniture to PDF:
 

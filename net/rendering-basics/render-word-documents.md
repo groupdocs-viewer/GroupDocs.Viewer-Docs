@@ -23,16 +23,16 @@ To start using the GroupDocs.Viewer API, create a [Viewer](https://apireference.
 
 GroupDocs.Viewer supports the following file formats:
 
-* {{% closedlink title="Microsoft Word Document" href="https://docs.fileformat.com/word-processing/docx" %}} (.DOCX)
-* {{% closedlink title="Microsoft Word 97-2003 Document" href="https://docs.fileformat.com/word-processing/doc" %}} (.DOC)
-* {{% closedlink title="Microsoft Word Macro-Enabled Document" href="https://docs.fileformat.com/word-processing/docm" %}} (.DOCM)
-* {{% closedlink title="Microsoft Word 97-2003 Template" href="https://docs.fileformat.com/word-processing/dot" %}} (.DOT)
-* {{% closedlink title="Microsoft Word Macro-Enabled Template" href="https://docs.fileformat.com/word-processing/dotm" %}} (.DOTM)
-* {{% closedlink title="Microsoft Word Template" href="https://docs.fileformat.com/word-processing/dotx" %}} (.DOTX)
-* {{% closedlink title="OpenDocument Text" href="https://docs.fileformat.com/word-processing/odt" %}} (.ODT)
-* {{% closedlink title="OpenDocument Text Template" href="https://docs.fileformat.com/word-processing/ott" %}} (.OTT)
-* {{% closedlink title="Rich Text Document" href="https://docs.fileformat.com/word-processing/rtf" %}} (.RTF)
-* {{% closedlink title="Plain Text Document" href="https://docs.fileformat.com/word-processing/txt" %}} (.TXT)
+* [Microsoft Word Document](https://docs.fileformat.com/word-processing/docx) (.DOCX)
+* [Microsoft Word 97-2003 Document](https://docs.fileformat.com/word-processing/doc) (.DOC)
+* [Microsoft Word Macro-Enabled Document](https://docs.fileformat.com/word-processing/docm) (.DOCM)
+* [Microsoft Word 97-2003 Template](https://docs.fileformat.com/word-processing/dot) (.DOT)
+* [Microsoft Word Macro-Enabled Template](https://docs.fileformat.com/word-processing/dotm) (.DOTM)
+* [Microsoft Word Template](https://docs.fileformat.com/word-processing/dotx) (.DOTX)
+* [OpenDocument Text](https://docs.fileformat.com/word-processing/odt) (.ODT)
+* [OpenDocument Text Template](https://docs.fileformat.com/word-processing/ott) (.OTT)
+* [Rich Text Document](https://docs.fileformat.com/word-processing/rtf) (.RTF)
+* [Plain Text Document](https://docs.fileformat.com/word-processing/txt) (.TXT)
 
 GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 

@@ -24,8 +24,8 @@ There are 13 features, improvements, and bug-fixes in this release, most notable
 *Related article [Render CAD drawings and models]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}})*
 * Added Wavefront 3D Object File (.obj) file format support  
 *Related article [Render CAD drawings and models]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}})*
-* Added support rendering MS Project documents with notes  
-*Related article [Render MS Project documents with notes]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-ms-project-files/how-to-convert-and-view-ms-project-documents-with-notes" >}})*
+* Added support for rendering Microsoft Project files with notes  
+*Related article [Render Project documents]({{< ref "/viewer/net/rendering-basics/render-ms-project-files.md" >}})*
 * Added support for rendering OpenDocument Flat XML Presentation files (.fodp)
 *Related article [Render presentations]({{< ref "viewer/net/rendering-basics/render-presentations" >}})*
 * Improved default font support when converting PowerPoint files to HTML and PDF  

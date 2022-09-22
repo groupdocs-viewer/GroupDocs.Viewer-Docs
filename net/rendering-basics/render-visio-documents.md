@@ -23,19 +23,19 @@ To start using the GroupDocs.Viewer API, create a [Viewer](https://apireference.
 
 GroupDocs.Viewer supports the following file formats:
 
-* {{% closedlink title="Visio Drawing" href="https://docs.fileformat.com/visio/vsdx/" %}} (.VSDX)
-* {{% closedlink title="Visio 2003-2010 Drawing" href="https://docs.fileformat.com/visio/vsd/" %}} (.VSD)
-* {{% closedlink title="Visio Macro-Enabled Drawing" href="https://docs.fileformat.com/visio/vsdm/" %}} (.VSDM)
-* {{% closedlink title="Visio Stencil" href="https://docs.fileformat.com/visio/vssx/" %}} (.VSSX)
-* {{% closedlink title="Visio 2003-2010 Stencil" href="https://docs.fileformat.com/visio/vss/" %}} (.VSS)
-* {{% closedlink title="Visio Macro-Enabled Stencil" href="https://docs.fileformat.com/visio/vssm/" %}} (.VSSM)
-* {{% closedlink title="Visio Template" href="https://docs.fileformat.com/visio/vstx/" %}} (.VSTX)
-* {{% closedlink title="Visio 2003-2010 Template" href="https://docs.fileformat.com/visio/vst/" %}} (.VST)
-* {{% closedlink title="Visio Macro-Enabled Template" href="https://docs.fileformat.com/visio/vstm/" %}} (.VSTM)
-* {{% closedlink title="Visio Drawing XML File" href="https://docs.fileformat.com/visio/vdx/" %}} (.VDX)
-* {{% closedlink title="Visio Stencil XML File" href="https://docs.fileformat.com/visio/vsx/" %}} (.VSX)
-* {{% closedlink title="Visio Template XML File" href="https://docs.fileformat.com/visio/vtx/" %}} (.VTX)
-* {{% closedlink title="Visio Web Drawing" href="https://docs.fileformat.com/visio/vdw/" %}} (.VDW)
+* [Visio Drawing](https://docs.fileformat.com/visio/vsdx/) (.VSDX)
+* [Visio 2003-2010 Drawing](https://docs.fileformat.com/visio/vsd/) (.VSD)
+* [Visio Macro-Enabled Drawing](https://docs.fileformat.com/visio/vsdm/) (.VSDM)
+* [Visio Stencil](https://docs.fileformat.com/visio/vssx/) (.VSSX)
+* [Visio 2003-2010 Stencil](https://docs.fileformat.com/visio/vss/) (.VSS)
+* [Visio Macro-Enabled Stencil](https://docs.fileformat.com/visio/vssm/) (.VSSM)
+* [Visio Template](https://docs.fileformat.com/visio/vstx/) (.VSTX)
+* [Visio 2003-2010 Template](https://docs.fileformat.com/visio/vst/) (.VST)
+* [Visio Macro-Enabled Template](https://docs.fileformat.com/visio/vstm/) (.VSTM)
+* [Visio Drawing XML File](https://docs.fileformat.com/visio/vdx/) (.VDX)
+* [Visio Stencil XML File](https://docs.fileformat.com/visio/vsx/) (.VSX)
+* [Visio Template XML File](https://docs.fileformat.com/visio/vtx/) (.VTX)
+* [Visio Web Drawing](https://docs.fileformat.com/visio/vdw/) (.VDW)
 
 GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 
