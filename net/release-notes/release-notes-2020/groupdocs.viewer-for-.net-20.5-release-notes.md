@@ -16,8 +16,8 @@ There are 13 features, improvements, and bug-fixes in this release, most notable
 
 * When rendering CAD drawings to HTML, CAD drawings are converted to SVG instead of PNG
 *Related article [Render CAD drawings as HTML]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}})*
-* Added Flat XML ODF Template (.fodg) file format support  
-*Related article [Render ODG and FODG files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-odg-and-fodg-files.md" >}})*
+* Added OpenDocument Flat XML Graphics (.fodg) file format support  
+*Related article [Render images]({{< ref "viewer/net/rendering-basics/render-images.md">}})*
 * Added IGES Drawing File (.igs) file format support  
 *Related article [Render CAD drawings and models]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}})*
 * Added Common File Format (.cf2) support  

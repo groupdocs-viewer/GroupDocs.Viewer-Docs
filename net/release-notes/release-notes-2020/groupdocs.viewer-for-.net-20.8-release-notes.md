@@ -14,8 +14,8 @@ hideChildren: False
 
 There are 21 features, improvements, and bug-fixes in this release, most notable are:
 
-* [Added Lotus Notes Database (.nsf) file-format support]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-lotus-notes-files/how-to-convert-and-view-nsf-files.md">}})
-* [Added Compressed SVG File (.svgz) file-format support]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-svg-and-svgz-files.md">}})
+* [Added Lotus Notes Database (.nsf) file format support]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-lotus-notes-files/how-to-convert-and-view-nsf-files.md">}})
+* [Added Compressed SVG File (.svgz) format support]({{< ref "viewer/net/rendering-basics/render-images.md">}})
 
 ## Full List of Issues Covering all Changes in this Release
 
