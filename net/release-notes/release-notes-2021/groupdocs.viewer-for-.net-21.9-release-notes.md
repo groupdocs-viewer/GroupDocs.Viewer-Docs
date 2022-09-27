@@ -19,7 +19,7 @@ There are 39 features, improvements, and bug-fixes in this release, most notable
 * Add Power shell script (.PS1) file-format support
 * Add Power shell script module (.PSM1) file-format support
 * Add Power shell script module manifest (.PSD1) file-format support
-* [Convert PSD with custom fonts]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-psd-with-custom-fonts.md">}})
+* [Render PSD files with custom fonts]({{< ref "viewer/net/rendering-basics/render-images.md">}})
 * Preserve original image format when converting JPEG to HTML with embedded resources
 
 ## Full List of Issues Covering all Changes in this Release

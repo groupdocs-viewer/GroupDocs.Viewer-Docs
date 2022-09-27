@@ -15,9 +15,9 @@ hideChildren: False
 There are 31 features, improvements, and bug-fixes in this release, most notable are:
 
 * [Added logging support]({{< ref "viewer/net/developer-guide/logging/how-to-set-up-logging.md">}})
-* [Add Compressed Windows Metafile (.wmz) file-format support]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-wmf-and-wmz-files.md">}})
-* [Add Corel Metafile exchange (.cmx) file-format support]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-cmx-files.md">}})
-* [Add Corel Draw (.cdr) file-format support]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-cdr-files.md">}})
+* [Added Compressed Windows Metafile (.wmz) file format support]({{< ref "viewer/net/rendering-basics/render-images.md">}})
+* [Added Corel Presentation Exchange Image (.cmx) file format support]({{< ref "viewer/net/rendering-basics/render-images.md">}})
+* [Added CorelDRAW Image (.cdr) file format support]({{< ref "viewer/net/rendering-basics/render-images.md">}})
 * Added support for rendering presentations that contain shapes and text with 3D effects
 * Added RAR5 archive extraction support
 

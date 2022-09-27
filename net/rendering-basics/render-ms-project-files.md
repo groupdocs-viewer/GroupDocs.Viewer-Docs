@@ -1,7 +1,7 @@
 ---
 id: render-ms-project-files
 url: viewer/net/render-ms-project-files
-title: Render Project files as HTML, PDF, and image files
+title: Render Project documents as HTML, PDF, and image files
 linkTitle: Render Project files
 weight: 7
 description: "This topic describes how to use the GroupDocs.Viewer .NET API (C#) to convert Microsoft Project files to HTML, PDF, PNG, and JPEG formats."
