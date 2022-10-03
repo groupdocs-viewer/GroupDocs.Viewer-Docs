@@ -50,7 +50,7 @@ There are 23 features, improvements, and bug-fixes in this release, most notable
 
 ### GroupDocs.Viewer.Options.BaseViewOptions class
 
-Added new `TextOptions` property.
+Added a new `TextOptions` property.
 
 ```cs
 /// <summary>
@@ -79,4 +79,4 @@ public class TextOptions
 }
 ```
 
-See how to use new properties in [Define page size when rendering TXT to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/configure-count-of-characters-per-row-and-rows-per-page-to-render.md">}}).
+See how to use new properties in the following help topic: [Render text documents as HTML, PDF, and image files]({{< ref "viewer/net/rendering-basics/render-text-files.md">}}).
