@@ -62,7 +62,7 @@ There are 31 features, improvements, and bug-fixes in this release, most notable
 
 ### Behavior changes
 
-{{< alert style="warning" >}}In this version we've improved rendering of archives and text files - now it could be rendered to multiple and single pages, they are rendered to multiple pages by default. See [How to convert archive files to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-convert-archive-files-to-html.md" >}}) and [Render TXT files]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/how-to-convert-and-view-txt-files.md" >}}) for more details.{{< /alert >}}
+{{< alert style="warning" >}}In this version we've improved rendering of archives and text files - now it could be rendered to multiple and single pages, they are rendered to multiple pages by default. See [How to convert archive files to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-convert-archive-files-to-html.md" >}}) and [Render text files]({{< ref "viewer/net/rendering-basics/render-text-files.md" >}}) for more details.{{< /alert >}}
 
 ### Changes in the public API
 
@@ -171,7 +171,7 @@ public int ItemsPerPage { get; set; }
 
 #### GroupDocs.Viewer.Options.HtmlViewOptions
 
-Added new property _RenderSinglePage_ to [GroupDocs.Viewer.Options.HtmlViewOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions>) class to support rendering text files to a single page see [Rendering text files into a single HTML page]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/how-to-convert-and-view-txt-files.md">}}) for more details.
+Added new property _RenderSinglePage_ to [GroupDocs.Viewer.Options.HtmlViewOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions>) class to support rendering text files to a single page. See the following topic for details: [Render text documents]({{< ref "viewer/net/rendering-basics/render-text-files.md">}}).
 
 ```csharp
 /// <summary>
@@ -203,7 +203,7 @@ public static SpreadsheetOptions ForSplitSheetIntoPages(int countRowsPerPage, in
 
 #### GroupDocs.Viewer.Options.WordProcessingOptions
 
-Added new properties to [GroupDocs.Viewer.Options.WordProcessingOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions>) class to support setting margins when rendering Web documents see [Render HTML files with user defined margins]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-web-documents/how-to-convert-and-view-html-files-with-margins.md" >}}) documentation article for more details and code samples.
+Added new properties to the [GroupDocs.Viewer.Options.WordProcessingOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions>) class to support setting margins when rendering Web documents. See the following help topic for details: [Render HTML files with user-defined margins]({{< ref "viewer/net/rendering-basics/render-web-documents.md" >}}).
 
 ```csharp
 /// <summary>

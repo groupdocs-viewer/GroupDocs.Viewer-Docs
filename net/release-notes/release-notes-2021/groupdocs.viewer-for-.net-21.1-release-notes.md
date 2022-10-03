@@ -15,7 +15,7 @@ hideChildren: False
 There are 9 features, improvements, and bug-fixes in this release, most notable are:
 
 * [AI (Adobe Illustrator Artwork) file format support]({{< ref "viewer/net/rendering-basics/render-images.md">}})
-* [Microsoft Compiled HTML Help (CHM) file-format support]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-web-documents/how-to-convert-and-view-chm-files.md">}})
+* [CHM (Microsoft Compiled HTML Help) file format support]({{< ref "viewer/net/rendering-basics/render-web-documents.md">}})
 * Add Truevision TGA (TARGA) (tga) file-format support
 * Add Animated PNG (apng) file-format support
 * Render multipaged PDF to single page HTML
