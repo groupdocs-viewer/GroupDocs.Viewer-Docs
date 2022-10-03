@@ -193,12 +193,12 @@ using GroupDocs.Viewer.Options;
 
 using (var viewer = new Viewer("groupdocs-documentation.mhtml"))
 {
-       var viewOptions = new PdfViewOptions("output.pdf");
-       viewOptions.WebDocumentOptions.LeftMargin = 40;
-       viewOptions.WebDocumentOptions.RightMargin = 40;
-       viewOptions.WebDocumentOptions.TopMargin = 40;
-       viewOptions.WebDocumentOptions.BottomMargin = 40;
-       viewer.View(viewOptions);
+    var viewOptions = new PdfViewOptions("output.pdf");
+    viewOptions.WebDocumentOptions.LeftMargin = 40;
+    viewOptions.WebDocumentOptions.RightMargin = 40;
+    viewOptions.WebDocumentOptions.TopMargin = 40;
+    viewOptions.WebDocumentOptions.BottomMargin = 40;
+    viewer.View(viewOptions);
 }
 ```
 {{< /tab >}}
