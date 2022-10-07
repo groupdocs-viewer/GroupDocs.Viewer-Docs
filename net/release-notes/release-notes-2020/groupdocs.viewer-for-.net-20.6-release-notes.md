@@ -15,7 +15,7 @@ hideChildren: False
 There are 19 features, improvements, and bug-fixes in this release, most notable are:
 
 * [Fixed High RAM consumption issue when rendering a large text file]({{< ref "viewer/net/rendering-basics/render-text-files.md">}})
-* [Improved rendering Outlook files (pst, ost) to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-outlook-data-files/how-to-convert-and-view-ost-and-pst-files.md">}})
+* [Improved rendering to HTML for Outlook data files (PST and OST)]({{< ref "/viewer/net/rendering-basics/render-outlook-data-files.md">}})
 * [Show spreadsheet column headings and row numbers]({{< ref "/viewer/net/rendering-basics/render-spreadsheets/specify-rendering-options.md" >}}) was implemented for all options
 * [Support file format detection for passed stream]({{< ref "viewer/net/developer-guide/retrieving-document-information/how-to-determine-file-type.md">}})
 * [Get sheet names from an Excel file]({{< ref "/viewer/net/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets.md">}})
