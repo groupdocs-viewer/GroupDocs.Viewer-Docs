@@ -62,7 +62,7 @@ There are 31 features, improvements, and bug-fixes in this release, most notable
 
 ### Behavior changes
 
-{{< alert style="warning" >}}In this version we've improved rendering of archives and text files - now it could be rendered to multiple and single pages, they are rendered to multiple pages by default. See [How to convert archive files to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-convert-archive-files-to-html.md" >}}) and [Render text files]({{< ref "viewer/net/rendering-basics/render-text-files.md" >}}) for more details.{{< /alert >}}
+{{< alert style="warning" >}}In this version, we have improved rendering of archive and text files to HTML. You can now create HTML files with multiple pages (the default setting) or a single page. See the following topics for more information: [Render archive files as HTML]({{< ref "/viewer/net/rendering-basics/render-archive-files.md" >}}) and [Render text files as HTML]({{< ref "viewer/net/rendering-basics/render-text-files.md" >}}).{{< /alert >}}
 
 ### Changes in the public API
 

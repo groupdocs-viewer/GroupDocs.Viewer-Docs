@@ -12,7 +12,7 @@ GroupDocs.Viewer for .NET API enables you to get file type and pages count with 
 
 For the following document types GroupDocs.Viewer provides additional information:
 
-* Archive files - a collection of folders inside the archive (see [How to list archive folders]({{< ref "/viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-list-archive-folders.md" >}}));
+* Archive files - a collection of folders in the archive (see [Obtain information about folders in an archive file]({{< ref "/viewer/net/rendering-basics/render-archive-files.md" >}}));
 * CAD drawings - a collection of layouts and layers (see [Obtain information about existing layouts and layers]({{< ref "/viewer/net/rendering-basics/render-cad-documents/render-cad-documents.md" >}}));
 * Outlook data files - a collection of the file's folders (see [Obtain information about folders in an Outlook data file]({{< ref "/viewer/net/rendering-basics/render-outlook-data-files.md" >}}));
 * PDF documents - a flag that indicates whether document printing is allowed (see [Obtain information about a PDF file]({{< ref "/viewer/net/rendering-basics/render-pdf-documents.md" >}}));
