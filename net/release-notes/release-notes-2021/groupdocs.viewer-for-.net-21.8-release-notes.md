@@ -15,10 +15,10 @@ hideChildren: False
 There are 14 features, improvements, and bug-fixes in this release, most notable are:
 
 * Add cancellation token support for .NET Framework 4.0
-* [Add TAR GZipped (TGZ) file-format support]({{< ref "/viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-convert-and-view-tgz-files.md">}})
-* [Add TAR XZipped (TXZ) file-format support]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-convert-and-view-txz-files.md">}})
-* [Add XZipped (XZ) file-format support]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-convert-and-view-xz-files.md">}})
-* [Add 7-Zip Compressed File (.7z) file-format support]({{< ref "viewer/net/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-comvert-and-view-7z-files.md">}})
+* [Add TAR GZipped (TGZ) file format support]({{< ref "/viewer/net/rendering-basics/render-archive-files.md">}})
+* [Add TAR XZipped (TXZ) file format support]({{< ref "/viewer/net/rendering-basics/render-archive-files.md">}})
+* [Add XZipped (XZ) file format support]({{< ref "/viewer/net/rendering-basics/render-archive-files.md">}})
+* [Add 7-Zip Compressed File (.7z) file format support]({{< ref "/viewer/net/rendering-basics/render-archive-files.md">}})
 * Add Encrypted RAR5 archive extraction support
 
 ## Full List of Issues Covering all Changes in this Release
