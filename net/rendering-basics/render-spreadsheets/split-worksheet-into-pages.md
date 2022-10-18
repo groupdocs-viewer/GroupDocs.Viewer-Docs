@@ -142,3 +142,30 @@ using (var viewer = new Viewer("invoice.xlsx"))
 The image below illustrates the result.
 
 ![Render the print area to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-print-area.png)
+
+## Render a worksheet on one page
+
+If you want to display all worksheet data on one page, call the [SpreadsheetOptions.ForOnePagePerSheet](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/foronepagepersheet/) static method and assign the returned `SpreadsheetOptions` instance to the [ViewOptions.SpreadsheetOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property for a target view.
+
+The following example converts a worksheet to a single-page PDF file:
+
+{{< tabs "example5">}}
+{{< tab "C#" >}}
+```cs
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("Products.xlsx"))
+{
+    var viewOptions = new PdfViewOptions("output.pdf");
+    viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForOnePagePerSheet();
+    viewer.View(viewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+The image below illustrates the result. The output PDF file contains one page that displays all worksheet data.
+
+![Fit sheet on one page](/viewer/net/images/rendering-basics/render-spreadsheets/render-on-one-page.png)
