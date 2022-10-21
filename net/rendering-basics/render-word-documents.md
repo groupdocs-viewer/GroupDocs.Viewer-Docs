@@ -177,17 +177,17 @@ using (var viewer = new Viewer("resume.docx"))
 
 Use the following properties to specify the size of page margins in the output files when you convert your Word documents to HTML, PDF, and image formats: 
 
-* [WordProcessingOptions.TopMargin](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/topmargin)
-* [WordProcessingOptions.BottomMargin](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/bottommargin)
-* [WordProcessingOptions.LeftMargin](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/leftmargin)
-* [WordProcessingOptions.RightMargin](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/rightmargin)
+* [WordProcessingOptions.TopMargin](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/topmargin)---Specifies the distance (in points) between document content and the top edge of the page.
+* [WordProcessingOptions.BottomMargin](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/bottommargin)---Specifies the distance (in points) between document content and the bottom edge of the page.
+* [WordProcessingOptions.LeftMargin](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/leftmargin)---Specifies the distance (in points) between document content and the left edge of the page.
+* [WordProcessingOptions.RightMargin](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/rightmargin)---Specifies the distance (in points) between document content and the right edge of the page.
 
 You can access these properties for the following classes:
 
 * [HtmlViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions)
 * [PdfViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions)
 * [PngViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions)
-* [JpgViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions)
+* [JpgViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions) 
 
 The example below converts a Word document to HTML and specifies page margins for the output file. 
 

@@ -10,7 +10,7 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
 aliases:
-    -/viewer/net/view-image-files/
+    - /viewer/net/view-image-files/
     - /viewer/net/how-to-convert-and-view-cdr-files
     - /viewer/net/how-to-convert-and-view-cmx-files
     - /viewer/net/how-to-convert-and-view-emf-and-emz-files
