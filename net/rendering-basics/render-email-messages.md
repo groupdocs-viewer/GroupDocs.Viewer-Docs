@@ -86,7 +86,7 @@ using (var viewer = new Viewer("sample.eml"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The result is shown below. The image is placed in a separate folder.
+The result is shown below. External resources are placed in a separate folder.
 
 ![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-email-messages/render-email-to-html-external-resources.png)
 
