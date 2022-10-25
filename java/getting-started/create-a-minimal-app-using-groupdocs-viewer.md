@@ -66,7 +66,7 @@ public class App {
 }
 ```
 
-Download the latest version of GroupDocs.Viewer for Java from [GroupDocs Artifact Repository](https://repository.groupdocs.com/repo/com/groupdocs/groupdocs-viewer/) manually or by typing `wget https://repository.groupdocs.com/repo/com/groupdocs/groupdocs-viewer/21.11.1/groupdocs-viewer-21.11.1.jar`
+Download the latest version of GroupDocs.Viewer for Java from [GroupDocs Artifact Repository](https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-viewer/) manually or by typing `wget https://releases.groupdocs.com/java/repo/com/groupdocs/groupdocs-viewer/21.11.1/groupdocs-viewer-21.11.1.jar`
 
 Download [sample.docx](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/raw/master/Examples/resources/sample_files/sample.docx) file that we'll be rendering using `wget`:
 
@@ -158,7 +158,7 @@ Lets now add `GroupDocs Artifact Repository` to our `pom.xml` project file so we
   <repository>
     <id>GroupDocs Artifact Repository</id>
     <name>GroupDocs Artifact Repository</name>
-    <url>https://repository.groupdocs.com/repo/</url>
+    <url>https://releases.groupdocs.com/java/repo/</url>
   </repository>
 </repositories>
 ...

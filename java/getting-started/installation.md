@@ -23,7 +23,7 @@ First, you need to specify repository configuration/location in your Maven `pom
     <repository>
         <id>GroupDocs Artifact Repository</id>
         <name>GroupDocs Artifact Repository</name>
-        <url>https://repository.groupdocs.com/repo/</url>
+        <url>https://releases.groupdocs.com/java/repo/</url>
     </repository>
 </repositories>
 ```
