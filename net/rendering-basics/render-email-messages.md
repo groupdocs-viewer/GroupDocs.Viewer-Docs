@@ -27,7 +27,9 @@ GroupDocs.Viewer supports the following email file formats:
 
 * [Email Message](https://docs.fileformat.com/email/eml) (.EML)
 * [Apple Mail Message](https://docs.fileformat.com/email/emlx) (.EMLX)
+* [Email Mailbox File](https://docs.fileformat.com/email/mbox/) (.MBOX)
 * [Outlook Message Item File](https://docs.fileformat.com/email/msg) (.MSG)
+* [vCard (Virtual Contact) File](https://docs.fileformat.com/email/vcf/) (.VCF, .VCARD)
 
 GroupDocs.Viewer can detect the email file format automatically based on information in the file header.
 

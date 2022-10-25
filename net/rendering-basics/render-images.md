@@ -31,6 +31,7 @@ To start with the GroupDocs.Viewer API, create a [Viewer](https://apireference.g
 GroupDocs.Viewer supports the following image file formats:
 
 * [.AI (Adobe Illustrator Artwork)](https://docs.fileformat.com/image/ai/)
+* [.APNG (Animated Portable Network Graphic)](https://docs.fileformat.com/image/apng/)
 * [.BMP (Bitmap Image)](https://docs.fileformat.com/image/bmp)
 * [.CDR (CorelDRAW Image File)](https://docs.fileformat.com/image/cdr)
 * [.CGM (Computer Graphics Metafile)](https://docs.fileformat.com/page-description-language/cgm)
@@ -54,6 +55,7 @@ GroupDocs.Viewer supports the following image file formats:
 * [.JPM (JPEG 2000 Multi-layer Image Format)](https://docs.fileformat.com/image/jpm/)
 * [.JPX (JPEG 2000 Image File)](https://docs.fileformat.com/image/jpx/)
 * [.ODG (OpenDocument Graphics File)](https://docs.fileformat.com/image/odg)
+* [.OTG (OpenDocument Graphic Template)](https://docs.fileformat.com/image/otg/)
 * [.PCL (Printer Command Language Document)](https://docs.fileformat.com/page-description-language/pcl)
 * [.PNG (Portable Network Graphics)](https://docs.fileformat.com/image/png)
 * [.PS (PostScript File)](https://docs.fileformat.com/page-description-language/ps)
@@ -61,6 +63,7 @@ GroupDocs.Viewer supports the following image file formats:
 * [.PSD (Adobe Photoshop Document)](https://docs.fileformat.com/image/psd)
 * [.SVG (Scalable Vector Graphics File)](https://docs.fileformat.com/page-description-language/svg)
 * [.SVGZ (Compressed SVG File)](https://fileinfo.com/extension/svgz)
+* [.TGA (TARGA Graphics)](https://docs.fileformat.com/image/tga/) 
 * [.TIF / .TIFF (Tagged Image File Format)](https://docs.fileformat.com/image/tiff)
 * [.WEBP (WebP Image)](https://docs.fileformat.com/image/webp)
 * [.WMF (Windows Metafile)](https://docs.fileformat.com/image/wmf)
