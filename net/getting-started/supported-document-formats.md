@@ -13,17 +13,17 @@ This topic lists file formats supported by GroupDocs.Viewer for .NET.
 
 ## Archive and compression file formats
 
-| Format | Description | Automatic format detection | Remarks |
-| --- | --- | :---: | --- |
-| [7Z](https://docs.fileformat.com/compression/7z/) | 7-Zip Compressed File | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [BZ2](https://docs.fileformat.com/compression/bz2) | Bzip2 Compressed File | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [GZ](https://docs.fileformat.com/compression/gz) | Gnu Zipped Archive | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [RAR](https://docs.fileformat.com/compression/rar) | WinRAR Compressed Archive | ![(tick)](/viewer/net/images/check-blue.png) | | 
-| [TAR](https://docs.fileformat.com/compression/tar) | Consolidated Unix File Archive | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [TGZ](https://docs.fileformat.com/compression/tgz/) | Gzipped Tar File | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [TXZ](https://fileinfo.com/extension/txz) | XZ Compressed Tar Archive | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [XZ](https://docs.fileformat.com/compression/xz/) | XZ Compressed Archive | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [ZIP](https://docs.fileformat.com/compression/zip) | Zipped File | ![(tick)](/viewer/net/images/check-blue.png) | |
+| Format | Description | Automatic format detection |
+| --- | --- | :---: |
+| [7Z](https://docs.fileformat.com/compression/7z/) | 7-Zip Compressed File | ![(tick)](/viewer/net/images/check-blue.png) |
+| [BZ2](https://docs.fileformat.com/compression/bz2) | Bzip2 Compressed File | ![(tick)](/viewer/net/images/check-blue.png) |
+| [GZ](https://docs.fileformat.com/compression/gz) | Gnu Zipped Archive | ![(tick)](/viewer/net/images/check-blue.png) |
+| [RAR](https://docs.fileformat.com/compression/rar) | WinRAR Compressed Archive | ![(tick)](/viewer/net/images/check-blue.png) |
+| [TAR](https://docs.fileformat.com/compression/tar) | Consolidated Unix File Archive | ![(tick)](/viewer/net/images/check-blue.png) |
+| [TGZ](https://docs.fileformat.com/compression/tgz/) | Gzipped Tar File | ![(tick)](/viewer/net/images/check-blue.png) |
+| [TXZ](https://fileinfo.com/extension/txz) | XZ Compressed Tar Archive | ![(tick)](/viewer/net/images/check-blue.png) |
+| [XZ](https://docs.fileformat.com/compression/xz/) | XZ Compressed Archive | ![(tick)](/viewer/net/images/check-blue.png) |
+| [ZIP](https://docs.fileformat.com/compression/zip) | Zipped File | ![(tick)](/viewer/net/images/check-blue.png) |
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view archive files: [Render archives as HTML, PDF, and image files](/viewer/net/render-archive-files).
 
