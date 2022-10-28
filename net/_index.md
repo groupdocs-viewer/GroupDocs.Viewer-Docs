@@ -7,6 +7,7 @@ description: "GroupDocs.Viewer for .NET allows you to render files to HTML, JPEG
 keywords: render files, HTML, JPEG, PNG,PDF
 productName: GroupDocs.Viewer for .NET
 hideChildren: True
+fullWidth: True
 ---
 <img src="/viewer/net/images/home.png" alt="groupdocs-viewer-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 

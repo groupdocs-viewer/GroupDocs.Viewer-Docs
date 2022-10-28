@@ -7,6 +7,7 @@ description: "GroupDocs.Viewer for Java allows you to render files to HTML, JPEG
 keywords: render files, HTML, JPEG, PNG,PDF
 productName: GroupDocs.Viewer for Java
 hideChildren: True
+fullWidth: True
 ---
 <img src="/viewer/java/images/home.png" alt="groupdocs-viewer-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
