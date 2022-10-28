@@ -2,6 +2,7 @@
 id: installation
 url: viewer/net/installation
 title: Install GroupDocs.Viewer for .NET
+linkTitle: Installation
 weight: 4
 keywords: installation, NuGet package, NuGet package manager
 description: "This topic describes how to install GroupDocs.Viewer for .NET."
