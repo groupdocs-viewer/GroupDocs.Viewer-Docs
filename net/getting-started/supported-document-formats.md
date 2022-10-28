@@ -15,7 +15,7 @@ This topic lists file formats supported by GroupDocs.Viewer for .NET.
 
 | Format | Description | Automatic format detection | Remarks |
 | --- | --- | :---: | --- |
-| [7Z](https://docs.fileformat.com/compression/7z/) | 7-Zip Compressed File | ![(tick)](/viewer/net/images/check-blue.png) |  You can only view archive contents. Saving archive files is not supported. |
+| [7Z](https://docs.fileformat.com/compression/7z/) | 7-Zip Compressed File | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [BZ2](https://docs.fileformat.com/compression/bz2) | Bzip2 Compressed File | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [GZ](https://docs.fileformat.com/compression/gz) | Gnu Zipped Archive | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [RAR](https://docs.fileformat.com/compression/rar) | WinRAR Compressed Archive | ![(tick)](/viewer/net/images/check-blue.png) | | 
