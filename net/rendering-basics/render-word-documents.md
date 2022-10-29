@@ -21,7 +21,7 @@ To start using the GroupDocs.Viewer API, create a [Viewer](https://apireference.
 
 ## Supported Word Processing file formats
 
-GroupDocs.Viewer supports the following file formats:
+GroupDocs.Viewer supports the following Word Processing file formats:
 
 * [Microsoft Word Document](https://docs.fileformat.com/word-processing/docx) (.DOCX)
 * [Microsoft Word 97-2003 Document](https://docs.fileformat.com/word-processing/doc) (.DOC)

@@ -1,7 +1,7 @@
 ---
 id: rendering-to-png-or-jpeg
 url: viewer/net/rendering-to-png-or-jpeg
-title: Rendering to PNG or JPEG
+title: Render to PNG or JPEG
 weight: 12
 description: "With GroupDocs.Viewer for .NET you can render documents to PNG and JPEG formats."
 productName: GroupDocs.Viewer for .NET

@@ -23,7 +23,7 @@ To start using the GroupDocs.Viewer API, create a [Viewer](https://apireference.
 
 ## Supported Project Management file formats
 
-GroupDocs.Viewer supports the following file formats:
+GroupDocs.Viewer supports the following Project Management file formats:
 
 * [Microsoft Project](https://docs.fileformat.com/project-management/mpp) (.MPP)
 * [Microsoft Project Template](https://docs.fileformat.com/project-management/mpt) (.MPT)

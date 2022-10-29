@@ -25,7 +25,7 @@ To start with the GroupDocs.Viewer API, create a [Viewer](https://apireference.g
 
 ## Supported Outlook data file formats
 
-GroupDocs.Viewer supports the following file formats:
+GroupDocs.Viewer supports the following Outlook data file formats:
 
 * [Outlook Offline Storage Table](https://docs.fileformat.com/email/ost) (.OST)
 * [Outlook Personal Storage Table](https://docs.fileformat.com/email/pst) (.PST)

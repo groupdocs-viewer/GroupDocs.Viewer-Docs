@@ -20,7 +20,7 @@ Create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer
 
 ## Supported Page Layout file formats
 
-GroupDocs.Viewer supports the following file formats:
+GroupDocs.Viewer supports the following PDF and Page Layout file formats:
 
 * [Portable Document Format](https://docs.fileformat.com/pdf/) (.PDF)
 * [Microsoft XML Paper Specification](https://docs.fileformat.com/page-description-language/xps/) (.XPS)

@@ -1,7 +1,7 @@
 ---
 id: how-to-get-file-type-and-pages-count
 url: viewer/net/how-to-get-file-type-and-pages-count
-title: How to get file type and pages count
+title: Get the file type and the number of pages
 weight: 4
 description: "This article explains how to get file type and pages count using .NET / C# with GroupDocs.Viewer for .NET."
 keywords: 

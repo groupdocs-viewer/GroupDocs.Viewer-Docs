@@ -1,7 +1,7 @@
 ---
 id: how-to-check-if-file-is-encrypted
 url: viewer/net/how-to-check-if-file-is-encrypted
-title: How to check if file is encrypted
+title: Check if a file is encrypted
 weight: 5
 description: "This article explains how to check if a file is encrypted using .NET / C# with GroupDocs.Viewer for .NET."
 keywords: check, file, encrypted, C#, .NET

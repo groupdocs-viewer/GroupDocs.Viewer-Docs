@@ -1,7 +1,7 @@
 ---
 id: rendering-documents
 url: viewer/net/rendering-documents
-title: Rendering documents
+title: Render documents
 weight: 3
 description: "Rendering documents with GroupDocs.Viewer for .NET in your .NET / C# applications."
 productName: GroupDocs.Viewer for .NET

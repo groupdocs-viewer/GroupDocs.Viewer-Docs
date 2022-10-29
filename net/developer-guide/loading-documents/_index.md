@@ -1,7 +1,7 @@
 ---
 id: loading
 url: viewer/net/loading
-title: Loading documents
+title: Load documents
 weight: 1
 keywords: document loading, GroupDocs.Viewer
 description: "Document loading use cases with GroupDocs.Viewer within your .NET applications."
