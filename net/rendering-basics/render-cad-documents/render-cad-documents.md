@@ -30,7 +30,7 @@ Create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer
 
 ## Supported CAD file formats
 
-GroupDocs.Viewer supports the following file formats:
+GroupDocs.Viewer supports the following CAD and 3D file formats:
 
 * [AutoCAD Drawing](https://docs.fileformat.com/cad/dwg/) (.DWG)
 * [AutoCAD Drawing Template](https://docs.fileformat.com/cad/dwt) (.DWT)

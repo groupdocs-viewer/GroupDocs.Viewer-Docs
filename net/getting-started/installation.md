@@ -60,7 +60,7 @@ dotnet add package GroupDocs.Viewer
 
 ## Download GroupDocs.Viewer from the official website
 
-Visit [https://releases.groupdocs.com/viewer/net/](https://releases.groupdocs.com/viewer/net/) and download the **GroupDocs.Viewer** assemblies as a ZIP archive or MSI installer. To add references to the downloaded assembly files to your project, do the following:
+Visit [https://releases.groupdocs.com/viewer/net/](https://releases.groupdocs.com/viewer/net/) and download the **GroupDocs.Viewer** assemblies as a ZIP archive or MSI installer. To reference the downloaded assembly files in your project, do the following:
 
 1. Extract files from the ZIP archive or run the MSI installer to install **GroupDocs.Viewer** to a specific location on your computer.
 2. Open your solution or project in Visual Studio.
@@ -72,5 +72,5 @@ Visit [https://releases.groupdocs.com/viewer/net/](https://releases.groupdocs.co
 5. Click **OK** to add a reference to the **GroupDocs.Viewer** library to your project.
 
 {{< alert style="warning" >}}
-If your project targets .NET Core / .NET 5+, you should also install the [SkiaSharp NuGet package](https://www.nuget.org/packages/SkiaSharp/) to use the **GroupDocs.Viewer** functionality within your project.
+If your application targets .NET Core / .NET 5+, ensure that your project has all the required dependencies installed. Refer to the following page for details: [GroupDocs.Viewer dependencies](https://www.nuget.org/packages/groupdocs.viewer#dependencies-body-tab).
 {{< /alert >}}

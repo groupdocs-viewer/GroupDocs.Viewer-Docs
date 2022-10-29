@@ -1,7 +1,7 @@
 ---
 id: rendering-to-html
 url: viewer/net/rendering-to-html
-title: Rendering to HTML
+title: Render to HTML
 weight: 11
 description: "With GroupDocs.Viewer for .NET you can render files to HTML format. As a simple usecase please see how easily you can convert Microsoft Word to clean html."
 keywords: render files, rendering pdf, convert word to clean html

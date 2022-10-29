@@ -21,7 +21,7 @@ To start using the GroupDocs.Viewer API, create a [Viewer](https://apireference.
 
 ## Supported Visio file formats
 
-GroupDocs.Viewer supports the following file formats:
+GroupDocs.Viewer supports the following Visio file formats:
 
 * [Visio Drawing](https://docs.fileformat.com/visio/vsdx/) (.VSDX)
 * [Visio 2003-2010 Drawing](https://docs.fileformat.com/visio/vsd/) (.VSD)

@@ -1,7 +1,7 @@
 ---
 id: image-viewer-adjust-quality-for-jpg
 url: viewer/net/image-viewer-adjust-quality-for-jpg
-title: Adjust quality for JPG
+title: Adjust the JPEG image quality
 weight: 3
 description: "Following this guide you will learn how to adjust JPG images quality when rendering documents with Image Viewer by GroupDocs."
 productName: GroupDocs.Viewer for .NET

@@ -30,7 +30,7 @@ To start using the GroupDocs.Viewer API, create a [Viewer](https://apireference.
 
 ## Supported archive and compressed file formats
 
-GroupDocs.Viewer supports the following file formats:
+GroupDocs.Viewer supports the following archive file formats:
 
 * [.7Z (7-Zip Compressed File)](https://docs.fileformat.com/compression/7z)
 * [.BZ2 (Bzip2 Compressed File)](https://docs.fileformat.com/compression/bz2)

@@ -1,7 +1,7 @@
 ---
 id: adjust-jpeg-images-quality
 url: viewer/net/adjust-jpeg-images-quality
-title: Set JPEG images quality
+title: Specify the JPEG image quality
 weight: 3
 description: "Adjust JPEG images quality when rendering documents to PDF with GroupDocs.Viewer for .NET"
 productName: GroupDocs.Viewer for .NET

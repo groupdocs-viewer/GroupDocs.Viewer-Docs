@@ -1,7 +1,7 @@
 ---
 id: image-viewer-adjust-image-size
 url: viewer/net/image-viewer-adjust-image-size
-title: Adjust image size
+title: Adjust the image size
 weight: 2
 description: "Check this guide to learn how to adjust PNG and JPG images size when rendering documents with Image Viewer by GroupDocs for .NET."
 productName: GroupDocs.Viewer for .NET

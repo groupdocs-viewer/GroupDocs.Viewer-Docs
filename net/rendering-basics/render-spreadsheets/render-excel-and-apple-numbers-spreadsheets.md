@@ -22,9 +22,9 @@ To start with the GroupDocs.Viewer API, create a [Viewer](https://apireference.g
 
 {{< button style="primary" link="https://products.groupdocs.app/viewer/excel" >}} {{< icon "gdoc_person" >}} View Excel files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
-## Supported Spreadsheet file formats
+## Supported spreadsheet file formats
 
-GroupDocs.Viewer supports the following file formats:
+GroupDocs.Viewer supports the following spreadsheet file formats:
 
 * [Microsoft Excel Workbook](https://docs.fileformat.com/spreadsheet/xlsx) (.XLSX)
 * [Microsoft Excel 97-2003 Workbook](https://docs.fileformat.com/spreadsheet/xls) (.XLS)

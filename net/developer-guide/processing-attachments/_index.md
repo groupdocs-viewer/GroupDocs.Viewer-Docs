@@ -1,7 +1,7 @@
 ---
 id: working-with-attachments
 url: viewer/net/working-with-attachments
-title: Processing attachments
+title: Process attachments
 weight: 4
 description: "Processing email attachments, embedded files, and compressed files with GroupDocs.Viewer for .NET"
 keywords: email attachments, embedded files, compressed files

@@ -22,9 +22,9 @@ Create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer
 
 {{< button style="primary" link="https://products.groupdocs.app/viewer/powerpoint" >}} {{< icon "gdoc_person" >}} View PowerPoint files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
-## Supported Presentation file formats
+## Supported presentation file formats
 
-GroupDocs.Viewer supports the following file formats:
+GroupDocs.Viewer supports the following presentation file formats:
 
 * [Microsoft PowerPoint Presentation](https://docs.fileformat.com/presentation/pptx/) (.PPTX)
 * [Microsoft PowerPoint 97-2003 Presentation](https://docs.fileformat.com/presentation/ppt/) (.PPT)

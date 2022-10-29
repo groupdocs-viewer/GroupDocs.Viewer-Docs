@@ -1,7 +1,7 @@
 ---
 id: load-password-protected-document
 url: viewer/net/load-password-protected-document
-title: Load password-protected document
+title: Load password-protected documents
 weight: 2
 keywords: groupdocs.viewer, password protected document
 description: "This article explains how to load password-protected document with GroupDocs.Viewer within your .NET applications."
