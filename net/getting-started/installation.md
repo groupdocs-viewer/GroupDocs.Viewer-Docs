@@ -51,7 +51,7 @@ PM> Install-Package GroupDocs.Viewer
 You can also use the [.NET CLI tool](https://docs.microsoft.com/en-us/dotnet/core/tools/) to install and update NuGet packages. Open a terminal in your project's folder and execute the following command to install the **GroupDocs.Viewer** package:
 
 {{< tabs "example2">}}
-{{< tab "CLI" >}}
+{{< tab ".NET CLI" >}}
 ```
 dotnet add package GroupDocs.Viewer
 ```

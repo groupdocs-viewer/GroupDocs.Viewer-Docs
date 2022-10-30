@@ -147,7 +147,8 @@ using (var viewer = new Viewer("HousePlan.dwg"))
     for (int i = 0; i < columns; i++)
         for (int j = 0; j < rows; j++)
         {
-            Tile tile = new Tile(pointX + tileWidth * i, pointY + tileHeight * j, tileWidth, tileHeight);
+            Tile tile = new Tile(pointX + tileWidth * i, pointY + tileHeight * j,
+                tileWidth, tileHeight);
             viewOptions.CadOptions.Tiles.Add(tile);
         }
     viewer.View(viewOptions);
