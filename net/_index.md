@@ -13,9 +13,9 @@ fullWidth: True
 
 GroupDocs.Viewer for .NET is a powerful, high-performance, and cross-platform library that allows you to build desktop and web [file viewer applications](https://en.wikipedia.org/wiki/File_viewer) using C#.
 
-GroupDocs.Viewer supports over [170 popular file formats](/viewer/net/supported-document-formats). Load text documents, spreadsheets, presentations, PDF files, web pages, email messages, and images and render them as HTML, PDF, PNG, and JPEG files. You can render the entire document or specific pages.
+GroupDocs.Viewer supports over [170 popular file formats](/viewer/net/supported-document-formats). Load text documents, spreadsheets, presentations, PDF files, web pages, email messages, and images and render/display them in HTML, PDF, PNG, and JPEG formats. You can render the entire document or specific pages.
 
-GroupDocs.Viewer ships with a wide range of options that allow you to control the rendering process and customize the output files. You can protect the output PDF files and reorder their pages, generate responsive HTML pages, adjust the size and quality of output images, add text watermarks, and cache the results.
+GroupDocs.Viewer ships with a wide range of options that allow you to control the rendering process and customize the output files. For example, you can protect the output PDF file and reorder its pages, generate responsive HTML pages, adjust the size and quality of output images, add text watermarks, and cache the results.
 
 ------
 

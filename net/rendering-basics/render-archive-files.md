@@ -238,6 +238,11 @@ The following image demonstrates a sample console output:
 
 ![Get information about an archive file](/viewer/net/images/rendering-basics/render-archive-files/retrieve-archive-information.png)
 
+GroupDocs.Viewer also allows you to list and extract all files contained in the archive. Refer to the following help topics for details:
+
+* [List attachments](/viewer/net/how-to-list-attachments/)
+* [Save attachments](/viewer/net/how-to-extract-and-save-attachments/)
+
 ## Render a specific folder
 
 When you convert an archive file to HTML, PDF, or image format, GroupDocs.Viewer renders items from all folders contained in the archive. If you need to render items from a specific folder, specify the [ArchiveOptions.Folder](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/archiveoptions/properties/folder) property for one of the following classes (depending on the output file format):
