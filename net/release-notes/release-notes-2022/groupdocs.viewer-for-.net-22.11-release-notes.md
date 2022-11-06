@@ -16,7 +16,7 @@ There are ??? features, and bug-fixes in this release, most notable are:
 
 **1. Added support for converting all Excel worksheets to one HTML file**
 
-By default, Excel spreadsheets are converted by page breaks. Find out more info in [Split a worksheet into pages](/viewer/net/split-worksheet-into-pages/) article. Starting from v22.11 all worksheets can be converted to one HTML file by setting [HtmlViewOptions.RenderToSinglePage](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/rendertosinglepage/) property to `true`.
+By default, Excel spreadsheets are converted by page breaks. See the following topic for more information: [Split a worksheet into pages](/viewer/net/split-worksheet-into-pages/). With v22.11, you can convert all worksheets to one HTML file by setting the [HtmlViewOptions.RenderToSinglePage](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/rendertosinglepage/) property to `true`.
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
@@ -41,11 +41,22 @@ The following image demonstrates the result:
 
 ![Convert all Excel worksheets to one HTML file](/viewer/net/images/rendering-basics/render-spreadsheets/convert-all-excel-worksheets-to-html.png)
 
+**2. BinaryFormatter was replaced with XmlSerializer in FileCahe class**
+
+{{< alert style="warning" >}}
+
+[BinnaryFormatter](https://learn.microsoft.com/en-us/dotnet/api/system.runtime.serialization.formatters.binary.binaryformatter) is insecure and can't be made secure. Microsoft recommends stopping using it in favor of one of the secure alternatives. See the following topic for more information: [Deserialization risks in use of BinaryFormatter and related types](https://learn.microsoft.com/en-us/dotnet/standard/serialization/binaryformatter-security-guide). 
+
+{{< /alert >}}
+
+The default implementation of [ICache](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.caching/icache/) interface the [FileCache](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.caching/filecache/) class used `BinnaryFormatter` to serialize and deserialize [ViewInfo](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/) and derived types. `BinnaryFormatter` was replaced with [XmlSerializer](https://learn.microsoft.com/en-us/dotnet/api/system.xml.serialization.xmlserializer). To support serialization with `XmlSerializer` default parameterless constructors and `set` property accessors added to [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/) class and all types in [GroupDocs.Viewer.Results](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/) namespace.
+
 
 ## Full List of Issues Covering all Changes in this Release
 
 | Key | Summary | Category |
 | --- | --- | --- |
-|VIEWERNET-4124|[Convert all Excel worksheets to one HTML file](/viewer/net/render-excel-and-apple-numbers-spreadsheets/#convert-all-excel-worksheets-to-one-html-file)|Feature|
+|VIEWERNET-4124|Convert all Excel worksheets to one HTML file|Feature|
+|VIEWERNET-4142|Replace BinnaryFormatter with XmlSerializer in FileCache class|Enhancement|
 
 
