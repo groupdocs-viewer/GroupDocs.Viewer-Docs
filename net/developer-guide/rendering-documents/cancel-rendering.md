@@ -7,7 +7,10 @@ description: "Cancel or stop rendering rendering process with cancellation token
 keywords: stop rendering, cancellation token, cancellation token source
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
+aliases:
+    - /viewer/net/cancel-viewing-with-cancellation-token/
 ---
+
 Since v21.7 GroupDocs.Viewer supports tasks cancellation with cancellation token.
 
 Here is the recipe:
