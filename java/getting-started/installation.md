@@ -12,12 +12,14 @@ toc: True
 
 ## Install using Maven
 
-We are hosting all Java class-libraries at [GroupDocs Artifact Repository](https://repository.groupdocs.com/). You can easily reference GroupDocs.Viewer for Java API directly in your Maven project using following steps.
+All Java packages are hosted at [GroupDocs Artifact Repository](https://repository.groupdocs.com/). You can easily reference GroupDocs.Viewer for Java API directly in your Maven project using following steps.
 
 ### Add GroupDocs Artifact Repository
 
 First, you need to specify repository configuration/location in your Maven `pom.xml` as follows:
 
+{{< tabs "example1">}}
+{{< tab "pom.xml" >}}
 ```xml
 <repositories>
     <repository>
@@ -27,11 +29,15 @@ First, you need to specify repository configuration/location in your Maven `pom
     </repository>
 </repositories>
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Add GroupDocs.Viewer as a dependency
 
 Then define GroupDocs.Viewer for Java API dependency in your `pom.xml` as follows:
 
+{{< tabs "example2">}}
+{{< tab "pom.xml" >}}
 ```xml
 <dependencies>
     <dependency>
@@ -41,14 +47,5 @@ Then define GroupDocs.Viewer for Java API dependency in your `pom.xml` as fol
     </dependency>
 </dependencies>
 ```
-  
-After performing the above-mentioned steps, GroupDocs.Viewer for Java dependency will finally be added to your Maven project.
-
-## Install manually
-
-You can follow the steps below to reference GroupDocs.Viewer for Java downloaded from official [Downloads Downloads](https://downloads.groupdocs.com/viewer/java) website:
-
-1. Unpack zip archive.
-2. Navigate to **lib** folder.
-3. Run **install.bat** (on Windows) or **install.sh** (on Linux) file to install the library in your local maven repository.
-4. After this you add the GroupDocs.Viewer for Java **dependency** block to your pom.xml project file.
+{{< /tab >}}
+{{< /tabs >}}
