@@ -13,9 +13,9 @@ The encryption is used to protect data and allow only authorized persons to open
 
 The following are the steps to convert encrypted documents:
 
-* Instantiate the [HtmlViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) (or [PngViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions), or [JpgViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions), or [PdfViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions)) object;
-* Set password in [LoadOptions.Password](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/properties/password) property;
-* Call [View](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method.
+* Instantiate the [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) (or [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions), or [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions), or [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions)) object;
+* Set password in [LoadOptions.Password](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/properties/password) property;
+* Call [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method.
 
 The following code sample shows how to convert encrypted documents:
 
@@ -31,5 +31,5 @@ using (Viewer viewer = new Viewer("encrypted.docx", loadOptions))
 ```
 
 {{< alert style="info" >}}
-In case the password is not specified GroupDocs.Viewer will throw [PasswordRequiredException](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.exceptions/passwordrequiredexception).
+In case the password is not specified GroupDocs.Viewer will throw [PasswordRequiredException](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.exceptions/passwordrequiredexception).
 {{< /alert >}}

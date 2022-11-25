@@ -11,10 +11,10 @@ GroupDocs.Viewer also provides the feature to set limits for width/height for th
 If you want to render single image to HTML you can set width/height for the output image.
 If you set ImageMaxWidth/ImageMaxHeight options, if the image exceeds one of these limits - it will be resized proportionally.
 
-* Instantiate the[Viewer](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object;
-* Instantiate the [HtmlViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions);
+* Instantiate the[Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object;
+* Instantiate the [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions);
 * Set ImageMaxWidth and/or ImageMaxHeight values;
-* Call [View](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method.
+* Call [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method.
 * The following code sample shows how to set the output image size limits when rendering the document.
 
 ```csharp
@@ -30,7 +30,7 @@ using (Viewer viewer = new Viewer("sample.jpg"))
 }
 ```
 
-[HtmlViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions)class
+[HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions)class
 has the following properties to set the image width/height.
 
 ```csharp

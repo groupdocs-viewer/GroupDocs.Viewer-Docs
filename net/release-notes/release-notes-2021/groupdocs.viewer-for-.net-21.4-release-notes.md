@@ -51,7 +51,7 @@ There are 19 features, improvements, and bug-fixes in this release, most notable
 
 #### Changes in GroupDocs.Viewer.Options namespace
 
-New properties have been added to [GroupDocs.Viewer.Options.HtmlViewOptions](<https://apireference.groupdocs.com/viewer/net/groupDocs.viewer.options/htmlviewoptions>) and  [GroupDocs.Viewer.Options.PdfViewOptions](<https://apireference.groupdocs.com/viewer/net/groupDocs.viewer.options/pdfviewoptions>) classes.
+New properties have been added to [GroupDocs.Viewer.Options.HtmlViewOptions](<https://reference.groupdocs.com/viewer/net/groupDocs.viewer.options/htmlviewoptions>) and  [GroupDocs.Viewer.Options.PdfViewOptions](<https://reference.groupdocs.com/viewer/net/groupDocs.viewer.options/pdfviewoptions>) classes.
 
 ```csharp
 /// <summary>

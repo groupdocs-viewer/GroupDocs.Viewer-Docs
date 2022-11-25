@@ -22,7 +22,7 @@ aliases:
 ---
 [GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) allows you to load images in various formats and convert them to HTML, PDF, PNG, and JPEG. Incorporate this library into your .NET application (web or desktop) to build your own image viewer.
 
-To start with the GroupDocs.Viewer API, create a [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance. Pass an image you want to view to the class constructor. You can load the image from a file or stream. Call one of the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the image to HTML, PDF, PNG, or JPEG format. For multipage images (such as TIFF, CDR, DICOM, WebP, and so on), you can specify the pages to render.
+To start with the GroupDocs.Viewer API, create a [Viewer](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance. Pass an image you want to view to the class constructor. You can load the image from a file or stream. Call one of the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the image to HTML, PDF, PNG, or JPEG format. For multipage images (such as TIFF, CDR, DICOM, WebP, and so on), you can specify the pages to render.
 
 {{< button style="primary" link="https://products.groupdocs.app/viewer/image" >}} {{< icon "gdoc_person" >}} View image files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
@@ -73,11 +73,11 @@ GroupDocs.Viewer can detect the image format automatically based on information 
 
 ## Render images as HTML
 
-Create an [HtmlViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an image to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
+Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an image to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
 
 ### Create an HTML file with embedded resources
 
-To embed an image in an HTML page, call the [HtmlViewOptions.ForEmbeddedResources](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
+To embed an image in an HTML page, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
@@ -101,7 +101,7 @@ The following image demonstrates the result:
 
 ### Create an HTML file with external resources
 
-To save an image to a separate folder, call the [HtmlViewOptions.ForExternalResources](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forexternalresources/index) method and pass the following parameters:
+To save an image to a separate folder, call the [HtmlViewOptions.ForExternalResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forexternalresources/index) method and pass the following parameters:
 
   * The output file path format
   * The path format for the folder with external resources
@@ -132,7 +132,7 @@ The result is shown below. The image is placed in a separate folder.
 
 ## Render images as PDF
 
-Create a [PdfViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an image to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
+Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an image to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
@@ -156,7 +156,7 @@ The following image demonstrates the result:
 
 ## Convert images to PNG
 
-Create a [PngViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an image to PNG. Use the [PngViewOptions.Height](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
+Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an image to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
@@ -182,7 +182,7 @@ The following image demonstrates the result:
 
 ## Convert images to JPEG
 
-Create a [JpgViewOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an image to JPEG. Use the [JpgViewOptions.Height](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
+Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an image to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
@@ -206,13 +206,13 @@ using (var viewer = new Viewer("vector-image.svg"))
 
 When you render a PSD file with custom fonts, you can specify a folder that contains necessary fonts to prevent font substitution during rendering. To do this, follow the steps below:
 
-1. Create a [FolderFontSource](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/folderfontsource) class instance and specify a path to the folder that stores custom fonts. Pass a [SearchOption](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/folderfontsource/properties/searchoption) enumeration member to the class constructor to define the search scope. The following options are available:
+1. Create a [FolderFontSource](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/folderfontsource) class instance and specify a path to the folder that stores custom fonts. Pass a [SearchOption](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/folderfontsource/properties/searchoption) enumeration member to the class constructor to define the search scope. The following options are available:
     * `TopFolderOnly`---Searches for the fonts only in the current folder.
     * `AllFolders`---Searches for the fonts in the current folder and its subfolders.
 
-2. Call the [FontSettings.SetFontSources](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/fontsettings/methods/setfontsources) static method and pass the specified font source to this method as a parameter. This method allows you to specify multiple font sources.
+2. Call the [FontSettings.SetFontSources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/fontsettings/methods/setfontsources) static method and pass the specified font source to this method as a parameter. This method allows you to specify multiple font sources.
 
-You can also set the [ViewOptions.DefaultFontName](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/defaultfontname) property to specify the default font that should be used when a particular font is not found.
+You can also set the [ViewOptions.DefaultFontName](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/defaultfontname) property to specify the default font that should be used when a particular font is not found.
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}

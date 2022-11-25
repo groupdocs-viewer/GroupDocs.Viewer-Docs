@@ -9,7 +9,7 @@ productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
 
-GroupDocs.Viewer provides additional information such as project start and end dates for MS Project documents when calling [getViewInfo()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method. To retrieve view information for MS Project document call [getViewInfo()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method and cast output result to [ProjectManagementViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ProjectManagementViewInfo) type.
+GroupDocs.Viewer provides additional information such as project start and end dates for MS Project documents when calling [getViewInfo()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method. To retrieve view information for MS Project document call [getViewInfo()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method and cast output result to [ProjectManagementViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ProjectManagementViewInfo) type.
 
 Following example demonstrates how to retrieve view information for MS Project document.
 

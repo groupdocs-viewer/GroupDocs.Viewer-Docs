@@ -9,7 +9,7 @@ productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
 
-GroupDocs.Viewer provides additional information for PDF documents when calling [getViewInfo()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method. To retrieve view information for PDF document call [getViewInfo()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method and cast output result to [PdfViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/PdfViewInfo) type.
+GroupDocs.Viewer provides additional information for PDF documents when calling [getViewInfo()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method. To retrieve view information for PDF document call [getViewInfo()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method and cast output result to [PdfViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/PdfViewInfo) type.
 
 Following example demonstrates how to retrieve view information for PDF document.
 

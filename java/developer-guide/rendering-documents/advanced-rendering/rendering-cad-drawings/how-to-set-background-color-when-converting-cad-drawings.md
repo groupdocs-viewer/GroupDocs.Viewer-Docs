@@ -20,7 +20,7 @@ And as you can see the background color of the output image below is white.
 
 Now, lets set background color and convert CAD drawing one more time.
 
-To set background color you need to specify the [setBackgroundColor()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#setBackgroundColor(java.awt.Color)) property value in the [CadOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions) class. 
+To set background color you need to specify the [setBackgroundColor()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#setBackgroundColor(java.awt.Color)) property value in the [CadOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions) class. 
 
 The following code snippet shows how to set background color.
 

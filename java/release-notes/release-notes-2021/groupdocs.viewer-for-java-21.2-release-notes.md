@@ -157,7 +157,7 @@ In version 21.2 following changes in public API were made:
 
 ### Changes in `PdfOptions` class
 
-New methods were added to [PdfOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfOptions) class
+New methods were added to [PdfOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfOptions) class
 
 ```java
     class PdfOptions {
@@ -174,7 +174,7 @@ New methods were added to [PdfOptions](https://apireference.groupdocs.com/viewer
 
 ### Changes in `FileType` class
 
-New constants and methods were added to [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class.
+New constants and methods were added to [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class.
 
 More details and use cases can be found in [How to determine file type]({{< ref "viewer/java/developer-guide/retrieving-document-information/how-to-determine-file-type.md" >}}) documentation article.
 
@@ -240,7 +240,7 @@ More details and use cases can be found in [How to determine file type]({{< ref 
 
 ### Changes in `ArchiveOptions` class
 
-New methods were added to [ArchiveOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ArchiveOptions)
+New methods were added to [ArchiveOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ArchiveOptions)
 
 ```java
     class ArchiveOptions {
@@ -289,7 +289,7 @@ Class `FileName` was added to represent the name of the file.
 
 ### Changes in `Attachment` class
 
-New constructor was added to [Attachment](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Attachment) class
+New constructor was added to [Attachment](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Attachment) class
 
 ```java
     class Attachment {
@@ -303,7 +303,7 @@ New constructor was added to [Attachment](https://apireference.groupdocs.com/vie
 
 ### Changes in `Viewer` class
 
-New methods were added to [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class
+New methods were added to [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class
 See [How to check if file is encrypted]({{< ref "viewer/java/developer-guide/retrieving-document-information/how-to-check-if-file-is-encrypted.md">}}) for more details and code sample.
 
 ```java
@@ -330,7 +330,7 @@ See [How to check if file is encrypted]({{< ref "viewer/java/developer-guide/ret
 
 ### Changes in `CadOptions` class
 
-New methods were added to [CadOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions) class
+New methods were added to [CadOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions) class
 
 ```java
     class CadOptions {
@@ -344,7 +344,7 @@ New methods were added to [CadOptions](https://apireference.groupdocs.com/viewer
 
 #### Changes in `SpreadsheetOptions` class
 
-New methods were added to [SpreadsheetOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions) class
+New methods were added to [SpreadsheetOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions) class
 See [Split worksheets into pages]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/split-worksheets-into-pages.md" >}}) documentation article for more details and code samples.
 
 ```java
@@ -399,7 +399,7 @@ class FileInfo {
 
 #### Changes in `HtmlViewOptions` class
 
-New methods were added to [HtmlViewOptions](<https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions>) class
+New methods were added to [HtmlViewOptions](<https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions>) class
 For more details see [Rendering text files into a single HTML page]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/how-to-convert-and-view-txt-files.md#convert-txt-to-html">}}).
 
 ```java
@@ -415,7 +415,7 @@ For more details see [Rendering text files into a single HTML page]({{< ref "vie
 
 #### Changes in `WordProcessingOptions` class
 
-New methods were added to [WordProcessingOptions](<https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/WordProcessingOptions>) class to support setting margins when rendering Web documents.
+New methods were added to [WordProcessingOptions](<https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/WordProcessingOptions>) class to support setting margins when rendering Web documents.
  See [How to convert and view HTML files with user defined margins]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-web-documents/how-to-convert-and-view-html-files-with-margins.md" >}}) documentation article for more details and code samples.
 
 ```java
@@ -449,22 +449,22 @@ New methods were added to [WordProcessingOptions](<https://apireference.groupdoc
 
 ### Next classes were renamed and from them were extracted interfaces
 
-* Class `ArchiveViewInfo` was renamed to [ArchiveViewInfoImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ArchiveViewInfoImpl) and from it was extracted interface [ArchiveViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ArchiveViewInfo)
-* Class `Attachment` was renamed to [AttachmentImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/AttachmentImpl) and from it was extracted interface [Attachment](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Attachment)
-* Class `CadViewInfo` was renamed to [CadViewInfoImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/CadViewInfoImpl) and from it was extracted interface [CadViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/CadViewInfo)
-* Class `Character` was renamed to [CharacterImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/CharacterImpl) and from it was extracted interface [Character](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Character)
-* Class `FileInfo` was renamed to [FileInfoImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/FileInfoImpl) and from it was extracted interface [FileInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/FileInfo)
-* Class `Layer` was renamed to [LayerImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/LayerImpl) and from it was extracted interface [Layer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Layer)
-* Class `Layout` was renamed to [LayoutImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/LayoutImpl) and from it was extracted interface [Layout](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Layout)
-* Class `Line` was renamed to [LineImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/LineImpl) and from it was extracted interface [Line](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Line)
-* Class `LotusNotesViewInfo` was renamed to [LotusNotesViewInfoImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/LotusNotesViewInfoImpl) and from it was extracted interface [LotusNotesViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/LotusNotesViewInfo)
-* Class `OutlookViewInfo` was renamed to [OutlookViewInfoImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/OutlookViewInfoImpl) and from it was extracted interface [OutlookViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/OutlookViewInfo)
-* Class `Page` was renamed to [PageImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/PageImpl) and from it was extracted interface [Page](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Page)
-* Class `PdfViewInfo` was renamed to [PdfViewInfoImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/PdfViewInfoImpl) and from it was extracted interface [PdfViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/PdfViewInfo)
-* Class `ProjectManagementViewInfo` was renamed to [ProjectManagementViewInfoImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ProjectManagementViewInfoImpl) and from it was extracted interface [ProjectManagementViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ProjectManagementViewInfo)
-* Class `TextElement` was renamed to [TextElementImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/TextElementImpl) and from it was extracted interface [TextElement](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/TextElement)
-* Class `ViewInfo` was renamed to [ViewInfoImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ViewInfoImpl) and from it was extracted interface [ViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ViewInfo)
-* Class `Word` was renamed to [WordImpl](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/WordImpl) and from it was extracted interface [Word](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Word)
+* Class `ArchiveViewInfo` was renamed to [ArchiveViewInfoImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ArchiveViewInfoImpl) and from it was extracted interface [ArchiveViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ArchiveViewInfo)
+* Class `Attachment` was renamed to [AttachmentImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/AttachmentImpl) and from it was extracted interface [Attachment](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Attachment)
+* Class `CadViewInfo` was renamed to [CadViewInfoImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/CadViewInfoImpl) and from it was extracted interface [CadViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/CadViewInfo)
+* Class `Character` was renamed to [CharacterImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/CharacterImpl) and from it was extracted interface [Character](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Character)
+* Class `FileInfo` was renamed to [FileInfoImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/FileInfoImpl) and from it was extracted interface [FileInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/FileInfo)
+* Class `Layer` was renamed to [LayerImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/LayerImpl) and from it was extracted interface [Layer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Layer)
+* Class `Layout` was renamed to [LayoutImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/LayoutImpl) and from it was extracted interface [Layout](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Layout)
+* Class `Line` was renamed to [LineImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/LineImpl) and from it was extracted interface [Line](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Line)
+* Class `LotusNotesViewInfo` was renamed to [LotusNotesViewInfoImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/LotusNotesViewInfoImpl) and from it was extracted interface [LotusNotesViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/LotusNotesViewInfo)
+* Class `OutlookViewInfo` was renamed to [OutlookViewInfoImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/OutlookViewInfoImpl) and from it was extracted interface [OutlookViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/OutlookViewInfo)
+* Class `Page` was renamed to [PageImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/PageImpl) and from it was extracted interface [Page](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Page)
+* Class `PdfViewInfo` was renamed to [PdfViewInfoImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/PdfViewInfoImpl) and from it was extracted interface [PdfViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/PdfViewInfo)
+* Class `ProjectManagementViewInfo` was renamed to [ProjectManagementViewInfoImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ProjectManagementViewInfoImpl) and from it was extracted interface [ProjectManagementViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ProjectManagementViewInfo)
+* Class `TextElement` was renamed to [TextElementImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/TextElementImpl) and from it was extracted interface [TextElement](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/TextElement)
+* Class `ViewInfo` was renamed to [ViewInfoImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ViewInfoImpl) and from it was extracted interface [ViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ViewInfo)
+* Class `Word` was renamed to [WordImpl](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/WordImpl) and from it was extracted interface [Word](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Word)
 
 **This changes were made to implement possibility to use custom serialization functionality with caching. More details you can find in [Using Custom model classes for caching]({{< ref "viewer/java/developer-guide/caching-results/how-to-use-custom-cache-implementation.md" >}})**
 

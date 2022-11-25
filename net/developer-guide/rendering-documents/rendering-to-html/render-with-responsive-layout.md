@@ -8,7 +8,7 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 
-GroupDocs.Viewer also enables you to make your rendering into HTML look well across all types of devices. To achieve this, the API provides [RenderResponsive](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions/properties/renderresponsive) property of [HtmlViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) class as shown in below sample code.
+GroupDocs.Viewer also enables you to make your rendering into HTML look well across all types of devices. To achieve this, the API provides [RenderResponsive](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions/properties/renderresponsive) property of [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) class as shown in below sample code.
 
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))

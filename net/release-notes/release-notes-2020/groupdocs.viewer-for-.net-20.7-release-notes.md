@@ -89,7 +89,7 @@ public FileInfo GetFileInfo()
 
 #### GroupDocs.Viewer.FileType
 
-Three new fields added to [GroupDocs.Viewer.FileType](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflect new file formats that we're supporting starting from v20.7.
+Three new fields added to [GroupDocs.Viewer.FileType](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflect new file formats that we're supporting starting from v20.7.
 
 ```csharp
 /// <summary>
@@ -159,7 +159,7 @@ public class FileInfo
 
 #### GroupDocs.Viewer.Options.ArchiveOptions
 
-The new property _ItemsPerPage_ has been added to to [GroupDocs.Viewer.Options.CadOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/archiveoptions>) class to support.
+The new property _ItemsPerPage_ has been added to to [GroupDocs.Viewer.Options.CadOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/archiveoptions>) class to support.
 
 ```csharp
 /// <summary>
@@ -171,7 +171,7 @@ public int ItemsPerPage { get; set; }
 
 #### GroupDocs.Viewer.Options.HtmlViewOptions
 
-Added new property _RenderSinglePage_ to [GroupDocs.Viewer.Options.HtmlViewOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions>) class to support rendering text files to a single page. See the following topic for details: [Render text documents]({{< ref "viewer/net/rendering-basics/render-text-files.md">}}).
+Added new property _RenderSinglePage_ to [GroupDocs.Viewer.Options.HtmlViewOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions>) class to support rendering text files to a single page. See the following topic for details: [Render text documents]({{< ref "viewer/net/rendering-basics/render-text-files.md">}}).
 
 ```csharp
 /// <summary>
@@ -182,7 +182,7 @@ public bool RenderSinglePage { get; set; }
 
 #### GroupDocs.Viewer.Options.SpreadsheetOptions
 
-The new factory method _ForSplitSheetIntoPages()_ and property _CountColumnsPerPage_ has been added to [GroupDocs.Viewer.Options.SpreadsheetOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions>) to support partial rendering of Excel spreadsheets by splitting worksheets into pages by rows and columns. See the [Split worksheets into pages]({{< ref "viewer/net/rendering-basics/render-spreadsheets/split-worksheet-into-pages.md" >}}) article for more details and code samples.
+The new factory method _ForSplitSheetIntoPages()_ and property _CountColumnsPerPage_ has been added to [GroupDocs.Viewer.Options.SpreadsheetOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions>) to support partial rendering of Excel spreadsheets by splitting worksheets into pages by rows and columns. See the [Split worksheets into pages]({{< ref "viewer/net/rendering-basics/render-spreadsheets/split-worksheet-into-pages.md" >}}) article for more details and code samples.
 
 ```csharp
 /// <summary>
@@ -203,7 +203,7 @@ public static SpreadsheetOptions ForSplitSheetIntoPages(int countRowsPerPage, in
 
 #### GroupDocs.Viewer.Options.WordProcessingOptions
 
-Added new properties to the [GroupDocs.Viewer.Options.WordProcessingOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions>) class to support setting margins when rendering Web documents. See the following help topic for details: [Render HTML files with user-defined margins]({{< ref "viewer/net/rendering-basics/render-web-documents.md" >}}).
+Added new properties to the [GroupDocs.Viewer.Options.WordProcessingOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions>) class to support setting margins when rendering Web documents. See the following help topic for details: [Render HTML files with user-defined margins]({{< ref "viewer/net/rendering-basics/render-web-documents.md" >}}).
 
 ```csharp
 /// <summary>

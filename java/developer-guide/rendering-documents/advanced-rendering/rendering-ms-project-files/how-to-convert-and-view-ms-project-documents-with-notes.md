@@ -35,7 +35,7 @@ The following screenshot shows the output HTML with the tasks file opened in a b
 
 ![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_1.png)
 
-If [setRenderNotes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setRenderNotes(boolean)) property set to true, notes will be rendered on a separate page.
+If [setRenderNotes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setRenderNotes(boolean)) property set to true, notes will be rendered on a separate page.
 
 The following screenshot shows the output HTML with the notes file opened in a browser.
 
@@ -58,7 +58,7 @@ The following screenshot shows the output JPG file opened in a Windows Photo Vie
 
 ![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_3.png)
 
-If [setRenderNotes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setRenderNotes(boolean)) property set to true, notes will be rendered on a separate page.
+If [setRenderNotes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setRenderNotes(boolean)) property set to true, notes will be rendered on a separate page.
 
 The following screenshot shows the output JPEG with notes file opened in a Windows Photo Viewer application.
 
@@ -81,7 +81,7 @@ The following screenshot shows the output PNG file opened in a Windows Photo Vie
 
 ![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_5.png)
 
-If [setRenderNotes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setRenderNotes(boolean)) property set to true, notes will be rendered on a separate page.
+If [setRenderNotes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setRenderNotes(boolean)) property set to true, notes will be rendered on a separate page.
 
 The following screenshot shows the output PNG with notes file opened in a Windows Photo Viewer application.
 
@@ -103,7 +103,7 @@ The following screenshot shows the output PDF file opened in an Adobe Acrobat Re
 
 ![](/viewer/java/images/how-to-convert-and-view-ms-project-documents-with-notes_7.png)
 
-If [setRenderNotes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setRenderNotes(boolean)) property set to true, notes will be rendered on a separate page.
+If [setRenderNotes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setRenderNotes(boolean)) property set to true, notes will be rendered on a separate page.
 
 The following screenshot shows the page of output PDF with notes file opened in an Adobe Acrobat Reader.
 

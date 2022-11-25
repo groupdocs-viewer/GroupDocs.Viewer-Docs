@@ -14,11 +14,11 @@ Lotus Notes allows filtering messages inside folders by some text value from mes
 
 GroupDocs.Viewer also allows filtering the rendered messages using the following filters:
 
-* Filter by subject and content using [lotusNotesOptions.setTextFilter()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/LotusNotesOptions#setTextFilter(java.lang.String))*;*
-* Filter by the sender's and recipient's email addresses using [lotusNotesOptions.setAddressFilter()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/LotusNotesOptions#setAddressFilter(java.lang.String))*;*
+* Filter by subject and content using [lotusNotesOptions.setTextFilter()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/LotusNotesOptions#setTextFilter(java.lang.String))*;*
+* Filter by the sender's and recipient's email addresses using [lotusNotesOptions.setAddressFilter()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/LotusNotesOptions#setAddressFilter(java.lang.String))*;*
 
-As an example, when setting [lotusNotesOptions.setTextFilter()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/LotusNotesOptions#setTextFilter(java.lang.String)) as `Microsoft`  the API will render all messages that contain the text `Microsoft` in the message's subject or body. 
-Whereas, setting [lotusNotesOptions.setAddressFilter()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/LotusNotesOptions#setAddressFilter(java.lang.String)) as `susan` will filter messages that contain `susan` as a part of the sender's or recipient's address. The following code samples show how to filter the messages.
+As an example, when setting [lotusNotesOptions.setTextFilter()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/LotusNotesOptions#setTextFilter(java.lang.String)) as `Microsoft`  the API will render all messages that contain the text `Microsoft` in the message's subject or body. 
+Whereas, setting [lotusNotesOptions.setAddressFilter()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/LotusNotesOptions#setAddressFilter(java.lang.String)) as `susan` will filter messages that contain `susan` as a part of the sender's or recipient's address. The following code samples show how to filter the messages.
 
 ```java
     try (Viewer viewer = new Viewer("sample.nsf")) {

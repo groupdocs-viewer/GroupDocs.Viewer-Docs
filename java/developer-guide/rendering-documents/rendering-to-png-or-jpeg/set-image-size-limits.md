@@ -11,11 +11,11 @@ hideChildren: False
 GroupDocs.Viewer also provides the feature to set limits for width/height for the output image. Follow the below steps to achieve this functionality.
 If you set MaxWidth/MaxHeight options, if the image exceeds one of these limits - it will be resized proportionally.
 
-* Instantiate the [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) object;
-* Instantiate the  [PngViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions) or [JpgViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions);
+* Instantiate the [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) object;
+* Instantiate the  [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions) or [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions);
 * Set MaxWidth and/or MaxHeight values;
 
-* Call [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method.
+* Call [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method.
 * The following code sample shows how to set the output image size limits when rendering the document.
 
 ```java
@@ -30,7 +30,7 @@ try (Viewer viewer = new Viewer("sample.jpg")) {
 }
 ```
 
-[PngViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions) and [JpgViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions) implement special interface [IMaxSizeOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/IMaxSizeOptions), which contain properties for size limits.
+[PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions) and [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions) implement special interface [IMaxSizeOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/IMaxSizeOptions), which contain properties for size limits.
 
 ```java
 /**

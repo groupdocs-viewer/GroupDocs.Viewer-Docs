@@ -12,10 +12,10 @@ GroupDocs.Viewer also provides the feature to set limits for width/height for th
 If you want to render single image in HTML you can set width/height for the output image.
 If you set ImageMaxWidth/ImageMaxHeight options, if the image exceeds one of these limits - it will be resized proportionally.
 
-* Instantiate the [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) object;
-* Instantiate the  [HtmlViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions);
+* Instantiate the [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) object;
+* Instantiate the  [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions);
 * Set ImageMaxWidth and/or ImageMaxHeight values;
-* Call [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method.
+* Call [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method.
 
 The following code sample shows how to set the output image size limits when rendering the document.
 
@@ -29,7 +29,7 @@ try (Viewer viewer = new Viewer("sample.jpg")) {
 }
 ```
 
-In [PdfViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions)
+In [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions)
 have following methods to set single image width/height in PDF.
 
 ```java

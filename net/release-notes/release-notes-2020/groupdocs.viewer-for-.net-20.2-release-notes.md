@@ -40,7 +40,7 @@ There are 14 features, improvements, and bug-fixes in this release, most notable
 
 In version 20.2 following public class members were added:
 
-*   Added new property to **[GroupDocs.Viewer.Options.PdfOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions)** class
+*   Added new property to **[GroupDocs.Viewer.Options.PdfOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions)** class
 
 ```csharp
 /// <summary>
@@ -54,7 +54,7 @@ In version 20.2 following public class members were added:
 public bool RenderOriginalPageSize { get; set; }
 ```
 
-*   Added two fields and one method to **[GroupDocs.Viewer.FileType](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/filetype)** class
+*   Added two fields and one method to **[GroupDocs.Viewer.FileType](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/filetype)** class
 
 ```csharp
 /// <summary>

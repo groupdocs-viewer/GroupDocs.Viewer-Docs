@@ -18,7 +18,7 @@ aliases:
 ---
 [GroupDocs.Viewer for Java](https://products.groupdocs.com/viewer/java) allows you to render your spreadsheet files in HTML, PDF, PNG, and JPEG formats. You do not need to use Microsoft Excel or other spreadsheet programs to load and view Excel documents within your Java application (web or desktop). 
 
-To start with the GroupDocs.Viewer API, create a [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class instance. Pass a spreadsheet file you want to view to the class constructor. You can load the document from a file or stream. Call one of the [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
+To start with the GroupDocs.Viewer API, create a [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class instance. Pass a spreadsheet file you want to view to the class constructor. You can load the document from a file or stream. Call one of the [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
 
 {{< button style="primary" link="https://products.groupdocs.app/viewer/excel" >}} {{< icon "gdoc_person" >}} View Excel files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
@@ -47,11 +47,11 @@ GroupDocs.Viewer can detect the document format automatically based on informati
 
 ## Render spreadsheets as HTML
 
-Create a [HtmlViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) class instance and pass it to the [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method to convert a spreadsheet file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
+Create a [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) class instance and pass it to the [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method to convert a spreadsheet file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
 
 ### Create an HTML file with embedded resources
 
-To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#forEmbeddedResources()) method and specify the output file name.
+To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#forEmbeddedResources()) method and specify the output file name.
 
 **Example  1: Convert an Excel workbook to HTML**
 
@@ -94,7 +94,7 @@ The following image demonstrates the result:
 
 ### Create an HTML file with external resources
 
-If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.forExternalResources()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#forExternalResources(java.lang.String,%20java.lang.String,%20java.lang.String)) method and pass the following parameters:
+If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.forExternalResources()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#forExternalResources(java.lang.String,%20java.lang.String,%20java.lang.String)) method and pass the following parameters:
 
   * The output file path format
   * The path format for the folder with external resources
@@ -138,7 +138,7 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 ## Render spreadsheets as PDF
 
-Create a [PdfViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions) class instance and pass it to the [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method to convert a spreadsheet file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "/viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-pdf-documents/_index.md" >}}).
+Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions) class instance and pass it to the [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method to convert a spreadsheet file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "/viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-pdf-documents/_index.md" >}}).
 
 **Example  1: Convert an Excel workbook to PDF**
 
@@ -178,7 +178,7 @@ The following image demonstrates the result:
 
 ## Render spreadsheets as PNG
 
-Create a [PngViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions) class instance and pass it to the [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method to convert a spreadsheet file to PNG. Use the [PngViewOptions.setHeight(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions#setHeight(int)) and [PngViewOptions.setWidth(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions#setWidth(int)) properties to specify the output image size in pixels.
+Create a [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions) class instance and pass it to the [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method to convert a spreadsheet file to PNG. Use the [PngViewOptions.setHeight(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions#setHeight(int)) and [PngViewOptions.setWidth(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions#setWidth(int)) properties to specify the output image size in pixels.
 
 **Example  1: Convert an Excel workbook to PNG**
 
@@ -223,7 +223,7 @@ The following image demonstrates the result:
 
 ## Render spreadsheets as JPEG
 
-Create a [JpgViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions) class instance and pass it to the [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method to convert a spreadsheet file to JPEG. Use the [JpgViewOptions.setHeight(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions#setHeight(int)) and [JpgViewOptions.setWidth(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions#setWidth(int)) properties to specify the output image size in pixels.
+Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions) class instance and pass it to the [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method to convert a spreadsheet file to JPEG. Use the [JpgViewOptions.setHeight(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions#setHeight(int)) and [JpgViewOptions.setWidth(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions#setWidth(int)) properties to specify the output image size in pixels.
 
 **Example  1: Convert an Excel workbook to JPEG**
 
@@ -261,7 +261,7 @@ try (Viewer viewer = new Viewer("Products.numbers")) {
 
 ## Detect a CSV/TSV separator
 
-If you load a CSV/TSV file to convert it to another format, enable the [SpreadsheetOptions.setDetectSeparator(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions#setDetectSeparator(boolean)) property for a target view to automatically detect a delimiter used to separate values in the source file.
+If you load a CSV/TSV file to convert it to another format, enable the [SpreadsheetOptions.setDetectSeparator(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions#setDetectSeparator(boolean)) property for a target view to automatically detect a delimiter used to separate values in the source file.
 
 GroupDocs.Viewer can detect the following separators:
 
@@ -284,9 +284,9 @@ try (Viewer viewer = new Viewer("sample.csv")) {
 
 GroupDocs.Viewer allows you to obtain information about the source spreadsheet file. For example, you can retrieve worksheet names, as described below:
 
-1. Create a [ViewInfoOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ViewInfoOptions) instance for a specific view.
-2. Call the [Viewer.getViewInfo(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method and pass the `ViewInfoOptions` instance to this method as a parameter.
-3. Use the [getPages()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ViewInfo#getPages()) method of the returned [ViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ViewInfo) object to iterate through the list of worksheets and retrieve the worksheet names.
+1. Create a [ViewInfoOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ViewInfoOptions) instance for a specific view.
+2. Call the [Viewer.getViewInfo(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method and pass the `ViewInfoOptions` instance to this method as a parameter.
+3. Use the [getPages()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ViewInfo#getPages()) method of the returned [ViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ViewInfo) object to iterate through the list of worksheets and retrieve the worksheet names.
 
 {{< tabs "example12">}}
 {{< tab "Java" >}}

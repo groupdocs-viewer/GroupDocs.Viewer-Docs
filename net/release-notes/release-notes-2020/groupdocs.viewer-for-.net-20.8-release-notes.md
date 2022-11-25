@@ -49,7 +49,7 @@ There are 21 features, improvements, and bug-fixes in this release, most notable
 
 #### GroupDocs.Viewer.FileType
 
-Two fields added to [GroupDocs.Viewer.FileType](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflect new file formats that we're supporting starting from v20.8.
+Two fields added to [GroupDocs.Viewer.FileType](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflect new file formats that we're supporting starting from v20.8.
 
 ```csharp
 /// <summary>
@@ -67,7 +67,7 @@ public static readonly FileType NSF = new FileType("Lotus Notes Database", ".nsf
 
 #### GroupDocs.Viewer.Options.LotusNotesOptions
 
-public class [LotusNotesOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/lotusnotesoptions>) class added to GroupDocs.Viewer.Options namespace. This class provides options for rendering Lotus Notes data files.
+public class [LotusNotesOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/lotusnotesoptions>) class added to GroupDocs.Viewer.Options namespace. This class provides options for rendering Lotus Notes data files.
 
 ```csharp
 /// <summary>

@@ -16,7 +16,7 @@ I've created three worksheets and left their default names that is shown on the 
 
 ## Retrieving the names of the worksheets
 
-To get the names of the worksheets call [getViewInfo()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method that returns an object which contains a list of pages (worksheets). Each page has its name. 
+To get the names of the worksheets call [getViewInfo()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method that returns an object which contains a list of pages (worksheets). Each page has its name. 
 The following code sample shows how to get and print out the names of the worksheets.
 
 ```java

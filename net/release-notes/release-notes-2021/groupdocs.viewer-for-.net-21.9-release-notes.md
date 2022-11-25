@@ -70,7 +70,7 @@ There are 39 features, improvements, and bug-fixes in this release, most notable
 
 #### GroupDocs.Viewer.FileType
 
-Fields were added to [GroupDocs.Viewer.FileType](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflects new file formats that we're supporting starting from v21.9.
+Fields were added to [GroupDocs.Viewer.FileType](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflects new file formats that we're supporting starting from v21.9.
 
 ```csharp
 /// <summary>

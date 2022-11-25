@@ -49,7 +49,7 @@ There are 21 features, improvements, and bug-fixes in this release, most notable
 
 #### GroupDocs.Viewer.Results.Attachment
 
-The *FilePath* field has been added to [GroupDocs.Viewer.Results.Attachment](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/attachment>) class. It is used to keep a relative attachment path or attachment filename.
+The *FilePath* field has been added to [GroupDocs.Viewer.Results.Attachment](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/attachment>) class. It is used to keep a relative attachment path or attachment filename.
 
 ```csharp
 /// <summary>
@@ -62,7 +62,7 @@ In addition, all three *Attachment* class constructors have been updated to acce
 
 #### GroupDocs.Viewer.Options.ViewInfoOptions
 
-New fields have been added to [GroupDocs.Viewer.Options.ViewInfoOptions](<https://apireference.groupdocs.com/viewer/net/groupDocs.viewer.options/viewinfooptions>) class. It is used to keep a relative attachment path or attachment filename.
+New fields have been added to [GroupDocs.Viewer.Options.ViewInfoOptions](<https://reference.groupdocs.com/viewer/net/groupDocs.viewer.options/viewinfooptions>) class. It is used to keep a relative attachment path or attachment filename.
 
 ```csharp
 /// <summary>

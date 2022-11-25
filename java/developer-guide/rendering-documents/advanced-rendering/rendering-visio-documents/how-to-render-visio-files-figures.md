@@ -15,7 +15,7 @@ If Visio scheme does not contain pages - only figures will be rendered.
 
 ## How to render Visio figures
 
-To force render Visio figures please set RenderFiguresOnly property to true in [VisioRenderingOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/VisioRenderingOptions).
+To force render Visio figures please set RenderFiguresOnly property to true in [VisioRenderingOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/VisioRenderingOptions).
 You can set width of each figure, height will be calculated by proportions automatically.
 
 ### Rendering Visio figures to PNG

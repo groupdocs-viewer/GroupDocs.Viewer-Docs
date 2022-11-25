@@ -38,7 +38,7 @@ Auto Detection means that GroupDocs.Viewer for Java can determine the type of th
 | .SXC | StarOffice Calc Spreadsheet | Yes |
 | [.NUMBERS](https://docs.fileformat.com/spreadsheet/numbers) | [Apple numbers](https://docs.fileformat.com/spreadsheet/numbers) | Yes |
 
-*Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
+*Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
 
 ## In this section
 

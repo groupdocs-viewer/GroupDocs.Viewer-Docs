@@ -13,9 +13,9 @@ You can save/export attachments from Email documents, Outlook data files, Archiv
 
 Follow these steps to get and save (export) attachments:
 
-* Instantiate [Viewer](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object  for the file that contains attachment(s);
-* Call [GetAttachments](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getattachments) method which will return document attachments collection;
-* Iterate through attachments collection and save attachment by calling [SaveAttachment](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/saveattachment) method.
+* Instantiate [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object  for the file that contains attachment(s);
+* Call [GetAttachments](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getattachments) method which will return document attachments collection;
+* Iterate through attachments collection and save attachment by calling [SaveAttachment](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/saveattachment) method.
 
 Following example demonstrates on how to get and save attachments from MSG files.
 

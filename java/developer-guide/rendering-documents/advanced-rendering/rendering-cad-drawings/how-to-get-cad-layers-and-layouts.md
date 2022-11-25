@@ -8,7 +8,7 @@ keywords: how to retrieve view information for CAD drawing, DWG Viewer
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-GroupDocs.Viewer provides additional information about CAD drawings such as list of layouts and layers when calling [getViewInfo()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method. To retrieve view information for CAD drawing call [getViewInfo()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method and cast output result to [CadViewInfo](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/CadViewInfo) type.
+GroupDocs.Viewer provides additional information about CAD drawings such as list of layouts and layers when calling [getViewInfo()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method. To retrieve view information for CAD drawing call [getViewInfo()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method and cast output result to [CadViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/CadViewInfo) type.
 
 Following example demonstrates how to retrieve view information for CAD drawing.
 

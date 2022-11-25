@@ -65,7 +65,7 @@ With GroupDocs.Viewer for Java you can render files to HTML, JPEG, PNG, and PDF 
 </ul>
 <p>USEFUL RESOURCES</p>
 <ul>
-	<li><a href="https://apireference.groupdocs.com/viewer/java">GroupDocs.Viewer for Java API Reference</a></li>
+	<li><a href="https://reference.groupdocs.com/viewer/java">GroupDocs.Viewer for Java API Reference</a></li>
 	<li><a href='{{< ref "viewer/java/release-notes" >}}'>GroupDocs.Viewer for Java Release Notes</a></li>
 </ul>
 

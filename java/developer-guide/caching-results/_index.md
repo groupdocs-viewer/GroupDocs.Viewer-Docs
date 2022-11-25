@@ -12,10 +12,10 @@ In some cases document rendering may be a time-consuming operation (dependent o
 
 To enable caching you have to:
 
-* Instantiate desired cache object (for example [FileCache](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.caching/FileCache) will store document rendering results at the local drive);
-* Instantiate [ViewerSettings](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/ViewerSettings) object with cache object;
-* Pass [ViewerSettings](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/ViewerSettings) object to constructor of a [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class.
-* Call [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method of [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class.
+* Instantiate desired cache object (for example [FileCache](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.caching/FileCache) will store document rendering results at the local drive);
+* Instantiate [ViewerSettings](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/ViewerSettings) object with cache object;
+* Pass [ViewerSettings](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/ViewerSettings) object to constructor of a [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class.
+* Call [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method of [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class.
 
 Here is a code that demonstrates how to enable caching for GroupDocs.Viewer for Java.
 

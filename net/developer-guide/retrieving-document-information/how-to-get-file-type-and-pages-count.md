@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-GroupDocs.Viewer for .NET API enables you to get file type and pages count with [GetViewInfo](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/getviewinfo) method that returns a [ViewInfo](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo) object.
+GroupDocs.Viewer for .NET API enables you to get file type and pages count with [GetViewInfo](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/getviewinfo) method that returns a [ViewInfo](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo) object.
 
 For the following document types GroupDocs.Viewer provides additional information:
 

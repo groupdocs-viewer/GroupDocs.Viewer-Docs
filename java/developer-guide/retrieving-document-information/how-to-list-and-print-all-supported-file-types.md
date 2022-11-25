@@ -17,8 +17,8 @@ The complete list of of supported file types can be found in [Supported Document
 
 In case you need to list or print out all of the supported file formats in your application you can do the following:
 
-* Call [getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class;
-* Enumerate through the collection of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) objects.
+* Call [getSupportedFileTypes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class;
+* Enumerate through the collection of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) objects.
 
 The following code sample demonstrates how to print all supported file formats list to the console.
 

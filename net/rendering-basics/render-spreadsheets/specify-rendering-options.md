@@ -17,12 +17,12 @@ aliases:
     - /viewer/net/skip-rendering-of-empty-columns/
     - /viewer/net/skip-rendering-of-empty-rows/
 ---
-GroupDocs.Viewer ships with the [SpreadsheetOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions) class that allows you to specify different spreadsheet rendering options (for example, you can display row and column headings in the output file, render gridlines, or adjust cell text overflow). To access these options, use the [SpreadsheetOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property for one of the following classes (depending on the output file format):
+GroupDocs.Viewer ships with the [SpreadsheetOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions) class that allows you to specify different spreadsheet rendering options (for example, you can display row and column headings in the output file, render gridlines, or adjust cell text overflow). To access these options, use the [SpreadsheetOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property for one of the following classes (depending on the output file format):
 
-* [HtmlViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) 
-* [PdfViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions)
-* [PngViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions)
-* [JpgViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions)
+* [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) 
+* [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions)
+* [PngViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions)
+* [JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions)
 
 ## Render row and column headings
 
@@ -30,7 +30,7 @@ Rows and columns in a worksheet have unique names displayed on the worksheet's l
 
 ![Row and column headings in a worksheet](/viewer/net/images/rendering-basics/render-spreadsheets/excel-row-and-column-headings.png)
 
-Enable the [SpreadsheetOptions.RenderHeadings](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/renderheadings) property to display row and column headings in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
+Enable the [SpreadsheetOptions.RenderHeadings](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/renderheadings) property to display row and column headings in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
 
 The following example demonstrates how to convert an Excel workbook to PDF and display row and column headings in the output PDF file:
 
@@ -57,7 +57,7 @@ The following image demonstrates the result:
 
 ## Render worksheet gridlines
 
-Use the [SpreadsheetOptions.RenderGridLines](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/rendergridlines) property to display gridlines (lines that separate worksheet rows and columns) in the output file.
+Use the [SpreadsheetOptions.RenderGridLines](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/rendergridlines) property to display gridlines (lines that separate worksheet rows and columns) in the output file.
 
 The following code example demonstrates how to convert an Excel workbook to PDF and display gridlines in the output PDF file:
 
@@ -84,25 +84,25 @@ The following image demonstrates the result:
 
 ## Control cell text overflow
 
-The [SpreadsheetOptions.TextOverflowMode](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/textoverflowmode) option allows you to prevent text overflow in worksheet cells (see the image below) when you convert your spreadsheet file to HTML, PDF, or image format.
+The [SpreadsheetOptions.TextOverflowMode](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/textoverflowmode) option allows you to prevent text overflow in worksheet cells (see the image below) when you convert your spreadsheet file to HTML, PDF, or image format.
 
 ![Text overflow in a cell](/viewer/net/images/rendering-basics/render-spreadsheets/excel-text-overflow.png)
 
-You can set the [TextOverflowMode](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/textoverflowmode) property to one of the following values:
+You can set the [TextOverflowMode](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/textoverflowmode) property to one of the following values:
 
-* [TextOverflowMode.OverlayIfNextIsEmpty](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoverflowmode) (default) --- Allows text to overflow into adjacent cells if these cells have no data. If adjacent cells are not empty, the overflowing text is truncated.
+* [TextOverflowMode.OverlayIfNextIsEmpty](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoverflowmode) (default) --- Allows text to overflow into adjacent cells if these cells have no data. If adjacent cells are not empty, the overflowing text is truncated.
 
     ![TextOverflowMode.OverlayIfNextIsEmpty](/viewer/net/images/rendering-basics/render-spreadsheets/text-overflow-mode-overlay-if-empty.png)
 
-* [TextOverflowMode.Overlay](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoverflowmode) --- Text always overflows into adjacent cells even if these cells contain data.
+* [TextOverflowMode.Overlay](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoverflowmode) --- Text always overflows into adjacent cells even if these cells contain data.
 
     ![TextOverflowMode.Overlay](/viewer/net/images/rendering-basics/render-spreadsheets/text-overflow-mode-overlay.png)
 
-* [TextOverflowMode.AutoFitColumn](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoverflowmode) --- Increases the column width to fit cell text.
+* [TextOverflowMode.AutoFitColumn](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoverflowmode) --- Increases the column width to fit cell text.
 
     ![TextOverflowMode.AutoFitColum](/viewer/net/images/rendering-basics/render-spreadsheets/text-overflow-mode-autofit-column.png)
 
-* [TextOverflowMode.HideText](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoverflowmode) --- Hides text that overflows the cell boundaries.
+* [TextOverflowMode.HideText](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoverflowmode) --- Hides text that overflows the cell boundaries.
   
     ![TextOverflowMode.HideText](/viewer/net/images/rendering-basics/render-spreadsheets/text-overflow-mode-hide-text.png)
 
@@ -127,7 +127,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 
 ## Render hidden rows and columns
 
-Use the [ViewOptions.SpreadsheetOptions.RenderHiddenRows](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/renderhiddenrows) and [ViewOptions.SpreadsheetOptions.RenderHiddenColumns](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/renderhiddencolumns) properties to display hidden rows and columns in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
+Use the [ViewOptions.SpreadsheetOptions.RenderHiddenRows](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/renderhiddenrows) and [ViewOptions.SpreadsheetOptions.RenderHiddenColumns](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/renderhiddencolumns) properties to display hidden rows and columns in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
 
 The example below demonstrates how to set this option in code. The rows **20** and **21** and the column **E** are hidden in the source Excel workbook. 
 
@@ -157,7 +157,7 @@ The image below demonstrates the result. Hidden rows and columns appear in the g
 
 ## Render hidden worksheets
 
-If your spreadsheet file contains hidden worksheets, enable the [ViewOptions.RenderHiddenPages](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/renderhiddenpages) property to display data from hidden worksheets in the output HTML, PDF, or image files.
+If your spreadsheet file contains hidden worksheets, enable the [ViewOptions.RenderHiddenPages](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/renderhiddenpages) property to display data from hidden worksheets in the output HTML, PDF, or image files.
 
 The following example demonstrates how to set this option in code:
 
@@ -180,7 +180,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 
 ## Skip empty rows and columns
 
-GroupDocs.Viewer supports the [SpreadsheetOptions.SkipEmptyRows](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/skipemptyrows) and [SpreadsheetOptions.SkipEmptyColumns](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/skipemptycolumns) properties that allow you to skip blank rows and columns when you convert your spreadsheet file to HTML, PDF, or image format.
+GroupDocs.Viewer supports the [SpreadsheetOptions.SkipEmptyRows](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/skipemptyrows) and [SpreadsheetOptions.SkipEmptyColumns](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/skipemptycolumns) properties that allow you to skip blank rows and columns when you convert your spreadsheet file to HTML, PDF, or image format.
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
@@ -206,7 +206,7 @@ The following image demonstrates the result:
 
 ## Render cell comments
 
-Use the [ViewOptions.RenderComments](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option to display cell comments in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
+Use the [ViewOptions.RenderComments](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option to display cell comments in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
 
 {{< tabs "example7">}}
 {{< tab "C#" >}}

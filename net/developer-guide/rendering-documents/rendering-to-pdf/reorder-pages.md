@@ -11,9 +11,9 @@ GroupDocs.Viewer allows you to reorder the document pages. The order of the page
 
 To reorder the pages:
 
-* Instantiate [Viewer](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object;
-* Create [PdfViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions);
-* Call [View](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method specifying desired page numbers order.
+* Instantiate [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object;
+* Create [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions);
+* Call [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method specifying desired page numbers order.
 
 The following code snippet shows how to reorder pages.
 

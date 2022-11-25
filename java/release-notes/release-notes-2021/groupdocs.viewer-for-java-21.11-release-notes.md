@@ -329,7 +329,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
   
     For more details and code snippets check [Folder navigation in archive files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/navigation-in-archive-files.md">}}) documentation article.
 
-* In this version we've improved viewing of archives - when you use [HtmlViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) with `setRenderSinglePage(true)` and calling the `getViewInfo` method you get 1 page in result info:
+* In this version we've improved viewing of archives - when you use [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) with `setRenderSinglePage(true)` and calling the `getViewInfo` method you get 1 page in result info:
 
     ```java
         try (Viewer viewer = new Viewer("sample.zip")) {
@@ -355,7 +355,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
 
 #### com.groupdocs.viewer.FileType
 
-  Few fields added to [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class that reflect new file formats that we're supporting starting from v21.11.
+  Few fields added to [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class that reflect new file formats that we're supporting starting from v21.11.
   
   ```java
      /**
@@ -449,7 +449,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
 
 #### com.groupdocs.viewer.options.VisioRenderingOptions
 
-Added [VisioRenderingOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/VisioRenderingOptions) class to `com.groupDocs.viewer.options` package. This class provides options for rendering Lotus Notes data files.
+Added [VisioRenderingOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/VisioRenderingOptions) class to `com.groupDocs.viewer.options` package. This class provides options for rendering Lotus Notes data files.
 
 ```java
 /**
@@ -486,7 +486,7 @@ public class VisioRenderingOptions {
 
 #### com.groupdocs.viewer.logging
 
-Class [ConsoleLogger](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.logging/ConsoleLogger) was added to `com.groupdocs.viewer.logging` package. This class provides support for logging [GroupDocs.Viewer](https://products.groupdocs.com/viewer) conversion process to console.
+Class [ConsoleLogger](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.logging/ConsoleLogger) was added to `com.groupdocs.viewer.logging` package. This class provides support for logging [GroupDocs.Viewer](https://products.groupdocs.com/viewer) conversion process to console.
 
 ```java
 /**
@@ -593,7 +593,7 @@ public final class ConsoleLogger implements ILogger {
 }
 ```
 
-Class [FileLogger](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.logging/FileLogger) was added to `com.groupdocs.viewer.logging` This class provides support for logging GroupDocs.Viewer conversion process to file.
+Class [FileLogger](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.logging/FileLogger) was added to `com.groupdocs.viewer.logging` This class provides support for logging GroupDocs.Viewer conversion process to file.
 
 ```java
 /**
@@ -704,7 +704,7 @@ public class FileLogger implements ILogger {
 }
 ```
 
-Class [ILogger](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.logging/ILogger) was added to `com.groupdocs.viewer.logging`. This interface provides support for custom logger implementation.
+Class [ILogger](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.logging/ILogger) was added to `com.groupdocs.viewer.logging`. This interface provides support for custom logger implementation.
 
 ```java
 /**
@@ -800,7 +800,7 @@ public interface ILogger {
 
 #### com.groupdocs.viewer.Viewer
 
-New property and constructor added to [ViewerSettings](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/ViewerSettings) class.
+New property and constructor added to [ViewerSettings](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/ViewerSettings) class.
 
 ```java
   /**
@@ -816,7 +816,7 @@ New property and constructor added to [ViewerSettings](https://apireference.grou
   public ViewerSettings(ICache cache, ILogger logger) { ... }
 ```
 
-In this version we added four new constructors to the [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class.
+In this version we added four new constructors to the [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class.
 
 ```java
 // The following constructors has been added
@@ -826,7 +826,7 @@ public Viewer(InputStream stream, ViewerSettings settings, boolean leaveOpen)
 public Viewer(InputStream stream, LoadOptions loadOptions, ViewerSettings settings, boolean leaveOpen)
 ```
 
-Class [MailStorageOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/MailStorageOptions) was added to `com.groupdocs.viewer.options` This class provides view options for viewing mail storage formats like Lotus Notes (NSF)
+Class [MailStorageOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/MailStorageOptions) was added to `com.groupdocs.viewer.options` This class provides view options for viewing mail storage formats like Lotus Notes (NSF)
 
 ```java
   /**
@@ -884,7 +884,7 @@ Class [MailStorageOptions](https://apireference.groupdocs.com/viewer/java/com.gr
 
 ### com.groupdocs.viewer.options.BaseViewOptions class
 
-Fields were added to [BaseViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions) class that reflects new view options for new file formats that we're supporting starting from v21.11.
+Fields were added to [BaseViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions) class that reflects new view options for new file formats that we're supporting starting from v21.11.
 
 ```java
 /**
@@ -900,12 +900,12 @@ public void setMailStorageOptions(MailStorageOptions options) { ... }
 
 ### com.groupdocs.viewer.options.HtmlViewOptions class
 
-[com.groupdocs.viewer.options.HtmlViewOptions#setRenderSinglePage(boolean)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#setRenderSinglePage(boolean)) and [com.groupdocs.viewer.options.HtmlViewOptions#isRenderSinglePage()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#isRenderSinglePage()) properties set as deprecated.
+[com.groupdocs.viewer.options.HtmlViewOptions#setRenderSinglePage(boolean)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#setRenderSinglePage(boolean)) and [com.groupdocs.viewer.options.HtmlViewOptions#isRenderSinglePage()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#isRenderSinglePage()) properties set as deprecated.
 These properties will be removed in next releases, please use setRenderToSinglePage(...) and isRenderToSinglePage() properties.
 
-Properties [com.groupdocs.viewer.options.HtmlViewOptions#setRenderToSinglePage(boolean)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#setRenderToSinglePage(boolean)) and [com.groupdocs.viewer.options.HtmlViewOptions#isRenderToSinglePage(boolean)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#isRenderToSinglePage(boolean)) were added.
+Properties [com.groupdocs.viewer.options.HtmlViewOptions#setRenderToSinglePage(boolean)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#setRenderToSinglePage(boolean)) and [com.groupdocs.viewer.options.HtmlViewOptions#isRenderToSinglePage(boolean)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#isRenderToSinglePage(boolean)) were added.
 
-Interface [IMaxSizeOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/IMaxSizeOptions) was added to `com.groupdocs.viewer.options`. This interface provides MaxSize options for rendering to PNG/JPG output.
+Interface [IMaxSizeOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/IMaxSizeOptions) was added to `com.groupdocs.viewer.options`. This interface provides MaxSize options for rendering to PNG/JPG output.
 
 ```java
   /**
@@ -936,8 +936,8 @@ Interface [IMaxSizeOptions](https://apireference.groupdocs.com/viewer/java/com.g
 
 #### com.groupdocs.viewer.options
 
-Fields were added to [PngViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions) class and to [JpgViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions) class that reflects MaxSize options for rendering to PNG/JPG output that we're supporting starting from v21.11.
-Both classes now implement interface [IMaxSizeOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/IMaxSizeOptions).
+Fields were added to [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions) class and to [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions) class that reflects MaxSize options for rendering to PNG/JPG output that we're supporting starting from v21.11.
+Both classes now implement interface [IMaxSizeOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/IMaxSizeOptions).
 
 ```java
   /**
@@ -963,15 +963,15 @@ Both classes now implement interface [IMaxSizeOptions](https://apireference.grou
 
 ### com.groupdocs.viewer.options.SpreadsheetOptions class
 
-[SpreadsheetOptions#forRenderingByPageBreaks()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions#forRenderingByPageBreaks()) method was added that add support for split Excel sheets by page breaks when rendering.
+[SpreadsheetOptions#forRenderingByPageBreaks()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions#forRenderingByPageBreaks()) method was added that add support for split Excel sheets by page breaks when rendering.
 
 ### com.groupdocs.viewer.options.CadOptions class
 
-[CadOptions#getPc3File()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#getPc3File()) and [CadOptions#setPc3File(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#getPc3File(java.lang.String)) methods were added that add support to apply PC3 configuration plotter file when rendering CAD files.
+[CadOptions#getPc3File()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#getPc3File()) and [CadOptions#setPc3File(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#getPc3File(java.lang.String)) methods were added that add support to apply PC3 configuration plotter file when rendering CAD files.
 
 ### com.groupdocs.viewer.options.EmailOptions class
 
-Properties were added to [EmailOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/EmailOptions) class that adds support to set time zone offset and date-time format when rendering E-mail messages to HTML.
+Properties were added to [EmailOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/EmailOptions) class that adds support to set time zone offset and date-time format when rendering E-mail messages to HTML.
 
 ```java
   /**
@@ -999,7 +999,7 @@ Properties were added to [EmailOptions](https://apireference.groupdocs.com/viewe
 
 #### com.groupdocs.viewer.results.Attachment
 
-The `setFilePath(...)` and `getFilePath()` methods has been added to [Attachment](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Attachment) class. It is used to keep a relative attachment path or attachment filename.
+The `setFilePath(...)` and `getFilePath()` methods has been added to [Attachment](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/Attachment) class. It is used to keep a relative attachment path or attachment filename.
 
 ```java
     /**
@@ -1008,11 +1008,11 @@ The `setFilePath(...)` and `getFilePath()` methods has been added to [Attachment
     String getFilePath() { ... }
 ```
 
-In addition, all three constructor methods for creating attachment objects in [CacheableFactory](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.caching.extra/CacheableFactory) have been updated to accept the `filePath` parameter.
+In addition, all three constructor methods for creating attachment objects in [CacheableFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.caching.extra/CacheableFactory) have been updated to accept the `filePath` parameter.
 
 #### com.groupdocs.viewer.options.ViewInfoOptions
 
-New methods have been added to [ViewInfoOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ViewInfoOptions) class. It is used to keep a relative attachment path or attachment filename.
+New methods have been added to [ViewInfoOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ViewInfoOptions) class. It is used to keep a relative attachment path or attachment filename.
 
 ```java
 
@@ -1072,7 +1072,7 @@ You can set output JPEG quality when converting OneNote files using the followin
 
 #### Changes in com.groupdocs.viewer.options package
 
-New methods have been added to [HtmlViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) and  [PdfViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions) classes.
+New methods have been added to [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) and  [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions) classes.
 
 ```java
 
@@ -1119,7 +1119,7 @@ public void setImageHeight(int imageHeight) { ... }
 
 ### com.groupdocs.viewer.options.BaseViewOptions class
 
-The default value of [BaseViewOptions#setSpreadsheetOptions(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setSpreadsheetOptions(com.groupdocs.viewer.options.SpreadsheetOptions)) has been changed from `SpreadsheetOptions.forSplitSheetIntoPages(40)` to `SpreadsheetOptions.forRenderingByPageBreaks()`
+The default value of [BaseViewOptions#setSpreadsheetOptions(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setSpreadsheetOptions(com.groupdocs.viewer.options.SpreadsheetOptions)) has been changed from `SpreadsheetOptions.forSplitSheetIntoPages(40)` to `SpreadsheetOptions.forRenderingByPageBreaks()`
 
 We've changed default value to make the output similar to the output you can get when printing spreadsheet in Excel. See [Render spreadsheets by page breaks](https://docs.groupdocs.com/viewer/java/render-spreadsheets-by-page-breaks/) for more details.
 
@@ -1199,4 +1199,4 @@ Added three factory methods without parameters:
 
 ### com.groupdocs.viewer.options.HtmlViewOptions class
 
-Methods [HtmlViewOptions#isForPrinting()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#isForPrinting()) and [HtmlViewOptions#setForPrinting(boolean)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#setForPrinting(boolean)) were added that add optimize output HTML for printing support.
+Methods [HtmlViewOptions#isForPrinting()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#isForPrinting()) and [HtmlViewOptions#setForPrinting(boolean)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#setForPrinting(boolean)) were added that add optimize output HTML for printing support.

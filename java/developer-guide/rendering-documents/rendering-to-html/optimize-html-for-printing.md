@@ -9,7 +9,7 @@ productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
 
-If you need to optimize HTML output for printing you should use setForPrinting() option of [HtmlViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions).
+If you need to optimize HTML output for printing you should use setForPrinting() option of [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions).
 This option implemented for:
 
 * Presentation documents: PPT, PPS, PPTX, PPSX, ODP, FODP, OTP, POT, POTX, POTM, PPTM, PPSM

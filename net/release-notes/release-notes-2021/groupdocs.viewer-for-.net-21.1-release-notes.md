@@ -38,7 +38,7 @@ There are 9 features, improvements, and bug-fixes in this release, most notable 
 
 ### Public API Changes
 
-In this version we've simplified public API and added eight new constructors to the [Viewer](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer>) class that accepts _Stream_ instead of _Func\<Stream\>_. The constructors that accept _Func\<Stream\>_ has been marked as obsolete, so please switch to the new constructors as we're planning to remove obsolete one in the future versions.
+In this version we've simplified public API and added eight new constructors to the [Viewer](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer>) class that accepts _Stream_ instead of _Func\<Stream\>_. The constructors that accept _Func\<Stream\>_ has been marked as obsolete, so please switch to the new constructors as we're planning to remove obsolete one in the future versions.
 
 ```csharp
 // The following constructors has been added
@@ -58,10 +58,10 @@ public Viewer(Common.Func<Stream> getFileStream, ViewerSettings settings)
 public Viewer(Common.Func<Stream> getFileStream, Common.Func<LoadOptions> getLoadOptions, ViewerSettings settings)
 ```
 
-[GroupDocs.Viewer.Options.LotusNotesOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/lotusnotesoptions>) class set as obsolete.
-Please use [MailStorageOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/mailstorageoptions>) class, this class will be replaced at 21.4 version
+[GroupDocs.Viewer.Options.LotusNotesOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/lotusnotesoptions>) class set as obsolete.
+Please use [MailStorageOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/mailstorageoptions>) class, this class will be replaced at 21.4 version
 
-public class [MailStorageOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/mailstorageoptions>) class added to GroupDocs.Viewer.Options. This class provides view options for
+public class [MailStorageOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/mailstorageoptions>) class added to GroupDocs.Viewer.Options. This class provides view options for
 rendering mail storage formats like Lotus Notes (NSF)
 
 ```csharp
@@ -95,7 +95,7 @@ public int MaxItems { get; set; } = 0;
 
 #### GroupDocs.Viewer.FileType
 
-Fields were added to [GroupDocs.Viewer.FileType](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflects new file formats that we're supporting starting from v21.1.
+Fields were added to [GroupDocs.Viewer.FileType](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflects new file formats that we're supporting starting from v21.1.
 
 ```csharp
 /// <summary>
@@ -125,10 +125,10 @@ public static readonly FileType APNG = new FileType("Animated Portable Network G
 
 ### GroupDocs.Viewer.Options.BaseViewOptions class
 
-[GroupDocs.Viewer.Options.BaseViewOptions.LotusNotesOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/lotusnotesoptions>) property set as obsolete.
-This option will be replaced by [GroupDocs.Viewer.Options.BaseViewOptions.MailStorageOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/mailstorageoptions>) property at 21.4 version.
+[GroupDocs.Viewer.Options.BaseViewOptions.LotusNotesOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/lotusnotesoptions>) property set as obsolete.
+This option will be replaced by [GroupDocs.Viewer.Options.BaseViewOptions.MailStorageOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/mailstorageoptions>) property at 21.4 version.
 
-Fields were added to [GroupDocs.Viewer.Options.BaseViewOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions>) class that reflects new view options for new file formats that we're supporting starting from v21.1.
+Fields were added to [GroupDocs.Viewer.Options.BaseViewOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions>) class that reflects new view options for new file formats that we're supporting starting from v21.1.
 
 ```csharp
 /// <summary>
@@ -140,7 +140,7 @@ public MailStorageOptions MailStorageOptions { get; set; } = new MailStorageOpti
 
 ### GroupDocs.Viewer.Options.HtmlViewOptions class
 
-[GroupDocs.Viewer.Options.HtmlViewOptions.RenderSinglePage](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/properties/rendersinglepage>) property set as obsolete.
+[GroupDocs.Viewer.Options.HtmlViewOptions.RenderSinglePage](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/properties/rendersinglepage>) property set as obsolete.
  This property will be removed at 21.4 release, please use RenderToSinglePage property.
 
-[GroupDocs.Viewer.Options.HtmlViewOptions.RenderToSinglePage](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/properties/rendertosinglepage>) property was added.
+[GroupDocs.Viewer.Options.HtmlViewOptions.RenderToSinglePage](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/properties/rendertosinglepage>) property was added.

@@ -84,7 +84,7 @@ There are 51 features, improvements, and bug-fixes in this release, most notable
 
 ### Public API Changes
 
-public interface [IMaxSizeOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/imaxsizeoptions>) interface added to GroupDocs.Viewer.Options. This interface provides MaxSize options for rendering to PNG/JPG output.
+public interface [IMaxSizeOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/imaxsizeoptions>) interface added to GroupDocs.Viewer.Options. This interface provides MaxSize options for rendering to PNG/JPG output.
 
 ```csharp
 
@@ -107,7 +107,7 @@ public interface IMaxSizeOptions
 
 #### GroupDocs.Viewer.FileType
 
-Fields were added to [GroupDocs.Viewer.FileType](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflects new file formats that we're supporting starting from v21.2.
+Fields were added to [GroupDocs.Viewer.FileType](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflects new file formats that we're supporting starting from v21.2.
 
 ```csharp
 /// <summary>
@@ -119,9 +119,9 @@ public static readonly FileType MBOX = new FileType("Email Mailbox File", ".mbox
 
 #### GroupDocs.Viewer.Options
 
-Fields were added to [GroupDocs.Viewer.Options.PngViewOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions>) class and to
-[GroupDocs.Viewer.Options.JpgViewOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions>) class that reflects MaxSize options for rendering to PNG/JPG output that we're supporting starting from v21.2.
-Both classes now implement inteface [IMaxSizeOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/imaxsizeoptions>).
+Fields were added to [GroupDocs.Viewer.Options.PngViewOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions>) class and to
+[GroupDocs.Viewer.Options.JpgViewOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions>) class that reflects MaxSize options for rendering to PNG/JPG output that we're supporting starting from v21.2.
+Both classes now implement inteface [IMaxSizeOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/imaxsizeoptions>).
 
 ```csharp
 /// <summary>
@@ -137,15 +137,15 @@ public int MaxHeight { get; set; }
 
 ### GroupDocs.Viewer.Options.SpreadsheetOptions class
 
-[GroupDocs.Viewer.Options.SpreadsheetOptions.ForRenderingByPageBreaks](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/methods/forrenderingbypagebreaks>) method was added that add support for split Excel sheets by page breaks when rendering.
+[GroupDocs.Viewer.Options.SpreadsheetOptions.ForRenderingByPageBreaks](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/methods/forrenderingbypagebreaks>) method was added that add support for split Excel sheets by page breaks when rendering.
 
 ### GroupDocs.Viewer.Options.CadOptions class
 
-[GroupDocs.Viewer.Options.CadOptions.Pc3File](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/properties/pc3file>) property was added that add support to apply PC3 configuration plotter file when rendering CAD files.
+[GroupDocs.Viewer.Options.CadOptions.Pc3File](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/properties/pc3file>) property was added that add support to apply PC3 configuration plotter file when rendering CAD files.
 
 ### GroupDocs.Viewer.Options.EmailOptions class
 
-Properties were added to [GroupDocs.Viewer.Options.EmailOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/emailoptions>) class that adds support to set time zone offset and date-time format when rendering E-mail messages to HTML.
+Properties were added to [GroupDocs.Viewer.Options.EmailOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/emailoptions>) class that adds support to set time zone offset and date-time format when rendering E-mail messages to HTML.
 
 ```csharp
 /// <summary>

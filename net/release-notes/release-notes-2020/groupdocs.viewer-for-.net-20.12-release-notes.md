@@ -60,7 +60,7 @@ There are 34 features, improvements, and bug-fixes in this release, most notable
 
 ### Public API Changes
 
-Removed two public methods that has internal purpose listed below from [VisioRenderingOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/visiorenderingoptions>) class.
+Removed two public methods that has internal purpose listed below from [VisioRenderingOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/visiorenderingoptions>) class.
 
 ```csharp
 /// <summary>

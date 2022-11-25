@@ -75,7 +75,7 @@ try (InputStream fileStream = new FileInputStream(licensePath)) {
 
 ### Set Metered License
 
-You can also set [Metered](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
+You can also set [Metered](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
 
 Following is the sample code demonstrating how to use `Metered` licensing.
 

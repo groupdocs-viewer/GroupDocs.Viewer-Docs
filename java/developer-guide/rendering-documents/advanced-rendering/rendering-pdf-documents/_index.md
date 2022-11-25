@@ -27,7 +27,7 @@ Auto Detection means that GroupDocs.Viewer for Java can determine the type of th
 | [.XPS](https://docs.fileformat.com/page-description-language/xps) | [Microsoft XML Paper Specification (XPS)](https://docs.fileformat.com/page-description-language/xps) | Yes |
 | .OXPS | OpenXPS File | Yes |
 
-*Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
+*Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
 
 ## In this section
 

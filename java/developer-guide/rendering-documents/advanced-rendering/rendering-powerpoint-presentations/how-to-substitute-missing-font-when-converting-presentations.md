@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-In case your presentation document contains a font that is not installed into the system GroupDocs.Viewer will use a default font. GroupDocs.Viewer for Java enables you to specify font substitution with [setDefaultFontName()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setDefaultFontName(java.lang.String)) setting.
+In case your presentation document contains a font that is not installed into the system GroupDocs.Viewer will use a default font. GroupDocs.Viewer for Java enables you to specify font substitution with [setDefaultFontName()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setDefaultFontName(java.lang.String)) setting.
 
 ## Font substitution
 

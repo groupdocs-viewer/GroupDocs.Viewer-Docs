@@ -16,7 +16,7 @@ Than you can print the workbook by clicking at _File > Print_ and the print area
 
 ![Printing print area in Excel](/viewer/java/images/render-print-areas/printing-print-area-in-excel.png)
 
-To perform the same action programmatically with GroupDocs.Viewer set `SpreadsheetOptions` to `SpreadsheetOptions.forRenderingPrintArea()` and call [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method. Let's take [monthly-budget.xlsx](/viewer/java/sample-files/render-print-areas/monthly-budget.xlsx) and render print area by running the following code.
+To perform the same action programmatically with GroupDocs.Viewer set `SpreadsheetOptions` to `SpreadsheetOptions.forRenderingPrintArea()` and call [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method. Let's take [monthly-budget.xlsx](/viewer/java/sample-files/render-print-areas/monthly-budget.xlsx) and render print area by running the following code.
 
 ```java
     try (Viewer viewer = new Viewer("monthly-budget.xlsx")) {

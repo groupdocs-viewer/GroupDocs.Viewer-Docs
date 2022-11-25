@@ -28,7 +28,7 @@ The following CAD formats are supported by the GroupDocs.Viewer for Java. Auto 
 | .IGS | Initial Graphics Exchange Specification (IGES) File | Yes |   |
 | .HPG | HPGL Plot File | Yes |   |
 
-*Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
+*Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
 
 ## Articles in this section
 

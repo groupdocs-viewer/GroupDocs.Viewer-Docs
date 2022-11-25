@@ -11,11 +11,11 @@ hideChildren: False
 GroupDocs.Viewer also provides the feature to set limits for width/height for the output image. Follow the below steps to achieve this functionality.
 If you set MaxWidth/MaxHeight options, if the image exceeds one of these limits - it will be resized proportionally.
 
-* Instantiate the [Viewer](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object;
-* Instantiate the [PngViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions) or [JpgViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions);
+* Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object;
+* Instantiate the [PngViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions) or [JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions);
 * Set MaxWidth and/or MaxHeight values;
 
-* Call [View](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method.
+* Call [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method.
 * The following code sample shows how to set the output image size limits when rendering the document.
 
 ```csharp
@@ -31,7 +31,7 @@ using (Viewer viewer = new Viewer("sample.jpg"))
 }
 ```
 
-[PngViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions) and [JpgViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions) implement special interface [IMaxSizeOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/imaxsizeoptions), which contain properties for size limits.
+[PngViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions) and [JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions) implement special interface [IMaxSizeOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/imaxsizeoptions), which contain properties for size limits.
 
 ```csharp
 /// <summary>
