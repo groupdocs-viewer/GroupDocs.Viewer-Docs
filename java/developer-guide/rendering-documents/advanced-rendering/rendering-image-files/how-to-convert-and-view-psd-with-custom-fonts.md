@@ -16,10 +16,10 @@ When you rendering PSD file format, you can set the default font. If it is not f
 
 To specify directories with your custom fonts, follow the below steps:
 
-* Instantiate the [FolderFontSource](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/FolderFontSource) object - set folder path, and [SearchOption](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/SearchOption):
-  * [ALL_FOLDERS](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/SearchOption#ALL_FOLDERS) - to search for fonts recursively, 
-  * [TOP_FOLDER_ONLY](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/SearchOption#TOP_FOLDER_ONLY) - to search for fonts only in the current folder;
-* Call [setFontSources(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/FontSettings#setFontSources(com.groupdocs.viewer.fonts.FontSource...)) method of [FontsSettings](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/FontSettings) class.
+* Instantiate the [FolderFontSource](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/FolderFontSource) object - set folder path, and [SearchOption](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/SearchOption):
+  * [ALL_FOLDERS](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/SearchOption#ALL_FOLDERS) - to search for fonts recursively, 
+  * [TOP_FOLDER_ONLY](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/SearchOption#TOP_FOLDER_ONLY) - to search for fonts only in the current folder;
+* Call [setFontSources(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/FontSettings#setFontSources(com.groupdocs.viewer.fonts.FontSource...)) method of [FontsSettings](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/FontSettings) class.
 
 ```java
 FolderFontSource folderFontSource = new FolderFontSource("C:\\custom_fonts_folder", SearchOption.TOP_FOLDER_ONLY);
@@ -32,14 +32,14 @@ Your fonts will be loaded before open your document.
 
 To convert PSD files with custom fonts using GroupDocs.Viewer for Java follow the below steps:
 
-* Instantiate the [FolderFontSource](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/FolderFontSource) object - set folder path, and [SearchOption](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/SearchOption):
-  * [ALL_FOLDERS](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/SearchOption#ALL_FOLDERS) - to search for fonts recursively, 
-  * [TOP_FOLDER_ONLY](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/SearchOption#TOP_FOLDER_ONLY) - to search for fonts only in the current folder;
-* Call [setFontSources(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/FontSettings#setFontSources(com.groupdocs.viewer.fonts.FontSource...)) method of [FontsSettings](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/FontSettings) class and supply font sources as arguments.
-* Instantiate the [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) object;
-* Instantiate [HtmlViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) (or [JpgViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions), or [PngViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions), or [PdfViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions)) object;
-* Set [setDefaultFontName(...)](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setDefaultFontName(java.lang.String)) property in options - set your font name;
-* Call [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method.
+* Instantiate the [FolderFontSource](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/FolderFontSource) object - set folder path, and [SearchOption](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/SearchOption):
+  * [ALL_FOLDERS](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/SearchOption#ALL_FOLDERS) - to search for fonts recursively, 
+  * [TOP_FOLDER_ONLY](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/SearchOption#TOP_FOLDER_ONLY) - to search for fonts only in the current folder;
+* Call [setFontSources(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/FontSettings#setFontSources(com.groupdocs.viewer.fonts.FontSource...)) method of [FontsSettings](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/FontSettings) class and supply font sources as arguments.
+* Instantiate the [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) object;
+* Instantiate [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) (or [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions), or [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions), or [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions)) object;
+* Set [setDefaultFontName(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/BaseViewOptions#setDefaultFontName(java.lang.String)) property in options - set your font name;
+* Call [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method.
 * The following code sample shows how to set the output image size limits when rendering the document.
 
 ```java

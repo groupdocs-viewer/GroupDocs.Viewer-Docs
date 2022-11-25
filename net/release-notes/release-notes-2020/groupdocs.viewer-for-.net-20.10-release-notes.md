@@ -63,7 +63,7 @@ There are 31 features, improvements, and bug-fixes in this release, most notable
 
 #### GroupDocs.Viewer.FileType
 
-Fields were added to [GroupDocs.Viewer.FileType](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflects new file formats that we're supporting starting from v20.10.
+Fields were added to [GroupDocs.Viewer.FileType](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflects new file formats that we're supporting starting from v20.10.
 
 ```csharp
 /// <summary>
@@ -88,7 +88,7 @@ public static readonly FileType WMZ = new FileType("Compressed Windows Metafile"
 
 #### GroupDocs.Viewer.Logging
 
-public class [ConsoleLogger](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.logging/consolelogger>) class added to GroupDocs.Viewer.Logging. This class provides support for logging GroupDocs.Viewer conversion process to console.
+public class [ConsoleLogger](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.logging/consolelogger>) class added to GroupDocs.Viewer.Logging. This class provides support for logging GroupDocs.Viewer conversion process to console.
 
 ```csharp
 /// <summary>
@@ -127,7 +127,7 @@ public class ConsoleLogger : ILogger
 ```
 
 \
-public class [FileLogger](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.logging/filelogger>) class added to GroupDocs.Viewer.Logging. This class provides support for logging GroupDocs.Viewer conversion process to file.
+public class [FileLogger](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.logging/filelogger>) class added to GroupDocs.Viewer.Logging. This class provides support for logging GroupDocs.Viewer conversion process to file.
 
 ```csharp
 /// <summary>
@@ -171,7 +171,7 @@ public class FileLogger : ILogger
 ```
 
 \
-public interface [ILogger](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.logging/ilogger>) class added to GroupDocs.Viewer.Logging. This interface provides support for custom logger implementation.
+public interface [ILogger](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.logging/ilogger>) class added to GroupDocs.Viewer.Logging. This interface provides support for custom logger implementation.
 
 ```csharp
     /// <summary>
@@ -209,7 +209,7 @@ public interface [ILogger](<https://apireference.groupdocs.com/viewer/net/groupd
 
 #### GroupDocs.Viewer
 
-New property and constructor added to [ViewerSettings](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewersettings>) class.
+New property and constructor added to [ViewerSettings](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewersettings>) class.
 
 ```csharp
 /// <summary>

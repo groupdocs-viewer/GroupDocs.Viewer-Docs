@@ -7,7 +7,7 @@ description: "Following this guide you will learn how to adjust JPG images quali
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-When rendering documents and files to JPG with GroupDocs.Viewer you can adjust quality of the output images by setting [Quality](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions/properties/quality) property of [JpgViewOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions) class. The supported values range of [Quality](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions/properties/quality) is from 1 to 100. Default value is 90.
+When rendering documents and files to JPG with GroupDocs.Viewer you can adjust quality of the output images by setting [Quality](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions/properties/quality) property of [JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions) class. The supported values range of [Quality](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions/properties/quality) is from 1 to 100. Default value is 90.
 
 This example demonstrates how to adjust quality of the output JPG image.
 

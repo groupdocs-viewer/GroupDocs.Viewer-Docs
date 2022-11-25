@@ -144,7 +144,7 @@ See how to use new properties in the following help topic: [Detect a CSV/TSV sep
 
 #### com.groupdocs.viewer.FileType
 
-Fields were added to [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) enum that reflects new file formats that we're supporting starting from v22.9.
+Fields were added to [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) enum that reflects new file formats that we're supporting starting from v22.9.
 
 ```java
 /**

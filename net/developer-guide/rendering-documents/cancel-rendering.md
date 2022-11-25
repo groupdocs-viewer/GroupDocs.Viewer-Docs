@@ -59,11 +59,11 @@ Thread.Sleep(2000);
 *Important note:*
 To correctly handle task cancellation you should pass your cancellation token to `Task.Run` method, otherwise, the flag in `runTask.IsCancelled` will not equal to true (that indicates task has canceled).
 
-Also following methods in [Viewer](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class support cancellation:
+Also following methods in [Viewer](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class support cancellation:
 
-* [GetAttachments](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.viewer/getattachments/methods/1)
-* [SaveAttachment](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.viewer/saveattachment/methods/1)
-* [View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.viewer/view/methods/2) with ViewOptions
-* [View](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.viewer/view/methods/3) with ViewOptions and page numbers array
+* [GetAttachments](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.viewer/getattachments/methods/1)
+* [SaveAttachment](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.viewer/saveattachment/methods/1)
+* [View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.viewer/view/methods/2) with ViewOptions
+* [View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.viewer/view/methods/3) with ViewOptions and page numbers array
 
 Also you can check this [example](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/GroupDocs.Viewer.Examples.CSharp/AdvancedUsage/Rendering/CommonRenderingOptions/CancelRenderWithCancellationToken.cs) in our public repository with examples at GitHub.

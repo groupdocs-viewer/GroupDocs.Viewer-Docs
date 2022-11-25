@@ -12,10 +12,10 @@ When rendering email messages, by default the API uses date-time format and time
 
 The following are the steps to set date-time and time zones for email message:
 
-* Create [HtmlViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) (or [JpgViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions), or [PngViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions), or [PdfViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions)) object
-* If you want to set your date-time format - set [emailOptions.setDateTimeFormat()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/EmailOptions#setDateTimeFormat(java.lang.String)) value
-* If you want to set time zone offset for dates in E-Mail message TimeZoneOffset - set [emailOptions.setTimeZoneOffset()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/EmailOptions#setTimeZoneOffset(java.util.TimeZone)) value
-* Call [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method.
+* Create [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) (or [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions), or [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions), or [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions)) object
+* If you want to set your date-time format - set [emailOptions.setDateTimeFormat()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/EmailOptions#setDateTimeFormat(java.lang.String)) value
+* If you want to set time zone offset for dates in E-Mail message TimeZoneOffset - set [emailOptions.setTimeZoneOffset()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/EmailOptions#setTimeZoneOffset(java.util.TimeZone)) value
+* Call [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method.
 
 The following code sample shows how to use custom date-time and a time-zone offset.
 

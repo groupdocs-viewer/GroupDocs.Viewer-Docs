@@ -42,7 +42,7 @@ There are 10 features, improvements, and bug-fixes in this release, most notable
 
 #### GroupDocs.Viewer.FileType
 
-Field was added to [GroupDocs.Viewer.FileType](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflects new file formats that we're supporting starting from v20.9.
+Field was added to [GroupDocs.Viewer.FileType](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype>) class that reflects new file formats that we're supporting starting from v20.9.
 
 ```csharp
 /// <summary>
@@ -54,7 +54,7 @@ public static readonly FileType PSB = new FileType("Photoshop Large Document For
 
 #### GroupDocs.Viewer.Options.VisioRenderingOptions
 
-The [VisioRenderingOptions](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/visiorenderingoptions) public class is added to the **GroupDocs.Viewer.Options** namespace. This class contains options used to render Visio files.
+The [VisioRenderingOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/visiorenderingoptions) public class is added to the **GroupDocs.Viewer.Options** namespace. This class contains options used to render Visio files.
 
 ```csharp
 /// <summary>

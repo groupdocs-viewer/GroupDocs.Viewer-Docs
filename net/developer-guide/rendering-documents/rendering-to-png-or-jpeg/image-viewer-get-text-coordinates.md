@@ -9,9 +9,9 @@ hideChildren: False
 ---
 GroupDocs.Viewer provides the feature of getting text coordinates. This feature is useful if you want to add selectable text over the image or implement a text search in image-based rendering. 
 
-The [ExtractText](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewinfooptions/properties/extracttext) property of [ViewInfoOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewinfooptions) class enables you to get the text contained in a source document with coordinates.
+The [ExtractText](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewinfooptions/properties/extracttext) property of [ViewInfoOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewinfooptions) class enables you to get the text contained in a source document with coordinates.
 
-Following code sample shows how to retrieve and print out text ([lines](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.results/page/properties/lines) / [words](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.results/line/properties/words) / [characters](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.results/word/properties/characters)) of each document [page](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.results/page) with coordinates.
+Following code sample shows how to retrieve and print out text ([lines](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/page/properties/lines) / [words](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/line/properties/words) / [characters](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/word/properties/characters)) of each document [page](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/page) with coordinates.
 
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))

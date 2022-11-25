@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ![Adjust output image size](/viewer/java/images/adjust-output-image-size.jpg)
 
-By default, when we view DWG files with several sheets, or DWF and DXF formats with layouts,  each sheet is rendered into separate page, that has it's own size. The biggest side (width or height depending on which one is bigger) is set 2000 px, another side is set value based on width-to-length ratio. You may adjust the size of resulting document by setting [CadOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions) as show in example.
+By default, when we view DWG files with several sheets, or DWF and DXF formats with layouts,  each sheet is rendered into separate page, that has it's own size. The biggest side (width or height depending on which one is bigger) is set 2000 px, another side is set value based on width-to-length ratio. You may adjust the size of resulting document by setting [CadOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions) as show in example.
 
 ```java
      try (Viewer viewer = new Viewer("sample.dwg")) {
@@ -22,9 +22,9 @@ By default, when we view DWG files with several sheets, or DWF and DXF formats w
 
 When rendering CAD drawings GroupDocs.Viewer provides following options:
 
-1.When rendering by width or height ([forRenderingByWidth()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#forRenderingByWidth(int)) or [forRenderingByHeight()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#forRenderingByHeight(int))) - value of another side will be calculated from ratio in original document. 
-2.  When rendering by width and height ([forRenderingByWidthAndHeigh()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#forRenderingByWidthAndHeight(int,%20int))) - the resulting image will have the same size in pixels.
-3.  When rendering by scale factory ([forRenderingByScaleFactor()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#forRenderingByScaleFactor(float))) - the accepted value `scaleFactor` type is float, values higher than 1 will enlarge resulting image and values between 0 and 1 will make image smaller. If the render result image size is equal to 200 px to 200 px, when `scaleFactor` is equal to 1, then setting this value to 0.1 will provide image with 20 px to 20 px dimension.
+1.When rendering by width or height ([forRenderingByWidth()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#forRenderingByWidth(int)) or [forRenderingByHeight()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#forRenderingByHeight(int))) - value of another side will be calculated from ratio in original document. 
+2.  When rendering by width and height ([forRenderingByWidthAndHeigh()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#forRenderingByWidthAndHeight(int,%20int))) - the resulting image will have the same size in pixels.
+3.  When rendering by scale factory ([forRenderingByScaleFactor()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/CadOptions#forRenderingByScaleFactor(float))) - the accepted value `scaleFactor` type is float, values higher than 1 will enlarge resulting image and values between 0 and 1 will make image smaller. If the render result image size is equal to 200 px to 200 px, when `scaleFactor` is equal to 1, then setting this value to 0.1 will provide image with 20 px to 20 px dimension.
 
 {{< alert style="info" >}}The same logic is applied when rendering to JPG/PNG/HTML. When rendering to PDF, generally only height to width ratio matters. {{< /alert >}}
 

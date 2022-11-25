@@ -94,8 +94,8 @@ public PresentationOptions PresentationOptions { get; set; } = new PresentationO
 
 ### GroupDocs.Viewer.Options namespace
 
-Added new [GroupDocs.Viewer.Options.PresentationOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/presentationoptions>) and
-[GroupDocs.Viewer.Options.Resolution](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/resolution>) classes.
+Added new [GroupDocs.Viewer.Options.PresentationOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/presentationoptions>) and
+[GroupDocs.Viewer.Options.Resolution](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/resolution>) classes.
 
 ```cs
 /// <summary>

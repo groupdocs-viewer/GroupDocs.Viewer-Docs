@@ -19,7 +19,7 @@ We can say that a method is thread-safe when multiple threads can call it withou
 We have a web-application where multiple users can simultaneously view the same file. The web-application uses GroupDocs.Viewer on the server-side and we want to make sure that multiple-threads can safely read from and write to the cache, in other words, make cache thread-safe.
 
 The GroupDocs.Viewer enables users to use caching to improve the performance of the application when the same document is processed multiple times ([read more about caching here](
-    {{< ref "viewer/net/developer-guide/caching-results/_index.md" >}}).) The [FileCache](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.caching/filecache) is a simple implementation of [ICache](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.caching/icache) interface that uses a local disk to store the cache files is available from the GroupDocs.Viewer.Caching namespace. The FileCache is not thread-safe, so our task is to make it thread-safe.
+    {{< ref "viewer/net/developer-guide/caching-results/_index.md" >}}).) The [FileCache](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.caching/filecache) is a simple implementation of [ICache](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.caching/icache) interface that uses a local disk to store the cache files is available from the GroupDocs.Viewer.Caching namespace. The FileCache is not thread-safe, so our task is to make it thread-safe.
 
 ## The solution
 

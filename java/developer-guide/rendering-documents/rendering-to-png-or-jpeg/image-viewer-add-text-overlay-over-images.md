@@ -12,7 +12,7 @@ GroupDocs.Viewer provides feature that allows to add text overlays over images. 
 
 **Please note** that due to Image Viewer's architecture rendering results with text extraction enabled and disabled are different.
 
-The [setExtractText()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions#setExtractText(boolean)) property of [PngViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions) (or [setExtractText()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions#setExtractText(boolean)) property of [JpgViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions)) class enables you to render document to display with text.
+The [setExtractText()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions#setExtractText(boolean)) property of [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions) (or [setExtractText()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions#setExtractText(boolean)) property of [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions)) class enables you to render document to display with text.
 
 This example demonstrates how to render document for display with text.
 

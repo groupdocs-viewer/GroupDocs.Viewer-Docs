@@ -14,7 +14,7 @@ Sometimes Excel document may contain hidden columns and rows (as shown in the im
 
 ## The Solution
 
-GroupDocs.Viewer provides [setRenderHiddenRows()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions#setRenderHiddenRows(boolean)) and [setRenderHiddenColumns()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions#setRenderHiddenColumns(boolean)) options in [SpreadsheetOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions) class which enables rendering hidden rows and columns as shown in the following code samples. 
+GroupDocs.Viewer provides [setRenderHiddenRows()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions#setRenderHiddenRows(boolean)) and [setRenderHiddenColumns()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions#setRenderHiddenColumns(boolean)) options in [SpreadsheetOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/SpreadsheetOptions) class which enables rendering hidden rows and columns as shown in the following code samples. 
 
 ```java
     try (Viewer viewer = new Viewer("sample.xlsx")) {

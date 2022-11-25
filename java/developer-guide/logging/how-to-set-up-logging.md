@@ -12,7 +12,7 @@ By default GroupDocs.Viewer doesn't write logs when rendering documents but we p
 
 The following loggers provided:
 
-* [FileLogger](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.logging/FileLogger) - writes logs to a text file.
+* [FileLogger](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.logging/FileLogger) - writes logs to a text file.
 
 There are 4 types of messages that we write to log file
 

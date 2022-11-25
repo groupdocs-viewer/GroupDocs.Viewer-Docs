@@ -13,12 +13,12 @@ By default logging is disabled when rendering documents but we also provide a wa
 
 There is an interface that we can utilize:
 
-* [ILogger](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.logging/ilogger) - defines the methods that are required for instantiating and releasing output file stream.
+* [ILogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/ilogger) - defines the methods that are required for instantiating and releasing output file stream.
 
 There are classes that we can utilize:
 
-* [ConsoleLogger](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) - defines the methods that are required for logging to console.
-* [FileLogger](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) - defines the methods that are required for logging to file.
+* [ConsoleLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) - defines the methods that are required for logging to console.
+* [FileLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) - defines the methods that are required for logging to file.
 
 There are 3 types of messages in the log file:
 
@@ -28,7 +28,7 @@ There are 3 types of messages in the log file:
 
 ## Logging to File
 
-In this example, we'll log into the file so we need to use [FileLogger](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) class.
+In this example, we'll log into the file so we need to use [FileLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) class.
 
 ```csharp
 // Create logger and specify the output file
@@ -48,7 +48,7 @@ using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
 
 ## Logging to Console
 
-In this example, we'll log into the console so we need to use [ConsoleLogger](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) class.
+In this example, we'll log into the console so we need to use [ConsoleLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) class.
 
 ```csharp
 // Create logger and specify the output file
@@ -68,7 +68,7 @@ using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
 
 ## Implementing custom logger
 
-To make your logger you should implement [ILogger](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.logging/ilogger) interface.
+To make your logger you should implement [ILogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/ilogger) interface.
 
 For trace messages - implement public void Trace(string message) method \
 For warning messages - implement public void Warning(string message) method \

@@ -23,7 +23,7 @@ The code snippets provided in this article can be found in [our public examples 
 
 ### Determine file-type by the file extension
 
-To determine file type from the file extension use [FromExtension()](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/methods/fromextension) method of [FileType](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype) class.
+To determine file type from the file extension use [FromExtension()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/methods/fromextension) method of [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype) class.
 
 ```csharp
 string extension = ".docx";
@@ -37,7 +37,7 @@ As you can see from the screenshot below the file type detected correctly.
 
 ### Determine file-type by media-type
 
-In case you receive a file from the Internet and you have only its media-type use [FromMediaType()](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/methods/frommediatype) method of [FileType](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype) class.
+In case you receive a file from the Internet and you have only its media-type use [FromMediaType()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/methods/frommediatype) method of [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype) class.
 
 ```csharp
 string mediaType = "application/pdf";
@@ -51,7 +51,7 @@ The media-type will be mapped to the file type as shown on the screenshot below.
 
 ### Determine file type by stream or bytes
 
-When you don't know the name of a file or media-type you can try determining file type by passing stream to [FromStream()](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/methods/fromstream) method of [FileType](https://apireference.groupdocs.com/viewer/net/groupdocs.viewer/filetype). GroupDocs.Viewer will try reading the file signature and map it to the file type.
+When you don't know the name of a file or media-type you can try determining file type by passing stream to [FromStream()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/methods/fromstream) method of [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype). GroupDocs.Viewer will try reading the file signature and map it to the file type.
 
 ```csharp
 using (Stream stream = File.OpenRead("sample.docx"))

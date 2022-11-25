@@ -15,11 +15,11 @@ Let see how to implement some custom cache implementation.
 
 The following steps should be followed.
 
-* Create *RedisCache* class which implements [ICache](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.caching/icache) interface.
+* Create *RedisCache* class which implements [ICache](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.caching/icache) interface.
 * Instantiate the *RedisCache* class.
-* Pass the reference of the *RedisCache* class instance into the constructor of [ViewerSettings](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewersettings) class instance.
-* Instantiate [Viewer](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class with [ViewerSettings](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewersettings) object.
-* Call [View](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method of [Viewer](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class.
+* Pass the reference of the *RedisCache* class instance into the constructor of [ViewerSettings](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewersettings) class instance.
+* Instantiate [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class with [ViewerSettings](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewersettings) object.
+* Call [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method of [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class.
 
 Below is the code that demonstrates how to use custom caching for GroupDocs.Viewer:
 

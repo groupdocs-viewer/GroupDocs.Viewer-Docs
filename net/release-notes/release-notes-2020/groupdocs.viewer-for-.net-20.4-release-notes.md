@@ -46,7 +46,7 @@ There are 10 features, improvements, and bug-fixes in this release, most notable
 
 ### Changes in the public API 
 
-*   Added new property to GroupDocs.Viewer.Options.CadOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/cadoptions) class
+*   Added new property to GroupDocs.Viewer.Options.CadOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/cadoptions) class
 
 ```csharp
 /// <summary>
@@ -55,7 +55,7 @@ There are 10 features, improvements, and bug-fixes in this release, most notable
 public Color BackgroundColor { get; set; }
 ```
 
-*   Added new property to [GroupDocs.Viewer.Options.SpreadsheetOptions](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions) class
+*   Added new property to [GroupDocs.Viewer.Options.SpreadsheetOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions) class
 
 ```csharp
 /// <summary>

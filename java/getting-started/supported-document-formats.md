@@ -12,7 +12,7 @@ GroupDocs.Viewer for Java supports over 170 file formats including DOCX, PPTX, X
 
 {{< alert style="info" >}}
 
-To retrieve a list of all supported file formats in your app use [FileType.getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method.
+To retrieve a list of all supported file formats in your app use [FileType.getSupportedFileTypes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method.
 
 {{< /alert >}}
 

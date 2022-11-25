@@ -29,7 +29,7 @@ Auto Detection means that GroupDocs.Viewer can determine the type of the archive
 | [.GZ](https://docs.fileformat.com/compression/gz) | [Gnu Zipped File](https://docs.fileformat.com/compression/gz) | Yes |
 | [.RAR](https://docs.fileformat.com/compression/rar) | [Roshal ARchive File](https://docs.fileformat.com/compression/rar) | Yes |
 
-*Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
+*Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
 
 ## How to render archive files
 

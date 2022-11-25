@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-To improve content positioning when rendering into PDF GroupDocs.Viewer provides [setDisableCharsGrouping()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfOptions#setDisableCharsGrouping(boolean)) as shown below:
+To improve content positioning when rendering into PDF GroupDocs.Viewer provides [setDisableCharsGrouping()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfOptions#setDisableCharsGrouping(boolean)) as shown below:
 
 ```java
     try (Viewer viewer = new Viewer("sample.pdf")) {

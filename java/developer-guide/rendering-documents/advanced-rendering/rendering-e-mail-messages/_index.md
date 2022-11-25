@@ -26,7 +26,7 @@ Auto Detection means that GroupDocs.Viewer for Java can determine the type of th
 | [.EMLX](https://docs.fileformat.com/email/emlx) | [Apple Mail E-mail File](https://docs.fileformat.com/email/emlx) | Yes |
 | [.MSG](https://docs.fileformat.com/email/msg) | [Microsoft Outlook E-mail Message](https://docs.fileformat.com/email/msg) | Yes |
 
-*Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
+*Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
 
 ## In this section
 

@@ -12,9 +12,9 @@ Document viewer can operate in different rendering modes, HTML, Image and PDF (s
 
 This article will describe on how to view documents in PDF mode with PDF Viewer. When rendering to PDF format with GroupDocs.Viewer, it saves all pages of source document as a single target PDF document.  
 Here are the steps for rendering to PDF with GroupDocs.Viewer for Java:
-* Create new instance of [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class and pass source document path as a constructor parameter.
-* Instantiate the [PdfViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions) object and specify saving path format for rendered document.
-* Call [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method of [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class instance and pass [PdfViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions) to it.
+* Create new instance of [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class and pass source document path as a constructor parameter.
+* Instantiate the [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions) object and specify saving path format for rendered document.
+* Call [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method of [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class instance and pass [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions) to it.
 
 The following code sample shows how to get **PDF** representation of the document.
 

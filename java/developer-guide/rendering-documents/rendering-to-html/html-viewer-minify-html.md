@@ -15,7 +15,7 @@ When you are looking for the ways to optimize the rendering of documents into HT
 
 ## The Solution
 
-GroupDocs.Viewer provides a new [setMinify()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#setMinify(boolean)) property of the [HtmlViewOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) class, that lets you get output content minified. Minification removes comments, extra white-spaces, and other unneeded characters without breaking the content structure. As a result, the page becomes smaller in size and loads faster. The following example demonstrates how to minify output content when rendering MS Word document into HTML.
+GroupDocs.Viewer provides a new [setMinify()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#setMinify(boolean)) property of the [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) class, that lets you get output content minified. Minification removes comments, extra white-spaces, and other unneeded characters without breaking the content structure. As a result, the page becomes smaller in size and loads faster. The following example demonstrates how to minify output content when rendering MS Word document into HTML.
 
 The following code sample shows how to enable minification.
 
@@ -47,7 +47,7 @@ The process of minification almost in all cases provides the output that looks i
 
 ### CSS Minification
 
-The embedded CSS content is minified when the [setMinify()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#setMinify(boolean)) setting is on.
+The embedded CSS content is minified when the [setMinify()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#setMinify(boolean)) setting is on.
 
 * Remove all insignificant white-space.
 * Remove all comments.

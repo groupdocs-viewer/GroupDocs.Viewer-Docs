@@ -24,7 +24,7 @@ The code snippets provided in this article can be found in [our public examples 
 
 ### Determine file-type by the file extension
 
-To determine file type from the file extension use [fromExtension()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#fromExtension(java.lang.String)) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class.
+To determine file type from the file extension use [fromExtension()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#fromExtension(java.lang.String)) method of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class.
 
 ```java
 String extension = ".docx";
@@ -41,7 +41,7 @@ The output would be similar to:
 
 ### Determine file-type by media-type
 
-In case you receive a file from the Internet and you have only its media-type use [fromMediaType()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#fromMediaType(java.lang.String)) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class.
+In case you receive a file from the Internet and you have only its media-type use [fromMediaType()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#fromMediaType(java.lang.String)) method of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class.
 
 ```java
 String mediaType = "application/pdf";
@@ -58,7 +58,7 @@ Extension .pdf; File type: Portable document Format File (.pdf)
 
 ### Determine file type by stream
 
-When you don't know the name of a file or media-type you can try determining file type by passing stream to [fromStream()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#fromStream(java.io.InputStream)) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType). GroupDocs.Viewer will try reading the file signature and map it to the file type.
+When you don't know the name of a file or media-type you can try determining file type by passing stream to [fromStream()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#fromStream(java.io.InputStream)) method of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType). GroupDocs.Viewer will try reading the file signature and map it to the file type.
 
 ```java
  try (InputStream inputStream = new FileInputStream("sample.docx")) {

@@ -55,7 +55,7 @@ Auto Detection means that GroupDocs.Viewer can determine the type of the image f
 | [.EMF](https://docs.fileformat.com/image/emf) | [Windows Enhanced Metafile (EMF)](https://docs.fileformat.com/image/emf)  | Yes |
 | [.WMF](https://docs.fileformat.com/image/wmf) | [Windows Metafile (WMF)](https://docs.fileformat.com/image/wmf) | Yes |
 
-*Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
+*Note:* _to get actual information about supported formats it is recommended to call [getSupportedFileTypes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class_
 
 ## In this section
 

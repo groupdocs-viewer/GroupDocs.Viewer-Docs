@@ -105,11 +105,11 @@ public static ViewInfoOptions ForPngView()
 
 ### GroupDocs.Viewer.Options.HtmlViewOptions class
 
-[GroupDocs.Viewer.Options.HtmlViewOptions.ForPrinting](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/properties/forprinting>) property was added that add optimize output HTML for printing support.
+[GroupDocs.Viewer.Options.HtmlViewOptions.ForPrinting](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/properties/forprinting>) property was added that add optimize output HTML for printing support.
 
 ### Removed obsolete members
 
-* LotusNotesOptions property removed from [GroupDocs.Viewer.Options.BaseViewOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions>) class.
-* RenderSinglePage property removed from [GroupDocs.Viewer.Options.HtmlViewOptions](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/HtmlViewOptions>) class,
-please use [GroupDocs.Viewer.Options.HtmlViewOptions.RenderToSinglePage](<https://apireference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/properties/rendertosinglepage>) property.
+* LotusNotesOptions property removed from [GroupDocs.Viewer.Options.BaseViewOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions>) class.
+* RenderSinglePage property removed from [GroupDocs.Viewer.Options.HtmlViewOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/HtmlViewOptions>) class,
+please use [GroupDocs.Viewer.Options.HtmlViewOptions.RenderToSinglePage](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/properties/rendertosinglepage>) property.
 * LotusNotesOptions class removed from GroupDocs.Viewer.Options namespace.

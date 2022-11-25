@@ -25,6 +25,6 @@ The following code sample shows how to render password-protected documents.
 
 ## Exceptions
 
-* Password is not specified - GroupDocs.Viewer throws [PasswordRequiredException](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.exception/PasswordRequiredException)
+* Password is not specified - GroupDocs.Viewer throws [PasswordRequiredException](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.exception/PasswordRequiredException)
 
-* Incorrect password set - GroupDocs.Viewer for Java throws [IncorrectPasswordException](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.exception/IncorrectPasswordException)
+* Incorrect password set - GroupDocs.Viewer for Java throws [IncorrectPasswordException](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.exception/IncorrectPasswordException)

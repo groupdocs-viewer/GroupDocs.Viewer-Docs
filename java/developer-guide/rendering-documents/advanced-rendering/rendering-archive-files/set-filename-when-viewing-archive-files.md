@@ -10,11 +10,11 @@ hideChildren: False
 ---
 ![](/viewer/java/images/set-filename-when-viewing-archive-files.png)
 
-When viewing the archive files [Viewer](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) displays an archive filename in the header of each page, like it is shown on the screenshot above. By default, the name of the original file is used. The GroupDocs.Viewer for Java enables you to change or hide filename by setting [setFileName()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ArchiveOptions#setFileName(com.groupdocs.viewer.options.FileName)) option of the [ArchiveOptions](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ArchiveOptions) class. The [setFileName()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ArchiveOptions#setFileName(com.groupdocs.viewer.options.FileName)) option can be set to:
+When viewing the archive files [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) displays an archive filename in the header of each page, like it is shown on the screenshot above. By default, the name of the original file is used. The GroupDocs.Viewer for Java enables you to change or hide filename by setting [setFileName()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ArchiveOptions#setFileName(com.groupdocs.viewer.options.FileName)) option of the [ArchiveOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ArchiveOptions) class. The [setFileName()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ArchiveOptions#setFileName(com.groupdocs.viewer.options.FileName)) option can be set to:
 
-* [FileName.SOURCE](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/FileName#SOURCE) - the default value, the name of the source file will be used;
-* [FileName.EMPTY](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/FileName#EMPTY) - empty filename, use it when you want to hide filename;
-* [new FileName("my filename")](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/FileName) - custom filename.
+* [FileName.SOURCE](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/FileName#SOURCE) - the default value, the name of the source file will be used;
+* [FileName.EMPTY](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/FileName#EMPTY) - empty filename, use it when you want to hide filename;
+* [new FileName("my filename")](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/FileName) - custom filename.
 
 The following code snippet shows how to set "my filename" instead of source filename when viewing an archive file.
 

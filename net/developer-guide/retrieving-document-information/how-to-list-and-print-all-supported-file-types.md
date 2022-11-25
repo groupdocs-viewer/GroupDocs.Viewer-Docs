@@ -10,8 +10,8 @@ hideChildren: False
 
 Here is the full list of [supported file formats]({{< ref "viewer/net/getting-started/supported-document-formats.md" >}}). In case you need to list or print out all of the supported file formats in your application you can do the following:
 
-* Call [GetSupportedFileTypes](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/filetype/methods/getsupportedfiletypes) method of [FileType](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/filetype) class;
-* Enumerate through the collection of [FileType](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/filetype) objects.
+* Call [GetSupportedFileTypes](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/filetype/methods/getsupportedfiletypes) method of [FileType](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/filetype) class;
+* Enumerate through the collection of [FileType](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/filetype) objects.
 
 The following code sample demonstrates how to print all supported file formats list to the console.
 

@@ -11,7 +11,7 @@ hideChildren: False
 GroupDocs.Viewer also enables you to render of remotely located documents. The rendering of the document would be similar to [Load document from Stream]({{< ref "load-document-from-stream" >}}). In order to render a remotely located document, below steps can be followed.
 
 * Specify the method to obtain remotely located document stream;
-* Pass a stream to [Viewer](https://apireference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class constructor.
+* Pass a stream to [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class constructor.
 
 ```csharp
 public static void LoadDocument()

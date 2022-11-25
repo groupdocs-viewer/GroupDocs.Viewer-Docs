@@ -16,7 +16,7 @@ In case you print the workbook by clicking at `File > Print` and there would be 
 
 ![Printing spreadsheet in Excel](/viewer/java/images/render-spreadsheets-by-page-breaks/printing-spreadsheet-in-excel.png)
 
-To perform the same action programmatically with GroupDocs.Viewer set `SpreadsheetOptions` to `SpreadsheetOptions.forRenderingByPageBreaks()` and call [view()](https://apireference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method. Let's take [page-breaks.xlsx](/viewer/java/sample-files/render-spreadsheets-by-page-breaks/page-breaks.xlsx) and render it to PDF by running the following code.
+To perform the same action programmatically with GroupDocs.Viewer set `SpreadsheetOptions` to `SpreadsheetOptions.forRenderingByPageBreaks()` and call [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method. Let's take [page-breaks.xlsx](/viewer/java/sample-files/render-spreadsheets-by-page-breaks/page-breaks.xlsx) and render it to PDF by running the following code.
 
 ```java
     try (Viewer viewer = new Viewer("page-breaks.xlsx")) {
