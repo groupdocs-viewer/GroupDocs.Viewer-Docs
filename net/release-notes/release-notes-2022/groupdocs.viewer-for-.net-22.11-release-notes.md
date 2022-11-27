@@ -86,6 +86,23 @@ The following image demonstrates PDF document rendered to HTML with a **fluid** 
 
 ![Render PDF to HTML with fluid layout](/viewer/net/images/rendering-basics/render-pdf-documents/render-pdf-to-html-with-fluid-layout.png)
 
+### Added support for Lossless JPEG (.jls) images
+
+This image format was developed by Joint Photographic Experts Group as addition to [JPEG](https://docs.fileformat.com/image/jpeg/) format to enabled programs to control level of compression and save images lossless or near-lossless. See the following topic for more information about rendering images: [Render images as HTML, PDF, PNG, and JPEG files](/viewer/net/render-images). This file type can be automatically detected by Viewer. See [Determine the file type](/viewer/net/how-to-determine-file-type) topic for more information.
+
+New `JLS` fileld added to the `FileType` class. For all supported file types see [Supported file formats](/viewer/net/supported-document-formats/).
+
+{{< tabs "example3">}}
+{{< tab "C#" >}}
+```cs
+/// <summary>
+/// JPEG-LS (JLS) (.jls)
+/// </summary>
+public static readonly FileType JLS = new FileType("JPEG-LS (JLS)", ".jls");
+```
+{{< /tab >}}
+{{< /tabs >}}
+
 ## Full List of Issues Covering all Changes in this Release
 
 | Key | Summary | Category |
@@ -93,6 +110,7 @@ The following image demonstrates PDF document rendered to HTML with a **fluid** 
 |VIEWERNET-4124|Convert all Excel worksheets to one HTML file|Feature|
 |VIEWERNET-4142|Replace BinnaryFormatter with XmlSerializer in FileCache class|Enhancement|
 |VIEWERNET-4141|Support rendering PDF and EPUB documents to HTML with fluid layout|Feature|
+|VIEWERNET-3095|Add Lossless JPEG (JLS) file-format support|Feature|
 
 
 

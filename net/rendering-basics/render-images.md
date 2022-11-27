@@ -54,6 +54,7 @@ GroupDocs.Viewer supports the following image file formats:
 * [.JPF (JPEG 2000 Image)](https://docs.fileformat.com/image/jpf/)
 * [.JPM (JPEG 2000 Multi-layer Image Format)](https://docs.fileformat.com/image/jpm/)
 * [.JPX (JPEG 2000 Image File)](https://docs.fileformat.com/image/jpx/)
+* [.JLS (JPEG-LS Image)](https://fileinfo.com/extension/jls)
 * [.ODG (OpenDocument Graphics File)](https://docs.fileformat.com/image/odg)
 * [.OTG (OpenDocument Graphic Template)](https://docs.fileformat.com/image/otg/)
 * [.PCL (Printer Command Language Document)](https://docs.fileformat.com/page-description-language/pcl)
