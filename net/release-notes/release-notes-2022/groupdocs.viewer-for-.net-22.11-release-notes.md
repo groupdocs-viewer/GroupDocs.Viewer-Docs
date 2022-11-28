@@ -12,7 +12,7 @@ toc: True
 
 ## Major Changes
 
-There are ??? features, and bug-fixes in this release, most notable are:
+There are 14 features and bug fixes in this release, the most notable are:
 
 ### Added support for converting all Excel worksheets to one HTML file
 
@@ -111,6 +111,16 @@ public static readonly FileType JLS = new FileType("JPEG-LS (JLS)", ".jls");
 |VIEWERNET-4142|Replace BinnaryFormatter with XmlSerializer in FileCache class|Enhancement|
 |VIEWERNET-4141|Support rendering PDF and EPUB documents to HTML with fluid layout|Feature|
 |VIEWERNET-3095|Add Lossless JPEG (JLS) file-format support|Feature|
+|VIEWERNET-2487|"Parameter is not valid" exception when rendering PS file|Bug|
+|VIEWERNET-2720|Exception has been thrown by the target of an invocation when rendering PPSX|Bug|
+|VIEWERNET-3365|"Bit depth of 8 bits are supported for RGBA images." exception when rendering PNG file|Bug|
+|VIEWERNET-3429|"Image export failed." exception when rendering EMZ file|Bug|
+|VIEWERNET-3500|"Unable to read beyond the end of the stream." exception when rendering ODS file|Bug|
+|VIEWERNET-3718|"Parameter is not valid." exception when rendering WMZ file|Bug|
+|VIEWERNET-4095|PDF to HTML: Long execution time|Bug|
+|VIEWERNET-4125|The ArchiveOptions.ItemsPerPage property works incorrectly|Bug|
+|VIEWERNET-4126|When an archive file is converted to PDF, the output file does not display the path to archive folders|Bug|
+|VIEWERNET-4143|UIPath with route parameters read as a string instead of pattern|Bug|
 
 
 
