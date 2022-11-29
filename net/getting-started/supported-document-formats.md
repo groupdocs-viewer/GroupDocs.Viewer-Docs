@@ -101,6 +101,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [JPF](https://docs.fileformat.com/image/jpf/) | JPEG 2000 Image | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [JPM](https://docs.fileformat.com/image/jpm/) | JPEG 2000 Multi-layer Image Format | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [JPX](https://docs.fileformat.com/image/jpx/) | JPEG 2000 Image File | ![(tick)](/viewer/net/images/check-blue.png) | |
+| [JLS](https://fileinfo.com/extension/jls) | JPEG-LS Image | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [ODG](https://docs.fileformat.com/image/odg/) | OpenDocument Graphics File | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [OTG](https://docs.fileformat.com/image/otg/) | OpenDocument Graphics Template | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [PCL](https://docs.fileformat.com/page-description-language/pcl/) | Printer Command Language Document | ![(tick)](/viewer/net/images/check-blue.png) | |

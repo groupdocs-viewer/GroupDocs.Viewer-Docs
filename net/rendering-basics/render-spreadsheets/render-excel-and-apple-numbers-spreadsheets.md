@@ -157,13 +157,42 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 ![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-html-external-resources.png)
 
+
+### Convert all Excel worksheets to one HTML file
+
+To convert all worksheets to one HTML file, set the [HtmlViewOptions.RenderToSinglePage](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/rendertosinglepage/) property to `true`. This feature is supported in both cases - when converting to HTML with embedded and external resources.
+
+{{< tabs "example5">}}
+{{< tab "C#" >}}
+```cs
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("Personal_net_worth_calculator.xlsx"))
+{
+    // Convert the spreadsheet to HTML.
+    // {0} is replaced with the current page number in the file names.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    viewOptions.RenderToSinglePage = true;
+    viewer.View(viewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+The following image demonstrates the result:
+
+![Convert all Excel worksheets to one HTML file](/viewer/net/images/rendering-basics/render-spreadsheets/convert-all-excel-worksheets-to-html.png)
+
+
 ## Render spreadsheets as PDF
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a spreadsheet file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
 **Example  1: Convert an Excel workbook to PDF**
 
-{{< tabs "example5">}}
+{{< tabs "example6">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -186,7 +215,7 @@ The following image demonstrates the result:
 
 **Example  2: Convert an Apple Numbers spreadsheet to PDF**
 
-{{< tabs "example6">}}
+{{< tabs "example7">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -213,7 +242,7 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 **Example  1: Convert an Excel workbook to PNG**
 
-{{< tabs "example7">}}
+{{< tabs "example8">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -238,7 +267,7 @@ The following image demonstrates the result:
 
 **Example  2: Convert an Apple Numbers spreadsheet to PNG**
 
-{{< tabs "example8">}}
+{{< tabs "example9">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -268,7 +297,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 **Example  1: Convert an Excel workbook to JPEG**
 
-{{< tabs "example9">}}
+{{< tabs "example10">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -290,7 +319,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 
 **Example  2: Convert an Apple Numbers spreadsheet to JPEG**
 
-{{< tabs "example10">}}
+{{< tabs "example11">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -319,7 +348,7 @@ GroupDocs.Viewer can detect the following separators:
 * A comma (the default separator)
 * A semicolon
 
-{{< tabs "example11">}}
+{{< tabs "example12">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -344,7 +373,7 @@ GroupDocs.Viewer allows you to obtain information about the source spreadsheet f
 2. Call the [Viewer.GetViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method and pass the `ViewInfoOptions` instance to this method as a parameter.
 3. Use the [Pages](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/properties/pages) property of the returned [ViewInfo](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo) object to iterate through the list of worksheets and retrieve the worksheet names.
 
-{{< tabs "example12">}}
+{{< tabs "example13">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;

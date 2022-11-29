@@ -9,29 +9,27 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
 ---
-**File type** or **file format** is the way to classify and differentiate one kind of file from another. For example, Microsoft Excel and Adobe PDF are two different **file types**. The common way to determine the file type is by its extension, so when you have a file e.g. sample.docx you expect that this file will be opened by some text processing application like Microsoft Word. But there are the cases when you don't know the file type e.g. when the file came from the Internet but you don't know its name or filename doesn't have an extension.
+`File type` or `file format` is the way to classify and differentiate one kind of file from another. For example, Microsoft Excel and Adobe PDF are two different file types. The common way to determine the file type is by its extension, so when you have a file e.g. sample.docx you expect that this file will be opened by some text processing application like Microsoft Word. But there are cases when you don’t know the file type e.g. when the file came from the Internet but you don’t know its name or the filename doesn’t have an extension.
 
 ## Determine file-type
 
-**GroupDocs.Viewer** enables you to determine the file type by file extension, media-type, or raw bytes.
-
-{{< alert style="info" >}}
-
-The code snippets provided in this article can be found in [our public examples at GitHub.](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/GroupDocs.Viewer.Examples.CSharp/HowTo/HowToDetermineFileType.cs)
-
-{{< /alert >}}
+`GroupDocs.Viewer` enables you to determine the file type by file extension, media-type, or raw bytes.
 
 ### Determine file-type by the file extension
 
-To determine file type from the file extension use [FromExtension()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/methods/fromextension) method of [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype) class.
+To determine file type from the file extension use [FromExtension()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/fromextension/#fromextension) method of [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/) class.
 
-```csharp
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+```cs
 string extension = ".docx";
 FileType fileType = FileType.FromExtension(extension);
-Console.WriteLine($"\nExtension {extension}; File type: {fileType}.");
+Console.WriteLine($"Extension {extension}; File type: {fileType}.");
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-As you can see from the screenshot below the file type detected correctly.
+The following image demonstrates a sample console output:
 
 ![](/viewer/net/images/how-to-determine-file-type.png)
 
@@ -39,13 +37,17 @@ As you can see from the screenshot below the file type detected correctly.
 
 In case you receive a file from the Internet and you have only its media-type use [FromMediaType()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/methods/frommediatype) method of [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype) class.
 
-```csharp
+{{< tabs "example2">}}
+{{< tab "C#" >}}
+```cs
 string mediaType = "application/pdf";
 FileType fileType = FileType.FromMediaType(mediaType);
-Console.WriteLine($"\nMedia-type {mediaType}; File type: {fileType}.");
+Console.WriteLine($"Media-type {mediaType}; File type: {fileType}.");
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-The media-type will be mapped to the file type as shown on the screenshot below.
+The following image demonstrates a sample console output:
 
 ![](/viewer/net/images/how-to-determine-file-type_1.png)
 
@@ -53,15 +55,19 @@ The media-type will be mapped to the file type as shown on the screenshot below.
 
 When you don't know the name of a file or media-type you can try determining file type by passing stream to [FromStream()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/methods/fromstream) method of [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype). GroupDocs.Viewer will try reading the file signature and map it to the file type.
 
-```csharp
+
+{{< tabs "example3">}}
+{{< tab "C#" >}}
+```cs
 using (Stream stream = File.OpenRead("sample.docx"))
 {
     FileType fileType = FileType.FromStream(stream);
-
-    Console.WriteLine($"\nFile path {TestFiles.SAMPLE_DOCX}; File type: {fileType}.");
+    Console.WriteLine($"File type: {fileType}.");
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-A similar output would be printed in case of GroupDocs.Viewer detected the file type successfully.
+The following image demonstrates a sample console output:
 
 ![](/viewer/net/images/how-to-determine-file-type_2.png)

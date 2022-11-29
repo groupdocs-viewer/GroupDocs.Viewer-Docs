@@ -91,6 +91,47 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 ![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-pdf-documents/render-to-html-external-resources.png)
 
+### Create HTML with fixed layout
+
+By default, PDF and EPUB documents are rendered to HTML with fixed layout to ensure that the output HTML looks the same as a source document. Rendering to fixed layout means that all the HTML elements are absolutely positioned to the container element. And container element has a fixed size so browser window resizing won't have an effect on the position and size of elements in a document.
+
+The following image demonstrates PDF document rendered HTML with fixed layout:
+
+![Create HTML with fixed layout](/viewer/net/images/rendering-basics/render-pdf-documents/render-pdf-to-html-with-fixed-layout.png)
+
+### Create HTML with fluid layout
+
+When rendering to HTML with fluid layout HTML document doesn't have a fixed size. In case you resize a browser window the document content tries to fit into it. To create HTML with fluid layout set [PdfOptions.FixedLayout](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptions/fixedlayout/) property to `false`. 
+
+{{< tabs "example3">}}
+{{< tab "C#" >}}
+```cs
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("Letter.pdf"))
+{
+    // Convert the spreadsheet to HTML.
+    // {0} is replaced with the current page number in the file names.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    viewOptions.PdfOptions.FixedLayout = false;
+    viewer.View(viewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+{{< alert style="info" >}}
+
+When rendering PDF and EPUB documents to HTML with a fluid layout all the graphic content such as images are ignored.
+
+{{< /alert >}}
+
+The following image demonstrates the result:
+
+![Create HTML with fluid layout](/viewer/net/images/rendering-basics/render-pdf-documents/render-pdf-to-html-with-fluid-layout.png)
+
 ### Adjust image quality in the output HTML file
 
 The [HtmlViewOptions.PdfOptions.ImageQuality](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/imagequality) option allows you to specify the quality of images in the output HTML file. You can set this property to one of the following values:
@@ -101,7 +142,7 @@ The [HtmlViewOptions.PdfOptions.ImageQuality](https://reference.groupdocs.com/ne
 
 The following code snippet uses the medium image quality when rendering a PDF document to HTML.
 
-{{< tabs "example3">}}
+{{< tabs "example4">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -124,7 +165,7 @@ GroupDocs.Viewer supports the [HtmlViewOptions.PdfOptions.RenderTextAsImage](htt
 
 The following example demonstrates how to enable this option in code:
 
-{{< tabs "example4">}}
+{{< tabs "example5">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -151,7 +192,7 @@ When you convert a PDF file to HTML, GroupDocs.Viewer creates an HTML document w
 
 The following example demonstrates how to enable this option in code:
 
-{{< tabs "example5">}}
+{{< tabs "example6">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -173,7 +214,7 @@ using (var viewer = new Viewer("sample.pdf"))
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a PDF file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example6">}}
+{{< tabs "example7">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -201,7 +242,7 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a PDF file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example7">}}
+{{< tabs "example8">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -225,8 +266,7 @@ using (var viewer = new Viewer("resume.pdf"))
 
 When you render PDF documents as images, GroupDocs.Viewer calculates the optimal image size to achieve better rendering quality. If you want the generated images to be the same size as pages in the source PDF document, enable the [PdfOptions.RenderOriginalPageSize](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/renderoriginalpagesize) property for the [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) or [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class (depending on the output image format).
 
-
-{{< tabs "example8">}}
+{{< tabs "example9">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -247,7 +287,7 @@ using (var viewer = new Viewer("resume.pdf"))
 
 To adjust the display of outline fonts when you convert PDF documents to PNG or JPEG, activate the [PdfOptions.EnableFontHinting](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/enablefonthinting) option, as shown below:
 
-{{< tabs "example9">}}
+{{< tabs "example10">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -270,7 +310,7 @@ Refer to the following article for more information on font hinting: [Font hinti
 
 When you render PDF files in other formats, GroupDocs.Viewer groups individual characters into words to improve rendering performance. If your document contains hieroglyphic or special symbols, you may need to disable character grouping to generate a more precise layout. To do this, use the [PdfOptions.DisableCharsGrouping](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/disablecharsgrouping) option, as shown below:
 
-{{< tabs "example10">}}
+{{< tabs "example11">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -293,7 +333,7 @@ Enable the [ViewOptions.RenderComments](https://reference.groupdocs.com/viewer/n
 
 The code example below renders a PDF file with text comments as an image.
 
-{{< tabs "example11">}}
+{{< tabs "example12">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -322,7 +362,7 @@ Follow the steps below to obtain information about a PDF file (the number of pag
 2. Call the [Viewer.GetViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [PdfViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/pdfviewinfo) type.
 3. Use the `PdfViewInfo` class properties to retrieve document-specific information.
 
-{{< tabs "example12">}}
+{{< tabs "example13">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
@@ -362,7 +402,7 @@ The following image demonstrates a sample console output:
 
 Set the [ViewInfoOptions.ExtractText](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/viewinfooptions/properties/extracttext) property to `true` to enable PDF text extraction. Use the [PdfViewInfo.Pages](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/properties/pages) property to obtain the list of all document pages, and iterate through the collection of lines on each page ([Page.Lines](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/page/properties/lines)) to retrieve text for each line.
 
-{{< tabs "example13">}}
+{{< tabs "example14">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
