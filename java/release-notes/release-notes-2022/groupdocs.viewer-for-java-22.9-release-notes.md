@@ -2,7 +2,7 @@
 id: groupdocs-viewer-for-java-22-9-release-notes
 url: viewer/java/groupdocs-viewer-for-java-22-9-release-notes
 title: GroupDocs.Viewer for Java 22.9 Release Notes
-weight: 1
+weight: 3
 description: "Features, improvements, and bugs-fixes that are shipped in GroupDocs.Viewer for Java 22.9"
 keywords: release notes, groupdocs.viewer, java, 22.9
 productName: GroupDocs.Viewer for Java
