@@ -3,16 +3,43 @@ id: groupdocs-viewer-for-net-22-11-release-notes
 url: viewer/net/groupdocs-viewer-for-net-22-11-release-notes
 title: GroupDocs.Viewer for .NET 22.11 Release Notes
 weight: 70
-description: "Features and bug fixes that are shipped in GroupDocs.Viewer for .NET 22.11"
+description: "Bugs-fixes that are shipped in GroupDocs.Viewer for .NET 22.11"
 keywords: release notes, groupdocs.viewer, .net, 22.11
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
 ---
 
-## Major Changes
+There are 15 features and bug fixes in this release.
 
-There are 14 features and bug fixes in this release, the most notable are:
+## Full list of changes in this release
+
+| ID | Summary | Category |
+| --- | --- | --- |
+|VIEWERNET-4124|[Convert all Excel worksheets to one HTML file](#added-support-for-converting-all-excel-worksheets-to-one-html-file)|Feature|
+|VIEWERNET-4142|[Replace BinnaryFormatter with XmlSerializer in FileCache class](#binaryformatter-was-replaced-with-xmlserializer-in-filecahe-class)|Enhancement|
+|VIEWERNET-4141|[Support rendering PDF and EPUB documents to HTML with fluid layout](#added-support-for-rendering-pdf-and-epub-documents-to-html-with-fluid-layout)|Feature|
+|VIEWERNET-3095|[Add Lossless JPEG (JLS) file-format support](#added-support-for-lossless-jpeg-jls-images)|Feature|
+|VIEWERNET-2487|"Parameter is not valid" exception when rendering PS file|Fix|
+|VIEWERNET-2720|Exception has been thrown by the target of an invocation when rendering PPSX|Fix|
+|VIEWERNET-3365|"Bit depth of 8 bits are supported for RGBA images." exception when rendering PNG file|Fix|
+|VIEWERNET-3429|"Image export failed." exception when rendering EMZ file|Fix|
+|VIEWERNET-3500|"Unable to read beyond the end of the stream." exception when rendering ODS file|Fix|
+|VIEWERNET-3718|"Parameter is not valid." exception when rendering WMZ file|Fix|
+|VIEWERNET-4095|PDF to HTML: Long execution time|Fix|
+|VIEWERNET-4125|The ArchiveOptions.ItemsPerPage property works incorrectly|Fix|
+|VIEWERNET-4126|When an archive file is converted to PDF, the output file does not display the path to archive folders|Fix|
+|VIEWERNET-4143|UIPath with route parameters read as a string instead of pattern|Fix|
+|VIEWERNET-3264|"Could not load file. File is corrupted or damaged." exception when rendering CDR file|Fix|
+
+## Major Features
+
+This release includes three features and one enhancement:
+
+* [Added support for converting all Excel worksheets to one HTML file](#added-support-for-converting-all-excel-worksheets-to-one-html-file)
+* [BinaryFormatter was replaced with XmlSerializer in FileCahe class](#binaryformatter-was-replaced-with-xmlserializer-in-filecahe-class)
+* [Added support for rendering PDF and EPUB documents to HTML with fluid layout](#added-support-for-rendering-pdf-and-epub-documents-to-html-with-fluid-layout)
+* [Added support for Lossless JPEG (.jls) images](#added-support-for-lossless-jpeg-jls-images)
 
 ### Added support for converting all Excel worksheets to one HTML file
 
@@ -102,25 +129,3 @@ public static readonly FileType JLS = new FileType("JPEG-LS (JLS)", ".jls");
 ```
 {{< /tab >}}
 {{< /tabs >}}
-
-## Full List of Issues Covering all Changes in this Release
-
-| Key | Summary | Category |
-| --- | --- | --- |
-|VIEWERNET-4124|Convert all Excel worksheets to one HTML file|Feature|
-|VIEWERNET-4142|Replace BinnaryFormatter with XmlSerializer in FileCache class|Enhancement|
-|VIEWERNET-4141|Support rendering PDF and EPUB documents to HTML with fluid layout|Feature|
-|VIEWERNET-3095|Add Lossless JPEG (JLS) file-format support|Feature|
-|VIEWERNET-2487|"Parameter is not valid" exception when rendering PS file|Bug|
-|VIEWERNET-2720|Exception has been thrown by the target of an invocation when rendering PPSX|Bug|
-|VIEWERNET-3365|"Bit depth of 8 bits are supported for RGBA images." exception when rendering PNG file|Bug|
-|VIEWERNET-3429|"Image export failed." exception when rendering EMZ file|Bug|
-|VIEWERNET-3500|"Unable to read beyond the end of the stream." exception when rendering ODS file|Bug|
-|VIEWERNET-3718|"Parameter is not valid." exception when rendering WMZ file|Bug|
-|VIEWERNET-4095|PDF to HTML: Long execution time|Bug|
-|VIEWERNET-4125|The ArchiveOptions.ItemsPerPage property works incorrectly|Bug|
-|VIEWERNET-4126|When an archive file is converted to PDF, the output file does not display the path to archive folders|Bug|
-|VIEWERNET-4143|UIPath with route parameters read as a string instead of pattern|Bug|
-
-
-
