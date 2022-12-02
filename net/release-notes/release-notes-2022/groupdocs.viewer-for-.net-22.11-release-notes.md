@@ -17,7 +17,7 @@ There are 15 features and bug fixes in this release.
 | ID | Summary | Category |
 | --- | --- | --- |
 |VIEWERNET-4124|[Convert all Excel worksheets to one HTML file](#added-support-for-converting-all-excel-worksheets-to-one-html-file)|Feature|
-|VIEWERNET-4142|[Replace BinnaryFormatter with XmlSerializer in FileCache class](#binaryformatter-was-replaced-with-xmlserializer-in-filecahe-class)|Enhancement|
+|VIEWERNET-4142|[Replace BinnaryFormatter with XmlSerializer in FileCache class](#binaryformatter-was-replaced-with-xmlserializer-in-filecache-class)|Enhancement|
 |VIEWERNET-4141|[Support rendering PDF and EPUB documents to HTML with fluid layout](#added-support-for-rendering-pdf-and-epub-documents-to-html-with-fluid-layout)|Feature|
 |VIEWERNET-3095|[Add Lossless JPEG (JLS) file-format support](#added-support-for-lossless-jpeg-jls-images)|Feature|
 |VIEWERNET-2487|"Parameter is not valid" exception when rendering PS file|Fix|
@@ -37,7 +37,7 @@ There are 15 features and bug fixes in this release.
 This release includes three features and one enhancement:
 
 * [Added support for converting all Excel worksheets to one HTML file](#added-support-for-converting-all-excel-worksheets-to-one-html-file)
-* [BinaryFormatter was replaced with XmlSerializer in FileCahe class](#binaryformatter-was-replaced-with-xmlserializer-in-filecahe-class)
+* [BinaryFormatter was replaced with XmlSerializer in FileCache class](#binaryformatter-was-replaced-with-xmlserializer-in-filecache-class)
 * [Added support for rendering PDF and EPUB documents to HTML with fluid layout](#added-support-for-rendering-pdf-and-epub-documents-to-html-with-fluid-layout)
 * [Added support for Lossless JPEG (.jls) images](#added-support-for-lossless-jpeg-jls-images)
 
@@ -68,7 +68,7 @@ The following image demonstrates the result:
 
 ![Convert all Excel worksheets to one HTML file](/viewer/net/images/rendering-basics/render-spreadsheets/convert-all-excel-worksheets-to-html.png)
 
-### BinaryFormatter was replaced with XmlSerializer in FileCahe class
+### BinaryFormatter was replaced with XmlSerializer in FileCache class
 
 {{< alert style="warning" >}}
 
