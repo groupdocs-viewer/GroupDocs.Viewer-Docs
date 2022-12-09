@@ -7,14 +7,14 @@ description: "This article explains how to load a document from a Stream with Gr
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-There might be the case when your document is not physically located on the disk. Instead, you have the document in the form of a stream. In this case, to avoid the overhead of saving stream as a file on disk, GroupDocs.Viewer enables you to render the file streams directly.
+You can load a document from a stream without saving it as a file on a disk. You can use this feature to load a document from different sources like an URL, FTP, and so on.
 
-The following are the steps to be followed:
+To load a document from stream, follow these steps:
 
-* Specify the method to obtain document stream;
-* Pass method's name to [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class constructor.
+1. Implement a method to obtain the document stream.
+2. Call the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class constructor. Specify the method implemented in the previous step.
 
-Following code snippet serves this purpose.
+The following code snippet shows how to load a document from a stream:
 
 ```csharp
 static void LoadDocumentFromStream()
@@ -28,3 +28,4 @@ static void LoadDocumentFromStream()
     }
 }
 ```
+Please refer to the following pages for examples:

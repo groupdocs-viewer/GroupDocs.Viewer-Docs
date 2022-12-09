@@ -8,6 +8,8 @@ description: "Document loading use cases with GroupDocs.Viewer within your .NET 
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-You can configure how document will be loaded using [LoadOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions) class constructor parameters and properties e.g. you can specify the type of the document is going to be loaded and password for the password-protected documents.
+To render documents, you must load them first. This section describes ways to load documents implemented in GroupDocs.Viewer.
 
-For more details about setting load options please refer to the following articles:
+You can also define document loading options, such as a document type or a password for a password-protected document. To do this, use the constructor parameters and properties of the [LoadOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions) class.
+
+For details, please refer to the following pages:

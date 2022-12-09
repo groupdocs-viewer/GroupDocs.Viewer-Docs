@@ -7,7 +7,7 @@ description: "This article explains how to load a document from URL with GroupDo
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-Following example demonstrates how to render document from URL.
+The following code snippet shows how to load a document from URL.
 
 ```csharp
 public static void LoadDocumentFromUrl()

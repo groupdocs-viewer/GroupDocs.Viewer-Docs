@@ -1,23 +1,23 @@
 ---
 id: specify-encoding-when-loading-documents
 url: viewer/net/specify-encoding-when-loading-documents
-title: Set encoding when loading documents
-weight: 3
-description: "This article explains how to set encoding when loading documents with GroupDocs.Viewer within your .NET applications."
+title: Specify encoding when loading documents
+weight: 4
+description: "This article explains how to specify encoding when loading documents with GroupDocs.Viewer within your .NET applications."
 keywords: set encoding
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-GroupDocs.Viewer enables users to pass encoding when rendering text documents or email messages.
+You can specify the encoding using the [LoadOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions).
 
-This feature is supported for:
+This feature is supported for the following documents:
 
 * [Plain-text (.txt) files](https://docs.fileformat.com/word-processing/txt/)
 * [Comma-separated values (.csv)](https://docs.fileformat.com/spreadsheet/csv/)
 * [Tab-separated values (.tsv)](https://docs.fileformat.com/spreadsheet/tsv/)
 * [E-Mail Message (.eml)](https://docs.fileformat.com/email/eml/)
 
-Following code snippet sets the document encoding.
+The following code snippet shows how to specify the document encoding:
 
 ```csharp
 LoadOptions loadOptions = new LoadOptions();

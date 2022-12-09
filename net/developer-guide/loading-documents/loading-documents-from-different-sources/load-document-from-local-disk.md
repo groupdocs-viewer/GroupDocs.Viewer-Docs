@@ -1,15 +1,15 @@
 ---
 id: load-document-from-local-disk
 url: viewer/net/load-document-from-local-disk
-title: Load from local disk
+title: Load document using the local path string
 weight: 1
-description: "This article explains how to load a document from local disk with GroupDocs.Viewer within your .NET applications."
+description: "This article explains how to load a document using the local path string with GroupDocs.Viewer within your .NET applications."
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-When document is located on the local disk GroupDocs.Viewer enables you to render the by passing path to the file [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class constructor. Viewer will open file for reading only when any method of [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) will be called.
+You can load a document from a local disk using a path to a file. GroupDocs.Viewer opens the file in the read-only mode.
 
-Following code snippet shows how to load document from local disk.
+The following code snippet shows how to load a document using the local path string:
 
 ```csharp
 string filePath = "sample.docx";

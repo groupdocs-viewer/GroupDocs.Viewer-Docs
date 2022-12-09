@@ -7,7 +7,7 @@ description: "This article explains how to load a document from Amazon S3 Storag
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-Following example demonstrates how to render document from Amazon S3 Storage.
+The following code snippet shows how to load a document from Amazon S3 Storage.
 
 ```csharp
 string key = "sample.docx";
