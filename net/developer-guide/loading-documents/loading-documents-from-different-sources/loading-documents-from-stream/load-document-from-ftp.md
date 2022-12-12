@@ -7,7 +7,7 @@ description: "This article explains how to load a document from FTP storage with
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-The following code snippet shows how to load a document from FTP.
+The following code snippet shows how to load a document from FTP:
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}

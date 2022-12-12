@@ -15,7 +15,7 @@ With its powerful and straightforward API, you can execute the following actions
 
 * View documents in the [most popular file formats](/viewer/net/supported-document-formats/) (DOCX, XLSX, PPTX, PDF, DWG, PSD, HTML, ZIP, and more) by rendering them as HTML, PDF, PNG, and JPEG files. You no longer need third-party software to view files within your .NET application.
 * Load documents from [different sources](/viewer/net/loading-documents-from-different-sources/) (a file, a stream, a URL, an FTP server, Amazon S3, Azure Blob Storage, and so on).
-* Load [password-protected documents](/viewer/net/load-password-protected-document/).
+* Open [password-protected documents](/viewer/net/load-password-protected-document/).
 * Render the entire document or specific pages.
 * Embed all external resources in the output HTML files, generate [responsive](/viewer/net/render-with-responsive-layout/) and [minified](/viewer/net/minify-html/) HTML pages.
 * [Protect](/viewer/net/protect-pdf-documents/) the output PDF files and [reorder their pages](/viewer/net/reorder-pages/).

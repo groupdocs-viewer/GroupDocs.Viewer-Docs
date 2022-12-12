@@ -7,7 +7,7 @@ description: "This article explains how to load a document from URL with GroupDo
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-The following code snippet shows how to load a document from URL.
+The following code snippet shows how to load a document from URL:
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}

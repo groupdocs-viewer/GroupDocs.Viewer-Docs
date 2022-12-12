@@ -9,10 +9,13 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 
-The encryption is used to protect the file, so the only people with an encryption key (such as a password) can open and view a file.
-In case you want to check if a file is encrypted, you can use _GetFileInfo()_ method that returns file type and flag that indicates if the file is encrypted as it is shown in the next example ([this example](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/GroupDocs.Viewer.Examples.CSharp/BasicUsage/CheckFileIsEncrypted.cs) can be found in our examples at GitHub.)
+The encryption protects data and allows only authorized persons to open the file. So, only people with an encryption key (such as a password) can open and view a file.
 
-```csharp
+If you want to check if a file is encrypted, use the _GetFileInfo()_ method that returns the file type and flag that indicates if the file is encrypted. The following code snippet shows how to check if a file is encrypted. Also, you can find this example [at GitHub](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/GroupDocs.Viewer.Examples.CSharp/BasicUsage/CheckFileIsEncrypted.cs).
+
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+```cs
 using (Viewer viewer = new Viewer("encrypted.pdf"))
 {
     FileInfo fileInfo = viewer.GetFileInfo();
@@ -21,6 +24,8 @@ using (Viewer viewer = new Viewer("encrypted.pdf"))
     Console.WriteLine("File encrypted: " + fileInfo.Encrypted);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 After running the code above you will see an output like this:
 
@@ -29,4 +34,4 @@ File type is: Portable Document Format File (.pdf)
 File encrypted: True
 ```
 
-To learn how to open an encrypted file please refer to [Load password-protected document]({{< ref "/viewer/net/developer-guide/loading-documents/load-password-protected-document.md" >}}) documentation article.
+To learn how to open an encrypted file, please refer to [Load password-protected document]({{< ref "/viewer/net/developer-guide/loading-documents/load-password-protected-document.md" >}}) page.

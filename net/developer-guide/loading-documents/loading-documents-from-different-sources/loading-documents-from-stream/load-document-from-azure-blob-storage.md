@@ -7,7 +7,7 @@ description: "This article explains how to load a document from Azure Blob Stora
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-The following code snippet shows how to load a document from Azure Blob Storage.
+The following code snippet shows how to load a document from Azure Blob Storage:
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
