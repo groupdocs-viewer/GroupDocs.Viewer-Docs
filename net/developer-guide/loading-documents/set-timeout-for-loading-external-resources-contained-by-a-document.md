@@ -18,7 +18,9 @@ This feature is supported for the [Word Processing File Formats](https://docs.fi
 
 The following code snippet shows how to set a timeout to load external resources:
 
-```csharp
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+```cs
 LoadOptions loadOptions = LoadOptions 
 {
     ResourceLoadingTimeout = TimeSpan.FromSeconds(5)
@@ -30,3 +32,5 @@ using (Viewer viewer = new Viewer("sample.doc", loadOptions))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

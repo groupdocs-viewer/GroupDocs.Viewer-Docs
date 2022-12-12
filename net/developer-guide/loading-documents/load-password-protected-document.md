@@ -22,7 +22,9 @@ If the password is not specified, GroupDocs.Viewer throws [PasswordRequiredExcep
 
 The following code snippet shows how to load and render an encrypted document:
 
-```csharp
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+```cs
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.Password = "123456";
 
@@ -32,4 +34,6 @@ using (Viewer viewer = new Viewer("encrypted.docx", loadOptions))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 

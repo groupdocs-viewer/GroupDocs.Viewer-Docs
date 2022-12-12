@@ -15,7 +15,9 @@ You can specify the file type using the [LoadOptions](https://reference.groupdoc
 
 The following code snippet shows how to specify the file type when loading a document:
 
-```csharp
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+```cs
 Stream stream = GetFileStream("sample.docx");
 LoadOptions loadOptions = new LoadOptions(FileType.DOCX);
 
@@ -25,3 +27,5 @@ using (Viewer viewer = new Viewer(stream, loadOptions)
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

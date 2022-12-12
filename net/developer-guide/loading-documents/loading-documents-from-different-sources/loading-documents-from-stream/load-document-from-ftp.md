@@ -9,7 +9,9 @@ hideChildren: False
 ---
 The following code snippet shows how to load a document from FTP.
 
-```csharp
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+```cs
 static void LoadDocumentFromFtp()
 {
     Stream stream = GetFileFromFtp("sample.docx");
@@ -44,3 +46,5 @@ static Stream GetFileStream(WebResponse response)
     return fileStream;
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

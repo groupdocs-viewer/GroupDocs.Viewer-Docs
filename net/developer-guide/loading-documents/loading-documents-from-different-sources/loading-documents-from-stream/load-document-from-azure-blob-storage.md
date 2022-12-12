@@ -9,7 +9,9 @@ hideChildren: False
 ---
 The following code snippet shows how to load a document from Azure Blob Storage.
 
-```csharp
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+```cs
 string blobName = "sample.docx";
 Stream stream = DownloadFile(blobName);
 
@@ -48,3 +50,5 @@ private static BlobContainerClient GetContainerClient()
     return blobContainerClient;
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

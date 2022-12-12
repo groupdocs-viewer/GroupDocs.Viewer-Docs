@@ -16,7 +16,9 @@ To load a document from stream, follow these steps:
 
 The following code snippet shows how to load a document from a stream:
 
-```csharp
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+```cs
 static void LoadDocumentFromStream()
 {
     Stream stream = File.OpenRead("sample.docx");
@@ -28,4 +30,7 @@ static void LoadDocumentFromStream()
     }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
+
 Please refer to the following pages for examples:

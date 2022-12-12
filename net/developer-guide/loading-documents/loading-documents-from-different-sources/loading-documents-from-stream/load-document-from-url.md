@@ -9,7 +9,9 @@ hideChildren: False
 ---
 The following code snippet shows how to load a document from URL.
 
-```csharp
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+```cs
 public static void LoadDocumentFromUrl()
 {
     string url = "https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/Resources/SampleFiles/sample.docx?raw=true";
@@ -39,3 +41,5 @@ static Stream GetFileStream(WebResponse response)
     return fileStream;
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

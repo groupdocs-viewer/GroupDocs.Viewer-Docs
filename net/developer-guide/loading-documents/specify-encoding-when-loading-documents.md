@@ -19,7 +19,9 @@ This feature is supported for the following documents:
 
 The following code snippet shows how to specify the document encoding:
 
-```csharp
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+```cs
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.Encoding = Encoding.GetEncoding("shift_jis");
 
@@ -29,3 +31,5 @@ using (Viewer viewer = new Viewer("sample.txt", loadOptions))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

@@ -11,7 +11,9 @@ You can load a document from a local disk using a path to a file. GroupDocs.View
 
 The following code snippet shows how to load a document using the local path string:
 
-```csharp
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+```cs
 string filePath = "sample.docx";
 using (Viewer viewer = new Viewer(filePath)) 
 {
@@ -19,3 +21,5 @@ using (Viewer viewer = new Viewer(filePath))
     viewer.View(viewOptions);
 }         
 ```
+{{< /tab >}}
+{{< /tabs >}}
