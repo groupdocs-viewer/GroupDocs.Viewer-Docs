@@ -18,7 +18,7 @@ Using GroupDocs.Viewer, you can determine the file type in one of the following 
 
 ## Determine the file type by the file extension
 
-To determine the file type from the file extension, use the [FromExtension()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/fromextension/#fromextension) method of the [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/) class.
+To determine the file type from the file extension, use the [FromExtension()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/fromextension/#fromextension) method of [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/).
 
 The following code snippet shows how to determine a file type using the file extension:
 

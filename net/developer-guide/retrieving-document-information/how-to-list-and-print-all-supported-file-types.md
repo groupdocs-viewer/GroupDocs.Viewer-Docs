@@ -8,7 +8,7 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 
-The [Supported file formats]({{< ref "viewer/net/getting-started/supported-document-formats.md" >}}) lists all file formats supported by GroupDocs.Viewer.
+The [Supported file formats]({{< ref "viewer/net/getting-started/supported-document-formats.md" >}}) page lists all file formats supported by GroupDocs.Viewer.
 
 To list or print out all the supported file formats within your application, follow these steps:
 

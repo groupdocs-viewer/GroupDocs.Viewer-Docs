@@ -12,7 +12,7 @@ If a document contains external resources like images, GroupDocs.Viewer loads th
 
 In the 19.12 version and earlier, the default timeout was 100 seconds. It may slow rendering when a service that provides external resources is down.
 
-Since the 19.12 version, the default timeout is 30 seconds. Besides that, you can specify the desired timeout using the [LoadOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions) object.
+Since the 19.12 version, the default timeout is 30 seconds. Besides that, you can specify the desired timeout using [LoadOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions).
 
 This feature is supported for the [Word Processing File Formats](https://docs.fileformat.com/word-processing/).
 

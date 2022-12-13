@@ -8,7 +8,7 @@ keywords: set encoding
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-You can specify the encoding using the [LoadOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions).
+You can specify the encoding using [LoadOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions).
 
 This feature is supported for the following documents:
 

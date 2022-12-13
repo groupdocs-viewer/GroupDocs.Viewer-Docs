@@ -3,11 +3,11 @@ id: load-document-from-url
 url: viewer/net/load-document-from-url
 title: Load from URL
 weight: 3
-description: "This article explains how to load a document from URL with GroupDocs.Viewer within your .NET applications."
+description: "This article explains how to load a document from a URL with GroupDocs.Viewer within your .NET applications."
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-The following code snippet shows how to load a document from URL:
+The following code snippet shows how to load a document from a URL:
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}

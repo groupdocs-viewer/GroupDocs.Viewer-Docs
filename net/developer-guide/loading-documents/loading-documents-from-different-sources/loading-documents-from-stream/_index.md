@@ -7,7 +7,7 @@ description: "This article explains how to load a document from a Stream with Gr
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-You can load a document from a stream without saving it as a file on a disk. You can use this feature to load a document from different sources like an URL, FTP, and so on.
+You can load a document from a stream without saving it as a file on a disk. You can use this feature to load a document from different sources like a URL, FTP, and so on.
 
 To load a document from stream, follow these steps:
 

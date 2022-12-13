@@ -9,7 +9,7 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 
-The encryption protects data and allows only authorized persons to open the file. When a file is encrypted, the password must be specified to open the file. To learn how to identify the encrypted file, please refer to the [Check if a file is encrypted]({{< ref "viewer/net/developer-guide/retrieving-document-information/how-to-check-if-file-is-encrypted.md" >}}) page.
+The encryption protects data and allows only authorized people to open the file. When a file is encrypted, the password must be specified to open the file. To learn how to identify the encrypted file, please refer to the [Check if a file is encrypted]({{< ref "viewer/net/developer-guide/retrieving-document-information/how-to-check-if-file-is-encrypted.md" >}}) page.
 
 To load and render an encrypted document, follow these steps:
 
