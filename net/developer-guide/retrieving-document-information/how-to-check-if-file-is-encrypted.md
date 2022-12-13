@@ -9,9 +9,9 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 
-The encryption protects data and allows only authorized persons to open the file. So, only people with an encryption key (such as a password) can open and view a file.
+The encryption protects data and allows only authorized people to open the file. So, only those who have an encryption key (such as a password) can open and view a file.
 
-If you want to check if a file is encrypted, use the _GetFileInfo()_ method that returns the file type and flag that indicates if the file is encrypted. The following code snippet shows how to check if a file is encrypted. Also, you can find this example [at GitHub](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/GroupDocs.Viewer.Examples.CSharp/BasicUsage/CheckFileIsEncrypted.cs).
+If you want to check if a file is encrypted, use the _GetFileInfo()_ method that returns the file type and flag that indicates if the file is encrypted. The following code snippet shows how to check if a file is encrypted. Also, you can find this example [on GitHub](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/GroupDocs.Viewer.Examples.CSharp/BasicUsage/CheckFileIsEncrypted.cs).
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}

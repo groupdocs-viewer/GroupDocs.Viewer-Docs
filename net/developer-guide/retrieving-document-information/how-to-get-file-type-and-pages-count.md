@@ -20,7 +20,9 @@ GroupDocs.Viewer provides additional information for the following document type
 * PDF documents - a flag that indicates whether document printing is allowed (see [Obtain information about a PDF file]({{< ref "/viewer/net/rendering-basics/render-pdf-documents.md" >}}));
 * Microsoft Project files - the project's start and end dates (see [Obtain information about a Project file]({{< ref "/viewer/net/rendering-basics/render-ms-project-files.md" >}})).
 
-## Get file type and pages count from file
+## Get the file type and the pages count from a file
+
+The following code snippet shows how to get the file type and the pages count from a file:
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
@@ -37,7 +39,9 @@ using (Viewer viewer = new Viewer("sample.pdf"))
 {{< /tab >}}
 {{< /tabs >}}
 
-## Get file type and pages count from stream
+## Get the file type and the pages count from a stream
+
+The following code snippet shows how to get the file type and the pages count from a stream:
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}

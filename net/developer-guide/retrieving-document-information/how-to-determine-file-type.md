@@ -16,9 +16,9 @@ Using GroupDocs.Viewer, you can determine the file type in one of the following 
 * [Media type](#determine-file-type-by-media-type);
 * [File signature](#determine-file-type-by-stream).
 
-## Determine file type by the file extension
+## Determine the file type by the file extension
 
-To determine file type from the file extension, use the [FromExtension()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/fromextension/#fromextension) method of the [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/) class.
+To determine the file type from the file extension, use the [FromExtension()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/fromextension/#fromextension) method of the [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/) class.
 
 The following code snippet shows how to determine a file type using the file extension:
 
@@ -58,7 +58,7 @@ The following image demonstrates a sample console output:
 
 ## Determine file type by the stream
 
-When you do not know a file extension or media type header, you can try determining file type by using the [FromStream()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/methods/fromstream) method of the [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype). GroupDocs.Viewer will try reading the file signature and mapping it to the file type.
+When you do not know a file extension or media type header, you can try determining file type by using the [FromStream()](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/methods/fromstream) method of the [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype) class. GroupDocs.Viewer will try reading the signature and mapping it to the file type.
 
 The following code snippet shows how to determine a file type using the file signature:
 
