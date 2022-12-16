@@ -27,11 +27,8 @@ using (Viewer viewer = new Viewer("encrypted.pdf"))
 {{< /tab >}}
 {{< /tabs >}}
 
-After running the code above you will see an output like this:
+The following image demonstrates a sample console output:
 
-```bash
-File type is: Portable Document Format File (.pdf)
-File encrypted: True
-```
+![](/viewer/net/images/how-to-check-if-file-is-encrypted.png)
 
 To learn how to open an encrypted file, please refer to [Load password-protected document]({{< ref "/viewer/net/developer-guide/loading-documents/load-password-protected-document.md" >}}) page.

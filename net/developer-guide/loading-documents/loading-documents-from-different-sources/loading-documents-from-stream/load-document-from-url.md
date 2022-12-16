@@ -12,18 +12,16 @@ The following code snippet shows how to load a document from a URL:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```cs
-public static void LoadDocumentFromUrl()
-{
-    string url = "https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/Resources/SampleFiles/sample.docx?raw=true";
+string url = "https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/GroupDocs.Viewer.Examples.CSharp/Resources/SampleFiles/sample.docx?raw=true";
     
-    Stream stream = DownloadFile(url);
+Stream stream = DownloadFile(url);
 
-    using (Viewer viewer = new Viewer(stream))
-    {
-        HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();                
+using (Viewer viewer = new Viewer(stream))
+{
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();                
         viewer.View(viewOptions);
-    }
 }
+
         
 static Stream DownloadFile(string url)
 {

@@ -19,15 +19,19 @@ The following code snippet shows how to load a document from a stream:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```cs
-static void LoadDocumentFromStream()
+static Stream GetStream(string fileName) 
 {
-    Stream stream = File.OpenRead("sample.docx");
+    // TODO: open a stream for reading e.g. File.OpenRead(fileName);
+}
 
-    using (Viewer viewer = new Viewer(stream))
-    {
-        HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
-        viewer.View(viewOptions);
-    }
+// ..
+
+Stream stream = GetStream("sample.docx");
+
+using (Viewer viewer = new Viewer(stream))
+{
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    viewer.View(viewOptions);
 }
 ```
 {{< /tab >}}

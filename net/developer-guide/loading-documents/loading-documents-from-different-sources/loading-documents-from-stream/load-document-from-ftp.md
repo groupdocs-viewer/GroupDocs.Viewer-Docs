@@ -12,14 +12,11 @@ The following code snippet shows how to load a document from FTP:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```cs
-static void LoadDocumentFromFtp()
+Stream stream = GetFileFromFtp("sample.docx");
+using (Viewer viewer = new Viewer(stream))
 {
-    Stream stream = GetFileFromFtp("sample.docx");
-    using (Viewer viewer = new Viewer(stream))
-    {
-        HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();                
-        viewer.View(viewOptions);
-    }
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();                
+    viewer.View(viewOptions);
 }
         
 static Stream GetFileFromFtp(string filePath)

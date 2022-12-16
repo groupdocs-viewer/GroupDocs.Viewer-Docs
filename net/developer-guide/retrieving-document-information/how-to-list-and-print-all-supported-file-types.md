@@ -29,3 +29,7 @@ foreach (FileType fileType in supportedFileTypes)
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+The following image demonstrates a sample console output:
+
+![](/viewer/net/images/how-to-list-and-print-all-supported-file-types.png)
