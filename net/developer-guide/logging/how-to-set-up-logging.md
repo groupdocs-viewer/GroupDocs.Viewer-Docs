@@ -7,161 +7,161 @@ description: "This article explains how to set up logging when rendering a docum
 keywords: logging, logger, rendering, converting
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
+toc: True
 ---
 
-By default logging is disabled when rendering documents but we also provide a way to save the log to console and file.
+To enable logging you can use `ConsoleLogger`, `FileLogger`, or custom logger.
 
-There is an interface that we can utilize:
+* [ConsoleLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) - writes logs to the standard console.
+* [FileLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) - writes logs to a text file.
 
-* [ILogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/ilogger) - defines the methods that are required for instantiating and releasing output file stream.
+To build your custom logger you have to implemnt [ILogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/ilogger) interface that defines the methods that are used to perform logging.
 
-There are classes that we can utilize:
-
-* [ConsoleLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) - defines the methods that are required for logging to console.
-* [FileLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) - defines the methods that are required for logging to file.
-
-There are 3 types of messages in the log file:
+There are 3 types of messages in a log file:
 
 * Error - for unrecoverable exceptions
 * Warning - for recoverable/expected exceptions
 * Trace - for general information
 
-## Logging to File
+## Write logs to a file
 
-In this example, we'll log into the file so we need to use [FileLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) class.
+The following example shows how to use [FileLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) class to write logs to `output.log` file.
 
-```csharp
+{{< tabs "example1" >}}
+{{< tab "C#" >}}
+```cs
 // Create logger and specify the output file
 FileLogger fileLogger = new FileLogger("output.log");
 
 // Create ViewerSettings and specify FileLogger
 ViewerSettings viewerSettings = new ViewerSettings(fileLogger);
 
-using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
+using (Viewer viewer = new Viewer("sample.docx", viewerSettings))
 {
-    ViewOptions viewOptions =
-    HtmlViewOptions.ForEmbeddedResources("result.html");
-
+    ViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-## Logging to Console
+The sample contents of the `output.log` file:
 
-In this example, we'll log into the console so we need to use [ConsoleLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) class.
+{{< tabs "example2" >}}
+{{< tab "output.log" >}}
+```log
+[TRACE] Rendering into HTML with embedded resources.
+[TRACE] Detecting file type by extension.
+[TRACE] File type detected successfully: Microsoft Word Open XML Document.
+[TRACE] Opening document.
+[TRACE] Document is loaded.
+[TRACE] Applying options.
+[TRACE] Converting page 1.
+[TRACE] Page 1 conversion completed.
+[TRACE] Converting page 2.
+[TRACE] Page 2 conversion completed.
+[TRACE] Releasing resources.
+```
+{{< /tab >}}
+{{< /tabs >}}
 
+
+## Write logs to a console
+
+The following example shows how to use [ConsoleLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) class and write logs to console.
+
+{{< tabs "example3">}}
+{{< tab "C#" >}}
 ```csharp
-// Create logger and specify the output file
-FileLogger fileLogger = new FileLogger("output.log");
+// Create console logger
+ConsoleLogger consoleLogger = new ConsoleLogger();
 
 // Create ViewerSettings and specify FileLogger
-ViewerSettings viewerSettings = new ViewerSettings(fileLogger);
+ViewerSettings viewerSettings = new ViewerSettings(consoleLogger);
 
-using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
+using (Viewer viewer = new Viewer("sample.docx", viewerSettings))
 {
-    ViewOptions viewOptions =
-    HtmlViewOptions.ForEmbeddedResources("result.html");
-
+    ViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-## Implementing custom logger
+The following image demonstrates sample console output:
 
-To make your logger you should implement [ILogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/ilogger) interface.
+![Output when using ConsoleLogger](/viewer/net/images/developer-guide/logging/set-up-logging/console-logger.png)
+
+## Implement custom logger
+
+To implement your logger use [ILogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/ilogger) interface.
 
 For trace messages - implement public void Trace(string message) method \
 For warning messages - implement public void Warning(string message) method \
 For error messages - implement public void Error(string message) method
 
-In this example, we'll implement a simple file logger.
+The following example demonstrates how to implement custom logger:
 
+{{< tabs "example4">}}
+{{< tab "C#" >}}
 ```csharp
 // Create logger and specify the output file
-CustomLogger customLogger = new CustomLogger("output.log");
+MyFileLogger logger = new MyFileLogger("log.txt");
 
-// Create ViewerSettings and specify FileLogger
-ViewerSettings viewerSettings = new ViewerSettings(fileLogger);
+// Create ViewerSettings and pass logger
+ViewerSettings viewerSettings = new ViewerSettings(logger);
 
-using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
+using (Viewer viewer = new Viewer("sample.docx", viewerSettings))
 {
-    ViewOptions viewOptions =
-    HtmlViewOptions.ForEmbeddedResources("result.html");
-
+    ViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }
 
 /// <summary>
 /// Writes log messages to the file.
 /// </summary>
-public class CustomLogger : ILogger
+public class MyFileLogger : ILogger
 {
     private readonly string _fileName;
-
-    private CustomLogger() { }
 
     /// <summary>
     /// Create logger to file.
     /// </summary>
     /// <param name="fileName">Full file name with path</param>
-    public CustomLogger(string fileName)
+    public MyFileLogger(string fileName)
     {
         _fileName = fileName;
     }
 
     /// <summary>
-    /// Writes trace message to the console.
+    /// Writes trace message to file.
     /// Trace log messages provide generally useful information about application flow.
     /// </summary>
     /// <param name="message">The trace message.</param>
     /// <exception cref="System.ArgumentNullException">Thrown when <paramref name="message"/> is null.</exception>
-    public void Trace(string message)
-    {
-        if (message == null)
-            throw new ArgumentNullException(nameof(message));
-
-        using (StreamWriter wr = new StreamWriter(_fileName, true))
-        {
-            wr.WriteLine($"[TRACE] {message}");
-        }
-    }
+    public void Trace(string message) =>
+        File.AppendAllText(_fileName, $"[TRACE] {message}{Environment.NewLine}");
 
     /// <summary>
-    /// Writes warning message to the console;
+    /// Writes warning message to file.
     /// Warning log messages provide information about the unexpected and recoverable event in application flow.
     /// </summary>
     /// <param name="message">The warning message.</param>
     /// <exception cref="System.ArgumentNullException">Thrown when <paramref name="message"/> is null.</exception>
-    public void Warning(string message)
-    {
-        if (message == null)
-            throw new ArgumentNullException(nameof(message));
-
-        using (StreamWriter wr = new StreamWriter(_fileName, true))
-        {
-            wr.WriteLine($"[WARN] {message}");
-        }
-    }
+    public void Warning(string message) =>
+        File.AppendAllText(_fileName, $"[WARN] {message}{Environment.NewLine}");
 
     /// <summary>
-    /// Writes an error message to the console.
+    /// Writes an error message to file.
     /// Error log messages provide information about unrecoverable events in application flow.
     /// </summary>
     /// <param name="message">The error message.</param>
     /// <param name="exception">The exception.</param>
     /// <exception cref="System.ArgumentNullException">Thrown when <paramref name="message"/> is null.</exception>
     /// <exception cref="System.ArgumentNullException">Thrown when <paramref name="exception"/> is null.</exception>
-    public void Error(string message, Exception exception)
-    {
-        if (message == null)
-            throw new ArgumentNullException(nameof(message));
-        if (exception == null)
-            throw new ArgumentNullException(nameof(exception));
-
-        using (StreamWriter wr = new StreamWriter(_fileName, true))
-        {
-            wr.WriteLine($"[ERROR] {message}, exception: {exception}");
-        }
-    }
+    public void Error(string message, Exception exception) =>
+        File.AppendAllText(_fileName, $"[ERROR] {message}, exception: {exception}{Environment.NewLine}");
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
