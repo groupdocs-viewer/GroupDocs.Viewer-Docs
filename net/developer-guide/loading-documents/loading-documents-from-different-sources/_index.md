@@ -8,6 +8,3 @@ keywords:
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-You can load a document on a local disk using a path string. If you need to load remote documents, use a stream.
-
-For details, please refer to the following pages:
