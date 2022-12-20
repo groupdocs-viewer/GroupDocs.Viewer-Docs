@@ -11,21 +11,24 @@ aliases:
     - /viewer/net/cancel-viewing-with-cancellation-token/
 ---
 
-Since v21.7 GroupDocs.Viewer supports tasks cancellation with cancellation token.
+Since the 21.7 version, GroupDocs.Viewer supports task cancellation using the cancellation token.
 
-Here is the recipe:
+To cancel a task, follow these steps:
 
-* Create [CancellationTokenSource](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtokensource?view=netstandard-2.0) object
-* Create [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=netstandard-2.0) object
-* Create Task and pass cancellation token when creating
+1. Create the [CancellationTokenSource](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtokensource?view=netstandard-2.0) object.
+2. Create the [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=netstandard-2.0) object.
+3. Create the Task object. When creating, specify the cancellation token.
+4. Cancel the task.
 
-You can cancel tasks with these methods:
+You can cancel tasks using one of the following methods:
 
-* By calling [CancelAfter](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtokensource.cancelafter?view=netstandard-2.0) method to cancel task after specified time.
-* By calling [Cancel](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtokensource.cancel?view=netstandard-2.0) method to cancel the task at any time.
+* To cancel the task in a specified time, call the [CancelAfter](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtokensource.cancelafter?view=netstandard-2.0) method.
+* To cancel the task at any time, call the [Cancel](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtokensource.cancel?view=netstandard-2.0) method.
 
-The following code sample shows how to apply the watermark to the output pages.
+The following code snippet shows how to cancel a task:
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 // Create cancellation token source.
 CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
@@ -55,15 +58,21 @@ Thread.Sleep(2000);
 
 // runTask.IsCanceled == true 
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-*Important note:*
-To correctly handle task cancellation you should pass your cancellation token to `Task.Run` method, otherwise, the flag in `runTask.IsCancelled` will not equal to true (that indicates task has canceled).
+{{< alert style="info" >}}
+If runTask.IsCancelled is `true`, then the task has been canceled.
 
-Also following methods in [Viewer](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class support cancellation:
+To properly handle task cancellation, pass a cancellation token to the Task.Run method. Otherwise, runTask.IsCancelled is not `true`.
+{{< /alert >}}
+
+The following methods of the [Viewer](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class also support cancellation:
 
 * [GetAttachments](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.viewer/getattachments/methods/1)
 * [SaveAttachment](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.viewer/saveattachment/methods/1)
 * [View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.viewer/view/methods/2) with ViewOptions
 * [View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.viewer/view/methods/3) with ViewOptions and page numbers array
 
-Also you can check this [example](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/GroupDocs.Viewer.Examples.CSharp/AdvancedUsage/Rendering/CommonRenderingOptions/CancelRenderWithCancellationToken.cs) in our public repository with examples at GitHub.
+You can also view the [example](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/GroupDocs.Viewer.Examples.CSharp/AdvancedUsage/Rendering/CommonRenderingOptions/CancelRenderWithCancellationToken.cs) in our public GitHub repository .
+

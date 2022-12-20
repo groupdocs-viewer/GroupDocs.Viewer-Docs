@@ -7,33 +7,12 @@ description: "Set image size limits when rendering image to PDF"
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-GroupDocs.Viewer also provides the feature to set limits for width/height for the output image. Follow the below steps to achieve this functionality.
-If you want to render single image to PDF you can set width/height for the output image.
-If you set ImageMaxWidth/ImageMaxHeight options, if the image exceeds one of these limits - it will be resized proportionally.
+The [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) class has the following properties to set the image width or/and height:
 
-* Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object;
-* Instantiate the [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions);
-* Set ImageMaxWidth and/or ImageMaxHeight values;
-* Call [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method.
-* The following code sample shows how to set the output image size limits when rendering the document.
-
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 ```csharp
-using (Viewer viewer = new Viewer("sample.jpg"))
-{
-    PdfViewOptions viewOptions = new PdfViewOptions("result.pdf");
-    
-    viewOptions.ImageMaxWidth = 800;
-    viewOptions.ImageMaxHeight = 600;
-
-    viewer.View(viewOptions);
-}
-```
-
-[PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) class
-has the following properties to set the image width/height.
-
-```csharp
- /// <summary>
+/// <summary>
 /// Max width of an output image in pixels.
 /// </summary>
 public int ImageMaxWidth { get; set; }
@@ -53,9 +32,39 @@ public int ImageWidth { get; set; }
 /// </summary>
 public int ImageHeight { get; set; }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-{{< alert style="info" >}}
+You can set the width and/or height of the output images. Use one of the following methods: 
 
-If you set Width/Height in options, MaxWidth/MaxHeight options will be ignored.
+* To render a single image, set ImageWidth/ImageHeight options.
+* To render multiple images, set ImageMaxWidth/ImageMaxHeight options. If an image exceeds these limits, it is resized proportionally.
 
+{{< alert style="warning" >}}
+If you set the ImageWidth/ImageHeight options, the ImageMaxWidth/ImageMaxHeight options are ignored.
 {{< /alert >}}
+
+To set the ImageMaxWidth/ImageMaxHeight options, follow these steps:
+
+1. Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object.
+2. Instantiate the [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) object.
+3. Set the ImageMaxWidth and/or ImageMaxHeight values;
+4. Call the [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method.
+
+The following code snippet shows how to set the output image size limits:
+
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+```csharp
+using (Viewer viewer = new Viewer("sample.jpg"))
+{
+    PdfViewOptions viewOptions = new PdfViewOptions("result.pdf");
+    
+    viewOptions.ImageMaxWidth = 800;
+    viewOptions.ImageMaxHeight = 600;
+
+    viewer.View(viewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}

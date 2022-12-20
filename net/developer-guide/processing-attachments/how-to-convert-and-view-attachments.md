@@ -9,27 +9,22 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 
-Rendering email/file attachments in the same way as you would render any other documents.
+Render attachments in the same way as any other documents.
 
-There are many different use cases when you need to view/preview attachments form an emails, save attachments to specific location, parse or extract attachments. So we made this process easy and simple with GroupDocs.Viewer for .NET API.
+To view attachments, follow these steps:
 
-GroupDocs.Viewer supports attachments from following formats:
+1. Instantiate the first [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object. Specify a file that contains attachments.
+2. Call the [SaveAttachment](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/saveattachment) method to save the attachment (to local disk, memory stream, etc).
+3. Instantiate the second [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object. Specify the previously saved attachment.
+4. Specify the view options depending on the output format - [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions)/[PngViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions)/[JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions)/[PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions).
+5. Call the [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method.
 
-* Email attachments
-* Outlook attachments
-* Archives
-* PDF
+The following code snippet shows how to render attachments from the MSG file:
 
-To view attachments just follow steps below:
+{{< alert style="info" >}}NOTE: provided code snippet suits all format families that support attachments: emails, Outlook data files, archives, and PDF documents.{{< /alert >}}
 
-* Instantiate [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object for the file that contains attachment(s);
-* Call [SaveAttachment](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/saveattachment) method and save attachment (to local disk, memory stream, etc);
-* Instantiate new [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object with previously saved attachment;
-* Specify view options depending on desired output format - [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) / [PngViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions) / [JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions) / [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions);
-* Call [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method.
-
-Following code snippet demonstrates on how to view attachments from MSG file.
-
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 Attachment attachment = new Attachment("attachment-word.doc");           
 MemoryStream attachmentStream = new MemoryStream();
@@ -45,5 +40,5 @@ using (Viewer viewer = new Viewer(attachmentStream))
     viewer.View(options);
 }
 ```
-
-{{< alert style="info" >}}NOTE: provided code example is actual for all document types that support attachments - Email documents, Outlook data files, Archives and PDF documents.{{< /alert >}}
+{{< /tab >}}
+{{< /tabs >}}

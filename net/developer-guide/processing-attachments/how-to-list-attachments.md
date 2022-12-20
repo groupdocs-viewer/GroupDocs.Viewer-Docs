@@ -8,17 +8,19 @@ keywords: document attachments, Outlook data files, archives, PDF documents
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
+To get a list of all attachments to a source file, follow these steps:
 
-GroupDocs.Viewer for .NET API enables you to retrieve a list of document attachments from your emails, Outlook data files, archives and PDF documents.
+1. Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object. Specify a file that contains attachments.
+2. Call the [GetAttachments](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getattachments) method. It returns the attachment collection.
+3. Iterate through the collection.
 
-Follow these steps to get a list of all attachments:
+The following code snippet shows how to get a list of attachments from the MSG file:
 
-* Instantiate [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object for the file that contains attachment(s);
-* Call [GetAttachments](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getattachments) method which will return document attachments collection;
-* Iterate through attachments collection.
 
-Following example demonstrates on how to get all attachments from MSG file.
+{{< alert style="info" >}}NOTE: provided code snippet suits all format families that support attachments: emails, Outlook data files, archives, and PDF documents.{{< /alert >}}
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.msg"))
 {
@@ -28,5 +30,9 @@ using (Viewer viewer = new Viewer("sample.msg"))
         Console.WriteLine(attachment);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-{{< alert style="info" >}}NOTE: provided code example is actual for all document types that support attachments - Email documents, Outlook data files, Archives and PDF documents.{{< /alert >}}
+The following image demonstrates a sample console output:
+
+![](/viewer/net/images/how-to-list-attachments.png)

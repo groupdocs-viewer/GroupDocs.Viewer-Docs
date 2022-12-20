@@ -9,41 +9,48 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 
-When you are looking for the ways to optimize the rendering of documents into HTML, one of the solutions you might want to use is the compression of the output content (HTML, CSS, and SVG). This solution is suitable in case you are providing your content from the web server over the internet. The lower the content user has to download, the faster he will see the rendered document.
+When you are looking for ways to optimize the rendering of documents to HTML, one of the solutions is the compression of the output content (HTML, CSS, and SVG). This is suitable if you provide your content from the web server over the Internet. The less the user has to download, the faster he accesses the rendered document.
+
+{{< alert style="info" >}}Minification does not reduce content size as much as Gzip compression, so use it in addition to Gzip compression. {{< /alert >}}
 
 ## Minification
 
-The process of minification almost in all cases provides the output that looks identically with original content in all browsers, but minified HTML content does not pass strict HTML validation. Here is the list of technics that lay behind the minification process.
+Minification provides the output that looks identically with the original content in all browsers, but minified HTML content does not pass strict HTML validation. The following describes the size reduction methods used in minification.
 
 ### HTML Minification
 
-* Comments (except when they contain IE conditional statements) are completely removed
-* Conditional comments are compressed
-* Spaces and line breaks inside the tags and between the tags are removed
-* Document type declaration is simplified to `<!DOCTYPE html> `and all HTML tag properties are removed
-* Protocol declarations like http:, https: and javascript: are removed from path values
-* Multiple spaces between words (except when they occur inside the pre or textarea tag) are replaced with single space
-* Quotes around tag property values (except inline events) are removed
-* Default attributes for "script", "style" and "link" tags are removed
-* Boolean attributes are simplified, therefore `<input type="text" disabled="disabled">` becomes `<input type=text disabled>`
+HTML minification includes the following:
+
+* Complete removal of comments (except containing IE conditional statements).
+* Conditional comments compression.
+* Removal of spaces and line breaks inside the tags and between the tags.
+* Simplification of document type declaration to `<!DOCTYPE html>`.
+* Removal of all HTML tag properties.
+* Removal of protocol declarations like http:, https:, and javascript: from path values.
+* Replace multiple spaces between words (except when they occur inside the pre or textarea tag) with a single space.
+* Removal of quotes around tag property values (except inline events).
+* Removal of default attributes for "script", "style" and "link" tags.
+* Simplification of boolean attributes, so `<input type="text" disabled="disabled">` becomes `<input type=text disabled>`.
 
 ### CSS Minification
 
-The embedded CSS content is minified when the *Minify* setting is on.
+CSS minification includes the following:
 
-* Remove all insignificant white-space.
-* Remove all comments.
-* Remove all unnecessary semicolon separators.
-* Reduce color values.
-* Reduce integer representations by removing leading and trailing zeros.
-* Remove unit specifiers from numeric zero values.
+* Removal of all insignificant white spaces.
+* Removal of all comments.
+* Removal of all unnecessary semicolon separators.
+* Reducing color values.
+* Reducing integer representations by removing leading and trailing zeros.
+* Removal of unit specifiers from numeric zero values.
 
 ## How to minify HTML and CSS
 
-GroupDocs.Viewer provides the *Minify* property of the *HtmlViewOptions* class, that lets you get output content minified. Minification removes comments, extra white-spaces, and other unneeded characters without breaking the content structure. As a result, the page becomes smaller in size and loads faster. The following example demonstrates how to minify output content when rendering MS Word document into HTML.
+The [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) class has the [Minify](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/minify/) boolean property that is a flag to minify the output content.
 
-The following code sample shows how to enable minification.
+The following code snippet shows how to enable minification:
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
@@ -52,5 +59,6 @@ using (Viewer viewer = new Viewer("sample.docx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-{{< alert style="info" >}}This setting will not compress the content as significantly as this might be achieved using Gzip compression (that should be enabled and configured from your webserver). But it still might be valuable and can be used as additional optimization in combination with Gzip compression. {{< /alert >}}

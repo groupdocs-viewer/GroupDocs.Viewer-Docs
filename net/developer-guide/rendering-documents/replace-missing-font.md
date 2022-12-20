@@ -10,13 +10,12 @@ hideChildren: False
 aliases:
     - /viewer/net/how-to-substitute-missing-font-when-converting-presentations/
 ---
-GroupDocs.Viewer enables you to set default font name which may be useful in following cases:
+You can specify the default font name for a document. GroupDocs.Viewer uses this font during rendering instead of any not installed fonts. For example, if the document includes a font containing non-English characters, specify the default font name to ensure that GroupDocs.Viewer replaces any missing font with one which has the same character set. 
 
-1. You want to generally specify the default font to fall back on if a particular font in a document cannot be found during rendering;
-2. The document uses a font that contains non-English characters and the you want to make sure that any missing font is replaced with one which has the same character set available.
+The following code snippet shows how to set the default font name:
 
-Following code snippet shows how to set default font name.
-
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer(@"sample.pptx"))
 {
@@ -25,3 +24,5 @@ using (Viewer viewer = new Viewer(@"sample.pptx"))
     viewer.View(viewOptions);
 }          
 ```
+{{< /tab >}}
+{{< /tabs >}}

@@ -6,21 +6,28 @@ weight: 11
 description: "With GroupDocs.Viewer for .NET you can render files to HTML format. As a simple usecase please see how easily you can convert Microsoft Word to clean html."
 keywords: render files, rendering pdf, convert word to clean html
 productName: GroupDocs.Viewer for .NET
-hideChildren: True
+hideChildren: False
 toc: True
 ---
+When rendering to HTML, GroupDocs.Viewer renders each page of the source document as a separate HTML document.
 
-When rendering to HTML  all pages of the source documents are rendered as separate HTML documents.
+GroupDocs.Viewer for .NET provides two options to manage CSS, fonts, images, and other resources:
 
-GroupDocs.Viewer for .NET provides two resources management options for CSS, fonts, images, etc.:
+1. HTML with external resources stores page resources as separate files. This allows reusing common resources and results in reducing page size and loading speed.
+2. HTML with embedded resources integrates page resources into HTML. This makes each document page self-sufficient but results in increasing page size and loading speed.
 
-* Rendering to **HTML with external resources** - stores page resources near to HTML which allows to reuse common resources across separate pages and dramatically reduce page size and loading speed.
-* Rendering to **HTML with embedded resources** - integrates page resources into HTML and makes each document page self-sufficient. The drawback is that page size and loading speed may decrease.
+To render files to HTML, follow these steps:
+
+1. Create an instance of the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class. Specify the source document path as a constructor parameter.
+2. Instantiate the [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) object. Specify a path to save the rendered  pages.
+3. Call the [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method of the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object. Specify the [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) object as the parameter.
 
 ## Rendering to HTML with external resources
 
-The following code shows how to render DOCX to HTML with external resources.  
+The following code snippet shows how to render a .docx document to HTML with external resources: 
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
@@ -28,11 +35,15 @@ using (Viewer viewer = new Viewer("sample.docx"))
    viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Rendering to HTML with embedded resources
 
-The following code shows how to render document to HTML with embedded resources.  
+The following code snippet shows how to render a .docx document to HTML with embedded resources:
 
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
@@ -40,3 +51,7 @@ using (Viewer viewer = new Viewer("sample.docx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
+
+For details, please refer to the following pages:

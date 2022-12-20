@@ -9,24 +9,27 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 
-If you need to optimize HTML output for printing you should set `ForPrinting` option of `HtmlViewOptions` object.
+To optimize HTML output for printing, use the [ForPrinting](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions/properties/forprinting) boolean property of the [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) class.
 
-This option is supported for:
+If the [ForPrinting](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions/properties/forprinting) option is enabled, the output HTML pages are converted to the vector SVG format.
+
+This option is supported for the following format families:
 
 * Presentation documents: PPT, PPS, PPTX, PPSX, ODP, FODP, OTP, POT, POTX, POTM, PPTM, PPSM
 * Diagram documents: VSD, VSDX, VSS, VST, VSX, VTX, VDW, VDX, VSSX, VSTX, VSDM, VSSM, VSTM
 * Meta file formats: WMF, WMZ, EMF, EMZ
 
+The following code snippet shows how to render a .docx document to HTML optimized for printing:
+
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
- using (Viewer viewer = new Viewer("some-document.doc"))
- {
-      HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources("result.html");
-      //HtmlViewOptions options = HtmlViewOptions.ForExternalResources("p_{0}.html", "p_{0}_{1}", "p_{0}_{1}");
-      
-      options.ForPrinting = true;
-
-      viewer.View(options);
- }
+ using (Viewer viewer = new Viewer("sample.docx"))
+{
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    viewOptions.ForPrinting = true;
+    viewer.View(viewOptions);
+}
 ```
-
-If `ForPrinting` option is enabled output HTML pages will be converted to vector SVG format for better quality for print and page layout.
+{{< /tab >}}
+{{< /tabs >}}

@@ -7,16 +7,16 @@ description: "Check this guide to learn how to adjust PNG and JPG images size wh
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-Image Viewer allows you to set custom output image size in pixels through [Width](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions/properties/width) and [Height](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions/properties/height) properties in [JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions) and [PngViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions) classes.
+To specify the output image size, set the [Width](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions/properties/width) and [Height](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions/properties/height) properties of the [JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions) or [PngViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions) classes. Specify the value in pixels.
 
 {{< alert style="info" >}}
-
-Keep in mind that aspect ratio is automatically applied when you set [Width](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions/properties/width) or [Height](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions/properties/height) only.
-
+GroupDocs.Viewer applies the aspect ratio automatically applied when you set the [Width](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions/properties/width) or [Height](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions/properties/height) value.
 {{< /alert >}}
 
-This example demonstrates how to set output image size
+The following code snippet shows how to set the image width or height.
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
@@ -27,3 +27,5 @@ using (Viewer viewer = new Viewer("sample.docx"))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

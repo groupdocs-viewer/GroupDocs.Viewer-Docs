@@ -8,15 +8,22 @@ keywords: specific pages, view specific pages
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-With GroupDocs.Viewer you can specify a list of the document pages to be rendered. Follow the below steps to achieve this functionality.
+You can render part of the document pages only. You can specify a list of the document pages in the following ways:
+* [Specify a list of pages as parameters of the View method](#specify-pages-as-parameters)
+* [Specify a list of pages by using an array](#specify-pages-by-using-an-array)
 
-* Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object;
-* Instantiate the [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) (or [JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions), or [PngViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions), or [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions)) object;
-* Pass desired page numbers to [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method.
-* The following code sample shows how to render N consecutive pages of a document.
+## Specify pages as parameters
 
-The following code sample shows how to render the first and third pages of a document.
+To specify pages as the [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method parameters, follow these steps:
 
+1. Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object.
+2. Instantiate the [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) (or the [JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions), or the [PngViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions), or the [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions)) object.
+3. Call the [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method. Specify the page numbers as the last parameters.
+
+The following code snippet shows how to render the first and third pages of a document:
+
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
@@ -24,3 +31,29 @@ using (Viewer viewer = new Viewer("sample.docx"))
     viewer.View(viewOptions, 1, 3);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
+
+## Specify pages by using an array
+
+To specify pages by using an array, follow these steps:
+
+1. Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object;
+2. Instantiate the [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) (or the [JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions), or the [PngViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions), or the [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions)) object;
+3. Call the [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method. Specify the page numbers array as the second parameter.
+
+The following code snippet shows how to render the 1st, 2nd, and 4th pages of a document:
+
+{{< tabs "example2">}}
+{{< tab "C#" >}}
+```csharp
+ int[] pageNumbers = new int[] { 1, 2, 4 };
+ 
+ using (Viewer viewer = new Viewer("sample.docx"))
+ {
+     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+     viewer.View(viewOptions, pageNumbers);
+ }
+```
+{{< /tab >}}
+{{< /tabs >}}

@@ -9,7 +9,7 @@ hideChildren: False
 ---
 You can load a document from a stream without saving it as a file on a disk. You can use this feature to load a document from different sources like a URL, FTP, and so on.
 
-To load a document from stream, follow these steps:
+To load a document from a stream, follow these steps:
 
 1. Implement a method to obtain the document stream.
 2. Call the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class constructor. Specify the method implemented in the previous step.
