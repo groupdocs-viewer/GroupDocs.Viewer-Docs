@@ -39,7 +39,7 @@ using (Viewer viewer = new Viewer("sample.pdf"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![](/viewer/net/images/how-to-get-file-type-and-pages-count.png)
 
@@ -62,6 +62,6 @@ using (Viewer viewer = new Viewer(File.OpenRead("sample.pdf")))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![](/viewer/net/images/how-to-get-file-type-and-pages-count.png)

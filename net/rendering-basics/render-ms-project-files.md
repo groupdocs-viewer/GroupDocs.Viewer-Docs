@@ -204,7 +204,7 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![Get information about a Project file](/viewer/net/images/rendering-basics/render-ms-project-files/retrieve-project-file-information.png)
 

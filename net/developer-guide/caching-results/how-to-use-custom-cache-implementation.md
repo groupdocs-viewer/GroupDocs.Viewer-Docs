@@ -8,21 +8,20 @@ description: "This article explains how to use custom caching implementation wit
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-Despite the fact that GroupDocs.Viewer implements caching to local drive out of the box, it also allows you to cache rendering result in your own way. You can do this by using *ICache* interface implementation.  
-Let see how to implement some custom cache implementation.
+By default, GroupDocs.Viewer implements caching to local. But you can cache rendering result in your own way, for example, using Redis Cache. To do this, use the ICache interface implementation.  
 
-## Using Redis cache (example)
+To implement a custom cache using the Redis cache, follow these steps:
 
-The following steps should be followed.
+1. Create the RedisCache class that implements the [ICache](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.caching/icache) interface.
+2. Instantiate the RedisCache class.
+3. Instantiate the [ViewerSettings](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewersettings) class. Specify the RedisCache object as a parameter of the constructor.
+4. Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class. Specify the [ViewerSettings](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewersettings) object as a parameter of the constructor.
+5. Call the [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method of the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class.
 
-* Create *RedisCache* class which implements [ICache](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.caching/icache) interface.
-* Instantiate the *RedisCache* class.
-* Pass the reference of the *RedisCache* class instance into the constructor of [ViewerSettings](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewersettings) class instance.
-* Instantiate [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class with [ViewerSettings](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewersettings) object.
-* Call [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method of [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class.
+The following code snippet shows how to implement a custom caching using RedisCache:
 
-Below is the code that demonstrates how to use custom caching for GroupDocs.Viewer:
-
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer.Caching;
 using System;
@@ -165,4 +164,6 @@ namespace GroupDocs.Viewer.Examples.CSharp.AdvancedUsage.Common
     }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 

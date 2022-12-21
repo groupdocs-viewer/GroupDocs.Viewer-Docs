@@ -33,6 +33,6 @@ using (Viewer viewer = new Viewer("sample.msg"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![](/viewer/net/images/how-to-list-attachments.png)

@@ -224,7 +224,7 @@ using (var viewer = new Viewer("HousePlan.dwg"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![Get information about a CAD file](/viewer/net/images/rendering-basics/render-cad-documents/retrieve-cad-file-information.png)
 

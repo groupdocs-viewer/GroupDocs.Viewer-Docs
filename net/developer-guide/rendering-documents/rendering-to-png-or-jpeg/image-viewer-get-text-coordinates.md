@@ -43,6 +43,6 @@ using (Viewer viewer = new Viewer("sample.docx"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![](/viewer/net/images/image-viewer-get-text-coordinates.png)

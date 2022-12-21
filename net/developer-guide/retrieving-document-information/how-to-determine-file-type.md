@@ -32,7 +32,7 @@ Console.WriteLine($"Extension {extension}; File type: {fileType}.");
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![](/viewer/net/images/how-to-determine-file-type.png)
 
@@ -52,7 +52,7 @@ Console.WriteLine($"Media-type {mediaType}; File type: {fileType}.");
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![](/viewer/net/images/how-to-determine-file-type_1.png)
 
@@ -74,6 +74,6 @@ using (Stream stream = File.OpenRead("sample.docx"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![](/viewer/net/images/how-to-determine-file-type_2.png)

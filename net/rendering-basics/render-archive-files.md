@@ -234,7 +234,7 @@ using (var viewer = new Viewer("Documents.zip"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![Get information about an archive file](/viewer/net/images/rendering-basics/render-archive-files/retrieve-archive-information.png)
 

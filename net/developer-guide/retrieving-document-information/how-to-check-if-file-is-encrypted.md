@@ -27,7 +27,7 @@ using (Viewer viewer = new Viewer("encrypted.pdf"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![](/viewer/net/images/how-to-check-if-file-is-encrypted.png)
 

@@ -1,35 +1,31 @@
 ---
-id: how-to-set-up-logging
-url: viewer/net/how-to-set-up-logging
-title: Set up logging
-weight: 1
-description: "This article explains how to set up logging when rendering a document with GroupDocs.Viewer within your .NET applications."
-keywords: logging, logger, rendering, converting
+id: logging
+url: viewer/net/logging
+title: Logging
+weight: 6
+description: "Logging when rendering documents with GroupDocs.Viewer for .NET"
 productName: GroupDocs.Viewer for .NET
-hideChildren: False
+hideChildren: true
 ---
+By default, logging is disabled when rendering documents. You can log to the console or a file.
 
-By default logging is disabled when rendering documents but we also provide a way to save the log to console and file.
+To log, use the [ILogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/ilogger) interface. It defines the methods required to instantiate and release the output file stream. Also, use the following classes:
 
-There is an interface that we can utilize:
+* The [ConsoleLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) class defines the methods required to log to the console.
+* The [FileLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) class defines the methods required to log to a file.
 
-* [ILogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/ilogger) - defines the methods that are required for instantiating and releasing output file stream.
+The log contains the following three types of messages:
 
-There are classes that we can utilize:
+* Error means unrecoverable exceptions
+* Warning means recoverable/expected exceptions
+* Trace means general information
 
-* [ConsoleLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) - defines the methods that are required for logging to console.
-* [FileLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) - defines the methods that are required for logging to file.
+## Logging to a file
 
-There are 3 types of messages in the log file:
+The following code snippet shows how to log to a file using the [FileLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) class:
 
-* Error - for unrecoverable exceptions
-* Warning - for recoverable/expected exceptions
-* Trace - for general information
-
-## Logging to File
-
-In this example, we'll log into the file so we need to use [FileLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) class.
-
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 // Create logger and specify the output file
 FileLogger fileLogger = new FileLogger("output.log");
@@ -45,11 +41,19 @@ using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-## Logging to Console
+The following image shows the output.log file:
 
-In this example, we'll log into the console so we need to use [ConsoleLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) class.
+![](/viewer/net/images/how-to-set-up-logging-1.png)
 
+## Logging to the console
+
+The following code snippet shows how to log to the console using the [ConsoleLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) class:
+
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 ```csharp
 // Create logger and specify the output file
 FileLogger fileLogger = new FileLogger("output.log");
@@ -65,23 +69,31 @@ using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
+
+The following image shows a sample console output:
+
+![](/viewer/net/images/how-to-set-up-logging-2.png)
 
 ## Implementing custom logger
 
-To make your logger you should implement [ILogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/ilogger) interface.
+To create a logger, implement the [ILogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/ilogger) interface:
 
-For trace messages - implement public void Trace(string message) method \
-For warning messages - implement public void Warning(string message) method \
-For error messages - implement public void Error(string message) method
+* For trace messages, implement the `public void Trace(string message)` method.
+* For warning messages, implement the `public void Warning(string message)` method.
+* For error messages, implement the `public void Error(string message)` method.
 
-In this example, we'll implement a simple file logger.
+The following code snippet shows how to implement a simple file logger:
 
+{{< tabs "example3">}}
+{{< tab "C#" >}}
 ```csharp
 // Create logger and specify the output file
 CustomLogger customLogger = new CustomLogger("output.log");
 
-// Create ViewerSettings and specify FileLogger
-ViewerSettings viewerSettings = new ViewerSettings(fileLogger);
+// Create ViewerSettings and specify CustomLogger
+ViewerSettings viewerSettings = new ViewerSettings(customLogger);
 
 using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
 {
@@ -92,7 +104,7 @@ using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
 }
 
 /// <summary>
-/// Writes log messages to the file.
+/// Writes log messages to a file.
 /// </summary>
 public class CustomLogger : ILogger
 {
@@ -101,7 +113,7 @@ public class CustomLogger : ILogger
     private CustomLogger() { }
 
     /// <summary>
-    /// Create logger to file.
+    /// Create logger to a file.
     /// </summary>
     /// <param name="fileName">Full file name with path</param>
     public CustomLogger(string fileName)
@@ -110,7 +122,7 @@ public class CustomLogger : ILogger
     }
 
     /// <summary>
-    /// Writes trace message to the console.
+    /// Writes trace message to the file.
     /// Trace log messages provide generally useful information about application flow.
     /// </summary>
     /// <param name="message">The trace message.</param>
@@ -127,8 +139,8 @@ public class CustomLogger : ILogger
     }
 
     /// <summary>
-    /// Writes warning message to the console;
-    /// Warning log messages provide information about the unexpected and recoverable event in application flow.
+    /// Writes warning message to the file;
+    /// Warning log messages provide information about the unexpected and recoverable events in application flow.
     /// </summary>
     /// <param name="message">The warning message.</param>
     /// <exception cref="System.ArgumentNullException">Thrown when <paramref name="message"/> is null.</exception>
@@ -144,7 +156,7 @@ public class CustomLogger : ILogger
     }
 
     /// <summary>
-    /// Writes an error message to the console.
+    /// Writes an error message to the file.
     /// Error log messages provide information about unrecoverable events in application flow.
     /// </summary>
     /// <param name="message">The error message.</param>
@@ -165,3 +177,9 @@ public class CustomLogger : ILogger
     }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
+
+The following image shows the output.log file:
+
+![](/viewer/net/images/how-to-set-up-logging-3.png)

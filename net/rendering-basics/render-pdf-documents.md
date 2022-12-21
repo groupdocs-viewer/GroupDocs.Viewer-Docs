@@ -394,7 +394,7 @@ using (var viewer = new Viewer("resume.pdf"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![Get information about a PDF file](/viewer/net/images/rendering-basics/render-pdf-documents/retrieve-pdf-file-information.png)
 
