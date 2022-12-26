@@ -9,7 +9,7 @@ geekdocAnchor: false
 hideChildren: true
 ---
 
-## GroupDocs Developers Cookbook
+GroupDocs.Viewer is a high-performance cross-platform library that allows you to build desktop and web file viewer applications using C# and Java.
 
 <br/>
 
