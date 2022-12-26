@@ -8,50 +8,43 @@ keywords: Ubuntu, Asian Fonts
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-This article will guide you through the installation process of the Asian Fonts on Ubuntu operating system. We'll be installing packages with [apt-get](https://wiki.debian.org/apt-get) utility on the latest (at the moment o writing this article) available version of OS that is [Ubuntu **20.04 LTS**](https://wiki.ubuntu.com/Releases) but the process is quite the same for the previous versions of Ubuntu.
+This page describes the installation of the Asian Fonts on [Ubuntu 20.04 LTS](https://wiki.ubuntu.com/Releases) using the [apt-get](https://wiki.debian.org/apt-get) utility. On the previous versions of Ubuntu, the process is quite the same.
 
+To install Asian Fonts on Ubuntu, follow these steps:
 
-## Find the required packages
+1. Browse to [packages.ubuntu.com](https://packages.ubuntu.com/).
 
-We'll be installing Japanese language support, so let's browse to [packages.ubuntu.com](https://packages.ubuntu.com/) and search for the language support packages first.
+2. At [packages.ubuntu.com/focal/translations/](https://packages.ubuntu.com/focal/translations/), search for the Japanese language support packages. Find all entries starting with "language-pack-" and containing "Japanese" as follows:
 
-The language support packages for the Ubuntu 20.04 LTS can be found at [packages.ubuntu.com/focal/translations/](https://packages.ubuntu.com/focal/translations/).
+	![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu.png)
 
-Let's search for Japanese language support packages and as you can see on the screenshot below there are two packages found that have a name which starts with **language-pack-**.
+3. Install the [language-pack-ja](https://packages.ubuntu.com/focal/translations/language-pack-ja) package. The language-pack-ja-base package is installed automatically as first one depends on it. To do this, follow these steps: 
 
-![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu.png)
+	1. Run Ubuntu in a Docker container:
 
-We'll install the first one called **[language-pack-ja](https://packages.ubuntu.com/focal/translations/language-pack-ja)** and the second one will be installed automatically as first one depends on second.
+		![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_1.png)
 
-## Install packages
+	2. Execute the following command to update the packages list with updates and new packages:
 
-Let's run Ubuntu in a Docker container and then install the **language-pack-ja** package.
+		```csharp
+		$ apt-get update
+		```
 
-![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_1.png)
+		![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_2.png)
 
-Type the following command to update the packages list with updates and new packages.
+	3. Excecute the following command to install the Japanese language support:
 
-```csharp
-$ apt-get update
-```
+		```csharp
+		$ apt-get install -y language-pack-ja
+		```
 
-![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_2.png)
+		![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_3.png)
 
-And type the following to install the Japanese language support.
+	4. Wait for the message "Generation complete."
 
-```csharp
-$ apt-get install -y language-pack-ja
-```
+		![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_4.png)
 
-![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_3.png)
-
-When installation will be completed you should see "Generation complete." message.
-
-![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_4.png)
-
-That's all, language support is installed.
-
-The Chinese and Korean language support can be installed by typing the following commands:
+To install other Asian languages, use the following commands:
 
 ```csharp
 $ apt-get install -y language-pack-zh*

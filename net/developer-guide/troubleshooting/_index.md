@@ -8,13 +8,13 @@ keywords:
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-This section contains issues that you may face and solutions for them when processing files with GroupDocs.Viewer. Please also check [Known issues]({{< ref "known-issues" >}}) section that contains information about issues that are known and limitations.
+This section describes issues that you may face processing files with GroupDocs.Viewer and solutions for them. The [Known issues]({{< ref "known-issues" >}}) subsection describes the limitations known.
 
-## Chinese characters are garbled or rendered as boxes on Linux
+## On Linux, Chinese characters are garbled or rendered as boxes
 
-Typically it happens because language support is not installed and therefore there are no required fonts that can be used to display the characters correctly. Please refer to the following articles that guide through the installation process of the Asian language support.
-
-* [How to install Asian Fonts on CentOS]({{< ref "how-to-install-asian-fonts-on-centos" >}})
-* [How to install Asian Fonts on Ubuntu]({{< ref "how-to-install-asian-fonts-on-ubuntu" >}})
+The usual cause is the language support is not installed, and there are no fonts to display the characters correctly. Please install the Asian language support as described in the articles listed below.
 
 ## Related articles
+
+For details, please refer to the following pages:
+

@@ -8,22 +8,24 @@ keywords:
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-This article contains information about migration from the legacy API to GroupDocs.Viewer 19.8 or higher.
+This page describes migration to the 19.8 version or later from the previous one.
 
-## Why To Migrate
+## Why to migrate
 
-Here are the key reasons to use the new updated API provided by **GroupDocs.Viewer for .NET** since version **19.8**:
-* **Viewer** class introduced as a **single entry point** to manage the document rendering process to any supported file format (instead of **ViewerHtmlHander** / **ViewerImageHander** classes from previous versions).
-* The overall **rendering speed improved** dramatically by saving rendered page as soon as it was rendered, not when all pages list were rendered.
-* Product architecture was redesigned from scratch in order to **decreased memory usage** (from 10% to 400% approx. depending on document type).
-* Document **rendering options simplified** so it’s easy to instantiate proper options class and control over document rendering and saving processes.
+The main reasons to use the 19.8 version or later are as follows:
+* The Viewer class is a single entry point to manage the document rendering process to any supported file format instead of the ViewerHtmlHander/ViewerImageHander classes from previous versions.
+* The rendering speed improved significantly by saving the rendered page as it is rendered, not when all pages are rendered.
+* Product architecture is redesigned from scratch to decrease memory usage from 10% to 400% depending on the document type.
+* Document rendering options are simplified, so you can easily instantiate the proper option class and control document rendering and saving processes.
 
-## How To Migrate
+## How to migrate
 
-Here is a brief comparison of how to display document into HTML form using old and new API.  
+Here is a brief comparison of how to display a document in HTML form using old and new versions.  
 
-**Old coding style**
+The following code snippet shows the old coding style:
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 //Get Configurations
 ViewerConfig config = Utilities.GetConfigurations();
@@ -53,9 +55,13 @@ foreach (PageHtml page in pages)
     Utilities.SaveAsHtml(page.PageNumber + "_" + DocumentName, page.HtmlContent);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-**New coding style**
+The following code snippet shows the new coding style:
 
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
@@ -63,3 +69,5 @@ using (Viewer viewer = new Viewer("sample.docx"))
    viewer.View(options);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

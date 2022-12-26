@@ -10,7 +10,7 @@ hideChildren: False
 ---
 By default, GroupDocs.Viewer implements caching to local. But you can cache rendering result in your own way, for example, using Redis Cache. To do this, use the ICache interface implementation.  
 
-To implement a custom cache using the Redis cache, follow these steps:
+To implement a custom cache using the Redis Cache, follow these steps:
 
 1. Create the RedisCache class that implements the [ICache](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.caching/icache) interface.
 2. Instantiate the RedisCache class.
@@ -18,7 +18,7 @@ To implement a custom cache using the Redis cache, follow these steps:
 4. Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class. Specify the [ViewerSettings](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewersettings) object as a parameter of the constructor.
 5. Call the [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method of the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class.
 
-The following code snippet shows how to implement a custom caching using RedisCache:
+The following code snippet shows how to implement a custom caching using Redis Cache:
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}

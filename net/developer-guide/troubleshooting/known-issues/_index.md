@@ -10,4 +10,4 @@ hideChildren: False
 ---
 ## Articles in this section
 
-This section contains information about known issues and limitations.
+This section contains information about known issues and limitations. For details, please refer to the following pages:
