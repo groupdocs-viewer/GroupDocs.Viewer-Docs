@@ -16,37 +16,49 @@ To install Asian Fonts on Ubuntu, follow these steps:
 
 2. At [packages.ubuntu.com/focal/translations/](https://packages.ubuntu.com/focal/translations/), search for the Japanese language support packages. Find all entries starting with "language-pack-" and containing "Japanese" as follows:
 
-	![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu.png)
+![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu.png)
 
-3. Install the [language-pack-ja](https://packages.ubuntu.com/focal/translations/language-pack-ja) package. The language-pack-ja-base package is installed automatically as first one depends on it. To do this, follow these steps: 
+3. Install the [language-pack-ja](https://packages.ubuntu.com/focal/translations/language-pack-ja) package. The language-pack-ja-base package is installed automatically as first one depends on it.
 
-	1. Run Ubuntu in a Docker container:
+4. Run Ubuntu in a Docker container:
 
-		![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_1.png)
+![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_1.png)
 
-	2. Execute the following command to update the packages list with updates and new packages:
+5. Execute the following command to update the packages list with updates and new packages:
 
-		```csharp
-		$ apt-get update
-		```
+{{< tabs "example1">}}
+{{< tab "Shell" >}}
+```sh
+apt-get update
+```
+{{< /tab >}}
+{{< /tabs >}}
 
-		![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_2.png)
+![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_2.png)
 
-	3. Excecute the following command to install the Japanese language support:
+6. Excecute the following command to install the Japanese language support:
 
-		```csharp
-		$ apt-get install -y language-pack-ja
-		```
+{{< tabs "example2">}}
+{{< tab "Shell" >}}
+```sh
+apt-get install -y language-pack-ja
+```
+{{< /tab >}}
+{{< /tabs >}}
 
-		![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_3.png)
+![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_3.png)
 
-	4. Wait for the message "Generation complete."
+7. Wait for the message "Generation complete."
 
-		![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_4.png)
+![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_4.png)
 
 To install other Asian languages, use the following commands:
 
-```csharp
-$ apt-get install -y language-pack-zh*
-$ apt-get install -y language-pack-ko
+{{< tabs "example3">}}
+{{< tab "Shell" >}}
+```sh
+apt-get install -y language-pack-zh*
+apt-get install -y language-pack-ko
 ```
+{{< /tab >}}
+{{< /tabs >}}

@@ -14,6 +14,8 @@ hideChildren: False
 
 When rendering CAD drawings using GroupDocs.Viewer, it is required to add the [assembly binding redirect](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/redirect-assembly-versions) to the app.config or web.config project files. The following example shows the required assembly binding redirect to render CAD drawings with GroupDocs.Viewer for .NET 20.6.1 and earlier.
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 <configuration>
     <!--...-->
@@ -30,4 +32,5 @@ When rendering CAD drawings using GroupDocs.Viewer, it is required to add the [a
     </runtime>
 </configuration>
 ```
-
+{{< /tab >}}
+{{< /tabs >}}

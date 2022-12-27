@@ -21,27 +21,39 @@ When running on Linux, install the following additional dependencies:
 To install packages on Debian (Buster) based Linux distributions, use the [apt-get](https://wiki.debian.org/apt-get) utility:
 
 1. Windows Fonts:
-
-    ```sh
-     apt-get update
-     apt-get install -y libfontconfig1
-     apt-get install -y ttf-mscorefonts-installer
-    ```
+    
+{{< tabs "example1">}}
+{{< tab "Shell" >}}
+```sh
+    apt-get update
+    apt-get install -y libfontconfig1
+    apt-get install -y ttf-mscorefonts-installer
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 2. SkiaSharp - add package to your project:
 
-     ```sh
-     dotnet add package SkiaSharp.NativeAssets.Linux.NoDependencies --version 2.80.3
-     ```
+{{< tabs "example2">}}
+{{< tab "Shell" >}}
+```sh
+dotnet add package SkiaSharp.NativeAssets.Linux.NoDependencies --version 2.80.3
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 3. System.Drawing dependencies:
 
-    ```bash
-    apt-get update
-    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-    echo "deb https://download.mono-project.com/repo/ubuntu stable-buster main" >> /etc/apt/sources.list.d/mono-official-stable.list
+{{< tabs "example3">}}
+{{< tab "Shell" >}}
+```sh
+apt-get update
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb https://download.mono-project.com/repo/ubuntu stable-buster main" >> /etc/apt/sources.list.d/mono-official-stable.list
     
-    apt-get update
-    apt-get install -y gnupg
-    apt-get install -y libgdiplus
-    ```
+apt-get update
+apt-get install -y gnupg
+apt-get install -y libgdiplus
+```
+{{< /tab >}}
+{{< /tabs >}}

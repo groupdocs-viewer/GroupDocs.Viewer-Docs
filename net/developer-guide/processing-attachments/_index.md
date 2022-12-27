@@ -13,7 +13,7 @@ Using GroupDocs.Viewer, you can list and save the following attachments:
 
 * Email attachments
 * Files embedded in PDF files
-* Email messages contained by Outlook and LotusNotes data files
+* Email messages contained by Outlook, LotusNotes and other storage files
 * Compressed files
 
 See following examples on how to process document attachments in more details:

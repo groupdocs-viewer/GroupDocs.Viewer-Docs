@@ -55,17 +55,15 @@ The following code snippet shows how to log to the console using the [ConsoleLog
 {{< tabs "example2">}}
 {{< tab "C#" >}}
 ```csharp
-// Create logger and specify the output file
-FileLogger fileLogger = new FileLogger("output.log");
+// Create console logger
+ConsoleLogger consoleLogger = new ConsoleLogger();
 
 // Create ViewerSettings and specify FileLogger
-ViewerSettings viewerSettings = new ViewerSettings(fileLogger);
+ViewerSettings viewerSettings = new ViewerSettings(consoleLogger);
 
-using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
+using (Viewer viewer = new Viewer("sample.docx", viewerSettings))
 {
-    ViewOptions viewOptions =
-    HtmlViewOptions.ForEmbeddedResources("result.html");
-
+    ViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }
 ```
