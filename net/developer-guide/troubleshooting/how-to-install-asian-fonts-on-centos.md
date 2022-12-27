@@ -66,9 +66,9 @@ To install a group of packages that includes fonts for Asian languages on Centos
 
 To install other Asian languages, use the following commands:
 
-	```csharp
-	$ yum groupinstall -y "Japanese Support"
-	$ yum groupinstall -y "Korean Support"
-	$ yum groupinstall -y "Hindi Support"
-	$ yum groupinstall -y "Kannada Support"
-	```
+```csharp
+$ yum groupinstall -y "Japanese Support"
+$ yum groupinstall -y "Korean Support"
+$ yum groupinstall -y "Hindi Support"
+$ yum groupinstall -y "Kannada Support"
+```
