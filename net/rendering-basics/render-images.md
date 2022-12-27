@@ -63,7 +63,7 @@ GroupDocs.Viewer supports the following image file formats:
 * [.PSB (Photoshop Large Document Format)](https://docs.fileformat.com/image/psb)
 * [.PSD (Adobe Photoshop Document)](https://docs.fileformat.com/image/psd)
 * [.SVG (Scalable Vector Graphics File)](https://docs.fileformat.com/page-description-language/svg)
-* [.SVGZ (Compressed SVG File)](https://fileinfo.com/extension/svgz)
+* [.SVGZ (Compressed SVG File)](https://docs.fileformat.com/image/svgz/)
 * [.TGA (TARGA Graphics)](https://docs.fileformat.com/image/tga/) 
 * [.TIF / .TIFF (Tagged Image File Format)](https://docs.fileformat.com/image/tiff)
 * [.WEBP (WebP Image)](https://docs.fileformat.com/image/webp)

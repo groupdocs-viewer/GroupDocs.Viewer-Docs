@@ -106,7 +106,7 @@ public static readonly FileType CHM = new FileType("Microsoft Compiled HTML Help
 
 /// <summary>
 /// Adobe Illustrator (.ai) is a file format for Adobe Illustrator drawings.
-/// Learn more about this file format <a href="https://fileinfo.com/extension/ai#adobe_illustrator_file">here</a>. 
+/// Learn more about this file format <a href="https://docs.fileformat.com/image/ai/">here</a>. 
 /// </summary>
 public static readonly FileType AI = new FileType("Adobe Illustrator", ".ai");
 

@@ -23,7 +23,7 @@ Auto Detection means that GroupDocs.Viewer for Java can determine the type of th
 
 | File Extension | File Type | Auto Detection |
 | --- | --- | --- |
-| [.NSF](https://fileinfo.com/extension/nsf) | [Lotus Notes database](https://fileinfo.com/extension/nsf) | Yes |
+| [.NSF](https://docs.fileformat.com/database/nsf/) | [Lotus Notes database](https://docs.fileformat.com/database/nsf/) | Yes |
 
 ## Rendering NSF files
 
