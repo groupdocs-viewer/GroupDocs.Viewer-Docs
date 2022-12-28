@@ -21,7 +21,7 @@ This topic lists file formats supported by GroupDocs.Viewer for .NET.
 | [RAR](https://docs.fileformat.com/compression/rar) | WinRAR Compressed Archive | ![(tick)](/viewer/net/images/check-blue.png) |
 | [TAR](https://docs.fileformat.com/compression/tar) | Consolidated Unix File Archive | ![(tick)](/viewer/net/images/check-blue.png) |
 | [TGZ](https://docs.fileformat.com/compression/tgz/) | Gzipped Tar File | ![(tick)](/viewer/net/images/check-blue.png) |
-| [TXZ](https://fileinfo.com/extension/txz) | XZ Compressed Tar Archive | ![(tick)](/viewer/net/images/check-blue.png) |
+| [TXZ](https://docs.fileformat.com/compression/xz/) | XZ Compressed Tar Archive | ![(tick)](/viewer/net/images/check-blue.png) |
 | [XZ](https://docs.fileformat.com/compression/xz/) | XZ Compressed Archive | ![(tick)](/viewer/net/images/check-blue.png) |
 | [ZIP](https://docs.fileformat.com/compression/zip) | Zipped File | ![(tick)](/viewer/net/images/check-blue.png) |
 
@@ -101,7 +101,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [JPF](https://docs.fileformat.com/image/jpf/) | JPEG 2000 Image | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [JPM](https://docs.fileformat.com/image/jpm/) | JPEG 2000 Multi-layer Image Format | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [JPX](https://docs.fileformat.com/image/jpx/) | JPEG 2000 Image File | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [JLS](https://fileinfo.com/extension/jls) | JPEG-LS Image | ![(tick)](/viewer/net/images/check-blue.png) | |
+| [JLS](https://docs.fileformat.com/) | JPEG-LS Image | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [ODG](https://docs.fileformat.com/image/odg/) | OpenDocument Graphics File | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [OTG](https://docs.fileformat.com/image/otg/) | OpenDocument Graphics Template | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [PCL](https://docs.fileformat.com/page-description-language/pcl/) | Printer Command Language Document | ![(tick)](/viewer/net/images/check-blue.png) | |
@@ -149,7 +149,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |
-| [FODP](https://fileinfo.com/extension/fodp) | OpenDocument Flat XML Presentation | ![(tick)](/viewer/net/images/check-blue.png) | |
+| [FODP](https://docs.fileformat.com/) | OpenDocument Flat XML Presentation | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [ODP](https://docs.fileformat.com/presentation/odp/) | OpenDocument Presentation | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [OTP](https://docs.fileformat.com/presentation/otp/) | OpenDocument Presentation Template | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [POT](https://docs.fileformat.com/presentation/pot/) | Microsoft PowerPoint 97-2003 Template | ![(tick)](/viewer/net/images/check-blue.png) | |

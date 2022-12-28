@@ -399,7 +399,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
      /**
       * <p>
       * ompressed Windows Metafile (.wmz) represents Microsoft Windows Metafile (WMF) compressed in GZIP archvive - for storing vector as well as bitmap-format images data.
-      * Learn more about this file format <a href="https://fileinfo.com/extension/wmz#compressed_windows_metafile">here</a>.
+      * Learn more about this file format <a href="https://docs.fileformat.com/image/wmz/">here</a>.
       * </p>
       */
      WMZ("Compressed Windows Metafilee", ".wmz")
@@ -430,7 +430,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
   
      /**
       * Email Mailbox File (.mbox)
-      * Learn more about this file format <a href="https://fileinfo.com/extension/mbox">here</a>.
+      * Learn more about this file format <a href="https://docs.fileformat.com/email/mbox/">here</a>.
       */
      MBOX("Email Mailbox File", ".mbox")
   ```

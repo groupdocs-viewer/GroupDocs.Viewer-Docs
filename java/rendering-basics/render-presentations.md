@@ -37,7 +37,7 @@ GroupDocs.Viewer supports the following file formats:
 * {{% closedlink title="Microsoft PowerPoint Macro-Enabled Presentation" href="https://docs.fileformat.com/presentation/pptmx" %}} (.PPTM)
 * {{% closedlink title="OpenDocument Presentation" href="https://docs.fileformat.com/presentation/odp" %}} (.ODP)
 * {{% closedlink title="OpenDocument Presentation Template" href="https://docs.fileformat.com/presentation/otp" %}} (.OTP)
-* {{% closedlink title="OpenDocument Flat XML Presentation" href="https://fileinfo.com/extension/fodp" %}} (.FODP)
+* {{% closedlink title="OpenDocument Flat XML Presentation" href="https://docs.fileformat.com/" %}} (.FODP)
 
 GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 

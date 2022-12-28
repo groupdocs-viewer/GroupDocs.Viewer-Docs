@@ -38,7 +38,7 @@ GroupDocs.Viewer supports the following archive file formats:
 * [.RAR (WinRAR Compressed Archive)](https://docs.fileformat.com/compression/rar)
 * [.TAR (Consolidated Unix File Archive)](https://docs.fileformat.com/compression/tar)
 * [.TGZ / .TAR.GZ (Gzipped Tar File)](https://docs.fileformat.com/compression/tgz/)
-* [.TXZ / .TAR.XZ (XZ Compressed Tar Archive)](https://fileinfo.com/extension/txz)
+* [.TXZ / .TAR.XZ (XZ Compressed Tar Archive)](https://docs.fileformat.com/compression/xz/)
 * [.XZ (XZ Compressed Archive)](https://docs.fileformat.com/compression/xz/)
 * [.ZIP (Zipped File)](https://docs.fileformat.com/compression/zip)
 
