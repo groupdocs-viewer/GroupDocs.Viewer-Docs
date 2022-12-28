@@ -49,7 +49,7 @@ Auto Detection means that GroupDocs.Viewer can determine the type of the image f
 | [.PSD](https://docs.fileformat.com/image/psd) | [Adobe Photoshop Document (PSD)](https://docs.fileformat.com/image/psd) | Yes |
 | [.PSB](https://docs.fileformat.com/image/psb) | [Photoshop Large Document Format (PSB)](https://docs.fileformat.com/image/psb) | Yes |
 | [.SVG](https://docs.fileformat.com/page-description-language/svg) | [Scalable Vector Graphics (SVG)](https://docs.fileformat.com/page-description-language/svg) | Yes |
-| [.SVGZ](https://fileinfo.com/extension/svgz) | [Scalable Vector Graphics gZipped (SVGZ)](https://fileinfo.com/extension/svgz) | Yes |
+| [.SVGZ](https://docs.fileformat.com/image/svgz/) | [Scalable Vector Graphics gZipped (SVGZ)](https://docs.fileformat.com/image/svgz/) | Yes |
 | [.TIF, .TIFF](https://docs.fileformat.com/image/tiff) | [Tagged Image File Format (TIFF)](https://docs.fileformat.com/image/tiff) | Yes |
 | [.WEBP](https://docs.fileformat.com/image/webp) | [WebP Image](https://docs.fileformat.com/image/webp) | Yes |
 | [.EMF](https://docs.fileformat.com/image/emf) | [Windows Enhanced Metafile (EMF)](https://docs.fileformat.com/image/emf)  | Yes |

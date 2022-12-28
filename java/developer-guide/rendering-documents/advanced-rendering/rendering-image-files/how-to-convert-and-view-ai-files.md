@@ -10,7 +10,7 @@ hideChildren: False
 ---
 ## Introduction
 
-[AI](https://fileinfo.com/extension/ai#adobe_illustrator_file) is an Adobe vector graphics format. Typically used for logos and print media, illustrations.
+[AI](https://docs.fileformat.com/image/ai/) is an Adobe vector graphics format. Typically used for logos and print media, illustrations.
 
 ![AI file example](/viewer/java/images/how-to-convert-and-view-ai-files/ai-file-example.jpg)
 
