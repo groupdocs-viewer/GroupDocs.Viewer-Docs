@@ -13,7 +13,7 @@ hideChildren: true
 Excellent file viewer component that empowers your C#, ASP.NET, and other .NET applications with document viewing features across more than 170+ supported file formats
 </div>
 
-<h2 class="gdoc-product-title">GroupDocs Developers Cookbook</h2>
+<h2 class="gdoc-product-title">Documentation</h2>
 
 <div class="gdoc-product-docs">
 
