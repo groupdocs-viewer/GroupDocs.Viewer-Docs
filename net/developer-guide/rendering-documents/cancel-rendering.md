@@ -40,9 +40,8 @@ Task runTask = Task.Run(() =>
 {
     using (Viewer viewer = new Viewer(TestFiles.SAMPLE_DOCX, new ViewerSettings(new GroupDocs.Viewer.Logging.ConsoleLogger())))
     {
-        HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources(pageFilePathFormat);
+        HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources();
         options.RenderComments = true;
-
         viewer.View(options, cancellationToken);
     }
 }, cancellationToken);

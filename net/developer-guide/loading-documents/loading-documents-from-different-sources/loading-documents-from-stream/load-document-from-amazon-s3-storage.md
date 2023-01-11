@@ -11,7 +11,7 @@ The following code snippet shows how to load a document from Amazon S3 Storage:
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 string key = "sample.docx";
 Stream stream = DownloadFile(key);
 

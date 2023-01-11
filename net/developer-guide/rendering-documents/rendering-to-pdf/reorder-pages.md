@@ -22,9 +22,9 @@ The following code snippet shows how to reorder pages:
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))            
 {     
-    PdfViewOptions viewOptions = new PdfViewOptions();
- 
-    // Pass page numbers in the order you want to render them                                       
+    // Create a PDF file.
+	PdfViewOptions viewOptions = new PdfViewOptions();
+    // Pass page numbers in the order you want to render them.                
     viewer.View(viewOptions, 2, 1);
 }
 ```

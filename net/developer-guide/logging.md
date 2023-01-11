@@ -27,17 +27,16 @@ The following code snippet shows how to log to a file using the [FileLogger](htt
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
-// Create logger and specify the output file
+// Create logger and specify the output file.
 FileLogger fileLogger = new FileLogger("output.log");
 
-// Create ViewerSettings and specify FileLogger
+// Create ViewerSettings and specify FileLogger.
 ViewerSettings viewerSettings = new ViewerSettings(fileLogger);
 
+// Render a document.
 using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
 {
-    ViewOptions viewOptions =
-    HtmlViewOptions.ForEmbeddedResources("result.html");
-
+    ViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("result.html");
     viewer.View(viewOptions);
 }
 ```
@@ -55,12 +54,13 @@ The following code snippet shows how to log to the console using the [ConsoleLog
 {{< tabs "example2">}}
 {{< tab "C#" >}}
 ```csharp
-// Create console logger
+// Create console logger.
 ConsoleLogger consoleLogger = new ConsoleLogger();
 
-// Create ViewerSettings and specify FileLogger
+// Create ViewerSettings and specify FileLogger.
 ViewerSettings viewerSettings = new ViewerSettings(consoleLogger);
 
+// Render a document.
 using (Viewer viewer = new Viewer("sample.docx", viewerSettings))
 {
     ViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
@@ -87,16 +87,16 @@ The following code snippet shows how to implement a simple file logger:
 {{< tabs "example3">}}
 {{< tab "C#" >}}
 ```csharp
-// Create logger and specify the output file
+// Create logger and specify the output file.
 CustomLogger customLogger = new CustomLogger("output.log");
 
-// Create ViewerSettings and specify CustomLogger
+// Create ViewerSettings and specify CustomLogger.
 ViewerSettings viewerSettings = new ViewerSettings(customLogger);
 
+// Render a document.
 using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
 {
-    ViewOptions viewOptions =
-    HtmlViewOptions.ForEmbeddedResources("result.html");
+    ViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("result.html");
 
     viewer.View(viewOptions);
 }

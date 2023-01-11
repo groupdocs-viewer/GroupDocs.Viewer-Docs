@@ -26,12 +26,13 @@ The following code snippet shows how to get the file type and the pages count fr
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using (Viewer viewer = new Viewer("sample.pdf"))
 {
+    // Get file information.
     ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForHtmlView();
     ViewInfo viewInfo = viewer.GetViewInfo(viewInfoOptions);
- 
+    // Display file type and pages count.
     Console.WriteLine("Document type is: " + viewInfo.FileType);
     Console.WriteLine("Pages count: " + viewInfo.Pages.Count);
 }
@@ -49,7 +50,7 @@ The following code snippet shows how to get the file type and the pages count fr
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using (Viewer viewer = new Viewer(File.OpenRead("sample.pdf")))
 {
     ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForHtmlView();

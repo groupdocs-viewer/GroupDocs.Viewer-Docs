@@ -24,8 +24,10 @@ The following code snippet shows how to adjust JPG image quality in the output P
 {{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
-{               
+{
+    // Create a PDF file.
     PdfViewOptions viewOptions = new PdfViewOptions();
+    // Specify the JPG image quality.
     viewOptions.JpgQuality = 50;
     viewer.View(viewOptions);
 }

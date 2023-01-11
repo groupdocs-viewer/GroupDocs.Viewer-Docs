@@ -11,7 +11,7 @@ The following code snippet shows how to load a document from FTP:
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 Stream stream = GetFileFromFtp("sample.docx");
 using (Viewer viewer = new Viewer(stream))
 {

@@ -82,13 +82,14 @@ To embed an image in an HTML page, call the [HtmlViewOptions.ForEmbeddedResource
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("vector-image.svg"))
 {
+    // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
     viewer.View(viewOptions);
 }
@@ -110,7 +111,7 @@ To save an image to a separate folder, call the [HtmlViewOptions.ForExternalReso
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -118,9 +119,8 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("vector-image.svg"))
 {
     // Specify the HTML file name and location of external resources.
-    // {1} is replaced with the resource name in the output file name.
-    var viewOptions = HtmlViewOptions.ForExternalResources(
-        "output.html", "output/resource_{1}", "output/resource_{1}");
+    // {0} is replaced with the resource name in the output file name.
+    var viewOptions = HtmlViewOptions.ForExternalResources("output.html", "output/resource_{0}", "output/resource_{0}");
     viewer.View(viewOptions);
 }
 ```
@@ -137,13 +137,14 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("vector-image.svg"))
 {
+    // Create a PDF file.
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
@@ -161,14 +162,16 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("vector-image.svg"))
 {
+    // Create a PNG image.
     var viewOptions = new PngViewOptions("output.png");
+    // Set width and height.
     viewOptions.Width = 1600;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
@@ -187,14 +190,16 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("vector-image.svg"))
 {
+    // Create a JPEG image.
     var viewOptions = new JpgViewOptions("output.jpg");
+    // Set width and height.
     viewOptions.Width = 1600;
     viewOptions.Height = 900;
     viewer.View(viewOptions);

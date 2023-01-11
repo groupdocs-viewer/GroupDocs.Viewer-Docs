@@ -23,22 +23,24 @@ The following code snippet shows how to enable caching and displays the differen
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+// Specify parameters.
 string outputDirectory = @"C:\output";
 string cachePath = Path.Combine(outputDirectory, "cache");
 string pageFilePathFormat = Path.Combine(outputDirectory, "page_{0}.html");
-
+// Create a cache.
 FileCache cache = new FileCache(cachePath);
 ViewerSettings settings = new ViewerSettings(cache);
 
 using (Viewer viewer = new Viewer(@"C:\sample.docx", settings))
 {
+    // Create an HTML file.
     HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources(pageFilePathFormat);
-
+    // Render and display the rendering time.
     Stopwatch stopWatch = Stopwatch.StartNew();
     viewer.View(options);
     stopWatch.Stop();
     Console.WriteLine("Time taken on first call to View method {0} (ms).", stopWatch.ElapsedMilliseconds);
-
+    // Get cached results and display the time.
     stopWatch.Restart();
     viewer.View(options);
     stopWatch.Stop();

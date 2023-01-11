@@ -27,7 +27,9 @@ The following code snippet shows how to render the first and third pages of a do
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
+    // Create an HTML file.
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Specify the page numbers.
     viewer.View(viewOptions, 1, 3);
 }
 ```
@@ -47,12 +49,15 @@ The following code snippet shows how to render the 1st, 2nd, and 4th pages of a 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
 ```csharp
+// Create an array and specify page numbers.
  int[] pageNumbers = new int[] { 1, 2, 4 };
  
  using (Viewer viewer = new Viewer("sample.docx"))
  {
-     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
-     viewer.View(viewOptions, pageNumbers);
+    // Create an HTML file.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Use array to render specific pages.
+    viewer.View(viewOptions, pageNumbers);
  }
 ```
 {{< /tab >}}

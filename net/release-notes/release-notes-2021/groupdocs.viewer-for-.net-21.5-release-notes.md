@@ -47,7 +47,7 @@ There are 15 features, improvements, and bug-fixes in this release, most notable
 
 Added utility method to get FileType from filename or filepath
 
-```cs
+```csharp
 /// <summary>
 /// Extracts file extension and maps it to file type.
 /// </summary>
@@ -60,7 +60,7 @@ public static FileType FromFilePath(string filePath)
 
 The default value of `BaseViewOptions.SpreadsheetOptions` has been changed from
 
-```cs
+```csharp
 /// <summary>
 /// The spreadsheet files view options.
 /// </summary>
@@ -69,7 +69,7 @@ public SpreadsheetOptions SpreadsheetOptions { get; set; } = SpreadsheetOptions.
 
 to
 
-```cs
+```csharp
 /// <summary>
 /// The spreadsheet files view options.
 /// </summary>
@@ -82,7 +82,7 @@ We've changed default value to make the output similar to the output you can get
 
 Added three factory methods without parameters:
 
-```cs
+```csharp
 /// <summary>
 /// Initializes new instance of <see cref="ViewInfoOptions"/> class to retrieve information about view when rendering into HTML.
 /// </summary>

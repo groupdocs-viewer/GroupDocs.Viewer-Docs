@@ -23,7 +23,9 @@ The following code snippet shows how to enable rendering of hidden items:
 ```csharp
 using (Viewer viewer = new Viewer("sample.pptx"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Create an HTML file.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Enable rendering of hidden items.
     viewOptions.RenderHiddenPages = true;
     viewer.View(viewOptions); 
 }

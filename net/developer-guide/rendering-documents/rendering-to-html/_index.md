@@ -31,8 +31,9 @@ The following code snippet shows how to render a .docx document to HTML with ext
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
-   HtmlViewOptions viewOptions = HtmlViewOptions.ForExternalResources();
-   viewer.View(viewOptions);
+    // Create an HTML file.
+    var viewOptions = HtmlViewOptions.ForExternalResources();
+    viewer.View(viewOptions);
 }
 ```
 {{< /tab >}}
@@ -47,7 +48,8 @@ The following code snippet shows how to render a .docx document to HTML with emb
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Create an HTML file.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }
 ```

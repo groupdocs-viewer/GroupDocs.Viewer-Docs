@@ -28,9 +28,10 @@ The following code snippet shows how to rotate output pages when rendering a doc
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
+    // Create a PDF file.
     PdfViewOptions viewOptions = new PdfViewOptions();
+    // Rotate the first page.
     viewOptions.RotatePage(1, Rotation.On90Degree);
-
     viewer.View(viewOptions);
 }
 ```

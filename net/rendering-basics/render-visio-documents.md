@@ -49,7 +49,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -79,7 +79,7 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -107,13 +107,15 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("flowchart.vsdx"))
 {
+    // Create a PDF file for the document.
+    // Specify the PDF file name.
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
@@ -131,7 +133,7 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -141,6 +143,7 @@ using (var viewer = new Viewer("flowchart.vsdx"))
     // Create a PNG image for each drawing page.
     // {0} is replaced with the current page number in the image name.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    // Set width and height.
     viewOptions.Width = 950;
     viewOptions.Height = 800;
     viewer.View(viewOptions);
@@ -158,7 +161,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -168,6 +171,7 @@ using (var viewer = new Viewer("flowchart.vsdx"))
     // Create a JPEG image for each drawing page.
     // {0} is replaced with the current page number in the image name.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    // Set width and height.
     viewOptions.Width = 950;
     viewOptions.Height = 800;
     viewer.View(viewOptions);
@@ -182,7 +186,7 @@ GroupDocs.Viewer allows you to render shapes used in a Visio diagram or stored i
 
 ![Document Stencil pane in Visio](/viewer/net/images/rendering-basics/render-visio-documents/visio-document-stencil.png)
 
-To render only master shapes contained in your Visio file, enable the [VisioRenderingOptions.RenderFiguresOnly](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/visiorenderingoptions/properties/renderfiguresonly) property for one of the following classes (depending on the output file format):
+To render only master shapes contained in Visio file, enable the [VisioRenderingOptions.RenderFiguresOnly](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/visiorenderingoptions/properties/renderfiguresonly) property for one of the following classes (depending on the output file format):
 
 * [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) 
 * [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions)
@@ -193,15 +197,18 @@ The [VisioRenderingOptions.FigureWidth](https://reference.groupdocs.com/viewer/n
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("map.vsdx"))
 {
+    // Convert the Visio file to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Render the master shapes only.
     viewOptions.VisioRenderingOptions.RenderFiguresOnly = true;
+    // Specify shape width in pixels.
     viewOptions.VisioRenderingOptions.FigureWidth = 200;
     viewer.View(viewOptions);
 }

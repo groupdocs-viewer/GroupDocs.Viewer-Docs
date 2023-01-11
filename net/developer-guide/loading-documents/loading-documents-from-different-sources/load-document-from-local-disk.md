@@ -13,8 +13,10 @@ The following code snippet shows how to load a document using the local path str
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
+// Specify a path to a file.
 string filePath = "sample.docx";
+// Render the file.
 using (Viewer viewer = new Viewer(filePath)) 
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();

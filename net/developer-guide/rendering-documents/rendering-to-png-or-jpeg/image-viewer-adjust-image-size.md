@@ -20,7 +20,9 @@ The following code snippet shows how to set the image width or height.
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
+    // Create a JPG file.
     JpgViewOptions viewOptions = new JpgViewOptions();
+    // Specify the width and height.
     viewOptions.Width = 600;
     viewOptions.Height = 800;
     

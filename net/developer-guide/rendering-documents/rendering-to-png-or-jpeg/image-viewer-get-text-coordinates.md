@@ -16,10 +16,11 @@ The following code snippet shows how to retrieve and print out text ([lines](htt
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
+    // Get the file information and extract it text.
     bool extractText = true;
     ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForPngView(extractText);
     ViewInfo viewInfo = viewer.GetViewInfo(viewInfoOptions);
-
+    // Display the file information and text.
     foreach(Page page in viewInfo.Pages)
     {
         Console.WriteLine($"Page: {page.Number}");

@@ -23,8 +23,9 @@ The following code snippet shows how to render a .docx document to PDF:
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
-   PdfViewOptions viewOptions = new PdfViewOptions();
-   viewer.View(viewOptions);
+	// Create a PDF file.
+	PdfViewOptions viewOptions = new PdfViewOptions();
+	viewer.View(viewOptions);
 }
 ```
 {{< /tab >}}

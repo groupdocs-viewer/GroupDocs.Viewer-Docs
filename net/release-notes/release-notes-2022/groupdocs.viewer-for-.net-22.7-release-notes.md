@@ -39,7 +39,7 @@ There are 9 features, improvements, and bug-fixes in this release, most notable 
 
 In context of new feature `VIEWERNET-4021 - Support setting margins for Word documents` we have changed the file type from `float` to `float?` in `GroupDocs.Viewer.Options.WordProcessingOptions`. Starting from this version you can set margins for the Word documents same as you adjust margins using `Page Setup` in Microsoft Word.
 
-```cs
+```csharp
 /// <summary>
 /// The distance (in points) between the left edge of the page and the left boundary of the body text.
 /// </summary>

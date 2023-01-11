@@ -37,13 +37,15 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("groupdocs-documentation.mhtml"))
 {
+    // Create a PDF file for the document.
+    // Specify the PDF file name.
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
@@ -61,7 +63,7 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -87,7 +89,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -113,7 +115,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -122,7 +124,7 @@ using (var viewer = new Viewer("sample.chm"))
 {
     // Convert the CHM file to HTML.
     // {0} is replaced with the page numbers in the output file names.
-    HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources("chm_result_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("chm_result_{0}.html");
     // Enable the following option to display all CHM content on a single HTML page.
     // options.RenderToSinglePage = true;
     viewer.View(viewOptions);
@@ -145,7 +147,7 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -155,8 +157,7 @@ using (var viewer = new Viewer("sample.chm"))
     // Convert the CHM file to HTML.
     // Specify the output file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources(
-        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -186,14 +187,16 @@ The example below converts a web document to PDF and specifies page margins for 
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("groupdocs-documentation.mhtml"))
 {
+    // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Specify the size of page margins in points.
     viewOptions.WebDocumentOptions.LeftMargin = 40;
     viewOptions.WebDocumentOptions.RightMargin = 40;
     viewOptions.WebDocumentOptions.TopMargin = 40;
@@ -212,14 +215,16 @@ The following example specifies page size for the output PDF file:
 
 {{< tabs "example7">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("groupdocs-documentation.mhtml"))
 {
+    // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Specify the page size.
     viewOptions.WebDocumentOptions.PageSize = PageSize.A3;
     viewer.View(viewOptions);
 }

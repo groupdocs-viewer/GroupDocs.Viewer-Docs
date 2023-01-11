@@ -26,7 +26,9 @@ The following code snippet shows how to render a .docx document to HTML optimize
 ```csharp
  using (Viewer viewer = new Viewer("sample.docx"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Create an HTML file.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Render a file optimized for printing.
     viewOptions.ForPrinting = true;
     viewer.View(viewOptions);
 }

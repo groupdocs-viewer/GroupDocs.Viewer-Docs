@@ -25,6 +25,7 @@ The following code snippet shows how to render a .docx document to PNG image:
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
+    // Create a PNG file.
     PngViewOptions viewOptions = new PngViewOptions();
     viewer.View(viewOptions);
 }
@@ -41,6 +42,7 @@ The following code snippet shows how to render a .docx document to JPG image:
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
+    // Create a JPG file.
     JpgViewOptions viewOptions= new JpgViewOptions();                  
     viewer.View(viewOptions);
 }

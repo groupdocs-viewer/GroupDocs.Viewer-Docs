@@ -23,7 +23,9 @@ The following code snippet shows how to prevent adding the **Times New Roman** f
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Create an HTML file.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Exclude the Times New Roman font.
     viewOptions.FontsToExclude.Add("Times New Roman");
     viewer.View(viewOptions);
 }

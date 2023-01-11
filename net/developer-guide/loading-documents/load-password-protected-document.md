@@ -24,10 +24,11 @@ The following code snippet shows how to load and render an encrypted document:
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
+// Specify a password.
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.Password = "123456";
-
+// Render a file.
 using (Viewer viewer = new Viewer("encrypted.docx", loadOptions))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();

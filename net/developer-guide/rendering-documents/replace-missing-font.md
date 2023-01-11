@@ -19,7 +19,9 @@ The following code snippet shows how to set the default font name:
 ```csharp
 using (Viewer viewer = new Viewer(@"sample.pptx"))
 {
+    // Create an HTML file.
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Specify a default font.
     viewOptions.DefaultFontName = "Courier New";
     viewer.View(viewOptions);
 }          

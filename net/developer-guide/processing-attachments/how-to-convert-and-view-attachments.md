@@ -26,14 +26,16 @@ The following code snippet shows how to render attachments from the MSG file:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
-Attachment attachment = new Attachment("attachment-word.doc");           
+// Specify attachment.
+Attachment attachment = new Attachment("attachment-word.doc", @"C:\Output\attachment-word.doc"); 
+// Create a stream for attachment.
 MemoryStream attachmentStream = new MemoryStream();
-
+//Save attachment
 using (Viewer viewer = new Viewer("sample.msg"))
 {
     viewer.SaveAttachment(attachment, attachmentStream); 
 }
-
+// Render attachment
 using (Viewer viewer = new Viewer(attachmentStream))
 {
     HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources();

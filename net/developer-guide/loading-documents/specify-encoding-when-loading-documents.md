@@ -21,10 +21,11 @@ The following code snippet shows how to specify the document encoding:
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
+// Specify an encoding.
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.Encoding = Encoding.GetEncoding("shift_jis");
-
+// Render a file.
 using (Viewer viewer = new Viewer("sample.txt", loadOptions))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();

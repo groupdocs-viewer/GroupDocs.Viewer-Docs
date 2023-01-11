@@ -31,14 +31,15 @@ The following code snippet shows how to protect the output PDF document:
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
+    // Specify the security settings.
     Security security = new Security();
     security.DocumentOpenPassword = "o123";
     security.PermissionsPassword = "p123";
     security.Permissions = Permissions.AllowAll ^ Permissions.DenyPrinting;
-    
-    PdfViewOptions viewOptions = new PdfViewOptions(filePath);
-    viewOptions.Security = security;
-                    
+    // Create a PDF file.
+    PdfViewOptions viewOptions = new PdfViewOptions();
+    // Apply the security settings
+    viewOptions.Security = security;                    
     viewer.View(viewOptions);
 }
 ```

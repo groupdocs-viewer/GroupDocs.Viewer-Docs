@@ -21,13 +21,14 @@ The following code snippet shows how to get and save all attachments from the MS
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
-string outputPath = @"C:\output";
 using (Viewer viewer = new Viewer("with_attachments.msg"))
 {
+    // Get list of attachments.
     IList<Attachment> attachments = viewer.GetAttachments();
+    // Save each attachments.
     foreach(Attachment attachment in attachments)
     {
-        string filePath = Path.Combine(outputPath, attachment.FileName);  
+        string filePath = Path.Combine(@"C:\output", attachment.FileName);  
         viewer.SaveAttachment(attachment, File.OpenWrite(filePath)); 
     }
 }          

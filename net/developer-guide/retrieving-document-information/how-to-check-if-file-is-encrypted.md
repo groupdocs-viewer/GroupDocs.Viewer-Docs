@@ -15,13 +15,15 @@ If you want to check if a file is encrypted, use the _GetFileInfo()_ method that
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using (Viewer viewer = new Viewer("encrypted.pdf"))
 {
-    FileInfo fileInfo = viewer.GetFileInfo();
-
-    Console.WriteLine("File type is: " + fileInfo.FileType);
-    Console.WriteLine("File encrypted: " + fileInfo.Encrypted);
+	// Specify a file extension.
+	string extension = ".docx";
+	// Set a file type using the extension.
+	FileType fileType = FileType.FromExtension(extension);
+	// Display the file type and flag if the file is encrypted.
+	Console.WriteLine($"Extension {extension}; File type: {fileType}.");
 }
 ```
 {{< /tab >}}

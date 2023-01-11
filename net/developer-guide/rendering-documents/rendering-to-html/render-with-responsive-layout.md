@@ -17,7 +17,9 @@ The following code snippet shows how to render a .docx document to HTML with res
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Create an HTML file.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Render the file with responsive layout.
     viewOptions.RenderResponsive = true;
     viewer.View(viewOptions);
 }

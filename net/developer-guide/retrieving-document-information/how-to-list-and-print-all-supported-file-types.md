@@ -20,8 +20,9 @@ The following code snippet shows how to list supported file formats in the conso
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+// Get list of file types.
 IEnumerable<FileType> supportedFileTypes = FileType.GetSupportedFileTypes();
-
+// Display list of file types
 foreach (FileType fileType in supportedFileTypes)
 {
     Console.WriteLine(fileType);

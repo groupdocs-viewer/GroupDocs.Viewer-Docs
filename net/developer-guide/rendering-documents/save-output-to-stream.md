@@ -32,15 +32,10 @@ List<MemoryStream> pages = new List<MemoryStream>();
 using (Viewer viewer = new Viewer("sample.docx"))
 {
     MemoryPageStreamFactory pageStreamFactory = new MemoryPageStreamFactory(pages);
-
-    ViewOptions viewOptions =
-        HtmlViewOptions.ForEmbeddedResources(pageStreamFactory);
-
+    ViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources(pageStreamFactory);
     viewer.View(viewOptions);
 }
- 
 // 
- 
 internal class MemoryPageStreamFactory : IPageStreamFactory
 {
     private readonly List<MemoryStream> _pages;
@@ -53,9 +48,7 @@ internal class MemoryPageStreamFactory : IPageStreamFactory
     public Stream CreatePageStream(int pageNumber)
     {
         MemoryStream pageStream = new MemoryStream();
-
         _pages.Add(pageStream);
-
         return pageStream;
     }
 

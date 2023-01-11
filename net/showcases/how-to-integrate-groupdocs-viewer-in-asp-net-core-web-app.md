@@ -23,9 +23,13 @@ To build the application from scratch, download .NET or .NET Core 3.1 SDK at <ht
 
 Create a web application by executing the [.NET CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/) command in the directory named `my-viewer-app`:
 
-```powershell
+{{< tabs "example1">}}
+{{< tab "Shell" >}}
+```sh
 dotnet new web
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 Check that project and configuration files has been created.
 
@@ -33,13 +37,16 @@ Check that project and configuration files has been created.
 
 Add required packages using the .NET CLI tool. To do this, execute the following commands in the `my-viewer-app` directory:
 
-```powershell
+{{< tabs "example2">}}
+{{< tab "Shell" >}}
+```sh
 dotnet add package GroupDocs.Viewer.UI
 dotnet add package GroupDocs.Viewer.UI.SelfHost.Api
 dotnet add package GroupDocs.Viewer.UI.Api.Local.Storage
 dotnet add package GroupDocs.Viewer.UI.Api.Local.Cache
 ```
-
+{{< /tab >}}
+{{< /tabs >}}
 These commands add the following packages to the application:
 
 * GroupDocs.Viewer.UI contains a middleware that serves the client application at the /viewer endpoint that you configure in the next step.
@@ -51,7 +58,7 @@ These commands add the following packages to the application:
 
 Open the `Startup.cs` file and add the following lines to `ConfigureServices` method:
 
-{{< tabs "example1">}}
+{{< tabs "example3">}}
 {{< tab "C#" >}}
 ```csharp
 services
@@ -68,7 +75,7 @@ services
 
 Add the following lines to the `Configure` method to register UI and API endpoints:
 
-{{< tabs "example2">}}
+{{< tabs "example4">}}
 {{< tab "C#" >}}
 ```csharp
 app
@@ -93,7 +100,7 @@ This code registers `/viewer` middleware that serves client application files an
 
 The `Startup.cs` file is as follows:
 
-{{< tabs "example3">}}
+{{< tabs "example5">}}
 {{< tab "C#" >}}
 ```csharp
 using Microsoft.AspNetCore.Builder;
@@ -142,9 +149,9 @@ namespace my_viewer_app
 
 If you use the [new program style](https://docs.microsoft.com/en-us/dotnet/core/tutorials/top-level-templates) with top-level statements, global using directives, and implicit using directives, the `Startup.cs` is as follows:
 
-{{< tabs "example4">}}
+{{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
@@ -182,10 +189,14 @@ app.Run();
 
 On a local disk, create folders for files and cache by executing the following commands:
 
-```powershell
+{{< tabs "example7">}}
+{{< tab "Shell" >}}
+```sh
 mkdir Files
 mkdir Cache
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Run the application
 

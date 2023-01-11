@@ -54,7 +54,9 @@ The following code snippet shows how to enable minification:
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Create an HTML file.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Render the minified file.
     viewOptions.Minify = true;
     viewer.View(viewOptions);
 }

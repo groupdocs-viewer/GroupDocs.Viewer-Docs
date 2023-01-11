@@ -59,7 +59,9 @@ The following code snippet shows how to set the output image size limits:
 ```csharp
 using (Viewer viewer = new Viewer("sample.jpg"))
 {
-    HtmlViewOptions viewOptions = new HtmlViewOptions.ForEmbeddedResources();
+    // Create an HTML file.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Specify the maximum width and height.
     viewOptions.ImageMaxWidth = 800;
     viewOptions.ImageMaxHeight = 600;
     viewer.View(viewOptions);

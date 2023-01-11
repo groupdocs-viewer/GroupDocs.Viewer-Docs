@@ -47,7 +47,7 @@ By default, Excel spreadsheets are converted by page breaks. See the following t
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -86,7 +86,7 @@ When rendering to HTML with a fluid layout HTML document doesn't have a fixed si
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -121,7 +121,7 @@ New `JLS` fileld added to the `FileType` class. For all supported file types see
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 /// <summary>
 /// JPEG-LS (JLS) (.jls)
 /// </summary>

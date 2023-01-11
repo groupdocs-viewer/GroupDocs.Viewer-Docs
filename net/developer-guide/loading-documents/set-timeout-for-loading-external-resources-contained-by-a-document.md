@@ -20,13 +20,12 @@ The following code snippet shows how to set a timeout to load external resources
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
-LoadOptions loadOptions = LoadOptions 
-{
-    ResourceLoadingTimeout = TimeSpan.FromSeconds(5)
-};
-
-using (Viewer viewer = new Viewer("sample.doc", loadOptions))
+```csharp
+// Specify a timeout.
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.ResourceLoadingTimeout = TimeSpan.FromSeconds(5);
+// Render a file.
+using (Viewer viewer = new Viewer("sample.docx", loadOptions))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);

@@ -17,10 +17,14 @@ The following code snippet shows how to specify the file type when loading a doc
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
+// Implement a method that returns a stream with document data.
 Stream stream = GetFileStream("sample.docx");
+
+// Specify the file type.
 LoadOptions loadOptions = new LoadOptions(FileType.DOCX);
 
+//Render a file.
 using (Viewer viewer = new Viewer(stream, loadOptions)
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();

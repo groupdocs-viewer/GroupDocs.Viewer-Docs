@@ -49,7 +49,7 @@ There are 19 features, improvements, and bug-fixes in this release, most notable
 Since GroupDocs.Viewer 21.11 version if the file extension is wrong, GroupDocs.Viewer will try to detect the actual format and render the file.
 Since GroupDocs.Viewer 21.11 version you can set a resolution for images inside presentations when rendering to HTML:
 
-```cs
+```csharp
  using (Viewer viewer = new Viewer("presentation.pptx"))
  {
       HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources("result_{0}.html");
@@ -85,7 +85,7 @@ Removed duplicate delegates in .NET Framework 4 and .NET Standard 2.0 assemblies
 
 Added new `PresentationOptions` property.
 
-```cs
+```csharp
 /// <summary>
 /// The presentation processing documents view options.
 /// </summary>
@@ -97,7 +97,7 @@ public PresentationOptions PresentationOptions { get; set; } = new PresentationO
 Added new [GroupDocs.Viewer.Options.PresentationOptions](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/presentationoptions>) and
 [GroupDocs.Viewer.Options.Resolution](<https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/resolution>) classes.
 
-```cs
+```csharp
 /// <summary>
 /// Provides options for rendering presentations options.
 /// </summary>

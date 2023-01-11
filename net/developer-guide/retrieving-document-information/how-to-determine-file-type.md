@@ -24,9 +24,12 @@ The following code snippet shows how to determine a file type using the file ext
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
+// Specify a file extension.
 string extension = ".docx";
+// Set a file type using the extension.
 FileType fileType = FileType.FromExtension(extension);
+// Display the extension and the file type.
 Console.WriteLine($"Extension {extension}; File type: {fileType}.");
 ```
 {{< /tab >}}
@@ -44,7 +47,7 @@ The following code snippet shows how to determine a file type using the media he
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 string mediaType = "application/pdf";
 FileType fileType = FileType.FromMediaType(mediaType);
 Console.WriteLine($"Media-type {mediaType}; File type: {fileType}.");
@@ -64,7 +67,7 @@ The following code snippet shows how to determine a file type using the file sig
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using (Stream stream = File.OpenRead("sample.docx"))
 {
     FileType fileType = FileType.FromStream(stream);

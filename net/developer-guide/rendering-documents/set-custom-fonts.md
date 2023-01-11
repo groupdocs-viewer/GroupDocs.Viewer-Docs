@@ -15,13 +15,13 @@ The following code snippet shows how to add a custom font source:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
-FolderFontSource fontSource = 
-    new FolderFontSource(@"C:\custom_fonts", Fonts.SearchOption.TopFolderOnly);
-    
+// Specify the font source.
+FolderFontSource fontSource = new FolderFontSource(@"C:\custom_fonts", Fonts.SearchOption.TopFolderOnly);    
 FontSettings.SetFontSources(fontSource);                       
  
 using (Viewer viewer = new Viewer("sample.docx"))
 {
+    // Create an HTML file.
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }

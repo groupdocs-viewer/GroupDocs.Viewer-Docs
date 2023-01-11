@@ -24,7 +24,9 @@ The following code snippet shows how to get a list of attachments from the MSG f
 ```csharp
 using (Viewer viewer = new Viewer("sample.msg"))
 {
+    // Get list of attachments.
     IList<Attachment> attachments = viewer.GetAttachments();
+    // Display list of attachments.
     Console.WriteLine("\nAttachments:");
     foreach(Attachment attachment in attachments)
         Console.WriteLine(attachment);

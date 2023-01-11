@@ -35,28 +35,26 @@ using GroupDocs.Viewer.Caching;
 using GroupDocs.Viewer.Options;
 using StackExchange.Redis;
 
-//
-
+// Specify the cache parameters.
 var serverAddress = "127.0.0.1:6379";
 var filePath = "sample.docx";
 
+// Create the cache.
 RedisCache cache = new RedisCache(serverAddress, filePath);
 ViewerSettings settings = new ViewerSettings(cache);
 
 using (Viewer viewer = new Viewer(filePath, settings))
 {
-    HtmlViewOptions viewOptions =
-        HtmlViewOptions.ForEmbeddedResources();
+    // Create HTML files.
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
 
-    PrintTimeTaken(() => viewer.View(viewOptions),
-        "The first call to View method took {0} ms.");
-
-    PrintTimeTaken(() => viewer.View(viewOptions),
-        "The second call to View method took {0} ms.");
+    // Display rendering time.
+    PrintTimeTaken(() => viewer.View(viewOptions), "The first call to View method took {0} ms.");
+    // Display time to get cached results.
+    PrintTimeTaken(() => viewer.View(viewOptions), "The second call to View method took {0} ms.");
 }
 
-//
-
+// Get and display time taken.
 static void PrintTimeTaken(Action action, string format)
 {
     Stopwatch stopwatch = new Stopwatch();
@@ -67,8 +65,7 @@ static void PrintTimeTaken(Action action, string format)
     Console.WriteLine(format, stopwatch.ElapsedMilliseconds);
 }
 
-//
-
+// Realize cache.
 public class RedisCache : ICache, IDisposable
 {
     private readonly string _cacheKeyPrefix;

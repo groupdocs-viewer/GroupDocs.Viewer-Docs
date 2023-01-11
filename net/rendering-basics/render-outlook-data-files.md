@@ -38,13 +38,14 @@ To convert an OST or PST file to HTML, call the [HtmlViewOptions.ForEmbeddedReso
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.pst"))
 {
+    // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
     viewer.View(viewOptions);
 }
@@ -62,13 +63,14 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.pst"))
 {
+    // Create a PDF file.
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
@@ -86,7 +88,7 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -96,6 +98,7 @@ using (var viewer = new Viewer("sample.pst"))
     // Convert the PST file to PNG.
     // {0} is replaced with the page numbers in the output image names.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
@@ -114,7 +117,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -124,6 +127,7 @@ using (var viewer = new Viewer("sample.pst"))
     // Convert the PST file to JPEG.
     // {0} is replaced with the page numbers in the output image names.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
@@ -132,7 +136,7 @@ using (var viewer = new Viewer("sample.pst"))
 {{< /tab >}}
 {{< /tabs >}}
 
-## Obtain information about folders in an Outlook data file
+## Get information about folders in an Outlook data file
 
 Follow the steps below to obtain information about folders contained in an Outlook data file.
 
@@ -142,7 +146,7 @@ Follow the steps below to obtain information about folders contained in an Outlo
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
@@ -150,6 +154,7 @@ using GroupDocs.Viewer.Results;
 
 using (var viewer = new Viewer("sample.pst"))
 {
+    // Create an HTML file.
     var viewInfoOptions = ViewInfoOptions.ForHtmlView();
     var viewInfo = viewer.GetViewInfo(viewInfoOptions) as OutlookViewInfo;
 
@@ -185,13 +190,14 @@ When you convert an OST or PST file to HTML, PDF, or image format, GroupDocs.Vie
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.pst"))
 {
+    // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources();
     // Render messages from the "Inbox" folder and its subfolders.
     viewOptions.OutlookOptions.Folder = "Inbox";
@@ -211,14 +217,16 @@ The following example demonstrates how to specify the maximum number of folder i
 
 {{< tabs "example7">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.pst"))
 {
+    // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Specify the maximum number of folder items.
     viewOptions.OutlookOptions.MaxItemsInFolder = 30;
     viewer.View(viewOptions);
 }
@@ -248,7 +256,9 @@ using GroupDocs.Viewer.Options;
 
 using (var viewer = new Viewer("sample.pst"))
 {
+    // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Set filters.
     viewOptions.OutlookOptions.TextFilter = "Viewer";
     viewOptions.OutlookOptions.AddressFilter = "groupdocs.com";
     viewer.View(viewOptions);

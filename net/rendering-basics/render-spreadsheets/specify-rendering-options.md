@@ -17,7 +17,7 @@ aliases:
     - /viewer/net/skip-rendering-of-empty-columns/
     - /viewer/net/skip-rendering-of-empty-rows/
 ---
-GroupDocs.Viewer ships with the [SpreadsheetOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions) class that allows you to specify different spreadsheet rendering options (for example, you can display row and column headings in the output file, render gridlines, or adjust cell text overflow). To access these options, use the [SpreadsheetOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property for one of the following classes (depending on the output file format):
+GroupDocs.Viewer ships with the [SpreadsheetOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions) class that allows you to specify different spreadsheet rendering options (for example, you can display row and column headings in the output file, render grid lines, or adjust cell text overflow). To access these options, use the [SpreadsheetOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property for one of the following classes (depending on the output file format):
 
 * [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) 
 * [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions)
@@ -36,14 +36,16 @@ The following example demonstrates how to convert an Excel workbook to PDF and d
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("invoice.xlsx"))
 {
+    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Render row and column headings.
     viewOptions.SpreadsheetOptions.RenderHeadings = true;
     viewer.View(viewOptions);
 }
@@ -63,14 +65,16 @@ The following code example demonstrates how to convert an Excel workbook to PDF 
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("invoice.xlsx"))
 {
+    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Render grid lines.
     viewOptions.SpreadsheetOptions.RenderGridLines = true;
     viewer.View(viewOptions);
 }
@@ -110,14 +114,16 @@ The following example demonstrates how to set this option in code:
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("invoice.xlsx"))
 {
+    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Specify the AutoFitColumn mode.
     viewOptions.SpreadsheetOptions.TextOverflowMode = TextOverflowMode.AutoFitColumn;
     viewer.View(viewOptions);
 }
@@ -135,14 +141,16 @@ The example below demonstrates how to set this option in code. The rows **20** a
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("invoice.xlsx"))
 {
+    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Enable rendering hidden rows and columns.
     viewOptions.SpreadsheetOptions.RenderHiddenRows = true;
     viewOptions.SpreadsheetOptions.RenderHiddenColumns = true;
     viewer.View(viewOptions);
@@ -163,14 +171,16 @@ The following example demonstrates how to set this option in code:
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("invoice.xlsx"))
 {
+    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Enable rendering hidden pages.
     viewOptions.RenderHiddenPages = true;
     viewer.View(viewOptions);
 }
@@ -184,14 +194,16 @@ GroupDocs.Viewer supports the [SpreadsheetOptions.SkipEmptyRows](https://referen
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("invoice.xlsx"))
 {
+    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Enable skipping blank rows and columns.
     viewOptions.SpreadsheetOptions.SkipEmptyRows = true;
     viewOptions.SpreadsheetOptions.SkipEmptyColumns = true;
     viewer.View(viewOptions);
@@ -210,14 +222,17 @@ Use the [ViewOptions.RenderComments](https://reference.groupdocs.com/viewer/net/
 
 {{< tabs "example7">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("invoice.xlsx"))
 {
+    // Convert the spreadsheet to PNG.
+    // {0} is replaced with the current page number in the file names.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    // Enable rendering comments.
     viewOptions.RenderComments = true;
     viewer.View(viewOptions);
 }

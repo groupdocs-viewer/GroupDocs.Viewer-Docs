@@ -22,9 +22,10 @@ The following code snippet shows how to apply the watermark to the output pages.
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
+    // Create an HTML file.
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
-    viewOptions.Watermark = new Watermark("This is a watermark");
-                
+    // Add watermark
+    viewOptions.Watermark = new Watermark("This is a watermark");                
     viewer.View(viewOptions);
 }
 ```

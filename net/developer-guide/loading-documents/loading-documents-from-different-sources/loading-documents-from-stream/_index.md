@@ -11,23 +11,18 @@ You can load a document from a stream without saving it as a file on a disk. You
 
 To load a document from a stream, follow these steps:
 
-1. Implement a method to obtain the document stream.
+1. Implement a method to get the document stream.
 2. Call the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class constructor. Specify the method implemented in the previous step.
 
 The following code snippet shows how to load a document from a stream:
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
-static Stream GetStream(string fileName) 
-{
-    // TODO: open a stream for reading e.g. File.OpenRead(fileName);
-}
-
-// ..
-
+```csharp
+// Implement a method that returns a stream with document data.
 Stream stream = GetStream("sample.docx");
 
+// Render a document from the stream.
 using (Viewer viewer = new Viewer(stream))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();

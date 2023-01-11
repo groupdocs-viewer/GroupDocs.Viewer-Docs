@@ -50,9 +50,11 @@ The following code snippet shows how to set the output image size limits:
 ```csharp
 using (Viewer viewer = new Viewer("sample.jpg"))
 {
+    // Create a JPG or PNG file.
     JpgViewOptions viewOptions = new JpgViewOptions("result_{0}.jpg");
     //PngViewOptions viewOptions = new PngViewOptions("result_{0}.png");
     
+    // Specify the maximum width and height.
     viewOptions.MaxWidth = 800;
     viewOptions.MaxHeight = 600;
 
