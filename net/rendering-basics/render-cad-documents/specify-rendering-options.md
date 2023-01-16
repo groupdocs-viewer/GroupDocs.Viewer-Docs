@@ -30,14 +30,16 @@ The following code snippet converts a CAD drawing to PDF and sets the background
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("HousePlan.dwg"))
 {
+   // Convert the document to PDF.
    var viewOptions = new PdfViewOptions("output.pdf");
+   // Specify the background color.
    viewOptions.CadOptions.BackgroundColor = Color.LightYellow;
    viewer.View(viewOptions);
 }
@@ -62,16 +64,18 @@ The following example converts a CAD drawing to PNG format and reduces the width
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("HousePlan.dwg"))
 {
-   var viewOptions = new PngViewOptions("output.png");
-   viewOptions.CadOptions = CadOptions.ForRenderingByScaleFactor(0.5f);
-   viewer.View(viewOptions);
+    // Convert the diagram to PNG.
+    var viewOptions = new PngViewOptions("output.png");
+    // Specify a scale factor.
+    viewOptions.CadOptions = CadOptions.ForRenderingByScaleFactor(0.5f);
+    viewer.View(viewOptions);
 }
 ```
 {{< /tab >}}
@@ -81,20 +85,22 @@ When you render all layouts/sheets contained in a CAD file (the [CadOptions.Rend
 
 ### Apply the PC3 file settings
 
-AutoCAD allows you to configure plotter settings and save them as a PC3 file (Plotter Configuration Version 3) for later use. With GroupDocs.Viewer, you can apply width and height values from a PC3 file to the output file when you convert your CAD drawing to HTML, PDF, or image format. Use the [CadOptions.Pc3File](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/properties/pc3file) property for a target view to specify a path to the PC3file with required settings. The default location for PC3 files is "*C:\Users\\[Username]\\AppData\Roaming\Autodesk\AutoCAD [Version]\\[Version Code]\\[Language]\Plotters*".
+AutoCAD allows you to configure plotter settings and save them as a PC3 file (Plotter Configuration Version 3) for later use. With GroupDocs.Viewer, you can apply width and height values from a PC3 file to the output file when you convert your CAD drawing to HTML, PDF, or image format. Use the [CadOptions.Pc3File](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/properties/pc3file) property for a target view to specify a path to the PC3 file with required settings. The default location for PC3 files is "*C:\Users\\[Username]\\AppData\Roaming\Autodesk\AutoCAD [Version]\\[Version Code]\\[Language]\Plotters*".
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.dwg"))
 {
-   var viewOptions = new PdfViewOptions("output.pdf");
-   options.CadOptions.Pc3File = "small_page.pc3";
-   viewer.View(viewOptions);
+    // Convert the diagram to PDF.
+    var viewOptions = new PdfViewOptions("output.pdf");
+    // Specify a path to the PC3 file.
+    options.CadOptions.Pc3File = "small_page.pc3";
+    viewer.View(viewOptions);
 }
 ```
 {{< /tab >}}
@@ -116,7 +122,7 @@ The following example demonstrates how to split a CAD drawing into four tiles (2
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
@@ -127,7 +133,7 @@ using (var viewer = new Viewer("HousePlan.dwg"))
     var viewInfoOptions = ViewInfoOptions.ForHtmlView();
     var viewInfo = viewer.GetViewInfo(viewInfoOptions);
 
-    // Obtain the width and height of the CAD drawing.
+    // Get the width and height of the CAD drawing.
     int width = viewInfo.Pages[0].Width;
     int height = viewInfo.Pages[0].Height;
 

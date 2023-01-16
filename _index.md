@@ -9,11 +9,7 @@ geekdocAnchor: false
 hideChildren: true
 ---
 
-<div class="gdoc-list-descr">
-Excellent file viewer component that empowers your C#, ASP.NET, and other .NET applications with document viewing features across more than 170+ supported file formats
-</div>
-
-<h2 class="gdoc-product-title">Documentation</h2>
+GroupDocs.Viewer is a high-performance cross-platform library that allows you to build desktop and web file viewer applications using C# and Java.
 
 <div class="gdoc-product-docs">
 

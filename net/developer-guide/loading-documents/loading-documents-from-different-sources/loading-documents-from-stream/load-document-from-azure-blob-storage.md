@@ -7,8 +7,10 @@ description: "This article explains how to load a document from Azure Blob Stora
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-Following example demonstrates how to render document from Azure Blob Storage.
+The following code snippet shows how to load a document from Azure Blob Storage:
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 string blobName = "sample.docx";
 Stream stream = DownloadFile(blobName);
@@ -16,7 +18,6 @@ Stream stream = DownloadFile(blobName);
 using (Viewer viewer = new Viewer())
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
-
     viewer.View(viewOptions);
 }
 
@@ -26,7 +27,6 @@ public static Stream DownloadFile(string blobName)
 
     // Get a reference to a blob
     BlobClient blobClient = containerClient.GetBlobClient(blobName);
-
     MemoryStream memoryStream = new MemoryStream();
     blobClient.DownloadTo(memoryStream);
     memoryStream.Position = 0;
@@ -48,3 +48,5 @@ private static BlobContainerClient GetContainerClient()
     return blobContainerClient;
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

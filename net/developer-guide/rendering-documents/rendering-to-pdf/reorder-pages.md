@@ -7,22 +7,26 @@ description: "Reorder pages when rendering documents to PDF with GroupDocs.Viewe
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-GroupDocs.Viewer allows you to reorder the document pages. The order of the pages in the source document is never changed, instead, the API applies reordering to the resultant PDF document.
+GroupDocs.Viewer preserves the page order in the source document. Instead, you may reorder pages in the output PDF document.
 
-To reorder the pages:
+To reorder pages, follow these steps:
 
-* Instantiate [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object;
-* Create [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions);
-* Call [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method specifying desired page numbers order.
+1. Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object.
+2. Create the [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) object.
+3. Call the [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method of the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object. Specify the new page order in the last parameters.
 
-The following code snippet shows how to reorder pages.
+The following code snippet shows how to reorder pages:
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))            
 {     
-    PdfViewOptions viewOptions = new PdfViewOptions();
- 
-    // Pass page numbers in the order you want to render them                                       
+    // Create a PDF file.
+	PdfViewOptions viewOptions = new PdfViewOptions();
+    // Pass page numbers in the order you want to render them.                
     viewer.View(viewOptions, 2, 1);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

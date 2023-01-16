@@ -8,28 +8,30 @@ keywords: Save attachments, embedded files from PDF, Outlook data file
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
+To get and save attachments, follow these steps:
 
-You can save/export attachments from Email documents, Outlook data files, Archives and PDF documents with only a few lines of code using GroupDocs.Viewer for .NET API.
+1. Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object. Specify a file that contains attachments.
+2. Call the [GetAttachments](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getattachments) method. It returns the attachment collection.
+3. Iterate through the collection. To save an attachment, call the [SaveAttachment](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/saveattachment) method.
 
-Follow these steps to get and save (export) attachments:
+The following code snippet shows how to get and save all attachments from the MSG file:
 
-* Instantiate [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object  for the file that contains attachment(s);
-* Call [GetAttachments](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getattachments) method which will return document attachments collection;
-* Iterate through attachments collection and save attachment by calling [SaveAttachment](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/saveattachment) method.
+{{< alert style="info" >}}NOTE: provided code snippet suits all format families that support attachments: emails, Outlook data files, archives, and PDF documents.{{< /alert >}}
 
-Following example demonstrates on how to get and save attachments from MSG files.
-
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
-string outputPath = @"C:\output";
 using (Viewer viewer = new Viewer("with_attachments.msg"))
 {
+    // Get list of attachments.
     IList<Attachment> attachments = viewer.GetAttachments();
+    // Save each attachments.
     foreach(Attachment attachment in attachments)
     {
-        string filePath = Path.Combine(outputPath, attachment.FileName);  
+        string filePath = Path.Combine(@"C:\output", attachment.FileName);  
         viewer.SaveAttachment(attachment, File.OpenWrite(filePath)); 
     }
 }          
 ```
-
-{{< alert style="info" >}}NOTE: provided code example is actual for all document types that support attachments - Email documents, Outlook data files, Archives and PDF documents.{{< /alert >}}
+{{< /tab >}}
+{{< /tabs >}}

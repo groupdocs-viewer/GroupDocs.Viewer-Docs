@@ -51,7 +51,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -81,7 +81,7 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -109,13 +109,15 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.pptx"))
 {
+    // Create a PDF file for the presentation.
+    // Specify the PDF file name.
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
@@ -133,7 +135,7 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -143,6 +145,7 @@ using (var viewer = new Viewer("sample.pptx"))
     // Create a PNG image for each slide.
     // {0} is replaced with the current page number in the image name.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    // Set width and height.
     viewOptions.Width = 950;
     viewOptions.Height = 550;
     viewer.View(viewOptions);
@@ -162,7 +165,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -172,6 +175,7 @@ using (var viewer = new Viewer("sample.pptx"))
     // Create a JPEG image for each slide.
     // {0} is replaced with the current page number in the image name.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    // Set width and height.
     viewOptions.Width = 950;
     viewOptions.Height = 550;
     viewer.View(viewOptions);
@@ -195,18 +199,20 @@ You can set the [PresentationOptions.Resolution](https://reference.groupdocs.com
 | Dpi220 | 220 | Excellent quality on most printers and screens. |
 | Dpi330 | 330 | Good quality for high-definition (HD) displays. |
 
-The following example demonstrates how to specify image resolution in code: 
+The following example shows how to specify image resolution in code: 
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.pptx"))
 {
+    // Convert the presentation to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Specify resolution.
     viewOptions.PresentationOptions.Resolution = Resolution.Dpi150;
     viewer.View(viewOptions);
 }
@@ -222,14 +228,16 @@ The following code example uses this option to display hidden slides in the gene
 
 {{< tabs "example7">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.pptx"))
 {
+    // Convert the presentation to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Enable hidden slides rendering.
     viewOptions.RenderHiddenPages = true;
     viewer.View(viewOptions);
 }
@@ -243,14 +251,16 @@ Enable the [ViewOptions.RenderComments](https://reference.groupdocs.com/viewer/n
 
 {{< tabs "example8">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.pptx"))
 {
+    // Convert the presentation to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Enable comments rendering.
     viewOptions.RenderComments = true;
     viewer.View(viewOptions);
 }
@@ -274,14 +284,16 @@ The following code sample renders a presentation with speaker notes to PDF:
 
 {{< tabs "example9">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.pptx"))
 {
+    // Convert the presentation to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Enable speaker notes rendering.
     viewOptions.RenderNotes = true;
     viewer.View(viewOptions);
 }

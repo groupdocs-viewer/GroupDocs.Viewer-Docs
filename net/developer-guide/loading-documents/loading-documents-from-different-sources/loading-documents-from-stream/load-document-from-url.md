@@ -3,25 +3,25 @@ id: load-document-from-url
 url: viewer/net/load-document-from-url
 title: Load from URL
 weight: 3
-description: "This article explains how to load a document from URL with GroupDocs.Viewer within your .NET applications."
+description: "This article explains how to load a document from a URL with GroupDocs.Viewer within your .NET applications."
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-Following example demonstrates how to render document from URL.
+The following code snippet shows how to load a document from a URL:
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
-public static void LoadDocumentFromUrl()
-{
-    string url = "https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/Resources/SampleFiles/sample.docx?raw=true";
-    
-    Stream stream = DownloadFile(url);
+string url = "https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/blob/master/Examples/GroupDocs.Viewer.Examples.CSharp/Resources/SampleFiles/sample.docx?raw=true";
+ 
+Stream stream = DownloadFile(url);
 
-    using (Viewer viewer = new Viewer(stream))
-    {
-        HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();                
-        viewer.View(viewOptions);
-    }
+using (Viewer viewer = new Viewer(stream))
+{
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();                
+    viewer.View(viewOptions);
 }
+
         
 static Stream DownloadFile(string url)
 {
@@ -39,3 +39,5 @@ static Stream GetFileStream(WebResponse response)
     return fileStream;
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

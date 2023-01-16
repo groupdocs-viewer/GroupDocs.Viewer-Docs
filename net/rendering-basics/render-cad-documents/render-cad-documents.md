@@ -59,13 +59,15 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("HousePlan.dwg"))
 {
+    // Create an HTML file for the drawing.
+    // Specify the HTML file name.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
     viewer.View(viewOptions);
 }
@@ -79,7 +81,7 @@ The following image demonstrates the result:
 
 ### Create an HTML file with external resources
 
-If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.ForExternalResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forexternalresources/index) method and pass the following parameters:
+If you want to store an HTML file and additional resource files (such as fonts, images, and style sheets) separately, call the [HtmlViewOptions.ForExternalResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forexternalresources/index) method and pass the following parameters:
 
   * The output file path format
   * The path format for the folder with external resources
@@ -87,7 +89,7 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -96,9 +98,8 @@ using (var viewer = new Viewer("HousePlan.dwg"))
 {
     // Create an HTML file for the drawing.
     // Specify the HTML file name and location of external resources.
-    // {0} and {1} are replaced with the page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources(
-        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    // {0} is replaced with the resource name.
+    var viewOptions = HtmlViewOptions.ForExternalResources("output.html", "output/resource_{0}", "output/resource_{0}");
     viewer.View(viewOptions);
 }
 ```
@@ -115,13 +116,15 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("HousePlan.dwg"))
 {
+    // Create a PDF file for the drawing.
+    // Specify the PDF file name.
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
@@ -139,14 +142,16 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("HousePlan.dwg"))
 {
+    // Create a PNG image for the drawing.
     var viewOptions = new PngViewOptions("output.png");
+    // Set width and height.
     viewOptions.Width = 1500;
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
@@ -165,14 +170,16 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("HousePlan.dwg"))
 {
+    // Create a JPG image for the drawing.
     var viewOptions = new JpgViewOptions("output.jpg");
+    // Set width and height.
     viewOptions.Width = 1500;
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
@@ -181,7 +188,7 @@ using (var viewer = new Viewer("HousePlan.dwg"))
 {{< /tab >}}
 {{< /tabs >}}
 
-## Obtain information about existing layouts and layers
+## Get information about existing layouts and layers
 
 Follow the steps below to obtain information about layouts and layers contained in a CAD drawing. You can use this information to specify which layers and layouts to display in the output file.
 
@@ -191,7 +198,7 @@ Follow the steps below to obtain information about layouts and layers contained 
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
@@ -224,7 +231,7 @@ using (var viewer = new Viewer("HousePlan.dwg"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![Get information about a CAD file](/viewer/net/images/rendering-basics/render-cad-documents/retrieve-cad-file-information.png)
 
@@ -243,13 +250,14 @@ The following example renders all layouts when converting a CAD drawing to PDF:
 
 {{< tabs "example7">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.dwg"))
 {
+   // Convert the document to PDF.
    var viewOptions = new PdfViewOptions("output.pdf");
    // Render the Model and all non-empty paper space layouts. 
    viewOptions.CadOptions.RenderLayouts = true;
@@ -263,13 +271,14 @@ To render a specific layout, assign the layout name to the [CadOptions.LayoutNam
 
 {{< tabs "example8">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.dwg"))
 {
+   // Convert the document to PDF.
    var viewOptions = new PdfViewOptions("output.pdf");
    // Specify the name of the layout to render.
    // If the specified layout is not found,
@@ -307,14 +316,16 @@ The following example renders layers with walls and furniture to PDF:
 
 {{< tabs "example9">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("HousePlan.dwg"))
 {
+    // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Specify a list of layers to display.
     viewOptions.CadOptions.Layers = new List<Layer>
     {
         new Layer("Base"),

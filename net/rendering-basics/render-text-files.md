@@ -73,7 +73,7 @@ When you load a text document from a file or [FileStream](https://learn.microsof
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -81,8 +81,11 @@ using GroupDocs.Viewer.Options;
 // Implement a method that returns a stream with document data.
 Stream stream = GetFileStream("markdown-file.md");
 
+// Specify the file encoding. 
+LoadOptions loadOptions = new LoadOptions(FileType.MD);
+
 // Convert the document to PDF.
-using (var viewer = new Viewer(stream, new LoadOptions(FileType.MD)))
+using (var viewer = new Viewer(stream, loadOptions))
 {
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
@@ -95,31 +98,13 @@ using (var viewer = new Viewer(stream, new LoadOptions(FileType.MD)))
 
 Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a text file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}).
 
-{{< tabs "example2">}}
-{{< tab "C#" >}}
-```cs
-using GroupDocs.Viewer;
-using GroupDocs.Viewer.Options;
-// ...
-
-using (var viewer = new Viewer("TermsOfService.txt"))
-{
-    // Convert the text file to HTML.
-    // {0} is replaced with the current page number in the output file names.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
-    viewer.View(viewOptions);
-}
-```
-{{< /tab >}}
-{{< /tabs >}}
-
 ### Create HTML files with embedded resources
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -141,7 +126,7 @@ The following image demonstrates the result:
 
 ### Create HTML files with external resources
 
-If you want to store output HTML files and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.ForExternalResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forexternalresources/index) method and pass the following parameters:
+If you want to store output HTML files and additional resource files (such as fonts, images, and style sheets) separately, call the [HtmlViewOptions.ForExternalResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forexternalresources/index) method and pass the following parameters:
 
   * The output file path format
   * The path format for the folder with external resources
@@ -149,7 +134,7 @@ If you want to store output HTML files and additional resource files (such as fo
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -159,8 +144,7 @@ using (var viewer = new Viewer("TermsOfService.txt"))
     // Convert the text file to HTML.
     // Specify the output file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources(
-        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -177,14 +161,17 @@ If you need to display the entire document content on a single HTML page, enable
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("TermsOfService.txt"))
 {
+    // Convert the text file to HTML.
+    // Specify the output file name.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
+    // Render the file to a single page. 
     viewOptions.RenderToSinglePage = true;
     viewer.View(viewOptions);
 }
@@ -198,7 +185,7 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -223,7 +210,7 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example7">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -233,6 +220,7 @@ using (var viewer = new Viewer("TermsOfService.txt"))
     // Convert the text file to PNG.
     // {0} is replaced with the current page number in the output image names.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
@@ -251,7 +239,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example8">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -261,6 +249,7 @@ using (var viewer = new Viewer("TermsOfService.txt"))
     // Convert the text file to JPEG.
     // {0} is replaced with the current page number in the output image names.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
@@ -288,14 +277,17 @@ The following example demonstrates how to change the number of rows displayed on
 
 {{< tabs "example9">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("TermsOfService.txt"))
 {
+    // Convert the text file to HTML.
+    // {0} is replaced with the current page number in the output file names.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    // Set the maximum number of rows per page.
     viewOptions.TextOptions.MaxRowsPerPage = 30;
     viewer.View(viewOptions);
 }

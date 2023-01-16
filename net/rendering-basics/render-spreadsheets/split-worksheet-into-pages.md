@@ -26,14 +26,16 @@ The following example converts a worksheet to PDF and uses the page breaks to sp
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("products.xlsx"))
 {
+    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Split using page breaks.
     viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingByPageBreaks();
     viewer.View(viewOptions);
 }
@@ -51,16 +53,18 @@ The following code snippet splits a worksheet into two pages and renders them to
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("two-pages.xlsx"))
 {
+    // Specify number of rows for every page.
     int rowsPerPage = 15;
-
+    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Split by number of rows.
     viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForSplitSheetIntoPages(rowsPerPage);
     viewer.View(viewOptions);
 }
@@ -78,17 +82,19 @@ The following code snippet splits a worksheet into four pages and renders them t
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("two-pages.xlsx"))
+using (var viewer = new Viewer("four-pages.xlsx"))
 {
+    // Specify number of rows for every page.
     int rowsPerPage = 15;
-    int columnsPerPage = 7;
-
+    int columnsPerPage = 7;;
+    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Split by number of rows and columns.
     viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForSplitSheetIntoPages(rowsPerPage, columnsPerPage);
     viewer.View(viewOptions);
 }
@@ -108,18 +114,20 @@ In Microsoft Excel, you can designate one or more cell ranges in a worksheet as 
 
 GroupDocs.Viewer also supports this option. Call the [SpreadsheetOptions.ForRenderingPrintArea](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/methods/forrenderingprintarea) static method and assign the returned `SpreadsheetOptions` instance to the [ViewOptions.SpreadsheetOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property to display only the worksheet's print area in the output HTML, PDF, or image file.
 
-The following example renders a print area displayed in the image above to PDF:
+The following example renders the print area displayed in the image above to PDF:
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("invoice.xlsx"))
 {
+    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Render the print area only.
     viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingPrintArea();
     viewer.View(viewOptions);
 }
@@ -135,18 +143,20 @@ The image below illustrates the result.
 
 If you want to display all worksheet data on one page, call the [SpreadsheetOptions.ForOnePagePerSheet](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/foronepagepersheet/) static method and assign the returned `SpreadsheetOptions` instance to the [ViewOptions.SpreadsheetOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property for a target view.
 
-The following example converts a worksheet to a single-page PDF file:
+The following example converts each worksheet to one page in the PDF file:
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("Products.xlsx"))
 {
+    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Render each worksheet to one page.
     viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForOnePagePerSheet();
     viewer.View(viewOptions);
 }

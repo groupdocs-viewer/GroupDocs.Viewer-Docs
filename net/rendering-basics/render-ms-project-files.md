@@ -41,7 +41,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -71,7 +71,7 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -81,8 +81,7 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
     // Render the project's active view as HTML.
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources(
-        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -99,7 +98,7 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -124,7 +123,7 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -134,6 +133,7 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
     // Render the project's active view as PNG.
     // {0} is replaced with the current page number in the output file names.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    // Set width and height.
     viewOptions.Width = 1600;
     viewOptions.Height = 650;
     viewer.View(viewOptions);
@@ -152,7 +152,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -162,6 +162,7 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
     // Render the project's active view as JPEG.
     // {0} is replaced with the current page number in the output file names.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    // Set width and height.
     viewOptions.Width = 1600;
     viewOptions.Height = 650;
     viewer.View(viewOptions);
@@ -170,7 +171,7 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 {{< /tab >}}
 {{< /tabs >}}
 
-## Obtain information about a Project file
+## Get information about a Project file
 
 Follow the steps below to obtain information about a Project file (the file format, the number of pages, the project's start and end dates): 
 
@@ -180,7 +181,7 @@ Follow the steps below to obtain information about a Project file (the file form
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
@@ -204,7 +205,7 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![Get information about a Project file](/viewer/net/images/rendering-basics/render-ms-project-files/retrieve-project-file-information.png)
 
@@ -221,14 +222,16 @@ The following example specifies page size for the output PDF file:
 
 {{< tabs "example7">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 {
+    // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Specify the page size.
     viewOptions.ProjectManagementOptions.PageSize = PageSize.A3;
     viewer.View(viewOptions);
 }
@@ -241,10 +244,10 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 
 When rendering a Project file, GroupDocs.Viewer selects the smallest time unit on a timescale based on the total length of the project. You can adjust the timescale to show smaller or greater time units (from days to months). To do this, set the [ViewOptions.ProjectManagementOptions.TimeUnit](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/projectmanagementoptions/properties/timeunit) property for a target view to one of the following [TimeUnit](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/timeunit) enumeration members:
 
-* `Days`---Displays days on the timescale.
-* `ThirdsOfMonths`---Displays the Beginning/Middle/End (B/M/E) of each month on the timescale.
-* `Months`---Displays months on the timescale.
-* `Unspecified`---The timescale unit is not specified.
+* `Days` displays days on the timescale.
+* `ThirdsOfMonths` displays the Beginning/Middle/End (B/M/E) of each month on the timescale.
+* `Months` displays months on the timescale.
+* `Unspecified` means that the timescale unit is not specified.
 
 The following code sample demonstrates how to specify the timescale unit when rendering a Project file to HTML:
 
@@ -257,7 +260,10 @@ using GroupDocs.Viewer.Options;
 
 using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 {
+    // Convert the document to HTML.
+    // {0} is replaced with the current page number in the file name.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output_{0}.html");
+    // Specify the time unit.
     viewOptions.ProjectManagementOptions.TimeUnit = TimeUnit.ThirdsOfMonths;
     viewer.View(viewOptions);
 }
@@ -284,7 +290,9 @@ using GroupDocs.Viewer.Options;
 
 using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 {
+    // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Specify the date range.
     viewOptions.ProjectManagementOptions.StartDate = new DateTime(2022, 08, 01);
     viewOptions.ProjectManagementOptions.EndDate = new DateTime(2022, 09, 01);
     viewer.View(viewOptions);
@@ -308,14 +316,16 @@ The following code sample converts a Project file with task notes to PDF:
 
 {{< tabs "example10">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 {
+    // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Enable notes rendering.
     viewOptions.RenderNotes = true;
     viewer.View(viewOptions);
 }

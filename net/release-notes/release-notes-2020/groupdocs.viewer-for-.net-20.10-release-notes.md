@@ -14,7 +14,7 @@ hideChildren: False
 
 There are 31 features, improvements, and bug-fixes in this release, most notable are:
 
-* [Added logging support]({{< ref "viewer/net/developer-guide/logging/how-to-set-up-logging.md">}})
+* [Added logging support]({{< ref "viewer/net/developer-guide/logging.md">}})
 * [Added Compressed Windows Metafile (.wmz) file format support]({{< ref "viewer/net/rendering-basics/render-images.md">}})
 * [Added Corel Presentation Exchange Image (.cmx) file format support]({{< ref "viewer/net/rendering-basics/render-images.md">}})
 * [Added CorelDRAW Image (.cdr) file format support]({{< ref "viewer/net/rendering-basics/render-images.md">}})

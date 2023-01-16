@@ -8,23 +8,25 @@ keywords: GroupDocs.Viewer, thread safe, cache
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-This tutorial will explain how to make cache thread-safe by using [C# lock](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/lock-statement) and [ConcurrentDictionary<,> class](https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentdictionary-2).
+This page describes how to develop a thread-sage cache using the [C# lock](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/lock-statement) statement and the [ConcurrentDictionary<,>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentdictionary-2) class.
 
 ## Introduction
 
-We can say that a method is thread-safe when multiple threads can call it without breaking the functionality of this method. Achieving thread safety is a complex task and so general-purpose classes are usually not thread-safe. The most common way to achieve thread-safety is by locking the resource for the exclusive use by a single thread at any given point of the time.
+A method is thread-safe if multiple threads can call it without breaking the functionality. Achieving thread safety is a complex task, so general-purpose classes are usually not thread-safe. The most common way to achieve thread safety is to lock the resource for exclusive use by a single thread at any given time.
 
-## The issue
+## Issue
 
-We have a web-application where multiple users can simultaneously view the same file. The web-application uses GroupDocs.Viewer on the server-side and we want to make sure that multiple-threads can safely read from and write to the cache, in other words, make cache thread-safe.
+You need to develop a web application where multiple users can simultaneously view the same file. The web application uses GroupDocs.Viewer on the server side. You have to ensure that multiple threads can safely read and write to the cache.
 
-The GroupDocs.Viewer enables users to use caching to improve the performance of the application when the same document is processed multiple times ([read more about caching here](
-    {{< ref "viewer/net/developer-guide/caching-results/_index.md" >}}).) The [FileCache](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.caching/filecache) is a simple implementation of [ICache](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.caching/icache) interface that uses a local disk to store the cache files is available from the GroupDocs.Viewer.Caching namespace. The FileCache is not thread-safe, so our task is to make it thread-safe.
+In GroupDocs.Viewer, you can use caching to improve the performance if the same document is processed multiple times ([read more about caching here](
+    {{< ref "viewer/net/developer-guide/caching-results/_index.md" >}}).) The [FileCache](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.caching/filecache) class is an implementation of the [ICache](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.caching/icache) interface that uses a local disk to store the cache files. The FileCache is not thread safe, so you need to make it so.
 
-## The solution
+## Solution
 
-The FileCache class uses a local disk to read and write output file copies, so we need to make reads and writes to disk thread-safe. To do so we need some kind of the list where we can store key or file ID and associated object that we'll lock around. The simplest way is using [ConcurrentDictionary<,> class](https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentdictionary-2) that has been [introduced with .NET Framework 4.0](https://docs.microsoft.com/en-us/dotnet/standard/collections/thread-safe/). The ConcurrentDictionary is a thread-safe implementation of a dictionary of key-value pairs. Let's implement a class that will wrap around not thread-safe class that implements the ICache interface.
+The FileCache class uses a local disk to read and write output files. You need to implement thread safe reading and writing to disk. To do this, use the list to store the key or the file ID and associated object you need to lock. The simplest way is to use the [ConcurrentDictionary<,> class](https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentdictionary-2) of the [.NET Framework 4.0](https://docs.microsoft.com/en-us/dotnet/standard/collections/thread-safe/). The ConcurrentDictionary is a thread safe implementation of a dictionary of key-value pairs. Implement the ThreadSafeCache class that wraps around not thread safe class that implements the ICache interface.
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 internal class ThreadSafeCache : ICache
 {
@@ -62,9 +64,13 @@ internal class ThreadSafeCache : ICache
     }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-As you can see the all the ThreadSafeCache class methods use locks to make calls to the methods thread-safe. Let's see at ConcurrentDictionaryKeyLockerStore implementation. This class keeps uses ConcurrentDictionary to create a locker object or to retrieve it when it already exists. It also creates a unique key that identifies a cached file.
+All the ThreadSafeCache class methods use locks to make calls thread safe. The ConcurrentDictionaryKeyLockerStore class uses ConcurrentDictionary to create the locker object or to retrieve it if it already exists. It also creates a unique key that identifies a cached file.
 
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 ```csharp
 interface IKeyLockerStore
 {
@@ -94,9 +100,13 @@ class ConcurrentDictionaryKeyLockerStore : IKeyLockerStore
     }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-Let's see the whole program listing with ThreadSafeCache and ConcurrentDictionaryKeyLockerStore.
+## Result
 
+{{< tabs "example3">}}
+{{< tab "C#" >}}
 ```csharp
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -223,7 +233,5 @@ namespace ThreadSaveCacheExample
     }
 }
 ```
-
-## Conclusion
-
-With **lock** statement and **Concurrent Collections**, we can write quite a simple code to achieve thread-safety in our applications as shown in this tutorial.
+{{< /tab >}}
+{{< /tabs >}}

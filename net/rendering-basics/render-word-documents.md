@@ -46,7 +46,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -76,7 +76,7 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -86,8 +86,7 @@ using (var viewer = new Viewer("resume.docx"))
     // Create an HTML file for each document page.
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources(
-        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -104,13 +103,15 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("resume.docx"))
 {
+    // Create a PDF file for the document.
+    // Specify the PDF file name.
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
@@ -128,7 +129,7 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -138,6 +139,7 @@ using (var viewer = new Viewer("resume.docx"))
     // Create a PNG image for each document page.
     // {0} is replaced with the current page number in the image name.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
@@ -155,7 +157,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -165,6 +167,7 @@ using (var viewer = new Viewer("resume.docx"))
     // Create a JPEG image for each document page.
     // {0} is replaced with the current page number in the image name.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
@@ -177,10 +180,10 @@ using (var viewer = new Viewer("resume.docx"))
 
 Use the following properties to specify the size of page margins in the output files when you convert your Word documents to HTML, PDF, and image formats: 
 
-* [WordProcessingOptions.TopMargin](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/topmargin)---Specifies the distance (in points) between document content and the top edge of the page.
-* [WordProcessingOptions.BottomMargin](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/bottommargin)---Specifies the distance (in points) between document content and the bottom edge of the page.
-* [WordProcessingOptions.LeftMargin](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/leftmargin)---Specifies the distance (in points) between document content and the left edge of the page.
-* [WordProcessingOptions.RightMargin](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/rightmargin)---Specifies the distance (in points) between document content and the right edge of the page.
+* [WordProcessingOptions.TopMargin](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/topmargin) specifies the distance (in points) between document content and the top edge of the page.
+* [WordProcessingOptions.BottomMargin](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/bottommargin) specifies the distance (in points) between document content and the bottom edge of the page.
+* [WordProcessingOptions.LeftMargin](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/leftmargin) specifies the distance (in points) between document content and the left edge of the page.
+* [WordProcessingOptions.RightMargin](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/properties/rightmargin) specifies the distance (in points) between document content and the right edge of the page.
 
 You can access these properties for the following classes:
 
@@ -193,7 +196,7 @@ The example below converts a Word document to HTML and specifies page margins fo
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -227,14 +230,16 @@ The following code example demonstrates how to render a Word document with track
 
 {{< tabs "example7">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("TrackChanges.docx"))
 {
+    // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Enable tracked changes rendering.
     viewOptions.WordProcessingOptions.RenderTrackedChanges = true;
     viewer.View(viewOptions);
 }
@@ -254,14 +259,16 @@ The code example below renders a Word document with comments to PDF.
 
 {{< tabs "example8">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("resume.docx"))
 {
+    // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Enable comments rendering.
     viewOptions.RenderComments = true;
     viewer.View(viewOptions);
 }

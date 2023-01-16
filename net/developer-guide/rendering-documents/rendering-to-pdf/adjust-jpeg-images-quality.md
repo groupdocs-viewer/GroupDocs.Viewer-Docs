@@ -7,21 +7,30 @@ description: "Adjust JPEG images quality when rendering documents to PDF with Gr
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-When rendering documents to PDF format that contains JPG images it may be reasonable to reduce size of the output file by adjusting quality of the JPG images. GroupDocs.Viewer enables you to adjust quality of images in the output PDF document with [JpgQuality](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions/properties/jpgquality) setting of [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) class. The supported values range of [JpgQuality](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions/properties/jpgquality) is from 1 to 100. Default value is 90.
+Decreasing the JPG images quality reduces the size of the output file.
 
-The following steps are to be followed in order to set image quality.
+To adjust images quality, set the [JpgQuality](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions/properties/jpgquality) property of the [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) class. The value must be between 1 (minimum quality) and 100. The default value is 90.
 
-* Initialize the object of [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions);
-* Set [PdfViewOptions.JpgQuality](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions/properties/jpgquality) value;
-* Pass [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) object to *View* function.
+To set the image quality, follow these steps:
 
-The following code sample shows how to adjust JPG image quality in the output PDF document.
+1. Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class. Specify the source document path as a constructor parameter.
+1. Instantiate the [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) object.
+2. Set the [PdfViewOptions.JpgQuality](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions/properties/jpgquality) value.
+3. Call the [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method of the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object. Specify the [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) object as the parameter.
 
+The following code snippet shows how to adjust JPG image quality in the output PDF document:
+
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
-{               
+{
+    // Create a PDF file.
     PdfViewOptions viewOptions = new PdfViewOptions();
+    // Specify the JPG image quality.
     viewOptions.JpgQuality = 50;
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

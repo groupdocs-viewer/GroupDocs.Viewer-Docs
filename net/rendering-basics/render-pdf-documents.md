@@ -39,7 +39,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -69,7 +69,7 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -79,8 +79,7 @@ using (var viewer = new Viewer("resume.pdf"))
     // Create an HTML file for each PDF page.
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources(
-        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -105,16 +104,17 @@ When rendering to HTML with fluid layout HTML document doesn't have a fixed size
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("Letter.pdf"))
 {
-    // Convert the spreadsheet to HTML.
-    // {0} is replaced with the current page number in the file names.
+    // Create an HTML file for each PDF page.
+    // {0} is replaced with the current page number in the file name.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    // Disable fixed layout.
     viewOptions.PdfOptions.FixedLayout = false;
     viewer.View(viewOptions);
 }
@@ -140,18 +140,21 @@ The [HtmlViewOptions.PdfOptions.ImageQuality](https://reference.groupdocs.com/ne
 * [ImageQuality.Medium](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/imagequality) --- The image resolution is medium (192 DPI), and the image size is larger compared to the low quality images.
 * [ImageQuality.High](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/imagequality) --- The image resolution is high (300 DPI), and the image size is big. Use of this value may decrease the conversion performance.
 
-The following code snippet uses the medium image quality when rendering a PDF document to HTML.
+The following code snippet shows how to set the medium image quality when rendering a PDF document to HTML:
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("resume.pdf"))
 {
+    // Create an HTML file for each document page.
+    // {0} is replaced with the current page number in the file name.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    // Set image quality to medium.
     viewOptions.PdfOptions.ImageQuality = ImageQuality.Medium;
     viewer.View(viewOptions);
 }
@@ -163,18 +166,21 @@ using (var viewer = new Viewer("resume.pdf"))
 
 GroupDocs.Viewer supports the [HtmlViewOptions.PdfOptions.RenderTextAsImage](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptions/properties/rendertextasimage) option that allows you to render text as an image when you convert a PDF file to HTML. In this case, the layout of the output HTML file closely mirrors the layout of the source PDF document.
 
-The following example demonstrates how to enable this option in code:
+The following code snippet shows how to enable this option in code:
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("resume.pdf"))
 {
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("text-as-image.html");
+    // Create an HTML file for each document page.
+    // {0} is replaced with the current page number in the file name.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("text-as-image_{0}.html");
+    // Enable rendering text as image.
     viewOptions.PdfOptions.RenderTextAsImage = true;
     viewer.View(viewOptions);
 }
@@ -190,18 +196,21 @@ The image below illustrates the result. PDF content is exported to HTML as an im
 
 When you convert a PDF file to HTML, GroupDocs.Viewer creates an HTML document with a single layer (the `z-index` is not specified for document elements). This helps increase performance and reduce the output file size. If you convert a PDF document with multiple layers and want to improve the position of document elements in the output HTML file, activate the [HtmlViewOptions.PdfOptions.EnableLayeredRendering](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/enablelayeredrendering) property to render text and graphics in the HTML file according to their z-order in the source PDF document.
 
-The following example demonstrates how to enable this option in code:
+The following code snippet shows how to enable the multi-layer rendering:
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.pdf"))
 {
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Create an HTML file for each document page.
+    // {0} is replaced with the current page number in the file name.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    // Enable the multi-layer rendering.
     viewOptions.PdfOptions.EnableLayeredRendering = true;
     viewer.View(viewOptions);
 }
@@ -210,13 +219,14 @@ using (var viewer = new Viewer("sample.pdf"))
 {{< /tabs >}}
 
 ## Render PDF files as images
+
 ### Convert PDF files to PNG
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a PDF file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
 {{< tabs "example7">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -226,6 +236,7 @@ using (var viewer = new Viewer("resume.pdf"))
     // Create a PNG image for each PDF page.
     // {0} is replaced with the current page number in the image name.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
@@ -244,7 +255,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example8">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -254,6 +265,7 @@ using (var viewer = new Viewer("resume.pdf"))
     // Create a JPEG image for each PDF page.
     // {0} is replaced with the current page number in the image name.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
@@ -268,14 +280,17 @@ When you render PDF documents as images, GroupDocs.Viewer calculates the optimal
 
 {{< tabs "example9">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("resume.pdf"))
 {
+    // Create a PNG image for each PDF page.
+    // {0} is replaced with the current page number in the image name.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    // Preserve the size of document pages.
     viewOptions.PdfOptions.RenderOriginalPageSize = true;
     viewer.View(viewOptions);
 }
@@ -289,14 +304,17 @@ To adjust the display of outline fonts when you convert PDF documents to PNG or 
 
 {{< tabs "example10">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("resume.pdf"))
 {
+    // Create a PNG image for each PDF page.
+    // {0} is replaced with the current page number in the image name.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    //Enable font hinting
     viewOptions.PdfOptions.EnableFontHinting = true;
     viewer.View(viewOptions);
 }
@@ -312,14 +330,17 @@ When you render PDF files in other formats, GroupDocs.Viewer groups individual c
 
 {{< tabs "example11">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.pdf"))
 {
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Create an HTML file for each document page.
+    // {0} is replaced with the current page number in the file name.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    // Disable character grouping
     viewOptions.PdfOptions.DisableCharsGrouping = true;
     viewer.View(viewOptions);
 }
@@ -335,14 +356,17 @@ The code example below renders a PDF file with text comments as an image.
 
 {{< tabs "example12">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("resume_commented.pdf"))
 {
-    var viewOptions = new PngViewOptions("output.png");
+    // Create a PNG image for each PDF page.
+    // {0} is replaced with the current page number in the image name.
+    var viewOptions = new PngViewOptions("output_{0}.png");
+    // Enable comments rendering.
     viewOptions.RenderComments = true;
     viewer.View(viewOptions);
 }
@@ -354,7 +378,7 @@ The following image illustrates the result:
 
 ![Render PDF comments to PNG](/viewer/net/images/rendering-basics/render-pdf-documents/render-pdf-comments.png)
 
-## Obtain information about a PDF file
+## Get information about a PDF file
 
 Follow the steps below to obtain information about a PDF file (the number of pages, page size, and printing permissions): 
 
@@ -364,7 +388,7 @@ Follow the steps below to obtain information about a PDF file (the number of pag
 
 {{< tabs "example13">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
@@ -373,7 +397,6 @@ using GroupDocs.Viewer.Results;
 using (var viewer = new Viewer("resume.pdf"))
 {
     var viewInfoOptions = ViewInfoOptions.ForHtmlView();
-    viewInfoOptions.ExtractText = true;
     var viewInfo = viewer.GetViewInfo(viewInfoOptions) as PdfViewInfo;
 
     // Display information about the PDF document.
@@ -394,7 +417,7 @@ using (var viewer = new Viewer("resume.pdf"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![Get information about a PDF file](/viewer/net/images/rendering-basics/render-pdf-documents/retrieve-pdf-file-information.png)
 
@@ -404,7 +427,7 @@ Set the [ViewInfoOptions.ExtractText](https://reference.groupdocs.com/viewer/net
 
 {{< tabs "example14">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;

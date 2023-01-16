@@ -8,15 +8,15 @@ productName: GroupDocs.Viewer for .NET
 toc: True
 ---
 
-This section contains GroupDocs.Viewer for .NET integration guides and showcases.
+This page provides links to the GroupDocs.Viewer for .NET integration guides and showcases.
 
 ## Online demo
 
-Try GroupDocs.Viewer with our [Free online file viewer](https://products.groupdocs.app/viewer/total).
+Try the [Free online file viewer](https://products.groupdocs.app/viewer/total) that use GroupDocs.Viewer.
 
 ## Demo projects
 
-The demo projects source code can be found in our public [repository](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos) at GitHub.
+Open the [repository](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos) at GitHub to find the demo projects source code.
 
 * [ASP.NET Core (.NET Core)](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/ASP.NET%20Core)
 * [ASP.NET MVC (.NET Framework)](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/MVC)
@@ -24,8 +24,8 @@ The demo projects source code can be found in our public [repository](https://gi
 * [Windows Presentation Foundation (.NET Framework)](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/WPF)
 * [Windows Forms (.NET Framework)](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/WinForms)
 
-For more details about running examples and demo projects please refer to ["How to Run Examples"]({{< ref "viewer/net/getting-started/how-to-run-examples" >}}) article.
+For details, please refer to the ["How to Run Examples"]({{< ref "viewer/net/getting-started/how-to-run-examples" >}}) page.
 
 ## Integration guides
 
-Please follow one of our guides to integrate GroupDocs.Viewer in your project:
+To integrate GroupDocs.Viewer in your project, please follow this guide:

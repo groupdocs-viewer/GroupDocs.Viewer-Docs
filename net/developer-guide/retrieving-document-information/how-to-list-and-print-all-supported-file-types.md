@@ -8,18 +8,29 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 
-Here is the full list of [supported file formats]({{< ref "viewer/net/getting-started/supported-document-formats.md" >}}). In case you need to list or print out all of the supported file formats in your application you can do the following:
+The [Supported file formats]({{< ref "viewer/net/getting-started/supported-document-formats.md" >}}) page lists all file formats supported by GroupDocs.Viewer.
 
-* Call [GetSupportedFileTypes](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/filetype/methods/getsupportedfiletypes) method of [FileType](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/filetype) class;
-* Enumerate through the collection of [FileType](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/filetype) objects.
+To list or print out all the supported file formats within your application, follow these steps:
 
-The following code sample demonstrates how to print all supported file formats list to the console.
+1. Call the [GetSupportedFileTypes](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/filetype/methods/getsupportedfiletypes) method of the [FileType](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/filetype) class.
+2. Enumerate the collection of the [FileType](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/filetype) objects.
 
+The following code snippet shows how to list supported file formats in the console:
+
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
+// Get list of file types.
 IEnumerable<FileType> supportedFileTypes = FileType.GetSupportedFileTypes();
-
+// Display list of file types
 foreach (FileType fileType in supportedFileTypes)
 {
     Console.WriteLine(fileType);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
+
+The following image shows a sample console output:
+
+![](/viewer/net/images/how-to-list-and-print-all-supported-file-types.png)

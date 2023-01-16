@@ -8,13 +8,21 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 
-GroupDocs.Viewer also enables you to make your rendering into HTML look well across all types of devices. To achieve this, the API provides [RenderResponsive](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions/properties/renderresponsive) property of [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) class as shown in below sample code.
+Responsive design aims to make web pages render well on a variety of devices. GroupDocs.Viewer provides the [RenderResponsive](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions/properties/renderresponsive) property of [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) class to render HTML pages with responsive layout. 
 
+The following code snippet shows how to render a .docx document to HTML with responsive layout:
+
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Create an HTML file.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Render the file with responsive layout.
     viewOptions.RenderResponsive = true;
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

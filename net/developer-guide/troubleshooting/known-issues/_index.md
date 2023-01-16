@@ -8,6 +8,4 @@ keywords:
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-## Articles in this section
 
-This section contains information about known issues and limitations.

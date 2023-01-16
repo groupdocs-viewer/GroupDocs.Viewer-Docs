@@ -50,7 +50,7 @@ To convert an archive file to HTML, call the [HtmlViewOptions.ForEmbeddedResourc
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -78,7 +78,7 @@ The following example demonstrates how to set this option in code:
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -102,14 +102,16 @@ If you need to display the contents of an archive file on a single HTML page, en
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("Documents.zip"))
 {
+    // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
+    // Render the archive file to a single page.
     viewOptions.RenderToSinglePage = true;
     viewer.View(viewOptions);
 }
@@ -127,13 +129,14 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("Documents.zip"))
 {
+    // Create a PDF file.
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
@@ -151,7 +154,7 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -161,6 +164,7 @@ using (var viewer = new Viewer("Documents.zip"))
     // Create a PNG image for the top folder and each subfolder in the archive.
     // {0} is replaced with the current page number in the image name.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
@@ -179,7 +183,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -189,6 +193,7 @@ using (var viewer = new Viewer("Documents.zip"))
     // Create a JPEG image for the top folder and each subfolder in the archive.
     // {0} is replaced with the current page number in the image name.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
@@ -225,16 +230,14 @@ using (var viewer = new Viewer("Documents.zip"))
         Console.WriteLine("Folders: ");
         // Display the list of folders in the archive file.
         foreach (string folder in viewInfo.Folders)
-        {
             Console.WriteLine($" - {folder}");
-        }
     }
 }
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![Get information about an archive file](/viewer/net/images/rendering-basics/render-archive-files/retrieve-archive-information.png)
 
@@ -254,14 +257,16 @@ When you convert an archive file to HTML, PDF, or image format, GroupDocs.Viewer
 
 {{< tabs "example8">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("Documents.zip"))
 {
+    // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
+    // Specify a folder to render items from.
     viewOptions.ArchiveOptions.Folder = "Documents/CAD files";
     viewer.View(viewOptions);
 }
@@ -281,14 +286,17 @@ The following code snippet demonstrates how to use a custom name when rendering 
 
 {{< tabs "example9">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("Documents.zip"))
 {
+    // Create an HTML file for the top folder and each subfolder in the archive.
+    // {0} is replaced with the current page number in the output file name.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    // Specify a custom filename
     viewOptions.ArchiveOptions.FileName = new FileName("Sample Files");
     viewer.View(viewOptions);
 }

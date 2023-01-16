@@ -26,13 +26,14 @@ To convert an NSF file to HTML, call the [HtmlViewOptions.ForEmbeddedResources](
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.nsf"))
 {
+   // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
     viewer.View(viewOptions);
 }
@@ -50,13 +51,14 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.nsf"))
 {
+    // Create a PDF file.
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
@@ -74,7 +76,7 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -84,6 +86,7 @@ using (var viewer = new Viewer("sample.nsf"))
     // Convert the NSF file to PNG.
     // {0} is replaced with the page numbers in the output image names.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    //  Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
@@ -102,7 +105,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -112,6 +115,7 @@ using (var viewer = new Viewer("sample.nsf"))
     // Convert the NSF file to JPEG.
     // {0} is replaced with the page numbers in the output image names.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    //  Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
@@ -137,14 +141,16 @@ The following example demonstrates how to specify the maximum number of items to
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.nsf"))
 {
+    // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Specify the maximum items to render.
     viewOptions.MailStorageOptions.MaxItems = 20;
     viewer.View(viewOptions);
 }
@@ -174,7 +180,9 @@ using GroupDocs.Viewer.Options;
 
 using (var viewer = new Viewer("sample.nsf"))
 {
+    // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Set filters.
     viewOptions.MailStorageOptions.TextFilter = "Viewer";
     viewOptions.MailStorageOptions.AddressFilter = "groupdocs.com";
     viewer.View(viewOptions);

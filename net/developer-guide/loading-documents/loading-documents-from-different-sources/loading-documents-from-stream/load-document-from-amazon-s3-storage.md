@@ -7,8 +7,10 @@ description: "This article explains how to load a document from Amazon S3 Storag
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-Following example demonstrates how to render document from Amazon S3 Storage.
+The following code snippet shows how to load a document from Amazon S3 Storage:
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 string key = "sample.docx";
 Stream stream = DownloadFile(key);
@@ -37,4 +39,6 @@ static Stream DownloadFile(string key)
     }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 

@@ -43,13 +43,14 @@ To embed an email message in an HTML page, call the [HtmlViewOptions.ForEmbedded
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.eml"))
 {
+   // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
     viewer.View(viewOptions);
 }
@@ -71,7 +72,7 @@ To save an email message to a separate folder, call the [HtmlViewOptions.ForExte
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -79,9 +80,8 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.eml"))
 {
     // Specify the HTML file name and location of external resources.
-    // {1} is replaced with the resource name in the output file name.
-    var viewOptions = HtmlViewOptions.ForExternalResources(
-        "output.html", "output/resource_{1}", "output/resource_{1}");
+    // {0} is replaced with the resource name in the output file name.
+    var viewOptions = HtmlViewOptions.ForExternalResources("output.html", "output/resource_{0}", "output/resource_{0}");
     viewer.View(viewOptions);
 }
 ```
@@ -98,13 +98,14 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.eml"))
 {
+    // Create a PDF file.
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
@@ -122,14 +123,16 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.eml"))
 {
+    // Create a PNG image.
     var viewOptions = new PngViewOptions("output.png");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
@@ -148,14 +151,16 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.eml"))
 {
+    // Create a JPG image.
     var viewOptions = new JpgViewOptions("output.jpg");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
@@ -181,14 +186,16 @@ The following example specifies page size for the output PDF file:
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.eml"))
 {
+    // Create a PDF file.
     var viewOptions = new PdfViewOptions("output.pdf");
+    // Specify the page size.
     viewOptions.EmailOptions.PageSize = PageSize.Letter;
     viewer.View(viewOptions);
 }
@@ -206,14 +213,16 @@ Use the [EmailOptions.FieldTextMap](https://reference.groupdocs.com/net/viewer/g
 
 {{< tabs "example7">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.eml"))
 {
+    // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
+    // Specify custom field labels.
     viewOptions.EmailOptions.FieldTextMap[Field.From] = "Sender";
     viewOptions.EmailOptions.FieldTextMap[Field.To] = "Recipient";
     viewOptions.EmailOptions.FieldTextMap[Field.Sent] = "Date";
@@ -239,13 +248,14 @@ When rendering email messages, GroupDocs.Viewer formats date and time informatio
 
 {{< tabs "example8">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("sample.eml"))
 {
+    // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
     // Apply a custom format to the date in the email message header.
     viewOptions.EmailOptions.DateTimeFormat = "MMMM dd, yyyy H:mm:ss zzz";

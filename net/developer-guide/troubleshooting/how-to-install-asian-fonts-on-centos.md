@@ -8,73 +8,84 @@ keywords: CentOS, Asian Fonts
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-This article will guide you through the installation process of the Asian Fonts on CentOS 8 / 7 / 6 operating systems. We'll be installing groups of font packages with [yum group install](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/sec-working_with_package_groups).
+This describes the installation of the Asian Fonts on CentOS 8/7/6.
 
-Let's see how to install Asian Fonts on:
+## CentOS 7/8
 
+The installation process is the same for CentOS 7 and CentOS 8. This topic describes the installation process for Centos 8.
 
-## CentOS 7 / 8
+To install a group of packages that includes fonts for Asian languages on Centos 8/7, follow these steps:
 
-The installation process is the same for CentOS 7 and CentOS 8.
-
-We have to install a group of packages called Fonts that includes fonts for Asian languages.
-
-Let's take CentOS 8 and run it in Docker container and install the fonts. 
+1. Run CentOS 8 in a Docker container: 
 
 ![](/viewer/net/images/how-to-install-asian-fonts-on-centos.png)
 
-Type the following command to install a group of packages that includes Asian fonts.
+2. Execute the following command to install the group of packages:
 
-```csharp
-$ yum group install -y Fonts
+{{< tabs "example1">}}
+{{< tab "Shell" >}}
+```sh
+yum group install -y Fonts
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-  
+
 ![](/viewer/net/images/how-to-install-asian-fonts-on-centos_1.png)
 
-When installation will be completed you should see "Complete!" message.
-
+3. Wait for the message "Complete!". Installation completed.
+	
 ![](/viewer/net/images/how-to-install-asian-fonts-on-centos_2.png)
-
-That's all, the fonts are installed.
 
 ## CentOS 6
 
-For the CentOS 6 the installation process is quite different, so let's run it in Docker container and walk through all the steps.
+To install a group of packages that includes fonts for Asian languages on Centos 8/7, follow these steps:
+
+1. Run CentOS 8 in a Docker container: 
 
 ![](/viewer/net/images/how-to-install-asian-fonts-on-centos_3.png)
 
-The fonts packages are separated into groups that we can list by typing the following command. 
+2. The font packages are separated into groups. Execute the following command to list them:
 
-```csharp
-$ yum grouplist
+{{< tabs "example2">}}
+{{< tab "Shell" >}}
+```sh
+yum grouplist
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ![](/viewer/net/images/how-to-install-asian-fonts-on-centos_4.png)
 
-First, check what language packages that already installed under "Installed Language Packs" and then check the "Available Language Groups" section that lists the package bundles that can be installed.
-
-Among others, you'll find the "Chinese Support \[zh\]" language group.
+3. Find the "Chinese Support \[zh\]" language group. To do this, check the "Installed Language Packs" section for already installed language packages. Then check the "Available Language Groups" section that lists the package bundles you can install.
 
 ![](/viewer/net/images/how-to-install-asian-fonts-on-centos_5.png)
 
-Type the following command to install Chinese language support.
+4. If needed, install the Chinese language support. To do this, execute the following command:
 
-```csharp
-$ yum groupinstall -y "Chinese Support"
+{{< tabs "example3">}}
+{{< tab "Shell" >}}
+```sh
+yum groupinstall -y "Chinese Support"
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ![](/viewer/net/images/how-to-install-asian-fonts-on-centos_6.png)
 
-When the language will be installed you should see "Complete!" message.
+5. Wait for the message "Complete!". Installation completed.
 
 ![](/viewer/net/images/how-to-install-asian-fonts-on-centos_7.png)
 
-You can also install other Asian languages support by typing:
+To install other Asian languages, use the following commands:
 
-```csharp
-$ yum groupinstall -y "Japanese Support"
-$ yum groupinstall -y "Korean Support"
-$ yum groupinstall -y "Hindi Support"
-$ yum groupinstall -y "Kannada Support"
+{{< tabs "example4">}}
+{{< tab "Shell" >}}
+```sh
+yum groupinstall -y "Japanese Support"
+yum groupinstall -y "Korean Support"
+yum groupinstall -y "Hindi Support"
+yum groupinstall -y "Kannada Support"
 ```
+{{< /tab >}}
+{{< /tabs >}}

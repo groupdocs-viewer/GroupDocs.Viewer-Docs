@@ -43,7 +43,7 @@ We've allocated options for rendering Web documents into a separate WedDocumentO
 
 {{< tabs "source1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 namespace GroupDocs.Viewer.Options
 {
     /// <summary>
@@ -105,7 +105,7 @@ The following example demonstrates how to set Web document options when renderin
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...

@@ -7,19 +7,20 @@ description: "Learn how to obtain text coordinates when rendering your documents
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-GroupDocs.Viewer provides the feature of getting text coordinates. This feature is useful if you want to add selectable text over the image or implement a text search in image-based rendering. 
+Use the [ExtractText](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewinfooptions/properties/extracttext) property of the [ViewInfoOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewinfooptions) class to get the text contained in a source document and its coordinates. Then you can use this data to add a selectable text over the image or to implement a text search in image-based rendering.
 
-The [ExtractText](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewinfooptions/properties/extracttext) property of [ViewInfoOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewinfooptions) class enables you to get the text contained in a source document with coordinates.
+The following code snippet shows how to retrieve and print out text ([lines](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/page/properties/lines)/[words](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/line/properties/words)/[characters](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/word/properties/characters)) on each document [page](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/page) with coordinates:
 
-Following code sample shows how to retrieve and print out text ([lines](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/page/properties/lines) / [words](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/line/properties/words) / [characters](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/word/properties/characters)) of each document [page](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/page) with coordinates.
-
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.docx"))
 {
+    // Get the file information and extract it text.
     bool extractText = true;
     ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForPngView(extractText);
     ViewInfo viewInfo = viewer.GetViewInfo(viewInfoOptions);
-
+    // Display the file information and text.
     foreach(Page page in viewInfo.Pages)
     {
         Console.WriteLine($"Page: {page.Number}");
@@ -40,3 +41,9 @@ using (Viewer viewer = new Viewer("sample.docx"))
     }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
+
+The following image shows a sample console output:
+
+![](/viewer/net/images/image-viewer-get-text-coordinates.png)

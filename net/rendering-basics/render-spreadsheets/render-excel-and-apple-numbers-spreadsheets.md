@@ -53,11 +53,11 @@ Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
-**Example  1: Convert an Excel workbook to HTML**
+#### Convert an Excel workbook to HTML
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -77,11 +77,11 @@ The following image demonstrates the result:
 
 ![Render an Excel file to HTML](/viewer/net/images/rendering-basics/render-spreadsheets/convert-excel-to-html.png)
 
-**Example  2: Convert an Apple Numbers spreadsheet to HTML**
+#### Convert an Apple Numbers spreadsheet to HTML
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -109,11 +109,11 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-**Example  1: Convert an Excel workbook to HTML**
+#### Convert an Excel workbook to HTML
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -123,19 +123,18 @@ using (var viewer = new Viewer("invoice.xlsx"))
     // Convert the spreadsheet to HTML.
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources(
-        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
-**Example  2: Convert an Apple Numbers spreadsheet to HTML**
+#### Convert an Apple Numbers spreadsheet to HTML
 
 {{< tabs "example4">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -145,8 +144,7 @@ using (var viewer = new Viewer("Products.numbers"))
     // Convert the spreadsheet to HTML.
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources(
-        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -164,16 +162,16 @@ To convert all worksheets to one HTML file, set the [HtmlViewOptions.RenderToSin
 
 {{< tabs "example5">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("Personal_net_worth_calculator.xlsx"))
 {
-    // Convert the spreadsheet to HTML.
-    // {0} is replaced with the current page number in the file names.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    // Convert all Excel worksheets to one HTML file.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page.html");
+    // Enable converting all worksheets to one file.
     viewOptions.RenderToSinglePage = true;
     viewer.View(viewOptions);
 }
@@ -190,11 +188,11 @@ The following image demonstrates the result:
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a spreadsheet file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-**Example  1: Convert an Excel workbook to PDF**
+### Convert an Excel workbook to PDF
 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -213,11 +211,11 @@ The following image demonstrates the result:
 
 ![Render an Excel file to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-pdf.png)
 
-**Example  2: Convert an Apple Numbers spreadsheet to PDF**
+### Convert an Apple Numbers spreadsheet to PDF
 
 {{< tabs "example7">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -240,11 +238,11 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a spreadsheet file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-**Example  1: Convert an Excel workbook to PNG**
+### Convert an Excel workbook to PNG
 
 {{< tabs "example8">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -254,6 +252,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
     // Convert the spreadsheet to PNG.
     // {0} is replaced with the current page number in the file names.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
@@ -265,11 +264,11 @@ The following image demonstrates the result:
 
 ![Render an Excel file to PNG](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-png.png)
 
-**Example  2: Convert an Apple Numbers spreadsheet to PNG**
+### Convert an Apple Numbers spreadsheet to PNG
 
 {{< tabs "example9">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -279,6 +278,7 @@ using (var viewer = new Viewer("Products.numbers"))
     // Convert the spreadsheet to PNG.
     // {0} is replaced with the current page number in the file names.
     var viewOptions = new PngViewOptions("output_{0}.png");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
@@ -295,11 +295,11 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a spreadsheet file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-**Example  1: Convert an Excel workbook to JPEG**
+### Convert an Excel workbook to JPEG
 
 {{< tabs "example10">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -309,6 +309,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
     // Convert the spreadsheet to JPEG.
     // {0} is replaced with the current page number in the file names.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
@@ -317,11 +318,11 @@ using (var viewer = new Viewer("invoice.xlsx"))
 {{< /tab >}}
 {{< /tabs >}}
 
-**Example  2: Convert an Apple Numbers spreadsheet to JPEG**
+### Convert an Apple Numbers spreadsheet to JPEG
 
 {{< tabs "example11">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -331,6 +332,7 @@ using (var viewer = new Viewer("Products.numbers"))
     // Convert the spreadsheet to JPEG.
     // {0} is replaced with the current page number in the file names.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
@@ -350,14 +352,17 @@ GroupDocs.Viewer can detect the following separators:
 
 {{< tabs "example12">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer(@"sample.csv"))
 {
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Convert the spreadsheet to HTML.
+    // {0} is replaced with the current page number in the file names.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    // Detect a CSV/TSV separator.
     viewOptions.SpreadsheetOptions.DetectSeparator = true;
     viewer.View(viewOptions);
 }          
@@ -365,7 +370,7 @@ using (var viewer = new Viewer(@"sample.csv"))
 {{< /tab >}}
 {{< /tabs >}}
 
-## Obtain worksheet names
+## Get worksheet names
 
 GroupDocs.Viewer allows you to obtain information about the source spreadsheet file. For example, you can retrieve worksheet names, as described below:
 
@@ -375,7 +380,7 @@ GroupDocs.Viewer allows you to obtain information about the source spreadsheet f
 
 {{< tabs "example13">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
@@ -400,7 +405,7 @@ using (var viewer = new Viewer("sample.xlsx"))
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates a sample console output:
+The following image shows a sample console output:
 
 ![Retrieve worksheet names](/viewer/net/images/rendering-basics/render-spreadsheets/retrieve-worksheet-names.png)
 

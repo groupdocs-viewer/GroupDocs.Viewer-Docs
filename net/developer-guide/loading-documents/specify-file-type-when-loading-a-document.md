@@ -1,25 +1,35 @@
 ---
 id: specify-file-type-when-loading-a-document
 url: viewer/net/specify-file-type-when-loading-a-document
-title: Set file type when loading a document
+title: Specify file type when loading a document
 keywords: set file type
-weight: 1
-description: "This article explains how to set the file type when loading a document with GroupDocs.Viewer within your .NET applications."
+weight: 3
+description: "This article explains how to specify the file type when loading a document with GroupDocs.Viewer within your .NET applications."
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 
-When passing file path or [FileStream](https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream) into [Viewer](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class constructor the GroupDocs.Viewer determines file type by file extension but when file passed as a stream the GroupDocs.Viewer tries to detect file type by file signature or file content and this may affect application performance. The API enables you to specify the file type of the processing document by passing [LoadOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions) object as the second parameter of [Viewer](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class constructor. When you're passing file type it instructs GroupDocs.Viewer to skip file type detection feature and proceed with rendering.
+When loading a document by specifying a path to a file or using [FileStream](https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream), GroupDocs.Viewer determines file type by extension. Otherwise, GroupDocs.Viewer tries to determine file type by its signature or content. It takes time and may affect performance. 
 
-The following code sample shows how to pass the file type when loading a document.
+You can specify the file type using [LoadOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions). If you do this, GroupDocs.Viewer skips file type detection and use the specified type.
 
+The following code snippet shows how to specify the file type when loading a document:
+
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
+// Implement a method that returns a stream with document data.
 Stream stream = GetFileStream("sample.docx");
+
+// Specify the file type.
 LoadOptions loadOptions = new LoadOptions(FileType.DOCX);
 
+//Render a file.
 using (Viewer viewer = new Viewer(stream, loadOptions)
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

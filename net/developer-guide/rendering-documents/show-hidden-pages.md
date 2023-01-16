@@ -8,21 +8,27 @@ keywords: hidden pages, hidden pages on website
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-Learn how to render hidden pages on website or in other c# applications.Hidden pages are not rendered by default. In order to include them into the rendering GroupDocs.Viewer provides ``RenderHiddenPages` property of the `ViewOptions` class.
+By default, GroupDocs.Viewer does not render hidden items. To render them, set the RenderHiddenPages property of the [ViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/viewoptions/) class to `true`.
 
-This feature is supported for:
+This feature is supported for the following format families:
 
-* Diagrams with hidden pages.
-* Presentations with hidden slides.
-* Spreadsheets with hidden worksheets.
+* Visio documents (for hidden pages)
+* PowerPoint presentations (for hidden slides)
+* Spreadsheets files (for hidden worksheets)
 
-The following code sample shows how enable rendering of hidden pages.
+The following code snippet shows how to enable rendering of hidden items:
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
 ```csharp
 using (Viewer viewer = new Viewer("sample.pptx"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Create an HTML file.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Enable rendering of hidden items.
     viewOptions.RenderHiddenPages = true;
     viewer.View(viewOptions); 
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}

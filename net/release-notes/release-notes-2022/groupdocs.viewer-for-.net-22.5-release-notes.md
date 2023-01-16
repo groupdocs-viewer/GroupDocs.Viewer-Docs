@@ -39,7 +39,7 @@ There are 9 features, improvements, and bug-fixes in this release, most notable 
 
 Added new `EnableOpenTypeFeatures` boolean property. Setting this property to `true` enables kerning and other OpenType Features when rendering Arabic, Hebrew, Indian scripts, Latin-based or Cyrillic-based scripts
 
-```cs
+```csharp
 /// <summary>
 /// This option enables kerning and other OpenType Features when rendering Arabic, Hebrew, Indian scripts, Latin-based or Cyrillic-based scripts.
 /// </summary>

@@ -52,7 +52,7 @@ There are 23 features, improvements, and bug-fixes in this release, most notable
 
 Added a new `TextOptions` property.
 
-```cs
+```csharp
 /// <summary>
 /// Text files splitting to pages options.
 /// </summary>
@@ -61,7 +61,7 @@ public TextOptions TextOptions { get; set; } = new TextOptions();
 
 And related `TextOptions` class to configure rendering text files e.g TXT, LOG.
 
-```cs
+```csharp
 /// <summary>
 /// Text files splitting to pages options.
 /// </summary>

@@ -7,8 +7,17 @@ description: "Rendering documents with GroupDocs.Viewer for .NET in your .NET / 
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-We use the term "rendering" in GroupDocs.Viewer to describe the process of converting a document into a file format, paginated, or that has the concept of pages. For example, when you have a DOCX file with three pages then after rendering this file to HTML you'll get three HTML files on the output that represent each of the pages in the document.
+In GroupDocs.Viewer, rendering is the process of converting a document into one or more files suitable to display. The resulting files can be in one of the following formats:
+
+* HTML
+* PDF
+* Images (JPG or PNG)
+
+If the source document contains several pages, the result of rendering to PDF is one paginated file.
+Rendering a multi-page document to HTML or images results in multiple files, one for each page.
+
+For example, if you have a .docx file with three pages, converting that file to HTML/images results in three HTML or image files that represent the pages in the document. Converting this file to PDF results in one file with three pages
 
 ![Rendering diagram](/viewer/net/images/getting-started/features-overview/rendering.png)
 
-For more details please refer to the following sections and articles:
+For details, please refer to the following pages:

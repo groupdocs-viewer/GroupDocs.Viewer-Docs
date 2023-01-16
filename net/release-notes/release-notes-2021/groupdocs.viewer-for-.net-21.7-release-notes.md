@@ -52,7 +52,7 @@ There are 20 features, improvements, and bug-fixes in this release, most notable
 
 Added new `DetectSeparator` property.
 
-```cs
+```csharp
 /// <summary>
 /// Detect separator (for CSV/TSV files).
 /// </summary>

@@ -180,7 +180,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | --- | --- | :---: | --- |
 | [CSV](https://docs.fileformat.com/spreadsheet/csv/) | Comma Separated Values File | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [FODS](https://docs.fileformat.com/spreadsheet/fods/) | OpenDocument Flat XML Spreadsheet | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [NUMBERS](https://docs.fileformat.com/spreadsheet/numbers/) | Apple Numbers Spreadsheet | ![(tick)](/viewer/net/images/check-blue.png) | Version 3.5 and higher are supported by GroupDocs.Viewer starting with v21.8.
+| [NUMBERS](https://docs.fileformat.com/spreadsheet/numbers/) | Apple Numbers Spreadsheet | ![(tick)](/viewer/net/images/check-blue.png) | GroupDocs.Viewer supports version 3.5 and higher starting with v21.8.
 | [ODS](https://docs.fileformat.com/spreadsheet/ods/) | OpenDocument Spreadsheet | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [OTS](https://docs.fileformat.com/spreadsheet/ots/) | OpenDocument Spreadsheet Template | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [SXC](https://docs.fileformat.com/spreadsheet/sxc/) | StarOffice Calc Spreadsheet | ![(tick)](/viewer/net/images/check-blue.png) | |
@@ -293,4 +293,4 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [OTT](https://docs.fileformat.com/word-processing/ott/) | OpenDocument Text Template | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [RTF](https://docs.fileformat.com/word-processing/rtf/) | Rich Text Document | ![(tick)](/viewer/net/images/check-blue.png) | |
 
-Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view rich text documents: [Render Word documents as HTML, PDF, and image files](/viewer/net/render-word-documents/).
+Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view Word documents: [Render Word documents as HTML, PDF, and image files](/viewer/net/render-word-documents/).
