@@ -106,7 +106,7 @@ public static readonly FileType Excel2003XML = new FileType("Excel 2003 XML (Spr
 
 /// <summary>
 /// Apple numbers represent Excel-like Binary File Format. Such files can be created by Apple numbers application.
-/// Learn more about this file format <a href="https://fileinfo.com/extension/numbers">here</a>.
+/// Learn more about this file format <a href="https://docs.fileformat.com/spreadsheet/numbers/">here</a>.
 /// </summary>
 public static readonly FileType NUMBERS = new FileType("Apple numbers", ".numbers");
 

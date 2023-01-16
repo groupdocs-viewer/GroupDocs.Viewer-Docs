@@ -11,151 +11,182 @@ hideChildren: true
 
 GroupDocs.Viewer is a high-performance cross-platform library that allows you to build desktop and web file viewer applications using C# and Java.
 
-<br/>
+<div class="gdoc-product-docs">
 
-<div class="gdoc-columns gdoc-columns--regular flex flex-gap flex-mobile-column">
-    <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-        <h3>
-            <a class="home-resource-link" rel="nofollow" href='{{< ref "/viewer/net" >}}'> 
-                {{< icon-large "windows" >}} 
-                <br/><br/>
-                GroupDocs.Viewer for .NET
-            </a>
-        </h3>
-        <div class="gdoc-columns gdoc-columns--regular flex flex-gap flex-mobile-column">
-            <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-                <h4>{{< icon-large "gdoc_timer" >}} Getting Started</h4>
-                <p>Start quickly with our getting started documentation</p>
-                <ul style="text-align: left;list-style:none">
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/net/getting-started/features-overview.md" >}}'>Features Overview</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/net/getting-started/supported-document-formats.md" >}}'>Supported Document Formats</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/net/getting-started/system-requirements.md" >}}'>System Requirements</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/net/getting-started/installation.md" >}}'>Installation</a></li>
-                </ul>
-            </div>
-            <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-                <h4>{{< icon-large "book" >}} Document rendering basics</h4>
-                <p>Articles and guidelines for basic document rendering</p>
-                <ul style="text-align: left;list-style:none">
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/net/rendering-basics/render-word-documents.md" >}}'>Render Word documents</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/net/rendering-basics/render-pdf-documents.md" >}}'>Render PDF documents</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/net/rendering-basics/render-presentations.md" >}}'>Render PowerPoint presentations</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/net/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets.md" >}}'>Render Spreadsheets</a></li>
-                </ul>
-            </div>
-        </div>
-        {{< button size="large" href="net" >}} MORE {{< icon "gdoc_keyboard_arrow_right" >}}{{< /button >}}
+<div class="gdoc-product-doc">
+    <div class="gdoc-product-doc__icon-box">
+    <svg class="gdoc-product-doc__icon"><use xlink:href="/img/groupdocs-stack.svg#net"></use></svg>
     </div>
-    <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-        <h3>
-            <a class="home-resource-link" rel="nofollow" href='{{< ref "/viewer/java" >}}'> {{< icon-large "java" >}}
-                <br/><br/> 
-                GroupDocs.Viewer for Java
-            </a>
-        </h3>
-        <div class="gdoc-columns gdoc-columns--regular flex flex-gap flex-mobile-column">
-            <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-                <h4>{{< icon-large "gdoc_timer" >}} Getting Started</h4>
-                <p>Start quickly with our getting started documentation</p>
-                <ul style="text-align: left;list-style:none">
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/java/getting-started/features-overview.md" >}}'>Features  Overview</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/java/getting-started/supported-document-formats.md" >}}'>Supported Document Formats</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/java/getting-started/system-requirements.md" >}}'>System Requirements</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/java/getting-started/installation.md" >}}'>Installation</a></li>
-                </ul>
-            </div>
-            <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-                <h4>{{< icon-large "book" >}} Document rendering basics</h4>
-                <p>Articles and guidelines for basic document rendering</p>
-                <ul style="text-align: left;list-style:none">
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/java/getting-started/viewer-use-cases/how-to-view-word-documents-using-java.md" >}}'>Render Word documents</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/java/getting-started/viewer-use-cases/how-to-view-pdf-documents-using-java.md" >}}'>Render PDF documents</a></li>
-                    <li>{{< icon "file-alt" >}} <a href='{{< ref "/viewer/java/getting-started/viewer-use-cases/how-to-view-cad-documents-using-java.md" >}}'>Render CAD documents</a></li>
-                </ul>
-            </div>
+    <a class="gdoc-product-doc__title"  href='/viewer/net/'>GroupDocs.Viewer for .NET</a>
+    <div class="gdoc-product-cols">
+        <div class="gdoc-product-col">
+        <div class="gdoc-product-col__title">
+        <svg class="gdoc-product-col__icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
+        <div>Getting Started</div></div>
+        <div class="gdoc-product-col__descr">Start quickly with our getting started documentation</div>
+        <ul class="gdoc-product-col__links">
+        <li> <a href='/viewer/net/features-overview/'>Features Overview</a></li>
+        <li> <a href='/viewer/net/supported-document-formats/'>Supported Document Formats</a></li>
+        <li> <a href='/viewer/net/system-requirements/'>System Requirements</a></li>
+        <li> <a href='/viewer/net/installation/'>Installation</a></li>
+        </ul>
         </div>
-        {{< button size="large" href="java" >}} MORE {{< icon "gdoc_keyboard_arrow_right" >}}{{< /button >}}
+        <div class="gdoc-product-col">
+        <div class="gdoc-product-col__title">
+         <svg class="gdoc-product-col__icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
+        <div>Document rendering</div></div>
+        <div class="gdoc-product-col__descr">Articles and guidelines for basic document rendering</div>
+        <ul class="gdoc-product-col__links">
+        <li> <a href='/viewer/net/render-word-documents/'>Render Word documents</a></li>
+        <li> <a href='/viewer/net/render-pdf-documents/'>Render PDF documents</a></li>
+        <li> <a href='/viewer/net/render-presentations/'>Render PowerPoint presentations</a></li>
+        <li> <a href='/viewer/net/render-excel-and-apple-numbers-spreadsheets/'>Render Spreadsheets</a></li>
+        </ul>
+        </div>
     </div>
+    <a class="gdoc-product-doc__btn"  href='/viewer/net/'>More</a>
+
 </div>
 
-<br/>
+<div class="gdoc-product-doc">
+    <div class="gdoc-product-doc__icon-box">
+    <svg class="gdoc-product-doc__icon"><use xlink:href="/img/groupdocs-stack.svg#java"></use></svg>
+    </div>
+    <a class="gdoc-product-doc__title"  href='/viewer/java/'>GroupDocs.Viewer for Java</a>
+    <div class="gdoc-product-cols">
+        <div class="gdoc-product-col">
+        <div class="gdoc-product-col__title ">
+         <svg class="gdoc-product-col__icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
+        <div>Getting Started</div></div>
+        <div class="gdoc-product-col__descr">Start quickly with our getting started documentation</div>
+        <ul class="gdoc-product-col__links">
+         <li> <a href='/viewer/java/features-overview/'>Features  Overview</a></li>
+                    <li> <a href='/viewer/java/supported-document-formats/'>Supported Document Formats</a></li>
+                    <li> <a href='/viewer/java/system-requirements/'>System Requirements</a></li>
+                    <li> <a href='/viewer/java/installation/'>Installation</a></li>
+        </ul>
+        </div>
+        <div class="gdoc-product-col">
+        <div class="gdoc-product-col__title">
+         <svg class="gdoc-product-col__icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
+        <div>Document rendering</div></div>
+        <div class="gdoc-product-col__descr">Articles and guidelines for basic document rendering</div>
+        <ul class="gdoc-product-col__links">
+        <li> <a href='/viewer/java/how-to-view-word-documents-using-java/'>Render Word documents</a></li>
+            <li> <a href='/viewer/java/how-to-view-pdf-documents-using-java/'>Render PDF documents</a></li>
+            <li> <a href='/viewer/java/how-to-view-cad-documents-using-java/'>Render CAD documents</a></li>
+        </ul>
+        </div>
+    </div>
+    <a class="gdoc-product-doc__btn"  href='/viewer/java/'>More</a>
 
-<div class="gdoc-columns gdoc-columns--regular flex flex-gap flex-mobile-column">
-    <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-        <h3>
-            {{< icon-large "code" >}}&nbsp;.NET Code Examples
-        </h3>
-        <ul style="list-style:none;padding-top: 10px">
-            <li>
-                <h4>
-                 <a class="home-resource-link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET">{{< icon "gdoc_github" >}} GroupDocs.Viewer for .NET</a>
-                </h4>
-                 <p>Open-source project for APIs example usage</p>
-            </li>
-            <li>
-                <h4>
-                 <a class="home-resource-link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/MVC">{{< icon "gdoc_github" >}} GroupDocs.Viewer for .NET MVC</a>
-                </h4>
-                <p>Open-source font-end project ready to be used out of the box</p>
-            </li>
-            <li>
-                <h4>
-                 <a class="home-resource-link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/WebForms">{{< icon "gdoc_github" >}} GroupDocs.Viewer for .NET Web Forms</a>
-                </h4>
-                <p>Open-source font-end project ready to be used out of the box</p>
-            </li>
-            <li>
-                <h4>
-                 <a class="home-resource-link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/ASP.NET%20Core">{{< icon "gdoc_github" >}} GroupDocs.Viewer for .NET ASP.NET Core</a>
-                </h4>
-                <p>Open-source font-end project ready to be used out of the box</p>
-            </li>
-        </ul>
-    </div>
-    <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-        <h3>
-            {{< icon-large "code" >}}&nbsp;Java Code Examples
-        </h3>
-        <ul style="list-style:none;padding-top: 10px">
-            <li>
-                <h4>
-                <a class="home-resource-link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >{{< icon "gdoc_github" >}} GroupDocs.Viewer for Java</a>
-                </h4>
-                <p>Open-source project for APIs example usage</p>
-            </li>
-            <li>
-                <h4>
-                <a class="home-resource-link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/tree/master/Demos/Spring">{{< icon "gdoc_github" >}} GroupDocs.Viewer for Java Spring</a>
-                </h4>
-                <p>Open-source font-end project ready to be used out of the box</p>
-            </li>
-            <li>
-                <h4>
-                <a class="home-resource-link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/tree/master/Demos/Dropwizard">{{< icon "gdoc_github" >}} GroupDocs.Viewer for Java Dropwizard</a>
-                </h4>
-                <p>Open-source font-end project ready to be used out of the box</p>
-            </li>
-        </ul>
-    </div>
 </div>
 
-<br/>
+</div>
 
-<h3>
-    {{< icon-large "desktop" >}}&nbsp;Live Demos
-</h3>
+<div class="gdoc-product-examples">
+<div class="gdoc-product-example">
 
-<div class="gdoc-columns gdoc-columns--regular flex flex-gap flex-mobile-column">
-    <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-    <h4>
-        <a class="home-resource-link" href="https://hub.docker.com/r/groupdocs/viewer" rel="nofollow">{{< icon "docker" >}} GroupDocs.Viewer for .NET at DockerHub</a>
-        </h4>
-        <p>Out-of-the-box docker container</p>
-    </div>
-    <div class="gdoc-columns__content gdoc-markdown--nested flex-even" style="margin-top: 1rem !important">
-    <h4>
-        <a class="home-resource-link" href="https://products.groupdocs.app/viewer/total" rel="nofollow">{{< icon "eye" >}} GroupDocs.Viewer Free App</a>
-        </h4>
-        <p>View 170+ file and document types online for free</p>
-    </div>
+<div class="gdoc-product-example__title">.NET Code Examples</div>
+
+<ul class="gdoc-product-example__list ">
+<li > 
+<svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#git"></use></svg>
+<div>
+<a class="gdoc-product-example__link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET">GroupDocs.Viewer for .NET</a>
+<div class="gdoc-product-example__descr">Open-source project for APIs example usage</div>
+</div>
+</li>
+
+<li > 
+<svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#git"></use></svg>
+<div>
+<a class="gdoc-product-example__link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/MVC">GroupDocs.Viewer for .NET MVC</a>
+<div class="gdoc-product-example__descr">Open-source font-end project ready to be used out of the box</div>
+</div>
+</li>
+
+<li > 
+<svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#git"></use></svg>
+<div>
+<a class="gdoc-product-example__link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/WebForms">GroupDocs.Viewer for .NET Web Forms</a>
+<div class="gdoc-product-example__descr">Open-source font-end project ready to be used out of the box</div>
+</div>
+</li>
+
+<li >
+<svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#git"></use></svg>
+<div> 
+<a class="gdoc-product-example__link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/ASP.NET%20Core">GroupDocs.Viewer for .NET ASP.NET Core</a>
+<div class="gdoc-product-example__descr">Open-source font-end project ready to be used out of the box</div>
+</div>
+</li>
+
+</ul>
+
+</div>
+
+<div class="gdoc-product-example">
+<div class="gdoc-product-example__title">Java Code Examples</div>
+
+<ul class="gdoc-product-example__list ">
+<li > 
+<svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#git"></use></svg>
+<div>
+<a class="gdoc-product-example__link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java">GroupDocs.Viewer for Java</a>
+<div class="gdoc-product-example__descr">Open-source project for APIs example usage</div>
+</div>
+</li>
+
+<li > 
+<svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#git"></use></svg>
+<div>
+<a class="gdoc-product-example__link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/tree/master/Demos/Spring">GroupDocs.Viewer for Java Spring</a>
+<div class="gdoc-product-example__descr">Open-source font-end project ready to be used out of the box</div>
+</div>
+</li>
+
+<li > 
+<svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#git"></use></svg>
+<div>
+<a class="gdoc-product-example__link" rel="nofollow" href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/tree/master/Demos/Dropwizard"> GroupDocs.Viewer for Java Dropwizard</a>
+<div class="gdoc-product-example__descr">Open-source font-end project ready to be used out of the box</div>
+</div>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<h2 class="gdoc-product-title">Live demos</h2>
+
+<div class="gdoc-product-examples">
+<div class="gdoc-product-example gdoc-product-example--mobile-fix">
+<ul class="gdoc-product-example__list">
+<li > 
+ <svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#docker"></use></svg>
+<div>
+<a class="gdoc-product-example__link" rel="nofollow" href="https://hub.docker.com/r/groupdocs/viewer">GroupDocs.Viewer for .NET at DockerHub</a>
+<div class="gdoc-product-example__descr">Out-of-the-box docker container</div>
+</div>
+</li>
+
+</ul>
+</div>
+
+<div class="gdoc-product-example">
+<ul class="gdoc-product-example__list gdoc-product-example__list--app">
+<li > 
+ <svg class="gdoc-product-example__icon"><use xlink:href="/img/groupdocs-stack.svg#app"></use></svg>
+<div>
+<a class="gdoc-product-example__link" href="https://products.groupdocs.app/viewer/total">GroupDocs.Viewer Free App</a>
+<div class="gdoc-product-example__descr">View 170+ file and document types online for free</div>
+</div>
+</li>
+
+</ul>
+</div>
+
 </div>

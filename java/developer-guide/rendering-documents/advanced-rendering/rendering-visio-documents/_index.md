@@ -23,19 +23,19 @@ Auto Detection means that GroupDocs.Viewer for Java can determine the type of th
 
 | File Extension | File Type | Auto Detection |
 | --- | --- | --- |
-|[.VSD](https://fileinfo.com/extension/vsd) | [Visio Drawing File](https://fileinfo.com/extension/vsd/) | Yes |
-|[.VSDX](https://fileinfo.com/extension/vsd) | [Visio Drawing File eXtended](https://fileinfo.com/extension/vsd/) | Yes |
-|[.VSS](https://fileinfo.com/extension/vss) | [Visio Stencil File](https://fileinfo.com/extension/vss/) | Yes |
-|[.VSSX](https://fileinfo.com/extension/vssx) | [Visio Stencil File eXtended](https://fileinfo.com/extension/vssx) |Yes |
-|[.VSDM](https://fileinfo.com/extension/vsdm) | [Visio Macro-Enabled Drawing](https://fileinfo.com/extension/vsdm) |Yes |
-|[.VST](https://fileinfo.com/extension/vst#visio_drawing_template) | [Visio Drawing Template](https://fileinfo.com/extension/vst#visio_drawing_template) | Yes | Yes |
-|[.VSTX](https://fileinfo.com/extension/vstx) | [Visio Drawing Template eXtended](https://fileinfo.com/extension/vstx) | Yes |
-|[.VSTM](https://fileinfo.com/extension/vstm) | [Visio Macro-Enabled Drawing Template](https://fileinfo.com/extension/vstm) | Yes |
-|[.VSSM](https://fileinfo.com/extension/vssm) | [Visio Macro-Enabled Stencil File](https://fileinfo.com/extension/vssm) | Yes |
-|[.VSX](https://fileinfo.com/extension/vsx) | [Visio Stencil XML File](https://fileinfo.com/extension/vsx) | Yes |
-|[.VTX](https://fileinfo.com/extension/vtx#visio_template_xml_file) | [Visio Template XML File](https://fileinfo.com/extension/vtx#visio_template_xml_file) | Yes |
-|[.VDW](https://fileinfo.com/extension/vdw) | [Visio Web Drawing](https://fileinfo.com/extension/vdw) | Yes |
-|[.VDX](https://fileinfo.com/extension/vdx#visio_drawing_xml_file) | [Visio Drawing XML File](https://fileinfo.com/extension/vdx#visio_drawing_xml_file) | Yes |
+|[.VSD](https://docs.fileformat.com/visio/vsd/) | [Visio Drawing File](https://docs.fileformat.com/visio/vsd//) | Yes |
+|[.VSDX](https://docs.fileformat.com/visio/vsd/) | [Visio Drawing File eXtended](https://docs.fileformat.com/visio/vsd//) | Yes |
+|[.VSS](https://docs.fileformat.com/visio/vss/) | [Visio Stencil File](https://docs.fileformat.com/visio/vss//) | Yes |
+|[.VSSX](https://docs.fileformat.com/visio/vss/x) | [Visio Stencil File eXtended](https://docs.fileformat.com/visio/vss/x) |Yes |
+|[.VSDM](https://docs.fileformat.com/visio/vsd/m) | [Visio Macro-Enabled Drawing](https://docs.fileformat.com/visio/vsd/m) |Yes |
+|[.VST](https://docs.fileformat.com/visio/vst/) | [Visio Drawing Template](https://docs.fileformat.com/visio/vst/) | Yes | Yes |
+|[.VSTX](https://docs.fileformat.com/visio/vstx/) | [Visio Drawing Template eXtended](https://docs.fileformat.com/visio/vstx/) | Yes |
+|[.VSTM](https://docs.fileformat.com/visio/vstm/) | [Visio Macro-Enabled Drawing Template](https://docs.fileformat.com/visio/vstm/) | Yes |
+|[.VSSM](https://docs.fileformat.com/visio/vss/m) | [Visio Macro-Enabled Stencil File](https://docs.fileformat.com/visio/vss/m) | Yes |
+|[.VSX](https://docs.fileformat.com/visio/vsx/) | [Visio Stencil XML File](https://docs.fileformat.com/visio/vsx/) | Yes |
+|[.VTX](https://docs.fileformat.com/visio/vtx/) | [Visio Template XML File](https://docs.fileformat.com/visio/vtx/) | Yes |
+|[.VDW](https://docs.fileformat.com/visio/vdw/) | [Visio Web Drawing](https://docs.fileformat.com/visio/vdw/) | Yes |
+|[.VDX](https://docs.fileformat.com/visio/vdx/) | [Visio Drawing XML File](https://docs.fileformat.com/visio/vdx/) | Yes |
 
 ## In this section
 

@@ -49,31 +49,31 @@ Fields were added to [GroupDocs.Viewer.FileType](<https://reference.groupdocs.co
 ```csharp
 /// <summary>
 /// XZ file (.xz) is archive compressed a high-ratio compression algorithm based on the LZMA algorithm. 
-/// Learn more about this file format <a href="https://fileinfo.com/extension/xz">here</a>. 
+/// Learn more about this file format <a href="https://docs.fileformat.com/compression/xz/">here</a>. 
 /// </summary>
 public static readonly FileType XZ = new FileType("XZipped", ".xz");
 
 /// <summary>
 /// Consolidated Unix File Archive (.txz, .tar.xz) are archives created with Unix-based utility for collecting one or more files. 
-/// Learn more about this file format <a href="https://fileinfo.com/extension/txz">here</a>. 
+/// Learn more about this file format <a href="https://docs.fileformat.com/compression/xz/">here</a>. 
 /// </summary>
 public static readonly FileType TXZ = new FileType("Tar XZipped", ".txz");
 
 /// <summary>
 /// Consolidated Unix File Archive (.txz, .tar.xz) are archives created with Unix-based utility for collecting one or more files. 
-/// Learn more about this file format <a href="https://fileinfo.com/extension/txz">here</a>. 
+/// Learn more about this file format <a href="https://docs.fileformat.com/compression/xz/">here</a>. 
 /// </summary>
 public static readonly FileType TARXZ = new FileType("Tar XZipped", ".tar.xz");
 
 /// <summary>
 /// Consolidated Unix File Archive (.tgz, .tar.gz) are archives created with Unix-based utility for collecting one or more files. 
-/// Learn more about this file format <a href="https://fileinfo.com/extension/tgz">here</a>. 
+/// Learn more about this file format <a href="https://docs.fileformat.com/compression/tgz/">here</a>. 
 /// </summary>
 public static readonly FileType TGZ = new FileType("Tar GZipped", ".tgz");
 
 /// <summary>
 /// Consolidated Unix File Archive (.tgz, .tar.gz) are archives created with Unix-based utility for collecting one or more files. 
-/// Learn more about this file format <a href="https://fileinfo.com/extension/tgz">here</a>. 
+/// Learn more about this file format <a href="https://docs.fileformat.com/compression/tgz/">here</a>. 
 /// </summary>
 public static readonly FileType TARGZ = new FileType("Tar GZipped", ".tar.gz");
 

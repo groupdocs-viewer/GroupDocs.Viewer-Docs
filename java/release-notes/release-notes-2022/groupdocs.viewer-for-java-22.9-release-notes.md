@@ -2,7 +2,7 @@
 id: groupdocs-viewer-for-java-22-9-release-notes
 url: viewer/java/groupdocs-viewer-for-java-22-9-release-notes
 title: GroupDocs.Viewer for Java 22.9 Release Notes
-weight: 1
+weight: 3
 description: "Features, improvements, and bugs-fixes that are shipped in GroupDocs.Viewer for Java 22.9"
 keywords: release notes, groupdocs.viewer, java, 22.9
 productName: GroupDocs.Viewer for Java
@@ -150,7 +150,7 @@ Fields were added to [FileType](https://reference.groupdocs.com/viewer/java/com.
 /**
  * <p>
  * XZ file (.xz) is archive compressed a high-ratio compression algorithm based on the LZMA algorithm.
- * Learn more about this file format <a href="https://fileinfo.com/extension/xz">here</a>.
+ * Learn more about this file format <a href="https://docs.fileformat.com/compression/xz/">here</a>.
  * </p>
  */
 XZ("XZipped", ".xz")
@@ -158,7 +158,7 @@ XZ("XZipped", ".xz")
 /**
  * <p>
  * Consolidated Unix File Archive (.txz, .tar.xz) are archives created with Unix-based utility for collecting one or more files.
- * Learn more about this file format <a href="https://fileinfo.com/extension/txz">here</a>.
+ * Learn more about this file format <a href="https://docs.fileformat.com/compression/xz/">here</a>.
  * </p>
  */
 TXZ("Tar XZipped", ".txz")
@@ -166,7 +166,7 @@ TXZ("Tar XZipped", ".txz")
 /**
  * <p>
  * Consolidated Unix File Archive (.txz, .tar.xz) are archives created with Unix-based utility for collecting one or more files.
- * Learn more about this file format <a href="https://fileinfo.com/extension/txz">here</a>.
+ * Learn more about this file format <a href="https://docs.fileformat.com/compression/xz/">here</a>.
  * </p>
  */
 TARXZ("Tar XZipped", ".tar.xz")
@@ -174,7 +174,7 @@ TARXZ("Tar XZipped", ".tar.xz")
 /**
  * <p>
  * Consolidated Unix File Archive (.tgz, .tar.gz) are archives created with Unix-based utility for collecting one or more files.
- * Learn more about this file format <a href="https://fileinfo.com/extension/tgz">here</a>.
+ * Learn more about this file format <a href="https://docs.fileformat.com/compression/tgz/">here</a>.
  * </p>
  */
 TGZ("Tar GZipped", ".tgz")
@@ -182,7 +182,7 @@ TGZ("Tar GZipped", ".tgz")
 /**
  * <p>
  * Consolidated Unix File Archive (.tgz, .tar.gz) are archives created with Unix-based utility for collecting one or more files.
- * Learn more about this file format <a href="https://fileinfo.com/extension/tgz">here</a>.
+ * Learn more about this file format <a href="https://docs.fileformat.com/compression/tgz/">here</a>.
  * </p>
  */
 TARGZ("Tar GZipped", ".tar.gz")
@@ -198,7 +198,7 @@ SevenZip("7Zip", ".7z")
 /**
  * PowerShell script module (.psm1) a file format for PowerShell module scripts.
  * <p>
- * Learn more about this file format <a href="https://fileinfo.com/extension/psm1">here</a>.
+ * Learn more about this file format <a href="https://docs.fileformat.com/">here</a>.
  * </p>
  */
 PSM1("Windows PowerShell script module", ".psm1")
@@ -206,7 +206,7 @@ PSM1("Windows PowerShell script module", ".psm1")
 /**
  * PowerShell script file (.ps1) a file format for Windows PowerShell Cmdlet files.
  * <p>
- * Learn more about this file format <a href="https://fileinfo.com/extension/ps1">here</a>.
+ * Learn more about this file format <a href="https://docs.fileformat.com/">here</a>.
  * </p>
  */
 PS1("Windows PowerShell Cmdlet File ", ".ps1")
@@ -214,7 +214,7 @@ PS1("Windows PowerShell Cmdlet File ", ".ps1")
 /**
  * PowerShell script module manifest (.psd1) a file format for PowerShell module manifest scripts.
  * <p>
- * Learn more about this file format <a href="https://fileinfo.com/extension/psd1">here</a>.
+ * Learn more about this file format <a href="https://docs.fileformat.com/">here</a>.
  * </p>
  */
 PSD1("Windows PowerShell script module manifest", ".psd1")

@@ -81,7 +81,7 @@ public static readonly FileType EMZ = new FileType("Windows Compressed Enhanced 
 
 /// <summary>
 /// Compressed Windows Metafile (.wmz) represents Microsoft Windows Metafile (WMF) compressed in GZIP archvive - for storing vector as well as bitmap-format images data.
-/// Learn more about this file format <a href="https://fileinfo.com/extension/wmz#compressed_windows_metafile">here</a>.
+/// Learn more about this file format <a href="https://docs.fileformat.com/image/wmz/">here</a>.
 /// </summary>
 public static readonly FileType WMZ = new FileType("Compressed Windows Metafile", ".wmz");
 ```

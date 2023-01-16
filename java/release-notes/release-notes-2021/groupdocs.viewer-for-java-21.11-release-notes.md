@@ -360,14 +360,14 @@ There are lots of features, improvements, and bug-fixes in this release, most no
   ```java
      /**
      * Scalable Vector Graphics File (.svgz) is a Scalar Vector Graphics file that uses XML based text format, compressed by GZIP for describing the appearance of an image.
-     * Learn more about this file format <a href="https://fileinfo.com/extension/svgz">here</a>.
+     * Learn more about this file format <a href="https://docs.fileformat.com/image/svgz/">here</a>.
      */
      SVGZ("Compressed Scalable Vector Graphics File", ".svgz"),
     
      /**
       * <p>
       * Lotus Notes Database (.nsf)
-      * Learn more about this file format https://fileinfo.com/extension/nsf
+      * Learn more about this file format https://docs.fileformat.com/database/nsf/
       * </p>
       */
      NSF("Lotus Notes Database", ".nsf")
@@ -399,7 +399,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
      /**
       * <p>
       * ompressed Windows Metafile (.wmz) represents Microsoft Windows Metafile (WMF) compressed in GZIP archvive - for storing vector as well as bitmap-format images data.
-      * Learn more about this file format <a href="https://fileinfo.com/extension/wmz#compressed_windows_metafile">here</a>.
+      * Learn more about this file format <a href="https://docs.fileformat.com/image/wmz/">here</a>.
       * </p>
       */
      WMZ("Compressed Windows Metafilee", ".wmz")
@@ -412,7 +412,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
   
      /**
       * Adobe Illustrator (.ai) is a file format for Adobe Illustrator drawings.
-      * Learn more about this file format <a href="https://fileinfo.com/extension/ai#adobe_illustrator_file">here</a>.
+      * Learn more about this file format <a href="https://docs.fileformat.com/image/ai/">here</a>.
       */
      AI("Adobe Illustrator", ".ai")
   
@@ -430,7 +430,7 @@ There are lots of features, improvements, and bug-fixes in this release, most no
   
      /**
       * Email Mailbox File (.mbox)
-      * Learn more about this file format <a href="https://fileinfo.com/extension/mbox">here</a>.
+      * Learn more about this file format <a href="https://docs.fileformat.com/email/mbox/">here</a>.
       */
      MBOX("Email Mailbox File", ".mbox")
   ```

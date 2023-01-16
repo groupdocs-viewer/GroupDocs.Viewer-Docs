@@ -75,19 +75,19 @@ Fields were added to [GroupDocs.Viewer.FileType](<https://reference.groupdocs.co
 ```csharp
 /// <summary>
 /// PowerShell script module (.psm1) a file format for PowerShell module scripts.
-/// Learn more about this file format <a href="https://fileinfo.com/extension/psm1">here</a>. 
+/// Learn more about this file format <a href="https://docs.fileformat.com/">here</a>. 
 /// </summary>
 public static readonly FileType PSM1 = new FileType("Windows PowerShell script module", ".psm1");
 
 /// <summary>
 /// PowerShell script file (.ps1) a file format for Windows PowerShell Cmdlet files.
-/// Learn more about this file format <a href="https://fileinfo.com/extension/ps1">here</a>. 
+/// Learn more about this file format <a href="https://docs.fileformat.com/">here</a>. 
 /// </summary>
 public static readonly FileType PS1 = new FileType("Windows PowerShell Cmdlet File ", ".ps1");
 
 /// <summary>
 /// PowerShell script module manifest (.psd1) a file format for PowerShell module manifest scripts.
-/// Learn more about this file format <a href="https://fileinfo.com/extension/psd1">here</a>. 
+/// Learn more about this file format <a href="https://docs.fileformat.com/">here</a>. 
 /// </summary>
 public static readonly FileType PSD1 = new FileType("Windows PowerShell script module manifest", ".psd1");
 ```

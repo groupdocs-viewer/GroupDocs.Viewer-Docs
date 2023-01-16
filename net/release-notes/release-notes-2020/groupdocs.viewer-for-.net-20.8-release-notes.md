@@ -54,13 +54,13 @@ Two fields added to [GroupDocs.Viewer.FileType](<https://reference.groupdocs.com
 ```csharp
 /// <summary>
 /// Scalable Vector Graphics File (.svgz) is a Scalar Vector Graphics file that uses XML based text format, compressed by GZIP for describing the appearance of an image.
-/// Learn more about this file format <a href="https://fileinfo.com/extension/svgz">here</a>
+/// Learn more about this file format <a href="https://docs.fileformat.com/image/svgz/">here</a>
 /// </summary>
 public static readonly FileType SVGZ = new FileType("Compressed Scalable Vector Graphics File", ".svgz")
 
 /// <summary>
 /// Lotus Notes Database (.nsf)
-/// Learn more about this file format <a href="https://fileinfo.com/extension/nsf">here</a>.
+/// Learn more about this file format <a href="https://docs.fileformat.com/database/nsf/">here</a>.
 /// </summary>
 public static readonly FileType NSF = new FileType("Lotus Notes Database", ".nsf")
 ```

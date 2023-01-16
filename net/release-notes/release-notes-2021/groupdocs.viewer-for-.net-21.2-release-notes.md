@@ -112,7 +112,7 @@ Fields were added to [GroupDocs.Viewer.FileType](<https://reference.groupdocs.co
 ```csharp
 /// <summary>
 /// Email Mailbox File (.mbox)
-/// Learn more about this file format <a href="https://fileinfo.com/extension/mbox">here</a>. 
+/// Learn more about this file format <a href="https://docs.fileformat.com/email/mbox/">here</a>. 
 /// </summary>
 public static readonly FileType MBOX = new FileType("Email Mailbox File", ".mbox");
 ```
