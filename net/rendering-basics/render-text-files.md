@@ -258,6 +258,27 @@ using (var viewer = new Viewer("TermsOfService.txt"))
 {{< /tab >}}
 {{< /tabs >}}
 
+## Detect text files encoding
+
+To detect text file encoding automatically, enable the [LoadOptions.DetectEncoding](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/detectencoding/) property. When Viewer fails to detect encoding it falls back to [LoadOptions.Encoding](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/encoding/) property value.
+
+{{< tabs "example9">}}
+{{< tab "C#" >}}
+```cs
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+var loadOptions = new LoadOptions();
+loadOptions.DetectEncoding = true;
+using (var viewer = new Viewer("message.txt", loadOptions))
+{
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    viewer.View(viewOptions);
+}          
+```
+{{< /tab >}}
+{{< /tabs >}}
+
 ## Specify rendering options
 
 GroupDocs.Viewer supports the [TextOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/textoptions) class that allows you to specify different options for rendering text files. To access these options, use the [TextOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/textoptions) property for one of the following classes (depending on the output file format):
@@ -275,7 +296,7 @@ The `TextOptions` class contains the following properties:
 
 The following example demonstrates how to change the number of rows displayed on each HTML page:
 
-{{< tabs "example9">}}
+{{< tabs "example10">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
