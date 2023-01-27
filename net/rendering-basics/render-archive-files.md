@@ -34,6 +34,7 @@ GroupDocs.Viewer supports the following archive file formats:
 
 * [.7Z (7-Zip Compressed File)](https://docs.fileformat.com/compression/7z)
 * [.BZ2 (Bzip2 Compressed File)](https://docs.fileformat.com/compression/bz2)
+* [.CPIO (Unix CPIO Archive)](https://fileinfo.com/extension/cpio)
 * [.GZ (Gnu Zipped Archive)](https://docs.fileformat.com/compression/gz)
 * [.RAR (WinRAR Compressed Archive)](https://docs.fileformat.com/compression/rar)
 * [.TAR (Consolidated Unix File Archive)](https://docs.fileformat.com/compression/tar)

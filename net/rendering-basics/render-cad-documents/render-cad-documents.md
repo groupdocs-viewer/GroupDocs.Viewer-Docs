@@ -44,6 +44,8 @@ GroupDocs.Viewer supports the following CAD and 3D file formats:
 * [Common File Format](https://docs.fileformat.com/cad/cf2/) (.CF2)
 * [IGES (Initial Graphics Exchange Specification) Drawing](https://docs.fileformat.com/cad/igs/) (.IGS)
 * [HPGL (Hewlett-Packard Graphics Language) Plot File](https://docs.fileformat.com/cad/hpgl/) (.HPG)
+* [FilmBox 3D File Format](https://docs.fileformat.com/3d/fbx/) (.FBX)
+* [Design Web Format XPS File](https://docs.fileformat.com/cad/dwfx/) (.DWFX)
 
 GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 

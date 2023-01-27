@@ -17,6 +17,7 @@ This topic lists file formats supported by GroupDocs.Viewer for .NET.
 | --- | --- | :---: |
 | [7Z](https://docs.fileformat.com/compression/7z/) | 7-Zip Compressed File | ![(tick)](/viewer/net/images/check-blue.png) |
 | [BZ2](https://docs.fileformat.com/compression/bz2) | Bzip2 Compressed File | ![(tick)](/viewer/net/images/check-blue.png) |
+[CPIO](https://fileinfo.com/extension/cpio) | Unix CPIO Archive | ![(tick)](/viewer/net/images/check-blue.png) |
 | [GZ](https://docs.fileformat.com/compression/gz) | Gnu Zipped Archive | ![(tick)](/viewer/net/images/check-blue.png) |
 | [RAR](https://docs.fileformat.com/compression/rar) | WinRAR Compressed Archive | ![(tick)](/viewer/net/images/check-blue.png) |
 | [TAR](https://docs.fileformat.com/compression/tar) | Consolidated Unix File Archive | ![(tick)](/viewer/net/images/check-blue.png) |
@@ -34,9 +35,11 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [CF2](https://docs.fileformat.com/cad/cf2/) | Common File Format | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [DGN](https://docs.fileformat.com/cad/dgn) | MicroStation Design File (V7) | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [DWF](https://docs.fileformat.com/cad/dwf/) | Design Web Format | ![(tick)](/viewer/net/images/check-blue.png) | |
+| [DWFX](https://docs.fileformat.com/cad/dwfx/) | Design Web Format XPS File | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [DWG](https://docs.fileformat.com/cad/dwg/) | AutoCAD Drawing | ![(tick)](/viewer/net/images/check-blue.png) | Supported formats: <br> Release 11, 12, 13, 14. <br> DWG 2000, 2000i, 2002. <br> DWG 2004, 2005, 2006. <br> DWG 2010, 2011, 2012. <br> DWG 2013, 2014, 2015, 2016. |
 | [DWT](https://docs.fileformat.com/cad/dwt/) | AutoCAD Drawing Template | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [DXF](https://docs.fileformat.com/cad/dxf/) | Drawing Exchange Format | ![(tick)](/viewer/net/images/check-blue.png) | |
+| [FBX](https://docs.fileformat.com/3d/fbx/) | FilmBox 3D File Format | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [HPG](https://docs.fileformat.com/cad/hpgl/) | HPGL (Hewlett-Packard Graphics Language) Plot File | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [IFC](https://docs.fileformat.com/cad/ifc/) | Industry Foundation Classes | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [IGS](https://docs.fileformat.com/cad/igs/) | IGES (Initial Graphics Exchange Specification) Drawing | ![(tick)](/viewer/net/images/check-blue.png) |
