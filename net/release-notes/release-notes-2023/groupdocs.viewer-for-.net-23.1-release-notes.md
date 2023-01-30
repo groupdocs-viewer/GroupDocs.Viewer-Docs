@@ -190,7 +190,7 @@ The method `Encoding.RegisterProvider(CodePagesEncodingProvider.Instance)` ensur
 
 ### .NET 6 DLL removed from the package 
 
-In this version, .NET 6 assembly was removed due to package size limitations. The distribution packages includes two assemblies: .NET Framework 4.0 and .NET Standard 2.1. The .NET Standard assembly can be used in .NET Core and .NET applications on Winodows and Linux systems. In case you're running your app on Linux, please check [.NET Standard Assembly Limitations](/viewer/net/net-standard-assembly-limitations) for limitations and dependencies.
+In this version, .NET 6 assembly was removed due to package size limitations. The distribution packages includes two assemblies: .NET Framework 4.0 and .NET Standard 2.1. The .NET Standard assembly can be used in .NET Core and .NET applications on Windows and Linux systems. In case you're running your app on Linux, please check [.NET Standard Assembly Limitations](/viewer/net/net-standard-assembly-limitations) for limitations and dependencies.
 
 {{< alert style="info" >}}
 
