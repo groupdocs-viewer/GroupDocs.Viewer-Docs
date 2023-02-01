@@ -10,14 +10,15 @@ hideChildren: False
 toc: True
 ---
 
-There are 1 enhancement and 10 bug fixes in this release.
+There are 1 enhancement and 11 bug fixes in this release.
 
 ## Full list of changes in this release
 
 | ID           | Summary                                                                                      | Category  |
 | ------------ | -------------------------------------------------------------------------------------------- | --------- |
 |VIEWERNET-3847|Make readable exception for old versions of XLS files                                         |Enhancement|
-|VIEWERNET-3781|Compression method is not supported for specific PSD file                                     |Fix|
+|VIEWERJAVA-2777|GroupDocs.Viewer loads just part of the document                                             |Fix        |
+|VIEWERNET-3781|Compression method is not supported for specific PSD file                                     |Fix        |
 |VIEWERNET-3014|Not all data rendered                                                                         |Fix        |
 |VIEWERNET-3435|"Failed to render CAD document into PDF." exception when rendering DXF file                   |Fix        |
 |VIEWERNET-3448|"Could not load file. File is corrupted or damaged." exception when rendering DWG file        |Fix        |
