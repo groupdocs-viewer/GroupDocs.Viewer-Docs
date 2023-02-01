@@ -8,4 +8,3 @@ keywords:
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-#### Articles in this section

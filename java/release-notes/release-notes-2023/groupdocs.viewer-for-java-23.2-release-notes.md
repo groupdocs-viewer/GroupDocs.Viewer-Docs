@@ -10,18 +10,14 @@ hideChildren: False
 toc: True
 ---
 
-There are features and bug fixes in this release.
-
-* Added additional method compression support for PSD
-* Make readable exception for old versions of XLS file
-* Temp files overflow when opening a file from stream for PSD AI files
+There are 1 enhancement and 10 bug fixes in this release.
 
 ## Full list of changes in this release
 
 | ID           | Summary                                                                                      | Category  |
 | ------------ | -------------------------------------------------------------------------------------------- | --------- |
-|VIEWERNET-3781|Compression method is not supported for specific PSD file                                     |Enhancement|
 |VIEWERNET-3847|Make readable exception for old versions of XLS files                                         |Enhancement|
+|VIEWERNET-3781|Compression method is not supported for specific PSD file                                     |Fix|
 |VIEWERNET-3014|Not all data rendered                                                                         |Fix        |
 |VIEWERNET-3435|"Failed to render CAD document into PDF." exception when rendering DXF file                   |Fix        |
 |VIEWERNET-3448|"Could not load file. File is corrupted or damaged." exception when rendering DWG file        |Fix        |
