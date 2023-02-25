@@ -1,10 +1,10 @@
 ---
-id: groupdocs-viewer-for-net-23-1-release-notes
-url: viewer/net/groupdocs-viewer-for-net-23-1-release-notes
-title: GroupDocs.Viewer for .NET 23.1 Release Notes
-weight: 120
-description: "Bugs-fixes that are shipped in GroupDocs.Viewer for .NET 23.1"
-keywords: release notes, groupdocs.viewer, .net, 23.1
+id: groupdocs-viewer-for-net-latest-release-notes
+url: viewer/net/groupdocs-viewer-for-net-latest-release-notes
+title: Latest release (January 2023)
+weight: 0
+description: "Changes that shipped in the latest version of GroupDocs.Viewer for .NET"
+keywords: release notes, groupdocs.viewer for .net, latest
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
