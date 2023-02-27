@@ -11,6 +11,8 @@ hideChildren: False
 toc: True
 aliases:
     - /viewer/net/how-to-view-pdf-documents-using-csharp/
+    - /viewer/net/disable-characters-grouping/
+    - /viewer/net/adjust-image-quality/
 ---
 [GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) allows you to render your PDF files in HTML, PNG, and JPEG formats. Use this library to implement a simple PDF viewer within your .NET application (web or desktop).
 

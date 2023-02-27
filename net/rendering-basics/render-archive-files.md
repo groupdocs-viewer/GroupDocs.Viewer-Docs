@@ -21,6 +21,7 @@ aliases:
     - /viewer/net/navigation-in-archive-files
     - /viewer/net/how-to-convert-archive-files-to-html
     - /viewer/net/set-filename-when-rendering-archive-files
+    - /viewer/net/set-filename-when-viewing-archive-files
 ---
 [GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) allows you to view the contents of archive files in HTML, PDF, PNG, and JPEG formats. You do not need to use third-party file archiver and compression software to display archive file contents within your .NET application (web or desktop). 
 
