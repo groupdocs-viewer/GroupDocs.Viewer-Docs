@@ -2,7 +2,7 @@
 id: release-notes-2023
 url: viewer/java/release-notes-2023
 title: Release Notes - 2023
-weight: 92
+weight: 3
 description: ""
 keywords: 
 productName: GroupDocs.Viewer for Java

@@ -1,10 +1,10 @@
 ---
-id: groupdocs-viewer-for-java-23-2-release-notes
-url: viewer/java/groupdocs-viewer-for-java-23-2-release-notes
-title: GroupDocs.Viewer for Java 23.2 Release Notes
-weight: 10
-description: "Bugs-fixes that are shipped in GroupDocs.Viewer for Java 23.2"
-keywords: release notes, groupdocs.viewer, java, 23.2
+id: groupdocs-viewer-for-java-latest-release-notes
+url: viewer/java/groupdocs-viewer-for-java-latest-release-notes
+title: Latest release (February 2023)
+weight: 0
+description: "Changes that shipped in the latest version of GroupDocs.Viewer for Java"
+keywords: release notes, groupdocs.viewer for java, latest
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
