@@ -4,7 +4,7 @@ url: viewer/java/render-presentations
 title: Render PowerPoint presentations as HTML, PDF, and image files
 linkTitle: Render PowerPoint presentations
 weight: 4
-description: "This topic describes how to use the GroupDocs.Viewer for Java API to convert PowerPoint presentations to HTML, PDF, PNG, and JPEG formats."
+description: "This topic describes how to use the GroupDocs.Viewer Java API to convert PowerPoint presentations to HTML, PDF, PNG, and JPEG formats."
 keywords: convert pptx to pdf, convert pptx to html, convert pptx to jpeg, convert ppt to pdf, convert presentation to pdf, convert ppt to html, convert presentation to html, convert presentation to image
 productName: GroupDocs.Viewer for Java
 hideChildren: False
@@ -43,7 +43,7 @@ GroupDocs.Viewer can detect the document format automatically based on informati
 
 ## Render presentations as HTML
 
-Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/) class instance and pass it to the [Viewer#view](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method to convert a presentation file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
+Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method to convert a presentation file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
 
 ### Create an HTML file with embedded resources
 
@@ -72,7 +72,7 @@ The following image demonstrates the result:
 
 ### Create an HTML file with external resources
 
-If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions#forExternalResources](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/#forExternalResources-java.lang.String-java.lang.String-java.lang.String-) method and pass the following parameters:
+If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.forExternalResources](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/#forExternalResources-java.lang.String-java.lang.String-java.lang.String-) method and pass the following parameters:
 
   * The output file path format
   * The path format for the folder with external resources
@@ -89,8 +89,7 @@ try (Viewer viewer = new Viewer("sample.pptx")) {
     // Create an HTML file for each slide.
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    HtmlViewOptions viewOptions = HtmlViewOptions.forExternalResources(
-            "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    HtmlViewOptions viewOptions = HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.view(viewOptions);
 }
 ```
@@ -103,7 +102,7 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 ## Render presentations as PDF
 
-Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfviewoptions/) class instance and pass it to the [Viewer#view](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method to convert a presentation file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
+Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfviewoptions/) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method to convert a presentation file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
 {{< tabs "example3">}}
 {{< tab "Java" >}}
@@ -126,7 +125,7 @@ The following image demonstrates the result:
 
 ## Render presentations as PNG
 
-Create a [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pngviewoptions/) class instance and pass it to the [Viewer#view](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method to convert a presentation file to PNG. Use the [PngViewOptions#setHeight(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pngviewoptions/#setHeight-int-) and [PngViewOptions#setWidth(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pngviewoptions/#setWidth-int-) properties to specify the output image size in pixels.
+Create a [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pngviewoptions/) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method to convert a presentation file to PNG. Use the [PngViewOptions.SetHeight](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pngviewoptions/#setHeight-int-) and [PngViewOptions.SetWidth](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pngviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
 {{< tabs "example4">}}
 {{< tab "Java" >}}
@@ -153,7 +152,7 @@ The following image demonstrates the result:
 
 ## Render presentations as JPEG
 
-Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/jpgviewoptions/) class instance and pass it to the [Viewer#view](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method to convert a presentation file to JPEG. Use the [JpgViewOptions#setHeight(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/jpgviewoptions/#setHeight-int-) and [JpgViewOptions#setWidth(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/jpgviewoptions/#setWidth-int-) properties to specify the output image size in pixels.
+Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/jpgviewoptions/) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method to convert a presentation file to JPEG. Use the [JpgViewOptions.SetHeight](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/jpgviewoptions/#setHeight-int-) and [JpgViewOptions.SetWidth](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/jpgviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
 
 {{< tabs "example5">}}
@@ -177,9 +176,9 @@ try (Viewer viewer = new Viewer("sample.pptx")) {
 
 ## Specify image resolution
 
-When you convert presentations with high-resolution images to other formats, you may need to lower image resolution to reduce the output file size. GroupDocs.Viewer supports the [PresentationOptions#setResolution(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/presentationoptions/#setResolution-com.groupdocs.viewer.options.Resolution-) option that allows you to compress images in the output HTML and PDF files. To access this option, use the [HtmlViewOptions#setPresentationOptions(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/#setPresentationOptions-com.groupdocs.viewer.options.PresentationOptions-) or [PdfViewOptions#setPresentationOptions(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfviewoptions/#setPresentationOptions-com.groupdocs.viewer.options.PresentationOptions-) property (depending on the output file format).
+When you convert presentations with high-resolution images to other formats, you may need to lower image resolution to reduce the output file size. GroupDocs.Viewer supports the [PresentationOptions.SetResolution](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/presentationoptions/#setResolution-com.groupdocs.viewer.options.Resolution-) method that allows you to compress images in the output HTML and PDF files. To access this option, use the [HtmlViewOptions.SetPresentationOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/#setPresentationOptions-com.groupdocs.viewer.options.PresentationOptions-) or [PdfViewOptions.SetPresentationOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfviewoptions/#setPresentationOptions-com.groupdocs.viewer.options.PresentationOptions-) methods (depending on the output file format).
 
-You can set the [PresentationOptions#setResolution(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/presentationoptions/#setResolution-com.groupdocs.viewer.options.Resolution-) property to one of the following [Resolution](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/resolution) field values:
+You can use the [PresentationOptions.SetResolution](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/presentationoptions/#setResolution-com.groupdocs.viewer.options.Resolution-) method to one of the following [Resolution](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/resolution) field values:
 
 | Resolution field | DPI | Remarks |
 | --- | --- | --- |
@@ -210,7 +209,7 @@ try (Viewer viewer = new Viewer("sample.pptx")) {
 
 ## Render hidden slides
 
-If your presentation contains hidden slides, enable the [ViewOptions#setRenderHiddenPages(boolean)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/baseviewoptions/#setRenderHiddenPages-boolean-) property for a target view to display these slides in the output HTML, PDF, or image files.
+If your presentation contains hidden slides, use the [ViewOptions.SetRenderHiddenPages](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/baseviewoptions/#setRenderHiddenPages-boolean-) method for a target view to display these slides in the output HTML, PDF, or image files.
 
 The following code example uses this option to display hidden slides in the generated PDF file:
 
@@ -232,7 +231,7 @@ try (Viewer viewer = new Viewer("sample.pptx")) {
 
 ## Render comments
 
-Enable the [ViewOptions#setRenderComments(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/baseviewoptions/#setRenderComments-boolean-) option for a target view to display comments in the output file when you convert your presentation to HTML, PDF, PNG, or JPEG format.
+Use the [ViewOptions.SetRenderComments](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/baseviewoptions/#setRenderComments-boolean-) method for a target view to display comments in the output file when you convert your presentation to HTML, PDF, PNG, or JPEG format.
 
 {{< tabs "example8">}}
 {{< tab "Java" >}}
@@ -260,7 +259,7 @@ A presentation file can contain speaker notes that help presenters recall import
 
 ![Speaker notes in Microsoft PowerPoint](/viewer/java/images/rendering-basics/render-presentations/presentation-speaker-notes.png)
 
-Enable the [ViewOptions#setRenderNotes(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/baseviewoptions/#setRenderNotes-boolean-) property for a target view to display speaker notes in the output HTML, PDF, or image files.
+Use the [ViewOptions.SetRenderNotes](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/baseviewoptions/#setRenderNotes-boolean-) method for a target view to display speaker notes in the output HTML, PDF, or image files.
 
 The following code sample renders a presentation with speaker notes to PDF:
 
