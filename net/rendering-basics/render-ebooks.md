@@ -4,7 +4,7 @@ url: viewer/net/render-ebooks
 title: Render EBooks as HTML, PDF, and image files
 linkTitle: Render EBooks
 weight: 8
-description: "This topic describes how to use the GroupDocs.Viewer Java API to convert EBooks to HTML, PDF, PNG, and JPEG formats."
+description: "This topic describes how to use the GroupDocs.Viewer .NET API to convert EBooks to HTML, PDF, PNG, and JPEG formats."
 keywords: convert ebook to pdf, convert ebook to jpeg, convert ebook to pdf, convert ebook to jpg, convert ebook to png
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
