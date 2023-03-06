@@ -1,7 +1,7 @@
 ---
 id: render-ebooks
 url: viewer/net/render-ebooks
-title: Render Ebooks as HTML, PDF, and image files
+title: Render EBooks as HTML, PDF, and image files
 linkTitle: Render EBooks
 weight: 8
 description: "This topic describes how to use the GroupDocs.Viewer Java API to convert EBooks to HTML, PDF, PNG, and JPEG formats."
