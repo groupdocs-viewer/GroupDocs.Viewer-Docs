@@ -10,23 +10,23 @@ hideChildren: False
 toc: True
 ---
 
-Despite the fact that GroupDocs.Viewer implements caching to local drive out of the box, it also allows you to cache rendering result in your own way. You can do this by using custom `Cache` interface implementation.
+By default, GroupDocs.Viewer implements caching to local. But you can cache rendering result in your own way. To do this, use the `Cache` interface implementation.
 
 ## Implementing Memory Cache
 
-In this section we'll build custom `MemoryCache` class that is based on `HashMap` and demonstrate how to use it with GroupDocs.Viewer.
+In this section we build the custom `MemoryCache` class that is based on `HashMap` and demonstrate how to use it in GroupDocs.Viewer.
 
-The complete listing of `MemoryCache.java` file.
+The complete listing of the `MemoryCache.java` file is below:
 
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
-package com;
+import com.groupdocs.viewer.caching.Cache;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.groupdocs.viewer.caching.Cache;
 
 public class MemoryCache implements Cache {
     private final Map<String, Object> data = new HashMap<>();
@@ -58,47 +58,57 @@ public class MemoryCache implements Cache {
     }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 Example usage of `MemoryCache` type.
 
+{{< tabs "example2">}}
+{{< tab "Java" >}}
 ```java
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.ViewerSettings;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+// ...
+
 MemoryCache memoryCache = new MemoryCache("cache-key-prefix-");
 ViewerSettings viewerSettings = new ViewerSettings(memoryCache);
 
 try (Viewer viewer = new Viewer("sample.docx", viewerSettings)) {
-   HtmlViewOptions options = HtmlViewOptions.forEmbeddedResources();
+    HtmlViewOptions options = HtmlViewOptions.forEmbeddedResources();
 
     long currentTimeMillis = System.currentTimeMillis();
     viewer.view(options);
     currentTimeMillis = System.currentTimeMillis() - currentTimeMillis;
     System.out.println("Time taken on first call to View method " + currentTimeMillis + " (ms).");
-    
+
     currentTimeMillis = System.currentTimeMillis();
     viewer.view(options);
     currentTimeMillis = System.currentTimeMillis() - currentTimeMillis;
     System.out.println("Time taken on second call to View method " + currentTimeMillis + " (ms).");
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 After running the code above the similar output will be printed in a console:
 
-```bash
-Time taken on first call to View method 4982 (ms).
-Time taken on second call to View method 2 (ms).
-```
+![](/viewer/java/images/how-to-use-custom-cache-implementation.png)
 
 ## Using Custom Model Classes for Caching
 
-Default Viewer models implements Serializable interface, but sometimes it is not enough. Sometimes you would like to use 3rd party libraries for serialization. Lots of them want you to annotate classes and fields of classes, that would be serialized.
-Fortunately you can create custom models with fields you want and configure Viewer to use them.
+Default Viewer models implements the serializable interface. But you may want to use other library for serialization. Lots of them want you to annotate classes and fields of classes that should be serialized.
+You can create custom models with appropriate fields and configure GroupDocs.Viewer to use these models.
 
-To do it you need:
+To do this, follow these steps:
 
-* Create custom models, implementing Viewer model's interfaces, like ViewInfo, FileInfo and so on (Full list of interfaces can be found investigating `CacheableFactory` class)
-* Create custom model factory (`CustomFactory`) extending class `CacheableFactory`. Each method in the class must be overridden to return instance of your cache model.
-* Configure Viewer to use CustomFactory using method `CacheableFactory.setInstance(new CustomFactory())` before creating Viewer object.
-* After that configure Viewer cache as usual. Viewer will put your model's objects into method `set` of Cache implementation so that you can serialize it in any way.
+1. Create custom models, implementing Viewer model's interfaces, like `ViewInfo`, `FileInfo`, and so on (see full list of interfaces in the `CacheableFactory` class).
+2. Create custom model factory (`CustomFactory`) extending class `CacheableFactory`. Each method in the class must be overridden to return the instance of your cache model.
+3. Configure GroupDocs.Viewer to use the `CustomFactory` using the `CacheableFactory.setInstance(new CustomFactory())` method before creating the `Viewer` object.
+4. Configure the GroupDocs.Viewer cache as usual. GroupDocs.Viewer put your model's objects into the `set` method of the cache implementation so you can serialize it in any way.
 
+{{< tabs "example3">}}
+{{< tab "Java" >}}
 ```java
 public class CustomFileInfoJackson implements FileInfo {
     @JsonProperty("FileType")
@@ -127,23 +137,31 @@ public class CustomFileInfoJackson implements FileInfo {
     }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
+{{< tabs "example4">}}
+{{< tab "Java" >}}
 ```java
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.ViewerSettings;
+import com.groupdocs.viewer.caching.Cache;
+import com.groupdocs.viewer.caching.extra.CacheableFactory;
+// ...
 
-public class CustomFactory extends CacheableFactory {
+CacheableFactory.setInstance(new CustomFactory());
 
-    //...
-
-    @Override
-    public FileInfo newFileInfo(FileType fileType) {
-        return new CustomFileInfoJackson(fileType.name());
-    }
-
-    //...
-
+Cache cache = new JacksonCache();
+ViewerSettings settings = new ViewerSettings(cache);
+try (Viewer viewer = new Viewer("document.doc", settings)) {
+    // Do work
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
+{{< tabs "example5">}}
+{{< tab "Java" >}}
 ```java
 public class JacksonCache implements Cache {
 
@@ -179,7 +197,11 @@ public class JacksonCache implements Cache {
 
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
+{{< tabs "example6">}}
+{{< tab "Java" >}}
 ```java
     CacheableFactory.setInstance(new CustomFactory());
 
@@ -189,3 +211,5 @@ public class JacksonCache implements Cache {
         // Do work
     }
 ```
+{{< /tab >}}
+{{< /tabs >}}

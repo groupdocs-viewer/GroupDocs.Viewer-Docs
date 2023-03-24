@@ -1,7 +1,7 @@
 ---
 id: pdf-viewer-protect-pdf-documents
 url: viewer/net/protect-pdf-documents
-title: Protect PDF
+title: Protect PDF document
 weight: 2
 description: "Protect PDF documents when rendering documents using GroupDocs.Viewer for .NET"
 productName: GroupDocs.Viewer for .NET

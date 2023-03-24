@@ -1,15 +1,19 @@
 ---
 id: system-requirements
 url: viewer/java/system-requirements
-title: System Requirements
+title: System requirements
 weight: 3
 description: "GroupDocs.Viewer for Java does not require any external software to be installed such as Microsoft Word, Microsoft Excel or Microsoft PowerPoint for file rendering."
-keywords: "system requirements, groupdocs viewer java"
+keywords: file rendering
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
 ---
+{{< alert style="info" >}}
+
 GroupDocs.Viewer for Java does not require any external software to be installed such as Microsoft Word, Microsoft Excel or Microsoft PowerPoint. To install GroupDocs.Viewer for Java just follow one of the ways as described in the [Installation]({{< ref "installation" >}}) section.
+
+{{< /alert >}}
 
 ## Supported Operating Systems
 

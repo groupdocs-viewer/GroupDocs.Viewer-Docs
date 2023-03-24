@@ -2,7 +2,7 @@
 id: classnotfoundexception-bouncycastleprovider
 url: viewer/java/classnotfoundexception-bouncycastleprovider
 title: ClassNotFoundException BouncyCastleProvider exception
-weight: 2
+weight: 1
 description: "This article is about ClassNotFoundException: BouncyCastleProvider exception"
 keywords: 
 productName: GroupDocs.Viewer for Java

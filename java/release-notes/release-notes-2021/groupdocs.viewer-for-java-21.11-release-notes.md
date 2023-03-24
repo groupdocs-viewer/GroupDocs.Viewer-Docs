@@ -14,46 +14,46 @@ hideChildren: False
 
 There are lots of features, improvements, and bug-fixes in this release, most notable are:
 
-* [Added Lotus Notes Database (.nsf) file-format support]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-lotus-notes-files/_index.md">}})
-* [Added Compressed SVG File (.svgz) file-format support]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-svg-and-svgz-files.md">}})
+* Added Lotus Notes Database (.nsf) file-format support
+* Added Compressed SVG File (.svgz) file-format support
 * Added Adobe Photoshop Large Document Format (.psb) file format support
-* [Added feature to render only figures without scheme for Visio files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-visio-documents/how-to-render-visio-files-figures.md">}})
-* [Added logging support]({{< ref "viewer/java/developer-guide/logging/how-to-set-up-logging.md">}})
-* [Add Compressed Windows Metafile (.wmz) file-format support]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-wmf-and-wmz-files.md">}})
-* [Add Corel Metafile exchange (.cmx) file-format support]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-cmx-files.md">}})
-* [Add Corel Draw (.cdr) file-format support]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-cdr-files.md">}})
-* [Added Support rendering presentations with shapes and text with 3D effects]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-powerpoint-presentations/converting-presentations-with-shapes-and-text-with-3-d-effects.md">}})
-* [Rendering archives in HTML with Windows explorer behavior]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/navigation-in-archive-files.md">}})
+* Added feature to render only figures without scheme for Visio files
+* Added logging support]({{< ref "viewer/java/developer-guide/logging.md">}})
+* Added Compressed Windows Metafile (.wmz) file-format support
+* Added Corel Metafile exchange (.cmx) file-format support
+* Added Corel Draw (.cdr) file-format support
+* Added Support rendering presentations with shapes and text with 3D effects
+* Rendering archives in HTML with Windows explorer behavior
 * Automatically recalculating CAD drawing size when it is required
 * Fixed images and text positioning when rendering Excel as HTML/image/PDF in Linux
 * Improved default font support when converting PowerPoint files to PNG/JPG
-* RenderSinglePage option is now supported by getViewInfo method
-* [AI (Adobe Illustrator) file-format support]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-ai-files.md">}})
-* [Microsoft Compiled HTML Help  (CHM) file-format support]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-web-documents/how-to-convert-and-view-chm-files.md">}})
-* Add Truevision TGA (TARGA) (tga) file-format support
-* Add Animated PNG (apng) file-format support
+* Added RenderSinglePage option is now supported by getViewInfo method
+* Added AI (Adobe Illustrator) file-format support
+* Added Microsoft Compiled HTML Help  (CHM) file-format support
+* Added Truevision TGA (TARGA) (tga) file-format support
+* Added Animated PNG (apng) file-format support
 * Render multipaged PDF to single page HTML
 * Email Mailbox File (.mbox) file-format support
-* [Time Format and TimeZone setting when rendering Email documents to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-e-mail-messages/datetime-format-and-time-zone-when-rendering-to-html.md">}})
-* [Render spreadsheet by page breaks]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/render-by-page-breaks.md">}})
-* [Support MaxHeight and MaxWidth options when rendering to JPG/PNG]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-png-or-jpeg/set-image-size-limits.md">}})
-* [Support for PC3 file printer configuration when rendering CAD formats]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-apply-pc3-config-file.md">}})
+* Time Format and TimeZone setting when rendering Email documents to HTML
+* Render spreadsheet by page breaks
+* Support MaxHeight and MaxWidth options when rendering to JPG/PNG
+* Support for PC3 file printer configuration when rendering CAD formats
 * Render presentations documents to single-page HTML
-* Add support of rendering text in PDF files as images
+* Added support of rendering text in PDF files as images
 * Support play/stop animation when rendering APNG images
 * Support play/stop animation when rendering GIF images
 * Support quality setting when rendering OneNote files
 * Support Width/Height/MaxWidth/MaxHeight params by getViewInfo method
-* [Add support of resizing images when rendering to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-html/set-image-size-limits.md">}})
-* [Add support of resizing images when rendering to PDF]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-pdf/set-image-size-limits.md">}})
+* Added support of resizing images when rendering to HTML
+* Added support of resizing images when rendering to PDF
 * Watermark styles correct page layout
 * Descriptive exception message when opening password-protected ODP/OTP presentations
 * Default font is applied when rendering PPTX
 * Support rendering of VCF files that contain contacts list - now VCF with multiple contacts are supported
 * Improve rendering performance for files without header - for CAD files
-* [Optimize output HTML for printing]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-html/optimize-html-for-printing.md">}})
+* Optimize output HTML for printing
 * Render spreadsheets similar to Excel (by page breaks) by default
-* [Define page size when rendering TXT to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/configure-count-of-characters-per-row-and-rows-per-page-to-render.md">}})
+* Define page size when rendering TXT to HTML
 * Fixed rendering of large GIF files
 * Improved rendering Spreadsheet files
 
@@ -326,8 +326,6 @@ There are lots of features, improvements, and bug-fixes in this release, most no
 * In this version we've improved viewing of archives - now you can navigate between archive folder with Windows explorer behavior:
   
     ![Windows explorer navigation style](/viewer/java/images/navigation-in-archive-files/navigation.gif)
-  
-    For more details and code snippets check [Folder navigation in archive files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/navigation-in-archive-files.md">}}) documentation article.
 
 * In this version we've improved viewing of archives - when you use [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) with `setRenderSinglePage(true)` and calling the `getViewInfo` method you get 1 page in result info:
 
@@ -1166,8 +1164,6 @@ And related `TextOptions` class to configure rendering text files e.g TXT, LOG.
     public void setMaxRowsPerPage(int maxRowsPerPage) { ... }
   }
 ```
-
-See how to use new properties in [Define page size when rendering TXT to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-text-files/configure-count-of-characters-per-row-and-rows-per-page-to-render.md">}}).
 
 ### com.groupdocs.viewer.options.ViewInfoOptions class
 

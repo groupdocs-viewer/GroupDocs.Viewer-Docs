@@ -89,9 +89,9 @@ using GroupDocs.Viewer.Options;
 
 using (var viewer = new Viewer("four-pages.xlsx"))
 {
-    // Specify number of rows for every page.
+    // Specify number of rows and columns for every page.
     int rowsPerPage = 15;
-    int columnsPerPage = 7;;
+    int columnsPerPage = 7;
     // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
     // Split by number of rows and columns.

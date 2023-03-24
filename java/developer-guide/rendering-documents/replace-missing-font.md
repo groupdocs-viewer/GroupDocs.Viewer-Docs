@@ -2,23 +2,30 @@
 id: replace-missing-font
 url: viewer/java/replace-missing-font
 title: Replace missing font
-weight: 8
-description: "This article explains how to replace missing font when viewing documents with GroupDocs.Viewer within your Java applications."
+weight: 7
+description: "This article explains how to replace missing font when rendering documents with GroupDocs.Viewer within your Java applications."
 keywords: missing font,rendering documents
 productName: GroupDocs.Viewer for Java
 hideChildren: False
+aliases:
+    - /viewer/java/how-to-substitute-missing-font-when-converting-presentations/
 ---
-GroupDocs.Viewer enables you to set default font name which may be useful in following cases:
+You can specify the default font name for a document. GroupDocs.Viewer uses this font during rendering instead of any not installed fonts. For example, if the document includes a font containing non-English characters, specify the default font name to ensure that GroupDocs.Viewer replaces any missing font with one which has the same character set. 
 
-1. You want to generally specify the default font to fall back on if a particular font in a document cannot be found during rendering;
-2. The document uses a font that contains non-English characters and you want to make sure that any missing font is replaced with one which has the same character set available.
+The following code snippet shows how to set the default font name:
 
-Following code snippet shows how to set default font name.
-
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
-    try (Viewer viewer = new Viewer("sample.pptx")) {
-        HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
-        viewOptions.setDefaultFontName("Courier New");
-        viewer.view(viewOptions);
-    }
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+// ...
+
+try (Viewer viewer = new Viewer("sample.pptx")) {
+    HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
+    viewOptions.setDefaultFontName("Courier New");
+    viewer.view(viewOptions);
+}  
 ```
+{{< /tab >}}
+{{< /tabs >}}

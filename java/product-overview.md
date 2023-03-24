@@ -1,83 +1,50 @@
 ---
 id: product-overview
 url: viewer/java/product-overview
-title: Product Overview
+title: GroupDocs.Viewer for Java overview
+linkTitle: Product overview
 weight: 1
 description: "GroupDocs.Viewer for Java enables you to convert files to HTML, PNG, JPEG, PDF file formats, and save attachments without relying on third-party applications. GroupDocs.Viewer for Java is cross-platform class library."
-keywords: convert files, HTML, PNG, JPEG, PDF file format
+keywords: convert files, render files, view files, HTML, PDF, PNG, JPEG
 productName: GroupDocs.Viewer for Java
 toc: True
 ---
+GroupDocs.Viewer for Java is a high-performance and cross-platform library that allows you to build desktop and web [file viewer applications](https://en.wikipedia.org/wiki/File_viewer).
 
-<img src="/viewer/java/images/home.png" alt="groupdocs-viewer-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
+With its powerful and straightforward API, you can execute the following actions:
 
-GroupDocs.Viewer for Java is a cross-platform class library that enables you to build awesome file viewer applications.
+* View documents in the [most popular file formats](/viewer/java/supported-document-formats/) (DOCX, XLSX, PPTX, PDF, DWG, PSD, HTML, ZIP, and more) by rendering them as HTML, PDF, PNG, and JPEG files. You no longer need third-party software to view files within your Java application.
+* Load documents from [different sources](/viewer/java/loading-documents-from-different-sources/) (a file, a stream, a URL, an FTP server, Amazon S3, Azure Blob Storage, and so on).
+* Open [password-protected documents](/viewer/java/load-password-protected-document/).
+* Render the entire document or specific pages.
+* Embed all external resources in the output HTML files, generate [responsive](/viewer/java/render-with-responsive-layout/) and [minified](/viewer/java/minify-html/) HTML pages.
+* [Protect](/viewer/java/protect-pdf-documents/) the output PDF files and [reorder their pages](/viewer/java/reorder-pages/).
+* [Rotate pages](/viewer/java/flip-or-rotate-pages/) in the output files.
+* Specify whether to render notes and comments contained in the source document.
+* Extract text from PDF files and images.
+* [Extract archive contents](/viewer/java/how-to-extract-and-save-attachments/) and [save files](/viewer/java/how-to-extract-and-save-attachments/) attached to PDF documents, email messages, and Outlook data files.
+* [Obtain basic information](/viewer/java/how-to-get-file-type-and-pages-count/) about the source document (the file type, number of pages, and page information).
+* [Replace missing document fonts](/viewer/java/replace-missing-font/) or [specify a folder](/viewer/java/set-custom-fonts/) where GroupDocs.Viewer should look for these fonts.
+* [Add text watermarks](/viewer/java/add-text-watermark/) to the output HTML, PDF, and image files.
+* [Implement caching](/viewer/java/caching-results/) to increase document loading speed and optimize application performance.
 
-GroupDocs.Viewer supports most of the popular document formats such as DOCX, XLSX, PPTX, PDF, ZIP, and others.
+You can use GroupDocs.Viewer across multiple platforms and operation systems:
 
-With GroupDocs.Viewer for Java you can render files to HTML, JPEG, PNG, and PDF formats, list and save attachments and embedded files without third-party libraries and applications.
+* Windows, Linux, and macOS
+* Java Framework 2.0 and higher
+* Java Core 3.1
+* Java 5 and higher
 
-------
+## Get started with GroupDocs.Viewer for Java
 
-## Benefits of using GroupDocs.Viewer
+If you are new to GroupDocs.Viewer, see the following topics first:
 
-Using GroupDocs.Viewer for Java in your project gives you the following benefits:
+* [System requirements](/viewer/java/system-requirements/)
+* [Installation](/viewer/java/installation/)
+* [Licensing](/viewer/java/licensing-and-subscription/)
+* [Document rendering basics](/viewer/java/document-rendering-basics/)
 
-- Focused set of features;
-- Platform independence;
-- Independence from third-party applications;
-- Performance and scalability;
-- Simple public API.
+## Technical support
 
-### Focused Set of Features
+If you encounter an issue while using GroupDocs.Viewer or have a technical question, feel free to create a post in our [Free Support Forum](https://forum.groupdocs.com/c/viewer/9). If free support is not sufficient, you can submit a ticket to our [Paid Support Helpdesk](https://helpdesk.groupdocs.com/).
 
-GroupDocs.Viewer for Java features can be divided into two main areas.
-
-#### Rendering Documents
-
-We use the term ["rendering"]({{< ref "viewer/java/developer-guide/rendering-documents/_index.md" >}}) in GroupDocs.Viewer to describe the process of converting a document into a file format, paginated, or that has the concept of pages.
-
-You can convert whole documents or particular pages to HTML, JPEG, PNG or PDF using only GroupDocs.Viewer for Java class-library.
-
-#### Retrieving Document Information
-
-With GroupDocs.Viewer for Java you can read basic file and document information such as file-type and count of output pages that can be rendered.
-
-#### Processing Attachments
-
-We use the term "attachments" in GroupDocs.Viewer for email attachments, embedded files, and compressed files.
-
-With GroupDocs.Viewer you can list and save:
-
-- Email attachments;
-- Files that are embedded in PDF files;
-- Email messages contained in Outlook and LotusNotes data files;
-- Compressed files;
-
-### Platform Independence
-
-GroupDocs.Viewer for Java covers most of the popular development environments and deployment platforms. Its API can be used to develop applications for a wide range of operating systems, such as Windows, Linux, and Mac OS, and various platforms. Read ["System Requirements"]({{< ref "viewer/java/getting-started/system-requirements" >}}) for more details.
-
-You can use GroupDocs.Viewer for Java to build any type of Java application.
-
-### Independence from Other Applications
-
-GroupDocs.Viewer does not require third-party applications, for example, Microsoft Office, to be installed on the machine in order to work. All GroupDocs components are completely independent. This makes GroupDocs.Viewer a great alternative to automation in terms of security, stability, scalability/speed, price, and features for working with documents and related tasks.
-
-### Performance and Scalability
-
-We do care about performance. GroupDocs.Viewer is designed to be used to render thousands of files and utilize as minimum resources as possible. We do performance testing to make sure we do not have performance degradations from version to version.
-
-GroupDocs.Viewer is a single Java class-library that can be deployed with any Java application by simply copying it or installing via Maven. You do not need to worry about any other services or modules.
-
-### Simple Public API
-
-GroupDocs.Viewer for Java public API was designed to be simple and intuitive. The methods are doing what you wold expect from them and nothing more.
-
-## Pricing and Policies
-
-Please visit the ["Licensing and Subscription"]({{< ref "viewer/java/getting-started/licensing-and-subscription" >}}) page for information on licenses and review the ["Pricing Information"](https://purchase.groupdocs.com/pricing/viewer/java) page for details on pricing.
-
-## Technical Support
-
-We do provide free and paid support for all of our users, including evaluation. For more information on GroupDocs.Viewer technical support please check ["Technical Support"]({{< ref "technical-support" >}}) page.

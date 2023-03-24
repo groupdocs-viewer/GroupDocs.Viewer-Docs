@@ -1,24 +1,35 @@
 ---
 id: specify-file-type-when-loading-a-document
 url: viewer/java/specify-file-type-when-loading-a-document
-title: Set file type when loading a document
-weight: 1
-description: "Set file type when loading document with GroupDocs.Viewer using Java."
+title: Specify file type when loading a document
 keywords: set file type
+weight: 3
+description: "This article explains how to specify the file type when loading a document with GroupDocs.Viewer within your Java applications."
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
 
-When passing file path or `InputStream` into [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class constructor the GroupDocs.Viewer determines file type by file extension but when file passed as a stream the GroupDocs.Viewer tries to detect file type by file signature or file content and this may affect application performance. The API enables you to specify the file type of the processing document by passing [LoadOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/LoadOptions) object as the second parameter of `Viewer` class constructor.
+You can specify the file type using [LoadOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/LoadOptions).
 
-The following code sample shows how to pass the file type when loading a document.
+The following code snippet shows how to specify the file type when loading a document:
 
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
-   FileInputStream inputStream = new FileInputStream("sample.docx");
-   LoadOptions loadOptions = new LoadOptions(FileType.DOCX);
+import com.groupdocs.viewer.FileType;
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+import com.groupdocs.viewer.options.LoadOptions;
+// ...
 
-   try (Viewer viewer = new Viewer(inputStream, loadOptions)) {
-       HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
-       viewer.view(viewOptions);
-   }
+// Specify the file type.
+LoadOptions loadOptions = new LoadOptions(FileType.DOCX);
+
+// Render a file using inputStream.
+try (Viewer viewer = new Viewer(inputStream, loadOptions)) {
+    HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
+    viewer.view(viewOptions);
+}
 ```
+{{< /tab >}}
+{{< /tabs >}}

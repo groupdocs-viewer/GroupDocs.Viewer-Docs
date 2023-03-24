@@ -1,61 +1,49 @@
 ---
 id: how-to-get-file-type-and-pages-count
 url: viewer/java/how-to-get-file-type-and-pages-count
-title: How to get file type and pages count
+title: Get the format family and the additional information
 weight: 4
-description: "This article explains how to get file type and pages count with GroupDocs.Viewer using Java."
-keywords: "groupdocs viewer java, file type, pages count"
+description: "This article explains how to get the format family and the additional information using Java / C# with GroupDocs.Viewer for Java."
+keywords: 
 productName: GroupDocs.Viewer for Java
 hideChildren: False
-toc: True
 ---
-GroupDocs.Viewer for Java API enables you to get file type and pages count with [getViewInfo()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getViewInfo(com.groupdocs.viewer.options.ViewInfoOptions)) method that returns a [ViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/ViewInfo) object.
+A format family is a group of several file types for which an application provides additional information. For example, archive files (.7z, .rar, .zip, etc.) or Outlook files (.ost, .pst) are format families.
 
-For the following document types GroupDocs.Viewer provides additional information:
+You can get the format family and the additional information using the [getViewInfo](https://reference.groupdocs.com/viewer/java/groupdocs.viewer/viewer/methods/getviewinfo) method that returns a [ViewInfo](https://reference.groupdocs.com/viewer/java/groupdocs.viewer.results/viewinfo) object.
 
-* Archive files - a collection of folders inside the archive (see [How to list archive folders]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-list-archive-folders.md" >}}));
-* CAD drawings - a collection of layouts and layers (see [How to get CAD layers and layouts]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-cad-drawings/how-to-get-cad-layers-and-layouts.md" >}}));
-* Outlook Data files - a collection of folders inside Outlook Data file (see [How to get Outlook Data file folders]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-outlook-data-files/how-to-get-outlook-data-file-folders.md" >}}));
-* PDF documents - a flag that indicates whether document printing is allowed or not (see [How to check that PDF printing not allowed]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-pdf-documents/how-to-check-that-pdf-printing-not-allowed.md" >}}));
-* MS Project documents - project start/end dates (see [How to get MS Project start and end dates]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-ms-project-files/how-to-get-ms-project-start-and-end-dates.md" >}})).
+GroupDocs.Viewer provides additional information for the following format families:
 
-## Loading document from file
+* Archive files - a collection of folders in the archive (see [Obtain information about folders in an archive file]({{< ref "/viewer/java/rendering-basics/render-archive-files.md" >}}));
+* CAD drawings - a collection of layouts and layers (see [Obtain information about existing layouts and layers]({{< ref "/viewer/java/rendering-basics/rendering-cad-documents/render-cad-documents.md" >}}));
+* Outlook data files - a collection of folders (see [Obtain information about folders in an Outlook data file]({{< ref "/viewer/java/rendering-basics/render-outlook-data-files.md" >}}));
+* PDF documents - a flag that indicates whether document printing is allowed (see [Obtain information about a PDF file]({{< ref "/viewer/java/rendering-basics/render-pdf-documents.md" >}}));
+* Microsoft Project files - the project's start and end dates (see [Obtain information about a Project file]({{< ref "/viewer/java/rendering-basics/render-ms-project-files.md" >}})).
 
+## Get the file type and the pages count from a file
+
+The following code snippet shows how to get the file type and the pages count from a file:
+
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.ViewInfoOptions;
+import com.groupdocs.viewer.results.ViewInfo;
+// ...
+
 try (Viewer viewer = new Viewer("sample.pdf")) {
+    // Get file information.
     ViewInfoOptions viewInfoOptions = ViewInfoOptions.forHtmlView();
     ViewInfo viewInfo = viewer.getViewInfo(viewInfoOptions);
-
+    // Display file type and pages count.
     System.out.println("Document type is: " + viewInfo.getFileType());
     System.out.println("Pages count: " + viewInfo.getPages().size());
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-After running the code above you will see an output like this:
+The following image shows a sample console output:
 
-```bash
-Document type is: Portable Document Format File (.pdf)
-Pages count: 10
-```
-
-## Loading document from stream
-
-```java
-FileInputStream inputStream = new FileInputStream("sample.pdf");
-LoadOptions loadOptions = new LoadOptions(FileType.PDF);
-
-try (Viewer viewer = new Viewer(inputStream, loadOptions)) {
-    ViewInfoOptions viewInfoOptions = ViewInfoOptions.forHtmlView();
-    ViewInfo viewInfo = viewer.getViewInfo(viewInfoOptions);
-
-    System.out.println("Document type is: " + viewInfo.getFileType());
-    System.out.println("Pages count: " + viewInfo.getPages().size());
-}
-```
-
-After running the code above you will see an output like this:
-
-```bash
-Document type is: Portable Document Format File (.pdf)
-Pages count: 10
-```
+![](/viewer/java/images/how-to-get-file-type-and-pages-count.png)

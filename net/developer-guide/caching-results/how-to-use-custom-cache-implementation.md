@@ -8,7 +8,7 @@ description: "This article explains how to use custom caching implementation wit
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-By default, GroupDocs.Viewer implements caching to local. But you can cache rendering result in your own way, for example, using Redis Cache. To do this, use the ICache interface implementation.  
+By default, GroupDocs.Viewer implements caching to local. But you can cache rendering result in your own way, for example, using Redis Cache. To do this, use the `ICache` interface implementation.  
 
 This example uses the StackExchange.Redis NuGet package: https://www.nuget.org/packages/StackExchange.Redis/. Download and install it before you start.
 

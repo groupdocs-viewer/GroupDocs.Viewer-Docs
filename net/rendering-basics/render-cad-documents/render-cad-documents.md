@@ -21,7 +21,6 @@ aliases:
     - /viewer/net/render-all-layouts
     - /viewer/net/render-layers
     - /viewer/net/how-to-view-dwf-file-layers
-    - /viewer/net/how-to-convert-and-view-cff2-and-cf2-files
 ---
 [GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) allows you to render your CAD drawings and 3D models in HTML, PDF, PNG, and JPEG formats. You do not need to use AutoCAD or other CAD software to load and view CAD files within your .NET application (web or desktop).
 
@@ -45,8 +44,6 @@ GroupDocs.Viewer supports the following CAD and 3D file formats:
 * [Common File Format](https://docs.fileformat.com/cad/cf2/) (.CF2)
 * [IGES (Initial Graphics Exchange Specification) Drawing](https://docs.fileformat.com/cad/igs/) (.IGS)
 * [HPGL (Hewlett-Packard Graphics Language) Plot File](https://docs.fileformat.com/cad/hpgl/) (.HPG)
-* [FilmBox 3D File Format](https://docs.fileformat.com/3d/fbx/) (.FBX)
-* [Design Web Format XPS File](https://docs.fileformat.com/cad/dwfx/) (.DWFX)
 
 GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 

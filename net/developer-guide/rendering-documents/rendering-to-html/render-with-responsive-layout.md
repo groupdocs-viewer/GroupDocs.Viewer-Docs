@@ -8,7 +8,7 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
 
-Responsive design aims to make web pages render well on a variety of devices. GroupDocs.Viewer provides the [RenderResponsive](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions/properties/renderresponsive) property of [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) class to render HTML pages with responsive layout. 
+Responsive design aims to make web pages render well on a variety of devices. GroupDocs.Viewer provides the [RenderResponsive](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions/properties/renderresponsive) property of the [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) class to render HTML pages with responsive layout. 
 
 The following code snippet shows how to render a .docx document to HTML with responsive layout:
 

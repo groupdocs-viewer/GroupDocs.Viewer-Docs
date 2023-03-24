@@ -234,37 +234,13 @@ The following image demonstrates the result:
 
 ![Render an Apple Numbers spreadsheet to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-pdf.png)
 
-### Optimize (compress) output PDF
-
-Optimized PDF document won't contain common fonts like Times New Roman and Arial. Grid lines is also optimized to reduce output file size. Depending on the content of the input spreadsheet the output PDF size can be reduced up to 40%. To optimize the output PDF set [PdfViewOptions.Optimize](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions/optimize/) property to `true`.
-
-{{< tabs "example8">}}
-{{< tab "C#" >}}
-```cs
-using GroupDocs.Viewer;
-using GroupDocs.Viewer.Options;
-// ...
-using (var viewer = new Viewer("employees.xlsx"))
-{
-    var viewOptions = new PdfViewOptions();
-    viewOptions.Optimize = true;
-    viewer.View(viewOptions);
-}
-```
-{{< /tab >}}
-{{< /tabs >}}
-
-The following image shows the properties of two PDF files where the left one is not optimized and has a size of 11.2 MB and the right one is 6.6 MB.
-
-![Not optimized and optimized PDF files comparison](/viewer/net/images/rendering-basics/render-spreadsheets/optimize-output-pdf.png)
-
 ## Render spreadsheets as PNG
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a spreadsheet file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
 ### Convert an Excel workbook to PNG
 
-{{< tabs "example9">}}
+{{< tabs "example8">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -290,7 +266,7 @@ The following image demonstrates the result:
 
 ### Convert an Apple Numbers spreadsheet to PNG
 
-{{< tabs "example10">}}
+{{< tabs "example9">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -321,7 +297,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 ### Convert an Excel workbook to JPEG
 
-{{< tabs "example11">}}
+{{< tabs "example10">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -344,7 +320,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 
 ### Convert an Apple Numbers spreadsheet to JPEG
 
-{{< tabs "example12">}}
+{{< tabs "example11">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -374,41 +350,20 @@ GroupDocs.Viewer can detect the following separators:
 * A comma (the default separator)
 * A semicolon
 
-{{< tabs "example13">}}
+{{< tabs "example12">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer(@"sample.csv"))
+using (var viewer = new Viewer("sample.csv"))
 {
     // Convert the spreadsheet to HTML.
     // {0} is replaced with the current page number in the file names.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
     // Detect a CSV/TSV separator.
     viewOptions.SpreadsheetOptions.DetectSeparator = true;
-    viewer.View(viewOptions);
-}          
-```
-{{< /tab >}}
-{{< /tabs >}}
-
-## Detect a CSV/TSV encoding
-
-To detect CSV/TSV file encoding, enable the [LoadOptions.DetectEncoding](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/detectencoding/) property. When Viewer fails to detect encoding it falls back to [LoadOptions.Encoding](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/encoding/) property value.
-
-{{< tabs "example14">}}
-{{< tab "C#" >}}
-```cs
-using GroupDocs.Viewer;
-using GroupDocs.Viewer.Options;
-// ...
-var loadOptions = new LoadOptions();
-loadOptions.DetectEncoding = true;
-using (var viewer = new Viewer("employees.csv", loadOptions))
-{
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }          
 ```
@@ -423,7 +378,7 @@ GroupDocs.Viewer allows you to obtain information about the source spreadsheet f
 2. Call the [Viewer.GetViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method and pass the `ViewInfoOptions` instance to this method as a parameter.
 3. Use the [Pages](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/properties/pages) property of the returned [ViewInfo](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo) object to iterate through the list of worksheets and retrieve the worksheet names.
 
-{{< tabs "example15">}}
+{{< tabs "example13">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
