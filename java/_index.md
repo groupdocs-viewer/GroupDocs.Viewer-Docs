@@ -11,7 +11,7 @@ fullWidth: True
 ---
 <img src="/viewer/java/images/home.png" alt="groupdocs-viewer-java-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
-GroupDocs.Viewer for Java is a powerful, high-performance, and cross-platform library that allows you to build desktop and web [file viewer applications](https://en.wikipedia.org/wiki/File_viewer) using C#.
+GroupDocs.Viewer for Java is a powerful, high-performance, and cross-platform library that allows you to build desktop and web [file viewer applications](https://en.wikipedia.org/wiki/File_viewer).
 
 GroupDocs.Viewer supports over [170 popular file formats](/viewer/java/supported-document-formats). Load text documents, spreadsheets, presentations, PDF files, web pages, email messages, and images and render/display them in HTML, PDF, PNG, and JPEG formats. You can render the entire document or specific pages.
 

@@ -21,16 +21,6 @@ try (Viewer viewer = new Viewer(url)) {
     HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
     viewer.view(viewOptions);
 }
-
-private InputStream getRemoteFile(String url) {
-    WebRequest request = WebRequest.create(url);
-    WebResponse response = request.getResponse();
-    return getFileStream(response);
-}
-
-private InputStream getFileStream(WebResponse response) {
-    return response.getResponseStream();
-}
 ```
 {{< /tab >}}
 {{< /tabs >}}

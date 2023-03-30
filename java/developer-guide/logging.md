@@ -24,6 +24,13 @@ The following code snippet shows how to log to a file using the [FileLogger](htt
 {{< tabs "example1">}}
 {{< tab "Java" >}}
 ```java
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.ViewerSettings;
+import com.groupdocs.viewer.logging.FileLogger;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+import com.groupdocs.viewer.options.ViewOptions;
+// ...
+
 // Create logger and specify the output file
 FileLogger fileLogger = new FileLogger("output.log");
 

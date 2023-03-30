@@ -53,14 +53,29 @@ The following code snippet shows how to render a .docx document to HTML with emb
 ```java
 import com.groupdocs.viewer.Viewer;
 import com.groupdocs.viewer.options.HtmlViewOptions;
+import com.groupdocs.viewer.options.LoadOptions;
+import com.groupdocs.viewer.options.ViewInfoOptions;
+import com.groupdocs.viewer.results.Page;
+import com.groupdocs.viewer.results.ViewInfo;
 // ...
 
-try (Viewer viewer = new Viewer("sample.docx")) {
-    // Create an HTML files.
-    // {0} is replaced with the current page number in the file name.
-    HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources("page_{0}.html");
-    viewer.view(viewOptions);
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setPassword("password");
+
+try (Viewer viewer = new Viewer("sample.docx", loadOptions)) {
+    HtmlViewOptions options = HtmlViewOptions.forEmbeddedResources("page_{0}.html");
+    viewer.view(options);
+
+    final ViewInfo viewInfo = viewer.getViewInfo(ViewInfoOptions.forHtmlView());
+    final List<Page> pages = viewInfo.getPages();
+
+    for (Page page : pages) {
+        final int pageNumber = page.getNumber();
+        System.out.println("Page number: " + pageNumber + ", file saved as 'page_" + pageNumber + ".html'");
+    }
 }
+
+
 ```
 {{< /tab >}}
 {{< /tabs >}}

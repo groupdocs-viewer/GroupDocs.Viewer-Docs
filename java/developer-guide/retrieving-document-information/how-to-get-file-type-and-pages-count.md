@@ -3,7 +3,7 @@ id: how-to-get-file-type-and-pages-count
 url: viewer/java/how-to-get-file-type-and-pages-count
 title: Get the format family and the additional information
 weight: 4
-description: "This article explains how to get the format family and the additional information using Java / C# with GroupDocs.Viewer for Java."
+description: "This article explains how to get the format family and the additional information using Java with GroupDocs.Viewer for Java."
 keywords: 
 productName: GroupDocs.Viewer for Java
 hideChildren: False

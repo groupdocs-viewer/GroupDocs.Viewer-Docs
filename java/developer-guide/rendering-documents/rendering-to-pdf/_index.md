@@ -3,7 +3,7 @@ id: rendering-to-pdf
 url: viewer/java/rendering-to-pdf
 title: Render to PDF
 weight: 13
-description: "Rendering files to PDF with GroupDocs.Viewer for Java. It means that you can embed PDF in websites or applications by using this C# API"
+description: "Rendering files to PDF with GroupDocs.Viewer for Java. It means that you can embed PDF in websites or applications by using this Java API"
 keywords: embed pdf in website, rendering to pdf, c# api, rendering pdf
 productName: GroupDocs.Viewer for Java
 hideChildren: False

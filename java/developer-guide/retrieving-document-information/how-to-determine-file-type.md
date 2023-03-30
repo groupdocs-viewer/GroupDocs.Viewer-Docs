@@ -3,7 +3,7 @@ id: how-to-determine-file-type
 url: viewer/java/how-to-determine-file-type
 title: Determine the file type
 weight: 4
-description: "This article explains how to get a type of a file with GroupDocs.Viewer for Java using Java / C#."
+description: "This article explains how to get a type of a file with GroupDocs.Viewer for Java using Java."
 keywords: 
 productName: GroupDocs.Viewer for Java
 hideChildren: False

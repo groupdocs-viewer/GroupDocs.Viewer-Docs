@@ -143,18 +143,17 @@ public class CustomFileInfoJackson implements FileInfo {
 {{< tabs "example4">}}
 {{< tab "Java" >}}
 ```java
-import com.groupdocs.viewer.Viewer;
-import com.groupdocs.viewer.ViewerSettings;
-import com.groupdocs.viewer.caching.Cache;
-import com.groupdocs.viewer.caching.extra.CacheableFactory;
-// ...
+public class CustomFactory extends CacheableFactory {
 
-CacheableFactory.setInstance(new CustomFactory());
+    //...
 
-Cache cache = new JacksonCache();
-ViewerSettings settings = new ViewerSettings(cache);
-try (Viewer viewer = new Viewer("document.doc", settings)) {
-    // Do work
+    @Override
+    public FileInfo newFileInfo(FileType fileType) {
+        return new CustomFileInfoJackson(fileType.name());
+    }
+
+    //...
+
 }
 ```
 {{< /tab >}}
@@ -203,13 +202,20 @@ public class JacksonCache implements Cache {
 {{< tabs "example6">}}
 {{< tab "Java" >}}
 ```java
-    CacheableFactory.setInstance(new CustomFactory());
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.ViewerSettings;
+import com.groupdocs.viewer.caching.Cache;
+import com.groupdocs.viewer.caching.extra.CacheableFactory;
+// ...
 
-    Cache cache = new JacksonCache();
-    ViewerSettings settings = new ViewerSettings(cache);
-    try (Viewer viewer = new Viewer("document.doc", settings)) {
-        // Do work
-    }
+CacheableFactory.setInstance(new CustomFactory());
+
+Cache cache = new JacksonCache();
+ViewerSettings settings = new ViewerSettings(cache);
+try (Viewer viewer = new Viewer("document.doc", settings)) {
+    // Do work
+}
+
 ```
 {{< /tab >}}
 {{< /tabs >}}

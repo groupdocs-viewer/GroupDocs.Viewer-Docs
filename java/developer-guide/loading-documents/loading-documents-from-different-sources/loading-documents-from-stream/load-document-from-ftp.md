@@ -23,7 +23,7 @@ import com.groupdocs.viewer.Viewer;
 import com.groupdocs.viewer.options.HtmlViewOptions;
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
-// …
+// ...
 
 FTPClient ftpClient = new FTPClient();
 

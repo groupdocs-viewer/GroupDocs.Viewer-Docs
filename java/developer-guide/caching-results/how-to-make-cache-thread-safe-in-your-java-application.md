@@ -28,23 +28,30 @@ The FileCache class uses a local disk to read and write output files. You need t
 {{< tabs "example1">}}
 {{< tab "Java" >}}
 ```java
-import com.groupdocs.viewer.Viewer;
-import com.groupdocs.viewer.ViewerSettings;
-import com.groupdocs.viewer.logging.FileLogger;
-import com.groupdocs.viewer.options.HtmlViewOptions;
-import com.groupdocs.viewer.options.ViewOptions;
-// ...
+class ThreadSafeCache implements Cache {
+    private final Cache _cache;
 
-// Create logger and specify the output file
-FileLogger fileLogger = new FileLogger("output.log");
+    public ThreadSafeCache(Cache cache) {
+        _cache = cache;
+    }
 
-// Create ViewerSettings and specify FileLogger
-ViewerSettings viewerSettings = new ViewerSettings(fileLogger);
+    public void set(String key, Object value) {
+        synchronized (_cache) {
+            _cache.set(key, value);
+        }
+    }
 
-try (Viewer viewer = new Viewer("sample.pdf", viewerSettings)) {
-    ViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources("result.html");
+    public Object get(String key) {
+        synchronized (_cache) {
+            return _cache.get(key);
+        }
+    }
 
-    viewer.view(viewOptions);
+    public List<String> getKeys(String filter) {
+        synchronized (_cache) {
+            return _cache.getKeys(filter);
+        }
+    }
 }
 ```
 {{< /tab >}}

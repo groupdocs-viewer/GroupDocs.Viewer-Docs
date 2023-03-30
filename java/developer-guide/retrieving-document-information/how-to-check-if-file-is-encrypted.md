@@ -3,8 +3,8 @@ id: how-to-check-if-file-is-encrypted
 url: viewer/java/how-to-check-if-file-is-encrypted
 title: Check if a file is encrypted
 weight: 5
-description: "This article explains how to check if a file is encrypted using Java / C# with GroupDocs.Viewer for Java."
-keywords: check, file, encrypted, C#, Java
+description: "This article explains how to check if a file is encrypted using Java with GroupDocs.Viewer for Java."
+keywords: check, file, encrypted, Java
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---

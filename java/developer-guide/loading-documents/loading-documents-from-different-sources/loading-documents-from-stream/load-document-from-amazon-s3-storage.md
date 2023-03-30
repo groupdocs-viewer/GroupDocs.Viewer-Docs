@@ -24,7 +24,7 @@ import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 import com.groupdocs.viewer.Viewer;
 import com.groupdocs.viewer.options.HtmlViewOptions;
-// …
+// ...
 
 AmazonS3Client client = new AmazonS3Client();
 GetObjectRequest request = new GetObjectRequest("my-bucket-name", "sample.docx");
