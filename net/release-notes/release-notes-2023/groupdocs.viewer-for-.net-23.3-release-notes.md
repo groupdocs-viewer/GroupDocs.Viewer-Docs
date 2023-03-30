@@ -16,13 +16,15 @@ There are --???-- + features, enhancements, and bug fixes in this release.
 
 | Key | Category | Summary |
 | --- | --- | --- |
-|PROBATION-1532|Feature|[Add Amazon AZW3/KF8 ebook (.azw3) file-format support](#added-support-for-amazon-azw3-ebook)|
+|VIEWERNET-4283|Feature|[Add Amazon AZW3/KF8 ebook (.azw3) file-format support](#added-support-for-amazon-azw3-ebook)|
+|VIEWERNET-4272|Feature|[Highlight search text in file preview](#highlight-search-text-in-file-preview)|
 
 ## Major Features
 
 This release includes --???-- features and --???-- enhancement:
 
 * [Added support for Amazon AZW3/KF8 ebook](#added-support-for-amazon-azw3-ebook)
+* [Highlight search text in file preview](#highlight-search-text-in-file-preview)
 
 ### Added support for Amazon AZW3 ebook
 
@@ -38,3 +40,41 @@ public static readonly FileType AZW3 = new FileType("Amazon Kindle Format 8 (KF8
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+### Highlight search text in file preview
+
+Search term can be set now in the file preview request. It provides ability to apply search term immediately after opening the file.
+
+There are two possible cases
+* set search term in the http request query params
+
+{{< tabs "search term in query param">}}
+{{< tab "http request" >}}
+  http://[group-docs-viewer-ui-url]/viewer?file=<file_name>&search=<search_term>
+{{</ tab >}}
+{{</ tabs >}}
+
+* set search term in the backend api
+{{< tabs "search term from backend">}}
+{{< tab "backend api" >}}
+``` cs
+/// <summary>
+/// Implement ISearchTermResolver interface
+/// and add implementation to the services
+/// </summary>
+  class MySearchTermResolver : ISearchTermResolver
+    {
+        public Task<string> ResolveSearchTermAsync(string filepath)
+        {
+            /// resolve search term by file path
+            return Task.FromResult("<search term>");
+        }
+    }
+	
+  ........ 	
+	
+  services.AddSingleton<ISearchTermResolver, MySearchTermResolver>();
+  
+{{</ tab >}}
+{{</ tabs >}}
+
