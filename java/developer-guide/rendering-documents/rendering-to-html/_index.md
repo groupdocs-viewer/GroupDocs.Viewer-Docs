@@ -1,52 +1,68 @@
 ---
-id: document-viewer-html-viewer
-url: viewer/java/document-viewer-html-viewer
-title: Rendering to HTML
-weight: 101
-description: "HTML Viewer component by GroupDocs allows to render and display documents of PDF, Word, Excel, PowerPoint and many other file formats within Java applications."
+id: rendering-to-html
+url: viewer/java/rendering-to-html
+title: Render to HTML
+weight: 11
+description: "With GroupDocs.Viewer for Java you can render files to HTML format. As a simple usecase please see how easily you can convert Microsoft Word to clean html."
 keywords: render files, rendering pdf, convert word to clean html
 productName: GroupDocs.Viewer for Java
-hideChildren: True
+hideChildren: False
 toc: True
 ---
-Document viewer can operate in different rendering modes, HTML, Image and PDF (see [Features Overview]({{< ref "viewer/java/getting-started/features-overview.md" >}}) for more information). This article will describe on how to view documents in HTML mode with HTML Viewer.
+When rendering to HTML, GroupDocs.Viewer renders each page of the source document as a separate HTML document.
 
-In HTML rendering mode all pages of the source documents are rendered as separate HTML pages. 
+GroupDocs.Viewer for Java provides two options to manage CSS, fonts, images, and other resources:
 
-For HTML rendering mode following [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) are available:
-* [HtmlViewOptions.forEmbeddedResources()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#forEmbeddedResources()) - all resources such as styles, fonts, and graphics are integrated into an HTML pages.
- 
-    * Pros: No external files which makes more convenient to save result to a stream.        
-    * Cons: Larger page size and as a result slower loading and rendering of an HTML document in a browser.        
-* [HtmlViewOptions.forExternalResources()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#forExternalResources()) - all the resources, such as styles, fonts, and graphics are external.    
-    * Pros: Smaller page size as a page includes only markup and links to external resources. Faster HTML document loading and rendering in a browser as browsers can load multiple external resources simultaneously.        
-    * Cons: External files, since all resources will be stored next to an HTML page or in a specific directory.  
+1. HTML with external resources stores page resources as separate files. This allows reusing common resources and results in reducing page size and loading speed.
+2. HTML with embedded resources integrates page resources into HTML. This makes each document page self-sufficient but results in increasing page size and loading speed.
 
-With GroupDocs.Viewer for Java API HTML rendering became simple and intuitive. Just follow these steps:
-* Create a new instance of the [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class and pass the source document path as a constructor parameter.
-* Instantiate the [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) object according to your requirements (for embedded or external HTML resources) and specify saving path format for rendered document pages.
-* Call [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method of [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class instance and pass [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) to it.
+To render files to HTML, follow these steps:
 
-## Rendering to HTML with embedded resources
-
-The following code shows how to render document to HTML with embedded resources.  
-
-```java
-try (Viewer viewer = new Viewer("sample.docx")) {
-    HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
-    viewer.view(viewOptions);
-}
-```
+1. Create an instance of the [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class. Specify the source document path as a constructor parameter.
+2. Instantiate the [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/) object. Specify a path to save the rendered  pages.
+3. Call the [View.view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method of the [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) object. Specify the [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/) object as the parameter.
 
 ## Rendering to HTML with external resources
 
-The following code shows how to render document to HTML with external resources.  
+The following code snippet shows how to render a .docx document to HTML with external resources: 
 
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+// ...
+
 try (Viewer viewer = new Viewer("sample.docx")) {
-    HtmlViewOptions viewOptions = HtmlViewOptions.forExternalResources();
+    // Create an HTML file for each page.
+    // Specify the HTML file names and location of external resources.
+    // {0} and {1} are replaced with the current page number and resource name, respectively.
+    HtmlViewOptions viewOptions = HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.view(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-{{< alert style="info" >}}GroupDocs.Viewer also provides an ability to customize rendering to HTML by setting additional options. To learn more about caching customization please refer to the following guides: [HTML Viewer - Exclude fonts]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-html/html-viewer-exclude-fonts.md" >}}), [HTML Viewer - Minify HTML]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-html/html-viewer-minify-html.md" >}}) and [HTML Viewer - Responsive layout]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-html/html-viewer-responsive-layout.md" >}}){{< /alert >}}
+## Rendering to HTML with embedded resources
+
+The following code snippet shows how to render a .docx document to HTML with embedded resources:
+
+{{< tabs "example2">}}
+{{< tab "Java" >}}
+```java
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+// ...
+
+try (Viewer viewer = new Viewer("sample.docx")) {
+    // Create an HTML files.
+    // {0} is replaced with the current page number in the file name.
+    HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources("page_{0}.html");
+    viewer.view(viewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+For details, please refer to the following pages:

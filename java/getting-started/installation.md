@@ -1,10 +1,11 @@
 ---
 id: installation
 url: viewer/java/installation
-title: Installation
+title: Install GroupDocs.Viewer for Java
+linkTitle: Installation
 weight: 4
-description: "GroupDocs.Viewer for Java installation"
-keywords: "groupdocs viewer java, installation, maven"
+keywords: installation, maven
+description: "This topic describes how to install GroupDocs.Viewer for Java."
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
@@ -16,7 +17,7 @@ All Java packages are hosted at [GroupDocs Artifact Repository](https://reposit
 
 ### Add GroupDocs Artifact Repository
 
-First, you need to specify repository configuration/location in your Maven `pom.xml` as follows:
+Specify repository configuration and location in the Maven `pom.xml`:
 
 {{< tabs "example1">}}
 {{< tab "pom.xml" >}}
@@ -34,7 +35,7 @@ First, you need to specify repository configuration/location in your Maven `pom
 
 ### Add GroupDocs.Viewer as a dependency
 
-Then define GroupDocs.Viewer for Java API dependency in your `pom.xml` as follows:
+Define GroupDocs.Viewer for Java API dependency in your `pom.xml`:
 
 {{< tabs "example2">}}
 {{< tab "pom.xml" >}}

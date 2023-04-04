@@ -1,20 +1,19 @@
 ---
-id: processing-attachments
-url: viewer/java/processing-attachments
-title: Processing Attachments
+id: working-with-attachments
+url: viewer/java/working-with-attachments
+title: Process attachments
 weight: 4
 description: "Processing email attachments, embedded files, and compressed files with GroupDocs.Viewer for Java"
+keywords: email attachments, embedded files, compressed files
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
 
-We use the term "attachments" in GroupDocs.Viewer for email attachments, embedded files, and compressed files.
+Using GroupDocs.Viewer, you can list and save the following attachments:
 
-With GroupDocs.Viewer you can list and save:
-
-* Email attachments;
-* Files that are embedded in PDF files;
-* Email messages contained by Outlook and LotusNotes data files;
-* Compressed files.
+* Email attachments
+* Files embedded in PDF files
+* Email messages contained by Outlook, LotusNotes and other storage files
+* Compressed files
 
 See following examples on how to process document attachments in more details:

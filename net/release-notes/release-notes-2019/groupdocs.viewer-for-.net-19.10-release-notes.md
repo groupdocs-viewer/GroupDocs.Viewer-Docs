@@ -14,7 +14,7 @@ hideChildren: False
 
 There are 19 features, improvements and bug-fixes in this release, most notable are:
 
-* Starting from 19.10 GroupDocs.Viewer for .NET includes .NET Standard 2.0 version. It has full functionality of .NET Framework version with few limitations (see [.NET Standard Assembly API Limitations]({{< ref "viewer/net/developer-guide/troubleshooting/known-issues/net-standard-assembly-limitations.md" >}}))
+* Starting from 19.10 GroupDocs.Viewer for .NET includes .NET Standard 2.0 version. It has full functionality of .NET Framework version with few limitations (see [.NET Standard 2.0 API Limitations]({{< ref "viewer/net/developer-guide/troubleshooting/known-issues/net-standard-2.0-api-limitations.md" >}}))
 * Added support of Gnu Zipped File (.gzip) file format 
 * Added support of StarOffice Calc Spreadsheet (.sxc) file format
 

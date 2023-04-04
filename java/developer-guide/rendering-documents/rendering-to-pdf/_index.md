@@ -1,28 +1,36 @@
 ---
 id: rendering-to-pdf
 url: viewer/java/rendering-to-pdf
-title: Rendering to PDF
-weight: 103
+title: Render to PDF
+weight: 13
 description: "Rendering files to PDF with GroupDocs.Viewer for Java. It means that you can embed PDF in websites or applications by using this Java API"
-keywords: embed pdf in website, rendering to pdf, Java api, rendering pdf
+keywords: embed pdf in website, rendering to pdf, c# api, rendering pdf
 productName: GroupDocs.Viewer for Java
-hideChildren: True
+hideChildren: False
 ---  
-Document viewer can operate in different rendering modes, HTML, Image and PDF (see [Features Overview]({{< ref "viewer/java/getting-started/features-overview.md" >}}) for more information).
+When rendering to PDF, GroupDocs.Viewer renders all pages of the source document as a single PDF document.
 
-This article will describe on how to view documents in PDF mode with PDF Viewer. When rendering to PDF format with GroupDocs.Viewer, it saves all pages of source document as a single target PDF document.  
-Here are the steps for rendering to PDF with GroupDocs.Viewer for Java:
-* Create new instance of [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class and pass source document path as a constructor parameter.
-* Instantiate the [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions) object and specify saving path format for rendered document.
-* Call [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method of [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class instance and pass [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions) to it.
+To render files to PDF, follow these steps:
 
-The following code sample shows how to get **PDF** representation of the document.
+1. Create an instance of the [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class. Specify the source document path as a constructor parameter.
+2. Instantiate the [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfviewoptions/) object. Specify a path to save the rendered file.
+3. Call the [View.view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method of the [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) object. Specify the [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfviewoptions/) object as the parameter.
 
+The following code snippet shows how to render a .docx document to PDF:
+
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.PdfViewOptions;
+// ...
+
 try (Viewer viewer = new Viewer("sample.docx")) {
     PdfViewOptions viewOptions = new PdfViewOptions();
     viewer.view(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-{{< alert style="info" >}}GroupDocs.Viewer also provides an ability to customize rendering to PDF by setting additional options. To learn more about caching customization please refer to the following guides: [Adjust quality for JPG images]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-pdf/pdf-viewer-adjust-quality-for-jpg-images.md" >}}) and [PDF Viewer - Protect PDF document]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-pdf/pdf-viewer-protect-pdf-document.md" >}}){{< /alert >}}
+For details, please refer to the following pages:

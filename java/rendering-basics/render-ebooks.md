@@ -26,8 +26,6 @@ GroupDocs.Viewer supports the following EBooks file formats:
 * [EPUB](https://docs.fileformat.com/ebook/epub/) (.EPUB)
 * [MOBI](https://docs.fileformat.com/ebook/mobi/) (.MOBI)
 
-GroupDocs.Viewer can detect the book format automatically based on information in the file header.
-
 ## Render EBooks as HTML
 
 Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/) method to convert an EBook file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 

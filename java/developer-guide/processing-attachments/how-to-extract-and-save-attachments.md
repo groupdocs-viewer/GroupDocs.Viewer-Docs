@@ -3,38 +3,37 @@ id: how-to-extract-and-save-attachments
 url: viewer/java/how-to-extract-and-save-attachments
 title: Save attachments
 weight: 2
-description: "How to save PDF document embedded files, Outlook data file or email attachments with GroupDocs.Viewer using Java."
-keywords: "groupdocs viewer java, save attachments, save embedded files"
+description: "Save attachments and embedded files from PDF, Outlook data file or email"
+keywords: Save attachments, embedded files from PDF, Outlook data file
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-You can save/export attachments from Email documents, Outlook data files, Archives and PDF documents with only a few lines of code using GroupDocs.Viewer for Java API.
+To get and save attachments, follow these steps:
 
-Follow these steps to get and save (export) attachments:
+1. Instantiate the [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) object. Specify a file that contains attachments.
+2. Call the [getAttachments](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#getAttachments--) method. It returns the attachment collection.
+3. Iterate through the collection. To save an attachment, call the [saveAttachment](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#saveAttachment-com.groupdocs.viewer.results.Attachment-java.io.OutputStream-) method.
 
-* Instantiate [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) object for the file that contains attachment(s);
-* Call [getAttachments()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#getAttachments()) method which will return document attachments collection;
-* Iterate through attachments collection and save attachment by calling [saveAttachment(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#saveAttachment(com.groupdocs.viewer.results.Attachment,%20java.io.OutputStream)) method.
+The following code snippet shows how to get and save all attachments from the MSG file:
 
-Following example demonstrates on how to get and save all attachments contained by a MSG file.
+{{< alert style="info" >}}NOTE: provided code snippet suits all format families that support attachments: emails, Outlook data files, archives, and PDF documents.{{< /alert >}}
 
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
-try (Viewer viewer = new Viewer("sample.msg")) {
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.results.Attachment;
+// ...
+
+try (Viewer viewer = new Viewer("with_attachments.msg")) {
     List<Attachment> attachments = viewer.getAttachments();
 
     for (Attachment attachment : attachments) {
-        FileOutputStream fileStream = 
-            new FileOutputStream(attachment.getFileName());
+        FileOutputStream fileStream = new FileOutputStream(attachment.getFileName());
 
         viewer.saveAttachment(attachment, fileStream);
     }
-}
+}         
 ```
-
-After running the code above all the attachments will be saved to the current directory.
-
-{{< alert style="info" >}}
-
-Provided code example is actual for all document types that support attachments - Email documents, Outlook data files, Archives and PDF documents.
-
-{{< /alert >}}
+{{< /tab >}}
+{{< /tabs >}}

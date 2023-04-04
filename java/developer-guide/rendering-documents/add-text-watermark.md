@@ -1,29 +1,38 @@
 ---
 id: add-text-watermark
 url: viewer/java/add-text-watermark
-title: Add text watermark
-weight: 10
-description: "This article explains how to add text watermark when viewing documents with GroupDocs.Viewer within your Java applications."
+title: Add text watermarks
+weight: 9
+description: "This article explains how to add text watermark when rendering documents with GroupDocs.Viewer within your Java applications."
 keywords: add text watermark, rendering documents
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-GroupDocs.Viewer enables you to apply a watermark on the output pages (HTML / Image / PDF).
+To add a watermark to the HTML/JPG/PNG/PDF output, follow these steps:
 
-Here is the recipe:
+1. Create an instance of the [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/) class (or [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pngviewoptions/), or [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/jpgviewoptions/), or [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfviewoptions/));
+2. Create a [Watermark](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/Watermark) object and populate its properties;
+3. Call the [setWatermark](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/viewoptions/#setWatermark-com.groupdocs.viewer.options.Watermark-) method of the [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) (or [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions), or [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions), or [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions)) class and specify the object created on step 2;
+4. Call the [Viewer.view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method.
 
-* Create instance of [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions) class (or [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions), or [JpgViewOption](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions), or [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions));
-* Create a [Watermark](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/Watermark) object and populate its properties;
-* Assign [Watermark](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/Watermark) object to [setWatermark()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ViewOptions#setWatermark(com.groupdocs.viewer.options.Watermark)) property of class [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions), [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions), [JpgViewOption](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions) or [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions);
-* Call [view()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer#view(com.groupdocs.viewer.options.ViewOptions)) method.
+The following code snippet shows how to apply the watermark to the output pages.
 
-The following code sample shows how to apply the watermark to the output pages.
-
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
-    try (Viewer viewer = new Viewer("sample.docx")) {
-        HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
-        viewOptions.setWatermark(new Watermark("This is a watermark"));
-    
-        viewer.view(viewOptions);
-    }
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+import com.groupdocs.viewer.options.Watermark;
+// ...
+
+try (Viewer viewer = new Viewer("sample.docx")) {
+    // Create an HTML file.
+    HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
+    // Add watermark.
+    viewOptions.setWatermark(new Watermark("This is a watermark"));
+
+    viewer.view(viewOptions);
+}
 ```
+{{< /tab >}}
+{{< /tabs >}}

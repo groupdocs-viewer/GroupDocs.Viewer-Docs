@@ -1,22 +1,27 @@
 ---
 id: load-document-from-local-disk
 url: viewer/java/load-document-from-local-disk
-title: Load document from local disk
-weight: 4
-description: "This article explains how to load a document from local disk with GroupDocs.Viewer using Java."
-keywords: "groupdocs viewer java, loading, disk"
+title: Load document using the local path string
+weight: 1
+description: "This article explains how to load a document using the local path string with GroupDocs.Viewer within your Java applications."
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-When document is located on the local disk GroupDocs.Viewer enables you to render it by passing path to the file into [Viewer](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/Viewer) class constructor. Viewer will open file for reading only when any method of `Viewer` will be called.
+You can load a document from a local disk using a path to a file. GroupDocs.Viewer opens the file in the read-only mode.
 
-Following code snippet shows how to load document from local disk.
+The following code snippet shows how to load a document using the local path string:
 
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
-    String filePath = ".\\files\\sample.docx";
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+// ...
 
-    try (Viewer viewer = new Viewer(filePath)) {
-        HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
-        viewer.view(viewOptions);
-    }
+try (Viewer viewer = new Viewer("sample.docx")) {
+    HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
+    viewer.view(viewOptions);
+}
 ```
+{{< /tab >}}
+{{< /tabs >}}

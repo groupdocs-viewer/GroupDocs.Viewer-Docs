@@ -59,15 +59,24 @@ The license can be set multiple times per app domain but we recommend doing it o
 
 The following code sets a license from file.
 
+{{< tabs "example1">}}
+{{< tab "C#" >}}
+
 ```csharp
 string licensePath = "path to the .lic file";
 License license = new License();
 license.SetLicense(licensePath);
 ```
 
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Set License from Stream
 
 The following example shows how to set a license from a stream.
+
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 
 ```csharp
 string licensePath = "path to the .lic file";
@@ -78,11 +87,17 @@ using (FileStream fileStream = File.OpenRead(licensePath))
 }
 ```
 
+{{< /tab >}}
+{{< /tabs >}}
+
 ### Set Metered License
 
 You can also set [Metered](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
 
 Following is the sample code demonstrating how to use `Metered` licensing.
+
+{{< tabs "example3">}}
+{{< tab "C#" >}}
 
 ```csharp
 string publicKey = ""; // Your public license key
@@ -99,3 +114,6 @@ Console.WriteLine("Amount (MB) consumed: " + amountConsumed);
 decimal creditsConsumed = GroupDocs.Viewer.Metered.GetConsumptionCredit();
 Console.WriteLine("Credits consumed: " + creditsConsumed);
 ```
+
+{{< /tab >}}
+{{< /tabs >}}

@@ -24,11 +24,11 @@ You can use the following tools to install the [GroupDocs.Viewer](https://www.nu
 
 Open your project or solution in Visual Studio and follow the steps below to install the **GroupDocs.Viewer** package using the [NuGet Package Manager](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio):
 
-* In **Solution Explorer**, right-click your project name and select **Manage NuGet Packages** to display the NuGet Package Manager.
+1. In **Solution Explorer**, right-click your project name and select **Manage NuGet Packages** to display the NuGet Package Manager.
 
     ![Manage NuGet packages in Visual Studio](/viewer/net/images/getting-started/installation/manage-nuget-packages.png)
 
-* Select the **Browse** tab and type **GroupDocs.Viewer** in the search box. Select the latest version of the **GroupDocs.Viewer** package and click **Install**.
+2. Select the **Browse** tab and type **GroupDocs.Viewer** in the search box. Select the latest version of the **GroupDocs.Viewer** package and click **Install**.
 
     ![](/viewer/net/images/getting-started/installation/install-nuget-package.png)
 

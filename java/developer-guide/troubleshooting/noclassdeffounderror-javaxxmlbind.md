@@ -2,7 +2,7 @@
 id: noclassdeffounderror-javaxxmlbind
 url: viewer/java/noclassdeffounderror-javaxxmlbind
 title: NoClassDefFoundError javax/xml/bind/DatatypeConverter
-weight: 3
+weight: 2
 description: "This article is about NoClassDefFoundError: javax/xml/bind/DatatypeConverter"
 productName: GroupDocs.Viewer for Java
 hideChildren: False

@@ -1,15 +1,15 @@
 ---
 id: licensing-and-subscription
 url: viewer/java/licensing-and-subscription
-title: Licensing and Subscription
+title: Licensing
 weight: 5
 keywords: free, free trial, evaluation, groupdocs viewer java
 description: "GroupDocs.Viewer for Java provides different plans for purchase or offers a Free Trial and a 30-day Temporary License for evaluation."
-productName: GroupDocs.Viewer for Java, Free Trial
+productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
 ---
-To dive into the code as fast as possible GroupDocs provides different plans for purchase or offers a Free Trial and a 30-day Temporary License for evaluation.
+Sometimes, in order to study the system better, you want to dive into the code as fast as possible. To make this easier, GroupDocs.Viewer provides different plans for purchase or offers a Free Trial and a 30-day Temporary License for evaluation.
 
 {{< alert style="info" >}}
 
@@ -49,11 +49,18 @@ The license should be set:
 - Only once per application domain,
 - and before using any other GroupDocs.Viewer classes.
 
+{{< alert style="info" >}}
+
 The license can be set multiple times per app domain but we recommend doing it once since all calls to `SetLicense` except first will just waste processor time.
+
+{{< /alert >}}
 
 ### Set License from File
 
 The following code sets a license from file.
+
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 
 ```java
 String licensePath = "path to the .lic file";
@@ -61,9 +68,16 @@ License license = new License();
 license.setLicense(licensePath);
 ```
 
+{{< /tab >}}
+{{< /tabs >}}
+
+
 ### Set License from Stream
 
 The following example shows how to set a license from a stream.
+
+{{< tabs "example2">}}
+{{< tab "Java" >}}
 
 ```java
 String licensePath = "path to the .lic file";
@@ -73,13 +87,20 @@ try (InputStream fileStream = new FileInputStream(licensePath)) {
 }
 ```
 
+{{< /tab >}}
+{{< /tabs >}}
+
+
 ### Set Metered License
 
 You can also set [Metered](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
 
 Following is the sample code demonstrating how to use `Metered` licensing.
 
-```csharp
+{{< tabs "example3">}}
+{{< tab "Java" >}}
+
+```java
 // For complete examples and data files, please go to https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java
 String publicKey = ""; // Your public license key
 String privateKey = ""; // Your private license key
@@ -95,3 +116,6 @@ System.out.println("Amount (MB) consumed: " + amountConsumed);
 double creditsConsumed = Metered.getConsumptionCredit();
 System.out.println("Credits consumed: " + creditsConsumed);
 ```
+
+{{< /tab >}}
+{{< /tabs >}}

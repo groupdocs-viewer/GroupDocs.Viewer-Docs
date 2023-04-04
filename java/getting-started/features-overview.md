@@ -1,10 +1,10 @@
 ---
 id: features-overview
 url: viewer/java/features-overview
-title: Features Overview
+title: Features overview
 weight: 1
-description: "With GroupDocs.Viewer for Java you can render files to HTML, PNG, JPEG and PDF formats, list and save attachments, embedded files and compressed files, extract document text and detect file type by it's content."
-keywords: "render, viewer, render to html, render to png, render to jpeg, render to pdf"
+description: "With GroupDocs.Viewer for Java you can render files to HTML, PNG, JPEG and PDF formats, list and save attachments, embedded files and compressed files, and extract document text."
+keywords: render files,viewer,html,PNG,JPEG,PDF
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
@@ -12,9 +12,9 @@ toc: True
   
 ## Rendering Documents
 
-We use the term ["rendering"]({{< ref "viewer/java/developer-guide/rendering-documents/_index.md" >}}) in GroupDocs.Viewer to describe the process of converting a document into a file format, paginated, or that has the concept of pages. For example, when you have a DOCX file with three pages then after rendering this file to HTML you'll get three HTML files on the output that represent each of the pages in the document.
+We use the term ["rendering"]({{< ref "viewer/java/developer-guide/rendering-documents/_index.md" >}}) in GroupDocs.Viewer to describe the process of converting a document into a file format, paginated, or that has the concept of pages. For example, when you have a DOCX file with three pages then after rendering this file to HTML you will get three HTML files on the output that represent each of the pages in the document.
 
-![Rendering diagram](/viewer/java/images/getting-started/features-overview/rendering.png)
+![Rendering diagram](/viewer/net/images/getting-started/features-overview/rendering.png)
 
 ### Rendering to HTML
 

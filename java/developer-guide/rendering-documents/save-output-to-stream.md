@@ -1,62 +1,62 @@
 ---
 id: save-output-to-stream
-url: viewer/java/how-to-get-an-output-stream-when-viewing-a-document
+url: viewer/java/save-output-to-stream
 title: Save output to a stream
-weight: 9
-description: "This article explains how to get an output stream when viewing a document with GroupDocs.Viewer within your Java applications."
-keywords: 
+weight: 8
+description: "This article shows how to save output to a stream when rendering a document"
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-By default GroupDocs.Viewer saves output results to the local disk, but we also provide a way to save output results into a stream.
+By default, GroupDocs.Viewer saves output results to the local disk. Also, it can provide results as a stream.
 
-There are three interfaces that we can utilize:
+To provide output results as a stream, use one of the following interfaces:
 
-* [FileStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/FileStreamFactory) - defines the methods that are required for instantiating and releasing output file stream.
-* [PageStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/PageStreamFactory) - defines the methods that are required for instantiating and releasing output page stream.
-* [ResourceStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/ResourceStreamFactory) - defines the methods that are required for creating resource URL, instantiating and releasing output HTML resource stream.
+* [FileStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/FileStreamFactory) defines methods to instantiate and release the output file streams.
+* [PageStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/PageStreamFactory) defines methods to instantiate and release the output page streams.
+* [ResourceStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/ResourceStreamFactory) defines the methods to create resource URLs, instantiate, and release output HTML resource streams.
 
-Let's say that instead of saving rendering results to the local disk we want to have all the output file or output files in form of stream or list of streams.
+Use these interface as follows:
 
-What we need to do is to implement one or two of the interfaces listed above.
+* When rendering to PDF, implement the [FileStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/FileStreamFactory) interface and pass the implementation to the [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfviewoptions/) constructor.
+* When rendering to JPG/PNG or HTML with embedded resources, implement the [PageStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/PageStreamFactory) interface and pass the implementation to the [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/jpgviewoptions/)/[PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pngviewoptions/) constructor or to the [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/) [forEmbeddedResources](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/#forEmbeddedResources-com.groupdocs.viewer.interfaces.PageStreamFactory-) factory method.
+* When rendering into HTML with external resources, implement the [PageStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/PageStreamFactory) and [ResourceStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/ResourceStreamFactory) interfaces and pass the implementation to the [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/jpgviewoptions/)/[PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pngviewoptions/) constructor or to the [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/) [forExternalResources](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/#forExternalResources-com.groupdocs.viewer.interfaces.PageStreamFactory-com.groupdocs.viewer.interfaces.ResourceStreamFactory-) factory method.
 
-* When rendering into PDF we have to implement [FileStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/FileStreamFactory) interface and pass implementation into [PdfViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PdfViewOptions) constructor
-* When rendering into JPG/PNG or HTML with embedded resources we have to implement [PageStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/PageStreamFactory) interface and pass implementation into [forEmbeddedResources()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#forEmbeddedResources(com.groupdocs.viewer.interfaces.PageStreamFactory)) factory method of [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions), [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions) or [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions)
-* When rendering into HTML with external resources we have to implement [PageStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/PageStreamFactory) and [ResourceStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/ResourceStreamFactory) interfaces and pass implementation into [forExternalResources()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions#forExternalResources(com.groupdocs.viewer.interfaces.PageStreamFactory,%20com.groupdocs.viewer.interfaces.ResourceStreamFactory)) factory method of [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/HtmlViewOptions), [JpgViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/JpgViewOptions) or [PngViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/PngViewOptions)
+The following code snippet shows how to render to HTML with embedded resources and to provide the output result as a stream. To do this, it implements the [PageStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/PageStreamFactory) interface only.
 
-In this example, we'll render into HTML with embedded resources so we need to implement only [PageStreamFactory](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.interfaces/PageStreamFactory) interface.
-
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
-    List<ByteArrayOutputStream> pages = new ArrayList<>();
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.interfaces.PageStreamFactory;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+import com.groupdocs.viewer.options.ViewOptions;
+// ...
 
-    try (Viewer viewer = new Viewer("sample.docx")){
+final List<ByteArrayOutputStream> pages = new ArrayList<>();
 
-        MemoryPageStreamFactory pageStreamFactory = new MemoryPageStreamFactory(pages);
+try (Viewer viewer = new Viewer("sample.docx")) {
 
-        ViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources(pageStreamFactory);
+    PageStreamFactory pageStreamFactory = new PageStreamFactory() {
 
-        viewer.view(viewOptions);
-    }
-```
-
-```java
-    class MemoryPageStreamFactory implements PageStreamFactory {
-        private final List<ByteArrayOutputStream> _pages;
-
-        public MemoryPageStreamFactory(List<ByteArrayOutputStream> pages) {
-            _pages = pages;
-        }
-
-        public ByteArrayOutputStream createPageStream(int pageNumber) {
+        @Override
+        public OutputStream createPageStream(int pageNumber) {
             ByteArrayOutputStream pageStream = new ByteArrayOutputStream();
 
-            _pages.add(pageStream);
+            pages.add(pageStream);
 
             return pageStream;
         }
 
-        public void closePageStream(int pageNumber, OutputStream pageStream) {
+        @Override
+        public void closePageStream(int pageNumber, OutputStream outputStream) {
             //Do not release page stream as we'll need to keep the stream open
         }
-    }
+    };
+
+    ViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources(pageStreamFactory);
+
+    viewer.view(viewOptions);
+}
 ```
+{{< /tab >}}
+{{< /tabs >}}

@@ -64,7 +64,7 @@ By default, Excel spreadsheets are converted by page breaks. See the following t
 
 {{< tabs "example1">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -93,7 +93,7 @@ When rendering to HTML with a fluid layout HTML document doesn't have a fixed si
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -128,4 +128,13 @@ The following image demonstrates PDF document rendered to HTML with a **fluid** 
 
 {{< /alert >}}
 
-The default implementation of [ICache](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.caching/icache/) interface the [FileCache](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.caching/filecache/) class used `BinnaryFormatter` to serialize and deserialize [ViewInfo](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/) and derived types. `BinnaryFormatter` was replaced with [XmlSerializer](https://learn.microsoft.com/en-us/dotnet/api/system.xml.serialization.xmlserializer). To support serialization with `XmlSerializer` default parameterless constructors and `set` property accessors added to [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/) class and all types in [GroupDocs.Viewer.Results](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/) namespace.
+{{< tabs "example3">}}
+{{< tab "C#" >}}
+```csharp
+/// <summary>
+/// JPEG-LS (JLS) (.jls)
+/// </summary>
+public static readonly FileType JLS = new FileType("JPEG-LS (JLS)", ".jls");
+```
+{{< /tab >}}
+{{< /tabs >}}

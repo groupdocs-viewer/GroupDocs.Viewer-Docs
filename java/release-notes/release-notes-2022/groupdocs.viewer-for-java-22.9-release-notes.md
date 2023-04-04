@@ -17,16 +17,16 @@ There are lots of features, improvements, and bug-fixes in this release, most no
 * Improved rendering Spreadsheet files
 * Render Text files to responsive HTML
 * Fixed exception when invalid or expired license provided
-* [Separator detection for CSV/TSV files]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/render-excel-and-apple-numbers-spreadsheets.md">}})
-* [Add TAR GZipped (TGZ) file-format support]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-convert-and-view-tgz-files.md">}})
-* [Add TAR XZipped (TXZ) file-format support]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-convert-and-view-txz-files.md">}})
-* [Add XZipped (XZ) file-format support]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-convert-and-view-xz-files.md">}})
-* [Add 7-Zip Compressed File (.7z) file-format support]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-archive-files/how-to-convert-and-view-7z-files.md">}})
+* Separator detection for CSV/TSV files
+* Add TAR GZipped (TGZ) file-format support
+* Add TAR XZipped (TXZ) file-format support
+* Add XZipped (XZ) file-format support
+* Add 7-Zip Compressed File (.7z) file-format support
 * Add syntax highlight to programming language formats
 * Add Power shell script (.PS1) file-format support
 * Add Power shell script module (.PSM1) file-format support
 * Add Power shell script module manifest (.PSD1) file-format support
-* [Convert PSD with custom fonts]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-image-files/how-to-convert-and-view-psd-with-custom-fonts.md">}})
+* Convert PSD with custom fonts
 * Preserve original image format when converting JPEG to HTML with embedded resources
 * Open files with HTML table inside as XLS files
 * Render all archive folders content for multi-page archives
@@ -140,7 +140,7 @@ public boolean isDetectSeparator();
 public void setDetectSeparator(boolean detectSeparator);
 ```
 
-See how to use new properties in the following help topic: [Detect a CSV/TSV separator]({{< ref "viewer/java/developer-guide/rendering-documents/advanced-rendering/rendering-excel-spreadsheets/render-excel-and-apple-numbers-spreadsheets.md">}}).
+See how to use new properties in the following help topic: [Detect a CSV/TSV separator]({{< ref "viewer/java/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets.md">}}).
 
 #### com.groupdocs.viewer.FileType
 

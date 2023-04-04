@@ -1,28 +1,45 @@
 ---
 id: flip-or-rotate-pages
 url: viewer/java/flip-or-rotate-pages
-title: Flip or rotate pages
+title: Rotate pages
 weight: 6
-description: "This article explains how to flip or rotate PDF, HTML or Image pages when rendering documents with GroupDocs.Viewer within your Java applications."
+description: "This article explains how to rotate PDF, HTML or Image pages when rendering documents with GroupDocs.Viewer within your Java applications."
 keywords: rotate pdf, rotate pages
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-![](/viewer/java/images/flip-or-rotate-pages.png)
+![Flip or rotate pages](/viewer/java/images/flip-or-rotate-pages.png)
 
-The GroupDocs.Viewer enables you to rotate individual pages when viewing documents in HTML/PDF/JPG/PNG formats. To flip/rotate pages use the [rotatePage()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ViewOptions#rotatePage(int,%20int)) method of [ViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ViewOptions) class.  The method accepts page number as the first parameter and rotation angle as the second parameter. There are three options that you can pass as the second parameter into [rotatePage()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/ViewOptions#rotatePage(int,%20int)) method:
+To rotate a page when rendering document, use the [RotatePage](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/viewoptions/#rotatePage-int-com.groupdocs.viewer.options.Rotation-) method of the [ViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/viewoptions/) class. This method has the following two parameters:
 
-* [Rotation.ON_90_DEGREE](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/Rotation#ON_90_DEGREE) - instructs to rotate page on 90-degree clockwise;
-* [Rotation.ON_180_DEGREE](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/Rotation#ON_180_DEGREE) - instructs to rotate page on 180-degree clockwise;
-* [Rotation.ON_270_DEGREE](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/Rotation#ON_270_DEGREE) - instructs to rotate page on 270-degree clockwise;
+1. page number
+2. rotation angle
 
-The following code snippet shows how to rotate output pages when viewing a document as PDF ([this example](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/blob/master/Examples/src/main/java/com/groupdocs/viewer/examples/advanced_usage/rendering/common_rendering_options/RotatePages.java) can be also found in our public [GitHub repository](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java).)
+The rotation angle is one of the following:
 
+* [Rotation.ON_90_DEGREE](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/rotation/#ON-90-DEGREE) rotate page on 90-degree clockwise
+* [Rotation.ON_180_DEGREE](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/rotation/#ON-180-DEGREE) rotate page on 180-degree clockwise
+* [Rotation.ON_270_DEGREE](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/rotation/#ON-270-DEGREE) rotate page on 270-degree clockwise
+
+The following code snippet shows how to rotate output pages when rendering a document as PDF:
+
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
-    try (Viewer viewer = new Viewer("sample.docx")) {
-        PdfViewOptions viewOptions = new PdfViewOptions();
-        viewOptions.rotatePage(1, Rotation.ON_90_DEGREE);
-    
-        viewer.view(viewOptions);
-    }
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.PdfViewOptions;
+import com.groupdocs.viewer.options.Rotation;
+// ...
+
+try (Viewer viewer = new Viewer("sample.docx")) {
+    PdfViewOptions viewOptions = new PdfViewOptions();
+    // Rotate the first page.
+    viewOptions.rotatePage(1, Rotation.ON_90_DEGREE);
+
+    viewer.view(viewOptions);
+}
 ```
+{{< /tab >}}
+{{< /tabs >}}
+
+You can also view the [example](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/blob/master/Examples/src/main/java/com/groupdocs/viewer/examples/advanced_usage/rendering/common_rendering_options/RotatePages.java) in our public [GitHub repository](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java).

@@ -39,8 +39,6 @@ GroupDocs.Viewer supports the following file formats:
 * {{% closedlink title="OpenDocument Presentation Template" href="https://docs.fileformat.com/presentation/otp" %}} (.OTP)
 * {{% closedlink title="OpenDocument Flat XML Presentation" href="https://docs.fileformat.com/" %}} (.FODP)
 
-GroupDocs.Viewer can detect the document format automatically based on information in the file header.
-
 ## Render presentations as HTML
 
 Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method to convert a presentation file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
@@ -182,12 +180,12 @@ You can use the [PresentationOptions.setResolution](https://reference.groupdocs.
 
 | Resolution field | DPI | Remarks |
 | --- | --- | --- |
-| DocumentResolution | As in the source file | This is the default value.|
-| Dpi72 | 72 | Maximum image compression and minimum file size. |
-| Dpi96 | 96 | Good for web pages and projectors. |
-| Dpi150 | 150 | Good for web pages and projectors. |
-| Dpi220 | 220 | Excellent quality on most printers and screens. |
-| Dpi330 | 330 | Good quality for high-definition (HD) displays. |
+| DOCUMENT_RESOLUTION | As in the source file | This is the default value.|
+| DPI_72 | 72 | Maximum image compression and minimum file size. |
+| DPI_96 | 96 | Good for web pages and projectors. |
+| DPI_150 | 150 | Good for web pages and projectors. |
+| DPI_220 | 220 | Excellent quality on most printers and screens. |
+| DPI_330 | 330 | Good quality for high-definition (HD) displays. |
 
 The following example demonstrates how to specify image resolution in code: 
 

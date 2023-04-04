@@ -1,215 +1,37 @@
 ---
 id: how-to-list-and-print-all-supported-file-types
 url: viewer/java/how-to-list-and-print-all-supported-file-types
-title: How to list all supported file types
+title: List and print all supported file types
 weight: 5
 description: "This article explains how to list and print file types supported by GroupDocs.Viewer for Java"
-keywords: "groupdocs viewer java, get supported file types"
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
 
-{{< alert style="info" >}}
+The [Supported file formats]({{< ref "viewer/java/getting-started/supported-document-formats.md" >}}) page lists all file formats supported by GroupDocs.Viewer.
 
-The complete list of of supported file types can be found in [Supported Document Formats]({{< ref "viewer/java/getting-started/supported-document-formats.md" >}}) article.
+To list or print out all the supported file formats within your application, follow these steps:
 
-{{< /alert >}}
+1. Call the [getSupportedFileTypes](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/filetype/#getSupportedFileTypes--) method of the [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class.
+2. Enumerate the collection of the [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) objects.
 
-In case you need to list or print out all of the supported file formats in your application you can do the following:
+The following code snippet shows how to list supported file formats in the console:
 
-* Call [getSupportedFileTypes()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType#getSupportedFileTypes()) method of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) class;
-* Enumerate through the collection of [FileType](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/FileType) objects.
-
-The following code sample demonstrates how to print all supported file formats list to the console.
-
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
+import com.groupdocs.viewer.FileType;
+// ...
+
 List<FileType> supportedFileTypes = FileType.getSupportedFileTypes();
 
 for (FileType fileType : supportedFileTypes) {
     System.out.println(fileType);
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-After running the code above you will see the output would be similar to:
+The following image shows a sample console output:
 
-```bash
-Zipped File (.zip)
-Consolidated Unix File Archive (.tar)
-Bzip2 Compressed File (.bz2)
-Rar Compressed File (.rar)
-Gnu Zipped File (.gz)
-Gnu Zipped File (.gzip)
-Drawing Exchange Format File (.dxf)
-AutoCAD Drawing Database File (.dwg)
-AutoCAD Drawing Template (.dwt)
-Stereolithography File (.stl)
-Industry Foundation Classes File (.ifc)
-Design Web Format File (.dwf)
-Design Web Format File XPS (.dwfx)
-MicroStation Design File (.dgn)
-PLT (.plt)
-Common File Format File (.cf2)
-Wavefront 3D Object File (.obj)
-PLT (HPG) (.hpg)
-Initial Graphics Exchange Specification (IGES) (.igs)
-HPGL (.hpgl)
-Visio Drawing File (.vsd)
-Visio Drawing (.vsdx)
-Visio Stencil File (.vss)
-Visio Stencil File (.vssx)
-Visio Macro-Enabled Drawing (.vsdm)
-Visio Drawing Template (.vst)
-Visio Drawing Template (.vstx)
-Visio Macro-Enabled Drawing Template (.vstm)
-Visio Macro-Enabled Stencil File (.vssm)
-Visio Stencil XML File (.vsx)
-Visio Template XML File (.vtx)
-Visio Web Drawing (.vdw)
-Visio Drawing XML File (.vdx)
-Open eBook File (.epub)
-Mobipocket eBook (.mobi)
-Outlook Mail Message (.msg)
-E-Mail Message (.eml)
-Apple Mail Message (.emlx)
-Outlook Personal Information Store File (.pst)
-Outlook Offline Data File (.ost)
-Tagged Image File (.tif)
-Tagged Image File Format (.tiff)
-JPEG Image (.jpg)
-JPEG Image (.jpeg)
-Portable Network Graphic (.png)
-Graphical Interchange Format File (.gif)
-Animated Portable Network Graphic (.apng)
-Bitmap Image File (.bmp)
-Icon File (.ico)
-Truevision TGA (TARGA) (.tga)
-JPEG 2000 Core Image File (.jp2)
-JPEG 2000 Image File (.jpf)
-JPEG 2000 Image File (.jpx)
-JPEG 2000 Image File (.jpm)
-JPEG 2000 Code InputStream (.j2c)
-JPEG 2000 Code InputStream (.j2k)
-JPEG 2000 Code InputStream (.jpc)
-JPEG 2000 Code InputStream (.jls)
-Device Independent Bitmap File (.dib)
-Windows Metafile (.wmf)
-Compressed Windows Metafilee (.wmz)
-Enhanced Windows Metafile (.emf)
-Windows Compressed Enhanced Metafile (.emz)
-WebP Image (.webp)
-Digital Negative Specification (.dng)
-CorelDraw Vector Graphic Drawing (.cdr)
-Corel Metafile exchange (.cmx)
-DjVu Image (.djvu)
-Computer Graphics Metafile (.cgm)
-Printer Command Language Document (.pcl)
-Adobe Photoshop Document (.psd)
-Photoshop Large Document Format (.psb)
-DICOM Image (.dcm)
-PostScript File (.ps)
-Encapsulated PostScript File (.eps)
-OpenDocument Graphic File (.odg)
-OpenDocument Graphic File (.fodg)
-Scalable Vector Graphics File (.svg)
-Compressed Scalable Vector Graphics File (.svgz)
-OpenDocument Graphic Template (.otg)
-Hypertext Markup Language File (.htm)
-Hypertext Markup Language File (.html)
-MHTML Web Archive (.mht)
-Lotus Notes Database (.nsf)
-Email Mailbox File (.mbox)
-MIME HTML File (.mhtml)
-XML File (.xml)
-OneNote Document (.one)
-Portable Document Format File (.pdf)
-XML Paper Specification File (.xps)
-XML Paper Specification File (.oxps)
-LaTeX Source Document (.tex)
-PowerPoint Presentation (.ppt)
-PowerPoint Open XML Presentation (.pptx)
-PowerPoint Slide Show (.pps)
-PowerPoint Open XML Slide Show (.ppsx)
-OpenDocument Presentation (.odp)
-OpenDocument Flat XML Presentation (.fodp)
-PowerPoint Template (.pot)
-PowerPoint Open XML Macro-Enabled Presentation (.pptm)
-PowerPoint Open XML Presentation Template (.potx)
-PowerPoint Open XML Macro-Enabled Presentation Template (.potm)
-PowerPoint Open XML Macro-Enabled Slide (.ppsm)
-OpenDocument Presentation Template (.otp)
-Excel Spreadsheet (.xls)
-Excel 2003 XML (SpreadsheetML) (.xml)
-Apple numbers (.numbers)
-Microsoft Excel Open XML Spreadsheet (.xlsx)
-Excel Open XML Macro-Enabled Spreadsheet (.xlsm)
-Excel Binary Spreadsheet (.xlsb)
-Comma Separated Values File (.csv)
-Tab Separated Values File (.tsv)
-OpenDocument Spreadsheet (.ods)
-OpenDocument Flat XML Spreadsheet (.fods)
-OpenDocument Spreadsheet Template (.ots)
-Microsoft Excel Add-in (.xlam)
-Microsoft Excel Macro-Enabled Template (.xltm)
-Microsoft Excel Template (.xlt)
-Microsoft Excel Template (.xltx)
-StarOffice Calc Spreadsheet (.sxc)
-Microsoft Project File (.mpp)
-Microsoft Project Template (.mpt)
-Microsoft Project Exchange File (.mpx)
-ActionScript File (.as)
-ActionScript File (.as3)
-Assembly Language Source Code File (.asm)
-DOS Batch File (.bat)
-C/C++ Source Code File (.c)
-C++ Source Code File (.cc)
-CMake File (.cmake)
-C++ Source Code File (.cpp)
-Java Source Code File (.cs)
-Visual Basic Project Item File (.vb)
-Cascading Style Sheet (.css)
-C++ Source Code File (.cxx)
-Patch File (.diff)
-Ruby ERB Script (.erb)
-Groovy Source Code File (.groovy)
-C/C++/Objective-C Header File (.h)
-Haml Source Code File (.haml)
-C++ Header File (.hh)
-Java Source Code File (.java)
-JavaScript File (.js)
-JavaScript Object Notation File (.json)
-LESS Style Sheet (.less)
-Log File (.log)
-Objective-C Implementation File (.m)
-Xcode Makefile Script (.make)
-Markdown Documentation File (.md)
-ML Source Code File (.ml)
-Objective-C++ Source File (.mm)
-PHP Source Code File (.php)
-Perl Script (.pl)
-Java Properties File (.properties)
-Python Script (.py)
-Ruby Source Code (.rb)
-reStructuredText File (.rst)
-Syntactically Awesome StyleSheets File (.sass)
-Scala Source Code File (.scala)
-Scheme Source Code File (.scm)
-Generic Script File (.script)
-Bash Shell Script (.sh)
-Standard ML Source Code File (.sml)
-Structured Query Language Data File (.sql)
-Vim Settings File (.vim)
-YAML Document (.yaml)
-Microsoft Word Document (.doc)
-Microsoft Word Open XML Document (.docx)
-Microsoft Compiled HTML Help File (.chm)
-Word Open XML Macro-Enabled Document (.docm)
-Word Document Template (.dot)
-Word Open XML Document Template (.dotx)
-Word Open XML Macro-Enabled Document Template (.dotm)
-Rich Text Format File (.rtf)
-Plain Text File (.txt)
-OpenDocument Text Document (.odt)
-OpenDocument Document Template (.ott)
-vCard File (.vcf)
-Adobe Illustrator (.ai)
-```
+![](/viewer/java/images/how-to-list-and-print-all-supported-file-types.png)
