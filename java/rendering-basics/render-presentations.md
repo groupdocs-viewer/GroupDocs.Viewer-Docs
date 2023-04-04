@@ -45,7 +45,7 @@ Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/java/com.grou
 
 ### Create an HTML file with embedded resources
 
-To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions#forEmbeddedResources](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/#forEmbeddedResources-java.lang.String-) method and specify the output file name.
+To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/#forEmbeddedResources-java.lang.String-) method and specify the output file name.
 
 {{< tabs "example1">}}
 {{< tab "Java" >}}

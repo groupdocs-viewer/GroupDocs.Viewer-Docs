@@ -60,6 +60,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | --- | --- | :---: | --- |
 | [EPUB](https://docs.fileformat.com/ebook/epub/) | Open EBook Format | ![(tick)](/viewer/net/images/check-blue.png) |
 | [MOBI](https://docs.fileformat.com/ebook/mobi/) | Mobipocket EBook | ![(tick)](/viewer/net/images/check-blue.png) |
+| [AZW3](https://docs.fileformat.com/ebook/azw3/) | AZ3/KF8 EBook Format| ![(tick)](/viewer/net/images/check-blue.png) |
 
 ## Email file formats
 

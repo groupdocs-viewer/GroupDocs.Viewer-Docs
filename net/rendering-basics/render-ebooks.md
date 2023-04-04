@@ -24,6 +24,7 @@ GroupDocs.Viewer supports the following EBooks file formats:
 
 * [EPUB](https://docs.fileformat.com/ebook/epub/) (.EPUB)
 * [MOBI](https://docs.fileformat.com/ebook/mobi/) (.MOBI)
+* [AZW3](https://docs.fileformat.com/ebook/azw3/) (.AZW3)
 
 GroupDocs.Viewer can detect the book format automatically based on information in the file header.
 
