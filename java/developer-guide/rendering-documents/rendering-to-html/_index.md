@@ -60,6 +60,7 @@ try (Viewer viewer = new Viewer("sample.docx")) {
     // {0} is replaced with the current page number in the file name.
     HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources("page_{0}.html");
     viewer.view(viewOptions);
+}
 ```
 {{< /tab >}}
 {{< /tabs >}}
