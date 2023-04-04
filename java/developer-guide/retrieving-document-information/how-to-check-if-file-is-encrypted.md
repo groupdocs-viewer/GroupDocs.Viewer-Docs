@@ -18,7 +18,7 @@ If you want to check if a file is encrypted, use the `getFileInfo()` method that
 ```java
 import com.groupdocs.viewer.Viewer;
 import com.groupdocs.viewer.results.FileInfo;
-// …
+// ...
 
 try (Viewer viewer = new Viewer("encrypted.pdf")) {
     FileInfo fileInfo = viewer.getFileInfo();

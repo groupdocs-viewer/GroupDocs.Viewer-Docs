@@ -26,6 +26,8 @@ Here is a brief comparison of how to display document into HTML form using old a
 
 ### Using legacy API
 
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
     //Get Configurations
     ViewerConfig config = Utilities.getConfigurations();
@@ -58,20 +60,37 @@ Here is a brief comparison of how to display document into HTML form using old a
         Utilities.saveAsHtml(page.getPageNumber() + "_" + documentName, page.getHtmlContent());
     }
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### Using new API
 
+{{< tabs "example2">}}
+{{< tab "Java" >}}
 ```java
 import com.groupdocs.viewer.Viewer;
 import com.groupdocs.viewer.options.HtmlViewOptions;
 import com.groupdocs.viewer.options.LoadOptions;
+import com.groupdocs.viewer.options.ViewInfoOptions;
+import com.groupdocs.viewer.results.Page;
+import com.groupdocs.viewer.results.ViewInfo;
 // ...
 
 LoadOptions loadOptions = new LoadOptions();
-loadOptions.setPassword("123456");
+loadOptions.setPassword("password");
 
 try (Viewer viewer = new Viewer("sample.docx", loadOptions)) {
-    HtmlViewOptions options = HtmlViewOptions.forEmbeddedResources();
+    HtmlViewOptions options = HtmlViewOptions.forEmbeddedResources("page_{0}.html");
     viewer.view(options);
+
+    final ViewInfo viewInfo = viewer.getViewInfo(ViewInfoOptions.forHtmlView());
+    final List<Page> pages = viewInfo.getPages();
+
+    for (Page page : pages) {
+        final int pageNumber = page.getNumber();
+        System.out.println("Page number: " + pageNumber + ", file saved as 'page_" + pageNumber + ".html'");
+    }
 }
 ```
+{{< /tab >}}
+{{< /tabs >}}
