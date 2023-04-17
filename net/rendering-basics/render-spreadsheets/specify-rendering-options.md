@@ -5,7 +5,7 @@ title: Specify spreadsheet rendering options
 linkTitle: Specify rendering options
 weight: 3
 description: "This topic describes how to use the GroupDocs.Viewer .NET API (C#) to specify various options for rendering spreadsheet files to HTML, PDF, and image formats."
-keywords: show column headings, show row headings, show gridlines, render comments, excel to pdf, xlsx to pdf, xls to pdf, excel to html, xlsx to html, xls to html
+keywords: show column headings, show row headings, show gridlines, render comments, set margin, excel to pdf, xlsx to pdf, xls to pdf, excel to html, xlsx to html, xls to html
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
@@ -243,3 +243,38 @@ using (var viewer = new Viewer("invoice.xlsx"))
 The following image demonstrates the result:
 
 ![Render cell comments](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-comments-to-png.png)
+
+## Set worksheet margins in the output pdf pages
+
+Use the [SpreadsheetOptions.RenderGridLines](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/rendergridlines) properties to set margins for worksheets in the output pdf. If margins are set to value less than 0 or not set then default value will be used.
+
+The following code example demonstrates how to convert an Excel workbook to PDF and set optional margins for worksheets in the output PDF file:
+
+{{< tabs "example8">}}
+{{< tab "C#" >}}
+```cs
+/// Implement the service 
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("invoice.xlsx"))
+{
+    // Convert the spreadsheet to PDF.
+    var viewOptions = new PdfViewOptions("output.pdf");
+	
+	// Set margins for worksheets in the output pdf pages
+	viewOptions.SpreadsheetOptions.LeftMargin = 0;
+    viewOptions.SpreadsheetOptions.RightMargin = 0.5;
+    viewOptions.SpreadsheetOptions.TopMargin = 1;
+    viewOptions.SpreadsheetOptions.BottomMargin = -10; // set to default value
+	
+    viewer.View(viewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+The following image demonstrates the result:
+
+![Render an Excel file with worksheet margins on page to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/set-worksheet-margins-in-the-output-pdf-pages.png)

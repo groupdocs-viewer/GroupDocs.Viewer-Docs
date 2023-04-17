@@ -18,14 +18,16 @@ There are -???- features and bug fixes in this release.
 | --- | --- | --- |
 |VIEWERNET&#8209;4312|Feature|[Option to disable print](#option-to-disable-print)|
 |VIEWERNET&#8209;4280|Feature|[Check if license file exists in the application folder](#check-if-license-file-exists-in-the-application-folder)|
+|VIEWERNET&#8209;4212|Feature|[Option to use margins when convert excel workbook to pdf](#option-to-use-margins-when-convert-excel-workbook-to-pdf)|
 
 
 ## Major Features
 
-This release includes two features:
+This release includes three features:
 
 * [Option to disable print](#option-to-disable-print)
 * [Check if license file exists in the application folder](#check-if-license-file-exists-in-the-application-folder)
+* [Option to use margins when convert excel workbook to pdf](#option-to-use-margins-when-convert-excel-workbook-to-pdf)
 
 ### Option to disable print
 
@@ -47,8 +49,10 @@ public class MyUIConfigProvider : IUIConfigProvider
 
 // and register it
 services.AddTransient<IUIConfigProvider, MyUIConfigProvider>(); 
+```
 {{</ tab >}}
 {{</ tabs >}}
+
 
 ### Check if license file exists in the application folder
 
@@ -61,3 +65,33 @@ Current sequence of checks
 * check app root folder for files with file names
    - GroupDocs.Viewer.lic
    - GroupDocs.Viewer.Product.Family.lic
+   
+### Option to use margins when convert excel workbook to pdf 
+
+If convert from excel workbook to the Pdf now optional margins can be applied to the output pages. If margin value is less than 0 or not set
+then it will be set to the default value.
+{{< tabs "Use optional margins">}}
+{{< tab "From API" >}}
+```cs
+/// Implement the service 
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("invoice.xlsx"))
+{
+    // Convert the spreadsheet to PDF.
+    var viewOptions = new PdfViewOptions("output.pdf");
+	
+	// Set margins for worksheets in the output pdf pages
+	viewOptions.SpreadsheetOptions.LeftMargin = 0;
+    viewOptions.SpreadsheetOptions.RightMargin = 0.5;
+    viewOptions.SpreadsheetOptions.TopMargin = 1;
+    viewOptions.SpreadsheetOptions.BottomMargin = -10; // set to default value
+	
+    viewer.View(viewOptions);
+}
+```
+{{</ tab >}}
+{{</ tabs >}}
+```
