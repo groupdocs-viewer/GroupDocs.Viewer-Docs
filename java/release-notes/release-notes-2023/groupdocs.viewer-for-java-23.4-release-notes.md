@@ -52,6 +52,7 @@ There are 30+ enhancements and bug fixes in this release.
 |VIEWERJAVA-3112|Fix|Freezing when opening big zip files|
 |VIEWERJAVA-3113|Fix|Exception is throws when opening file 7z file|
 |VIEWERJAVA-3154|Fix|Can't open ZIP archive when it contains characters from specific charset|
+|VIEWERJAVA-3156|Fix|FileLogger ignores arguments which must be embedded into message|
 
 ## Public API and backward incompatible changes
 
@@ -113,3 +114,215 @@ public Float getBottomMargin();
  */
 public void setBottomMargin(Float bottomMargin);
 ```
+
+### com.groupdocs.viewer.Viewer and com.groupdocs.viewer.options.LoadOptions classes
+
+In context of new feature `VIEWERJAVA-3118 - Implement the way to load document into Viewer using URL object` we have added new constructors. Also, new properties were added to `com.groupdocs.viewer.options.LoadOptions` class in order to configure timeouts.
+
+#### com.groupdocs.viewer.Viewer
+
+```java
+
+/**
+ * <p>
+ * Initializes new instance of {@link Viewer} class.
+ * </p>
+ *
+ * @param url A url to a file that should be loaded into Viewer.
+ * @throws IllegalArgumentException Thrown when {@code url} is null.
+ */
+public Viewer(URL url);
+
+/**
+ * <p>
+ * Initializes new instance of {@link Viewer} class.
+ * </p>
+ *
+ * @param url         A url to a file that should be loaded into Viewer.
+ * @param loadOptions The document load options.
+ * @throws IllegalArgumentException Thrown when {@code url} is null.
+ * @throws IllegalArgumentException Thrown when {@code loadOptions} is null.
+ */
+public Viewer(URL url, LoadOptions loadOptions);
+
+/**
+ * <p>
+ * Initializes new instance of {@link Viewer} class.
+ * </p>
+ *
+ * @param url      A url to a file that should be loaded into Viewer.
+ * @param settings The Viewer settings.
+ * @throws IllegalArgumentException Thrown when {@code url} is null.
+ * @throws IllegalArgumentException Thrown when {@code settings} is null.
+ */
+public Viewer(URL url, ViewerSettings settings);
+
+/**
+ * <p>
+ * Initializes new instance of {@link Viewer} class.
+ * </p>
+ *
+ * @param url         A url to a file that should be loaded into Viewer.
+ * @param loadOptions The document load options.
+ * @param settings    The Viewer settings.
+ * @throws IllegalArgumentException Thrown when {@code url} is null.
+ * @throws IllegalArgumentException Thrown when {@code settings} is null.
+ */
+public Viewer(URL url, LoadOptions loadOptions, ViewerSettings settings);
+```
+
+#### com.groupdocs.viewer.options.LoadOptions
+
+```java
+/**
+ * Connect timeout to create {@link com.groupdocs.viewer.Viewer} using {@link java.net.URL} to load document, default value is 5 seconds
+ *
+ * @return connect timeout
+ */
+public int getUrlConnectTimeout();
+
+/**
+ * Connect timeout to create {@link com.groupdocs.viewer.Viewer} using {@link java.net.URL} to load document, default value is 5 seconds
+ *
+ * @param urlConnectTimeout connect timeout
+ */
+public void setUrlConnectTimeout(int urlConnectTimeout);
+
+/**
+ * Read timeout to create {@link com.groupdocs.viewer.Viewer} using {@link java.net.URL} to load document, default value is 30 seconds
+ *
+ * @return read timeout
+ */
+public int getUrlReadTimeout();
+
+/**
+ * Read timeout to create {@link com.groupdocs.viewer.Viewer} using {@link java.net.URL} to load document, default value is 30 seconds
+ *
+ * @param urlReadTimeout read timeout
+ */
+public void setUrlReadTimeout(int urlReadTimeout);
+```
+
+### com.groupdocs.viewer.options.LoadOptions and com.groupdocs.viewer.options.ArchiveSecurityOptions classes
+
+In context of new feature `VIEWERJAVA-3153 - Implement options to control archive content when extracting it` we have added new `com.groupdocs.viewer.options.ArchiveSecurityOptions` and `com.groupdocs.viewer.exception.ArchiveSecurityException` classes. Also, new property was added to `LoadOptions` in order to setup `ArchiveSecurityOptions`.
+
+#### com.groupdocs.viewer.options.LoadOptions
+
+```java
+/**
+ * <p>
+ * Security options to control the process of extracting archives. Not each archive type supports all options.
+ * </p>
+ *
+ * @return The options object to configure the process of extracting archives.
+ */
+public ArchiveSecurityOptions getArchiveSecurityOptions();
+
+/**
+ * <p>
+ * Security options to control the process of extracting archives. Not each archive type supports all options.
+ * </p>
+ *
+ * @param archiveSecurityOptions The options object to configure the process of extracting archives.
+ */
+public void setArchiveSecurityOptions(ArchiveSecurityOptions archiveSecurityOptions);
+```
+
+#### com.groupdocs.viewer.options.ArchiveSecurityOptions classes
+
+```java
+/**
+ * <p>
+ * Archive entry name length can not be more than specified in this option. Default value is 255.
+ * </p>
+ *
+ * @return Maximum archive entry name length
+ */
+public int getMaxAllowedEntryNameLength();
+
+/**
+ * <p>
+ * Archive entry name length can not be more than specified in this option. Default value is 255.
+ * </p>
+ *
+ * @param maxAllowedEntryNameLength Maximum archive entry name length.
+ */
+public void setMaxAllowedEntryNameLength(int maxAllowedEntryNameLength);
+
+/**
+ * <p>
+ * Archive entry size can not be more than specified in this option. Default value is 10Gb (10737418240L).
+ * </p>
+ *
+ * @return Maximum archive entry size.
+ */
+public long getMaxAllowedEntrySize();
+
+/**
+ * <p>
+ * Archive entry size can not be more than specified in this option. Default value is 10Gb (10737418240L).
+ * </p>
+ *
+ * @param maxAllowedEntrySize Maximum archive entry size
+ */
+public void setMaxAllowedEntrySize(long maxAllowedEntrySize);
+
+/**
+ * <p>
+ * Archive that contains more entries, than specified in this option can not be extracted. Default value is 1000.
+ * </p>
+ *
+ * @return Maximum count of entries in an archive.
+ */
+public long getMaxAllowedEntriesCount();
+
+/**
+ * <p>
+ * Archive that contains more entries, than specified in this option can not be extracted. Default value is 1000.
+ * </p>
+ *
+ * @param maxAllowedEntriesCount Maximum count of entries in an archive.
+ */
+public void setMaxAllowedEntriesCount(long maxAllowedEntriesCount);
+
+/**
+ * <p>
+ * Archive entries which compression ratio is more, than specified in this option can not be extracted. Default value is 100.
+ * </p>
+ *
+ * @return Maximum allowed entries compression ratio.
+ */
+public double getMaxAllowedEntryCompressionRatio();
+
+/**
+ * <p>
+ * Archive entries which compression ratio is more, than specified in this option can not be extracted. Default value is 100.
+ * </p>
+ *
+ * @param maxAllowedEntryCompressionRatio Maximum allowed entries compression ratio.
+ */
+public void setMaxAllowedEntryCompressionRatio(double maxAllowedEntryCompressionRatio);
+```
+
+### com.groupdocs.viewer.FileType
+
+Next constants of `FileType` enum were renamed
+
+|Old name|New name|
+|--------|--------|
+|`SevenZip`|`SEVEN_ZIP`|
+
+
+### com.groupdocs.viewer.options.Resolution
+
+Next constants of `Resolution` enum were renamed
+
+|Old name|New name|
+|--------|--------|
+|`DocumentResolution`|`DOCUMENT_RESOLUTION`|
+|`Dpi150`|`DPI_150`|
+|`Dpi220`|`DPI_220`|
+|`Dpi330`|`DPI_330`|
+|`Dpi72`|`DPI_72`|
+|`Dpi96`|`DPI_96`|
