@@ -10,7 +10,7 @@ hideChildren: False
 toc: True
 ---
 
-There are 30+ enhancements and bug fixes in this release.
+There are 30+ features, enhancements, and bug fixes in this release.
 
 ## Full list of changes in this release
 
@@ -58,22 +58,28 @@ There are 30+ enhancements and bug fixes in this release.
 
 ### com.groupdocs.viewer.options.WordProcessingOptions class
 
-Added new `EnableOpenTypeFeatures` boolean property. Setting it to `true` enables kerning and other OpenType Features when rendering Arabic, Hebrew, Indian scripts, Latin-based or Cyrillic-based scripts
+Added the boolean `EnableOpenTypeFeatures` property. Set it to `true` to enable kerning and other OpenType features when rendering Arabic, Hebrew, Indian, Latin-based, or Cyrillic-based scripts.
 
+{{< tabs "example1">}}
+{{< tab "Java" >}}
 ```java
 /**
- * This option enables kerning and other OpenType Features when rendering Arabic, Hebrew, Indian scripts, Latin-based or Cyrillic-based scripts.
+ * This option enables kerning and other OpenType features when rendering Arabic, Hebrew, Indian, Latin-based, or Cyrillic-based scripts.
  */
 public boolean isEnableOpenTypeFeatures();
 
 /**
- * This option enables kerning and other OpenType Features when rendering Arabic, Hebrew, Indian scripts, Latin-based or Cyrillic-based scripts.
+ * This option enables kerning and other OpenType features when rendering Arabic, Hebrew, Indian, Latin-based, or Cyrillic-based scripts.
  */
 public void setEnableOpenTypeFeatures(boolean enableOpenTypeFeatures);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
-In context of new feature `VIEWERNET-4021 - Support setting margins for Word documents` we have changed the file type from `float` to `Float` in `com.groupdocs.viewer.options.WordProcessingOptions`. Starting from this version you can set margins for the Word documents same as you adjust margins using `Page Setup` in Microsoft Word.
+Within the new feature `VIEWERNET-4021 - Support setting margins for Word documents` we have changed the file type from `float` to `Float` in `com.groupdocs.viewer.options.WordProcessingOptions`. From this version, you can set the margins of the Word documents in the same way as using `Page Setup` in Microsoft Word.
 
+{{< tabs "example2">}}
+{{< tab "Java" >}}
 ```java
 /**
  * Left page margin (for HTML rendering only)
@@ -114,13 +120,17 @@ public Float getBottomMargin();
  */
 public void setBottomMargin(Float bottomMargin);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### com.groupdocs.viewer.Viewer and com.groupdocs.viewer.options.LoadOptions classes
 
-In context of new feature `VIEWERJAVA-3118 - Implement the way to load document into Viewer using URL object` we have added new constructors. Also, new properties were added to `com.groupdocs.viewer.options.LoadOptions` class in order to configure timeouts.
+Within the new feature `VIEWERJAVA-3118 - Implement the way to load document into Viewer using URL object` we have added new constructors. Also, we have added new properties to the `com.groupdocs.viewer.options.LoadOptions` class to configure timeouts.
 
 #### com.groupdocs.viewer.Viewer
 
+{{< tabs "example3">}}
+{{< tab "Java" >}}
 ```java
 
 /**
@@ -170,9 +180,13 @@ public Viewer(URL url, ViewerSettings settings);
  */
 public Viewer(URL url, LoadOptions loadOptions, ViewerSettings settings);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 #### com.groupdocs.viewer.options.LoadOptions
 
+{{< tabs "example4">}}
+{{< tab "Java" >}}
 ```java
 /**
  * Connect timeout to create {@link com.groupdocs.viewer.Viewer} using {@link java.net.URL} to load document, default value is 5 seconds
@@ -202,13 +216,17 @@ public int getUrlReadTimeout();
  */
 public void setUrlReadTimeout(int urlReadTimeout);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### com.groupdocs.viewer.options.LoadOptions and com.groupdocs.viewer.options.ArchiveSecurityOptions classes
 
-In context of new feature `VIEWERJAVA-3153 - Implement options to control archive content when extracting it` we have added new `com.groupdocs.viewer.options.ArchiveSecurityOptions` and `com.groupdocs.viewer.exception.ArchiveSecurityException` classes. Also, new property was added to `LoadOptions` in order to setup `ArchiveSecurityOptions`.
+Within the new feature `VIEWERJAVA-3153 - Implement options to control archive content when extracting it` we have added the `com.groupdocs.viewer.options.ArchiveSecurityOptions` and `com.groupdocs.viewer.exception.ArchiveSecurityException` classes. Also, we have added a new property to `LoadOptions` to set up `ArchiveSecurityOptions`.
 
 #### com.groupdocs.viewer.options.LoadOptions
 
+{{< tabs "example5">}}
+{{< tab "Java" >}}
 ```java
 /**
  * <p>
@@ -228,9 +246,13 @@ public ArchiveSecurityOptions getArchiveSecurityOptions();
  */
 public void setArchiveSecurityOptions(ArchiveSecurityOptions archiveSecurityOptions);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 #### com.groupdocs.viewer.options.ArchiveSecurityOptions classes
 
+{{< tabs "example6">}}
+{{< tab "Java" >}}
 ```java
 /**
  * <p>
@@ -304,10 +326,12 @@ public double getMaxAllowedEntryCompressionRatio();
  */
 public void setMaxAllowedEntryCompressionRatio(double maxAllowedEntryCompressionRatio);
 ```
+{{< /tab >}}
+{{< /tabs >}}
 
 ### com.groupdocs.viewer.FileType
 
-Next constants of `FileType` enum were renamed
+Renamed the following constants of the `FileType` enumeration:
 
 |Old name|New name|
 |--------|--------|
@@ -316,7 +340,7 @@ Next constants of `FileType` enum were renamed
 
 ### com.groupdocs.viewer.options.Resolution
 
-Next constants of `Resolution` enum were renamed
+Renamed the following constants of the `Resolution` enumeration:
 
 |Old name|New name|
 |--------|--------|
