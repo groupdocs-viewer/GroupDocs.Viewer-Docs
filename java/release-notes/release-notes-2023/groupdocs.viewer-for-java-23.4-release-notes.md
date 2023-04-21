@@ -1,10 +1,10 @@
 ---
-id: groupdocs-viewer-for-java-latest-release-notes
-url: viewer/java/groupdocs-viewer-for-java-latest-release-notes
-title: Latest release (April 2023)
-weight: 0
-description: "Changes that shipped in the latest version of GroupDocs.Viewer for Java"
-keywords: release notes, groupdocs.viewer for java, latest
+id: groupdocs-viewer-for-java-23-4-release-notes
+url: viewer/java/groupdocs-viewer-for-java-23-4-release-notes
+title: GroupDocs.Viewer for Java 23.4 Release Notes
+weight: 8
+description: "Bugs-fixes that are shipped in GroupDocs.Viewer for Java 23.4"
+keywords: release notes, groupdocs.viewer, java, 23.4
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
@@ -42,7 +42,7 @@ There are 30+ features, enhancements, and bug fixes in this release.
 |VIEWERNET-3951|Fix|Dwfx to Pdf produce empty result|
 |VIEWERNET-3952|Fix|Viewer font issue when rendering DOCX to PDF|
 |VIEWERNET-3973|Fix|Characters written on objects such as shapes and text boxes are garbled|
-|VIEWERNET-3919|Fix|GroupDocs.Viewer doesn’t render the page when it’s a full page image in a PDF|
+|VIEWERNET-3919|Fix|GroupDocs.Viewer doesnâ€™t render the page when itâ€™s a full page image in a PDF|
 |VIEWERNET-3969|Fix|"Output space is undefined" when rendering TEX files from stream|
 |VIEWERNET-3990|Fix|Output page size is 55 mb when rendering PPTX to HTML|
 |VIEWERNET-4000|Fix|Saving a particular pdf document to image by page produces distored images|
