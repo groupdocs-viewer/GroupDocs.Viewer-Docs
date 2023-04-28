@@ -1,6 +1,6 @@
 ---
 id: groupdocs-viewer-for-net-23-4-release-notes
-url: viewer/net/groupdocs-viewer-for-net-23-5-release-notes
+url: viewer/net/groupdocs-viewer-for-net-23-4-release-notes
 title: GroupDocs.Viewer for .NET 23.4 Release Notes
 weight: 100
 description: "Bugs-fixes and features that are shipped in GroupDocs.Viewer for .NET 23.4"
