@@ -1,7 +1,7 @@
 ---
 id: groupdocs-viewer-for-net-latest-release-notes
 url: viewer/net/groupdocs-viewer-for-net-latest-release-notes
-title: Latest release (March 2023)
+title: Latest release (April 2023)
 weight: 0
 description: "Changes that shipped in the latest version of GroupDocs.Viewer for .NET"
 keywords: release notes, groupdocs.viewer for .net, latest
@@ -10,78 +10,92 @@ hideChildren: False
 toc: True
 ---
 
-There are 15 features and bug fixes in this release.
+There are 9 features and bug fixes in this release.
 
 ## Full list of changes in this release
 
 | Key | Category | Summary |
 | --- | --- | --- |
-|VIEWERNET&#8209;4283|Feature|[Add Amazon AZW3/KF8 ebook (.azw3) file-format support](#added-support-for-amazon-azw3-ebook)|
-|VIEWERNET&#8209;4272|Feature|[Highlight search text in file preview](#highlight-search-text-in-file-preview)|
-|VIEWERNET&#8209;2646|Fix|The image was cut when rendering from PDF with images in Linux|
-|VIEWERNET&#8209;2823|Fix|Invalid image block length|
-|VIEWERNET&#8209;3015|Fix|Mobi file detected as damaged|
-|VIEWERNET&#8209;3591|Fix|Service hangs when disposing Viewer in .NET|
-|VIEWERNET&#8209;3992|Fix|Threading Issue|
-|VIEWERNET&#8209;4152|Fix|Operation is not valid due to the current state of the object when rendering Excel spreadsheet to PNG|
-|VIEWERNET&#8209;4205|Fix|MVC Demo:  Generic error occurred in GDI+|
-|VIEWERNET&#8209;4243|Fix|Slow Load time in Viewer|
-|VIEWERNET&#8209;4246|Fix|Object reference not set to an instance of an object? error occurs when converting this excel file|
-|VIEWERNET&#8209;4250|Fix|Font not embedded when converting DOCX to HTML in .NET|
-|VIEWERNET&#8209;4260|Fix|The type initializer for 'Gdip' threw an exception when rendering PDF|
-|VIEWERNET&#8209;4263|Fix|Object reference not set to an instance of an object exception when rendering DOCX file|
-|VIEWERNET&#8209;4266|Fix|Converting STL files to HTML produces empty file|
-
+|VIEWERNET&#8209;4212|Feature|[Support for setting margins when exporting Excel Spreadsheets to PDF](#option-to-use-margins-when-convert-excel-workbook-to-pdf)|
+|VIEWERNET&#8209;4312|Feature|[[GroupDocs.Viewer.UI] Option to disable print](#option-to-disable-print)|
+|VIEWERNET&#8209;4280|Feature|[[GroupDocs.Viewer.UI] Check if license file exists in the application folder](#check-if-license-file-exists-in-the-application-folder)|
+|VIEWERNET&#8209;4324|Fix|Links are covered after rendering|
+|VIEWERNET&#8209;4322|Fix|AI file can't be opened in .NET project|
+|VIEWERNET&#8209;4318|Fix|PPTX showing headers when ExcludeFonts|
+|VIEWERNET&#8209;4319|Fix|Viewer fails to open DIB file|
+|VIEWERNET&#8209;4328|Fix|OneNote embedded drawing is missing|
+|VIEWERNET&#8209;4247|Fix|Could not load System.Drawing.Common assembly in VB.NET project|
 
 ## Major Features
 
-This release includes two features:
+This release includes three features:
 
-* [Added support for Amazon AZW3/KF8 ebook](#added-support-for-amazon-azw3-ebook)
-* [Highlight search text in file preview](#highlight-search-text-in-file-preview)
+* [Support for setting margins when exporting Excel Spreadsheets to PDF](#option-to-use-margins-when-convert-excel-workbook-to-pdf)
+* [Option to disable print](#option-to-disable-print)
+* [Check if license file exists in the application folder](#check-if-license-file-exists-in-the-application-folder)
 
-### Added support for Amazon AZW3 ebook
 
-[AZW3](https://fileinfo.com/extension/azw3) is ebook file. This ebook format is used by [Amazon Kindle](https://docs.fileformat.com/ebook/azw3/), this file format is developed for Amazon Kindle devices. The format is an enhancement to older AZW files and is used on Kindle Fire devices only with backward compatibility for the ancestor file format i.e. MOBI and AZW.
+### Option to disable print
 
-{{< tabs "example1">}}
+[GroupDocs.Viewer.UI](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI) Print button now can be disabled optionally from backend.
+
+{{< tabs "Disable print">}}
 {{< tab "C#" >}}
 ```cs
-/// <summary>
-/// Amazon AZW3/KF8 ebook
-/// </summary>
-public static readonly FileType AZW3 = new FileType("Amazon Kindle Format 8 (KF8) eBook", ".azw3");
-```
-{{< /tab >}}
-{{< /tabs >}}
-
-### Highlight search text in file preview
-
-In [GroupDocs.Viewer.UI](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI) search term can be set now in the file preview request. It provides ability to apply search term immediately after opening the file.
-
-There are two possible ways to pass search term.
-
-{{< tabs "Searh term">}}
-{{< tab "From query string" >}}
-```
-  http://localhost:8080/viewer?file=<file_name>&search=<search_term>
-```
-{{</ tab >}}
-{{< tab "From API" >}}
-```cs
 /// Implement the service 
-class MySearchTermResolver : ISearchTermResolver
+class MyUIConfigProvider : IUIConfigProvider
 {
-     public Task<string> ResolveSearchTermAsync(string filepath)
-     {
-          /// resolve search term by file path
-          return Task.FromResult("<search term>");
-     }
+    public void ConfigureUI(Config config)
+    {
+        config.DisablePrint(); // use this function to disable print on UI
+    }
 }
 	
 ...
 
 // and register it
-services.AddSingleton<ISearchTermResolver, MySearchTermResolver>(); 
+services.AddTransient<IUIConfigProvider, MyUIConfigProvider>(); 
+```
+{{</ tab >}}
+{{</ tabs >}}
+
+
+### Check if license file exists in the application folder
+
+[GroupDocs.Viewer.UI](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI) Check of license file in the application folder added.
+
+Current sequence of checks:
+
+* check license file path
+* check path from `GROUPDOCS_LIC_PATH` environment variable
+* check app root folder for files with file names
+   - `GroupDocs.Viewer.lic`
+   - `GroupDocs.Viewer.Product.Family.lic`
+   
+### Option to use margins when convert excel workbook to pdf 
+
+If convert from excel workbook to the Pdf now optional margins can be applied to the output pages. If margin value is less than 0 or not set
+then it will be set to the default value.
+
+{{< tabs "Use optional margins">}}
+{{< tab "C#" >}}
+```cs
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("invoice.xlsx"))
+{
+    var viewOptions = new PdfViewOptions();
+
+    // Set margins for worksheets in the output pdf pages
+    viewOptions.SpreadsheetOptions.LeftMargin = 0;
+    viewOptions.SpreadsheetOptions.RightMargin = 0.5;
+    viewOptions.SpreadsheetOptions.TopMargin = 1;
+    viewOptions.SpreadsheetOptions.BottomMargin = -10; // set to default value
+
+    viewer.View(viewOptions);
+}
+```
 {{</ tab >}}
 {{</ tabs >}}
