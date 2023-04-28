@@ -16,7 +16,7 @@ There are 9 features and bug fixes in this release.
 
 | Key | Category | Summary |
 | --- | --- | --- |
-|VIEWERNET&#8209;4212|Feature|[Support for setting margins when exporting Excel Spreadsheets to PDF](#option-to-use-margins-when-convert-excel-workbook-to-pdf)|
+|VIEWERNET&#8209;4212|Feature|[Support for setting margins when exporting Excel Spreadsheets to PDF](#support-for-setting-margins-when-exporting-excel-spreadsheets-to-pdf)|
 |VIEWERNET&#8209;4312|Feature|[[GroupDocs.Viewer.UI] Option to disable print](#option-to-disable-print)|
 |VIEWERNET&#8209;4280|Feature|[[GroupDocs.Viewer.UI] Check if license file exists in the application folder](#check-if-license-file-exists-in-the-application-folder)|
 |VIEWERNET&#8209;4324|Fix|Links are covered after rendering|
@@ -30,10 +30,37 @@ There are 9 features and bug fixes in this release.
 
 This release includes three features:
 
-* [Support for setting margins when exporting Excel Spreadsheets to PDF](#option-to-use-margins-when-convert-excel-workbook-to-pdf)
+* [Support for setting margins when exporting Excel Spreadsheets to PDF](#support-for-setting-margins-when-exporting-excel-spreadsheets-to-pdf)
 * [Option to disable print](#option-to-disable-print)
 * [Check if license file exists in the application folder](#check-if-license-file-exists-in-the-application-folder)
 
+### Support for setting margins when exporting Excel Spreadsheets to PDF
+
+If convert from excel workbook to the Pdf now optional margins can be applied to the output pages. If margin value is less than 0 or not set
+then it will be set to the default value.
+
+{{< tabs "Use optional margins">}}
+{{< tab "C#" >}}
+```cs
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("invoice.xlsx"))
+{
+    var viewOptions = new PdfViewOptions();
+
+    // Set margins for worksheets in the output pdf pages
+    viewOptions.SpreadsheetOptions.LeftMargin = 0;
+    viewOptions.SpreadsheetOptions.RightMargin = 0.5;
+    viewOptions.SpreadsheetOptions.TopMargin = 1;
+    viewOptions.SpreadsheetOptions.BottomMargin = -10; // set to default value
+
+    viewer.View(viewOptions);
+}
+```
+{{</ tab >}}
+{{</ tabs >}}
 
 ### Option to disable print
 
@@ -71,31 +98,3 @@ Current sequence of checks:
 * check app root folder for files with file names
    - `GroupDocs.Viewer.lic`
    - `GroupDocs.Viewer.Product.Family.lic`
-   
-### Option to use margins when convert excel workbook to pdf 
-
-If convert from excel workbook to the Pdf now optional margins can be applied to the output pages. If margin value is less than 0 or not set
-then it will be set to the default value.
-
-{{< tabs "Use optional margins">}}
-{{< tab "C#" >}}
-```cs
-using GroupDocs.Viewer;
-using GroupDocs.Viewer.Options;
-// ...
-
-using (var viewer = new Viewer("invoice.xlsx"))
-{
-    var viewOptions = new PdfViewOptions();
-
-    // Set margins for worksheets in the output pdf pages
-    viewOptions.SpreadsheetOptions.LeftMargin = 0;
-    viewOptions.SpreadsheetOptions.RightMargin = 0.5;
-    viewOptions.SpreadsheetOptions.TopMargin = 1;
-    viewOptions.SpreadsheetOptions.BottomMargin = -10; // set to default value
-
-    viewer.View(viewOptions);
-}
-```
-{{</ tab >}}
-{{</ tabs >}}
