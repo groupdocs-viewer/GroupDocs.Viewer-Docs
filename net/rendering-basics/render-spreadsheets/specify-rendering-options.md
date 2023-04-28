@@ -253,18 +253,16 @@ The following code example demonstrates how to convert an Excel workbook to PDF 
 {{< tabs "example8">}}
 {{< tab "C#" >}}
 ```cs
-/// Implement the service 
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("invoice.xlsx"))
 {
-    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
 	
-	// Set margins for worksheets in the output pdf pages
-	viewOptions.SpreadsheetOptions.LeftMargin = 0;
+    // Set margins for worksheets in the output pdf pages
+    viewOptions.SpreadsheetOptions.LeftMargin = 0;
     viewOptions.SpreadsheetOptions.RightMargin = 0.5;
     viewOptions.SpreadsheetOptions.TopMargin = 1;
     viewOptions.SpreadsheetOptions.BottomMargin = -10; // set to default value
