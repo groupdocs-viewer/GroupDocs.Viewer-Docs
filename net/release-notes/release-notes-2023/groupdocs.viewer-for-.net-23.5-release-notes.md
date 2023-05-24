@@ -10,92 +10,65 @@ hideChildren: False
 toc: True
 ---
 
-There are 9 features and bug fixes in this release.
+There are ?? features and bug fixes in this release.
 
 ## Full list of changes in this release
 
 | Key | Category | Summary |
 | --- | --- | --- |
-|VIEWERNET&#8209;4212|Feature|[Support for setting margins when exporting Excel Spreadsheets to PDF](#option-to-use-margins-when-convert-excel-workbook-to-pdf)|
-|VIEWERNET&#8209;4312|Feature|[[GroupDocs.Viewer.UI] Option to disable print](#option-to-disable-print)|
-|VIEWERNET&#8209;4280|Feature|[[GroupDocs.Viewer.UI] Check if license file exists in the application folder](#check-if-license-file-exists-in-the-application-folder)|
-|VIEWERNET&#8209;4324|Fix|Links are covered after rendering|
-|VIEWERNET&#8209;4322|Fix|AI file can't be opened in .NET project|
-|VIEWERNET&#8209;4318|Fix|PPTX showing headers when ExcludeFonts|
-|VIEWERNET&#8209;4319|Fix|Viewer fails to open DIB file|
-|VIEWERNET&#8209;4328|Fix|OneNote embedded drawing is missing|
-|VIEWERNET&#8209;4247|Fix|Could not load System.Drawing.Common assembly in VB.NET project|
+|VIEWERNET&#8209;4330|Feature|[Support PDF file optimizations](#support-pdf-file-optimizations)|
 
 ## Major Features
 
 This release includes three features:
 
-* [Support for setting margins when exporting Excel Spreadsheets to PDF](#option-to-use-margins-when-convert-excel-workbook-to-pdf)
-* [Option to disable print](#option-to-disable-print)
-* [Check if license file exists in the application folder](#check-if-license-file-exists-in-the-application-folder)
+* [Support PDF file optimizations](#support-pdf-file-optimizations)
 
+### Support PDF file optimizations 
 
-### Option to disable print
+PDF file now can be optimized for web browser usage or to reduce resources size with various optimization options.
+It also can be applied to converted output pdf file from all supported input formats [Supported document formats](/viewer/net/supported-document-formats/).
 
-[GroupDocs.Viewer.UI](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI) Print button now can be disabled optionally from backend.
+To see all supported optimization options follow [Supported PDF file optimization options](/viewer/net/optimization-pdf-options/)
 
-{{< tabs "Disable print">}}
-{{< tab "C#" >}}
+Optimization for web browser
+
+{{< tabs "Use optimization PDF file for web">}}
+{{< tab "Use optimization for web" >}}
 ```cs
-/// Implement the service 
-class MyUIConfigProvider : IUIConfigProvider
-{
-    public void ConfigureUI(Config config)
-    {
-        config.DisablePrint(); // use this function to disable print on UI
-    }
-}
-	
-...
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Domain.Documents.PostProcessing.Pdf.Optimization;
+// ...
 
-// and register it
-services.AddTransient<IUIConfigProvider, MyUIConfigProvider>(); 
+using (var viewer = new Viewer("sample.docx"))
+     {
+         PdfViewOptions viewOptions = new PdfViewOptions();
+         viewOptions.PdfOptimizer = new OptimizePdfForWeb();
+     
+         viewer.View(viewOptions);
+     }
 ```
 {{</ tab >}}
 {{</ tabs >}}
 
+Optimization resources
 
-### Check if license file exists in the application folder
-
-[GroupDocs.Viewer.UI](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI) Check of license file in the application folder added.
-
-Current sequence of checks:
-
-* check license file path
-* check path from `GROUPDOCS_LIC_PATH` environment variable
-* check app root folder for files with file names
-   - `GroupDocs.Viewer.lic`
-   - `GroupDocs.Viewer.Product.Family.lic`
-   
-### Option to use margins when convert excel workbook to pdf 
-
-If convert from excel workbook to the Pdf now optional margins can be applied to the output pages. If margin value is less than 0 or not set
-then it will be set to the default value.
-
-{{< tabs "Use optional margins">}}
-{{< tab "C#" >}}
+{{< tabs "Use optimization PDF file resources">}}
+{{< tab "Use optimization resources" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Domain.Documents.PostProcessing.Pdf.Optimization;
 // ...
 
-using (var viewer = new Viewer("invoice.xlsx"))
-{
-    var viewOptions = new PdfViewOptions();
-
-    // Set margins for worksheets in the output pdf pages
-    viewOptions.SpreadsheetOptions.LeftMargin = 0;
-    viewOptions.SpreadsheetOptions.RightMargin = 0.5;
-    viewOptions.SpreadsheetOptions.TopMargin = 1;
-    viewOptions.SpreadsheetOptions.BottomMargin = -10; // set to default value
-
-    viewer.View(viewOptions);
-}
+using (var viewer = new Viewer("sample.docx"))
+     {
+         PdfViewOptions viewOptions = new PdfViewOptions();
+         viewOptions.PdfOptimizer = new OptimizePdfResources();
+     
+         viewer.View(viewOptions);
+     }
 ```
 {{</ tab >}}
 {{</ tabs >}}
