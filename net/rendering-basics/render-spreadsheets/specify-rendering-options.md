@@ -246,28 +246,23 @@ The following image demonstrates the result:
 
 ## Set worksheet margins in the output pdf pages
 
-Use the [SpreadsheetOptions.LeftMargin](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/leftmargin)
-[SpreadsheetOptions.RightMargin](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/rightmargin)
-[SpreadsheetOptions.TopMargin](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/topmargin)
-[SpreadsheetOptions.BottomMargin](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/bottommargin) properties to set margins for worksheets in the output pdf. If margins are set to value less than 0 or not set then default value will be used. 
+Use the [SpreadsheetOptions.RenderGridLines](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/rendergridlines) properties to set margins for worksheets in the output pdf. If margins are set to value less than 0 or not set then default value will be used.
 
 The following code example demonstrates how to convert an Excel workbook to PDF and set optional margins for worksheets in the output PDF file:
 
 {{< tabs "example8">}}
 {{< tab "C#" >}}
 ```cs
-/// Implement the service 
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("invoice.xlsx"))
 {
-    // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
 	
-	// Set margins for worksheets in the output pdf pages
-	viewOptions.SpreadsheetOptions.LeftMargin = 0;
+    // Set margins for worksheets in the output pdf pages
+    viewOptions.SpreadsheetOptions.LeftMargin = 0;
     viewOptions.SpreadsheetOptions.RightMargin = 0.5;
     viewOptions.SpreadsheetOptions.TopMargin = 1;
     viewOptions.SpreadsheetOptions.BottomMargin = -10; // set to default value
