@@ -2,7 +2,7 @@
 id: groupdocs-viewer-for-net-23-5-release-notes
 url: viewer/net/groupdocs-viewer-for-net-23-5-release-notes
 title: GroupDocs.Viewer for .NET 23.5 Release Notes
-weight: 100
+weight: 90
 description: "Bugs-fixes and features that are shipped in GroupDocs.Viewer for .NET 23.5"
 keywords: release notes, groupdocs.viewer, .net, 23.5
 productName: GroupDocs.Viewer for .NET
@@ -10,31 +10,32 @@ hideChildren: False
 toc: True
 ---
 
-There are ?? features and bug fixes in this release.
+There are 1 feature in this release.
 
 ## Full list of changes in this release
 
 | Key | Category | Summary |
 | --- | --- | --- |
-|VIEWERNET&#8209;4330|Feature|[Support PDF file optimizations](#support-pdf-file-optimizations)|
+|VIEWERNET&#8209;4330|Feature|[Support PDF file optimizations](https://issue.saltov.dynabic.com/issues/VIEWERNET-4330)|
 
 ## Major Features
 
-This release includes three features:
+This release includes the following feature:
 
 * [Support PDF file optimizations](#support-pdf-file-optimizations)
 
 ### Support PDF file optimizations 
 
-PDF file now can be optimized for web browser usage or to reduce resources size with various optimization options.
-It also can be applied to converted output pdf file from all supported input formats [Supported document formats](/viewer/net/supported-document-formats/).
+This feature allows you to optimize the output PDF file for a web browser or to reduce the file size using various options.
 
-To see all supported optimization options follow [Supported PDF file optimization options](/viewer/net/optimization-pdf-options/)
+You can also optimize an existing PDF file. To do this, open it and save the resulting file, specifying the optimization parameters.
 
-Optimization for web browser
+For details, see [Supported PDF file optimization options](/viewer/net/optimization-pdf-options/).
 
-{{< tabs "Use optimization PDF file for web">}}
-{{< tab "Use optimization for web" >}}
+#### Optimization for web browser
+
+{{< tabs "Example1">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -52,10 +53,10 @@ using (var viewer = new Viewer("sample.docx"))
 {{</ tab >}}
 {{</ tabs >}}
 
-Optimization resources
+#### Optimization resources
 
-{{< tabs "Use optimization PDF file resources">}}
-{{< tab "Use optimization resources" >}}
+{{< tabs "Example2">}}
+{{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;

@@ -1,8 +1,8 @@
 ---
 id: groupdocs-viewer-for-net-latest-release-notes
 url: viewer/net/groupdocs-viewer-for-net-latest-release-notes
-title: Latest release (April 2023)
-weight: 0
+title: Latest release (May 2023)
+weight: 1
 description: "Changes that shipped in the latest version of GroupDocs.Viewer for .NET"
 keywords: release notes, groupdocs.viewer for .net, latest
 productName: GroupDocs.Viewer for .NET
@@ -10,91 +10,66 @@ hideChildren: False
 toc: True
 ---
 
-There are 9 features and bug fixes in this release.
+There are 1 feature in this release.
 
 ## Full list of changes in this release
 
 | Key | Category | Summary |
 | --- | --- | --- |
-|VIEWERNET&#8209;4212|Feature|[Support for setting margins when exporting Excel Spreadsheets to PDF](#support-for-setting-margins-when-exporting-excel-spreadsheets-to-pdf)|
-|VIEWERNET&#8209;4312|Feature|[[GroupDocs.Viewer.UI] Option to disable print](#option-to-disable-print)|
-|VIEWERNET&#8209;4280|Feature|[[GroupDocs.Viewer.UI] Check if license file exists in the application folder](#check-if-license-file-exists-in-the-application-folder)|
-|VIEWERNET&#8209;4324|Fix|Links are covered after rendering|
-|VIEWERNET&#8209;4322|Fix|AI file can't be opened in .NET project|
-|VIEWERNET&#8209;4318|Fix|PPTX showing headers when ExcludeFonts|
-|VIEWERNET&#8209;4319|Fix|Viewer fails to open DIB file|
-|VIEWERNET&#8209;4328|Fix|OneNote embedded drawing is missing|
-|VIEWERNET&#8209;4247|Fix|Could not load System.Drawing.Common assembly in VB.NET project|
+|VIEWERNET&#8209;4330|Feature|[Support PDF file optimizations](https://issue.saltov.dynabic.com/issues/VIEWERNET-4330)|
 
 ## Major Features
 
-This release includes three features:
+This release includes the following feature:
 
-* [Support for setting margins when exporting Excel Spreadsheets to PDF](#support-for-setting-margins-when-exporting-excel-spreadsheets-to-pdf)
-* [Option to disable print](#option-to-disable-print)
-* [Check if license file exists in the application folder](#check-if-license-file-exists-in-the-application-folder)
+* [Support PDF file optimizations](#support-pdf-file-optimizations)
 
-### Support for setting margins when exporting Excel Spreadsheets to PDF
+### Support PDF file optimizations 
 
-If convert from excel workbook to the Pdf now optional margins can be applied to the output pages. If margin value is less than 0 or not set
-then it will be set to the default value.
+This feature allows you to optimize the output PDF file for a web browser or to reduce the file size using various options.
 
-{{< tabs "Use optional margins">}}
+You can also optimize an existing PDF file. To do this, open it and save the resulting file, specifying the optimization parameters.
+
+For details, see [Supported PDF file optimization options](/viewer/net/optimization-pdf-options/).
+
+#### Optimization for web browser
+
+{{< tabs "Example1">}}
 {{< tab "C#" >}}
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Domain.Documents.PostProcessing.Pdf.Optimization;
 // ...
 
-using (var viewer = new Viewer("invoice.xlsx"))
-{
-    var viewOptions = new PdfViewOptions();
-
-    // Set margins for worksheets in the output pdf pages
-    viewOptions.SpreadsheetOptions.LeftMargin = 0;
-    viewOptions.SpreadsheetOptions.RightMargin = 0.5;
-    viewOptions.SpreadsheetOptions.TopMargin = 1;
-    viewOptions.SpreadsheetOptions.BottomMargin = -10; // set to default value
-
-    viewer.View(viewOptions);
-}
+using (var viewer = new Viewer("sample.docx"))
+     {
+         PdfViewOptions viewOptions = new PdfViewOptions();
+         viewOptions.PdfOptimizer = new OptimizePdfForWeb();
+     
+         viewer.View(viewOptions);
+     }
 ```
 {{</ tab >}}
 {{</ tabs >}}
 
-### Option to disable print
+#### Optimization resources
 
-[GroupDocs.Viewer.UI](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI) Print button now can be disabled optionally from backend.
-
-{{< tabs "Disable print">}}
+{{< tabs "Example2">}}
 {{< tab "C#" >}}
 ```cs
-/// Implement the service 
-class MyUIConfigProvider : IUIConfigProvider
-{
-    public void ConfigureUI(Config config)
-    {
-        config.DisablePrint(); // use this function to disable print on UI
-    }
-}
-	
-...
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Domain.Documents.PostProcessing.Pdf.Optimization;
+// ...
 
-// and register it
-services.AddTransient<IUIConfigProvider, MyUIConfigProvider>(); 
+using (var viewer = new Viewer("sample.docx"))
+     {
+         PdfViewOptions viewOptions = new PdfViewOptions();
+         viewOptions.PdfOptimizer = new OptimizePdfResources();
+     
+         viewer.View(viewOptions);
+     }
 ```
 {{</ tab >}}
 {{</ tabs >}}
-
-
-### Check if license file exists in the application folder
-
-[GroupDocs.Viewer.UI](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI) Check of license file in the application folder added.
-
-Current sequence of checks:
-
-* check license file path
-* check path from `GROUPDOCS_LIC_PATH` environment variable
-* check app root folder for files with file names
-   - `GroupDocs.Viewer.lic`
-   - `GroupDocs.Viewer.Product.Family.lic`
