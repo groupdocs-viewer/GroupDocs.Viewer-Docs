@@ -24,7 +24,10 @@ using GroupDocs.Viewer.Domain.Documents.PostProcessing.Pdf.Optimization;
 using (var viewer = new Viewer("sample.docx"))
      {
          PdfViewOptions viewOptions = new PdfViewOptions();
-         viewOptions.PdfOptimizer = new OptimizePdfForWeb();
+         viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions()
+         {
+           Lineriaze = true
+         };
      
          viewer.View(viewOptions);
      }

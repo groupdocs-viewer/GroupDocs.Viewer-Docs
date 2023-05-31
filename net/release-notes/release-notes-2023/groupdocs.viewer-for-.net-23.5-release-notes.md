@@ -32,28 +32,7 @@ You can also optimize an existing PDF file. To do this, open it and save the res
 
 For details, see [Supported PDF file optimization options](/viewer/net/optimization-pdf-options/).
 
-#### Optimization for web browser
-
-{{< tabs "Example1">}}
-{{< tab "C#" >}}
-```cs
-using GroupDocs.Viewer;
-using GroupDocs.Viewer.Options;
-using GroupDocs.Viewer.Domain.Documents.PostProcessing.Pdf.Optimization;
-// ...
-
-using (var viewer = new Viewer("sample.docx"))
-     {
-         PdfViewOptions viewOptions = new PdfViewOptions();
-         viewOptions.PdfOptimizer = new OptimizePdfForWeb();
-     
-         viewer.View(viewOptions);
-     }
-```
-{{</ tab >}}
-{{</ tabs >}}
-
-#### Optimization resources
+The following code snippet shows how to optimize the PDF resources using the default settings:
 
 {{< tabs "Example2">}}
 {{< tab "C#" >}}
@@ -66,7 +45,7 @@ using GroupDocs.Viewer.Domain.Documents.PostProcessing.Pdf.Optimization;
 using (var viewer = new Viewer("sample.docx"))
      {
          PdfViewOptions viewOptions = new PdfViewOptions();
-         viewOptions.PdfOptimizer = new OptimizePdfResources();
+         viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions();
      
          viewer.View(viewOptions);
      }
