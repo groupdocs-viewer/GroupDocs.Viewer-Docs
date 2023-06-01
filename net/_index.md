@@ -75,7 +75,7 @@ GroupDocs.Viewer ships with a wide range of options that allow you to control th
 
 <p>VERSION HISTORY</p>
 <ul>
-    <li><a href='{{< ref "/viewer/net/release-notes" >}}'>GroupDocs.Viewer for .NET Release Notes</a></li>
+    <li><a href='https://releases.groupdocs.com/viewer/net/release-notes/'>GroupDocs.Viewer for .NET Release Notes</a></li>
 </ul>
 
 <p>TECHNICAL SUPPORT</p>
