@@ -1,8 +1,8 @@
 ---
 id: optimization-pdf-unembed-fonts
 url: viewer/net/optimization-pdf-unembed-fonts
-title: Optimize the output PDF file
-linkTitle: Optimize the output PDF file
+title: Unembed fonts
+linkTitle: Unembed fonts
 weight: 1
 description: "This topic describes how to unembed fonts from a PDF file using the GroupDocs.Viewer .NET API (C#)."
 keywords: convert to pdf, optimize size, pdf reduce size, unembed fonts

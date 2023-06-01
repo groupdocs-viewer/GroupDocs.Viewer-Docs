@@ -1,8 +1,8 @@
 ---
 id: optimization-pdf-allow-reuse-content
 url: viewer/net/optimization-pdf-allow-reuse-content
-title: Allow reusing page content
-linkTitle: Allow reusing page content
+title: Allow reuse of page content
+linkTitle: Allow reuse of page content
 weight: 4
 description: "This topic describes how to allow reusing page content in PDF file using the GroupDocs.Viewer .NET API (C#)."
 keywords: convert to pdf, optimize size, pdf reduce size, reuse content
