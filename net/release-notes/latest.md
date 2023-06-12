@@ -1,7 +1,7 @@
 ---
 id: groupdocs-viewer-for-net-latest-release-notes
 url: viewer/net/groupdocs-viewer-for-net-latest-release-notes
-title: Latest release (May 2023)
+title: Latest release (June 2023)
 weight: 1
 description: "Changes that shipped in the latest version of GroupDocs.Viewer for .NET"
 keywords: release notes, groupdocs.viewer for .net, latest

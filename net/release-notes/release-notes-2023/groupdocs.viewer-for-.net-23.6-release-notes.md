@@ -1,10 +1,10 @@
 ---
-id: groupdocs-viewer-for-net-23-5-release-notes
-url: viewer/net/groupdocs-viewer-for-net-23-5-release-notes
-title: GroupDocs.Viewer for .NET 23.5 Release Notes
+id: groupdocs-viewer-for-net-23-6-release-notes
+url: viewer/net/groupdocs-viewer-for-net-23-6-release-notes
+title: GroupDocs.Viewer for .NET 23.6 Release Notes
 weight: 90
-description: "Bugs-fixes and features that are shipped in GroupDocs.Viewer for .NET 23.5"
-keywords: release notes, groupdocs.viewer, .net, 23.5
+description: "Bugs-fixes and features that are shipped in GroupDocs.Viewer for .NET 23.6"
+keywords: release notes, groupdocs.viewer, .net, 23.6
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
