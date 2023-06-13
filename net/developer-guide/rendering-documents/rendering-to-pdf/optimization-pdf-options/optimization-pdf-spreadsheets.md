@@ -3,7 +3,7 @@ id: optimization-pdf-for-web
 url: viewer/net/optimization-pdf-for-web
 title: Optimize spreadsheets in a PDF file
 linkTitle: Optimize spreadsheets in a PDF file
-weight: 1
+weight: 3
 description: "This topic describes how to optimize spreadsheets in a PDF file using the GroupDocs.Viewer .NET API (C#)."
 keywords: convert to pdf, optimize browser, optimize web
 productName: GroupDocs.Viewer for .NET
