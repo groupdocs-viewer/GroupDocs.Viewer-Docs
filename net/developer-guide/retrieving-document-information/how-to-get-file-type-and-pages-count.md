@@ -2,7 +2,7 @@
 id: how-to-get-file-type-and-pages-count
 url: viewer/net/how-to-get-file-type-and-pages-count
 title: Get the format family and the additional information
-weight: 4
+weight: 2
 description: "This article explains how to get the format family and the additional information using .NET / C# with GroupDocs.Viewer for .NET."
 keywords: 
 productName: GroupDocs.Viewer for .NET

@@ -2,7 +2,7 @@
 id: how-to-list-and-print-all-supported-file-types
 url: viewer/net/how-to-list-and-print-all-supported-file-types
 title: List and print all supported file types
-weight: 5
+weight: 4
 description: "This article explains how to list and print file types supported by GroupDocs.Viewer for .NET"
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
