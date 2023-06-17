@@ -2,7 +2,7 @@
 id: how-to-get-file-type-and-pages-count
 url: viewer/java/how-to-get-file-type-and-pages-count
 title: Get the format family and the additional information
-weight: 4
+weight: 2
 description: "This article explains how to get the format family and the additional information using Java with GroupDocs.Viewer for Java."
 keywords: 
 productName: GroupDocs.Viewer for Java
@@ -10,7 +10,7 @@ hideChildren: False
 ---
 A format family is a group of several file types for which an application provides additional information. For example, archive files (.7z, .rar, .zip, etc.) or Outlook files (.ost, .pst) are format families.
 
-You can get the format family and the additional information using the [getViewInfo](https://reference.groupdocs.com/viewer/java/groupdocs.viewer/viewer/methods/getviewinfo) method that returns a [ViewInfo](https://reference.groupdocs.com/viewer/java/groupdocs.viewer.results/viewinfo) object.
+You can get the format family and the additional information using the [getViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#getViewInfo-com.groupdocs.viewer.options.ViewInfoOptions-) method that returns a [ViewInfo](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.results/viewinfo/) object.
 
 GroupDocs.Viewer provides additional information for the following format families:
 
