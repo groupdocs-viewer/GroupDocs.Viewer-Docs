@@ -2,7 +2,7 @@
 id: how-to-determine-file-type
 url: viewer/net/how-to-determine-file-type
 title: Determine the file type
-weight: 4
+weight: 1
 description: "This article explains how to get a type of a file with GroupDocs.Viewer for .NET using .NET / C#."
 keywords: 
 productName: GroupDocs.Viewer for .NET
