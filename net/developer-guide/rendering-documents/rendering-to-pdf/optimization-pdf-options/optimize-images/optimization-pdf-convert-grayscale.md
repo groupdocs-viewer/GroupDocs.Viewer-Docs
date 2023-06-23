@@ -25,15 +25,15 @@ using GroupDocs.Viewer.Domain.Documents.PostProcessing.Pdf.Optimization;
 // ...
 
 using (var viewer = new Viewer("sample.docx"))
-     {
-         PdfViewOptions viewOptions = new PdfViewOptions();
-         viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions()
-         {
-           ConvertToGrayScale = true
-         };
+{
+    PdfViewOptions viewOptions = new PdfViewOptions();
+    viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions()
+    {
+    ConvertToGrayScale = true
+    };
      
-         viewer.View(viewOptions);
-     }
+    viewer.View(viewOptions);
+}
 ```
 {{</ tab >}}
 {{</ tabs >}}

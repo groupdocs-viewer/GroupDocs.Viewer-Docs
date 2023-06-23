@@ -26,15 +26,15 @@ using GroupDocs.Viewer.Domain.Documents.PostProcessing.Pdf.Optimization;
 // ...
 
 using (var viewer = new Viewer("invoice.xlsx"))
+{
+    PdfViewOptions viewOptions = new PdfViewOptions();
+    viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions 
     {
-        PdfViewOptions viewOptions = new PdfViewOptions();
-        viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions 
-        {
-            OptimizeSpreadsheets = true
-        };
+        OptimizeSpreadsheets = true
+    };
 
-        viewer.View(viewOptions);
-    }
+    viewer.View(viewOptions);
+}
 ```
 {{</ tab >}}
 {{</ tabs >}}
