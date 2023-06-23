@@ -3,7 +3,7 @@ id: optimization-pdf-options
 url: viewer/net/optimization-pdf-options
 title: Optimize the output PDF file
 linkTitle: Optimize the output PDF file
-weight: 5
+weight: 6
 description: "This topic describes how to optimize PDF file in the GroupDocs.Viewer .NET API (C#) for web browser or to reduce size."
 keywords: convert to pdf, optimize size, optimize browser, optimize web, pdf reduce size
 productName: GroupDocs.Viewer for .NET
