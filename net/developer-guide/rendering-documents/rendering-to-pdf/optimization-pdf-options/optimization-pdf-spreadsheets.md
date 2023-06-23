@@ -1,6 +1,6 @@
 ---
-id: optimization-pdf-for-web
-url: viewer/net/optimization-pdf-for-web
+id: optimization-pdf-spreadsheets
+url: viewer/net/optimization-pdf-spreadsheets
 title: Optimize spreadsheets in a PDF file
 linkTitle: Optimize spreadsheets in a PDF file
 weight: 3
