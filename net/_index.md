@@ -14,8 +14,8 @@ fullWidth: True
 <img src="https://img.shields.io/nuget/v/groupdocs.viewer?label=Nuget" alt="Nuget">
 <img src="https://img.shields.io/nuget/dt/GroupDocs.Viewer?label=nuget%20downloads" alt="Nuget">
 
-{{< button style="primary" link="https://releases.groupdocs.com/viewer/net/release-notes/" >}} <svg class="gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg> Release notes {{< /button >}} 
-{{< button style="primary" link="https://www.nuget.org/packages/groupdocs.viewer" >}} <svg class="gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg> NuGet package {{< /button >}} 
+{{< button style="primary" link="https://releases.groupdocs.com/viewer/net/release-notes/" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg> Release notes {{< /button >}} 
+{{< button style="primary" link="https://www.nuget.org/packages/groupdocs.viewer" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg> NuGet package {{< /button >}} 
 {{< button style="primary" link="https://releases.groupdocs.com/viewer/net/" >}} {{< icon "gdoc_download" >}} Download ZIP or MSI {{< /button >}}
 
 
