@@ -29,10 +29,10 @@ using (var viewer = new Viewer("sample.docx"))
     PdfViewOptions viewOptions = new PdfViewOptions();
     viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions()
     {
-    CompressImages = true,
-    ImageQuality = 50,
-    ResizeImages = true,
-    MaxResolution = 100
+        CompressImages = true,
+        ImageQuality = 50,
+        ResizeImages = true,
+        MaxResolution = 100
     };
      
     viewer.View(viewOptions);
