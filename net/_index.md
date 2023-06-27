@@ -18,15 +18,6 @@ fullWidth: True
 {{< button style="primary" link="https://www.nuget.org/packages/groupdocs.viewer" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg> NuGet package {{< /button >}} 
 {{< button style="primary" link="https://releases.groupdocs.com/viewer/net/" >}} {{< icon "gdoc_download" >}} Download ZIP or MSI {{< /button >}}
 
-
-<img src="https://img.shields.io/nuget/v/groupdocs.viewer?label=Nuget" alt="Nuget">
-<img src="https://img.shields.io/nuget/dt/GroupDocs.Viewer?label=nuget%20downloads" alt="Nuget">
-
-{{< button style="primary" link="https://releases.groupdocs.com/viewer/net/release-notes/" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg> Release notes {{< /button >}} 
-{{< button style="primary" link="https://www.nuget.org/packages/groupdocs.viewer" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg> NuGet package {{< /button >}} 
-{{< button style="primary" link="https://releases.groupdocs.com/viewer/net/" >}} {{< icon "gdoc_download" >}} Download ZIP or MSI {{< /button >}}
-
-
 GroupDocs.Viewer for .NET is a powerful, high-performance, and cross-platform library that allows you to build desktop and web [file viewer applications](https://en.wikipedia.org/wiki/File_viewer) using C#.
 
 GroupDocs.Viewer supports over [170 popular file formats](/viewer/net/supported-document-formats). Load text documents, spreadsheets, presentations, PDF files, web pages, email messages, and images and render/display them in HTML, PDF, PNG, and JPEG formats. You can render the entire document or specific pages.
