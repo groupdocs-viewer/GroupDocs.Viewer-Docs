@@ -29,7 +29,7 @@ using (var viewer = new Viewer("sample.docx"))
     PdfViewOptions viewOptions = new PdfViewOptions();
     viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions()
     {
-    RemoveAnnotations = true
+        RemoveAnnotations = true
     };
      
     viewer.View(viewOptions);

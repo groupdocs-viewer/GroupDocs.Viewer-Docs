@@ -32,7 +32,7 @@ using (var viewer = new Viewer("sample.docx"))
     PdfViewOptions viewOptions = new PdfViewOptions();
     viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions()
     {
-    SubsetFonts = true
+        SubsetFonts = true
     };
      
     viewer.View(viewOptions);

@@ -32,8 +32,8 @@ using (var viewer = new Viewer("sample.docx"))
     PdfViewOptions viewOptions = new PdfViewOptions();
     viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions()
     {
-    CompressImages = true,
-    ImageQuality = 50
+        CompressImages = true,
+        ImageQuality = 50
     };
      
     viewer.View(viewOptions);

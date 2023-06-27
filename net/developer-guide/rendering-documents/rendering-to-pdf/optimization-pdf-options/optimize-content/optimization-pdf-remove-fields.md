@@ -29,7 +29,7 @@ using (var viewer = new Viewer("sample.docx"))
     PdfViewOptions viewOptions = new PdfViewOptions();
     viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions()
     {
-    RemoveFormFields = true
+        RemoveFormFields = true
     };
      
     viewer.View(viewOptions);
