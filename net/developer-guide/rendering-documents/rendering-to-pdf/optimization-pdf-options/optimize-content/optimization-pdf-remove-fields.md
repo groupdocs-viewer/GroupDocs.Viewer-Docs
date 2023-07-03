@@ -12,7 +12,7 @@ toc: True
 ---
 If the output PDF file contains form fields, you can flatten them to reduce the file size.
 
-To remove form fields, set the `RemoveFormFields` property to `true`.
+To remove form fields, set the [RemoveFormFields](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/removeformfields) property to `true`.
 
 The following code snippet shows how to flatten form fields in the file:
 
@@ -38,3 +38,6 @@ using (var viewer = new Viewer("sample.docx"))
 {{</ tab >}}
 {{</ tabs >}}
 
+The following image demonstrates the result:
+
+![Remove fields](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-remove-fields.png)
