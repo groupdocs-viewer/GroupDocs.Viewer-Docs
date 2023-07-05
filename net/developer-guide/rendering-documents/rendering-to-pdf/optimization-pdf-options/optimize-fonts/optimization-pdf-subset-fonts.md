@@ -15,7 +15,7 @@ Fonts will be converted into subsets if set to true
 
 If the file uses embedded fonts, it contains all font data. GroupDocs.Viewer can subset embedded fonts to reduce the file size.
 
-To subset fonts in a PDF file, set the `SubsetFonts` property to `true`.
+To subset fonts in a PDF file, set the [SubsetFonts](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/subsetfonts) property to `true`.
 
 The following code snippet shows how to subset fonts in a PDF file:
 
@@ -41,3 +41,10 @@ using (var viewer = new Viewer("sample.docx"))
 {{</ tab >}}
 {{</ tabs >}}
 
+The following image demonstrates the result. There is no difference in appearance:
+
+![No difference in appearance](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-subset-fonts-appearance.png)
+
+But there is the significant difference in size:
+
+![Significant difference in size](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-subset-fonts-size.png)

@@ -35,3 +35,7 @@ using (Viewer viewer = new Viewer("sample.pdf"))
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+The following image shows a sample console output:
+
+![](/viewer/net/images/get_pdf_output_file_info.png)

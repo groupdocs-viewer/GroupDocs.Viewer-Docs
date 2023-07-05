@@ -13,9 +13,9 @@ toc: True
 
 If the output PDF file contains images, you can reduce its size using image compression.
 
-To enable image compression, set the `CompressImages` property to `true`. The GroupDocs.Viewer compresses all images in the file.
+To enable image compression, set the [CompressImages](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/compressimages/) property to `true`. The GroupDocs.Viewer compresses all images in the file.
 
-The `ImageQuality` property determines the compression ratio. It is a quality value in percent. 100% means original quality.
+The [ImageQuality](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/imagequality/) property determines the compression ratio. It is a quality value in percent. 100% means original quality.
 
 The following code snippet shows how to compress images in the file:
 
@@ -42,4 +42,6 @@ using (var viewer = new Viewer("sample.docx"))
 {{</ tab >}}
 {{</ tabs >}}
 
+The following image demonstrates the result:
 
+![Reduce image quality](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-reduce-image-quality.png)

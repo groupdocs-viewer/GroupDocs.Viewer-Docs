@@ -12,7 +12,7 @@ toc: True
 ---
 If the output PDF file contains annotations, you can remove them to reduce the file size.
 
-To remove annotations, set the `RemoveAnnotations` property to `true`.
+To remove annotations, set the [RemoveAnnotations](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/removeannotations/) property to `true`.
 
 The following code snippet shows how to remove annotations from the file:
 
@@ -37,3 +37,7 @@ using (var viewer = new Viewer("sample.docx"))
 ```
 {{</ tab >}}
 {{</ tabs >}}
+
+The following image demonstrates the result:
+
+![Remove annotations](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-remove-annotations.png)

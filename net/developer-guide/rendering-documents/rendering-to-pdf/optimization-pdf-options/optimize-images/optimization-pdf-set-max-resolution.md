@@ -12,7 +12,7 @@ toc: True
 ---
 If the output PDF file contains images, you can reduce its resolution.
 
-To allow changing the image resolution, set the `CompressImages` and `ResizeImages` properties to `true`. The GroupDocs.Viewer compresses all images in the file. The `MaxResolution` property determines the maximum resolution. 
+To allow changing the image resolution, set the [CompressImages](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/compressimages/) and [ResizeImages](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/resizeimages/) properties to `true`. The GroupDocs.Viewer compresses all images in the file. The [MaxResolution](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/maxresolution/) property determines the maximum resolution. 
 
 The following code snippet shows how to reduce image resolution in the file:
 
@@ -40,3 +40,7 @@ using (var viewer = new Viewer("sample.docx"))
 ```
 {{</ tab >}}
 {{</ tabs >}}
+
+The following image demonstrates the result:
+
+![Set max resolution](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-set-max-resolution.png)

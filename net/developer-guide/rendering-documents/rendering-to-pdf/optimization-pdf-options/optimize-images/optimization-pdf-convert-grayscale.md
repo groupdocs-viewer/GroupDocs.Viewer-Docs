@@ -12,7 +12,7 @@ toc: True
 ---
 To speed up the printing of a PDF file and reduce its size, you can convert it from RGB color space to grayscale.
 
-To convert a PDF file to grayscale, set the `ConvertToGrayScale` property to `true`.
+To convert a PDF file to grayscale, set the [ConvertToGrayScale](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/converttograyscale) property to `true`.
 
 The following code snippet shows how to convert a PDF file to grayscale:
 
@@ -37,3 +37,7 @@ using (var viewer = new Viewer("sample.docx"))
 ```
 {{</ tab >}}
 {{</ tabs >}}
+
+The following image demonstrates the result:
+
+![Convert to grayscale](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-convert-grayscale.png)
