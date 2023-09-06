@@ -1,7 +1,7 @@
 ---
 id: supported-document-formats
 url: viewer/java/supported-document-formats
-title: Supported file ormats
+title: Supported file formats
 weight: 2
 keywords: file formats, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, PDF, HTML, Python Script, TAR, ZIP, DWG
 description: "This topic lists file formats supported by GroupDocs.Viewer for Java."
