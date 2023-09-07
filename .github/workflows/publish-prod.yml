@@ -36,6 +36,7 @@ jobs:
           mkdir -p common/content/${{ env.PRODUCT }}
           cp -r java common/content/${{ env.PRODUCT }}
           cp -r net common/content/${{ env.PRODUCT }}
+          cp -r nodejs-java common/content/${{ env.PRODUCT }}
           cp _index.md common/content/${{ env.PRODUCT }}
           hugo --source common --minify --config config-geekdoc.toml,ignore-total-config.toml,show-feedback-config.toml
 

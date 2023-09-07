@@ -258,7 +258,7 @@ import com.groupdocs.viewer.options.PdfViewOptions;
 try (Viewer viewer = new Viewer("resume.docx")) {
     // Convert the document to PDF.
     PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
-    // Enable tracked changes rendering.
+    // Enable rendering comments.
     viewOptions.setRenderComments(true);
     viewer.view(viewOptions);
 }
