@@ -32,7 +32,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | Format | Description | Automatic format detection | Remarks |
 | --- | --- | :---: | --- |
 | [CF2](https://docs.fileformat.com/cad/cf2/) | Common File Format | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [DGN](https://docs.fileformat.com/cad/dgn) | MicroStation Design File (V7) | ![(tick)](/viewer/net/images/check-blue.png) | |
+| [DGN](https://docs.fileformat.com/cad/dgn) | MicroStation Design File (V7) | ![(tick)](/viewer/net/images/check-blue.png) | DGN V8 is not supported <br> as DGN V8 file format <br> is proprietary. |
 | [DWF](https://docs.fileformat.com/cad/dwf/) | Design Web Format | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [DWG](https://docs.fileformat.com/cad/dwg/) | AutoCAD Drawing | ![(tick)](/viewer/net/images/check-blue.png) | Supported formats: <br> Release 11, 12, 13, 14. <br> DWG 2000, 2000i, 2002. <br> DWG 2004, 2005, 2006. <br> DWG 2010, 2011, 2012. <br> DWG 2013, 2014, 2015, 2016. |
 | [DWT](https://docs.fileformat.com/cad/dwt/) | AutoCAD Drawing Template | ![(tick)](/viewer/net/images/check-blue.png) | |
