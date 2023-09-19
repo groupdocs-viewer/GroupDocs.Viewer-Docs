@@ -47,7 +47,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a web file to PDF](/viewer/java/images/rendering-basics/render-web-documents/render-web-to-pdf.png)
+![Render a web file to PDF](/viewer/nodejs-java/images/rendering-basics/render-web-documents/render-web-to-pdf.png)
 
 ## Render web documents as PNG
 
@@ -70,7 +70,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a web file to PNG](/viewer/java/images/rendering-basics/render-web-documents/render-web-to-png.png)
+![Render a web file to PNG](/viewer/nodejs-java/images/rendering-basics/render-web-documents/render-web-to-png.png)
 
 ## Render web documents as JPEG
 
@@ -115,7 +115,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a web file to HTML](/viewer/java/images/rendering-basics/render-web-documents/render-chm-to-html.png)
+![Render a web file to HTML](/viewer/nodejs-java/images/rendering-basics/render-web-documents/render-chm-to-html.png)
 
 ### Create an HTML file with external resources
 

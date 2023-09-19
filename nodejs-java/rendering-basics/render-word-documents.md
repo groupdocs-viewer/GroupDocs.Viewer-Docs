@@ -56,7 +56,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a Word file to HTML](/viewer/java/images/rendering-basics/render-word-documents/render-to-html-embedded-resources.png)
+![Render a Word file to HTML](/viewer/nodejs-java/images/rendering-basics/render-word-documents/render-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -81,11 +81,11 @@ viewer.view(viewOptions)
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
-![Place HTML resources in a separate folder](/viewer/java/images/rendering-basics/render-word-documents/render-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/nodejs-java/images/rendering-basics/render-word-documents/render-to-html-external-resources.png)
 
 ## Render Word documents as PDF
 
-Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a Word file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
+Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a Word file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
 {{< tabs "example3">}}
 {{< tab "JavaScript" >}}
@@ -101,7 +101,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a Word file to PDF](/viewer/java/images/rendering-basics/render-word-documents/render-to-pdf.png)
+![Render a Word file to PDF](/viewer/nodejs-java/images/rendering-basics/render-word-documents/render-to-pdf.png)
 
 ## Render Word documents as PNG
 
@@ -120,7 +120,7 @@ viewer.view(viewOptions)
 {{< /tabs >}}
 The following image demonstrates the result:
 
-![Render a Word file to PNG](/viewer/java/images/rendering-basics/render-word-documents/render-to-png-image.png)
+![Render a Word file to PNG](/viewer/nodejs-java/images/rendering-basics/render-word-documents/render-to-png-image.png)
 
 ## Render Word documents as JPEG
 
@@ -199,7 +199,7 @@ viewer.view(viewOptions)
 
 The following image illustrates the result:
 
-![Render tracked changes to PDF](/viewer/java/images/rendering-basics/render-word-documents/render-track-changes-to-pdf.png)
+![Render tracked changes to PDF](/viewer/nodejs-java/images/rendering-basics/render-word-documents/render-track-changes-to-pdf.png)
 
 ## Render comments
 
@@ -222,4 +222,4 @@ viewer.view(viewOptions)
 
 The following image illustrates the result:
 
-![Render comments to PDF](/viewer/java/images/rendering-basics/render-word-documents/render-comments-to-pdf.png)
+![Render comments to PDF](/viewer/nodejs-java/images/rendering-basics/render-word-documents/render-comments-to-pdf.png)

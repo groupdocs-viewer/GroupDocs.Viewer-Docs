@@ -18,6 +18,6 @@ Rendering a multi-page document to HTML or images results in multiple files, one
 
 For example, if you have a .docx file with three pages, converting that file to HTML/images results in three HTML or image files that represent the pages in the document. Converting this file to PDF results in one file with three pages
 
-![Rendering diagram](/viewer/java/images/getting-started/features-overview/rendering.png)
+![Rendering diagram](/viewer/nodejs-java/images/getting-started/features-overview/rendering.png)
 
 For details, please refer to the following pages:

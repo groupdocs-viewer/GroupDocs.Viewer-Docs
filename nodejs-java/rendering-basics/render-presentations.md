@@ -61,7 +61,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a presentation file to HTML](/viewer/java/images/rendering-basics/render-presentations/render-to-html-embedded-resources.png)
+![Render a presentation file to HTML](/viewer/nodejs-java/images/rendering-basics/render-presentations/render-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -86,7 +86,7 @@ viewer.view(viewOptions)
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
-![Place HTML resources in a separate folder](/viewer/java/images/rendering-basics/render-presentations/render-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/nodejs-java/images/rendering-basics/render-presentations/render-to-html-external-resources.png)
 
 ## Render presentations as PDF
 
@@ -104,7 +104,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a presentation file to PDF](/viewer/java/images/rendering-basics/render-presentations/render-to-pdf.png)
+![Render a presentation file to PDF](/viewer/nodejs-java/images/rendering-basics/render-presentations/render-to-pdf.png)
 
 ## Render presentations as PNG
 
@@ -124,7 +124,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a presentation file to PNG](/viewer/java/images/rendering-basics/render-presentations/render-to-png-image.png)
+![Render a presentation file to PNG](/viewer/nodejs-java/images/rendering-basics/render-presentations/render-to-png-image.png)
 
 ## Render presentations as JPEG
 
@@ -207,13 +207,13 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a presentation with comments](/viewer/java/images/rendering-basics/render-presentations/render-presentation-comments-to-pdf.png)
+![Render a presentation with comments](/viewer/nodejs-java/images/rendering-basics/render-presentations/render-presentation-comments-to-pdf.png)
 
 ## Render speaker notes
 
 A presentation file can contain speaker notes that help presenters recall important information during the presentation. Speaker notes appear in the **Notes** pane below each slide.
 
-![Speaker notes in Microsoft PowerPoint](/viewer/java/images/rendering-basics/render-presentations/presentation-speaker-notes.png)
+![Speaker notes in Microsoft PowerPoint](/viewer/nodejs-java/images/rendering-basics/render-presentations/presentation-speaker-notes.png)
 
 Use the [ViewOptions.setRenderNotes](#) method for a target view to display speaker notes in the output HTML, PDF, or image files.
 
@@ -232,4 +232,4 @@ viewer.view(viewOptions)
 
 The image below demonstrates the result.
 
-![Render a presentation with notes](/viewer/java/images/rendering-basics/render-presentations/render-presentation-notes-to-pdf.png)
+![Render a presentation with notes](/viewer/nodejs-java/images/rendering-basics/render-presentations/render-presentation-notes-to-pdf.png)

@@ -20,7 +20,7 @@ aliases:
     - /viewer/nodejs-java/how-to-convert-and-view-psd-with-custom-fonts
     - /viewer/nodejs-java/how-to-convert-and-view-ai-files
 ---
-[GroupDocs.Viewer for Java](https://products.groupdocs.com/viewer/nodejs-java) allows you to load images in various formats and convert them to HTML, PDF, PNG, and JPEG. Incorporate this library into your Java application (web or desktop) to build your own image viewer.
+[GroupDocs.Viewer for Node.js via Java](https://products.groupdocs.com/viewer/nodejs-java) allows you to load images in various formats and convert them to HTML, PDF, PNG, and JPEG. Incorporate this library into your Java application (web or desktop) to build your own image viewer.
 
 To start with the GroupDocs.Viewer API, create a [Viewer](#) class instance. Pass an image you want to view to the class constructor. You can load the image from a file or stream. Call one of the [Viewer.view](#) method overloads to convert the image to HTML, PDF, PNG, or JPEG format. For multipage images (such as TIFF, CDR, DICOM, WebP, and so on), you can specify the pages to render.
 
@@ -91,7 +91,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an image to HTML](/viewer/java/images/rendering-basics/render-images/render-image-to-html-embedded-resources.png)
+![Render an image to HTML](/viewer/nodejs-java/images/rendering-basics/render-images/render-image-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -115,7 +115,7 @@ viewer.view(viewOptions)
 
 The result is shown below. The image is placed in a separate folder.
 
-![Place HTML resources in a separate folder](/viewer/java/images/rendering-basics/render-images/render-image-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/nodejs-java/images/rendering-basics/render-images/render-image-to-html-external-resources.png)
 
 ## Render images as PDF
 
@@ -134,7 +134,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an image to PDF](/viewer/java/images/rendering-basics/render-images/render-image-to-pdf.png)
+![Render an image to PDF](/viewer/nodejs-java/images/rendering-basics/render-images/render-image-to-pdf.png)
 
 ## Convert images to PNG
 
@@ -156,7 +156,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an image to PNG](/viewer/java/images/rendering-basics/render-images/render-image-to-png.png)
+![Render an image to PNG](/viewer/nodejs-java/images/rendering-basics/render-images/render-image-to-png.png)
 
 ## Convert images to JPEG
 

@@ -106,7 +106,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a text file to HTML](/viewer/java/images/rendering-basics/render-text-files/render-to-html-embedded-resources.png)
+![Render a text file to HTML](/viewer/nodejs-java/images/rendering-basics/render-text-files/render-to-html-embedded-resources.png)
 
 ### Create HTML files with external resources
 
@@ -131,7 +131,7 @@ viewer.view(viewOptions)
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
-![Place HTML resources in a separate folder](/viewer/java/images/rendering-basics/render-text-files/render-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/nodejs-java/images/rendering-basics/render-text-files/render-to-html-external-resources.png)
 
 ### Create a single HTML page
 
@@ -167,7 +167,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a text file to PDF](/viewer/java/images/rendering-basics/render-text-files/render-to-pdf.png)
+![Render a text file to PDF](/viewer/nodejs-java/images/rendering-basics/render-text-files/render-to-pdf.png)
 
 ## Render text files as PNG
 
@@ -190,7 +190,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a text file to PNG](/viewer/java/images/rendering-basics/render-text-files/render-to-png-image.png)
+![Render a text file to PNG](/viewer/nodejs-java/images/rendering-basics/render-text-files/render-to-png-image.png)
 
 ## Render text files as JPEG
 
@@ -244,5 +244,5 @@ viewer.view(viewOptions)
 
 The image below illustrates the result:
 
-![Specify the number of rows per page](/viewer/java/images/rendering-basics/render-text-files/set-max-rows-per-page.png)
+![Specify the number of rows per page](/viewer/nodejs-java/images/rendering-basics/render-text-files/set-max-rows-per-page.png)
  

@@ -49,7 +49,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a PDF file to HTML](/viewer/java/images/rendering-basics/render-pdf-documents/render-pdf-to-html.png)
+![Render a PDF file to HTML](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/render-pdf-to-html.png)
 
 ### Create an HTML file with external resources
 
@@ -74,7 +74,7 @@ viewer.view(viewOptions)
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
-![Place HTML resources in a separate folder](/viewer/java/images/rendering-basics/render-pdf-documents/render-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/render-to-html-external-resources.png)
 
 ### Create HTML with fixed layout
 
@@ -82,7 +82,7 @@ By default, PDF and EPUB documents are rendered to HTML with fixed layout to ens
 
 The following image demonstrates PDF document rendered HTML with fixed layout:
 
-![Create HTML with fixed layout](/viewer/java/images/rendering-basics/render-pdf-documents/render-pdf-to-html-with-fixed-layout.png)
+![Create HTML with fixed layout](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/render-pdf-to-html-with-fixed-layout.png)
 
 
 ### Adjust image quality in the output HTML file
@@ -131,7 +131,7 @@ viewer.view(viewOptions)
 
 The image below illustrates the result. PDF content is exported to HTML as an image, so users cannot select or copy document text.  
 
-![Render PDF content as an image in the output HTML file](/viewer/java/images/rendering-basics/render-pdf-documents/render-pdf-to-html-as-image.png)
+![Render PDF content as an image in the output HTML file](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/render-pdf-to-html-as-image.png)
 
 ### Enable multi-layer rendering
 
@@ -176,7 +176,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a PDF file to PNG](/viewer/java/images/rendering-basics/render-pdf-documents/render-pdf-to-png.png)
+![Render a PDF file to PNG](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/render-pdf-to-png.png)
 
 ### Convert PDF files to JPEG
 
@@ -275,7 +275,7 @@ viewer.view(viewOptions)
 
 The following image illustrates the result:
 
-![Render PDF comments to PNG](/viewer/java/images/rendering-basics/render-pdf-documents/render-pdf-comments.png)
+![Render PDF comments to PNG](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/render-pdf-comments.png)
 
 ## Get information about a PDF file
 
@@ -302,7 +302,7 @@ console.log("Is printing allowed: " + viewInfo.isPrintingAllowed());
 
 The following image shows a sample console output:
 
-![Get information about a PDF file](/viewer/java/images/rendering-basics/render-pdf-documents/retrieve-pdf-file-information.png)
+![Get information about a PDF file](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/retrieve-pdf-file-information.png)
 
 ### Extract text from a PDF file
 
@@ -327,4 +327,4 @@ viewInfo.getPages().toArray().forEach(function(page) {
 {{< /tab >}}
 {{< /tabs >}}
 
-![Extract and display PDF text](/viewer/java/images/rendering-basics/render-pdf-documents/extract-pdf-text.png)
+![Extract and display PDF text](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/extract-pdf-text.png)

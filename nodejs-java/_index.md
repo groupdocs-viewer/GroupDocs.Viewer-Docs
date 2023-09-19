@@ -71,7 +71,7 @@ GroupDocs.Viewer ships with a wide range of options that allow you to control th
 
 <p>API REFERENCE</p>
 <ul>
-    <li><a href="https://reference.groupdocs.com/viewer/nodejs-java/">GroupDocs.Viewer for Java API Reference</a></li>
+    <li><a href="https://reference.groupdocs.com/viewer/nodejs-java/">GroupDocs.Viewer for Node.js via Java API Reference</a></li>
 </ul>
 
 <--->
@@ -86,7 +86,7 @@ GroupDocs.Viewer ships with a wide range of options that allow you to control th
 
 <p>VERSION HISTORY</p>
 <ul>
-    <li><a href='https://releases.groupdocs.com/viewer/nodejs-java/release-notes/'>GroupDocs.Viewer for Java Release Notes</a></li>
+    <li><a href='https://releases.groupdocs.com/viewer/nodejs-java/release-notes/'>GroupDocs.Viewer for Node.js via Java Release Notes</a></li>
 </ul>
 
 <p>TECHNICAL SUPPORT</p>

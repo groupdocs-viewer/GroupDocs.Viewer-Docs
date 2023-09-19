@@ -67,7 +67,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an Excel file to HTML](/viewer/java/images/rendering-basics/render-spreadsheets/convert-excel-to-html.png)
+![Render an Excel file to HTML](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/convert-excel-to-html.png)
 
 #### Convert an Apple Numbers spreadsheet to HTML
 
@@ -85,7 +85,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an Apple Numbers spreadsheet to HTML](/viewer/java/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-html.png)
+![Render an Apple Numbers spreadsheet to HTML](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-html.png)
 
 ### Create an HTML file with external resources
 
@@ -127,7 +127,7 @@ viewer.view(viewOptions)
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
-![Place HTML resources in a separate folder](/viewer/java/images/rendering-basics/render-spreadsheets/render-excel-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/render-excel-to-html-external-resources.png)
 
 
 ### Convert all Excel worksheets to one HTML file
@@ -149,7 +149,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Convert all Excel worksheets to one HTML file](/viewer/java/images/rendering-basics/render-spreadsheets/convert-all-excel-worksheets-to-html.png)
+![Convert all Excel worksheets to one HTML file](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/convert-all-excel-worksheets-to-html.png)
 
 
 ## Render spreadsheets as PDF
@@ -171,7 +171,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an Excel file to PDF](/viewer/java/images/rendering-basics/render-spreadsheets/render-excel-to-pdf.png)
+![Render an Excel file to PDF](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/render-excel-to-pdf.png)
 
 ### Convert an Apple Numbers spreadsheet to PDF
 
@@ -188,7 +188,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an Apple Numbers spreadsheet to PDF](/viewer/java/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-pdf.png)
+![Render an Apple Numbers spreadsheet to PDF](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-pdf.png)
 
 ## Render spreadsheets as PNG
 
@@ -212,7 +212,7 @@ viewer.view(viewOptions)
 {{< /tabs >}}
 The following image demonstrates the result:
 
-![Render an Excel file to PNG](/viewer/java/images/rendering-basics/render-spreadsheets/render-excel-to-png.png)
+![Render an Excel file to PNG](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/render-excel-to-png.png)
 
 ### Convert an Apple Numbers spreadsheet to PNG
 
@@ -233,7 +233,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an Apple Numbers spreadsheet to PNG](/viewer/java/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-png.png)
+![Render an Apple Numbers spreadsheet to PNG](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-png.png)
 
 ## Render spreadsheets as JPEG
 
@@ -321,7 +321,7 @@ console.log(info.toString())
 
 The following image shows a sample console output:
 
-![Retrieve worksheet names](/viewer/java/images/rendering-basics/render-spreadsheets/retrieve-worksheet-names.png)
+![Retrieve worksheet names](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/retrieve-worksheet-names.png)
 
 ## See also
 
