@@ -22,7 +22,7 @@ The following code snippet shows how to render a .docx document to PDF:
 {{< tab "JavaScript" >}}
 ```js
 const viewer = new groupdocs.viewer.Viewer("sample.docx")
-const viewOptions = new groupdocs.viewer.PdfViewOptions(output-to-pdf.pdf)
+const viewOptions = groupdocs.viewer.PdfViewOptions(output-to-pdf.pdf)
 viewer.view(viewOptions)
 ```
 {{< /tab >}}

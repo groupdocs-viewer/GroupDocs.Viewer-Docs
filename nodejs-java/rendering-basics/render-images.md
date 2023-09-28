@@ -83,7 +83,7 @@ To embed an image in an HTML page, call the [HtmlViewOptions.forEmbeddedResource
 ```js
 const viewer = new groupdocs.viewer.Viewer("vector-image.svg")
 // Specify the HTML file name.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -107,7 +107,7 @@ To save an image to a separate folder, call the [HtmlViewOptions.forExternalReso
 const viewer = new groupdocs.viewer.Viewer("vector-image.svg")
 // Specify the HTML file name and location of external resources.
 // {0} is replaced with the resource name in the output file name.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forExternalResources("output.html", "output/resource_{0}", "output/resource_{0}")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("output.html", "output/resource_{0}", "output/resource_{0}")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -126,7 +126,7 @@ Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 ```js
 const viewer = new groupdocs.viewer.Viewer("vector-image.svg")
 // Create a PDF file.
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -145,7 +145,7 @@ Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 ```js
 const viewer = new groupdocs.viewer.Viewer("vector-image.svg")
 // Create a PNG image.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output.png")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
@@ -167,7 +167,7 @@ Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 ```js
 const viewer = new groupdocs.viewer.Viewer("vector-image.svg")
 // Create a JPG image for the letter.
-const viewOptions = new groupdocs.viewer.JpgViewOptions("output.jpg")
+const viewOptions = groupdocs.viewer.JpgViewOptions("output.jpg")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
@@ -201,7 +201,7 @@ FontSettings.setFontSources(folderFontSource, additionalFontSource);
 const viewer = new groupdocs.viewer.Viewer("sample.psd")
 
 // Create a JPG image for the letter.
-const viewOptions = new groupdocs.viewer.JpgViewOptions("output.jpg")
+const viewOptions = groupdocs.viewer.JpgViewOptions("output.jpg")
 viewOptions.setDefaultFontName("Arial")
 viewer.view(viewOptions)
 ```

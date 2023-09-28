@@ -9,7 +9,7 @@ productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
 ---
-Due to the numerous resources and ```.class``` files in the JAR file, the `MANIFEST.MF` file has become huge. For instance, it iss approximately 19.7 Mb for GroupDocs.Viewer v21.2 and 22.5 Mb for GroupDocs.Viewer v23.7. 
+Due to the numerous resources and `.class` files in the JAR file, the `MANIFEST.MF` file has become huge. For instance, it iss approximately 19.7 Mb for GroupDocs.Viewer v21.2 and 22.5 Mb for GroupDocs.Viewer v23.7. 
 
 That is why you may get errors similar to the one below:
 

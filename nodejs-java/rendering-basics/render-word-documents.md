@@ -48,7 +48,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 const viewer = new groupdocs.viewer.Viewer("resume.docx")
 // Create an HTML files.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -73,7 +73,7 @@ const viewer = new groupdocs.viewer.Viewer("resume.docx")
 // Create an HTML file for each page.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -93,7 +93,7 @@ Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("resume.docx")
 // Create a PDF file for the document.
 // Specify the PDF file name.
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -113,7 +113,7 @@ Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("resume.docx")
 // Create a PNG image for each document page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -132,7 +132,7 @@ Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("resume.docx")
 // Create a JPG image for each document page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = new groupdocs.viewer.JpgViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.png")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -162,7 +162,7 @@ The example below converts a Word document to HTML and specifies page margins fo
 const viewer = new groupdocs.viewer.Viewer("resume.docx")
 // Create an HTML file for each document page.
     // {0} is replaced with the current page number in the file name.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 // Specify the size of page margins in points.
 viewOptions.getWordProcessingOptions().setTopMargin(72)
 viewOptions.getWordProcessingOptions().setBottomMargin(72)
@@ -189,7 +189,7 @@ The following code example demonstrates how to render a Word document with track
 ```js
 const viewer = new groupdocs.viewer.Viewer("resume.docx")
 // Convert the document to PDF.
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 // Enable tracked changes rendering.
 viewOptions.getWordProcessingOptions().setRenderTrackedChanges(true)
 viewer.view(viewOptions)
@@ -212,7 +212,7 @@ The code example below renders a Word document with comments to PDF.
 ```js
 const viewer = new groupdocs.viewer.Viewer("resume.docx")
 // Convert the document to PDF.
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 // Enable rendering comments.
 viewOptions.setRenderComments(true)
 viewer.view(viewOptions)

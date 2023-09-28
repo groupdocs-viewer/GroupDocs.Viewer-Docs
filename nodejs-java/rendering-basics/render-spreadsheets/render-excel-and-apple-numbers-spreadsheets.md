@@ -59,7 +59,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
 // Convert the spreadsheet to HTML.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -77,7 +77,7 @@ The following image demonstrates the result:
 const viewer = new groupdocs.viewer.Viewer("Products.numbers")
 // Convert the spreadsheet to HTML.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -104,7 +104,7 @@ const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
 // Convert the spreadsheet to HTML.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -119,7 +119,7 @@ const viewer = new groupdocs.viewer.Viewer("Products.numbers")
 // Convert the spreadsheet to HTML.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -139,7 +139,7 @@ To convert all worksheets to one HTML file, use the [HtmlViewOptions.setRenderTo
 ```js
 const viewer = new groupdocs.viewer.Viewer("Personal_net_worth_calculator.xlsx")
 // Convert all Excel worksheets to one HTML file.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page.html")
 // Enable converting all worksheets to one file.
 viewOptions.setRenderToSinglePage(true)
 viewer.view(viewOptions)
@@ -163,7 +163,7 @@ Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 ```js
 const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
 // Convert the spreadsheet to PDF.
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -180,7 +180,7 @@ The following image demonstrates the result:
 ```js
 const viewer = new groupdocs.viewer.Viewer("Products.numbers")
 // Convert the spreadsheet to PDF.
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -202,7 +202,7 @@ Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
 // Convert the spreadsheet to PNG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
 // Set width and height.
 viewOptions.setWidth(800)
 viewOptions.setHeight(900)
@@ -222,7 +222,7 @@ The following image demonstrates the result:
 const viewer = new groupdocs.viewer.Viewer("Products.numbers")
 // Convert the spreadsheet to PNG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
 // Set width and height.
 viewOptions.setWidth(800)
 viewOptions.setHeight(900)
@@ -247,7 +247,7 @@ Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
 // Convert the spreadsheet to JPEG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(800)
 viewOptions.setHeight(900)
@@ -264,7 +264,7 @@ viewer.view(viewOptions)
 const viewer = new groupdocs.viewer.Viewer("Products.numbers")
 // Convert the spreadsheet to JPEG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(800)
 viewOptions.setHeight(900)
@@ -288,7 +288,7 @@ GroupDocs.Viewer can detect the following separators:
 const viewer = new groupdocs.viewer.Viewer("sample.csv")
 // Convert the spreadsheet to JPEG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 // Detect a CSV/TSV separator.
 viewOptions.getSpreadsheetOptions().setDetectSeparator(true)
 viewer.view(viewOptions)

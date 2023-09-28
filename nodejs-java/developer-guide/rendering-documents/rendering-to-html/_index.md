@@ -33,7 +33,7 @@ const viewer = new groupdocs.viewer.Viewer("sample.docx")
 // Create an HTML file for each page.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -49,7 +49,7 @@ The following code snippet shows how to render a .docx document to HTML with emb
 const viewer = new groupdocs.viewer.Viewer("sample.docx")
 // Create an HTML files.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
