@@ -31,9 +31,7 @@ With its powerful and straightforward API, you can execute the following actions
 You can use GroupDocs.Viewer across multiple platforms and operation systems:
 
 * Windows, Linux, and macOS
-* Java Framework 2.0 and higher
-* Java Core 3.1
-* Java 5 and higher
+* Java 8 and higher
 
 ## Get started with GroupDocs.Viewer for Node.js
 
