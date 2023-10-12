@@ -9,7 +9,7 @@ productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
 ---
-Due to the numerous resources and `.class` files in the JAR file, the `MANIFEST.MF` file has become huge. For instance, it iss approximately 19.7 Mb for GroupDocs.Viewer v21.2 and 22.5 Mb for GroupDocs.Viewer v23.7. 
+Due to the numerous resources and `.class` files in the JAR file, the `MANIFEST.MF` file has become huge. For instance, it is approximately 19.7 Mb for GroupDocs.Viewer v21.2 and 22.5 Mb for GroupDocs.Viewer v23.7. 
 
 That is why you may get errors similar to the one below:
 
@@ -21,7 +21,13 @@ The issue arises from Java's file size limit, which is set at 8,000,000 bytes by
 
 
 {{< tabs "example1">}}
-{{< tab "Settings" >}}
+{{< tab "Windows" >}}
+```sh
+SET MAVEN_OPTS="-Djdk.jar.maxSignatureFileSize=25000000"
+mvn clean compile spring-boot:run
+```
+{{< /tab >}}
+{{< tab "Linux" >}}
 ```sh
 export MAVEN_OPTS="-Djdk.jar.maxSignatureFileSize=25000000"
 mvn clean compile spring-boot:run
