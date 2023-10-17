@@ -11,7 +11,10 @@ hideChildren: False
 
 If the document contains external resources, such as images, GroupDocs.Viewer loads them when rendering a document. This allows the document to display correctly, but is a potential security risk.
 
-GroupDocs.Viewer allows you to manage loading of external resources contained by a document. These features are supported for the [Word Processing File Formats](https://docs.fileformat.com/word-processing/).
+GroupDocs.Viewer allows you to manage loading of external resources contained by a document. These features are supported for the following formats:
+- [Word Processing File Formats](https://docs.fileformat.com/word-processing/)
+- [Web File Formats](https://docs.fileformat.com/web/)
+- [SpreadSheet File Formats](https://docs.fileformat.com/spreadsheet/)
 
 Use the [LoadOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions) object to manage loading of external resources.
 
@@ -35,6 +38,12 @@ using (Viewer viewer = new Viewer("business-flyer.docx", loadOptions))
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+The following images show the output file with and without external resources (see top right corner):
+
+| loadOptions.SkipExternalResources = false | loadOptions.SkipExternalResources = true |
+| --- | --- |
+| ![False](/viewer/net/images/with-external-resources.png) | ![True](/viewer/net/images/without-external-resources.png)  |
 
 ## Manage a safelist for loading external resources
 
