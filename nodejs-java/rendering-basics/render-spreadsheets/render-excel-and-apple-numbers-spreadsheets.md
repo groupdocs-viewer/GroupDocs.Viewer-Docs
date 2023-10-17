@@ -59,7 +59,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
 // Convert the spreadsheet to HTML.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -67,7 +67,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an Excel file to HTML](/viewer/java/images/rendering-basics/render-spreadsheets/convert-excel-to-html.png)
+![Render an Excel file to HTML](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/convert-excel-to-html.png)
 
 #### Convert an Apple Numbers spreadsheet to HTML
 
@@ -77,7 +77,7 @@ The following image demonstrates the result:
 const viewer = new groupdocs.viewer.Viewer("Products.numbers")
 // Convert the spreadsheet to HTML.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -85,7 +85,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an Apple Numbers spreadsheet to HTML](/viewer/java/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-html.png)
+![Render an Apple Numbers spreadsheet to HTML](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-html.png)
 
 ### Create an HTML file with external resources
 
@@ -104,7 +104,7 @@ const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
 // Convert the spreadsheet to HTML.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -119,7 +119,7 @@ const viewer = new groupdocs.viewer.Viewer("Products.numbers")
 // Convert the spreadsheet to HTML.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -127,7 +127,7 @@ viewer.view(viewOptions)
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
-![Place HTML resources in a separate folder](/viewer/java/images/rendering-basics/render-spreadsheets/render-excel-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/render-excel-to-html-external-resources.png)
 
 
 ### Convert all Excel worksheets to one HTML file
@@ -139,7 +139,7 @@ To convert all worksheets to one HTML file, use the [HtmlViewOptions.setRenderTo
 ```js
 const viewer = new groupdocs.viewer.Viewer("Personal_net_worth_calculator.xlsx")
 // Convert all Excel worksheets to one HTML file.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page.html")
 // Enable converting all worksheets to one file.
 viewOptions.setRenderToSinglePage(true)
 viewer.view(viewOptions)
@@ -149,7 +149,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Convert all Excel worksheets to one HTML file](/viewer/java/images/rendering-basics/render-spreadsheets/convert-all-excel-worksheets-to-html.png)
+![Convert all Excel worksheets to one HTML file](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/convert-all-excel-worksheets-to-html.png)
 
 
 ## Render spreadsheets as PDF
@@ -163,7 +163,7 @@ Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 ```js
 const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
 // Convert the spreadsheet to PDF.
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -171,7 +171,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an Excel file to PDF](/viewer/java/images/rendering-basics/render-spreadsheets/render-excel-to-pdf.png)
+![Render an Excel file to PDF](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/render-excel-to-pdf.png)
 
 ### Convert an Apple Numbers spreadsheet to PDF
 
@@ -180,7 +180,7 @@ The following image demonstrates the result:
 ```js
 const viewer = new groupdocs.viewer.Viewer("Products.numbers")
 // Convert the spreadsheet to PDF.
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -188,7 +188,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an Apple Numbers spreadsheet to PDF](/viewer/java/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-pdf.png)
+![Render an Apple Numbers spreadsheet to PDF](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-pdf.png)
 
 ## Render spreadsheets as PNG
 
@@ -202,7 +202,7 @@ Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
 // Convert the spreadsheet to PNG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
 // Set width and height.
 viewOptions.setWidth(800)
 viewOptions.setHeight(900)
@@ -212,7 +212,7 @@ viewer.view(viewOptions)
 {{< /tabs >}}
 The following image demonstrates the result:
 
-![Render an Excel file to PNG](/viewer/java/images/rendering-basics/render-spreadsheets/render-excel-to-png.png)
+![Render an Excel file to PNG](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/render-excel-to-png.png)
 
 ### Convert an Apple Numbers spreadsheet to PNG
 
@@ -222,7 +222,7 @@ The following image demonstrates the result:
 const viewer = new groupdocs.viewer.Viewer("Products.numbers")
 // Convert the spreadsheet to PNG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
 // Set width and height.
 viewOptions.setWidth(800)
 viewOptions.setHeight(900)
@@ -233,7 +233,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render an Apple Numbers spreadsheet to PNG](/viewer/java/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-png.png)
+![Render an Apple Numbers spreadsheet to PNG](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-png.png)
 
 ## Render spreadsheets as JPEG
 
@@ -247,7 +247,7 @@ Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
 // Convert the spreadsheet to JPEG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(800)
 viewOptions.setHeight(900)
@@ -264,7 +264,7 @@ viewer.view(viewOptions)
 const viewer = new groupdocs.viewer.Viewer("Products.numbers")
 // Convert the spreadsheet to JPEG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(800)
 viewOptions.setHeight(900)
@@ -288,7 +288,7 @@ GroupDocs.Viewer can detect the following separators:
 const viewer = new groupdocs.viewer.Viewer("sample.csv")
 // Convert the spreadsheet to JPEG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 // Detect a CSV/TSV separator.
 viewOptions.getSpreadsheetOptions().setDetectSeparator(true)
 viewer.view(viewOptions)
@@ -321,7 +321,7 @@ console.log(info.toString())
 
 The following image shows a sample console output:
 
-![Retrieve worksheet names](/viewer/java/images/rendering-basics/render-spreadsheets/retrieve-worksheet-names.png)
+![Retrieve worksheet names](/viewer/nodejs-java/images/rendering-basics/render-spreadsheets/retrieve-worksheet-names.png)
 
 ## See also
 

@@ -41,7 +41,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 const viewer = new groupdocs.viewer.Viewer("resume.pdf")
 // Create an HTML files.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -49,7 +49,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a PDF file to HTML](/viewer/java/images/rendering-basics/render-pdf-documents/render-pdf-to-html.png)
+![Render a PDF file to HTML](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/render-pdf-to-html.png)
 
 ### Create an HTML file with external resources
 
@@ -66,7 +66,7 @@ const viewer = new groupdocs.viewer.Viewer("resume.pdf")
  // Create an HTML file for each PDF page.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -74,7 +74,7 @@ viewer.view(viewOptions)
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
-![Place HTML resources in a separate folder](/viewer/java/images/rendering-basics/render-pdf-documents/render-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/render-to-html-external-resources.png)
 
 ### Create HTML with fixed layout
 
@@ -82,7 +82,7 @@ By default, PDF and EPUB documents are rendered to HTML with fixed layout to ens
 
 The following image demonstrates PDF document rendered HTML with fixed layout:
 
-![Create HTML with fixed layout](/viewer/java/images/rendering-basics/render-pdf-documents/render-pdf-to-html-with-fixed-layout.png)
+![Create HTML with fixed layout](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/render-pdf-to-html-with-fixed-layout.png)
 
 
 ### Adjust image quality in the output HTML file
@@ -101,7 +101,7 @@ The following code snippet shows how to set the medium image quality when render
 const viewer = new groupdocs.viewer.Viewer("resume.pdf")
 // Create an HTML files.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 // Set image quality to medium.
 viewOptions.getPdfOptions().setImageQuality(ImageQuality.MEDIUM)
 viewer.view(viewOptions)
@@ -121,7 +121,7 @@ The following code snippet shows how to enable this option in code:
 const viewer = new groupdocs.viewer.Viewer("resume.pdf")
 // Create an HTML files.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("text-as-image_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("text-as-image_{0}.html")
 // Enable rendering text as image.
 viewOptions.getPdfOptions().setRenderTextAsImage(true)
 viewer.view(viewOptions)
@@ -131,7 +131,7 @@ viewer.view(viewOptions)
 
 The image below illustrates the result. PDF content is exported to HTML as an image, so users cannot select or copy document text.  
 
-![Render PDF content as an image in the output HTML file](/viewer/java/images/rendering-basics/render-pdf-documents/render-pdf-to-html-as-image.png)
+![Render PDF content as an image in the output HTML file](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/render-pdf-to-html-as-image.png)
 
 ### Enable multi-layer rendering
 
@@ -145,7 +145,7 @@ The following code snippet shows how to enable the multi-layer rendering:
 const viewer = new groupdocs.viewer.Viewer("resume.pdf")
 // Create an HTML files.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 // Enable the multi-layer rendering.
 viewOptions.getPdfOptions().setEnableLayeredRendering(true)
 viewer.view(viewOptions)
@@ -165,7 +165,7 @@ Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("resume.pdf")
 // Create a PNG image for each PDF page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
@@ -176,7 +176,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a PDF file to PNG](/viewer/java/images/rendering-basics/render-pdf-documents/render-pdf-to-png.png)
+![Render a PDF file to PNG](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/render-pdf-to-png.png)
 
 ### Convert PDF files to JPEG
 
@@ -188,7 +188,7 @@ Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("resume.pdf")
 // Create a JPG image for each PDF page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = new groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
@@ -207,7 +207,7 @@ When you render PDF documents as images, GroupDocs.Viewer calculates the optimal
 const viewer = new groupdocs.viewer.Viewer("resume.pdf")
 // Create a PNG image for each PDF page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
 // Preserve the size of document pages.
 viewOptions.getPdfOptions().setRenderOriginalPageSize(true)
 viewer.view(viewOptions)
@@ -225,7 +225,7 @@ To adjust the display of outline fonts when you convert PDF documents to PNG or 
 const viewer = new groupdocs.viewer.Viewer("resume.pdf")
 // Create a PNG image for each PDF page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
 // Enable font hinting
 viewOptions.getPdfOptions().setEnableFontHinting(true)
 viewer.view(viewOptions)
@@ -245,7 +245,7 @@ When you render PDF files in other formats, GroupDocs.Viewer groups individual c
 const viewer = new groupdocs.viewer.Viewer("resume.pdf")
 // Create a PNG image for each PDF page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
 // Disable character grouping.
 viewOptions.getPdfOptions().setDisableCharsGrouping(true)
 viewer.view(viewOptions)
@@ -265,7 +265,7 @@ The code example below renders a PDF file with text comments as an image.
 const viewer = new groupdocs.viewer.Viewer("resume.pdf")
 // Create a PNG image for each PDF page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
 // Enable rendering comments.
 viewOptions.setRenderComments(true)
 viewer.view(viewOptions)
@@ -275,7 +275,7 @@ viewer.view(viewOptions)
 
 The following image illustrates the result:
 
-![Render PDF comments to PNG](/viewer/java/images/rendering-basics/render-pdf-documents/render-pdf-comments.png)
+![Render PDF comments to PNG](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/render-pdf-comments.png)
 
 ## Get information about a PDF file
 
@@ -302,7 +302,7 @@ console.log("Is printing allowed: " + viewInfo.isPrintingAllowed());
 
 The following image shows a sample console output:
 
-![Get information about a PDF file](/viewer/java/images/rendering-basics/render-pdf-documents/retrieve-pdf-file-information.png)
+![Get information about a PDF file](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/retrieve-pdf-file-information.png)
 
 ### Extract text from a PDF file
 
@@ -327,4 +327,4 @@ viewInfo.getPages().toArray().forEach(function(page) {
 {{< /tab >}}
 {{< /tabs >}}
 
-![Extract and display PDF text](/viewer/java/images/rendering-basics/render-pdf-documents/extract-pdf-text.png)
+![Extract and display PDF text](/viewer/nodejs-java/images/rendering-basics/render-pdf-documents/extract-pdf-text.png)

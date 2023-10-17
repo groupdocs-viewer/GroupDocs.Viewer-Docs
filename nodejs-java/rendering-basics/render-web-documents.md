@@ -39,7 +39,7 @@ Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("groupdocs-documentation.mhtml")
  // Create a PDF file for the document.
 // Specify the PDF file name.
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -47,7 +47,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a web file to PDF](/viewer/java/images/rendering-basics/render-web-documents/render-web-to-pdf.png)
+![Render a web file to PDF](/viewer/nodejs-java/images/rendering-basics/render-web-documents/render-web-to-pdf.png)
 
 ## Render web documents as PNG
 
@@ -59,7 +59,7 @@ Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("groupdocs-documentation.mhtml")
 // Convert the web file to PNG.
 // {0} is replaced with the page numbers in the output image names.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
  // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(800)
@@ -70,7 +70,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a web file to PNG](/viewer/java/images/rendering-basics/render-web-documents/render-web-to-png.png)
+![Render a web file to PNG](/viewer/nodejs-java/images/rendering-basics/render-web-documents/render-web-to-png.png)
 
 ## Render web documents as JPEG
 
@@ -82,7 +82,7 @@ Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("groupdocs-documentation.mhtml")
 // Create a JPEG image for each drawing page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = new groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
  // Set width and height.
 viewOptions.setWidth(1600)
 viewOptions.setHeight(650)
@@ -105,7 +105,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 const viewer = new groupdocs.viewer.Viewer("sample.chm")
 // Convert the CHM file to HTML.
 // {0} is replaced with the page numbers in the output file names.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("chm_result_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("chm_result_{0}.html")
 // Enable the following option to display all CHM content on a single HTML page.
 // viewOptions.setRenderToSinglePage(true);
 viewer.view(viewOptions)
@@ -115,7 +115,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a web file to HTML](/viewer/java/images/rendering-basics/render-web-documents/render-chm-to-html.png)
+![Render a web file to HTML](/viewer/nodejs-java/images/rendering-basics/render-web-documents/render-chm-to-html.png)
 
 ### Create an HTML file with external resources
 
@@ -131,7 +131,7 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 const viewer = new groupdocs.viewer.Viewer("sample.chm")
 // Convert the CHM file to HTML.
 // Specify the output file names and location of external resources.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
 viewer.view(viewOptions)
 ```
 {{< /tab >}}

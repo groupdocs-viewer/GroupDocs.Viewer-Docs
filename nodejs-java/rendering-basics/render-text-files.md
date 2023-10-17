@@ -78,7 +78,7 @@ When you load a text document from a file, you should explicitly specify their f
 const loadOptions = new LoadOptions(FileType.MD)
 // Convert the document to PDF.
 const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt", loadOptions)
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -98,7 +98,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
 // Convert the text file to HTML.
 // {0} is replaced with the current page number in the output file names.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -106,7 +106,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a text file to HTML](/viewer/java/images/rendering-basics/render-text-files/render-to-html-embedded-resources.png)
+![Render a text file to HTML](/viewer/nodejs-java/images/rendering-basics/render-text-files/render-to-html-embedded-resources.png)
 
 ### Create HTML files with external resources
 
@@ -123,7 +123,7 @@ const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
 // Create an HTML file for each PDF page.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -131,7 +131,7 @@ viewer.view(viewOptions)
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
-![Place HTML resources in a separate folder](/viewer/java/images/rendering-basics/render-text-files/render-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/nodejs-java/images/rendering-basics/render-text-files/render-to-html-external-resources.png)
 
 ### Create a single HTML page
 
@@ -142,7 +142,7 @@ If you need to display the entire document content on a single HTML page, use th
 ```js
 const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
 // Create an HTML file.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
 // Render the file to a single page. 
 viewOptions.setRenderToSinglePage(true)
 viewer.view(viewOptions)
@@ -159,7 +159,7 @@ Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 ```js
 const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
 // Convert the text file to PDF.
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -167,7 +167,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a text file to PDF](/viewer/java/images/rendering-basics/render-text-files/render-to-pdf.png)
+![Render a text file to PDF](/viewer/nodejs-java/images/rendering-basics/render-text-files/render-to-pdf.png)
 
 ## Render text files as PNG
 
@@ -179,7 +179,7 @@ Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
 // Convert the text file to PNG.
 // {0} is replaced with the current page number in the output image names.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
@@ -190,7 +190,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a text file to PNG](/viewer/java/images/rendering-basics/render-text-files/render-to-png-image.png)
+![Render a text file to PNG](/viewer/nodejs-java/images/rendering-basics/render-text-files/render-to-png-image.png)
 
 ## Render text files as JPEG
 
@@ -202,7 +202,7 @@ Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
 // Convert the text file to JPEG.
 // {0} is replaced with the current page number in the output image names.
-const viewOptions = new groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
@@ -234,7 +234,7 @@ The following example demonstrates how to change the number of rows displayed on
 const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
  // Convert the text file to HTML.
 // {0} is replaced with the current page number in the output file names.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 // Set the maximum number of rows per page.
 viewOptions.getTextOptions().setMaxRowsPerPage(30)
 viewer.view(viewOptions)
@@ -244,5 +244,5 @@ viewer.view(viewOptions)
 
 The image below illustrates the result:
 
-![Specify the number of rows per page](/viewer/java/images/rendering-basics/render-text-files/set-max-rows-per-page.png)
+![Specify the number of rows per page](/viewer/nodejs-java/images/rendering-basics/render-text-files/set-max-rows-per-page.png)
  

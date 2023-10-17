@@ -53,7 +53,7 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 const viewer = new groupdocs.viewer.Viewer("sample.pptx")
 // Create an HTML file for each slide.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -61,7 +61,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a presentation file to HTML](/viewer/java/images/rendering-basics/render-presentations/render-to-html-embedded-resources.png)
+![Render a presentation file to HTML](/viewer/nodejs-java/images/rendering-basics/render-presentations/render-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -78,7 +78,7 @@ const viewer = new groupdocs.viewer.Viewer("sample.pptx")
 // Create an HTML file for each slide.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = new groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -86,7 +86,7 @@ viewer.view(viewOptions)
 
 The image below demonstrates the result. External resources are placed in a separate folder.
 
-![Place HTML resources in a separate folder](/viewer/java/images/rendering-basics/render-presentations/render-to-html-external-resources.png)
+![Place HTML resources in a separate folder](/viewer/nodejs-java/images/rendering-basics/render-presentations/render-to-html-external-resources.png)
 
 ## Render presentations as PDF
 
@@ -96,7 +96,7 @@ Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 {{< tab "JavaScript" >}}
 ```js
 const viewer = new groupdocs.viewer.Viewer("sample.pptx")
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -104,7 +104,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a presentation file to PDF](/viewer/java/images/rendering-basics/render-presentations/render-to-pdf.png)
+![Render a presentation file to PDF](/viewer/nodejs-java/images/rendering-basics/render-presentations/render-to-pdf.png)
 
 ## Render presentations as PNG
 
@@ -116,7 +116,7 @@ Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("sample.pptx")
 // Create a PNG image for each slide.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = new groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -124,7 +124,7 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a presentation file to PNG](/viewer/java/images/rendering-basics/render-presentations/render-to-png-image.png)
+![Render a presentation file to PNG](/viewer/nodejs-java/images/rendering-basics/render-presentations/render-to-png-image.png)
 
 ## Render presentations as JPEG
 
@@ -137,7 +137,7 @@ Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 const viewer = new groupdocs.viewer.Viewer("sample.pptx")
 // Create a JPG image for each slide.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = new groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
@@ -166,7 +166,7 @@ The following example demonstrates how to specify image resolution in code:
 {{< tab "JavaScript" >}}
 ```js
 const viewer = new groupdocs.viewer.Viewer("sample.pptx")
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewOptions.getPresentationOptions().setResolution(Resolution.Dpi150)
 viewer.view(viewOptions)
 ```
@@ -183,7 +183,7 @@ The following code example uses this option to display hidden slides in the gene
 {{< tab "JavaScript" >}}
 ```js
 const viewer = new groupdocs.viewer.Viewer("sample.pptx")
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewOptions.setRenderHiddenPages(true)
 viewer.view(viewOptions)
 ```
@@ -198,7 +198,7 @@ Use the [ViewOptions.setRenderComments](#) method for a target view to display c
 {{< tab "JavaScript" >}}
 ```js
 const viewer = new groupdocs.viewer.Viewer("sample.pptx")
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewOptions.setRenderComments(true)
 viewer.view(viewOptions)
 ```
@@ -207,13 +207,13 @@ viewer.view(viewOptions)
 
 The following image demonstrates the result:
 
-![Render a presentation with comments](/viewer/java/images/rendering-basics/render-presentations/render-presentation-comments-to-pdf.png)
+![Render a presentation with comments](/viewer/nodejs-java/images/rendering-basics/render-presentations/render-presentation-comments-to-pdf.png)
 
 ## Render speaker notes
 
 A presentation file can contain speaker notes that help presenters recall important information during the presentation. Speaker notes appear in the **Notes** pane below each slide.
 
-![Speaker notes in Microsoft PowerPoint](/viewer/java/images/rendering-basics/render-presentations/presentation-speaker-notes.png)
+![Speaker notes in Microsoft PowerPoint](/viewer/nodejs-java/images/rendering-basics/render-presentations/presentation-speaker-notes.png)
 
 Use the [ViewOptions.setRenderNotes](#) method for a target view to display speaker notes in the output HTML, PDF, or image files.
 
@@ -223,7 +223,7 @@ The following code sample renders a presentation with speaker notes to PDF:
 {{< tab "JavaScript" >}}
 ```js
 const viewer = new groupdocs.viewer.Viewer("sample.pptx")
-const viewOptions = new groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
 viewOptions.setRenderNotes(true)
 viewer.view(viewOptions)
 ```
@@ -232,4 +232,4 @@ viewer.view(viewOptions)
 
 The image below demonstrates the result.
 
-![Render a presentation with notes](/viewer/java/images/rendering-basics/render-presentations/render-presentation-notes-to-pdf.png)
+![Render a presentation with notes](/viewer/nodejs-java/images/rendering-basics/render-presentations/render-presentation-notes-to-pdf.png)

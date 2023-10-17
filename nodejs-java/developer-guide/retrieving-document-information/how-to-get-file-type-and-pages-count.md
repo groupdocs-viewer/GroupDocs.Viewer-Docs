@@ -39,4 +39,4 @@ console.log("Pages count: " + viewInfo.getPages().size())
 
 The following image shows a sample console output:
 
-![](/viewer/java/images/how-to-get-file-type-and-pages-count.png)
+![](/viewer/nodejs-java/images/how-to-get-file-type-and-pages-count.png)

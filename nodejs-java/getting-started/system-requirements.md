@@ -15,6 +15,11 @@ GroupDocs.Viewer for Node.js via Java does not require any external software to 
 
 {{< /alert >}}
 
+## Requirements
+
+* Node.js 16 or above
+* J2SE 8.0 (1.8) or above
+
 ## Supported Operating Systems
 
 GroupDocs.Viewer for Node.js can be used on any 32-bit or 64-bit operating system where Java is installed including, but not limited to:
@@ -36,19 +41,8 @@ GroupDocs.Viewer for Node.js can be used on any 32-bit or 64-bit operating syste
 
 * Mac OS X
 
-## Supported Frameworks
-
-GroupDocs.Viewer for Node.js supports frameworks versions listed below. For more platform support please check [GroupDocs.Viewer](https://products.groupdocs.com/viewer) page.
-
-* Node.js 16 or above
-* J2SE 8.0 (1.8) or above (*for example Java 17*)
-
 ## Development Environments
 
-GroupDocs.Viewer for Node.js can be used to develop applications in any development environment that targets Java, but the following environments are explicitly supported:
+GroupDocs.Viewer for Node.js requirements Node.js and Java. You  can use any text editor like Atom, Sublime, Visual Studio Code, etc.
 
-* Eclipse
-* IntelliJ NetBeans
-* IntelliJ IDEA
-* VS Code etc.  
   

@@ -167,3 +167,40 @@ using (var viewer = new Viewer("Products.xlsx"))
 The image below illustrates the result. The output PDF file contains one page that displays all worksheet data.
 
 ![Fit sheet on one page](/viewer/net/images/rendering-basics/render-spreadsheets/render-on-one-page.png)
+
+## Render worksheet by page breaks and print area
+
+GroupDocs.Viewer uses page breaks to split a worksheet into separate pages. Microsoft Excel adds automatic page breaks based on paper size and page settings, but you can also insert manual horizontal and vertical page breaks. Switch to **Page Break Preview** in Microsoft Excel to see where page breaks appear on a worksheet.
+
+Also, you can designate one or more cell ranges in a worksheet as the only region to print (a _print area_). A worksheet can contain multiple print areas. Each print area prints on its own page.
+
+When printing, Microsoft Excel splits a worksheet into pages using both page breaks and print areas. In the following image the red line shows the print area, and the blue line shows page breaks:
+
+![Specify page breaks and a print area in Microsoft Excel](/viewer/net/images/rendering-basics/render-spreadsheets/page-breake-vs-print-area.png)
+
+GroupDocs.Viewer also supports this option. Call the [SpreadsheetOptions.ForRenderingPrintAreaAndPageBreaks](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/methods/forrenderingprintareaandpagebreaks) static method and assign the returned `SpreadsheetOptions` instance to the [ViewOptions.SpreadsheetOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property to display only the worksheet's print area in the output HTML, PDF, or image file.
+
+The following example renders the Microsoft Excel spreadsheet using page breaks and print areas displayed in the image above to PDF:
+
+{{< tabs "example4">}}
+{{< tab "C#" >}}
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+//render spreadsheet to PDF
+using (var viewer = new Viewer("products.xlsx"))
+{
+  var viewOptions = new PdfViewOptions("output.pdf");
+  viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingPrintAreaAndPageBreaks();
+  viewer.View(viewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+The image below illustrates the result:
+
+![Render page breaks and a print area to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/pdf-result.png)
+

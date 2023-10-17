@@ -24,6 +24,8 @@ The solution is actually very simple as detailed below.
 
 Alternatively, you can add the dependency in the pom.xml and let the project resolve the dependency via maven.
 
+{{< tabs "example1">}}
+{{< tab "XML" >}}
 ```xml
 <dependency>
     <groupId>javax.xml.bind</groupId>
@@ -31,3 +33,5 @@ Alternatively, you can add the dependency in the pom.xml and let the project res
     <version>2.3.0</version>
 </dependency>
 ```
+{{< /tab >}}
+{{< /tabs >}}

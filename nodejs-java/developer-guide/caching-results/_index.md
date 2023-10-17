@@ -45,6 +45,6 @@ console.log("Time taken on second call to View method " + currentTimeMillis + " 
 
 The following image shows a sample console output:
 
-![](/viewer/java/images/caching-results.png)
+![](/viewer/nodejs-java/images/caching-results.png)
 
 For details, please refer to the following pages:

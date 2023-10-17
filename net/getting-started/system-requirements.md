@@ -59,10 +59,6 @@ GroupDocs.Viewer for .NET supports .NET as follows:
 * .NET Framework 4.5.2 (out of support since v23.8)
 * .NET Framework 4.6.0 (out of support since v23.8)
 * .NET Framework 4.6.2
-* .NET Framework 4.5.0
-* .NET Framework 4.5.1
-* .NET Framework 4.6.0
-* .NET Framework 4.6.2
 * .NET Framework 4.7
 * .NET Framework 4.7.2
 * .NET Framework 4.8
