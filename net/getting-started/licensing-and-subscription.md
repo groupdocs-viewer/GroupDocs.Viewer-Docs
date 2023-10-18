@@ -13,32 +13,44 @@ To study the system, you may want quick access to the API. To make this easier, 
 
 {{< alert style="info" >}}
 
-Note that there are a number of general policies and practices that guide you on how to evaluate, properly license, and purchase our products. You can find them in the ["Purchase Policies and FAQ"](https://purchase.groupdocs.com/policies) section.
+Note that there are a number of general policies and practices that guide you on how to evaluate, properly license, and purchase our products. You can find them in the [Purchase Policies and FAQ](https://purchase.groupdocs.com/policies) section.
 
 {{< /alert >}}
 
-## How to set a license
+## Purchased License
 
-{{< alert style="info" >}}
+After buying, apply the license file or include it as an embedded resource. 
 
-You can find pricing information at ["Pricing Information"](https://purchase.groupdocs.com/pricing/viewer/net) page.
+License needs to be set:
+- Only once per application domain
+- Before using any other GroupDocs.Viewer classes
+    
+You can find the pricing information on the [Purchase Policies and FAQ](https://purchase.groupdocs.com/policies) page.
 
-{{< /alert >}}
+### License Applying Options
 
-After the license is obtained you need to set the license. This section describes options of how this can be done, and also comments on some common questions.
+Licenses can be applied from different locations:
 
-The license should be set:
+*   Explicit path
+*   The folder containing the _GroupDocs.Viewer.dll_ file
+*   The folder containing the assembly that called _GroupDocs.Viewer.dll_
+*   The folder containing the entry assembly (your _.exe_)
+*   An embedded resource in the assembly is called _GroupDocs.Viewer.dll_
+*   As a Metered License - a new licensing mechanism
 
-- Only once per application domain,
-- and before using any other GroupDocs.Viewer classes.
+When you reference _GroupDocs.Viewer.dll_ in the application, the library is copied to your output directory (unless **Copy Local** in the properties for that entry is set to false). The easiest way to set a license is often to place the license file in the same folder as _GroupDocs.Viewer.dll_ and specify just the filename without the path.
 
-{{< alert style="info" >}}
+Use the [SetLicense](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/license/setlicense/) method to license a component.
 
-The license can be set multiple times per app domain but we recommend doing it once since all calls to `SetLicense` except first will just waste processor time.
+Calling `SetLicense` multiple times is not harmful, it simply wastes processor time.
 
-{{< /alert >}}
+Calling [SetMeteredKey](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/metered/setmeteredkey/) multiple times is not harmful either but wastes processor time and can accumulate consumption improperly.
 
-### Set a license from a file
+#### Apply the License
+
+After obtaining the license, set it. This section explains how to do this. When developing your application, call the `SetLicense` method in your startup code before using the GroupDocs.Viewer classes.
+
+##### Set a License from a File
 
 The following code snippet shows how to set a license from file:
 
@@ -54,9 +66,9 @@ license.SetLicense(licensePath);
 {{< /tab >}}
 {{< /tabs >}}
 
-### Set a license from a stream
+##### Set a License from a Stream
 
-The following code snippet shows how to set a license from a stream.
+The following code snippet shows how to set a license from a stream:
 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
@@ -73,11 +85,19 @@ using (FileStream fileStream = File.OpenRead(licensePath))
 {{< /tab >}}
 {{< /tabs >}}
 
-### Set the metered license
+#### Include the License File as an Embedded Resource
 
-You can also set [Metered](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
+A tidy method to bundle a license with your application and ensure it will not be lost is to include it as an embedded resource in one of the assemblies calling GroupDocs.Viewer. To include a file as an embedded resource, follow these steps:
 
-The following code snippet shows how to use the metered license.
+1.  In Visual Studio, add the .lic file to the project using the **File | Add Existing Item...** menu.
+2.  Select the file in the Solution Explorer and set **Build Action to Embedded Resource** in the **Properties** window.
+3.  In your code, invoke `SetLicense` with only the short name of the resource file.
+
+#### Apply Metered License
+
+You can set the [Metered](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
+
+The following code snippet shows how to use the metered license:
 
 {{< tabs "example3">}}
 {{< tab "C#" >}}
@@ -99,11 +119,23 @@ Console.WriteLine("Credits consumed: " + creditsConsumed);
 {{< /tab >}}
 {{< /tabs >}}
 
-## How to evaluate GroupDocs.Viewer
+### Changing the License File Name
+
+You do not have to name the license file "GroupDocs.Viewer.lic". Feel free to rename it as you prefer, and use that name when setting the license in your application.
+
+### "Cannot find license filename" Exception
+
+When you buy and download a license from the GroupDocs website, the license file is named "GroupDocs.Viewer.lic." Download it using your browser. Sometimes, browsers recognize it as XML and add the .xml extension, making the full file name "GroupDocs.Viewer.lic.XML" on your computer.
+
+If Microsoft Windows is set to hide file extensions (which is the default in most installations), the license file will show as "GroupDocs.Viewer.lic" in Windows Explorer. You might assume this is the actual file name and call the `SetLicense` method with "GroupDocs.Viewer.lic", but there is no such file, leading to an exception.
+
+To fix this issue, rename the file to remove the hidden .xml extension. Additionally, we suggest disabling the "Hide extensions" option in Microsoft Windows.
+
+## How to Evaluate GroupDocs.Viewer
 
 You can also try GroupDocs.Viewer without buying a license.
 
-### Free trial
+### Free Trial
 
 The evaluation version is identical to the purchased one; it becomes licensed once you set the license. You can set the license using methods described in the following sections of this article.
 
@@ -112,7 +144,7 @@ The evaluation version has the following limitations:
 - Rendering is limited to the first 2 pages.
 - Trial badges are added to the top of each rendered page.
 
-### Temporary license
+### Temporary License
 
 If you want to test GroupDocs.Viewer without the limitations of the trial version,   request a 30-day Temporary License. For details, see the ["Get a Temporary License"](https://purchase.groupdocs.com/temporary-license) page.
 
