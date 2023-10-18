@@ -25,8 +25,6 @@ License needs to be set:
 - Only once per application domain
 - Before using any other GroupDocs.Viewer classes
     
-You can find the pricing information on the [Purchase Policies and FAQ](https://purchase.groupdocs.com/policies) page.
-
 ### License Applying Options
 
 Licenses can be applied from different locations:
@@ -35,8 +33,7 @@ Licenses can be applied from different locations:
 *   The folder containing the _GroupDocs.Viewer.dll_ file
 *   The folder containing the assembly that called _GroupDocs.Viewer.dll_
 *   The folder containing the entry assembly (your _.exe_)
-*   An embedded resource in the assembly is called _GroupDocs.Viewer.dll_
-*   As a Metered License - a new licensing mechanism
+*   As a Metered License that allows you to pay for your usage. For details, see the [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered/).
 
 When you reference _GroupDocs.Viewer.dll_ in the application, the library is copied to your output directory (unless **Copy Local** in the properties for that entry is set to false). The easiest way to set a license is often to place the license file in the same folder as _GroupDocs.Viewer.dll_ and specify just the filename without the path.
 
@@ -58,7 +55,7 @@ The following code snippet shows how to set a license from file:
 {{< tab "C#" >}}
 
 ```csharp
-string licensePath = "path to the .lic file";
+string licensePath = "GroupDocs.Viewer.lic";
 License license = new License();
 license.SetLicense(licensePath);
 ```
@@ -74,7 +71,7 @@ The following code snippet shows how to set a license from a stream:
 {{< tab "C#" >}}
 
 ```csharp
-string licensePath = "path to the .lic file";
+string licensePath = "GroupDocs.Viewer.lic";
 using (FileStream fileStream = File.OpenRead(licensePath))
 {
     License license = new License();
@@ -85,17 +82,9 @@ using (FileStream fileStream = File.OpenRead(licensePath))
 {{< /tab >}}
 {{< /tabs >}}
 
-#### Include the License File as an Embedded Resource
-
-A tidy method to bundle a license with your application and ensure it will not be lost is to include it as an embedded resource in one of the assemblies calling GroupDocs.Viewer. To include a file as an embedded resource, follow these steps:
-
-1.  In Visual Studio, add the .lic file to the project using the **File | Add Existing Item...** menu.
-2.  Select the file in the Solution Explorer and set **Build Action to Embedded Resource** in the **Properties** window.
-3.  In your code, invoke `SetLicense` with only the short name of the resource file.
-
 #### Apply Metered License
 
-You can set the [Metered](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
+You can set the [Metered](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/metered) license as an alternative to license file. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered).
 
 The following code snippet shows how to use the metered license:
 
@@ -142,7 +131,7 @@ The evaluation version is identical to the purchased one; it becomes licensed on
 The evaluation version has the following limitations:
 
 - Rendering is limited to the first 2 pages.
-- Trial badges are added to the top of each rendered page.
+- Trial badges are added to the top of a rendered page.
 
 ### Temporary License
 

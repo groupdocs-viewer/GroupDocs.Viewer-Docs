@@ -1,7 +1,7 @@
 ---
 id: licensing-and-subscription
 url: viewer/nodejs-java/licensing-and-subscription
-title: Licensing
+title: Licensing and evaluation
 weight: 5
 keywords: free, free trial, evaluation, groupdocs viewer java
 description: "GroupDocs.Viewer for Node.js provides different plans for purchase or offers a Free Trial and a 30-day Temporary License for evaluation."
@@ -9,55 +9,48 @@ productName: GroupDocs.Viewer for Node.js via Java
 hideChildren: False
 toc: True
 ---
-Sometimes, in order to study the system better, you want to dive into the code as fast as possible. To make this easier, GroupDocs.Viewer provides different plans for purchase or offers a Free Trial and a 30-day Temporary License for evaluation.
+
+To study the system, you may want quick access to the API. To make this easier, GroupDocs.Viewer provides different plans for purchase and offers a Free Trial and a 30-day Temporary License for evaluation.
 
 {{< alert style="info" >}}
 
-Note that there are a number of general policies and practices that guide you on how to evaluate, properly license, and purchase our products. You can find them in the ["Purchase Policies and FAQ"](https://purchase.groupdocs.com/policies) section.
+Note that there are a number of general policies and practices that guide you on how to evaluate, properly license, and purchase our products. You can find them in the [Purchase Policies and FAQ](https://purchase.groupdocs.com/policies) section.
 
 {{< /alert >}}
 
-## Free Trial or Temporary License
+## Purchased License
 
-You can try GroupDocs.Viewer without buying a license.
+After buying, apply the license file or include it as an embedded resource. 
 
-### Free Trial
+License needs to be set:
+- Only once per application domain
+- Before using any other GroupDocs.Viewer classes
+    
+### License Applying Options
 
-The evaluation version is the same as the purchased one – the evaluation version simply becomes licensed when you set the license. You can set the license in a number of ways that described in the next sections of this article.
+Licenses can be applied from different locations:
 
-The evaluation version comes with the limitations:
+*   Explicit path
+*   The folder containing the _GroupDocs.Viewer.dll_ file
+*   The folder containing the assembly that called _GroupDocs.Viewer.dll_
+*   The folder containing the entry assembly (your _.exe_)
+*   As a Metered License that allows you to pay for your usage. For details, see the [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered/).
 
-- Only first 2 pages can be rendered.
-- Trial badges are placed in the rendering results on the top of each page.
+When you reference _GroupDocs.Viewer.dll_ in the application, the library is copied to your output directory (unless **Copy Local** in the properties for that entry is set to false). The easiest way to set a license is often to place the license file in the same folder as _GroupDocs.Viewer.dll_ and specify just the filename without the path.
 
-### Temporary License
+Use the [setLicense](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/license/#setLicense-java.io.InputStream-) method to license a component.
 
-If you wish to test GroupDocs.Viewer without the limitations of the trial version, you can also request a 30-day Temporary License. For more details, see the ["Get a Temporary License"](https://purchase.groupdocs.com/temporary-license) page.
+Calling `setLicense` multiple times is not harmful, it simply wastes processor time.
 
-## How to set a license
+Calling [setMeteredKey](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/metered/#setMeteredKey-java.lang.String-java.lang.String-) multiple times is not harmful either but wastes processor time and can accumulate consumption improperly.
 
-{{< alert style="info" >}}
+#### Apply the License
 
-You can find pricing information at ["Pricing Information"](https://purchase.groupdocs.com/pricing/viewer/nodejs-java) page.
+After obtaining the license, set it. This section explains how to do this. When developing your application, call the `setLicense` method in your startup code before using the GroupDocs.Viewer classes.
 
-{{< /alert >}}
+##### Set a License from a File
 
-After the license is obtained you need to set the license. This section describes options of how this can be done, and also comments on some common questions.
-
-The license should be set:
-
-- Only once per application domain,
-- and before using any other GroupDocs.Viewer classes.
-
-{{< alert style="info" >}}
-
-The license can be set multiple times per app domain but we recommend doing it once since all calls to `setLicense` except first will just waste processor time.
-
-{{< /alert >}}
-
-### Set License from File
-
-The following code sets a license from file.
+The following code snippet shows how to set a license from file:
 
 {{< tabs "example1">}}
 {{< tab "JavaScript" >}}
@@ -71,10 +64,9 @@ license.setLicense(licensePath);
 {{< /tab >}}
 {{< /tabs >}}
 
+##### Set a License from a Stream
 
-### Set License from Stream
-
-The following example shows how to set a license from a stream.
+The following code snippet shows how to set a license from a stream:
 
 {{< tabs "example2">}}
 {{< tab "JavaScript" >}}
@@ -96,3 +88,32 @@ groupdocs.conversion.License.setLicenseFromStream(license, licStream, err => {
 
 {{< /tab >}}
 {{< /tabs >}}
+
+### Changing the License File Name
+
+You do not have to name the license file "GroupDocs.Viewer.lic". Feel free to rename it as you prefer, and use that name when setting the license in your application.
+
+### "Cannot find license filename" Exception
+
+When you buy and download a license from the GroupDocs website, the license file is named "GroupDocs.Viewer.lic." Download it using your browser. Sometimes, browsers recognize it as XML and add the .xml extension, making the full file name "GroupDocs.Viewer.lic.XML" on your computer.
+
+If Microsoft Windows is set to hide file extensions (which is the default in most installations), the license file will show as "GroupDocs.Viewer.lic" in Windows Explorer. You might assume this is the actual file name and call the `setLicense` method with "GroupDocs.Viewer.lic", but there is no such file, leading to an exception.
+
+To fix this issue, rename the file to remove the hidden .xml extension. Additionally, we suggest disabling the "Hide extensions" option in Microsoft Windows.
+
+## How to Evaluate GroupDocs.Viewer
+
+You can also try GroupDocs.Viewer without buying a license.
+
+### Free Trial
+
+The evaluation version is identical to the purchased one; it becomes licensed once you set the license. You can set the license using methods described in the following sections of this article.
+
+The evaluation version has the following limitations:
+
+- Rendering is limited to the first 2 pages.
+- Trial badges are added to the top of a rendered page.
+
+### Temporary License
+
+If you want to test GroupDocs.Viewer without the limitations of the trial version,   request a 30-day Temporary License. For details, see the ["Get a Temporary License"](https://purchase.groupdocs.com/temporary-license) page.
