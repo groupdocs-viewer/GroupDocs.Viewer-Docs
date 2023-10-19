@@ -1,6 +1,6 @@
 ---
-id: licensing-and-subscription
-url: viewer/java/licensing-and-subscription
+id: licensing-and-evaluation
+url: viewer/licensing-and-evaluation
 title: Licensing and evaluation
 weight: 5
 keywords: free, free trial, evaluation, groupdocs viewer java
@@ -8,6 +8,8 @@ description: "GroupDocs.Viewer for Java provides different plans for purchase or
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
+aliases:
+    - /viewer/java/licensing-and-subscription/
 ---
 
 To study the system, you may want quick access to the API. To make this easier, GroupDocs.Viewer provides different plans for purchase and offers a Free Trial and a 30-day Temporary License for evaluation.
