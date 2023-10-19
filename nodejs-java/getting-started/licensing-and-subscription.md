@@ -1,6 +1,6 @@
 ---
 id: licensing-and-evaluation
-url: viewer/nodejs-java/licensing-and-subscription
+url: viewer/nodejs-java/licensing-and-evaluation
 title: Licensing and evaluation
 weight: 5
 keywords: free, free trial, evaluation, groupdocs viewer java
