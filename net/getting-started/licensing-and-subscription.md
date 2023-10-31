@@ -36,7 +36,7 @@ Licenses can be applied from different locations:
 *   The folder containing the assembly that called _GroupDocs.Viewer.dll_
 *   The folder containing the entry assembly (your _.exe_)
 *   As a Metered License that allows you to pay for your usage. For details, see the [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered/).
-
+*   As embedded resource
 When you reference _GroupDocs.Viewer.dll_ in the application, the library is copied to your output directory (unless **Copy Local** in the properties for that entry is set to false). The easiest way to set a license is often to place the license file in the same folder as _GroupDocs.Viewer.dll_ and specify just the filename without the path.
 
 Use the [SetLicense](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/license/setlicense/) method to license a component.
@@ -106,6 +106,25 @@ Console.WriteLine("Amount (MB) consumed: " + amountConsumed);
 // Get count of credits consumed
 decimal creditsConsumed = GroupDocs.Viewer.Metered.GetConsumptionCredit();
 Console.WriteLine("Credits consumed: " + creditsConsumed);
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+#### Apply License from embedded resource
+
+You can set license as embedded resource as an alternative to license file. This is a convenient way because you need just add a license to the project and specify the license name in the SetLicense method, without thinking about the full paths to this file
+{{< alert style="info" >}}
+
+Before using embedded license it should be added to project, and in properties of this file set "Build action" to "Embedded Resource". Make sure that license name in embedded resources and string argument in SetLicense method are same
+
+{{< /alert >}}
+The following code snippet shows how to use the embedded license:
+
+{{< tabs "example4">}}
+{{< tab "C#" >}}
+```csharp
+License license = new License();
+license.SetLicense("License.lic");
 ```
 {{< /tab >}}
 {{< /tabs >}}
