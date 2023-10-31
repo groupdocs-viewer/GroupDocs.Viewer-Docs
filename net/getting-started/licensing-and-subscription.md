@@ -124,7 +124,7 @@ The following code snippet shows how to use the embedded license:
 {{< tab "C#" >}}
 ```csharp
 License license = new License();
-license.SetLicense("License.lic");
+license.SetLicense("GroupDocs.Viewer.lic");
 ```
 {{< /tab >}}
 {{< /tabs >}}
