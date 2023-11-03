@@ -24,7 +24,7 @@ To render a worksheet based on the inserted page breaks, call the [SpreadsheetOp
 
 The following example converts a worksheet to PDF and uses the page breaks to split this worksheet into pages:
 
-{{< tabs "example3">}}
+{{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -51,7 +51,7 @@ The image below illustrates the result.
 
 The following code snippet splits a worksheet into two pages and renders them to PDF:
 
-{{< tabs "example1">}}
+{{< tabs "example2">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -80,7 +80,7 @@ The image below demonstrates the output PDF file.
 
 The following code snippet splits a worksheet into four pages and renders them to PDF:
 
-{{< tabs "example2">}}
+{{< tabs "example3">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -182,7 +182,7 @@ GroupDocs.Viewer also supports this option. Call the [SpreadsheetOptions.ForRend
 
 The following example renders the Microsoft Excel spreadsheet using page breaks and print areas displayed in the image above to PDF:
 
-{{< tabs "example4">}}
+{{< tabs "example6">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
