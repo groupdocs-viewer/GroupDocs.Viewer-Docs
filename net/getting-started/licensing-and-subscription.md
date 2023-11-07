@@ -36,7 +36,7 @@ Licenses can be applied from different locations:
 *   The folder containing the assembly that called _GroupDocs.Viewer.dll_
 *   The folder containing the entry assembly (your _.exe_)
 *   As a Metered License that allows you to pay for your usage. For details, see the [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered/).
-*   As embedded resource
+*   As an embedded resource
 When you reference _GroupDocs.Viewer.dll_ in the application, the library is copied to your output directory (unless **Copy Local** in the properties for that entry is set to false). The easiest way to set a license is often to place the license file in the same folder as _GroupDocs.Viewer.dll_ and specify just the filename without the path.
 
 Use the [SetLicense](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/license/setlicense/) method to license a component.
@@ -110,14 +110,14 @@ Console.WriteLine("Credits consumed: " + creditsConsumed);
 {{< /tab >}}
 {{< /tabs >}}
 
-#### Apply License from embedded resource
+#### Apply License from an Embedded Resource
 
-You can set license as embedded resource as an alternative to license file. This is a convenient way because you need just add a license to the project and specify the license name in the SetLicense method, without thinking about the full paths to this file
+Instead of using a license file, you can install the license as an embedded resource. To do this, add a license to the project and specify the license name in the `SetLicense` method without specifying the full path to this file.
+
 {{< alert style="info" >}}
-
-Before using embedded license it should be added to project, and in properties of this file set "Build action" to "Embedded Resource". Make sure that license name in embedded resources and string argument in SetLicense method are same
-
+To use the embedded license, add it to your project and set the **Build Action** property of this file to "Embedded Resource". Ensure that the license name in the embedded resources matches the string parameter of the `SetLicense` method.
 {{< /alert >}}
+
 The following code snippet shows how to use the embedded license:
 
 {{< tabs "example4">}}
@@ -139,7 +139,7 @@ When you buy and download a license from the GroupDocs website, the license file
 
 If Microsoft Windows is set to hide file extensions (which is the default in most installations), the license file will show as "GroupDocs.Viewer.lic" in Windows Explorer. You might assume this is the actual file name and call the `SetLicense` method with "GroupDocs.Viewer.lic", but there is no such file, leading to an exception.
 
-To fix this issue, rename the file to remove the hidden .xml extension. Additionally, we suggest disabling the "Hide extensions" option in Microsoft Windows.
+To fix this issue, rename the file to remove the hidden .xml extension. Additionally, we suggest disabling the **Hide extensions** option in Microsoft Windows.
 
 ## How to Evaluate GroupDocs.Viewer
 

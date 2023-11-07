@@ -34,3 +34,7 @@ mvn clean compile spring-boot:run
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+{{< alert style="info" >}}
+If needed, use the `JAVA_OPTS` or `JAVA_TOOL_OPTIONS` instead of `MAVEN_OPTS`.
+{{< /alert >}}
