@@ -452,3 +452,46 @@ using (var viewer = new Viewer("resume.pdf"))
 {{< /tabs >}}
 
 ![Extract and display PDF text](/viewer/net/images/rendering-basics/render-pdf-documents/extract-pdf-text.png)
+
+## Skip font license verification when rendering XPS and OXPS files
+
+If an XPS or OXPS file contains a font that cannot be embedded due to licensing restrictions, GroupDocs.Viewer throws an exception at runtime. If you have a license for this font, enable the [PdfOptions.DisableFontLicenseVerifications](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptions/disablefontlicenseverifications) option to skip font license verification.
+
+{{< tabs "example15">}}
+{{< tab "C#" >}}
+```csharp
+using (Viewer viewer = new Viewer("resume.oxps"))
+{
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    options.PdfOptions.DisableFontLicenseVerifications = true;
+    viewer.View(viewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+## Enclose images in SVG when rendering PDF and Page Layout files
+
+By default, when rendering to the PDF and Page Layout file formats, all images are combined into a single PNG file, which serves as the background for the output HTML document.
+
+The [PdfOptions.WrapImagesInSvg](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptions/wrapimagesinsvg) option allows you to wrap each image in the output HTML document with an SVG tag to improve output quality.
+
+This option is available when rendering PDF and Page Layout file formats to HTML with embedded or external resources. 
+
+{{< tabs "example16">}}
+{{< tab "C#" >}}
+```csharp
+using (Viewer viewer = new Viewer("resume.pdf"))
+{
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    viewOptions.PdfOptions.WrapImagesInSvg = true;
+
+    viewer.View(viewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+The following image shows the rendering [resume.pdf](/viewer/net/images/rendering-basics/render-pdf-documents/resume.pdf) with the disabled (left) and enabled (right) `WrapImagesInSvg` option:
+
+![Images as background vs embedded in SVG](/viewer/net/images/rendering-basics/render-pdf-documents/wrap-images-in-svg.png)
