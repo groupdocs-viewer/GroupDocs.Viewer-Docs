@@ -184,7 +184,7 @@ using (var viewer = new Viewer("sample.nsf"))
     var viewOptions = HtmlViewOptions.ForEmbeddedResources();
     // Set filters.
     viewOptions.MailStorageOptions.TextFilter = "Viewer";
-    viewOptions.MailStorageOptions.AddressFilter = "groupdocs.com";
+    viewOptions.MailStorageOptions.AddressFilter = "groupdocs@mail.com";
     viewer.View(viewOptions);
 }
 ```
