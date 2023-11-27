@@ -3,7 +3,7 @@ id: optimization-pdf-remove-fields
 url: viewer/net/optimization-pdf-remove-fields
 title: Remove form fields
 linkTitle: Remove form fields
-weight: 2
+weight: 3
 description: "This topic describes how to remove form fields from PDF file using the GroupDocs.Viewer .NET API (C#)."
 keywords: convert to pdf, optimize size, pdf reduce size, remove fields
 productName: GroupDocs.Viewer for .NET

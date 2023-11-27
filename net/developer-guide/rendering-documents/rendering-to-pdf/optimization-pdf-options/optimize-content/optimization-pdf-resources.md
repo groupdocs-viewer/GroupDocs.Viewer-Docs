@@ -3,7 +3,7 @@ id: optimization-pdf-resources
 url: viewer/net/optimization-pdf-resources
 title: Optimize the PDF file resources
 linkTitle: Optimize the PDF file resources
-weight: 2
+weight: 1
 description: "This topic describes how to optimize PDF file using the GroupDocs.Viewer .NET API (C#) to reduce size."
 keywords: convert to pdf, optimize size, pdf reduce size
 productName: GroupDocs.Viewer for .NET

@@ -60,7 +60,7 @@ GroupDocs.Viewer ships with a wide range of options that allow you to control th
 <ul>
     <li><a href='{{< ref "/viewer/net/developer-guide/loading-documents/loading-documents-from-different-sources/_index.md" >}}'>Load documents from different sources</a></li>
     <li><a href='{{< ref "/viewer/net/developer-guide/retrieving-document-information/how-to-get-file-type-and-pages-count.md" >}}'>Retrieve document information</a></li>
-    <li><a href='{{< ref "viewer/net/developer-guide/processing-attachments/how-to-extract-and-save-attachments.md" >}}'>Extract and save attachments</a></li>
+    <li><a href='{{< ref "viewer/net/developer-guide/working-with-attachments.md" >}}'>Extract and save attachments</a></li>
     <li><a href='{{< ref "viewer/net/developer-guide/rendering-documents/add-text-watermark.md" >}}'>Add text watermarks</a></li>
     <li><a href='{{< ref "viewer/net/developer-guide/caching-results/_index.md" >}}'>Cache rendering results</a></li>
 </ul>

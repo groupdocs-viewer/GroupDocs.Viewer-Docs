@@ -3,7 +3,7 @@ id: optimization-pdf-remove-annotations
 url: viewer/net/optimization-pdf-remove-annotations
 title: Remove annotations
 linkTitle: Remove annotations
-weight: 1
+weight: 2
 description: "This topic describes how to remove annotations from PDF file using the GroupDocs.Viewer .NET API (C#)."
 keywords: convert to pdf, optimize size, pdf reduce size, remove annotations
 productName: GroupDocs.Viewer for .NET

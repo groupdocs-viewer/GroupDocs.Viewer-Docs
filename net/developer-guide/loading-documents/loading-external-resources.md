@@ -2,7 +2,7 @@
 id: loading-external-resources
 url: viewer/net/loading-external-resources
 title: Loading of external resources containing by a document
-weight: 5
+weight: 6
 keywords: set timeout, Groupdocs.Viewer
 description: "This article explains how to manage loading of external resources contained by a document with GroupDocs.Viewer within your .NET applications."
 productName: GroupDocs.Viewer for .NET
