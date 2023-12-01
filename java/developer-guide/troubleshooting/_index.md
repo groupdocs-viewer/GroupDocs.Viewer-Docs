@@ -2,7 +2,7 @@
 id: troubleshooting
 url: viewer/java/troubleshooting
 title: Troubleshooting
-weight: 7
+weight: 8
 description: "This section contains issues that you may face and solutions for them when processing files with GroupDocs.Viewer."
 keywords: "groupdocs viewer java, troubleshooting, known issues"
 productName: GroupDocs.Viewer for Java
