@@ -33,12 +33,12 @@ License needs to be set:
 Licenses can be applied from different locations:
 
 *   Explicit path
-*   The folder containing the _GroupDocs.Viewer.dll_ file
-*   The folder containing the assembly that called _GroupDocs.Viewer.dll_
-*   The folder containing the entry assembly (your _.exe_)
+*   The folder containing the _groupdocs-viewer.jar_ file
+*   The folder containing the package that called _groupdocs-viewer.jar_
+*   The folder containing the entry package (your _.jar_)
 *   As a Metered License that allows you to pay for your usage. For details, see the [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered/).
 
-When you reference _GroupDocs.Viewer.dll_ in the application, the library is copied to your output directory (unless **Copy Local** in the properties for that entry is set to false). The easiest way to set a license is often to place the license file in the same folder as _GroupDocs.Viewer.dll_ and specify just the filename without the path.
+When you reference _groupdocs-viewer.jar_ in the application, the library is copied to your output directory. The easiest way to set a license is often to place the license file in the same folder as _groupdocs-viewer.jar_ and specify just the filename without the path.
 
 Use the [setLicense](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/license/#setLicense-java.io.InputStream-) method to license a component.
 
