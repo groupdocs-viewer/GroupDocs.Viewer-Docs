@@ -279,3 +279,32 @@ using (var viewer = new Viewer("resume.docx"))
 The following image illustrates the result:
 
 ![Render comments to PDF](/viewer/net/images/rendering-basics/render-word-documents/render-comments-to-pdf.png)
+
+## Unlink table of contents
+
+When rendering to HTML or PDF, you can set [WordProcessingOptions.UnlinkTableOfContents](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/wordprocessingoptions/properties/unlinktableofcontents) to `true` to unlink table of contents. For HTML rendering, `<a>` tags with relative links will be replaced with `<span>` tags, removing functionality but preserving visual appearance. For PDF rendering, the table of contents will be rendered as plain text without links to document sections.
+
+The code example below renders a Word document with table of contents as a plain text without links.
+
+{{< tabs "example9">}}
+{{< tab "C#" >}}
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (var viewer = new Viewer("resume.docx"))
+{
+    // Convert the document to HTML.
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    // Unlink table of contents.
+    viewOptions.WordProcessingOptions.UnlinkTableOfContents = true;
+    viewer.View(viewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+The following image illustrates the result:
+
+![Unlink table of contens in Word files](/viewer/net/images/rendering-basics/render-word-documents/unlink-table-of-contents.png)
