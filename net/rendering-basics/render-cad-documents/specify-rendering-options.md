@@ -53,7 +53,7 @@ The following image illustrates the result:
 
 ## Configure the output image size
 
-When rendering a CAD drawing, GroupDocs.Viewer creates an image with the largest dimension (width or height) set to 2000 pixels. The other dimension is calculated based on the aspect ratio of the original drawing. You can use the following methods to change the width and height of the output file:
+<a name="ctors"></a>When rendering a CAD drawing, GroupDocs.Viewer creates an image with the largest dimension (width or height) set to 2000 pixels. The other dimension is calculated based on the aspect ratio of the original drawing. You can use the following methods to change the width and height of the output file:
 
 * [CadOptions.ForRenderingByWidth](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/cadoptions/methods/forrenderingbywidth)---Specifies the output image width in pixels. The image height is calculated based on the aspect ratio of the original CAD drawing.
 * [CadOptions.ForRenderingByHeight](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/cadoptions/methods/forrenderingbyheight)---Specifies the output image height in pixels. The image width is calculated based on the aspect ratio of the original CAD drawing.
@@ -162,3 +162,33 @@ using (var viewer = new Viewer("HousePlan.dwg"))
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+## Choose rendering speed  instead of quality
+
+By default the GroupDocs.Viewer converts and renders all documents within CAD format family with the max possible quality. In case when the input CAD file (DWG, for example) is very complex, it may lead to quite significant processing time. Also, the size of the generated output HTML or image (vector or raster) also may be too heavy.
+
+Starting from the version 24.2 the GroupDocs.Viewer introduces a new public property within the [`CadOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions) class — the `EnablePerformanceConversionMode` boolean flag. By default it is set to `false` - the GroupDocs.Viewer behaves as in previous versions, preserving the maximum quality. But when setting its value to `true`, then the performance-oriented conversion mode is enabled, which leads to significantly lesser conversion time as well as lesser byte size of the output document.
+
+Enabling this mode is pretty simple — just create an instance of the [`CadOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions) class by using [any of the static methods described above](#ctors), and then set the value for the `EnablePerformanceConversionMode` property. Example is below:
+
+```csharp
+using (Viewer viewer = new Viewer("input.dwg"))
+{
+	HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("Output-Page#{0}.html");                    
+	viewOptions.CadOptions = CadOptions.ForRenderingByWidth(1000);
+	viewOptions.CadOptions.EnablePerformanceConversionMode = true;
+
+	viewer.View(viewOptions);
+}
+```
+
+If taking an ordinary DWG file as a sample, the comparison between "quality" and "performance" modes are the next:
+
+| Conversion mode | Output file size, MiB | Processing time, sec |
+| --- | --- | --- | --- | --- |
+| Quality-oriented (default) | 46.8 | 7.87 |
+| Performance-oriented (new) | 5.04 | 4.47 |
+
+Screenshot below illustrates the visulacdifferences between these modes, default quality-oriented mode is on the left side, and the new performance-oriented mode is on the right side:
+
+![DWG quality vs. performance](/viewer/net/images/rendering-basics/render-cad-documents/dwg_comparison_quality_vs_performance.png)
