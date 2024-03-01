@@ -189,6 +189,6 @@ If taking an ordinary DWG file as a sample, the comparison between "quality" and
 | Quality-oriented (default) | 46.8 | 7.87 |
 | Performance-oriented (new) | 5.04 | 4.47 |
 
-Screenshot below illustrates the visulacdifferences between these modes, default quality-oriented mode is on the left side, and the new performance-oriented mode is on the right side:
+Screenshot below illustrates the visual differences between these modes, default quality-oriented mode is on the left side, and the new performance-oriented mode is on the right side:
 
 ![DWG quality vs. performance](/viewer/net/images/rendering-basics/render-cad-documents/dwg_comparison_quality_vs_performance.png)
