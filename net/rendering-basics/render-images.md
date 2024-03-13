@@ -72,6 +72,8 @@ GroupDocs.Viewer supports the following image file formats:
 
 GroupDocs.Viewer can detect the image format automatically based on information in the file header.
 
+{{< alert style="info" >}}All Photoshop-related image formats (AI, PSD, and PSB) currently are not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
+
 ## Render images as HTML
 
 Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an image to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
