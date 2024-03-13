@@ -37,9 +37,14 @@ Open your project or solution in Visual Studio and follow the steps below to ins
 The [Package Manager Console](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-powershell) uses PowerShell commands to install, update, and remove NuGet packages. Open your project in Visual Studio and click **Tools** -> **NuGet Package Manager** -> **Package Manager Console** to open the console window. Run the the following command to install the latest version of the **GroupDocs.Viewer** library:
 
 {{< tabs "example1">}}
-{{< tab "PowerShell" >}}
+{{< tab "PowerShell GroupDocs.Viewer for .NET" >}}
 ```
 PM> Install-Package GroupDocs.Viewer
+```
+{{< /tab >}}
+{{< tab "PowerShell GroupDocs.Viewer.CrossPlatform" >}}
+```
+PM> Install-Package GroupDocs.Viewer.CrossPlatform
 ```
 {{< /tab >}}
 {{< /tabs >}}
