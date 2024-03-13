@@ -78,7 +78,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 
 | Format | Description | Automatic format detection | Remarks |
 | --- | --- | :---: | --- |
-| [AI](https://docs.fileformat.com/image/ai/) | Adobe Illustrator Artwork | ![(tick)](/viewer/net/images/check-blue.png) | Supported versions: 2, 3, 8 |
+| [AI](https://docs.fileformat.com/image/ai/) \* | Adobe Illustrator Artwork | ![(tick)](/viewer/net/images/check-blue.png) | Supported versions: 2, 3, 8 |
 | [APNG](https://docs.fileformat.com/image/apng/) | Animated Portable Network Graphic | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [BMP](https://docs.fileformat.com/image/bmp/) | Bitmap Image | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [CDR](https://docs.fileformat.com/image/cdr/) | CorelDRAW Image File | ![(tick)](/viewer/net/images/check-blue.png) | |
@@ -108,8 +108,8 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [PCL](https://docs.fileformat.com/page-description-language/pcl/) | Printer Command Language Document | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [PNG](https://docs.fileformat.com/image/png/) | Portable Network Graphics | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [PS](https://docs.fileformat.com/page-description-language/ps/) | PostScript File | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [PSB](https://docs.fileformat.com/image/psb/) | Photoshop Large Document Format | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [PSD](https://docs.fileformat.com/image/psd/) | Adobe Photoshop Document | ![(tick)](/viewer/net/images/check-blue.png) | |
+| [PSB](https://docs.fileformat.com/image/psb/) \* | Photoshop Large Document Format | ![(tick)](/viewer/net/images/check-blue.png) | |
+| [PSD](https://docs.fileformat.com/image/psd/) \* | Adobe Photoshop Document | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [SVG](https://docs.fileformat.com/page-description-language/svg/) | Scalable Vector Graphics File | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [SVGZ](https://docs.fileformat.com/image/svgz/) | Compressed SVG File | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [TGA](https://docs.fileformat.com/image/tga/) | TARGA (Truevision Advanced Raster Graphics Adapter) Graphics | ![(tick)](/viewer/net/images/check-blue.png) | |
@@ -118,9 +118,13 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [WMF](https://docs.fileformat.com/image/wmf/) | Windows Metafile | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [WMZ](https://docs.fileformat.com/image/wmz/) | Compressed Windows Metafile | ![(tick)](/viewer/net/images/check-blue.png) | |
 
+{{< alert style="info" >}}AI, PSB, and PSD formats, marked by asterisk (\*), currently are not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
+
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view image files: [Render images as HTML, PDF, PNG, and JPEG files](/viewer/net/render-images/).
 
 ## Note-taking file formats
+
+{{< alert style="info" >}}Note file formats family currently is not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
 
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |
@@ -166,6 +170,8 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view presentations: [Render PowerPoint presentations as HTML, PDF, and image files](/viewer/net/render-presentations/).
 
 ## Project Management file formats
+
+{{< alert style="info" >}}Project Management file formats family currently is not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
 
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |
@@ -250,6 +256,8 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view text and code files: [Render text documents as HTML, PDF, and image files](/viewer/net/render-text-files/).
 
 ## Visio file formats
+
+{{< alert style="info" >}}Visio file formats family currently is not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
 
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |
