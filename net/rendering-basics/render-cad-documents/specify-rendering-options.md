@@ -163,6 +163,10 @@ using (var viewer = new Viewer("HousePlan.dwg"))
 {{< /tab >}}
 {{< /tabs >}}
 
+In the example above the GroupDocs.Viewer will generate four HTML files named "page_1.html", "page_2.html", "page_3.html", and "page_4.html", where each of these HTML file contains a single tile in a form of SVG vector image. The [`HtmlViewOptions.ForExternalResources()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/forexternalresources/#forexternalresources) static method (with all its overloads) can also be used — in such case the SVG files will not be embedded inside the output HTML files, but will be saved separately, while HTML only references them through the `A` HTML element.
+
+Prior the version 24.3 of the GroupDocs.Viewer the tiled rendering of CAD files was available only for the HTML rendering. Starting from the version 24.3 the CAD tiled rendering is also supported for the PDF — in that case the GroupDocs.Viewer generates a single PDF file, where one its page represents one tile. So, if in the example above we replace the [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) onto the [`PdfViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions/), then the GroupDocs.Viewer will produce one PDF file with four pages inside it.
+
 ## Choose rendering speed  instead of quality
 
 By default the GroupDocs.Viewer converts and renders all documents within CAD format family with the max possible quality. In case when the input CAD file (DWG, for example) is very complex, it may lead to quite significant processing time. Also, the size of the generated output HTML or image (vector or raster) also may be too heavy.
