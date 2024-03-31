@@ -99,6 +99,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [JP2](https://docs.fileformat.com/image/jp2/) | JPEG 2000 Core Image File | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [JPC](https://docs.fileformat.com/image/jpc/) | JPEG 2000 Code Stream File | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [JPEG / JPG](https://docs.fileformat.com/image/jpeg) | JPEG Image | ![(tick)](/viewer/net/images/check-blue.png) | |
+| [JFIF](https://docs.fileformat.com/image/jfif) | JPEG File Interchange Format | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [JPF](https://docs.fileformat.com/image/jpf/) | JPEG 2000 Image | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [JPM](https://docs.fileformat.com/image/jpm/) | JPEG 2000 Multi-layer Image Format | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [JPX](https://docs.fileformat.com/image/jpx/) | JPEG 2000 Image File | ![(tick)](/viewer/net/images/check-blue.png) | |
