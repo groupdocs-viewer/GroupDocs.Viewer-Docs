@@ -47,7 +47,15 @@ GroupDocs.Viewer can detect the document format automatically based on informati
 
 ## Render spreadsheets as HTML
 
-Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a spreadsheet file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
+Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a spreadsheet file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}).
+
+<a name="unique-ID"></a>
+When rendering spreadsheets to HTML format, regardless of the exact rendering mode (one HTML file per one worksheet, or single HTML for all worksheets, embedded or external resources), there always is an HTML `&lt;table&gt;`, that contains all the data from a worksheet, and a set of different CSS properties, which are applied to different parts of this table (rows, cells, or their ranges) and decorate them. There always is a CSS stylesheet (embedded or external) with a set of rulesets and at-rules, which are binded with a HTML table and its content by different selectors.
+
+In some cases it is required to embed the GroupDocs.Viewer into the other web-application. In this scenario may occur an issue, when the styles from the GroupDocs.Viewer interfere with the styles of the parent web application. In particular, when GroupDocs.Viewer converts the spreadsheet to the HTML, it creates several rulesets with `&lt;TR&gt;`, `&lt;TD&gt;`, `&lt;COL&gt;`, `&lt;BR&gt;` type-selector, and these rulesets may corrupt the behavior of the parent web-page.
+
+It was a problem in the GroupDocs.Viewer before the version 24.3. Starting from [version 24.3](https://releases.groupdocs.com/viewer/net/release-notes/2024/groupdocs-viewer-for-net-24-3-release-notes/), when rendering spreadsheet documents, the GroupDocs.Viewer adds the unique ID value to every HTML element and CSS selector in order to eliminate any interference with styles of the parent application. So now all the type-selectors are replaced to be the combined id-type descendant selectors like `#gdt-id-1 td`, `#gdt-id-2 tr`, and so on. This excludes any style conflicts once and for all.
+
 
 ### Create an HTML file with embedded resources
 
