@@ -28,12 +28,18 @@ With its powerful and straightforward API, you can execute the following actions
 * [Add text watermarks](/viewer/net/add-text-watermark/) to the output HTML, PDF, and image files.
 * [Implement caching](/viewer/net/caching-results/) to increase document loading speed and optimize application performance.
 
-You can use GroupDocs.Viewer across multiple platforms and operation systems:
+You can use GroupDocs.Viewer across multiple platforms and operation systems. There are two versions of the GroupDocs.Viewer — a "classic" GroupDocs.Viewer for .NET and a new GroupDocs.Viewer.CrossPlatform, which was released on March 2024.
+
+GroupDocs.Viewer for .NET supports the maximum variety of operating systems and target platforms:
 
 * Windows, Linux, and macOS
-* .NET Framework 2.0 and higher
+* .NET Framework 4.6.2 and higher
 * .NET Core 3.1
 * .NET 5 and higher
+
+However, it internally utilizes a System.Drawing library and thus [cannot be used on Linux on .NET 6.0 and above](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/system-drawing-common-windows-only).
+
+That's why the GroupDocs.Viewer.CrossPlatform was created — it is a System.Drawing-free and may be used on Linux on .NET 6.0 and above. However, it does not support .NET Framework, .NET Core and .NET 5.0.
 
 ## Get started with GroupDocs.Viewer for .NET
 
