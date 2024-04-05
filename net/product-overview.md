@@ -34,8 +34,7 @@ GroupDocs.Viewer for .NET supports the maximum variety of operating systems and 
 
 * Windows, Linux, and macOS
 * .NET Framework 4.6.2 and higher
-* .NET Core 3.1
-* .NET 5 and higher
+* .NET 6 and higher
 
 However, it internally utilizes a System.Drawing library and thus [cannot be used on Linux on .NET 6.0 and above](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/system-drawing-common-windows-only).
 

@@ -17,7 +17,7 @@ GroupDocs.Viewer for .NET (including GroupDocs.Viewer.CrossPlatform) does not re
 
 ## Supported Operating Systems
 
-GroupDocs.Viewer for .NET can be used on any 32-bit or 64-bit operating system where .NET Framework, .NET Core 3.1 or .NET is installed including, but not limited to:
+GroupDocs.Viewer for .NET can be used on any 32-bit or 64-bit operating system where .NET Framework 4.6.2 and upper, .NET 6 and upper is installed including, but not limited to:
 
 ### Windows
 
@@ -50,9 +50,9 @@ Both GroupDocs.Viewer for .NET and GroupDocs.Viewer.CrossPlatform support Mac OS
 
 ## Supported Frameworks and Target Runtimes
 
-**GroupDocs.Viewer for .NET** supports .NET Framework, .NET Core and .NET platforms. Current version supports .NET Framework 4.6.2 and above, .NET Core 3.1, .NET 5 and above. Older versions of GroupDocs.Viewer for .NET also have supported older .NET Frameworks: .NET Framework 2.0 and 3.5 support was dropped since v22.3, and .NET Framework 4.0 - 4.6.0 was dropped since v23.8.
+**GroupDocs.Viewer for .NET** supports .NET Framework and .NET platforms. Current version supports .NET Framework 4.6.2 and above, .NET 6 and above. Older versions of GroupDocs.Viewer for .NET also have supported older .NET Frameworks: .NET Framework 2.0 and 3.5 support was dropped since v22.3, and .NET Framework 4.0 - 4.6.0 was dropped since v23.8.
 
-**GroupDocs.Viewer.CrossPlatform** does not support .NET Framework and .NET Core at all. Its minimum requirement is .NET 6.0 and above.
+**GroupDocs.Viewer.CrossPlatform** does not support .NET Framework. Its minimum requirement is .NET 6.0 and above.
 
 ## Development Environments
 
