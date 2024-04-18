@@ -495,3 +495,36 @@ using (Viewer viewer = new Viewer("resume.pdf"))
 The following image shows the rendering [resume.pdf](/viewer/net/images/rendering-basics/render-pdf-documents/resume.pdf) with the disabled (left) and enabled (right) `WrapImagesInSvg` option:
 
 ![Images as background vs embedded in SVG](/viewer/net/images/rendering-basics/render-pdf-documents/wrap-images-in-svg.png)
+
+## Disable copy protection
+
+When rendering PDF files with protection against copying text and images to HTML, GroupDocs.Viewer adds an `inert` HTML attribute to the HTML `<body>` tag.
+
+Use [PdfOptions.DisableCopyProtection](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptions/disablecopyprotection) to turn off copy protection. When `DisableCopyProtection` is set to `true`, the `inert` HTML attribute won't be added to the HTML `<body>` tag in any case.
+
+{{< alert style="info" >}}
+
+This option was added in GroupDocs.Viewer for .NET 24.4. Previous versions of GroupDocs.Viewer for .NET ignores PDF copy protection and does not add `inert` HTML attribute to HTML `<body>` tag.   
+
+{{< /alert >}}
+
+This option is supported when rendering PDF files to HTML with embedded or external resources. 
+
+{{< tabs "example17">}}
+{{< tab "C#" >}}
+```csharp
+using (Viewer viewer = new Viewer("protected-resume.pdf"))
+{
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    viewOptions.PdfOptions.DisableCopyProtection = true;
+
+    viewer.View(viewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+The following image shows the rendering of [protected-resume.pdf](/viewer/net/images/rendering-basics/render-pdf-documents/protected-resume.pdf) with copy protection on the left and with with `DisableCopyProtection` option set to `true` on the right:
+
+![Render with or without copy protection](/viewer/net/images/rendering-basics/render-pdf-documents/render-with-and-without-copy-protection.png.png)
+
