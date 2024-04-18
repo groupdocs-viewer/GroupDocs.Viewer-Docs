@@ -526,5 +526,5 @@ using (Viewer viewer = new Viewer("protected-resume.pdf"))
 
 The following image shows the rendering of [protected-resume.pdf](/viewer/net/images/rendering-basics/render-pdf-documents/protected-resume.pdf) with copy protection on the left and with with `DisableCopyProtection` option set to `true` on the right:
 
-![Render with or without copy protection](/viewer/net/images/rendering-basics/render-pdf-documents/render-with-and-without-copy-protection.png.png)
+![Render with or without copy protection](/viewer/net/images/rendering-basics/render-pdf-documents/render-with-and-without-copy-protection.png)
 
