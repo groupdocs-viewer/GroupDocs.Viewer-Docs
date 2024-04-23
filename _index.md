@@ -155,7 +155,7 @@ Excellent file viewer component that empowers your C#, ASP.NET, and other .NET a
             <div class="gdoc-platform__col">
                     <div class="gdoc-platform__col-title">
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
-                    <div>Java Code Examples</div></div>
+                    <div>Node.js via Java Code Examples</div></div>
                     <div class="gdoc-platform__col-descr">Open-source projects for APIs example usage</div>
                     <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
                     <li> <a href='https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java'>GroupDocs.Viewer for Node.js via Java</a></li>
