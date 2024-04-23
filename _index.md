@@ -19,6 +19,7 @@ Excellent file viewer component that empowers your C#, ASP.NET, and other .NET a
 <ul >
 <li><a href="#viewer_net">.NET</a></li>
 <li><a href="#viewer_java">Java</a></li>
+<li><a href="#viewer_nodejs-java">Node.js</a></li>
 </ul>
 </div>
 
@@ -120,7 +121,51 @@ Excellent file viewer component that empowers your C#, ASP.NET, and other .NET a
             <a class="gdoc-platform__footer-btn"  href='/viewer/java/'>More</a>
         </div>
     </div>
-
+    <div class="gdoc-platform">
+    <a id="viewer_nodejs-java"></a>
+        <div class="gdoc-platform__header">
+            <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#nodejs"></use></svg>
+            <a class="gdoc-platform__header-title"  href='/viewer/nodejs-java/'>GroupDocs.Viewer for Node.js via Java</a>
+            <a class="gdoc-platform__header-btn"  href='/viewer/nodejs-java/'>More</a>
+        </div>
+        <div class="gdoc-platform__cols">
+            <div class="gdoc-platform__col">
+                <div class="gdoc-platform__col-title">
+                <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
+                <div>Getting Started</div></div>
+                <div class="gdoc-platform__col-descr">Start quickly with our getting started documentation</div>
+                <ul class="gdoc-platform__col-links">
+                <li> <a href='/viewer/nodejs-java/features-overview/'>Features  Overview</a></li>
+                            <li> <a href='/viewer/nodejs-java/supported-document-formats/'>Supported Document Formats</a></li>
+                            <li> <a href='/viewer/nodejs-java/system-requirements/'>System Requirements</a></li>
+                            <li> <a href='/viewer/nodejs-java/installation/'>Installation</a></li>
+                </ul>
+            </div>
+            <div class="gdoc-platform__col">
+                    <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg>
+                    <div>Document rendering</div></div>
+                    <div class="gdoc-platform__col-descr">Articles and guidelines for  document rendering</div>
+                    <ul class="gdoc-platform__col-links">
+                <li> <a href='/viewer/nodejs-java/rendering-to-pdf/'>Render to PDF</a></li>
+                    <li> <a href='/viewer/nodejs-java/rendering-to-html/'>Render to HTML</a></li>
+                    <li> <a href='/viewer/nodejs-java/add-text-watermark/'>Add text watermarks</a></li>
+                    </ul>
+                    </div>
+            <div class="gdoc-platform__col">
+                    <div class="gdoc-platform__col-title">
+                    <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
+                    <div>Java Code Examples</div></div>
+                    <div class="gdoc-platform__col-descr">Open-source projects for APIs example usage</div>
+                    <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
+                    <li> <a href='https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java'>GroupDocs.Viewer for Node.js via Java</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="gdoc-platform__footer">
+            <a class="gdoc-platform__footer-btn"  href='/viewer/nodejs-java/'>More</a>
+        </div>
+    </div>
 
 </div>
 
