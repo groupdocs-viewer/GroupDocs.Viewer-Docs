@@ -204,7 +204,7 @@ Excellent file viewer component that empowers your C#, ASP.NET, and other .NET a
                     <div>Python via .Net Code Examples</div></div>
                     <div class="gdoc-platform__col-descr">Open-source projects for APIs example usage</div>
                     <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
-                    <li> <a href='https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java'>GroupDocs.Viewer for Python via .Net</a></li>
+                    <li> <a href='https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.Net'>GroupDocs.Viewer for Python via .Net</a></li>
                     </ul>
             </div>
         </div>
