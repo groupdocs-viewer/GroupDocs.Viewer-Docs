@@ -37,12 +37,12 @@ Excellent file viewer component that empowers your C#, ASP.NET, and other .NET a
             <div class="gdoc-platform__col">
                 <div class="gdoc-platform__col-title">
                 <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
-                <div>Getting Started</div></div>
+                <div>Getting started</div></div>
                 <div class="gdoc-platform__col-descr">Start quickly with our getting started documentation</div>
                 <ul class="gdoc-platform__col-links">
-                <li> <a href='/viewer/net/features-overview/'>Features Overview</a></li>
-                <li> <a href='/viewer/net/supported-document-formats/'>Supported Document Formats</a></li>
-                <li> <a href='/viewer/net/system-requirements/'>System Requirements</a></li>
+                <li> <a href='/viewer/net/features-overview/'>Features overview</a></li>
+                <li> <a href='/viewer/net/supported-document-formats/'>Supported document formats</a></li>
+                <li> <a href='/viewer/net/system-requirements/'>System requirements</a></li>
                 <li> <a href='/viewer/net/installation/'>Installation</a></li>
                 </ul>
             </div>
@@ -55,13 +55,13 @@ Excellent file viewer component that empowers your C#, ASP.NET, and other .NET a
                     <li> <a href='/viewer/net/render-word-documents/'>Render Word documents</a></li>
                     <li> <a href='/viewer/net/render-pdf-documents/'>Render PDF documents</a></li>
                     <li> <a href='/viewer/net/render-presentations/'>Render PowerPoint presentations</a></li>
-                    <li> <a href='/viewer/net/render-excel-and-apple-numbers-spreadsheets/'>Render Spreadsheets</a></li>
+                    <li> <a href='/viewer/net/render-excel-and-apple-numbers-spreadsheets/'>Render spreadsheets</a></li>
                     </ul>
                     </div>
             <div class="gdoc-platform__col">
                     <div class="gdoc-platform__col-title">
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
-                    <div>.NET Code Examples</div></div>
+                    <div>.NET code examples</div></div>
                     <div class="gdoc-platform__col-descr">Open-source projects for APIs example usage</div>
                     <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
                     <li> <a href='https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET'>GroupDocs.Viewer for .NET</a></li>
@@ -86,12 +86,12 @@ Excellent file viewer component that empowers your C#, ASP.NET, and other .NET a
             <div class="gdoc-platform__col">
                 <div class="gdoc-platform__col-title">
                 <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
-                <div>Getting Started</div></div>
+                <div>Getting started</div></div>
                 <div class="gdoc-platform__col-descr">Start quickly with our getting started documentation</div>
                 <ul class="gdoc-platform__col-links">
-                <li> <a href='/viewer/java/features-overview/'>Features  Overview</a></li>
-                            <li> <a href='/viewer/java/supported-document-formats/'>Supported Document Formats</a></li>
-                            <li> <a href='/viewer/java/system-requirements/'>System Requirements</a></li>
+                <li> <a href='/viewer/java/features-overview/'>Features overview</a></li>
+                            <li> <a href='/viewer/java/supported-document-formats/'>Supported document formats</a></li>
+                            <li> <a href='/viewer/java/system-requirements/'>System requirements</a></li>
                             <li> <a href='/viewer/java/installation/'>Installation</a></li>
                 </ul>
             </div>
@@ -109,7 +109,7 @@ Excellent file viewer component that empowers your C#, ASP.NET, and other .NET a
             <div class="gdoc-platform__col">
                     <div class="gdoc-platform__col-title">
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
-                    <div>Java Code Examples</div></div>
+                    <div>Java code examples</div></div>
                     <div class="gdoc-platform__col-descr">Open-source projects for APIs example usage</div>
                     <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
                     <li> <a href='https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java'>GroupDocs.Viewer for Java</a></li>
@@ -133,12 +133,12 @@ Excellent file viewer component that empowers your C#, ASP.NET, and other .NET a
             <div class="gdoc-platform__col">
                 <div class="gdoc-platform__col-title">
                 <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#time"></use></svg>
-                <div>Getting Started</div></div>
+                <div>Getting started</div></div>
                 <div class="gdoc-platform__col-descr">Start quickly with our getting started documentation</div>
                 <ul class="gdoc-platform__col-links">
-                <li> <a href='/viewer/nodejs-java/features-overview/'>Features  Overview</a></li>
-                            <li> <a href='/viewer/nodejs-java/supported-document-formats/'>Supported Document Formats</a></li>
-                            <li> <a href='/viewer/nodejs-java/system-requirements/'>System Requirements</a></li>
+                <li> <a href='/viewer/nodejs-java/features-overview/'>Features overview</a></li>
+                            <li> <a href='/viewer/nodejs-java/supported-document-formats/'>Supported document formats</a></li>
+                            <li> <a href='/viewer/nodejs-java/system-requirements/'>System requirements</a></li>
                             <li> <a href='/viewer/nodejs-java/installation/'>Installation</a></li>
                 </ul>
             </div>
@@ -156,7 +156,7 @@ Excellent file viewer component that empowers your C#, ASP.NET, and other .NET a
             <div class="gdoc-platform__col">
                     <div class="gdoc-platform__col-title">
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
-                    <div>Node.js via Java Code Examples</div></div>
+                    <div>Node.js via Java code examples</div></div>
                     <div class="gdoc-platform__col-descr">Open-source projects for APIs example usage</div>
                     <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
                     <li> <a href='https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java'>GroupDocs.Viewer for Node.js via Java</a></li>
