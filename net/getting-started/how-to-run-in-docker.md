@@ -8,6 +8,8 @@ description: "You can build a project from scratch using Visual Studio .NET CLI.
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
+aliases:
+    - viewer/net/net-standard-2-0-api-limitations
 ---
 
 Docker provides an isolated environment for services and applications. In this topic we containerize sample application that is using GroupDocs.Viewer. You can learn more about conteinerization at [Introduction to .NET and Docker](https://learn.microsoft.com/en-us/dotnet/core/docker/introduction).
