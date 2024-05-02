@@ -19,6 +19,23 @@ Note that there are a number of general policies and practices that guide you on
 
 {{< /alert >}}
 
+## How to Evaluate GroupDocs.Viewer
+
+You can also try GroupDocs.Viewer without buying a license.
+
+### Free Trial
+
+The evaluation version is identical to the purchased one; it becomes licensed once you set the license. You can set the license using methods described in the following sections of this article.
+
+The evaluation version has the following limitations:
+
+- Rendering is limited to the first 2 pages.
+- Trial badges are added to the top of a rendered page.
+
+### Temporary License
+
+If you want to test GroupDocs.Viewer without the limitations of the trial version,   request a 30-day Temporary License. For details, see the [Get a Temporary License](https://purchase.groupdocs.com/temporary-license) page.
+
 ## Purchased License
 
 After buying, apply the license file or include it as an embedded resource. 
@@ -140,21 +157,4 @@ When you buy and download a license from the GroupDocs website, the license file
 If Microsoft Windows is set to hide file extensions (which is the default in most installations), the license file will show as "GroupDocs.Viewer.lic" in Windows Explorer. You might assume this is the actual file name and call the `SetLicense` method with "GroupDocs.Viewer.lic", but there is no such file, leading to an exception.
 
 To fix this issue, rename the file to remove the hidden .xml extension. Additionally, we suggest disabling the **Hide extensions** option in Microsoft Windows.
-
-## How to Evaluate GroupDocs.Viewer
-
-You can also try GroupDocs.Viewer without buying a license.
-
-### Free Trial
-
-The evaluation version is identical to the purchased one; it becomes licensed once you set the license. You can set the license using methods described in the following sections of this article.
-
-The evaluation version has the following limitations:
-
-- Rendering is limited to the first 2 pages.
-- Trial badges are added to the top of a rendered page.
-
-### Temporary License
-
-If you want to test GroupDocs.Viewer without the limitations of the trial version,   request a 30-day Temporary License. For details, see the ["Get a Temporary License"](https://purchase.groupdocs.com/temporary-license) page.
 
