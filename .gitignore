@@ -1,2 +1,4 @@
 deploy_key
 common/
+bin/
+obj/
