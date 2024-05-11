@@ -21,12 +21,33 @@ The following code snippet shows how to render a .docx document to PDF:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer;
+// ...
+
 using (Viewer viewer = new Viewer("sample.docx"))
 {
 	// Create a PDF file.
 	PdfViewOptions viewOptions = new PdfViewOptions();
 	viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.docx")
+            ' Create a PDF file.
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions()
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

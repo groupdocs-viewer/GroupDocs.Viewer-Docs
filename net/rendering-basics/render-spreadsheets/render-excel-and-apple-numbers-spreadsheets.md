@@ -79,6 +79,24 @@ using (var viewer = new Viewer("invoice.xlsx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to HTML.
+            ' {0} is replaced with the current page number in the file names.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -101,6 +119,24 @@ using (var viewer = new Viewer("Products.numbers"))
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Products.numbers")
+            ' Convert the spreadsheet to HTML.
+            ' {0} is replaced with the current page number in the file names.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -136,6 +172,25 @@ using (var viewer = new Viewer("invoice.xlsx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to HTML.
+            ' Specify the HTML file names and location of external resources.
+            ' {0} and {1} are replaced with the current page number and resource name, respectively.
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 #### Convert an Apple Numbers spreadsheet to HTML
@@ -155,6 +210,25 @@ using (var viewer = new Viewer("Products.numbers"))
     var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Products.numbers")
+            ' Convert the spreadsheet to HTML.
+            ' Specify the HTML file names and location of external resources.
+            ' {0} and {1} are replaced with the current page number and resource name, respectively.
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -185,6 +259,25 @@ using (var viewer = new Viewer("Personal_net_worth_calculator.xlsx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Personal_net_worth_calculator.xlsx")
+            ' Convert all Excel worksheets to one HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page.html")
+            ' Enable converting all worksheets to one file.
+            viewOptions.RenderToSinglePage = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -213,6 +306,23 @@ using (var viewer = new Viewer("invoice.xlsx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -234,6 +344,23 @@ using (var viewer = new Viewer("Products.numbers"))
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Products.numbers")
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -267,6 +394,27 @@ using (var viewer = new Viewer("invoice.xlsx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to PNG.
+            ' {0} is replaced with the current page number in the file names.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 The following image demonstrates the result:
 
@@ -291,6 +439,27 @@ using (var viewer = new Viewer("Products.numbers"))
     viewOptions.Height = 900;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Products.numbers")
+            ' Convert the spreadsheet to PNG.
+            ' {0} is replaced with the current page number in the file names.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -324,6 +493,27 @@ using (var viewer = new Viewer("invoice.xlsx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to JPEG.
+            ' {0} is replaced with the current page number in the file names.
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Convert an Apple Numbers spreadsheet to JPEG
@@ -345,6 +535,27 @@ using (var viewer = new Viewer("Products.numbers"))
     viewOptions.Height = 900;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Products.numbers")
+            ' Convert the spreadsheet to JPEG.
+            ' {0} is replaced with the current page number in the file names.
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -374,6 +585,26 @@ using (var viewer = new Viewer("sample.csv"))
     viewOptions.SpreadsheetOptions.DetectSeparator = true;
     viewer.View(viewOptions);
 }          
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.csv")
+            ' Convert the spreadsheet to HTML.
+            ' {0} is replaced with the current page number in the file names.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            ' Detect a CSV/TSV separator.
+            viewOptions.SpreadsheetOptions.DetectSeparator = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -409,6 +640,32 @@ using (var viewer = new Viewer("sample.xlsx"))
         Console.WriteLine($" - Worksheet {page.Number}: '{page.Name}'");
     }
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.xlsx")
+            Dim viewInfoOptions = ViewInfoOptions.ForHtmlView()
+            ' Call this method to create a single page for each worksheet.
+            viewInfoOptions.SpreadsheetOptions = SpreadsheetOptions.ForOnePagePerSheet()
+        
+            Dim viewInfo = viewer.GetViewInfo(viewInfoOptions)
+        
+            ' Print the worksheet names in the console window.
+            Console.WriteLine("The document contains the following worksheets:")
+            For Each page As Page In viewInfo.Pages
+                Console.WriteLine($" - Worksheet {page.Number}: '{page.Name}'")
+            Next
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

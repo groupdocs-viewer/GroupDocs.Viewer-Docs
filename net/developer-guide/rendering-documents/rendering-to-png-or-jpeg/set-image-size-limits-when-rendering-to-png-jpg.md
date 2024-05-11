@@ -30,6 +30,24 @@ public interface IMaxSizeOptions
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+''' <summary>
+''' Limits of image size options interface. 
+''' </summary>
+Public Interface IMaxSizeOptions
+    ''' <summary>
+    ''' Max width of an output image in pixels.
+    ''' </summary>
+    Property MaxWidth As Integer
+
+    ''' <summary>
+    ''' Max height of an output image in pixels.
+    ''' </summary>
+    Property MaxHeight As Integer
+End Interface
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 {{< alert style="warning" >}}
@@ -48,11 +66,15 @@ The following code snippet shows how to set the output image size limits:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 using (Viewer viewer = new Viewer("sample.jpg"))
 {
     // Create a JPG or PNG file.
     JpgViewOptions viewOptions = new JpgViewOptions("result_{0}.jpg");
-    //PngViewOptions viewOptions = new PngViewOptions("result_{0}.png");
+    // or PngViewOptions viewOptions = new PngViewOptions("result_{0}.png");
     
     // Specify the maximum width and height.
     viewOptions.MaxWidth = 800;
@@ -60,6 +82,29 @@ using (Viewer viewer = new Viewer("sample.jpg"))
 
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.jpg")
+            ' Create a JPG or PNG file.
+            Dim viewOptions As JpgViewOptions = New JpgViewOptions("result_{0}.jpg")
+            ' or PngViewOptions viewOptions = new PngViewOptions("result_{0}.png");
+        
+            ' Specify the maximum width and height.
+            viewOptions.MaxWidth = 800
+            viewOptions.MaxHeight = 600
+        
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

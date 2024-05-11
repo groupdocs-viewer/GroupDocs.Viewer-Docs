@@ -65,6 +65,24 @@ using (var viewer = new Viewer("sample.pptx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pptx")
+            ' Create an HTML file for each slide.
+            ' {0} is replaced with the current page number in the file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -97,6 +115,25 @@ using (var viewer = new Viewer("sample.pptx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pptx")
+            ' Create an HTML file for each slide.
+            ' Specify the HTML file names and location of external resources.
+            ' {0} and {1} are replaced with the current page number and resource name, respectively.
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
@@ -121,6 +158,24 @@ using (var viewer = new Viewer("sample.pptx"))
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pptx")
+            ' Create a PDF file for the presentation.
+            ' Specify the PDF file name.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -152,6 +207,27 @@ using (var viewer = new Viewer("sample.pptx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pptx")
+            ' Create a PNG image for each slide.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            ' Set width and height.
+            viewOptions.Width = 950
+            viewOptions.Height = 550
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -180,6 +256,27 @@ using (var viewer = new Viewer("sample.pptx"))
     viewOptions.Height = 550;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pptx")
+            ' Create a JPEG image for each slide.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            ' Set width and height.
+            viewOptions.Width = 950
+            viewOptions.Height = 550
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -218,6 +315,25 @@ using (var viewer = new Viewer("sample.pptx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pptx")
+            ' Convert the presentation to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Specify resolution.
+            viewOptions.PresentationOptions.Resolution = Resolution.Dpi150
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render hidden slides
@@ -243,6 +359,25 @@ using (var viewer = new Viewer("sample.pptx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pptx")
+            ' Convert the presentation to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Enable hidden slides rendering.
+            viewOptions.RenderHiddenPages = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render comments
@@ -264,6 +399,25 @@ using (var viewer = new Viewer("sample.pptx"))
     viewOptions.RenderComments = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pptx")
+            ' Convert the presentation to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Enable comments rendering.
+            viewOptions.RenderComments = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -297,6 +451,25 @@ using (var viewer = new Viewer("sample.pptx"))
     viewOptions.RenderNotes = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pptx")
+            ' Convert the presentation to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Enable speaker notes rendering.
+            viewOptions.RenderNotes = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

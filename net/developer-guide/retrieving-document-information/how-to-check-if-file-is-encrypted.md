@@ -16,15 +16,43 @@ If you want to check if a file is encrypted, use the _GetFileInfo()_ method that
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Results;
+// ...
+
 using (Viewer viewer = new Viewer("encrypted.pdf"))
 {
-	// Get file information.
-    Results.FileInfo fileInfo = viewer.GetFileInfo();
+    // Get file information.
+    FileInfo fileInfo = viewer.GetFileInfo();
 
-	// Display the file type and flag if the file is encrypted.
+    // Display the file type and flag if the file is encrypted.
     Console.WriteLine("File type is: " + fileInfo.FileType);
     Console.WriteLine("File encrypted: " + fileInfo.Encrypted);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("encrypted.pdf")
+            ' Get file information.
+            Dim fileInfo As FileInfo = viewer.GetFileInfo()
+        
+            ' Display the file type and flag if the file is encrypted.
+            Console.WriteLine("File type is: " & fileInfo.FileType.ToString())
+            Console.WriteLine("File encrypted: " & fileInfo.Encrypted.ToString())
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

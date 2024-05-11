@@ -39,6 +39,23 @@ using (var viewer = new Viewer("sample.nsf"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.nsf")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -62,6 +79,23 @@ using (var viewer = new Viewer("sample.nsf"))
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.nsf")
+            ' Create a PDF file.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -93,6 +127,27 @@ using (var viewer = new Viewer("sample.nsf"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.nsf")
+            ' Convert the NSF file to PNG.
+            ' {0} is replaced with the page numbers in the output image names.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            '  Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 1000
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -120,6 +175,27 @@ using (var viewer = new Viewer("sample.nsf"))
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.nsf")
+            ' Convert the NSF file to JPEG.
+            ' {0} is replaced with the page numbers in the output image names.
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            '  Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 1000
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -156,6 +232,25 @@ using (var viewer = new Viewer("sample.nsf"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.nsf")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            ' Specify the maximum items to render.
+            viewOptions.MailStorageOptions.MaxItems = 20
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Filter messages
@@ -187,6 +282,26 @@ using (var viewer = new Viewer("sample.nsf"))
     viewOptions.MailStorageOptions.AddressFilter = "groupdocs@mail.com";
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.nsf")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            ' Set filters.
+            viewOptions.MailStorageOptions.TextFilter = "Viewer"
+            viewOptions.MailStorageOptions.AddressFilter = "groupdocs@mail.com"
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

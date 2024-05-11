@@ -22,7 +22,6 @@ The following code snippet shows how to optimize spreadsheets in a PDF file:
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
-using GroupDocs.Viewer.Domain.Documents.PostProcessing.Pdf.Optimization;
 // ...
 
 using (var viewer = new Viewer("invoice.xlsx"))
@@ -36,7 +35,25 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewer.View(viewOptions);
 }
 ```
-{{</ tab >}}
-{{</ tabs >}}
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
 
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions()
+            viewOptions.PdfOptimizationOptions = New PdfOptimizationOptions With {
+                .OptimizeSpreadsheets = True
+                }
 
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
+{{< /tabs >}}

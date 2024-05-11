@@ -24,13 +24,12 @@ The following code snippet shows how to compress images in the file:
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
-using GroupDocs.Viewer.Domain.Documents.PostProcessing.Pdf.Optimization;
 // ...
 
 using (var viewer = new Viewer("sample.docx"))
 {
     PdfViewOptions viewOptions = new PdfViewOptions();
-    viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions()
+    viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions
     {
         CompressImages = true,
         ImageQuality = 50
@@ -39,8 +38,29 @@ using (var viewer = new Viewer("sample.docx"))
     viewer.View(viewOptions);
 }
 ```
-{{</ tab >}}
-{{</ tabs >}}
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.docx")
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions()
+            viewOptions.PdfOptimizationOptions = New PdfOptimizationOptions With {
+                .CompressImages = True,
+                .ImageQuality = 50
+                }
+
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result:
 

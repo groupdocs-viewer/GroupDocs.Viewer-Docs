@@ -22,6 +22,11 @@ The following code snippet shows how to specify the document encoding:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using System.Text;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 // Specify an encoding.
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.Encoding = Encoding.GetEncoding("shift_jis");
@@ -31,6 +36,27 @@ using (Viewer viewer = new Viewer("sample.txt", loadOptions))
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System.Text
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        ' Specify an encoding.
+        Dim loadOptions As LoadOptions = New LoadOptions()
+        loadOptions.Encoding = Encoding.GetEncoding("shift_jis")
+        ' Render a file.
+        Using viewer As Viewer = New Viewer("sample.txt", loadOptions)
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

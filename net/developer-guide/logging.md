@@ -27,6 +27,11 @@ The following code snippet shows how to log to a file using the [FileLogger](htt
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Logging;
+using GroupDocs.Viewer.Options;
+// ...
+
 // Create logger and specify the output file.
 FileLogger fileLogger = new FileLogger("output.log");
 
@@ -39,6 +44,30 @@ using (Viewer viewer = new Viewer("sample.docx",viewerSettings))
     ViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("result.html");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Logging
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        ' Create logger and specify the output file.
+        Dim fileLogger As FileLogger = New FileLogger("output.log")
+    
+        ' Create ViewerSettings and specify FileLogger.
+        Dim viewerSettings As ViewerSettings = New ViewerSettings(fileLogger)
+    
+        ' Render a document.
+        Using viewer As Viewer = New Viewer("sample.docx", viewerSettings)
+            Dim viewOptions As ViewOptions = HtmlViewOptions.ForEmbeddedResources("result.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -54,6 +83,11 @@ The following code snippet shows how to log to the console using the [ConsoleLog
 {{< tabs "example2">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Logging;
+using GroupDocs.Viewer.Options;
+// ...
+
 // Create console logger.
 ConsoleLogger consoleLogger = new ConsoleLogger();
 
@@ -66,6 +100,30 @@ using (Viewer viewer = new Viewer("sample.docx", viewerSettings))
     ViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Logging
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        ' Create console logger.
+        Dim consoleLogger As ConsoleLogger = New ConsoleLogger()
+    
+        ' Create ViewerSettings and specify FileLogger.
+        Dim viewerSettings As ViewerSettings = New ViewerSettings(consoleLogger)
+    
+        ' Render a document.
+        Using viewer As Viewer = New Viewer("sample.docx", viewerSettings)
+            Dim viewOptions As ViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -87,6 +145,13 @@ The following code snippet shows how to implement a simple file logger:
 {{< tabs "example3">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
+using System.IO;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Logging;
+using GroupDocs.Viewer.Options;
+// ...
+
 // Create logger and specify the output file.
 CustomLogger customLogger = new CustomLogger("output.log");
 
@@ -174,6 +239,105 @@ public class CustomLogger : ILogger
         }
     }
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports System.IO
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Logging
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        ' Create logger and specify the output file.
+        Dim customLogger As CustomLogger = New CustomLogger("output.log")
+
+        ' Create ViewerSettings and specify CustomLogger.
+        Dim viewerSettings As ViewerSettings = New ViewerSettings(customLogger)
+
+        ' Render a document.
+        Using viewer As Viewer = New Viewer("sample.docx", viewerSettings)
+            Dim viewOptions As ViewOptions = HtmlViewOptions.ForEmbeddedResources("result.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+
+    ' <summary>
+    ' Writes log messages to a file.
+    ' </summary>
+    Public Class CustomLogger
+        Implements ILogger
+
+        Private ReadOnly _fileName As String
+
+        Private Sub New()
+        End Sub
+
+        ''' <summary>
+        ''' Create logger to a file.
+        ''' </summary>
+        ''' <param name="fileName">Full file name with path</param>
+        Public Sub New(fileName As String)
+            _fileName = fileName
+        End Sub
+
+        ''' <summary>
+        ''' Writes warning message to the file;
+        ''' Warning log messages provide information about the unexpected and recoverable events in application flow.
+        ''' </summary>
+        ''' <param name="message">The warning message.</param>
+        ''' <exception cref="System.ArgumentNullException">Thrown when <paramref name="message"/> is null.</exception>
+        Public Sub ILogger_Warning(message As String) Implements ILogger.Warning
+            If message Is Nothing Then
+                Throw New ArgumentNullException(NameOf(message))
+            End If
+
+            Using wr As New StreamWriter(_fileName, True)
+                wr.WriteLine($"[WARN] {message}")
+            End Using
+        End Sub
+
+        ''' <summary>
+        ''' Writes trace message to the file.
+        ''' Trace log messages provide generally useful information about application flow.
+        ''' </summary>
+        ''' <param name="message">The trace message.</param>
+        ''' <exception cref="System.ArgumentNullException">Thrown when <paramref name="message"/> is null.</exception>
+        Public Sub ILogger_Trace(message As String) Implements ILogger.Trace
+            If message Is Nothing Then
+                Throw New ArgumentNullException(NameOf(message))
+            End If
+
+            Using wr As New StreamWriter(_fileName, True)
+                wr.WriteLine($"[TRACE] {message}")
+            End Using
+        End Sub
+
+        ''' <summary>
+        ''' Writes an error message to the file.
+        ''' Error log messages provide information about unrecoverable events in application flow.
+        ''' </summary>
+        ''' <param name="message">The error message.</param>
+        ''' <param name="exception">The exception.</param>
+        ''' <exception cref="System.ArgumentNullException">Thrown when <paramref name="message"/> is null.</exception>
+        ''' <exception cref="System.ArgumentNullException">Thrown when <paramref name="exception"/> is null.</exception>
+        Public Sub [Error](message As String, exception As Exception) Implements ILogger.[Error]
+            If message Is Nothing Then
+                Throw New ArgumentNullException(NameOf(message))
+            End If
+            If exception Is Nothing Then
+                Throw New ArgumentNullException(NameOf(exception))
+            End If
+
+            Using wr As New StreamWriter(_fileName, True)
+                wr.WriteLine($"[ERROR] {message}, exception: {exception}")
+            End Using
+        End Sub
+    End Class
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

@@ -20,14 +20,37 @@ The following code snippet shows how to apply the watermark to the output pages.
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 using (Viewer viewer = new Viewer("sample.docx"))
 {
     // Create an HTML file.
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     // Add watermark
-    viewOptions.Watermark = new Watermark("This is a watermark");                
+    viewOptions.Watermark = new Watermark("This is a watermark");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.docx")
+            ' Create an HTML file.
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources   ()
+            ' Add watermark
+            viewOptions.Watermark = New Watermark("This is a watermark")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

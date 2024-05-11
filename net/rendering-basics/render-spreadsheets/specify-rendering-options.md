@@ -51,6 +51,25 @@ using (var viewer = new Viewer("invoice.xlsx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Render row and column headings.
+            viewOptions.SpreadsheetOptions.RenderHeadings = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -78,6 +97,25 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewOptions.SpreadsheetOptions.RenderGridLines = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Render grid lines.
+            viewOptions.SpreadsheetOptions.RenderGridLines = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -129,6 +167,25 @@ using (var viewer = new Viewer("invoice.xlsx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Specify the AutoFitColumn mode.
+            viewOptions.SpreadsheetOptions.TextOverflowMode = TextOverflowMode.AutoFitColumn
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render hidden rows and columns
@@ -155,6 +212,26 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewOptions.SpreadsheetOptions.RenderHiddenColumns = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Enable rendering hidden rows and columns.
+            viewOptions.SpreadsheetOptions.RenderHiddenRows = True
+            viewOptions.SpreadsheetOptions.RenderHiddenColumns = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -186,6 +263,25 @@ using (var viewer = new Viewer("invoice.xlsx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Enable rendering hidden pages.
+            viewOptions.RenderHiddenPages = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Skip empty rows and columns
@@ -208,6 +304,26 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewOptions.SpreadsheetOptions.SkipEmptyColumns = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Enable skipping blank rows and columns.
+            viewOptions.SpreadsheetOptions.SkipEmptyRows = True
+            viewOptions.SpreadsheetOptions.SkipEmptyColumns = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -236,6 +352,26 @@ using (var viewer = new Viewer("invoice.xlsx"))
     viewOptions.RenderComments = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to PNG.
+            ' {0} is replaced with the current page number in the file names.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            ' Enable rendering comments.
+            viewOptions.RenderComments = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -269,6 +405,29 @@ using (var viewer = new Viewer("invoice.xlsx"))
 	
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+        
+            ' Set margins for worksheets in the output pdf pages
+            viewOptions.SpreadsheetOptions.LeftMargin = 0
+            viewOptions.SpreadsheetOptions.RightMargin = 0.5
+            viewOptions.SpreadsheetOptions.TopMargin = 1
+            viewOptions.SpreadsheetOptions.BottomMargin = -10 ' set to default value
+        
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

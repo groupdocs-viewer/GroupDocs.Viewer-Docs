@@ -23,7 +23,14 @@ The following code snippet shows how to enable caching and displays the differen
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
-// Specify parameters.
+using System;
+using System.Diagnostics;
+using System.IO;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Caching;
+using GroupDocs.Viewer.Options;
+// ...
+
 string outputDirectory = @"C:\output";
 string cachePath = Path.Combine(outputDirectory, "cache");
 string pageFilePathFormat = Path.Combine(outputDirectory, "page_{0}.html");
@@ -46,6 +53,58 @@ using (Viewer viewer = new Viewer(@"C:\sample.docx", settings))
     stopWatch.Stop();
     Console.WriteLine("Time taken on second call to View method {0} (ms).", stopWatch.ElapsedMilliseconds);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports System.Diagnostics
+Imports System.IO
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Caching
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+            Dim outputDirectory As String = "C:\output"
+            Dim cachePath As String = Path.Combine(outputDirectory, "cache")
+            Dim pageFilePathFormat As String = Path.Combine(outputDirectory, "page_{0}.html")
+            ' Create a cache.
+            Dim cache As FileCache = New FileCache(cachePath)
+            Dim settings As ViewerSettings = New ViewerSettings(cache)
+        
+            Using viewer As Viewer = New Viewer("C:\sample.docx", settings)
+                ' Create an HTML file.
+                Dim options As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources(pageFilePathFormat)
+                ' Render and display the rendering time.
+                Dim stopWatch As Stopwatch = Stopwatch.StartNew()
+                viewer.View(options)
+                stopWatch.[Stop]()
+                Console.WriteLine("Time taken on first call to View method {0} (ms).", stopWatch.ElapsedMilliseconds)
+                ' Get cached results and display the time.
+                stopWatch.Restart()
+                viewer.View(options)
+                stopWatch.[Stop]()
+                Console.WriteLine("Time taken on second call to View method {0} (ms).", stopWatch.ElapsedMilliseconds)
+            End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+CONVERSION ERROR: Conversion for GlobalStatement not implemented, please report this issue in 'string outputDirectory = @"...' at character 160
+
+CONVERSION ERROR: Conversion for GlobalStatement not implemented, please report this issue in 'string cachePath = Path.Com...' at character 200
+
+CONVERSION ERROR: Conversion for GlobalStatement not implemented, please report this issue in 'string pageFilePathFormat =...' at character 260
+
+CONVERSION ERROR: Conversion for GlobalStatement not implemented, please report this issue in 'FileCache cache = new FileC...' at character 357
+
+CONVERSION ERROR: Conversion for GlobalStatement not implemented, please report this issue in 'ViewerSettings settings = n...' at character 402
+
+CONVERSION ERROR: Conversion for GlobalStatement not implemented, please report this issue in 'using (Viewer viewer = new ...' at character 458
 ```
 {{< /tab >}}
 {{< /tabs >}}

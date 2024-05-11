@@ -64,13 +64,31 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("HousePlan.dwg"))
 {
     // Create an HTML file for the drawing.
     // Specify the HTML file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+            ' Create an HTML file for the drawing.
+            ' Specify the HTML file name.
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -94,14 +112,33 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("HousePlan.dwg"))
 {
     // Create an HTML file for the drawing.
     // Specify the HTML file name and location of external resources.
     // {0} is replaced with the resource name.
-    var viewOptions = HtmlViewOptions.ForExternalResources("output.html", "output/resource_{0}", "output/resource_{0}");
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForExternalResources("output.html", "output/resource_{0}", "output/resource_{0}");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+            ' Create an HTML file for the drawing.
+            ' Specify the HTML file name and location of external resources.
+            ' {0} is replaced with the resource name.
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForExternalResources("output.html", "output/resource_{0}", "output/resource_{0}")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -121,13 +158,31 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("HousePlan.dwg"))
 {
     // Create a PDF file for the drawing.
     // Specify the PDF file name.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+            ' Create a PDF file for the drawing.
+            ' Specify the PDF file name.
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -147,15 +202,35 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("HousePlan.dwg"))
 {
     // Create a PNG image for the drawing.
-    var viewOptions = new PngViewOptions("output.png");
+    PngViewOptions viewOptions = new PngViewOptions("output.png");
     // Set width and height.
     viewOptions.Width = 1500;
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+            ' Create a PNG image for the drawing.
+            Dim viewOptions As PngViewOptions = New PngViewOptions("output.png")
+            ' Set width and height.
+            viewOptions.Width = 1500
+            viewOptions.Height = 1000
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -175,15 +250,35 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("HousePlan.dwg"))
 {
     // Create a JPG image for the drawing.
-    var viewOptions = new JpgViewOptions("output.jpg");
+    JpgViewOptions viewOptions = new JpgViewOptions("output.jpg");
     // Set width and height.
     viewOptions.Width = 1500;
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+            ' Create a JPG image for the drawing.
+            Dim viewOptions As JpgViewOptions = New JpgViewOptions("output.jpg")
+            ' Set width and height.
+            viewOptions.Width = 1500
+            viewOptions.Height = 1000
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -199,16 +294,18 @@ Follow the steps below to obtain information about layouts and layers contained 
 {{< tabs "example6">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
+// ...
 
-using (var viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("HousePlan.dwg"))
 {
-    var viewInfoOptions = ViewInfoOptions.ForHtmlView();
+    ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForHtmlView();
     // Enable this option to see the list of all layouts contained in the CAD file.
     viewInfoOptions.CadOptions.RenderLayouts = true;
-    var viewInfo = viewer.GetViewInfo(viewInfoOptions) as CadViewInfo;
+    CadViewInfo viewInfo = viewer.GetViewInfo(viewInfoOptions) as CadViewInfo;
 
     if (viewInfo != null)
     {
@@ -227,6 +324,44 @@ using (var viewer = new Viewer("HousePlan.dwg"))
             Console.WriteLine(layer);
     }
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+            Dim viewInfoOptions As ViewInfoOptions = ViewInfoOptions.ForHtmlView()
+            ' Enable this option to see the list of all layouts contained in the CAD file.
+            viewInfoOptions.CadOptions.RenderLayouts = True
+            Dim viewInfo As CadViewInfo = TryCast(viewer.GetViewInfo(viewInfoOptions), CadViewInfo)
+        
+            If viewInfo IsNot Nothing Then
+                ' Display information about the CAD file.
+                Console.WriteLine($"File type: {viewInfo.FileType}")
+                Console.WriteLine($"The number of pages: {viewInfo.Pages.Count}")
+        
+                ' Display the list of existing layouts.
+                Console.WriteLine("The drawing contains the following layout(s):")
+                For Each layout As Layout In viewInfo.Layouts
+                    Console.WriteLine(layout.Name)
+                Next
+        
+                ' Display the list of existing layers.
+                Console.WriteLine("The drawing contains the following layer(s):")
+                For Each layer As Layer In viewInfo.Layers
+                    Console.WriteLine(layer)
+                Next
+            End If
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -255,14 +390,33 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("sample.dwg"))
+using (Viewer viewer = new Viewer("sample.dwg"))
 {
    // Convert the document to PDF.
-   var viewOptions = new PdfViewOptions("output.pdf");
+   PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
    // Render the Model and all non-empty paper space layouts. 
    viewOptions.CadOptions.RenderLayouts = true;
    viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.dwg")
+            ' Convert the document to PDF.
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
+            ' Render the Model and all non-empty paper space layouts. 
+            viewOptions.CadOptions.RenderLayouts = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -276,16 +430,37 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("sample.dwg"))
+using (Viewer viewer = new Viewer("sample.dwg"))
 {
    // Convert the document to PDF.
-   var viewOptions = new PdfViewOptions("output.pdf");
+   PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
    // Specify the name of the layout to render.
    // If the specified layout is not found,
    // an exception occurs.
    viewOptions.CadOptions.LayoutName = "Layout1";
    viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.dwg")
+            ' Convert the document to PDF.
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
+            ' Specify the name of the layout to render.
+            ' If the specified layout is not found,
+            ' an exception occurs.
+            viewOptions.CadOptions.LayoutName = "Layout1"
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -319,12 +494,14 @@ The following example renders layers with walls and furniture to PDF:
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Results;
+using System.Collections.Generic;
 // ...
 
-using (var viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("HousePlan.dwg"))
 {
     // Convert the document to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
     // Specify a list of layers to display.
     viewOptions.CadOptions.Layers = new List<Layer>
     {
@@ -334,6 +511,31 @@ using (var viewer = new Viewer("HousePlan.dwg"))
     };
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+Imports System.Collections.Generic
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+            ' Convert the document to PDF.
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
+            ' Specify a list of layers to display.
+            viewOptions.CadOptions.Layers = New List(Of Layer) From {
+                New Layer("Base"),
+                New Layer("Walls"),
+                New Layer("Furniture")
+                }
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

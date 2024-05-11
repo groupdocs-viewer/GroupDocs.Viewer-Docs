@@ -25,13 +25,37 @@ The following code snippet shows how to render the first and third pages of a do
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 using (Viewer viewer = new Viewer("sample.docx"))
 {
-    // Create an HTML file.
+    // Create view options.
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+
     // Specify the page numbers.
     viewer.View(viewOptions, 1, 3);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+    Using viewer As Viewer = New Viewer("sample.docx")
+        ' Create view options.
+        Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+    
+        ' Specify the page numbers.
+        viewer.View(viewOptions, 1, 3)
+    End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -49,16 +73,43 @@ The following code snippet shows how to render the 1st, 2nd, and 4th pages of a 
 {{< tabs "example2">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 // Create an array and specify page numbers.
- int[] pageNumbers = new int[] { 1, 2, 4 };
- 
- using (Viewer viewer = new Viewer("sample.docx"))
- {
-    // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
-    // Use array to render specific pages.
-    viewer.View(viewOptions, pageNumbers);
- }
+int[] pageNumbers = new int[] { 1, 2, 4 };
+
+using (Viewer viewer = new Viewer("sample.docx"))
+{
+   // Create view options.
+   var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+
+   // Use array to render specific pages.
+   viewer.View(viewOptions, pageNumbers);
+}
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        ' Create an array and specify page numbers.
+        Dim pageNumbers = New Integer() {1, 2, 4}
+    
+        Using viewer As Viewer = New Viewer("sample.docx")
+            ' Create view options.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+    
+            ' Use array to render specific pages.
+            viewer.View(viewOptions, pageNumbers)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

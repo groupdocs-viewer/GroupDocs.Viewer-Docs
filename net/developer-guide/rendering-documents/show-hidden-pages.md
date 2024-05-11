@@ -21,14 +21,39 @@ The following code snippet shows how to enable rendering of hidden items:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 using (Viewer viewer = new Viewer("sample.pptx"))
 {
-    // Create an HTML file.
+    // Create view options.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+
     // Enable rendering of hidden items.
     viewOptions.RenderHiddenPages = true;
-    viewer.View(viewOptions); 
+    viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.pptx")
+            ' Create view options.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+        
+            ' Enable rendering of hidden items.
+            viewOptions.RenderHiddenPages = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

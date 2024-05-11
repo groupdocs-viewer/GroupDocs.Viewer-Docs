@@ -22,15 +22,46 @@ The following code snippet shows how to get a list of attachments from the MSG f
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
+using System.Collections.Generic;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Results;
+// ...
+
 using (Viewer viewer = new Viewer("sample.msg"))
 {
     // Get list of attachments.
     IList<Attachment> attachments = viewer.GetAttachments();
+
     // Display list of attachments.
     Console.WriteLine("\nAttachments:");
-    foreach(Attachment attachment in attachments)
+    foreach (Attachment attachment in attachments)
         Console.WriteLine(attachment);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports System.Collections.Generic
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.msg")
+            ' Get list of attachments.
+            Dim attachments As IList(Of Attachment) = viewer.GetAttachments()
+        
+            ' Display list of attachments.
+            Console.WriteLine(Global.Microsoft.VisualBasic.Constants.vbLf & "Attachments:")
+            For Each attachment As Attachment In attachments
+                Console.WriteLine(attachment)
+            Next
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

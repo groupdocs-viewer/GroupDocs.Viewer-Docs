@@ -20,13 +20,37 @@ The following code snippet shows how to reorder pages:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer;
+// ...
+
 using (Viewer viewer = new Viewer("sample.docx"))            
 {     
-    // Create a PDF file.
-	PdfViewOptions viewOptions = new PdfViewOptions();
+    // Create view options.
+    PdfViewOptions viewOptions = new PdfViewOptions();
+
     // Pass page numbers in the order you want to render them.                
     viewer.View(viewOptions, 2, 1);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.docx")
+            ' Create view options.
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions()
+
+            ' Pass page numbers in the order you want to render them.                
+            viewer.View(viewOptions, 2, 1)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

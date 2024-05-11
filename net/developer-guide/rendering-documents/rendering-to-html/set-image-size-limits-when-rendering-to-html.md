@@ -34,6 +34,31 @@ public int ImageWidth { get; set; }
 public int ImageHeight { get; set; }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Class SurroundingClass
+    ''' <summary>
+    ''' Max width of an output image in pixels.
+    ''' </summary>
+    Public Property ImageMaxWidth As Integer
+
+    ''' <summary>
+    ''' Max height of an output image in pixels.
+    ''' </summary>
+    Public Property ImageMaxHeight As Integer
+
+    ''' <summary>
+    ''' The width of the output image in pixels.
+    ''' </summary>
+    Public Property ImageWidth As Integer
+
+    ''' <summary>
+    ''' The height of an output image in pixels.
+    ''' </summary>
+    Public Property ImageHeight As Integer
+End Class
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 You can set the width and/or height of the output images. Use one of the following methods: 
@@ -57,15 +82,39 @@ The following code snippet shows how to set the output image size limits:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
-using (Viewer viewer = new Viewer("sample.jpg"))
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (Viewer viewer = new Viewer("sample.jpeg"))
 {
-    // Create an HTML file.
+    // Create view options.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources();
     // Specify the maximum width and height.
     viewOptions.ImageMaxWidth = 800;
     viewOptions.ImageMaxHeight = 600;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.jpeg")
+            ' Create view options.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            ' Specify the maximum width and height.
+            viewOptions.ImageMaxWidth = 800
+            viewOptions.ImageMaxHeight = 600
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

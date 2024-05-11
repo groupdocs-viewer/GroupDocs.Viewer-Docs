@@ -26,6 +26,13 @@ The following code snippet shows how to render to HTML with embedded resources a
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using System.IO;
+using System.Collections.Generic;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Interfaces;
+// ...
+
 // Create the list to store output pages
 List<MemoryStream> pages = new List<MemoryStream>();
 
@@ -35,7 +42,7 @@ using (Viewer viewer = new Viewer("sample.docx"))
     ViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources(pageStreamFactory);
     viewer.View(viewOptions);
 }
-// 
+
 internal class MemoryPageStreamFactory : IPageStreamFactory
 {
     private readonly List<MemoryStream> _pages;
@@ -57,6 +64,49 @@ internal class MemoryPageStreamFactory : IPageStreamFactory
         //Do not release page stream as we'll need to keep the stream open
     }
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System.IO
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Interfaces
+' ...
+
+Module Program
+    Sub Main(args As String())
+        ' Create the list to store output pages
+        Dim pages As New List(Of MemoryStream)()
+
+        Using viewer As New Viewer("sample.docx")
+            Dim pageStreamFactory As New MemoryPageStreamFactory(pages)
+            Dim viewOptions As ViewOptions = HtmlViewOptions.ForEmbeddedResources(pageStreamFactory)
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+
+    Class MemoryPageStreamFactory
+        Implements IPageStreamFactory
+
+        Private ReadOnly _pages As List(Of MemoryStream)
+
+        Public Sub New(pages As List(Of MemoryStream))
+            _pages = pages
+        End Sub
+
+        Public Function CreatePageStream(pageNumber As Integer) As Stream Implements IPageStreamFactory.CreatePageStream
+            Dim pageStream As New MemoryStream()
+            _pages.Add(pageStream)
+            Return pageStream
+        End Function
+
+        Public Sub ReleasePageStream(pageNumber As Integer, pageStream As Stream) _
+            Implements IPageStreamFactory.ReleasePageStream
+            'Do not release page stream as we'll need to keep the stream open
+        End Sub
+    End Class
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

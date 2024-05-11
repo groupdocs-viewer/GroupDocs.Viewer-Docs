@@ -26,6 +26,10 @@ The following code snippet shows how to rotate output pages when rendering a doc
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 using (Viewer viewer = new Viewer("sample.docx"))
 {
     // Create a PDF file.
@@ -34,6 +38,25 @@ using (Viewer viewer = new Viewer("sample.docx"))
     viewOptions.RotatePage(1, Rotation.On90Degree);
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.docx")
+            ' Create a PDF file.
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions()
+            ' Rotate the first page.
+            viewOptions.RotatePage(1, Rotation.On90Degree)
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

@@ -51,6 +51,7 @@ In this documentation article we're going to use [Official .NET Docker image](ht
 ```cs
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
+// ...
 
 namespace DemoApp
 {
@@ -78,7 +79,7 @@ namespace DemoApp
 `formatting.docx` is sample DOCX file that we're going to use in this example. Click [here](/viewer/net/sample-files/how-to-run-groupdocs-viewer-in-docker/formatting.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{</ tabs >}}
+{{< /tabs >}}
 
 Your folder tree should look similar to the following directory structure:
 

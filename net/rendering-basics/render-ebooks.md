@@ -52,6 +52,24 @@ using (var viewer = new Viewer("abook.epub"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("abook.epub")
+            ' Create an HTML file for each document page.
+            ' {0} is replaced with the current page number in the file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -83,6 +101,25 @@ using (var viewer = new Viewer("abook.epub"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("abook.epub")
+            ' Create an HTML file for each document page.
+            ' Specify the HTML file names and location of external resources.
+            ' {0} and {1} are replaced with the current page number and resource name, respectively.
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_ {1}", "page_{0}/resource_{0}_{1}")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
@@ -109,6 +146,24 @@ using (var viewer = new Viewer("abook.epub"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("abook.epub")
+            ' Create a PDF file for the document.
+            ' Specify the PDF file name.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -131,11 +186,34 @@ using (var viewer = new Viewer("abook.epub"))
     // Create a PNG image for each document page.
     // {0} is replaced with the current page number in the image name.
     var viewOptions = new PngViewOptions("output_{0}.png");
+
     // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("abook.epub")
+            ' Create a PNG image for each document page.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -154,16 +232,39 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("abook.epub))
+using (var viewer = new Viewer("abook.epub"))
 {
     // Create a JPEG image for each document page.
     // {0} is replaced with the current page number in the image name.
     var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    
     // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("abook.epub")
+            ' Create a JPEG image for each document page.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

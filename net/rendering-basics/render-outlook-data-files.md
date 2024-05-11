@@ -51,6 +51,23 @@ using (var viewer = new Viewer("sample.pst"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pst")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -74,6 +91,23 @@ using (var viewer = new Viewer("sample.pst"))
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pst")
+            ' Create a PDF file.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -105,6 +139,27 @@ using (var viewer = new Viewer("sample.pst"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pst")
+            ' Convert the PST file to PNG.
+            ' {0} is replaced with the page numbers in the output image names.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -132,6 +187,27 @@ using (var viewer = new Viewer("sample.pst"))
     viewOptions.Height = 900;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pst")
+            ' Convert the PST file to JPEG.
+            ' {0} is replaced with the page numbers in the output image names.
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -172,6 +248,36 @@ using (var viewer = new Viewer("sample.pst"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pst")
+            ' Create an HTML file.
+            Dim viewInfoOptions = ViewInfoOptions.ForHtmlView()
+            Dim viewInfo = TryCast(viewer.GetViewInfo(viewInfoOptions), OutlookViewInfo)
+        
+            If viewInfo IsNot Nothing Then
+                ' Display information about the PST file.
+                Console.WriteLine($"File type: {viewInfo.FileType}")
+                Console.WriteLine($"The number of pages: {viewInfo.Pages.Count}")
+        
+                ' Display the list of folders that the PST file contains.
+                Console.WriteLine("The file contains the following folders:")
+                For Each folder As String In viewInfo.Folders
+                    Console.WriteLine(folder)
+                Next
+            End If
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Specify rendering options
@@ -207,6 +313,27 @@ using (var viewer = new Viewer("sample.pst"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pst")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            ' Render messages from the "Inbox" folder and its subfolders.
+            viewOptions.OutlookOptions.Folder = "Inbox"
+            ' Render messages from a specific subfolder in the "Inbox" folder.
+            ' viewOptions.OutlookOptions.Folder = "Inbox\\Work\\Urgent";
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Limit the number of folder items to render
@@ -230,6 +357,25 @@ using (var viewer = new Viewer("sample.pst"))
     viewOptions.OutlookOptions.MaxItemsInFolder = 30;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pst")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            ' Specify the maximum number of folder items.
+            viewOptions.OutlookOptions.MaxItemsInFolder = 30
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -263,6 +409,26 @@ using (var viewer = new Viewer("sample.pst"))
     viewOptions.OutlookOptions.AddressFilter = "groupdocs.com";
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pst")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            ' Set filters.
+            viewOptions.OutlookOptions.TextFilter = "Viewer"
+            viewOptions.OutlookOptions.AddressFilter = "groupdocs.com"
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

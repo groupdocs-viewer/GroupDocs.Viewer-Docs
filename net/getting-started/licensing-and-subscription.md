@@ -74,11 +74,28 @@ The following code snippet shows how to set a license from file:
 {{< tab "C#" >}}
 
 ```csharp
+using GroupDocs.Viewer;
+// ...
+
 string licensePath = "GroupDocs.Viewer.lic";
 License license = new License();
 license.SetLicense(licensePath);
 ```
 
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim licensePath As String = "GroupDocs.Viewer.lic"
+        Dim license As License = New License()
+        license.SetLicense(licensePath)
+    End Sub
+End Module
+```
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -90,6 +107,10 @@ The following code snippet shows how to set a license from a stream:
 {{< tab "C#" >}}
 
 ```csharp
+using System.IO;
+using GroupDocs.Viewer;
+// ...
+
 string licensePath = "GroupDocs.Viewer.lic";
 using (FileStream fileStream = File.OpenRead(licensePath))
 {
@@ -98,6 +119,24 @@ using (FileStream fileStream = File.OpenRead(licensePath))
 }
 ```
 
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System.IO
+Imports GroupDocs.Viewer
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim licensePath As String = "GroupDocs.Viewer.lic"
+    
+        Using fileStream As FileStream = File.OpenRead(licensePath)
+            Dim license As License = New License()
+            license.SetLicense(fileStream)
+        End Using
+    End Sub
+End Module
+```
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -110,6 +149,10 @@ The following code snippet shows how to use the metered license:
 {{< tabs "example3">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
+using GroupDocs.Viewer;
+// ...
+
 string publicKey = ""; // Your public license key
 string privateKey = ""; // Your private license key
 
@@ -123,6 +166,31 @@ Console.WriteLine("Amount (MB) consumed: " + amountConsumed);
 // Get count of credits consumed
 decimal creditsConsumed = GroupDocs.Viewer.Metered.GetConsumptionCredit();
 Console.WriteLine("Credits consumed: " + creditsConsumed);
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports GroupDocs.Viewer
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim publicKey As String = "" ' Your public license key
+        Dim privateKey As String = "" ' Your private license key
+    
+        Dim metered As Metered = New Metered()
+        metered.SetMeteredKey(publicKey, privateKey)
+    
+        ' Get amount (MB) consumed
+        Dim amountConsumed As Decimal = GroupDocs.Viewer.Metered.GetConsumptionQuantity()
+        Console.WriteLine("Amount (MB) consumed: " & amountConsumed.ToString())
+    
+        ' Get count of credits consumed
+        Dim creditsConsumed As Decimal = GroupDocs.Viewer.Metered.GetConsumptionCredit()
+        Console.WriteLine("Credits consumed: " & creditsConsumed.ToString())
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -140,8 +208,24 @@ The following code snippet shows how to use the embedded license:
 {{< tabs "example4">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+// ...
+
 License license = new License();
 license.SetLicense("GroupDocs.Viewer.lic");
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim license As License = New License()
+        license.SetLicense("GroupDocs.Viewer.lic")
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

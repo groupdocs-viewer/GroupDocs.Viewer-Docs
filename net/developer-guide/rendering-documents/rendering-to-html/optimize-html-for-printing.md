@@ -24,14 +24,39 @@ The following code snippet shows how to render a .docx document to HTML optimize
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
- using (Viewer viewer = new Viewer("sample.docx"))
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (Viewer viewer = new Viewer("sample.docx"))
 {
-    // Create an HTML file.
+    // Create view options.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+
     // Render a file optimized for printing.
     viewOptions.ForPrinting = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.docx")
+            ' Create view options.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+        
+            ' Render a file optimized for printing.
+            viewOptions.ForPrinting = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

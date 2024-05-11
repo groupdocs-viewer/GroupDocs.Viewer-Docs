@@ -16,6 +16,12 @@ The following code snippet shows how to get the page count and the width and hei
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Results;
+// ...
+
 using (Viewer viewer = new Viewer("sample.pdf"))
 {
     // Get file information.
@@ -32,6 +38,34 @@ using (Viewer viewer = new Viewer("sample.pdf"))
         Console.WriteLine($"Page: {page.Number}; Height: {page.Height}, pixels");
     }
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.pdf")
+            ' Get file information.
+            Dim viewInfoOptions As ViewInfoOptions = ViewInfoOptions.ForPdfView()
+            Dim viewInfo As ViewInfo = viewer.GetViewInfo(viewInfoOptions)
+        
+            ' Display page count.
+            Console.WriteLine("Pages count: " & viewInfo.Pages.Count.ToString())
+        
+            ' Display width and height of each page.
+            For Each page As Page In viewInfo.Pages
+                Console.WriteLine($"Page: {page.Number}; Width: {page.Width}, pixels")
+                Console.WriteLine($"Page: {page.Number}; Height: {page.Height}, pixels")
+            Next
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

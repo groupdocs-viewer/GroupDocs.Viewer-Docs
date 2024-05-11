@@ -56,6 +56,35 @@ foreach (PageHtml page in pages)
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+'Get Configurations
+Dim config As ViewerConfig = Utilities.GetConfigurations()
+
+' Create html handler
+Dim htmlHandler As ViewerHtmlHandler = New ViewerHtmlHandler(config)
+
+' Guid implies that unique document name 
+Dim guid As String = "sample.docx"
+
+'Instantiate the HtmlOptions object
+Dim options As HtmlOptions = New HtmlOptions()
+
+'to get html representations of pages with embedded resources
+options.IsResourcesEmbedded = True
+
+' Set password if document is password protected. 
+If Not [String].IsNullOrEmpty(DocumentPassword) Then options.Password = DocumentPassword
+
+'Get document pages in html form
+Dim pages As List(Of PageHtml) = htmlHandler.GetPages(guid, options)
+
+For Each page As PageHtml In pages
+    'Save each page at disk
+    Utilities.SaveAsHtml(page.PageNumber.ToString() & "_" + DocumentName, page.HtmlContent)
+Next
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following code snippet shows the new coding style:
@@ -63,11 +92,30 @@ The following code snippet shows the new coding style:
 {{< tabs "example2">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 using (Viewer viewer = new Viewer("sample.docx"))
 {
    HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources();
    viewer.View(options);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.docx")
+            Dim options As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            viewer.View(options)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

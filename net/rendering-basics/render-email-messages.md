@@ -56,6 +56,23 @@ using (var viewer = new Viewer("sample.eml"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.eml")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -86,6 +103,24 @@ using (var viewer = new Viewer("sample.eml"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.eml")
+            ' Specify the HTML file name and location of external resources.
+            ' {0} is replaced with the resource name in the output file name.
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("output.html",   "output/resource_{0}", "output/resource_{0}")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The result is shown below. External resources are placed in a separate folder.
@@ -109,6 +144,23 @@ using (var viewer = new Viewer("sample.eml"))
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.eml")
+            ' Create a PDF file.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -139,6 +191,26 @@ using (var viewer = new Viewer("sample.eml"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.eml")
+            ' Create a PNG image.
+            Dim viewOptions = New PngViewOptions("output.png")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 1000
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -165,6 +237,26 @@ using (var viewer = new Viewer("sample.eml"))
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.eml")
+            ' Create a JPG image.
+            Dim viewOptions = New JpgViewOptions("output.jpg")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 1000
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -201,6 +293,25 @@ using (var viewer = new Viewer("sample.eml"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.eml")
+            ' Create a PDF file.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Specify the page size.
+            viewOptions.EmailOptions.PageSize = PageSize.Letter
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Rename fields in the message header
@@ -231,6 +342,28 @@ using (var viewer = new Viewer("sample.eml"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.eml")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            ' Specify custom field labels.
+            viewOptions.EmailOptions.FieldTextMap(Field.From) = "Sender"
+            viewOptions.EmailOptions.FieldTextMap(Field.[To]) = "Recipient"
+            viewOptions.EmailOptions.FieldTextMap(Field.Sent) = "Date"
+            viewOptions.EmailOptions.FieldTextMap(Field.Subject) = "Email subject"
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image illustrates the result:
@@ -249,6 +382,7 @@ When rendering email messages, GroupDocs.Viewer formats date and time informatio
 {{< tabs "example8">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -263,6 +397,28 @@ using (var viewer = new Viewer("sample.eml"))
     viewOptions.EmailOptions.TimeZoneOffset = new TimeSpan(-7, 0, 0);
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.eml")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            ' Apply a custom format to the date in the email message header.
+            viewOptions.EmailOptions.DateTimeFormat = "MMMM dd, yyyy H:mm:ss zzz"
+            ' Specify the time zone offset. 
+            viewOptions.EmailOptions.TimeZoneOffset = New TimeSpan(-7, 0, 0)
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

@@ -21,17 +21,46 @@ The following code snippet shows how to get and save all attachments from the MS
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using System.IO;
+using System.Collections.Generic;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Results;
+// ...
+
 using (Viewer viewer = new Viewer("with_attachments.msg"))
 {
     // Get list of attachments.
     IList<Attachment> attachments = viewer.GetAttachments();
     // Save each attachments.
-    foreach(Attachment attachment in attachments)
+    foreach (Attachment attachment in attachments)
     {
-        string filePath = Path.Combine(@"C:\output", attachment.FileName);  
-        viewer.SaveAttachment(attachment, File.OpenWrite(filePath)); 
+        string filePath = Path.Combine("output", attachment.FileName);
+        viewer.SaveAttachment(attachment, File.OpenWrite(filePath));
     }
-}          
+}      
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System.IO
+Imports System.Collections.Generic
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("with_attachments.msg")
+            ' Get list of attachments.
+            Dim attachments As IList(Of Attachment) = viewer.GetAttachments()
+            ' Save each attachments.
+            For Each attachment As Attachment In attachments
+                Dim filePath As String = Path.Combine("output", attachment.FileName)
+                viewer.SaveAttachment(attachment, File.OpenWrite(filePath))
+            Next
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

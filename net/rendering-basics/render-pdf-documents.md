@@ -53,6 +53,24 @@ using (var viewer = new Viewer("resume.pdf"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.pdf")
+            ' Create an HTML file for each PDF page.
+            ' {0} is replaced with the current page number in the file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -82,6 +100,25 @@ using (var viewer = new Viewer("resume.pdf"))
     var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.pdf")
+            ' Create an HTML file for each PDF page.
+            ' Specify the HTML file names and location of external resources.
+            ' {0} and {1} are replaced with the current page number and resource name, respectively.
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -118,6 +155,26 @@ using (var viewer = new Viewer("Letter.pdf"))
     viewOptions.PdfOptions.FixedLayout = false;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Letter.pdf")
+            ' Create an HTML file for each PDF page.
+            ' {0} is replaced with the current page number in the file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            ' Disable fixed layout.
+            viewOptions.PdfOptions.FixedLayout = False
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -160,6 +217,26 @@ using (var viewer = new Viewer("resume.pdf"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.pdf")
+            ' Create an HTML file for each document page.
+            ' {0} is replaced with the current page number in the file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            ' Set image quality to medium.
+            viewOptions.PdfOptions.ImageQuality = ImageQuality.Medium
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Render text as an image
@@ -184,6 +261,26 @@ using (var viewer = new Viewer("resume.pdf"))
     viewOptions.PdfOptions.RenderTextAsImage = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.pdf")
+            ' Create an HTML file for each document page.
+            ' {0} is replaced with the current page number in the file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("text-as-image_{0}.html")
+            ' Enable rendering text as image.
+            viewOptions.PdfOptions.RenderTextAsImage = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -216,6 +313,26 @@ using (var viewer = new Viewer("sample.pdf"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pdf")
+            ' Create an HTML file for each document page.
+            ' {0} is replaced with the current page number in the file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            ' Enable the multi-layer rendering.
+            viewOptions.PdfOptions.EnableLayeredRendering = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render PDF files as images
@@ -241,6 +358,27 @@ using (var viewer = new Viewer("resume.pdf"))
     viewOptions.Height = 900;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.pdf")
+            ' Create a PNG image for each PDF page.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -272,6 +410,27 @@ using (var viewer = new Viewer("resume.pdf"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.pdf")
+            ' Create a JPEG image for each PDF page.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Preserve the size of document pages
@@ -296,6 +455,26 @@ using (var viewer = new Viewer("resume.pdf"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.pdf")
+            ' Create a PNG image for each PDF page.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            ' Preserve the size of document pages.
+            viewOptions.PdfOptions.RenderOriginalPageSize = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Enable font hinting
@@ -318,6 +497,26 @@ using (var viewer = new Viewer("resume.pdf"))
     viewOptions.PdfOptions.EnableFontHinting = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.pdf")
+            ' Create a PNG image for each PDF page.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            'Enable font hinting
+            viewOptions.PdfOptions.EnableFontHinting = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -346,6 +545,26 @@ using (var viewer = new Viewer("sample.pdf"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.pdf")
+            ' Create an HTML file for each document page.
+            ' {0} is replaced with the current page number in the file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            ' Disable character grouping
+            viewOptions.PdfOptions.DisableCharsGrouping = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render text comments
@@ -370,6 +589,26 @@ using (var viewer = new Viewer("resume_commented.pdf"))
     viewOptions.RenderComments = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume_commented.pdf")
+            ' Create a PNG image for each PDF page.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            ' Enable comments rendering.
+            viewOptions.RenderComments = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -415,6 +654,36 @@ using (var viewer = new Viewer("resume.pdf"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.pdf")
+            Dim viewInfoOptions = ViewInfoOptions.ForHtmlView()
+            Dim viewInfo = TryCast(viewer.GetViewInfo(viewInfoOptions), PdfViewInfo)
+        
+            ' Display information about the PDF document.
+            Console.WriteLine($"File type: {viewInfo.FileType}")
+            Console.WriteLine($"The number of pages: {viewInfo.Pages.Count}")
+            Console.WriteLine($"Is printing allowed: {viewInfo.PrintingAllowed}")
+        
+            ' Display information about all document pages.
+            Console.WriteLine("Page information:")
+            For Each page As Page In viewInfo.Pages
+                ' The Page.ToString method is overriden to display the following page information: 
+                ' "Page {Number} ({visibility}) {Width}x{Height}px with {Lines.Count} line(s)."
+                Console.WriteLine(page)
+            Next
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image shows a sample console output:
@@ -449,6 +718,32 @@ using (var viewer = new Viewer("resume.pdf"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.pdf")
+            Dim viewInfoOptions = ViewInfoOptions.ForHtmlView()
+            viewInfoOptions.ExtractText = True
+            Dim viewInfo = TryCast(viewer.GetViewInfo(viewInfoOptions), PdfViewInfo)
+        
+            ' Retrieve text from the PDF file.
+            Console.WriteLine("Extracted document text:")
+            For Each page As Page In viewInfo.Pages
+                For Each line As Line In page.Lines
+                    Console.WriteLine(line.Value)
+                Next
+            Next
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ![Extract and display PDF text](/viewer/net/images/rendering-basics/render-pdf-documents/extract-pdf-text.png)
@@ -460,12 +755,33 @@ If an XPS or OXPS file contains a font that cannot be embedded due to licensing 
 {{< tabs "example15">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 using (Viewer viewer = new Viewer("resume.oxps"))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
-    options.PdfOptions.DisableFontLicenseVerifications = true;
+    viewOptions.PdfOptions.DisableFontLicenseVerifications = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("resume.oxps")
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            viewOptions.PdfOptions.DisableFontLicenseVerifications = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -481,6 +797,10 @@ This option is available when rendering PDF and Page Layout file formats to HTML
 {{< tabs "example16">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 using (Viewer viewer = new Viewer("resume.pdf"))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
@@ -488,6 +808,24 @@ using (Viewer viewer = new Viewer("resume.pdf"))
 
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("resume.pdf")
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            viewOptions.PdfOptions.WrapImagesInSvg = True
+        
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -513,6 +851,10 @@ This option is supported when rendering PDF files to HTML with embedded or exter
 {{< tabs "example17">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 using (Viewer viewer = new Viewer("protected-resume.pdf"))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
@@ -520,6 +862,24 @@ using (Viewer viewer = new Viewer("protected-resume.pdf"))
 
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("protected-resume.pdf")
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            viewOptions.PdfOptions.DisableCopyProtection = True
+        
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

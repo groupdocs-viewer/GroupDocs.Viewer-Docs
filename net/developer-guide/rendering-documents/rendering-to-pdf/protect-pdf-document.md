@@ -29,19 +29,51 @@ The following code snippet shows how to protect the output PDF document:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
-using (Viewer viewer = new Viewer("sample.docx"))
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer;
+// ...
+
+using(Viewer viewer = new Viewer("sample.docx"))
 {
     // Specify the security settings.
     Security security = new Security();
     security.DocumentOpenPassword = "o123";
     security.PermissionsPassword = "p123";
     security.Permissions = Permissions.AllowAll ^ Permissions.DenyPrinting;
+
     // Create a PDF file.
     PdfViewOptions viewOptions = new PdfViewOptions();
+    
     // Apply the security settings
-    viewOptions.Security = security;                    
+    viewOptions.Security = security;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.docx")
+            ' Specify the security settings.
+            Dim security As Security = New Security()
+            security.DocumentOpenPassword = "o123"
+            security.PermissionsPassword = "p123"
+            security.Permissions = Permissions.AllowAll Xor Permissions.DenyPrinting
+
+            ' Create a PDF file.
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions()
+
+            ' Apply the security settings
+            viewOptions.Security = security
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
