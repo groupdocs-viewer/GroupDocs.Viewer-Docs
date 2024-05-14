@@ -52,8 +52,11 @@ Download a [sample application](/viewer/java/sample-apps/developer-guide/retriev
 
 {{< /alert >}}
 
-The following image shows a sample console output:
+The following shows a sample console output:
 
-![](/viewer/java/images/how-to-check-if-file-is-encrypted.png)
-
+```bash
+$ mvn exec:java -q
+File type is: Portable Document Format File (.pdf)
+File encrypted: true
+```
 To learn how to open an encrypted file, please refer to [Load password-protected document]({{< ref "/viewer/java/developer-guide/loading-documents/load-password-protected-document.md" >}}) documentation topic.
