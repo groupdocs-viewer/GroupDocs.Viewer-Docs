@@ -6,7 +6,7 @@ linkTitle: Render text documents
 weight: 10
 description: "This topic describes how to use the GroupDocs.Viewer Python API to convert text files to HTML, PDF, PNG, and JPEG formats."
 keywords: text file conversion, txt to pdf, txt to html, txt to png, txt to jpeg
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 aliases:
@@ -18,7 +18,7 @@ aliases:
 
 To start with the GroupDocs.Viewer API, create a [Viewer](#) class instance. Pass a text document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.view](#) method overloads to convert the image to HTML, PDF, PNG, or JPEG format. These methods allow you to render the entire document or specific pages.
 
-{{< button style="primary" link="https://products.groupdocs.app/viewer/total" >}} {{< icon "gdoc_person" >}} View text files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.Net" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
+{{< button style="primary" link="https://products.groupdocs.app/viewer/total" >}} {{< icon "gdoc_person" >}} View text files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
 ## Supported text file formats
 

@@ -6,7 +6,7 @@ linkTitle: Render images
 weight: 11
 description: "This topic describes how to use the GroupDocs.Viewer Python API to convert images to HTML, PDF, PNG, and JPEG formats."
 keywords: image viewer, image conversion, image to pdf, image to html, image to png, image to jpeg
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 aliases:
@@ -20,7 +20,7 @@ aliases:
     - /viewer/python-net/how-to-convert-and-view-psd-with-custom-fonts
     - /viewer/python-net/how-to-convert-and-view-ai-files
 ---
-[GroupDocs.Viewer for Python via .Net](https://products.groupdocs.com/viewer/python-net) allows you to load images in various formats and convert them to HTML, PDF, PNG, and JPEG. Incorporate this library into your Python application (web or desktop) to build your own image viewer.
+[GroupDocs.Viewer for Python via .NET](https://products.groupdocs.com/viewer/python-net) allows you to load images in various formats and convert them to HTML, PDF, PNG, and JPEG. Incorporate this library into your Python application (web or desktop) to build your own image viewer.
 
 To start with the GroupDocs.Viewer API, create a [Viewer](#) class instance. Pass an image you want to view to the class constructor. You can load the image from a file or stream. Call one of the [Viewer.view](#) method overloads to convert the image to HTML, PDF, PNG, or JPEG format. For multipage images (such as TIFF, CDR, DICOM, WebP, and so on), you can specify the pages to render.
 

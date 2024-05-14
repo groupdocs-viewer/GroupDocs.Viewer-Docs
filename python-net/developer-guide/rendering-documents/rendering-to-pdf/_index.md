@@ -3,9 +3,9 @@ id: rendering-to-pdf
 url: viewer/python-net/rendering-to-pdf
 title: Render to PDF
 weight: 13
-description: "Rendering files to PDF with GroupDocs.Viewer for Python via .Net. It means that you can embed PDF in websites or applications by using this .Net API"
+description: "Rendering files to PDF with GroupDocs.Viewer for Python via .NET. It means that you can embed PDF in websites or applications by using this .NET API"
 keywords: embed pdf in website, rendering to pdf, python api, rendering pdf
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---  
 When rendering to PDF, GroupDocs.Viewer renders all pages of the source document as a single PDF document.

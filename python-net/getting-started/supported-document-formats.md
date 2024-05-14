@@ -5,7 +5,7 @@ title: Supported file formats
 weight: 2
 keywords: file formats, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, PDF, HTML, Python Script, TAR, ZIP, DWG
 description: "This topic lists file formats supported by GroupDocs.Viewer for Python."
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 ---

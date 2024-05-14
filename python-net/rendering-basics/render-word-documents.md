@@ -6,7 +6,7 @@ linkTitle: Render Word documents
 weight: 1
 description: "This topic describes how to use the GroupDocs.Viewer and Python to convert Word documents to HTML, PDF, PNG, and JPEG formats."
 keywords: convert word to pdf, convert word to jpeg, convert doc to pdf, convert docx to pdf, convert word to jpg, convert word to jpeg
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 aliases:
@@ -17,7 +17,7 @@ aliases:
 
 To start using the GroupDocs.Viewer API, create a [Viewer](#) class instance. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.view](#) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
 
-{{< button style="primary" link="https://products.groupdocs.app/viewer/word" >}} {{< icon "gdoc_person" >}} View Word files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.Net" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
+{{< button style="primary" link="https://products.groupdocs.app/viewer/word" >}} {{< icon "gdoc_person" >}} View Word files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
 ## Supported Word Processing file formats
 

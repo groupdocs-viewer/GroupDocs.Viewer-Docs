@@ -6,7 +6,7 @@ linkTitle: Product overview
 weight: 1
 description: "GroupDocs.Viewer for Python enables you to convert files to HTML, PNG, JPEG, PDF file formats, and save attachments without relying on third-party applications. GroupDocs.Viewer for Python is cross-platform class library."
 keywords: convert files, render files, view files, HTML, PDF, PNG, JPEG
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 toc: True
 ---
 GroupDocs.Viewer for Python is a high-performance and cross-platform library that allows you to build desktop and web [file viewer applications](https://en.wikipedia.org/wiki/File_viewer).
@@ -31,7 +31,7 @@ With its powerful and straightforward API, you can execute the following actions
 You can use GroupDocs.Viewer across multiple platforms and operation systems:
 
 * Windows, Linux, and macOS
-* .Net 6.0.0 and higher
+* .NET 6.0.0 and higher
 
 ## Get started with GroupDocs.Viewer for Python
 

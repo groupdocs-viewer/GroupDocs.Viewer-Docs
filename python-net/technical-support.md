@@ -3,7 +3,7 @@ id: technical-support
 url: /viewer/python-net/technical-support
 title: Technical Support
 description: "GroupDocs.Viewer for Python provides free technical support available to all users. Please report your question, issue, or feature request using GroupDocs Free Support Forum."
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 weight: 7
 toc: True
 ---

@@ -5,7 +5,7 @@ title: Cache results
 weight: 5
 keywords: caching,caching results,groupdocs.viewer
 description: "This article contains caching use-cases with GroupDocs.Viewer within your Python applications."
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---
 Caching saves rendering results to a specified location, such as a local disk. When you re-request the rendering results, GroupDocs.Viewer does not render again, but uses the cached results.

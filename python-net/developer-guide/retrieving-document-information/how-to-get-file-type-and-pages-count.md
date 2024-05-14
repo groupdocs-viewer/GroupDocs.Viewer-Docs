@@ -3,9 +3,9 @@ id: how-to-get-file-type-and-pages-count
 url: viewer/python-net/how-to-get-file-type-and-pages-count
 title: Get the format family and the additional information
 weight: 2
-description: "This article explains how to get the format family and the additional information using .Net with GroupDocs.Viewer for Python."
+description: "This article explains how to get the format family and the additional information using .NET with GroupDocs.Viewer for Python."
 keywords: 
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---
 A format family is a group of several file types for which an application provides additional information. For example, archive files (.7z, .rar, .zip, etc.) or Outlook files (.ost, .pst) are format families.

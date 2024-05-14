@@ -6,7 +6,7 @@ linkTitle: Render web documents
 weight: 9
 description: "This topic describes how to use the GroupDocs.Viewer Python API to convert web documents to PDF, PNG, and JPEG formats."
 keywords: convert html, html to pdf, html to jpeg, html to png, html to image
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 aliases:
@@ -18,7 +18,7 @@ aliases:
 
 To start using the GroupDocs.Viewer API, create a [Viewer](#) class instance. Pass a web document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.view](#) method overloads to convert the document to PDF or image format. These methods allow you to render the entire document or specific pages.
 
-{{< button style="primary" link="https://products.groupdocs.app/viewer/web" >}} {{< icon "gdoc_person" >}} View web files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.Net" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
+{{< button style="primary" link="https://products.groupdocs.app/viewer/web" >}} {{< icon "gdoc_person" >}} View web files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
 ## Supported web file formats
 

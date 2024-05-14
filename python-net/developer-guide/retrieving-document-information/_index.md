@@ -4,7 +4,7 @@ url: viewer/python-net/retrieving-document-information
 title: Retrieve the document information
 weight: 2
 description: "Retrieving information about a document with GroupDocs.Viewer for Python"
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---
 Once a document is loaded, you can retrieve its properties. For example, you can retrieve the format family and the page count to select a rendering strategy. Also, you can display information about the document during rendering or with the rendered document.
