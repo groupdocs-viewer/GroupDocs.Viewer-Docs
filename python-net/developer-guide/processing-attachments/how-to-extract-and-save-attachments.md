@@ -5,7 +5,7 @@ title: Save attachments
 weight: 2
 description: "Save attachments and embedded files from PDF, Outlook data file or email"
 keywords: Save attachments, embedded files from PDF, Outlook data file
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---
 To get and save attachments, follow these steps:

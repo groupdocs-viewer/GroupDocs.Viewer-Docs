@@ -4,7 +4,7 @@ url: viewer/python-net/rendering-documents
 title: Render documents
 weight: 3
 description: "Rendering documents with GroupDocs.Viewer for Python in your Python applications."
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---
 In GroupDocs.Viewer, rendering is the process of converting a document into one or more files suitable to display. The resulting files can be in one of the following formats:

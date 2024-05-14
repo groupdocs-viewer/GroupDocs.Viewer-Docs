@@ -5,7 +5,7 @@ title: Add text watermarks
 weight: 9
 description: "This article explains how to add text watermark when rendering documents with GroupDocs.Viewer within your Python applications."
 keywords: add text watermark, rendering documents
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---
 To add a watermark to the HTML/JPG/PNG/PDF output, follow these steps:

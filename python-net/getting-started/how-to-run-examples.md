@@ -5,19 +5,19 @@ title: How to run examples
 weight: 6
 description: "How to run examples."
 keywords: "groupdocs viewer python, examples, npm, eclipse ide"
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 ---
 
-The complete project [GroupDocs.Viewer Examples](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.Net) with code examples and sample files is hosted at GitHub.
+The complete project [GroupDocs.Viewer Examples](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET) with code examples and sample files is hosted at GitHub.
 
 ## Run examples using PyPI
 
 To get started make sure that [Python](https://www.python.org/) is installed.
 
-1. Clone repository with examples `git clone https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.Net.git`
-2. Navigate to the examples folder `cd ./GroupDocs.Viewer-for-Python-via-.Net/`
+1. Clone repository with examples `git clone https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET.git`
+2. Navigate to the examples folder `cd ./GroupDocs.Viewer-for-Python-via-.NET/`
 3. Install the necessary packages with the `pip install groupdocs.viewer` command.
 4. Navigate to the examples folder `cd ./Examples`
 5. Run the examples with the `python runExamples.py` command.

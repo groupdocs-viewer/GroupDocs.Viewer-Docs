@@ -1,12 +1,12 @@
 ---
 id: home
 url: viewer/python-net
-title: GroupDocs.Viewer for Python via .Net
+title: GroupDocs.Viewer for Python via .NET
 linkTitle: GroupDocs.Viewer for Python
 weight: 1
 description: "GroupDocs.Viewer for Python allows you to render documents in various formats as HTML, PDF, JPEG, and PNG files. You do not need to use third-party software to view files within your Python application."
 keywords: render files, view files, HTML, PDF, JPEG, PNG
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: True
 fullWidth: True
 AddLibInfoScript: True
@@ -70,7 +70,7 @@ GroupDocs.Viewer ships with a wide range of options that allow you to control th
 
 <p>API REFERENCE</p>
 <ul>
-    <li><a href="https://reference.groupdocs.com/viewer/python-net/">GroupDocs.Viewer for Python via .Net API Reference</a></li>
+    <li><a href="https://reference.groupdocs.com/viewer/python-net/">GroupDocs.Viewer for Python via .NET API Reference</a></li>
 </ul>
 
 <--->
@@ -85,7 +85,7 @@ GroupDocs.Viewer ships with a wide range of options that allow you to control th
 
 <p>VERSION HISTORY</p>
 <ul>
-    <li><a href='https://releases.groupdocs.com/viewer/python-net/release-notes/'>GroupDocs.Viewer for Python via .Net Release Notes</a></li>
+    <li><a href='https://releases.groupdocs.com/viewer/python-net/release-notes/'>GroupDocs.Viewer for Python via .NET Release Notes</a></li>
 </ul>
 
 <p>TECHNICAL SUPPORT</p>

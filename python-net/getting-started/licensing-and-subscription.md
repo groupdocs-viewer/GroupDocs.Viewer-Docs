@@ -5,7 +5,7 @@ title: Licensing and evaluation
 weight: 5
 keywords: free, free trial, evaluation, groupdocs viewer python
 description: "GroupDocs.Viewer for Python provides different plans for purchase or offers a Free Trial and a 30-day Temporary License for evaluation."
-productName: GroupDocs.Viewer for Python via .Net
+productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 aliases:

@@ -171,7 +171,7 @@ Excellent file viewer component that empowers your C#, ASP.NET, and other .NET a
     <a id="viewer_python-net"></a>
         <div class="gdoc-platform__header">
             <svg class="gdoc-platform__header-icon"><use xlink:href="/img/groupdocs-stack.svg#python"></use></svg>
-            <a class="gdoc-platform__header-title"  href='/viewer/python-net/'>GroupDocs.Viewer for Python via .Net</a>
+            <a class="gdoc-platform__header-title"  href='/viewer/python-net/'>GroupDocs.Viewer for Python via .NET</a>
             <a class="gdoc-platform__header-btn"  href='/viewer/python-net/'>More</a>
         </div>
         <div class="gdoc-platform__cols">
@@ -201,10 +201,10 @@ Excellent file viewer component that empowers your C#, ASP.NET, and other .NET a
             <div class="gdoc-platform__col">
                     <div class="gdoc-platform__col-title">
                     <svg class="gdoc-platform__col-icon"><use xlink:href="/img/groupdocs-stack.svg#git-big"></use></svg>
-                    <div>Python via .Net Code Examples</div></div>
+                    <div>Python via .NET Code Examples</div></div>
                     <div class="gdoc-platform__col-descr">Open-source projects for APIs example usage</div>
                     <ul class="gdoc-platform__col-links gdoc-platform__col-links--alt">
-                    <li> <a href='https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.Net'>GroupDocs.Viewer for Python via .Net</a></li>
+                    <li> <a href='https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET'>GroupDocs.Viewer for Python via .NET</a></li>
                     </ul>
             </div>
         </div>
