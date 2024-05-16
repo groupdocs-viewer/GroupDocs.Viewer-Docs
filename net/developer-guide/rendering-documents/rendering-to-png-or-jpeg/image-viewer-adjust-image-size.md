@@ -18,16 +18,43 @@ The following code snippet shows how to set the image width or height.
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 using (Viewer viewer = new Viewer("sample.docx"))
 {
     // Create a JPG file.
     JpgViewOptions viewOptions = new JpgViewOptions();
+    
     // Specify the width and height.
     viewOptions.Width = 600;
     viewOptions.Height = 800;
     
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.docx")
+            ' Create a JPG file.
+            Dim viewOptions As JpgViewOptions = New JpgViewOptions()
+        
+            ' Specify the width and height.
+            viewOptions.Width = 600
+            viewOptions.Height = 800
+        
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

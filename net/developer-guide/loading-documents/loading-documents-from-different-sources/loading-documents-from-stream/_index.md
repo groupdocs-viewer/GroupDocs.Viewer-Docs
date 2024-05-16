@@ -19,8 +19,12 @@ The following code snippet shows how to load a document from a stream:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
-// Implement a method that returns a stream with document data.
-Stream stream = GetStream("sample.docx");
+using System.IO;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+Stream stream = GetStream("sample.docx"); // TODO: implement this method
 
 // Render a document from the stream.
 using (Viewer viewer = new Viewer(stream))
@@ -28,6 +32,26 @@ using (Viewer viewer = new Viewer(stream))
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System.IO
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim stream As Stream = GetStream("sample.docx") ' TODO: implement this method
+    
+        ' Render a document from the stream.
+        Using viewer As Viewer = New Viewer(stream)
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

@@ -20,13 +20,39 @@ The following code snippet shows how to list supported file formats in the conso
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
+using System.Collections.Generic;
+using GroupDocs.Viewer;
+// ...
+
 // Get list of file types.
 IEnumerable<FileType> supportedFileTypes = FileType.GetSupportedFileTypes();
+
 // Display list of file types
 foreach (FileType fileType in supportedFileTypes)
 {
     Console.WriteLine(fileType);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports System.Collections.Generic
+Imports GroupDocs.Viewer
+' ...
+
+Module Program
+    Sub Main(args As String())
+        ' Get list of file types.
+        Dim supportedFileTypes As IEnumerable(Of FileType) = FileType.GetSupportedFileTypes()
+    
+        ' Display list of file types
+        For Each fileType As FileType In supportedFileTypes
+            Console.WriteLine(fileType)
+        Next
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

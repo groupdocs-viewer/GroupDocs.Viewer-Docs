@@ -25,6 +25,10 @@ The following code snippet shows how to deny loading of external resources:
 {{< tabs "example3">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.SkipExternalResources = true; // Skip loading of external resources
 
@@ -35,6 +39,26 @@ using (Viewer viewer = new Viewer("business-flyer.docx", loadOptions))
 
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim loadOptions As LoadOptions = New LoadOptions()
+        loadOptions.SkipExternalResources = True ' Skip loading of external resources
+    
+        Using viewer As Viewer = New Viewer("business-flyer.docx", loadOptions)
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+    
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -52,6 +76,10 @@ The following code snippet shows how to allow loading of external resources from
 {{< tabs "example2">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.SkipExternalResources = true; // Skip loading of all external resources
 loadOptions.WhitelistedResources.Add("avatars.githubusercontent.com"); //Enable loading of external resources that has `avatars.githubusercontent.com` fragment in resource URL. 
@@ -65,6 +93,27 @@ using (Viewer viewer = new Viewer("business-flyer.docx", loadOptions))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim loadOptions As LoadOptions = New LoadOptions()
+        loadOptions.SkipExternalResources = True ' Skip loading of all external resources
+        loadOptions.WhitelistedResources.Add("avatars.githubusercontent.com") 'Enable loading of external resources that has `avatars.githubusercontent.com` fragment in resource URL. 
+    
+        Using viewer As Viewer = New Viewer("business-flyer.docx", loadOptions)
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+    
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Set timeout for loading of external resources
@@ -76,6 +125,11 @@ The following code snippet shows how to set a timeout to load external resources
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 // Specify a timeout.
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.ResourceLoadingTimeout = TimeSpan.FromSeconds(5);
@@ -85,6 +139,27 @@ using (Viewer viewer = new Viewer("sample.docx", loadOptions))
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        ' Specify a timeout.
+        Dim loadOptions As LoadOptions = New LoadOptions()
+        loadOptions.ResourceLoadingTimeout = TimeSpan.FromSeconds(5)
+        ' Render a file.
+        Using viewer As Viewer = New Viewer("sample.docx", loadOptions)
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

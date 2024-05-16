@@ -23,14 +23,41 @@ The following code snippet shows how to adjust JPG image quality in the output P
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 using (Viewer viewer = new Viewer("sample.docx"))
 {
-    // Create a PDF file.
+    // Create view options.
     PdfViewOptions viewOptions = new PdfViewOptions();
+
     // Specify the JPG image quality.
-    viewOptions.JpgQuality = 50;
+    viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions();
+    viewOptions.PdfOptimizationOptions.ImageQuality = 50;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.docx")
+            ' Create view options.
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions()
+
+            ' Specify the JPG image quality.
+            viewOptions.PdfOptimizationOptions = New PdfOptimizationOptions()
+            viewOptions.PdfOptimizationOptions.ImageQuality = 50
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

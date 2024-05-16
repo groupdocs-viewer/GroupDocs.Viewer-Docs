@@ -19,6 +19,23 @@ Note that there are a number of general policies and practices that guide you on
 
 {{< /alert >}}
 
+## How to Evaluate GroupDocs.Viewer
+
+You can also try GroupDocs.Viewer without buying a license.
+
+### Free Trial
+
+The evaluation version is identical to the purchased one; it becomes licensed once you set the license. You can set the license using methods described in the following sections of this article.
+
+The evaluation version has the following limitations:
+
+- Rendering is limited to the first 2 pages.
+- Trial badges are added to the top of a rendered page.
+
+### Temporary License
+
+If you want to test GroupDocs.Viewer without the limitations of the trial version,   request a 30-day Temporary License. For details, see the [Get a Temporary License](https://purchase.groupdocs.com/temporary-license) page.
+
 ## Purchased License
 
 After buying, apply the license file or include it as an embedded resource. 
@@ -57,11 +74,28 @@ The following code snippet shows how to set a license from file:
 {{< tab "C#" >}}
 
 ```csharp
+using GroupDocs.Viewer;
+// ...
+
 string licensePath = "GroupDocs.Viewer.lic";
 License license = new License();
 license.SetLicense(licensePath);
 ```
 
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim licensePath As String = "GroupDocs.Viewer.lic"
+        Dim license As License = New License()
+        license.SetLicense(licensePath)
+    End Sub
+End Module
+```
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -73,6 +107,10 @@ The following code snippet shows how to set a license from a stream:
 {{< tab "C#" >}}
 
 ```csharp
+using System.IO;
+using GroupDocs.Viewer;
+// ...
+
 string licensePath = "GroupDocs.Viewer.lic";
 using (FileStream fileStream = File.OpenRead(licensePath))
 {
@@ -81,6 +119,24 @@ using (FileStream fileStream = File.OpenRead(licensePath))
 }
 ```
 
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System.IO
+Imports GroupDocs.Viewer
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim licensePath As String = "GroupDocs.Viewer.lic"
+    
+        Using fileStream As FileStream = File.OpenRead(licensePath)
+            Dim license As License = New License()
+            license.SetLicense(fileStream)
+        End Using
+    End Sub
+End Module
+```
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -93,6 +149,10 @@ The following code snippet shows how to use the metered license:
 {{< tabs "example3">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
+using GroupDocs.Viewer;
+// ...
+
 string publicKey = ""; // Your public license key
 string privateKey = ""; // Your private license key
 
@@ -106,6 +166,31 @@ Console.WriteLine("Amount (MB) consumed: " + amountConsumed);
 // Get count of credits consumed
 decimal creditsConsumed = GroupDocs.Viewer.Metered.GetConsumptionCredit();
 Console.WriteLine("Credits consumed: " + creditsConsumed);
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports GroupDocs.Viewer
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim publicKey As String = "" ' Your public license key
+        Dim privateKey As String = "" ' Your private license key
+    
+        Dim metered As Metered = New Metered()
+        metered.SetMeteredKey(publicKey, privateKey)
+    
+        ' Get amount (MB) consumed
+        Dim amountConsumed As Decimal = GroupDocs.Viewer.Metered.GetConsumptionQuantity()
+        Console.WriteLine("Amount (MB) consumed: " & amountConsumed.ToString())
+    
+        ' Get count of credits consumed
+        Dim creditsConsumed As Decimal = GroupDocs.Viewer.Metered.GetConsumptionCredit()
+        Console.WriteLine("Credits consumed: " & creditsConsumed.ToString())
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -123,8 +208,24 @@ The following code snippet shows how to use the embedded license:
 {{< tabs "example4">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+// ...
+
 License license = new License();
 license.SetLicense("GroupDocs.Viewer.lic");
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim license As License = New License()
+        license.SetLicense("GroupDocs.Viewer.lic")
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -140,21 +241,4 @@ When you buy and download a license from the GroupDocs website, the license file
 If Microsoft Windows is set to hide file extensions (which is the default in most installations), the license file will show as "GroupDocs.Viewer.lic" in Windows Explorer. You might assume this is the actual file name and call the `SetLicense` method with "GroupDocs.Viewer.lic", but there is no such file, leading to an exception.
 
 To fix this issue, rename the file to remove the hidden .xml extension. Additionally, we suggest disabling the **Hide extensions** option in Microsoft Windows.
-
-## How to Evaluate GroupDocs.Viewer
-
-You can also try GroupDocs.Viewer without buying a license.
-
-### Free Trial
-
-The evaluation version is identical to the purchased one; it becomes licensed once you set the license. You can set the license using methods described in the following sections of this article.
-
-The evaluation version has the following limitations:
-
-- Rendering is limited to the first 2 pages.
-- Trial badges are added to the top of a rendered page.
-
-### Temporary License
-
-If you want to test GroupDocs.Viewer without the limitations of the trial version,   request a 30-day Temporary License. For details, see the ["Get a Temporary License"](https://purchase.groupdocs.com/temporary-license) page.
 

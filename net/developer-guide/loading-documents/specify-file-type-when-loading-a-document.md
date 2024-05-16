@@ -18,18 +18,45 @@ The following code snippet shows how to specify the file type when loading a doc
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
-// Implement a method that returns a stream with document data.
-Stream stream = GetFileStream("sample.docx");
+using System.IO;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+Stream stream = GetFileStream("sample.docx"); //TODO: implement your method
 
 // Specify the file type.
 LoadOptions loadOptions = new LoadOptions(FileType.DOCX);
 
 //Render a file.
-using (Viewer viewer = new Viewer(stream, loadOptions)
+using (Viewer viewer = new Viewer(stream, loadOptions))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System.IO
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim stream As Stream = GetFileStream("sample.docx") 'TODO: implement your method
+    
+        ' Specify the file type.
+        Dim loadOptions As LoadOptions = New LoadOptions(FileType.DOCX)
+    
+        'Render a file.
+        Using viewer As Viewer = New Viewer(stream, loadOptions)
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

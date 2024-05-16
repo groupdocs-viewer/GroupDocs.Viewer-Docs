@@ -41,6 +41,25 @@ using (var viewer = new Viewer("products.xlsx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("products.xlsx")
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Split using page breaks.
+            viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingByPageBreaks()
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below illustrates the result.
@@ -68,6 +87,27 @@ using (var viewer = new Viewer("two-pages.xlsx"))
     viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForSplitSheetIntoPages(rowsPerPage);
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("two-pages.xlsx")
+            ' Specify number of rows for every page.
+            Dim rowsPerPage As Integer = 15
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Split by number of rows.
+            viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForSplitSheetIntoPages(rowsPerPage)
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -98,6 +138,28 @@ using (var viewer = new Viewer("four-pages.xlsx"))
     viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForSplitSheetIntoPages(rowsPerPage, columnsPerPage);
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("four-pages.xlsx")
+            ' Specify number of rows and columns for every page.
+            Dim rowsPerPage As Integer = 15
+            Dim columnsPerPage As Integer = 7
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Split by number of rows and columns.
+            viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForSplitSheetIntoPages(rowsPerPage, columnsPerPage)
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -133,6 +195,25 @@ using (var viewer = new Viewer("invoice.xlsx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("invoice.xlsx")
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Render the print area only.
+            viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingPrintArea()
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below illustrates the result.
@@ -160,6 +241,25 @@ using (var viewer = new Viewer("Products.xlsx"))
     viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForOnePagePerSheet();
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Products.xlsx")
+            ' Convert the spreadsheet to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Render each worksheet to one page.
+            viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForOnePagePerSheet()
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -192,10 +292,28 @@ using GroupDocs.Viewer.Options;
 //render spreadsheet to PDF
 using (var viewer = new Viewer("products.xlsx"))
 {
-  var viewOptions = new PdfViewOptions("output.pdf");
-  viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingPrintAreaAndPageBreaks();
-  viewer.View(viewOptions);
+    var viewOptions = new PdfViewOptions("output.pdf");
+    viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingPrintAreaAndPageBreaks();
+    viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        'render spreadsheet to PDF
+        Using viewer = New Viewer("products.xlsx")
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingPrintAreaAndPageBreaks()
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

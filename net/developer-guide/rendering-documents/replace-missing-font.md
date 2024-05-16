@@ -17,14 +17,39 @@ The following code snippet shows how to set the default font name:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
-using (Viewer viewer = new Viewer(@"sample.pptx"))
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (Viewer viewer = new Viewer("sample.pptx"))
 {
     // Create an HTML file.
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+   
     // Specify a default font.
     viewOptions.DefaultFontName = "Courier New";
     viewer.View(viewOptions);
 }          
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.pptx")
+            ' Create an HTML file.
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources   ()
+        
+            ' Specify a default font.
+            viewOptions.DefaultFontName = "Courier New"
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

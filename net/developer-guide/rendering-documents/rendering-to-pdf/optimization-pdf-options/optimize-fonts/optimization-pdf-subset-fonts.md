@@ -10,10 +10,7 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
 ---
-Optimization resources. SubsetFonts optimization option
-Fonts will be converted into subsets if set to true
-
-If the file uses embedded fonts, it contains all font data. GroupDocs.Viewer can subset embedded fonts to reduce the file size.
+Not optimized files may contain embedded fonts. GroupDocs.Viewer can remove unused instructions in embedded fonts to reduce the file size.
 
 To subset fonts in a PDF file, set the [SubsetFonts](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/subsetfonts) property to `true`.
 
@@ -24,13 +21,12 @@ The following code snippet shows how to subset fonts in a PDF file:
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
-using GroupDocs.Viewer.Domain.Documents.PostProcessing.Pdf.Optimization;
 // ...
 
 using (var viewer = new Viewer("sample.docx"))
 {
     PdfViewOptions viewOptions = new PdfViewOptions();
-    viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions()
+    viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions
     {
         SubsetFonts = true
     };
@@ -38,8 +34,28 @@ using (var viewer = new Viewer("sample.docx"))
     viewer.View(viewOptions);
 }
 ```
-{{</ tab >}}
-{{</ tabs >}}
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.docx")
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions()
+            viewOptions.PdfOptimizationOptions = New PdfOptimizationOptions With {
+                .SubsetFonts = True
+                }
+    
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 The following image demonstrates the result. There is no difference in appearance:
 

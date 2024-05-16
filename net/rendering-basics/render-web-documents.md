@@ -51,6 +51,24 @@ using (var viewer = new Viewer("groupdocs-documentation.mhtml"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("groupdocs-documentation.mhtml")
+            ' Create a PDF file for the document.
+            ' Specify the PDF file name.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -75,6 +93,24 @@ using (var viewer = new Viewer("groupdocs-documentation.mhtml"))
     var viewOptions = new PngViewOptions("output_{0}.png");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("groupdocs-documentation.mhtml")
+            ' Convert the web file to PNG.
+            ' {0} is replaced with the page numbers in the output image names.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -103,6 +139,24 @@ using (var viewer = new Viewer("groupdocs-documentation.mhtml"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("groupdocs-documentation.mhtml")
+            ' Convert the web file to JPEG.
+            ' {0} is replaced with the page numbers in the output image names.
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Convert CHM files to HTML
@@ -129,6 +183,26 @@ using (var viewer = new Viewer("sample.chm"))
     // options.RenderToSinglePage = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.chm")
+            ' Convert the CHM file to HTML.
+            ' {0} is replaced with the page numbers in the output file names.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("chm_result_{0}.html")
+            ' Enable the following option to display all CHM content on a single HTML page.
+            ' options.RenderToSinglePage = true;
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -160,6 +234,25 @@ using (var viewer = new Viewer("sample.chm"))
     var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.chm")
+            ' Convert the CHM file to HTML.
+            ' Specify the output file names and location of external resources.
+            ' {0} and {1} are replaced with the current page number and resource name, respectively.
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -205,6 +298,28 @@ using (var viewer = new Viewer("groupdocs-documentation.mhtml"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("groupdocs-documentation.mhtml")
+            ' Convert the document to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Specify the size of page margins in points.
+            viewOptions.WebDocumentOptions.LeftMargin = 40
+            viewOptions.WebDocumentOptions.RightMargin = 40
+            viewOptions.WebDocumentOptions.TopMargin = 40
+            viewOptions.WebDocumentOptions.BottomMargin = 40
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Set the output page size
@@ -228,6 +343,25 @@ using (var viewer = new Viewer("groupdocs-documentation.mhtml"))
     viewOptions.WebDocumentOptions.PageSize = PageSize.A3;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("groupdocs-documentation.mhtml")
+            ' Convert the document to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Specify the page size.
+            viewOptions.WebDocumentOptions.PageSize = PageSize.A3
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

@@ -26,21 +26,60 @@ The following code snippet shows how to render attachments from the MSG file:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using System.IO;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Results;
+// ...
+
 // Specify attachment.
-Attachment attachment = new Attachment("attachment-word.doc", @"C:\Output\attachment-word.doc"); 
+Attachment attachment = new Attachment("attachment-word.doc", @"C:\Output\attachment-word.doc");
+
 // Create a stream for attachment.
 MemoryStream attachmentStream = new MemoryStream();
+
 //Save attachment
 using (Viewer viewer = new Viewer("sample.msg"))
 {
-    viewer.SaveAttachment(attachment, attachmentStream); 
+    viewer.SaveAttachment(attachment, attachmentStream);
 }
+
 // Render attachment
 using (Viewer viewer = new Viewer(attachmentStream))
 {
     HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(options);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System.IO
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        ' Specify attachment.
+        Dim attachment As Attachment = New Attachment("attachment-word.doc", "C:\Output\attachment-word.doc")
+    
+        ' Create a stream for attachment.
+        Dim attachmentStream As MemoryStream = New MemoryStream()
+    
+        'Save attachment
+        Using viewer As Viewer = New Viewer("sample.msg")
+            viewer.SaveAttachment(attachment, attachmentStream)
+        End Using
+    
+        ' Render attachment
+        Using viewer As Viewer = New Viewer(attachmentStream)
+            Dim options As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            viewer.View(options)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

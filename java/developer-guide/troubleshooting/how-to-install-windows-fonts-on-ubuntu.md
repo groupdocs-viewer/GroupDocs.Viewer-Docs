@@ -9,7 +9,7 @@ productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
 ---
-This article will guide you through the installation process of the Windows fonts on Ubuntu operating system. We'll be installing packages with [apt-get](https://wiki.debian.org/apt-get) utility on the latest (at the moment of writing this article) available version of OS that is [Ubuntu 20.04 LTS](https://wiki.ubuntu.com/Releases) but the process is quite the same for the previous versions of Ubuntu.
+This article will guide you through the installation process of the Windows fonts on Ubuntu operating system. We'll be installing packages with [apt-get](https://wiki.debian.org/apt-get) utility on the latest (at the moment of writing this article) available version of OS that is [Ubuntu 22.04 LTS](https://wiki.ubuntu.com/Releases) but the process is quite the same for the previous versions of Ubuntu.
 
 ## What fonts are installed
 
@@ -30,9 +30,8 @@ $ fc-list
 /usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf: DejaVu Serif:style=Bold
 /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf: DejaVu Sans Mono:style=Book
 /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf: DejaVu Sans:style=Book
-/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf: DejaVu Sans:style=Bold
-/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf: DejaVu Sans Mono:style=Bold
-/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf: DejaVu Serif:style=Book
+
+(truncated)
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -46,12 +45,32 @@ To install Windows fonts using `apt-get` utility open terminal and type:
 3. `sudo apt-get install fontconfig` - Install `fontconfig` library and `fc-cache` utility.
 4. `sudo fc-cache -f -v` - Build fonts cache.
 
+In case you recieve the following error:
+
+```log
+Package ttf-mscorefonts-installer is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or is only available from another source
+
+E: Package 'ttf-mscorefonts-installer' has no installation candidate
+```
+
+you can to add it from [Linux Software Repository for Microsoft Products](https://learn.microsoft.com/linux/packages) repository:
+
+1. `sudo wget -q https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb`
+2. `sudo dpkg -i packages-microsoft-prod.deb`
+3. `sudo apt-get update`
+4. `sudo apt-get install ttf-mscorefonts-installer -y`
+5. `sudo apt-get install fontconfig` - Install `fontconfig` library and `fc-cache` utility.
+6. `sudo fc-cache -f -v` - Build fonts cache.
+
+Please note to replace version number of your OS from `22.04` to the one you have. To get OS version type `hostnamectl | grep "Operating System"`. You can also check for the [index](https://packages.microsoft.com/config/) in your browser to find the right file. 
+
 After installing fonts and building fonts cache we can check what fonts are actually installed by typing `fc-list`.
 
 {{< tabs "example2">}}
 {{< tab "Shell" >}}
 ```bash
-$ fc-list
+$ fc-list | grep "msttcorefonts"
 
 /usr/share/fonts/truetype/msttcorefonts/comicbd.ttf: Comic Sans MS:style=Bold,Negreta,tučné,fed,Fett,Έντονα,Negrita,Lihavoitu,Gras,Félkövér,Grassetto,Vet,Halvfet,Pogrubiony,Negrito,Полужирный,Fet,Kalın,Krepko,Lodia
 /usr/share/fonts/truetype/msttcorefonts/comic.ttf: Comic Sans MS:style=Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta

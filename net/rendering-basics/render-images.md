@@ -97,6 +97,23 @@ using (var viewer = new Viewer("vector-image.svg"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("vector-image.svg")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -127,6 +144,24 @@ using (var viewer = new Viewer("vector-image.svg"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("vector-image.svg")
+            ' Specify the HTML file name and location of external resources.
+            ' {0} is replaced with the resource name in the output file name.
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("output.html", "output/resource_{0}",    "output/resource_{0}")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The result is shown below. The image is placed in a separate folder.
@@ -150,6 +185,23 @@ using (var viewer = new Viewer("vector-image.svg"))
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("vector-image.svg")
+            ' Create a PDF file.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -180,6 +232,26 @@ using (var viewer = new Viewer("vector-image.svg"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("vector-image.svg")
+            ' Create a PNG image.
+            Dim viewOptions = New PngViewOptions("output.png")
+            ' Set width and height.
+            viewOptions.Width = 1600
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -208,6 +280,26 @@ using (var viewer = new Viewer("vector-image.svg"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("vector-image.svg")
+            ' Create a JPEG image.
+            Dim viewOptions = New JpgViewOptions("output.jpg")
+            ' Set width and height.
+            viewOptions.Width = 1600
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render a PSD file with custom fonts
@@ -231,8 +323,7 @@ using GroupDocs.Viewer.Options;
 // ...
 
 // Specify a folder that stores custom fonts used in a PSD file.
-var fontSource = new FolderFontSource(@"C:\custom_fonts_folder",
-    GroupDocs.Viewer.Fonts.SearchOption.AllFolders);
+var fontSource = new FolderFontSource(@"C:\custom_fonts_folder", SearchOption.AllFolders);
 FontSettings.SetFontSources(fontSource);
 
 using (var viewer = new Viewer("sample.psd"))
@@ -240,9 +331,33 @@ using (var viewer = new Viewer("sample.psd"))
     // Convert a PSD file to PNG.
     var viewOptions = new PngViewOptions("output.png");
     // Specify the default font that should be used to replace missing fonts.
-    options.DefaultFontName = "Arial";
-    viewer.View(options); 
+    viewOptions.DefaultFontName = "Arial";
+    viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Fonts
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        ' Specify a folder that stores custom fonts used in a PSD file.
+        Dim fontSource = New FolderFontSource("C:\custom_fonts_folder", SearchOption.AllFolders)
+        FontSettings.SetFontSources(fontSource)
+    
+        Using viewer = New Viewer("sample.psd")
+            ' Convert a PSD file to PNG.
+            Dim viewOptions = New PngViewOptions("output.png")
+            ' Specify the default font that should be used to replace missing fonts.
+            viewOptions.DefaultFontName = "Arial"
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

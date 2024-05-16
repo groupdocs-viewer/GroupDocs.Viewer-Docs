@@ -64,6 +64,24 @@ using (var viewer = new Viewer("Documents.zip"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Documents.zip")
+            ' Create an HTML file for the top folder and each subfolder in the archive.
+            ' {0} is replaced with the current page number in the output file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -94,6 +112,26 @@ using (var viewer = new Viewer("Documents.zip"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Documents.zip")
+            ' Create an HTML file for the top folder and each subfolder in the archive.
+            ' {0} is replaced with the current page number in the output file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            ' Specify the number of items to display on each HTML page.
+            viewOptions.ArchiveOptions.ItemsPerPage = 10
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Create a single HTML page
@@ -115,6 +153,25 @@ using (var viewer = new Viewer("Documents.zip"))
     viewOptions.RenderToSinglePage = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Documents.zip")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            ' Render the archive file to a single page.
+            viewOptions.RenderToSinglePage = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -140,6 +197,23 @@ using (var viewer = new Viewer("Documents.zip"))
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Documents.zip")
+            ' Create a PDF file.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -171,6 +245,27 @@ using (var viewer = new Viewer("Documents.zip"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Documents.zip")
+            ' Create a PNG image for the top folder and each subfolder in the archive.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 1000
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -200,6 +295,27 @@ using (var viewer = new Viewer("Documents.zip"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Documents.zip")
+            ' Create a JPEG image for the top folder and each subfolder in the archive.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 1000
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Obtain information about folders in an archive file
@@ -213,6 +329,7 @@ Follow the steps below to obtain information about folders contained in an archi
 {{< tabs "example7">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
@@ -233,6 +350,34 @@ using (var viewer = new Viewer("Documents.zip"))
             Console.WriteLine($" - {folder}");
     }
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Documents.zip")
+            Dim viewInfoOptions = ViewInfoOptions.ForHtmlView()
+            Dim viewInfo = TryCast(viewer.GetViewInfo(viewInfoOptions), ArchiveViewInfo)
+
+            If viewInfo IsNot Nothing Then
+                Console.WriteLine($"File type: {viewInfo.FileType}")
+                Console.WriteLine($"The number of pages: {viewInfo.Pages.Count}")
+                Console.WriteLine("Folders: ")
+                ' Display the list of folders in the archive file.
+                For Each folder As String In viewInfo.Folders
+                    Console.WriteLine($" - {folder}")
+                Next
+            End If
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -272,6 +417,25 @@ using (var viewer = new Viewer("Documents.zip"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Documents.zip")
+            ' Create an HTML file.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            ' Specify a folder to render items from.
+            viewOptions.ArchiveOptions.Folder = "Documents/CAD files"
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Specify the archive file name
@@ -300,6 +464,26 @@ using (var viewer = new Viewer("Documents.zip"))
     viewOptions.ArchiveOptions.FileName = new FileName("Sample Files");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("Documents.zip")
+            ' Create an HTML file for the top folder and each subfolder in the archive.
+            ' {0} is replaced with the current page number in the output file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            ' Specify a custom filename
+            viewOptions.ArchiveOptions.FileName = New FileName("Sample Files")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

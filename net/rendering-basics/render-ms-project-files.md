@@ -57,6 +57,24 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+            ' Render the project's active view as HTML.
+            ' {0} is replaced with the current page number in the output file names.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -88,6 +106,25 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+            ' Render the project's active view as HTML.
+            ' Specify the HTML file names and location of external resources.
+            ' {0} and {1} are replaced with the page number and resource name, respectively.
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
@@ -111,6 +148,23 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+            ' Create a PDF file for the project's active view.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -142,6 +196,27 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+            ' Render the project's active view as PNG.
+            ' {0} is replaced with the current page number in the output file names.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            ' Set width and height.
+            viewOptions.Width = 1600
+            viewOptions.Height = 650
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -169,6 +244,27 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
     viewOptions.Height = 650;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+            ' Render the project's active view as JPEG.
+            ' {0} is replaced with the current page number in the output file names.
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            ' Set width and height.
+            viewOptions.Width = 1600
+            viewOptions.Height = 650
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -205,6 +301,31 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+            Dim viewInfoOptions = ViewInfoOptions.ForHtmlView()
+            Dim viewInfo = TryCast(viewer.GetViewInfo(viewInfoOptions), ProjectManagementViewInfo)
+        
+            If viewInfo IsNot Nothing Then
+                ' Display information about the Project file.
+                Console.WriteLine($"File type: {viewInfo.FileType}")
+                Console.WriteLine($"The number of pages: {viewInfo.Pages.Count}")
+                Console.WriteLine($"Project start date: {viewInfo.StartDate}")
+                Console.WriteLine($"Project end date: {viewInfo.EndDate}")
+            End If
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image shows a sample console output:
@@ -239,6 +360,25 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+            ' Convert the document to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Specify the page size.
+            viewOptions.ProjectManagementOptions.PageSize = PageSize.A3
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 
@@ -271,6 +411,26 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+            ' Convert the document to HTML.
+            ' {0} is replaced with the current page number in the file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output_{0}.html")
+            ' Specify the time unit.
+            viewOptions.ProjectManagementOptions.TimeUnit = TimeUnit.ThirdsOfMonths
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below illustrates the result.
@@ -286,6 +446,7 @@ The example below demonstrates how to convert a Project file to PDF and set the 
 {{< tabs "example9">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -298,6 +459,28 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
     viewOptions.ProjectManagementOptions.StartDate = new DateTime(2022, 08, 01);
     viewOptions.ProjectManagementOptions.EndDate = new DateTime(2022, 09, 01);
     viewer.View(viewOptions);
+}
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+            ' Convert the document to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Specify the date range.
+            viewOptions.ProjectManagementOptions.StartDate = New DateTime(2022, 08, 01)
+            viewOptions.ProjectManagementOptions.EndDate = New DateTime(2022, 09, 01)
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -331,6 +514,25 @@ using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
     viewOptions.RenderNotes = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+            ' Convert the document to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Enable notes rendering.
+            viewOptions.RenderNotes = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

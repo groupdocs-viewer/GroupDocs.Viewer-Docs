@@ -1,3 +1,6 @@
 deploy_key
 common/
 .DS_Store
+bin/
+obj/
+.vs

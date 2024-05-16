@@ -74,12 +74,12 @@ When you load a text document from a file or [FileStream](https://learn.microsof
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using System.IO;
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-// Implement a method that returns a stream with document data.
-Stream stream = GetFileStream("markdown-file.md");
+Stream stream = GetFileStream("markdown-file.md"); //TODO: implement this method
 
 // Specify the file encoding. 
 LoadOptions loadOptions = new LoadOptions(FileType.MD);
@@ -90,6 +90,29 @@ using (var viewer = new Viewer(stream, loadOptions))
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System.IO
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+            Dim stream As Stream = GetFileStream("markdown-file.md") 'TODO: implement this method
+        
+            ' Specify the file encoding. 
+            Dim loadOptions As LoadOptions = New LoadOptions(FileType.MD)
+        
+            ' Convert the document to PDF.
+            Using viewer = New Viewer(stream, loadOptions)
+                Dim viewOptions = New PdfViewOptions("output.pdf")
+                viewer.View(viewOptions)
+            End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -116,6 +139,24 @@ using (var viewer = new Viewer("TermsOfService.txt"))
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("TermsOfService.txt")
+            ' Convert the text file to HTML.
+            ' {0} is replaced with the current page number in the output file names.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -149,6 +190,25 @@ using (var viewer = new Viewer("TermsOfService.txt"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("TermsOfService.txt")
+            ' Convert the text file to HTML.
+            ' Specify the output file names and location of external resources.
+            ' {0} and {1} are replaced with the current page number and resource name, respectively.
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
@@ -177,6 +237,26 @@ using (var viewer = new Viewer("TermsOfService.txt"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("TermsOfService.txt")
+            ' Convert the text file to HTML.
+            ' Specify the output file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            ' Render the file to a single page. 
+            viewOptions.RenderToSinglePage = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render text files as PDF
@@ -196,6 +276,23 @@ using (var viewer = new Viewer("TermsOfService.txt"))
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("TermsOfService.txt")
+            ' Convert the text file to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -227,6 +324,27 @@ using (var viewer = new Viewer("TermsOfService.txt"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("TermsOfService.txt")
+            ' Convert the text file to PNG.
+            ' {0} is replaced with the current page number in the output image names.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -254,6 +372,27 @@ using (var viewer = new Viewer("TermsOfService.txt"))
     viewOptions.Height = 1000;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("TermsOfService.txt")
+            ' Convert the text file to JPEG.
+            ' {0} is replaced with the current page number in the output image names.
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 1000
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -291,6 +430,26 @@ using (var viewer = new Viewer("TermsOfService.txt"))
     viewOptions.TextOptions.MaxRowsPerPage = 30;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("TermsOfService.txt")
+            ' Convert the text file to HTML.
+            ' {0} is replaced with the current page number in the output file names.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            ' Set the maximum number of rows per page.
+            viewOptions.TextOptions.MaxRowsPerPage = 30
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

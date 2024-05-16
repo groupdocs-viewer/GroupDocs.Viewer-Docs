@@ -60,6 +60,24 @@ using (var viewer = new Viewer("resume.docx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.docx")
+            ' Create an HTML file for each document page.
+            ' {0} is replaced with the current page number in the file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -91,6 +109,25 @@ using (var viewer = new Viewer("resume.docx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.docx")
+            ' Create an HTML file for each document page.
+            ' Specify the HTML file names and location of external resources.
+            ' {0} and {1} are replaced with the current page number and resource name, respectively.
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
@@ -115,6 +152,24 @@ using (var viewer = new Viewer("resume.docx"))
     var viewOptions = new PdfViewOptions("output.pdf");
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.docx")
+            ' Create a PDF file for the document.
+            ' Specify the PDF file name.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -146,6 +201,27 @@ using (var viewer = new Viewer("resume.docx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.docx")
+            ' Create a PNG image for each document page.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 The following image demonstrates the result:
 
@@ -172,6 +248,27 @@ using (var viewer = new Viewer("resume.docx"))
     viewOptions.Height = 900;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.docx")
+            ' Create a JPEG image for each document page.
+            ' {0} is replaced with the current page number in the image name.
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            ' Set width and height.
+            viewOptions.Width = 800
+            viewOptions.Height = 900
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -215,6 +312,29 @@ using (var viewer = new Viewer("resume.docx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.docx")
+            ' Create an HTML file for each document page.
+            ' {0} is replaced with the current page number in the file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            ' Specify the size of page margins in points.
+            viewOptions.WordProcessingOptions.TopMargin = 72
+            viewOptions.WordProcessingOptions.BottomMargin = 72
+            viewOptions.WordProcessingOptions.LeftMargin = 54
+            viewOptions.WordProcessingOptions.RightMargin = 54
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render tracked changes
@@ -243,6 +363,25 @@ using (var viewer = new Viewer("TrackChanges.docx"))
     viewOptions.WordProcessingOptions.RenderTrackedChanges = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("TrackChanges.docx")
+            ' Convert the document to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Enable tracked changes rendering.
+            viewOptions.WordProcessingOptions.RenderTrackedChanges = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -274,6 +413,25 @@ using (var viewer = new Viewer("resume.docx"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.docx")
+            ' Convert the document to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Enable comments rendering.
+            viewOptions.RenderComments = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image illustrates the result:
@@ -301,6 +459,25 @@ using (var viewer = new Viewer("resume.docx"))
     viewOptions.WordProcessingOptions.UnlinkTableOfContents = true;
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("resume.docx")
+            ' Convert the document to HTML.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            ' Unlink table of contents.
+            viewOptions.WordProcessingOptions.UnlinkTableOfContents = True
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

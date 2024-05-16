@@ -25,6 +25,10 @@ The following code snippet shows how to load and render an encrypted document:
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 // Specify a password.
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.Password = "123456";
@@ -34,6 +38,26 @@ using (Viewer viewer = new Viewer("encrypted.docx", loadOptions))
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        ' Specify a password.
+        Dim loadOptions As LoadOptions = New LoadOptions()
+        loadOptions.Password = "123456"
+        ' Render a file.
+        Using viewer As Viewer = New Viewer("encrypted.docx", loadOptions)
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

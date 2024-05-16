@@ -26,15 +26,37 @@ You can build a project from scratch using Visual Studio or [.NET CLI](https://d
 6. Edit `Program.cs` and add the following lines to the `Main` method
 {{< tabs "example1">}}
 {{< tab "C#" >}}  
-  ```csharp
-  string documentPath = @"C:\sample.docx";
-  using (Viewer viewer = new Viewer(documentPath))
-  {
-     string filePathFormat = @"C:\output\page-{0}.html";
-     HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources(filePathFormat);
-     viewer.View(options);
-  }
-  ```
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (Viewer viewer = new Viewer("sample.docx"))
+{
+   string outputFilePathFormat = @"output\page-{0}.html";
+   HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources(outputFilePathFormat);
+   
+   viewer.View(options);
+}
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.docx")
+            Dim outputFilePathFormat As String = "output\page-{0}.html"
+            Dim options As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources(outputFilePathFormat)
+
+            viewer.View(options)
+        End Using
+    End Sub
+End Module
+```
 {{< /tab >}}
 {{< /tabs >}}
 7. Replace `documentPath` value with the actual path to the document you're going to render.
@@ -49,15 +71,35 @@ You can build a project from scratch using Visual Studio or [.NET CLI](https://d
 4. Add the following code to the `Main` method:
 {{< tabs "example2">}}
 {{< tab "C#" >}}  
-  ```csharp
-  string documentPath = @"C:\sample.docx";
-  using (Viewer viewer = new Viewer(documentPath))
-  {
-     string filePathFormat = @"C:\output\page-{0}.html";
-     HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources(filePathFormat);
-     viewer.View(options);
-  }
-  ```
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+using (Viewer viewer = new Viewer("sample.docx"))
+{
+   string outputFilePathFormat = @"output\page-{0}.html";
+   HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources(outputFilePathFormat);
+   viewer.View(options);
+}
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.docx")
+            Dim outputFilePathFormat As String = "output\page-{0}.html"
+            Dim options As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources(outputFilePathFormat)
+            viewer.View(options)
+        End Using
+    End Sub
+End Module
+```
 {{< /tab >}}
 {{< /tabs >}}
 5. Replace `documentPath` value with the actual path to the document you're going to render.
@@ -80,9 +122,9 @@ To run any demo from [GroupDocs.Viewer for .NET Demo projects](https://github.co
 * Clone the repository:
 {{< tabs "example3">}}
 {{< tab "Git" >}}  
-  ```bash
-  git clone git@github.com:groupdocs-viewer/GroupDocs.Viewer-for-.NET.git  
-  ```
+```bash
+git clone git@github.com:groupdocs-viewer/GroupDocs.Viewer-for-.NET.git  
+```
 {{< /tab >}}
 {{< /tabs >}}
 * Or [download](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/archive/master.zip) source code.

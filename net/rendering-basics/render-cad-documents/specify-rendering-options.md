@@ -32,17 +32,40 @@ The following code snippet converts a CAD drawing to PDF and sets the background
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
+using GroupDocs.Viewer.Drawing;
 using GroupDocs.Viewer.Options;
 // ...
 
 using (var viewer = new Viewer("HousePlan.dwg"))
 {
-   // Convert the document to PDF.
-   var viewOptions = new PdfViewOptions("output.pdf");
-   // Specify the background color.
-   viewOptions.CadOptions.BackgroundColor = Color.LightYellow;
-   viewer.View(viewOptions);
+    // Convert the document to PDF.
+    var viewOptions = new PdfViewOptions("output.pdf");
+
+    // Specify the background color.
+    viewOptions.CadOptions.BackgroundColor = Argb32Color.Transparent;
+    viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Drawing
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("HousePlan.dwg")
+            ' Convert the document to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+        
+            ' Specify the background color.
+            viewOptions.CadOptions.BackgroundColor = Argb32Color.Transparent
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -79,6 +102,25 @@ using (var viewer = new Viewer("HousePlan.dwg"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("HousePlan.dwg")
+            ' Convert the diagram to PNG.
+            Dim viewOptions = New PngViewOptions("output.png")
+            ' Specify a scale factor.
+            viewOptions.CadOptions = CadOptions.ForRenderingByScaleFactor(0.5F)
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 When you render all layouts/sheets contained in a CAD file (the [CadOptions.RenderLayouts](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/cadoptions/properties/renderlayouts) property is `true`), each layout/sheet is rendered as a separate page/image and has its own size. In this case, when you specify only the [width](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/cadoptions/methods/forrenderingbywidth) or [height](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/cadoptions/methods/forrenderingbyheight) value, the other side is scaled proportionally to maintain the aspect ratio of each layout/sheet. When you set both [width and height](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/cadoptions/methods/forrenderingbywidthandheight), all generated images have the same size and may look distorted. To avoid this, use the [CadOptions.LayoutName](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/properties/layoutname) property to render each layout/sheet separately and set its size.
@@ -102,6 +144,25 @@ using (var viewer = new Viewer("sample.dwg"))
     viewOptions.CadOptions.Pc3File = "small_page.pc3";
     viewer.View(viewOptions);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("sample.dwg")
+            ' Convert the diagram to PDF.
+            Dim viewOptions = New PdfViewOptions("output.pdf")
+            ' Specify a path to the PC3 file.
+            viewOptions.CadOptions.Pc3File = "small_page.pc3"
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -161,6 +222,48 @@ using (var viewer = new Viewer("HousePlan.dwg"))
 }
 ```
 {{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("HousePlan.dwg")
+            Dim viewInfoOptions = ViewInfoOptions.ForHtmlView()
+            Dim viewInfo = viewer.GetViewInfo(viewInfoOptions)
+        
+            ' Get the width and height of the CAD drawing.
+            Dim width As Integer = viewInfo.Pages(0).Width
+            Dim height As Integer = viewInfo.Pages(0).Height
+        
+            ' Specify the number of rows and columns to split the drawing into.
+            Dim columns As Integer = 2
+            Dim rows As Integer = 2
+        
+            ' Calculate the width and height of each tile.
+            Dim tileWidth As Integer = width / columns
+            Dim tileHeight As Integer = height / rows
+            Dim pointX As Integer = 0
+            Dim pointY As Integer = 0
+        
+            ' Split the drawing into tiles and convert them to HTML.
+            ' {0} is replaced with the tile number in the output file name.
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            For i As Integer = 0 To columns - 1
+                For j As Integer = 0 To rows - 1
+                    Dim tile As Tile = New Tile(pointX + tileWidth * i, pointY + tileHeight * j, tileWidth, tileHeight)
+                    viewOptions.CadOptions.Tiles.Add(tile)
+                Next
+            Next
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
 {{< /tabs >}}
 
 In the example above the GroupDocs.Viewer will generate four HTML files named "page_1.html", "page_2.html", "page_3.html", and "page_4.html", where each of these HTML file contains a single tile in a form of SVG vector image. The [`HtmlViewOptions.ForExternalResources()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/forexternalresources/#forexternalresources) static method (with all its overloads) can also be used — in such case the SVG files will not be embedded inside the output HTML files, but will be saved separately, while HTML only references them through the `A` HTML element.
@@ -175,7 +278,14 @@ Starting from the version 24.2 the GroupDocs.Viewer introduces a new public prop
 
 Enabling this mode is pretty simple — just create an instance of the [`CadOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions) class by using [any of the static methods described above](#ctors), and then set the value for the `EnablePerformanceConversionMode` property. Example is below:
 
+
+{{< tabs "example5">}}
+{{< tab "C#" >}}
 ```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
 using (Viewer viewer = new Viewer("input.dwg"))
 {
    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("Output-Page#{0}.html");                    
@@ -185,6 +295,29 @@ using (Viewer viewer = new Viewer("input.dwg"))
    viewer.View(viewOptions);
 }
 ```
+{{< /tab >}}
+{{< tab "VB.NET" >}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer = New Viewer("input.dwg")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+
+            viewOptions.CadOptions = CadOptions.ForRenderingByWidth(1000)
+            viewOptions.CadOptions.EnablePerformanceConversionMode = True
+
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
+
+{{< /tabs >}}
 
 If taking an ordinary DWG file as a sample, the comparison between "quality" and "performance" modes are the next:
 

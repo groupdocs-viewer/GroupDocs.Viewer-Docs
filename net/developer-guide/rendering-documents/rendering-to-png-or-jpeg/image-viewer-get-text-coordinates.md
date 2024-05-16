@@ -14,18 +14,25 @@ The following code snippet shows how to retrieve and print out text ([lines](htt
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Results;
+// ...
+
 using (Viewer viewer = new Viewer("sample.docx"))
 {
     // Get the file information and extract it text.
     bool extractText = true;
     ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForPngView(extractText);
     ViewInfo viewInfo = viewer.GetViewInfo(viewInfoOptions);
+
     // Display the file information and text.
-    foreach(Page page in viewInfo.Pages)
+    foreach (Page page in viewInfo.Pages)
     {
         Console.WriteLine($"Page: {page.Number}");
         Console.WriteLine("Text lines/words/characters:");
-                            
+
         foreach (Line line in page.Lines)
         {
             Console.WriteLine(line);
@@ -40,6 +47,42 @@ using (Viewer viewer = new Viewer("sample.docx"))
         }
     }
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.docx")
+            ' Get the file information and extract it text.
+            Dim extractText As Boolean = True
+            Dim viewInfoOptions As ViewInfoOptions = ViewInfoOptions.ForPngView(extractText)
+            Dim viewInfo As ViewInfo = viewer.GetViewInfo(viewInfoOptions)
+        
+            ' Display the file information and text.
+            For Each page As Page In viewInfo.Pages
+                Console.WriteLine($"Page: {page.Number}")
+                Console.WriteLine("Text lines/words/characters:")
+        
+                For Each line As Line In page.Lines
+                    Console.WriteLine(line)
+                    For Each word As Word In line.Words
+                        Console.WriteLine($"	{word}")
+                        For Each character As Character In word.Characters
+                            Console.WriteLine($"		{character}")
+                        Next
+                    Next
+                Next
+            Next
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}

@@ -27,15 +27,45 @@ The following code snippet shows how to get the file type and the pages count fr
 {{< tabs "example1">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Results;
+// ...
+
 using (Viewer viewer = new Viewer("sample.pdf"))
 {
     // Get file information.
     ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForHtmlView();
     ViewInfo viewInfo = viewer.GetViewInfo(viewInfoOptions);
+
     // Display file type and pages count.
     Console.WriteLine("Document type is: " + viewInfo.FileType);
     Console.WriteLine("Pages count: " + viewInfo.Pages.Count);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer("sample.pdf")
+            ' Get file information.
+            Dim viewInfoOptions As ViewInfoOptions = ViewInfoOptions.ForHtmlView()
+            Dim viewInfo As ViewInfo = viewer.GetViewInfo(viewInfoOptions)
+
+            ' Display file type and pages count.
+            Console.WriteLine("Document type is: " & viewInfo.FileType.ToString())
+            Console.WriteLine("Pages count: " & viewInfo.Pages.Count.ToString())
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -51,6 +81,13 @@ The following code snippet shows how to get the file type and the pages count fr
 {{< tabs "example2">}}
 {{< tab "C#" >}}
 ```csharp
+using System;
+using System.IO;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Results;
+// ...
+
 using (Viewer viewer = new Viewer(File.OpenRead("sample.pdf")))
 {
     ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForHtmlView();
@@ -59,6 +96,28 @@ using (Viewer viewer = new Viewer(File.OpenRead("sample.pdf")))
     Console.WriteLine("Document type is: " + viewInfo.FileType);
     Console.WriteLine("Pages count: " + viewInfo.Pages.Count);
 }
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports System.IO
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Using viewer As Viewer = New Viewer(File.OpenRead("sample.pdf"))
+            Dim viewInfoOptions As ViewInfoOptions = ViewInfoOptions.ForHtmlView()
+            Dim viewInfo As ViewInfo = viewer.GetViewInfo(viewInfoOptions)
+
+            Console.WriteLine("Document type is: " & viewInfo.FileType.ToString())
+            Console.WriteLine("Pages count: " & viewInfo.Pages.Count.ToString())
+        End Using
+    End Sub
+End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
