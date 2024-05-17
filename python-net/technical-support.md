@@ -20,7 +20,7 @@ Please note that GroupDocs does not provide technical support over the phone. Ph
 
 If you need help with GroupDocs.Viewer, consider the following:
 
-* Make sure you are using the latest GroupDocs.Viewer version before reporting an issue. See [PyPI](https://pypi.org/project/groupdocs.viewer) to find out about the latest version.
+* Make sure you are using the latest GroupDocs.Viewer version before reporting an issue. See [PyPI](https://pypi.org/project/groupdocs-viewer-net) to find out about the latest version.
 * Have a look through the forums, this documentation, and the API Reference before reporting an issue – perhaps your question has already been answered.
 * Post your question at [GroupDocs.Viewer Free Support Forum](https://forum.groupdocs.com/c/viewer/9), and we'll assist you. Questions are answered directly by the GroupDocs.Viewer development team.
 * When expecting a reply on the forums, please allow for time zone differences.

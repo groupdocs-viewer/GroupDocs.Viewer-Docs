@@ -13,9 +13,9 @@ toc: True
 
 ## Install using PIP from PyPI
 
-All Python packages are hosted at [PyPI](https://pypi.org/project/groupdocs.viewer). You can easily reference GroupDocs.Viewer for Python via .NET API directly in your Python project by installing it with the following command.
+All Python packages are hosted at [PyPI](https://pypi.org/project/groupdocs-viewer-net). You can easily reference GroupDocs.Viewer for Python via .NET API directly in your Python project by installing it with the following command.
 
 ```batch
-pip install groupdocs.viewer
+pip install groupdocs-viewer-net
 ```
 
