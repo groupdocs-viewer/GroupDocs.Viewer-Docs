@@ -140,6 +140,75 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 ![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-presentations/render-to-html-external-resources.png)
 
+
+### Generate pure HTML/CSS markup
+
+Before [version 24.5](https://releases.groupdocs.com/viewer/net/release-notes/2024/groupdocs-viewer-for-net-24-5-release-notes/), the GroupDocs.Viewer for .NET was able to render presentations to the HTML in only one mode, which is heavily based on SVG images. Actually, the whole slide is converted to a single vector image in [SVG format](https://docs.fileformat.com/page-description-language/svg/), and the HTML here is served only as a wrapper around a SVG element. This mode has an undeniable advantage of 100% accurate reproduction of the original presentation. In other words, what you see in MS PowerPoint when opening a presentation, this is exactly what you see in the web-browser after opening the same presentation in the GroupDocs.Viewer. This is possible because GroupDocs.Viewer scans the original presentation document and reproduces it by drawing every tiny element, every pixel on a SVG canvas while preserving the position, shape and orientation.
+
+But because of its SVG-based nature this mode also has the disadvantages — the SVG markup is too complex, full-text search may not work as expected, and, actually, this is not the “real” HTML- and CSS-markup. So if you want to implement something like modification or post-processing the document after obtaining it from GroupDocs.Viewer, you may encounter troubles, because standard tools like HTML parsers or CSS queries usually are not working with SVG markup.
+
+That’s why we represent the new HTML conversion mode for the Presentations — pure HTML/CSS mode. In this mode no SVG images are generated at all, only pure HTML and CSS markup.
+
+By default this mode is disabled, and the existing SVG-based mode is activated. For enabling the new pure HTML/CSS conversion mode, please set the boolean flag `RenderToPureHtml` to `true` value in the [`PresentationOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/presentationoptions/) property of the [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) class. 
+
+Code example below shows converting the same presentation file to the pure HTML/CSS markup in two variations — with embedded and external resources:
+
+{{< tabs "example_pure">}}
+{{< tab "C#" >}}
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+string inputPresentationPath = "SamplePresentation.pptx";
+
+//preparing HTML options for embedded and external resources
+HtmlViewOptions embeddedOptions = HtmlViewOptions.ForEmbeddedResources("slide_{0}_embedded.html");
+HtmlViewOptions externalOptions = HtmlViewOptions.ForExternalResources("slide_{0}.html", "slide_{0}_{1}", "slide_{0}_{1}");
+//enabling the pure HTML/CSS mode for both options
+embeddedOptions.PresentationOptions.RenderToPureHtml = externalOptions.PresentationOptions.RenderToPureHtml = true;
+
+using (Viewer viewer = new Viewer(inputPresentationPath))
+{
+    viewer.View(embeddedOptions);
+    viewer.View(externalOptions);
+}
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim inputPresentationPath As String = "SamplePresentation.pptx"
+        'preparing HTML options for embedded and external resources
+        Dim embeddedOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("slide_{0}_embedded.html")
+        Dim externalOptions As HtmlViewOptions = HtmlViewOptions.ForExternalResources("slide_{0}.html", "slide_{0}_{1}", "slide_{0}_{1}")
+        'enabling the pure HTML/CSS mode for both options
+        embeddedOptions.PresentationOptions.RenderToPureHtml = True
+        externalOptions.PresentationOptions.RenderToPureHtml = True
+        Using viewer = New Viewer(inputPresentationPath)
+            viewer.View(embeddedOptions)
+            viewer.View(externalOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+Need to mention that this new pure HTML/CSS mode also has the next limitations and disadvantages:
+
+1. Its fidelity is generally worse compared to the original SVG-based mode, especially on presentations with complex slides layout and sophisticated text formatting.
+2. For this moment rendering comments and notes are not supported, so the [`RenderComments`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/rendercomments/) and [`RenderNotes`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/rendernotes/) properties of the [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) class are ignored.
+3. [`Resolution`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/presentationoptions/resolution/) property of the [`PresentationOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/presentationoptions/) class is also not supported for this moment, the images are exported to the output HTML document in their original resolution.
+4. [`RenderToSinglePage`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/rendertosinglepage/) boolean property of the [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) class is not supported too, so every slide of the presentation will be saved to the distinct HTML document.
+5. [`RenderResponsive`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/renderresponsive/) boolean property of [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) class belongs to the existing SVG-based conversion mode, so its value is ignored while converting in pure HTML/CSS mode, — HTML- and CSS-markup are already 100% responsive.
+
+We plan to add support for most of these missing features in the near future by constantly improving this new pure HTML/CSS converter, adding new features and fixing bugs.
+
 ## Render presentations as PDF
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a presentation file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
