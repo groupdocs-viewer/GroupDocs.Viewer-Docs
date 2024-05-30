@@ -3,7 +3,7 @@ id: installation
 url: viewer/python-net/installation
 title: Install GroupDocs.Viewer for Python via .NET
 linkTitle: Installation
-weight: 4
+weight: 1
 keywords: installation, maven
 description: "This topic describes how to install GroupDocs.Viewer for Python."
 productName: GroupDocs.Viewer for Python via .NET

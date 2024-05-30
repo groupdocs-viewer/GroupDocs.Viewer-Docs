@@ -2,7 +2,7 @@
 id: features-overview
 url: viewer/python-net/features-overview
 title: Features overview
-weight: 1
+weight: 3
 description: "With GroupDocs.Viewer for Python you can render files to HTML, PNG, JPEG and PDF formats, list and save attachments, embedded files and compressed files, and extract document text."
 keywords: render files,viewer,html,PNG,JPEG,PDF
 productName: GroupDocs.Viewer for Python via .NET
