@@ -5,8 +5,8 @@ title: Hello, World!
 second_title: A simple example of how to use GroupDocs.Viewer for Python via .NET
 linkTitle: Hello World
 weight: 2
-keywords: installation, maven
-description: ""Render files, list and save attachments in any supported format using GroupDocs.Viewer for Python via .NET to experience its simplicity and power in Python."
+keywords: "hello world, example, get started"
+description: "Render files, list and save attachments in any supported format using GroupDocs.Viewer for Python via .NET to experience its simplicity and power in Python."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
