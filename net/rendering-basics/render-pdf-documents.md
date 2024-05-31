@@ -888,3 +888,54 @@ The following image shows the rendering of [protected-resume.pdf](/viewer/net/im
 
 ![Render with or without copy protection](/viewer/net/images/rendering-basics/render-pdf-documents/render-with-and-without-copy-protection.png)
 
+## Repairing corrupted PDF documents
+
+By default GroupDocs.Viewer cannot process the PDF documents with corrupted structure or content — it throws an exception when trying to open such files. However, starting from the version [24.5](https://releases.groupdocs.com/viewer/net/release-notes/2024/groupdocs-viewer-for-net-24-5-release-notes/) GroupDocs.Viewer can try to repair the structural corruptions in PDF documents. By default this feature is disabled. To enable it, need to use the newly added `TryRepair` boolean property of the [`LoadOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/) class by setting its value to `true`.
+
+When enabled, this feature addresses the following issues in a PDF document:
+
+* Broken references within the document (incorrect object offsets in the Cross-reference list).
+* Missing critical elements like root object, page object, or page content.
+* Circular references (Form X-object referencing itself).
+
+Here is a source code sample:
+
+{{< tabs "example18">}}
+{{< tab "C#" >}}
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.TryRepair = true;
+
+PngViewOptions viewOptions = new PngViewOptions();
+
+using (Viewer viewer = new Viewer("resume.pdf", loadOptions))
+{    
+    viewer.View(viewOptions);
+}
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Module Program
+    Sub Main(args As String())
+        Dim loadOptions As New LoadOptions()
+        loadOptions.TryRepair = True
+
+        Dim viewOptions As New PngViewOptions()
+
+        Using viewer As New Viewer("resume.pdf", loadOptions)
+            viewer.View(viewOptions)
+        End Using
+    End Sub
+End Module
+```
+{{< /tab >}}
+{{< /tabs >}}
