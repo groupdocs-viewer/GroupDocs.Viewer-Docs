@@ -9,7 +9,9 @@ productName: GroupDocs.Viewer for Node.js via Java
 hideChildren: False
 toc: True
 ---
-This topic lists file formats supported by GroupDocs.Viewer for Node.js.
+This topic lists file formats supported by GroupDocs.Viewer for Node.js. You can use the input below to filter supported formats by extension.
+
+{{< table-filter placeholder="Start typing to find file format" >}}
 
 ## Archive and compression file formats
 

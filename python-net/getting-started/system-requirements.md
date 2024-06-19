@@ -17,8 +17,8 @@ GroupDocs.Viewer for Python via .NET does not require any external software to b
 
 ## Requirements
 
-* Python 3.9 or above
-* .NET 6.0.0 or above
+* [Python 3.9](https://www.python.org/downloads/) or above
+* [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) Runtime or above
 
 ## Supported Operating Systems
 
@@ -33,10 +33,6 @@ GroupDocs.Viewer for Python can be used on any 32-bit or 64-bit operating system
 * Microsoft Windows 10 (x64, x86)
 * Microsoft Windows 11 (x64)
 
-
-## Supported Frameworks and Target Runtimes
-
-GroupDocs.Viewer for Python supports .NET Framework and .NET platforms. Current version supports .NET Framework 4.6.2 and above, .NET 6 and above.
 
 ## Development Environments
 

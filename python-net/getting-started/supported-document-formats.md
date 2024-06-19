@@ -9,7 +9,9 @@ productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 ---
-This topic lists file formats supported by GroupDocs.Viewer for Python.
+This topic lists file formats supported by GroupDocs.Viewer for Python. You can use the input below to filter supported formats by extension.
+
+{{< table-filter placeholder="Start typing to find file format" >}}
 
 ## Archive and compression file formats
 

@@ -9,7 +9,9 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
 ---
-This topic lists file formats supported by GroupDocs.Viewer for .NET and GroupDocs.Viewer.CrossPlatform.
+This topic lists file formats supported by GroupDocs.Viewer for .NET and GroupDocs.Viewer.CrossPlatform. You can use the input below to filter supported formats by extension.
+
+{{< table-filter placeholder="Start typing to find file format" >}}
 
 ## Archive and compression file formats
 
