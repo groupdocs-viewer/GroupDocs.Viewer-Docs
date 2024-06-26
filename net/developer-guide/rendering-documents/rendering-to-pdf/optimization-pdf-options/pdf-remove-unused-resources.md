@@ -72,3 +72,13 @@ End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+As it is explained above, the effectiveness of the described optimizations depends solely on the specific PDF file — if it has no “orphaned” objects or streams, then these optimizations will do nothing, they only increase the document processing time. However, in some cases they can reduce the document size significantly, even several times.
+
+We checked both `RemoveUnusedObjects` and `RemoveUnusedStreams` on our internal sample PDF documents, and measured their size before and after applied optimizations. Results are shown in the table below.
+
+| Filename    | Original size, bytes | `RemoveUnusedObjects`, bytes | `RemoveUnusedStreams`, bytes |
+| ----------- | ------- | -------- | ------- |
+| Sample1.pdf | 131 832 | 2 274    | 131 832 |
+| Sample2.pdf | 131 870 | 131 774  | 2 690   |
+
