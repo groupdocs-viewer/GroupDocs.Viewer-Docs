@@ -79,6 +79,6 @@ We checked both `RemoveUnusedObjects` and `RemoveUnusedStreams` on our internal 
 
 | Filename    | Original size, bytes | `RemoveUnusedObjects`, bytes | `RemoveUnusedStreams`, bytes |
 | ----------- | ------- | -------- | ------- |
-| Sample1.pdf | 131 832 | 2 274    | 131 832 |
-| Sample2.pdf | 131 870 | 131 774  | 2 690   |
+| [Sample1.pdf](/viewer/net/sample-files/developer-guide/rendering-documents/Sample1.pdf) | 131 832 | 2 274    | 131 832 |
+| [Sample2.pdf](/viewer/net/sample-files/developer-guide/rendering-documents/Sample2.pdf) | 131 870 | 131 774  | 2 690   |
 
