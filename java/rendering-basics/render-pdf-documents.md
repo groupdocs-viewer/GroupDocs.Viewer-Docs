@@ -397,3 +397,64 @@ try (Viewer viewer = new Viewer("sample.pdf")) {
 {{< /tabs >}}
 
 ![Extract and display PDF text](/viewer/java/images/rendering-basics/render-pdf-documents/extract-pdf-text.png)
+
+## Skip font license verification when rendering XPS and OXPS files
+
+If an XPS or OXPS file contains a font that cannot be embedded due to licensing restrictions, GroupDocs.Viewer throws an exception at runtime. If you have a license for this font, enable the [PdfOptions#setDisableFontLicenseVerifications(true)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfoptions/#setDisableFontLicenseVerifications-boolean-) option to skip font license verification.
+
+{{< tabs "example15">}}
+{{< tab "Java" >}}
+```java
+try (Viewer viewer = new Viewer("resume.oxps")) {
+    HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
+    viewOptions.getPdfOptions().setDisableFontLicenseVerifications(true);
+    viewer.view(viewOptions);
+}
+```
+{{< /tab >}}
+{{< tab "Kotlin">}}
+```kotlin
+Viewer("resume.oxps").use { viewer ->
+   val viewOptions = HtmlViewOptions.forEmbeddedResources()
+   viewOptions.pdfOptions.disableFontLicenseVerifications = true
+   viewer.view(viewOptions)
+}
+
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+## Enclose images in SVG when rendering PDF and Page Layout files
+
+By default, when rendering to the PDF and Page Layout file formats, all images are combined into a single PNG file, which serves as the background for the output HTML document.
+
+The [PdfOptions#setWrapImagesInSvg(...)](https://reference2.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfoptions/#setWrapImagesInSvg-boolean-) option allows you to wrap each image in the output HTML document with an SVG tag to improve output quality.
+
+This option is available when rendering PDF and Page Layout file formats to HTML with embedded or external resources. 
+
+{{< tabs "example16">}}
+{{< tab "Java" >}}
+```java
+try (Viewer viewer = new Viewer("resume.pdf")) {
+   HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
+   viewOptions.getPdfOptions().setWrapImagesInSvg(true);
+
+   viewer.view(viewOptions);
+}
+```
+{{< /tab >}}
+{{< tab "Kotlin">}}
+```kotlin
+Viewer("resume.pdf").use { viewer ->
+    val viewOptions = HtmlViewOptions.forEmbeddedResources()
+    viewOptions.pdfOptions.isWrapImagesInSvg = true
+    viewer.view(viewOptions)
+}
+
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+The following image shows the rendering [resume.pdf](/viewer/java/images/rendering-basics/render-pdf-documents/resume.pdf) with the disabled (left) and enabled (right) `WrapImagesInSvg` option:
+
+![Images as background vs embedded in SVG](/viewer/java/images/rendering-basics/render-pdf-documents/wrap-images-in-svg.png)
