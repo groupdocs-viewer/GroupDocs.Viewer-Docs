@@ -26,6 +26,45 @@ fullWidth: True
 
 {{< button style="primary" link="https://www.nuget.org/packages/GroupDocs.Viewer.CrossPlatform" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg> GroupDocs.Viewer.CrossPlatform NuGet package (Windows, Linux, macOS){{< /button >}} 
 
+<div class="gdoc-two-columns">
+    <div class="gdoc-two-columns__column">
+        <ul class="gdoc-two-columns__column__list">
+            <li>
+                <div>
+                    <svg class="gdoc-two-columns__column__icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg>
+                </div>
+                <div>
+                    <a class="gdoc-two-columns__column__link"
+                        href="https://www.nuget.org/packages/GroupDocs.Viewer">GroupDocs.Viewer</a>
+                    <div class="gdoc-two-columns__column__descr">
+                        - .NET Framework 4.6.2+ and .NET 6.0.
+                        <br>
+                        - Depends on System.Drawing(.Common).
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="gdoc-two-columns__column">
+        <ul class="gdoc-two-columns__column__list">
+            <li>
+                <div>
+                <svg class="gdoc-two-columns__column__icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg>
+                </div>
+                <div>
+                    <a class="gdoc-two-columns__column__link"
+                        href="https://www.nuget.org/packages/GroupDocs.Viewer.CrossPlatform">GroupDocs.Viewer.CrossPlatform</a>
+                        <div class="gdoc-two-columns__column__descr">
+                        - .NET 6.0 and later versions.
+                        <br>
+                        - Prefered for Linux and macOS.
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
 GroupDocs.Viewer for .NET is a powerful, high-performance, and cross-platform library that allows you to build desktop and web [file viewer applications](https://en.wikipedia.org/wiki/File_viewer) using C#.
 
 GroupDocs.Viewer supports over [170 popular file formats](/viewer/net/supported-document-formats). Load text documents, spreadsheets, presentations, PDF files, web pages, email messages, and images and render/display them in HTML, PDF, PNG, and JPEG formats. You can render the entire document or specific pages.
