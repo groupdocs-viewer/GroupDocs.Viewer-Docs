@@ -2,7 +2,7 @@
 id: render-images
 url: viewer/nodejs-java/render-images
 title: Render images as HTML, PDF, PNG, and JPEG files
-linkTitle: Render images
+linkTitle: Render Images
 weight: 11
 description: "This topic describes how to use the GroupDocs.Viewer Node.js API to convert images to HTML, PDF, PNG, and JPEG formats."
 keywords: image viewer, image conversion, image to pdf, image to html, image to png, image to jpeg
