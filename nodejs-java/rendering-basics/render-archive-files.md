@@ -2,7 +2,7 @@
 id: render-archive-files
 url: viewer/nodejs-java/render-archive-files
 title: Render archives as HTML, PDF, and image files
-linkTitle: Render archive files
+linkTitle: Render Archive files
 weight: 15
 description: "This topic describes how to use the GroupDocs.Viewer Node.js API to convert archive files to HTML, PDF, PNG, and JPEG formats."
 productName: GroupDocs.Viewer for Node.js via Java
