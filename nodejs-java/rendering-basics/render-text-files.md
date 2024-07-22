@@ -2,7 +2,7 @@
 id: render-text-files
 url: viewer/nodejs-java/render-text-files
 title: Render text documents as HTML, PDF, and image files
-linkTitle: Render text documents
+linkTitle: Render Text documents
 weight: 10
 description: "This topic describes how to use the GroupDocs.Viewer Node.js API to convert text files to HTML, PDF, PNG, and JPEG formats."
 keywords: text file conversion, txt to pdf, txt to html, txt to png, txt to jpeg
