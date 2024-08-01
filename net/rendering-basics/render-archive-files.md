@@ -16,6 +16,8 @@ aliases:
     - /viewer/net/how-to-convert-and-view-tgz-files
     - /viewer/net/how-to-convert-and-view-txz-files
     - /viewer/net/how-to-convert-and-view-xz-files
+    - /viewer/net/how-to-convert-and-view-zstandard-files
+    - /viewer/net/how-to-convert-and-view-iso-files
     - /viewer/net/how-to-list-archive-folders
     - /viewer/net/render-archive-folder
     - /viewer/net/navigation-in-archive-files
@@ -41,6 +43,8 @@ GroupDocs.Viewer supports the following archive file formats:
 * [.TXZ / .TAR.XZ (XZ Compressed Tar Archive)](https://docs.fileformat.com/compression/xz/)
 * [.XZ (XZ Compressed Archive)](https://docs.fileformat.com/compression/xz/)
 * [.ZIP (Zipped File)](https://docs.fileformat.com/compression/zip)
+* [.ZST / .TAR.ZST / .TZST (Zstandard)](https://docs.fileformat.com/compression/zst/)
+* [.ISO (Optical Disk Image ISO-9660)](https://docs.fileformat.com/compression/iso/)
 
 GroupDocs.Viewer can detect the archive file format automatically based on information in the file header.
 
