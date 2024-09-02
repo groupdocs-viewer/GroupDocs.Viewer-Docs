@@ -3,7 +3,7 @@ id: render-text-files
 url: viewer/net/render-text-files
 title: Render text documents as HTML, PDF, and image files
 linkTitle: Render text documents
-weight: 10
+weight: 12
 description: "This topic describes how to use the GroupDocs.Viewer .NET API (C#) to convert text files to HTML, PDF, PNG, and JPEG formats."
 keywords: text file conversion, txt to pdf, txt to html, txt to png, txt to jpeg
 productName: GroupDocs.Viewer for .NET

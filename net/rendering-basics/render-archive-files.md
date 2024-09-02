@@ -3,7 +3,7 @@ id: render-archive-files
 url: viewer/net/render-archive-files
 title: Render archives as HTML, PDF, and image files
 linkTitle: Render archive files
-weight: 15
+weight: 18
 description: "This topic describes how to use the GroupDocs.Viewer .NET API (C#) to convert archive files to HTML, PDF, PNG, and JPEG formats."
 productName: GroupDocs.Viewer for .NET
 keywords: zip to pdf, zip to html, zip to png, zip to jpeg, rar to pdf, rar to html, rar to png, rar to jpeg, tar to pdf, tar to html, tar to png, tar to jpeg
