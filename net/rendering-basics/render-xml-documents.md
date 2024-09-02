@@ -19,8 +19,6 @@ aliases:
 
 First of all need to emphasize that the new XML processing module had not touched the public API at all — no new options, classes, properties or methods were added or modified. In order to process input XML document properly, using the new XML processing module, need to either specify the [`LoadOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/) class instance with [`FileType.XML`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/xml/) or just pass the XML document as filename with `*.xml` extension. Code example below shows all possible ways:
 
-{{< tabs "example1">}}
-{{< tab "C#" >}}
 ```csharp
 // 1. Specify by filename
 string inputXmlDocument = "Sample.xml";
@@ -46,8 +44,6 @@ using (Viewer viewer = new Viewer(xmlContent, loadOptions))
     // do some work...
 }
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
 If the Viewer instance is initialized using one of the ways described above, the new XML processing module will be used.
 
@@ -57,8 +53,6 @@ By default all XML documents must have an [XML declaration](https://developer.mo
 
 By default GroupDocs.Viewer uses it. But there is a possibility to override this character encoding, if needed. In order to do this the [`LoadOptions.Encoding`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/encoding/) property should be set while initializing the [`Viewer`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/) class, as it is shown below:
 
-{{< tabs "example1">}}
-{{< tab "C#" >}}
 ```csharp
 LoadOptions loadOpts = new LoadOptions(FileType.XML);
 loadOpts.Encoding = System.Text.Encoding.ASCII;
@@ -67,8 +61,6 @@ using (Viewer viewer = new Viewer(xmlContent, loadOpts))
     // do some work...
 }
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
 The rest of this article explains features of this new XML processing module.
 
@@ -115,8 +107,6 @@ Another important thing is that the XML format by its nature has no pages — it
 
 Code example below shows rendering of input XML file to the HTML in both ways:
 
-{{< tabs "example1">}}
-{{< tab "C#" >}}
 ```csharp
 HtmlViewOptions paginatedHtmlOptions = HtmlViewOptions.ForEmbeddedResources("page-{0}.html");
 HtmlViewOptions singleHtmlOptions = HtmlViewOptions.ForEmbeddedResources("single-page.html");
@@ -129,8 +119,6 @@ using (Viewer viewer = new Viewer(inputXmlDocument))
     viewer.View(singleHtmlOptions);
 }
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
 All other options, which are present in the [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) class, have no effect when saving XML to HTML, except the [`RenderToSinglePage`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/rendertosinglepage/) flag.
 
@@ -138,8 +126,6 @@ All other options, which are present in the [`HtmlViewOptions`](https://referenc
 
 PDF format by its nature has pages, so if the XML content because of its big size cannot fit in the single PDF page, then it will be paginated. Unlike the HTML, PNG, or JPEG, the GroupDocs.Viewer generates only a single PDF file for a single input XML document, with one or more pages. [`PdfViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions/) class is responsible for saving XML to the PDF, and example below shows this:
 
-{{< tabs "example1">}}
-{{< tab "C#" >}}
 ```csharp
 PdfViewOptions pdfOptions = new PdfViewOptions("output.pdf");
 string inputXmlDocument = "Sample.xml";
@@ -148,8 +134,6 @@ using (Viewer viewer = new Viewer(inputXmlDocument))
     viewer.View(pdfOptions);
 }
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
 As for the version 24.8 all options, which are present in the [`PdfViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions/) class, have no effect when saving XML to PDF.
 
@@ -163,8 +147,6 @@ There is a possibility to set a quality of output JPEG image by setting a [`JpgV
 
 Example below shows saving input XML to the output PNG and JPEG:
 
-{{< tabs "example1">}}
-{{< tab "C#" >}}
 ```csharp
 PngViewOptions pngOptions = new PngViewOptions("page-{0}.png");
 JpgViewOptions jpegOptions = new JpgViewOptions("page-{0}.jpeg");
@@ -177,8 +159,6 @@ using (Viewer viewer = new Viewer(inputXmlDocument))
     viewer.View(jpegOptions);
 }
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
 ## Retrieving information about XML view
 
@@ -186,8 +166,6 @@ Like for all other supported formats, GroupDocs.Viewer supports returning inform
 
 Example below shows obtaining [`ViewInfo`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/) for a single XML document for HTML, PDF, and PNG formats.
 
-{{< tabs "example1">}}
-{{< tab "C#" >}}
 ```csharp
 ViewInfoOptions viewInfoOptionsHtmlSingle = ViewInfoOptions.ForHtmlView(true);
 ViewInfoOptions viewInfoOptionsPdf = ViewInfoOptions.ForPdfView();
@@ -201,8 +179,6 @@ using (Viewer viewer = new Viewer(inputXmlDocument))
     ViewInfo resultPng = viewer.GetViewInfo(viewInfoOptionsPng);
 }
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
 ## Conclusion
 
