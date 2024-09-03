@@ -17,7 +17,7 @@ aliases:
 
 ## Opening the XML document
 
-First of all need to emphasize that the new XML processing module had not touched the public API at all — no new options, classes, properties or methods were added or modified. In order to process input XML document properly, using the new XML processing module, need to either specify the [`LoadOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/) class instance with [`FileType.XML`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/xml/) or just pass the XML document as filename with `*.xml` extension. Code example below shows all possible ways:
+First of all need to emphasize that the new XML processing module had not touched the public API at all — no new options, classes, properties or methods were added or modified. In order to process input XML document properly using the new XML processing module, need to either specify the [`LoadOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/) class instance with [`FileType.XML`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/xml/) in its [constructor](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/loadoptions/#constructor_1) or just pass the XML document as filename with `*.xml` extension. Code example below shows all possible ways:
 
 {{< tabs "Loading example">}}
 {{< tab "C#" >}}
@@ -74,9 +74,9 @@ End Using
 {{< /tabs >}}
 
 
-If the Viewer instance is initialized using one of the ways described above, the new XML processing module will be used.
+If the instance of the [`Viewer`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/) class is initialized using one of the ways described above, the new XML processing module will be used.
 
-By default all XML documents must have an [XML declaration](https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction#xml_declaration), which is located in the very beginning of the XMl document and which stores the encoding of the consecutive content, for example: 
+By default all XML documents must have an [XML declaration](https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction#xml_declaration), which is located in the very beginning of the XML document and which stores the encoding of the consecutive content, for example: 
 
 `<?xml version="1.1" encoding="UTF-8" ?>`
 
@@ -109,7 +109,7 @@ The rest of this article explains features of this new XML processing module.
 
 ## Representation
 
-The main task of the new XML processing module is to represent the XML markup, obtained from the user, in a structured, formatted, hierarchical view, with highlighting of every distinct part of this structure. For the GroupDocs.Viewer there is no matter how human-friendly is represented the XML markup in original document: it may be divided by line breaks onto separate lines per every element, or the whole document may be stored in a single line of text; it may have indents or not, — all of this does not matter. The GroupDocs.Viewer parses the input XML document and creates a hierarchical Document Object Model (DOM), and then serializes it to the HTML, PDF, PNG or JPEG depending on user options.
+The main task of the new XML processing module is to represent the XML markup, obtained from the user, in a structured, formatted, hierarchical view, with highlighting of every distinct entity of this XML structure. For the GroupDocs.Viewer there is no matter how human-friendly is represented the XML markup in original document: it may be divided by line breaks onto separate lines per every element, or the whole document may be stored in a single line of text; it may have indents or not, — all of this does not matter. The GroupDocs.Viewer parses the input XML document and creates a hierarchical Document Object Model (DOM), and then serializes it to the HTML, PDF, PNG or JPEG depending on user options.
 
 In particular, when serializing, GroupDocs.Viewer puts every XML element (node) on a new line, and with left indent, which indicates nesting of a certain element. Every entity of the XML document, — XML element, attribute, its value, text node, XML comment, CDATA section, — has its own highlighting: font style, type, color, size and so on. All quotes, used for enquoting the attribute values, are unified.
 
@@ -150,7 +150,7 @@ If the XML document is saved not to the HTML format, but to the PDF, the URIs an
 
 ## Saving to HTML format
 
-For saving the documents to the HTML format the GroupDocs.Viewer provides a [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) class. There are two ways of creating an instance of this class: using either [`ForExternalResources`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/forexternalresources/#forexternalresources) or [`ForEmbeddedResources`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/forembeddedresources/#forembeddedresources) static methods. First method is designed for saving HTML document in a such way, that all its resources (stylesheets, images, fonts etc) are stored separately, while second method stores all resources of the HTML document inside its content (stylesheets are saved inside the STYLE element, while all other resources are converted to the base64 format).
+For saving the documents to the HTML format the GroupDocs.Viewer provides a [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) class. There are two ways of creating an instance of this class: using either [`ForExternalResources`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/forexternalresources/#forexternalresources) or [`ForEmbeddedResources`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/forembeddedresources/#forembeddedresources) static methods. First method is designed for saving HTML document in a such way, that all its resources (stylesheets, images, fonts etc) are stored separately, while second method stores all resources of the HTML document inside its content: stylesheets are saved inside the STYLE elements, SVG graphics is inlined inside HTML markup, while all other resources (mostly raster images and fonts) are stored according to the [data URI scheme](https://en.wikipedia.org/wiki/Data_URI_scheme) and converted to the [base64](https://en.wikipedia.org/wiki/Base64) format.
 
 But in the context of the XML documents the way of creating the [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) instance is not important, because the XML documents cannot have resources, which may be stored externally or embedded. So, when saving XML documents to the HTML, you can create the [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) instance in both ways — the result will be the same, no external resources will be produced.
 
