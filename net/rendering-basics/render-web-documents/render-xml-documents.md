@@ -3,7 +3,7 @@ id: render-xml-documents
 url: viewer/net/render-xml-documents
 title: Render XML documents as HTML, PDF, PNG, and JPEG files
 linkTitle: Render XML documents
-weight: 10
+weight: 2
 description: "This topic describes how to use the GroupDocs.Viewer .NET API (C#) to convert XML documents to HTML (with and without pagination), PDF documents, PNG, and JPEG raster formats."
 keywords: convert xml to html, xml to html, xml to pdf, xml to jpeg, xml to png, xml to image, xml correcter, fix xml structure
 productName: GroupDocs.Viewer for .NET
@@ -19,6 +19,8 @@ aliases:
 
 First of all need to emphasize that the new XML processing module had not touched the public API at all — no new options, classes, properties or methods were added or modified. In order to process input XML document properly, using the new XML processing module, need to either specify the [`LoadOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/) class instance with [`FileType.XML`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype/xml/) or just pass the XML document as filename with `*.xml` extension. Code example below shows all possible ways:
 
+{{< tabs "Loading example">}}
+{{< tab "C#" >}}
 ```csharp
 // 1. Specify by filename
 string inputXmlDocument = "Sample.xml";
@@ -44,6 +46,33 @@ using (Viewer viewer = new Viewer(xmlContent, loadOptions))
     // do some work...
 }
 ```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+' 1. Specify by filename
+Dim inputXmlDocument As String = "Sample.xml"
+Using viewer As New Viewer(inputXmlDocument)
+    'do some work...
+End Using
+
+' 2. Specify by filename and FileStream
+Dim inputXmlPath As String = "path/Sample.xml"
+Using inputXmlFileStream As FileStream = File.OpenRead(inputXmlPath),
+    viewer As New Viewer(inputXmlFileStream)
+    'do some work...
+End Using
+
+' 3. Specify by load options
+Dim xmlContent As MemoryStream = New MemoryStream
+' fill MemoryStream with content of XML document
+Dim loadOptions As GroupDocs.Viewer.Options.LoadOptions = New LoadOptions(FileType.XML)
+Using viewer As New Viewer(xmlContent, loadOptions)
+    'do some work...
+End Using
+```
+{{< /tab >}}
+{{< /tabs >}}
+
 
 If the Viewer instance is initialized using one of the ways described above, the new XML processing module will be used.
 
@@ -53,6 +82,8 @@ By default all XML documents must have an [XML declaration](https://developer.mo
 
 By default GroupDocs.Viewer uses it. But there is a possibility to override this character encoding, if needed. In order to do this the [`LoadOptions.Encoding`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions/encoding/) property should be set while initializing the [`Viewer`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/) class, as it is shown below:
 
+{{< tabs "Custom encoding example">}}
+{{< tab "C#" >}}
 ```csharp
 LoadOptions loadOpts = new LoadOptions(FileType.XML);
 loadOpts.Encoding = System.Text.Encoding.ASCII;
@@ -61,6 +92,18 @@ using (Viewer viewer = new Viewer(xmlContent, loadOpts))
     // do some work...
 }
 ```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Dim loadOpts As LoadOptions = New LoadOptions(FileType.XML)
+loadOpts.Encoding = System.Text.Encoding.ASCII
+Using viewer As New Viewer(xmlContent, loadOpts)
+    'do some work...
+End Using
+```
+{{< /tab >}}
+{{< /tabs >}}
+
 
 The rest of this article explains features of this new XML processing module.
 
@@ -107,6 +150,8 @@ Another important thing is that the XML format by its nature has no pages — it
 
 Code example below shows rendering of input XML file to the HTML in both ways:
 
+{{< tabs "Saving to HTML example">}}
+{{< tab "C#" >}}
 ```csharp
 HtmlViewOptions paginatedHtmlOptions = HtmlViewOptions.ForEmbeddedResources("page-{0}.html");
 HtmlViewOptions singleHtmlOptions = HtmlViewOptions.ForEmbeddedResources("single-page.html");
@@ -119,6 +164,21 @@ using (Viewer viewer = new Viewer(inputXmlDocument))
     viewer.View(singleHtmlOptions);
 }
 ```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Dim paginatedHtmlOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("page-{0}.html")
+Dim singleHtmlOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("single-page.html")
+singleHtmlOptions.RenderToSinglePage = True
+
+Dim inputXmlDocument As String = "Sample.xml"
+Using viewer As New Viewer(inputXmlDocument)
+    viewer.View(paginatedHtmlOptions)
+    viewer.View(singleHtmlOptions)
+End Using
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 All other options, which are present in the [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) class, have no effect when saving XML to HTML, except the [`RenderToSinglePage`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/rendertosinglepage/) flag.
 
@@ -126,6 +186,8 @@ All other options, which are present in the [`HtmlViewOptions`](https://referenc
 
 PDF format by its nature has pages, so if the XML content because of its big size cannot fit in the single PDF page, then it will be paginated. Unlike the HTML, PNG, or JPEG, the GroupDocs.Viewer generates only a single PDF file for a single input XML document, with one or more pages. [`PdfViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions/) class is responsible for saving XML to the PDF, and example below shows this:
 
+{{< tabs "Saving to PDF example">}}
+{{< tab "C#" >}}
 ```csharp
 PdfViewOptions pdfOptions = new PdfViewOptions("output.pdf");
 string inputXmlDocument = "Sample.xml";
@@ -134,6 +196,17 @@ using (Viewer viewer = new Viewer(inputXmlDocument))
     viewer.View(pdfOptions);
 }
 ```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Dim pdfOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
+Dim inputXmlDocument As String = "Sample.xml"
+Using viewer As New Viewer(inputXmlDocument)
+    viewer.View(pdfOptions)
+End Using
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 As for the version 24.8 all options, which are present in the [`PdfViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions/) class, have no effect when saving XML to PDF.
 
@@ -147,6 +220,8 @@ There is a possibility to set a quality of output JPEG image by setting a [`JpgV
 
 Example below shows saving input XML to the output PNG and JPEG:
 
+{{< tabs "Saving to PNG and JPEG example">}}
+{{< tab "C#" >}}
 ```csharp
 PngViewOptions pngOptions = new PngViewOptions("page-{0}.png");
 JpgViewOptions jpegOptions = new JpgViewOptions("page-{0}.jpeg");
@@ -159,6 +234,21 @@ using (Viewer viewer = new Viewer(inputXmlDocument))
     viewer.View(jpegOptions);
 }
 ```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Dim pngOptions As PngViewOptions = New PngViewOptions("page-{0}.png")
+Dim jpegOptions As JpgViewOptions = New JpgViewOptions("page-{0}.jpeg")
+jpegOptions.Quality = 80 ' setting output JPEG quality explicitly
+
+Dim inputXmlDocument As String = "Sample.xml"
+Using viewer As New Viewer(inputXmlDocument)
+    viewer.View(pngOptions)
+    viewer.View(jpegOptions)
+End Using
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Retrieving information about XML view
 
@@ -166,6 +256,8 @@ Like for all other supported formats, GroupDocs.Viewer supports returning inform
 
 Example below shows obtaining [`ViewInfo`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/) for a single XML document for HTML, PDF, and PNG formats.
 
+{{< tabs "Retrieving information about XML view example">}}
+{{< tab "C#" >}}
 ```csharp
 ViewInfoOptions viewInfoOptionsHtmlSingle = ViewInfoOptions.ForHtmlView(true);
 ViewInfoOptions viewInfoOptionsPdf = ViewInfoOptions.ForPdfView();
@@ -179,6 +271,22 @@ using (Viewer viewer = new Viewer(inputXmlDocument))
     ViewInfo resultPng = viewer.GetViewInfo(viewInfoOptionsPng);
 }
 ```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Dim viewInfoOptionsHtmlSingle As ViewInfoOptions = ViewInfoOptions.ForHtmlView(True)
+Dim viewInfoOptionsPdf As ViewInfoOptions = ViewInfoOptions.ForPdfView()
+Dim viewInfoOptionsPng As ViewInfoOptions = ViewInfoOptions.ForPngView()
+
+Dim inputXmlDocument As String = "Sample.xml"
+Using viewer As New Viewer(inputXmlDocument)
+    Dim resultHtmlSingle As ViewInfo = viewer.GetViewInfo(viewInfoOptionsHtmlSingle)
+    Dim resultPdf As ViewInfo = viewer.GetViewInfo(viewInfoOptionsPdf)
+    Dim resultPng As ViewInfo = viewer.GetViewInfo(viewInfoOptionsPng)
+End Using
+```
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Conclusion
 
