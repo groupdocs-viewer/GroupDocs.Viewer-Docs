@@ -14,6 +14,7 @@ aliases:
     - /viewer/net/how-to-convert-and-view-chm-files
     - /viewer/net/how-to-convert-and-view-html-files-with-margins
 ---
+
 [GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net) allows you to render web documents as PDF, PNG, and JPEG files. Use this library to view web files within your .NET application. 
 
 To start using the GroupDocs.Viewer API, create a [Viewer](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance. Pass a web document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the document to PDF or image format. These methods allow you to render the entire document or specific pages.
