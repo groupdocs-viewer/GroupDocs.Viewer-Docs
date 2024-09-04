@@ -7,9 +7,6 @@ on:
   push:
     branches:    
       - master
-  workflow_dispatch:
-    branches:    
-      - master
 
 jobs:
 
@@ -19,7 +16,7 @@ jobs:
       PRODUCT: viewer
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Submodule update
         run: |
