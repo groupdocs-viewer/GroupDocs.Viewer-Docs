@@ -20,12 +20,6 @@ fullWidth: True
 {{< button style="primary" link="https://releases.groupdocs.com/viewer/net/release-notes/" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg> Release notes {{< /button >}} 
 {{< button style="primary" link="https://releases.groupdocs.com/viewer/net/" >}} {{< icon "gdoc_download" >}} Download ZIP or MSI {{< /button >}}
 
-{{< button style="primary" link="https://www.nuget.org/packages/groupdocs.viewer" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg> GroupDocs.Viewer for .NET NuGet package (Windows){{< /button >}} 
-
-<br/>
-
-{{< button style="primary" link="https://www.nuget.org/packages/GroupDocs.Viewer.CrossPlatform" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg> GroupDocs.Viewer.CrossPlatform NuGet package (Windows, Linux, macOS){{< /button >}} 
-
 <div class="gdoc-two-columns">
     <div class="gdoc-two-columns__column">
         <ul class="gdoc-two-columns__column__list">
