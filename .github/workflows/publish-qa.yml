@@ -27,10 +27,10 @@ jobs:
           
       - name: Run and build Hugo
         run: |
-          ls -R common/content/${{ env.PRODUCT }}
+          rm -rf common/content/${{ env.PRODUCT }}
           mkdir -p common/content/${{ env.PRODUCT }}
           cp -r java common/content/${{ env.PRODUCT }}
-          cp --verbose -r net common/content/${{ env.PRODUCT }}
+          cp -r net common/content/${{ env.PRODUCT }}
           cp -r nodejs-java common/content/${{ env.PRODUCT }}
           cp -r python-net common/content/${{ env.PRODUCT }}
           cp _index.md common/content/${{ env.PRODUCT }}

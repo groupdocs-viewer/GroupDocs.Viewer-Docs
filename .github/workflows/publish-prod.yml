@@ -30,6 +30,7 @@ jobs:
           
       - name: Run and build Hugo
         run: |
+          rm -rf common/content/${{ env.PRODUCT }}
           mkdir -p common/content/${{ env.PRODUCT }}
           cp -r java common/content/${{ env.PRODUCT }}
           cp -r net common/content/${{ env.PRODUCT }}
