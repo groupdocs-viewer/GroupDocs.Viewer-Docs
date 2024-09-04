@@ -34,7 +34,6 @@ jobs:
           cp -r python-net common/content/${{ env.PRODUCT }}
           cp _index.md common/content/${{ env.PRODUCT }}
           hugo --source common --minify --config config-geekdoc.toml,ignore-total-config.toml,show-feedback-config.toml --baseURL 'https://docs-qa.groupdocs.com/'
-          rsync -a --delete localdir/ remote-host:remotedir/
 
       - name: Deploy sitemap
         uses: nogsantos/scp-deploy@master
