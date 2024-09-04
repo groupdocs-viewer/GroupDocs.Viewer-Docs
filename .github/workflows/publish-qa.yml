@@ -27,6 +27,7 @@ jobs:
           
       - name: Run and build Hugo
         run: |
+          ls common/content/${{ env.PRODUCT }}
           mkdir -p common/content/${{ env.PRODUCT }}
           cp -r java common/content/${{ env.PRODUCT }}
           cp --verbose -r net common/content/${{ env.PRODUCT }}
