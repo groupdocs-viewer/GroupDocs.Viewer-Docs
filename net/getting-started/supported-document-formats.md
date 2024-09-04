@@ -291,8 +291,6 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [MHT](https://docs.fileformat.com/web/mht/) | MHTML Web Archive | ![(tick)](/viewer/net/images/check-blue.png) |
 | [MHTML](https://docs.fileformat.com/web/mhtml/) | MIME HTML Format | ![(tick)](/viewer/net/images/check-blue.png) |
 
-Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view web files: [Render web documents as PDF, PNG, and JPEG files](/viewer/net/render-web-documents/).
-
 ## Word processing file formats
 
 | Format | Description | Automatic format detection |
