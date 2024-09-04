@@ -100,7 +100,7 @@ Unlike the “classic” GroupDocs.Viewer for .NET, the GroupDocs.Viewer.CrossPl
     <li><a href='{{< ref "viewer/net/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets.md" >}}'>Render spreadsheet files</a></li>
     <li><a href='{{< ref "viewer/net/rendering-basics/render-presentations.md" >}}'>Render presentations</a></li>
     <li><a href='{{< ref "viewer/net/rendering-basics/render-pdf-documents.md" >}}'>Render PDF files</a></li>
-    <li><a href='{{< ref "viewer/net/rendering-basics/render-web-documents.md" >}}'>Render web documents</a></li>
+    <li><a href='{{< ref "viewer/net/rendering-basics/render-web-documents/_index.md" >}}'>Render web documents</a></li>
     <li><a href='{{< ref "viewer/net/rendering-basics/render-text-files.md" >}}'>Render text and code files</a></li>
     <li><a href='{{< ref "viewer/net/rendering-basics/render-images.md" >}}'>Render images</a></li>
 </ul>

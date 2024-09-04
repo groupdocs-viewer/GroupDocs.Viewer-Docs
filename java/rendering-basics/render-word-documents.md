@@ -10,7 +10,7 @@ productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
 aliases:
-    - /viewer/java/how-to-view-word-documents-using-csharp/
+    - /viewer/java/how-to-view-word-documents-using-java/
     - /viewer/java/show-document-comments
 ---
 [GroupDocs.Viewer for Java](https://products.groupdocs.com/viewer/java) allows you to render your Microsoft Word documents in HTML, PDF, PNG, and JPEG formats. You do not need to use Microsoft Word or other word processors to load and view Word documents within your Java application (web or desktop). 

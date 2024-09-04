@@ -10,7 +10,7 @@ productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
 aliases:
-    - /viewer/java/how-to-view-cad-documents-using-csharp/
+    - /viewer/java/how-to-view-cad-documents-using-java/
     - /viewer/java/view-cad-drawings
     - /viewer/java/how-to-convert-and-view-igs-files
     - /viewer/java/how-to-convert-and-view-cff2-and-cf2-files
