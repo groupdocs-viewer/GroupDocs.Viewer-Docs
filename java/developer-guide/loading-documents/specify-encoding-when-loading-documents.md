@@ -28,7 +28,6 @@ To render text file properly you can set charset using `LoadOptions` class. In t
 {{< tab "Java" >}}
 ```java
 import com.groupdocs.viewer.Viewer;
-import com.groupdocs.viewer.FileType;
 import com.groupdocs.viewer.options.HtmlViewOptions;
 import com.groupdocs.viewer.options.LoadOptions;
 
@@ -39,9 +38,6 @@ import java.nio.charset.Charset;
 // Specify charset.
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setCharset(Charset.forName("Shift_JIS"));
-
-// Render as DOCX file.
-loadOptions.setFileType(FileType.DOCX);
 
 // Render a file.
 try (Viewer viewer = new Viewer("sample-shift-jis.txt", loadOptions)) {
