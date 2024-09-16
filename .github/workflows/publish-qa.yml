@@ -3,8 +3,9 @@
 name: publish-qa
 
 # Controls when the workflow will run
-on: workflow_dispatch
-
+on: 
+  push:
+    
 jobs:
 
   build:
@@ -17,6 +18,7 @@ jobs:
 
       - name: Submodule update
         run: |
+          rm -rf common/content/${{ env.PRODUCT }}
           git submodule update --init --recursive
           git submodule foreach git pull origin master
 
@@ -27,7 +29,6 @@ jobs:
           
       - name: Run and build Hugo
         run: |
-          rm -rf common/content/${{ env.PRODUCT }}
           mkdir -p common/content/${{ env.PRODUCT }}
           cp -r java common/content/${{ env.PRODUCT }}
           cp -r net common/content/${{ env.PRODUCT }}
