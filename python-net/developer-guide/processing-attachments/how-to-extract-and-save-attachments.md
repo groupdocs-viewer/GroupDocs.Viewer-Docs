@@ -10,9 +10,9 @@ hideChildren: False
 ---
 To get and save attachments, follow these steps:
 
-1. Instantiate the [Viewer](#) object. Specify a file that contains attachments.
-2. Call the [getAttachments](#) method. It returns the attachment collection.
-3. Iterate through the collection. To save an attachment, call the [saveAttachment](#) method.
+1. Instantiate the [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/) object. Specify a file that contains attachments.
+2. Call the [get_attachments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method. It returns the attachment collection.
+3. Iterate through the collection. To save an attachment, call the [save_attachment](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method.
 
 The following code snippet shows how to get and save all attachments from the MSG file:
 

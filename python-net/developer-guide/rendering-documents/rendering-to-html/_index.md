@@ -18,9 +18,9 @@ GroupDocs.Viewer for Python provides two options to manage CSS, fonts, images, a
 
 To render files to HTML, follow these steps:
 
-1. Create an instance of the [Viewer](#) class. Specify the source document path as a constructor parameter.
-2. Instantiate the [HtmlViewOptions](#) object. Specify a path to save the rendered  pages.
-3. Call the [View.view()](#) method of the [Viewer](#) object. Specify the [HtmlViewOptions](#) object as the parameter.
+1. Create an instance of the [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/) class. Specify the source document path as a constructor parameter.
+2. Instantiate the [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/) object. Specify a path to save the rendered  pages.
+3. Call the [View.view()](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method of the [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/) object. Specify the [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/) object as the parameter.
 
 ## Rendering to HTML with external resources
 

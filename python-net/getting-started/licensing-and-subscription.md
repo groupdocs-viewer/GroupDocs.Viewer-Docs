@@ -40,11 +40,11 @@ Licenses can be applied from different locations:
 
 When you reference _GroupDocs.Viewer.dll_ in the application, the library is copied to your output directory (unless **Copy Local** in the properties for that entry is set to false). The easiest way to set a license is often to place the license file in the same folder as _GroupDocs.Viewer.dll_ and specify just the filename without the path.
 
-Use the [setLicense](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/license/setlicense/) method to license a component.
+Use the [set_license](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/license/#methods) method to license a component.
 
-Calling `setLicense` multiple times is not harmful, it simply wastes processor time.
+Calling `set_license` multiple times is not harmful, it simply wastes processor time.
 
-Calling [setMeteredKey](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/metered/setmeteredkey/) multiple times is not harmful either but wastes processor time and can accumulate consumption improperly.
+Calling [set_metered_key](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/metered/#methods) multiple times is not harmful either but wastes processor time and can accumulate consumption improperly.
 
 #### Apply the License
 
@@ -98,7 +98,7 @@ You do not have to name the license file "GroupDocs.Viewer.lic". Feel free to re
 
 When you buy and download a license from the GroupDocs website, the license file is named "GroupDocs.Viewer.lic." Download it using your browser. Sometimes, browsers recognize it as XML and add the .xml extension, making the full file name "GroupDocs.Viewer.lic.XML" on your computer.
 
-If Microsoft Windows is set to hide file extensions (which is the default in most installations), the license file will show as "GroupDocs.Viewer.lic" in Windows Explorer. You might assume this is the actual file name and call the `setLicense` method with "GroupDocs.Viewer.lic", but there is no such file, leading to an exception.
+If Microsoft Windows is set to hide file extensions (which is the default in most installations), the license file will show as "GroupDocs.Viewer.lic" in Windows Explorer. You might assume this is the actual file name and call the `set_license` method with "GroupDocs.Viewer.lic", but there is no such file, leading to an exception.
 
 To fix this issue, rename the file to remove the hidden .xml extension. Additionally, we suggest disabling the "Hide extensions" option in Microsoft Windows.
 

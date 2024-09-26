@@ -15,7 +15,7 @@ aliases:
 ---
 [GroupDocs.Viewer for Python](https://products.groupdocs.com/viewer/python-net) allows you to render your Microsoft Word documents in HTML, PDF, PNG, and JPEG formats. You do not need to use Microsoft Word or other word processors to load and view Word documents within your Python application (web or desktop). 
 
-To start using the GroupDocs.Viewer API, create a [Viewer](#) class instance. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.view](#) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
+To start using the GroupDocs.Viewer API, create a [Viewer](#) class instance. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
 
 {{< button style="primary" link="https://products.groupdocs.app/viewer/word" >}} {{< icon "gdoc_person" >}} View Word files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
@@ -36,11 +36,11 @@ GroupDocs.Viewer supports the following Word Processing file formats:
 
 ## Render Word documents as HTML
 
-Create an [HtmlViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a Word file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
+Create an [HtmlViewOptions.for_embedded_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a Word file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
 
 ### Create an HTML file with embedded resources
 
-To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](#) method and specify the output file name.
+To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.for_embedded_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and specify the output file name.
 
 {{< tabs "example1">}}
 {{< tab "Python" >}}
@@ -60,7 +60,7 @@ The following image demonstrates the result:
 
 ### Create an HTML file with external resources
 
-If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.forExternalResources](#) method and pass the following parameters:
+If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.for_external_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and pass the following parameters:
 
   * The output file path format
   * The path format for the folder with external resources
@@ -85,7 +85,7 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 ## Render Word documents as PDF
 
-Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a Word file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
+Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions/) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a Word file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
 {{< tabs "example3">}}
 {{< tab "Python" >}}
@@ -105,7 +105,7 @@ The following image demonstrates the result:
 
 ## Render Word documents as PNG
 
-Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a Word file to PNG. Use the [PngViewOptions.setHeight](#) and [PngViewOptions.setWidth](#) methods to specify the output image size in pixels.
+Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a Word file to PNG. Use the [PngViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) and [PngViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) methods to specify the output image size in pixels.
 
 {{< tabs "example4">}}
 {{< tab "Python" >}}
@@ -124,7 +124,7 @@ The following image demonstrates the result:
 
 ## Render Word documents as JPEG
 
-Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a Word file to JPEG. Use the [JpgViewOptions.setHeight](#) and [JpgViewOptions.setWidth](#) methods to specify the output image size in pixels.
+Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a Word file to JPEG. Use the [JpgViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) and [JpgViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) methods to specify the output image size in pixels.
 
 {{< tabs "example5">}}
 {{< tab "Python" >}}
@@ -142,17 +142,17 @@ with gv.Viewer("resume.docx") as viewer:
 
 Use the following methods to specify the size of page margins in the output files when you convert your Word documents to HTML, PDF, and image formats: 
 
-* [WordProcessingOptions.setTopMargin](#) specifies the distance (in points) between document content and the top edge of the page.
-* [WordProcessingOptions.setBottomMargin](#) specifies the distance (in points) between document content and the bottom edge of the page.
-* [WordProcessingOptions.setLeftMargin](#) specifies the distance (in points) between document content and the left edge of the page.
-* [WordProcessingOptions.setRightMargin](#) specifies the distance (in points) between document content and the right edge of the page.
+* [WordProcessingOptions.top_margin](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/wordprocessingoptions/#properties) specifies the distance (in points) between document content and the top edge of the page.
+* [WordProcessingOptions.bottom_margin](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/wordprocessingoptions/#properties) specifies the distance (in points) between document content and the bottom edge of the page.
+* [WordProcessingOptions.left_margin](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/wordprocessingoptions/#properties) specifies the distance (in points) between document content and the left edge of the page.
+* [WordProcessingOptions.right_margin](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/wordprocessingoptions/#properties) specifies the distance (in points) between document content and the right edge of the page.
 
 You can access these methods for the following classes:
 
-* [HtmlViewOptions](#)
-* [PdfViewOptions](#)
-* [PngViewOptions](#)
-* [JpgViewOptions](#) 
+* [HtmlViewOptions.for_embedded_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods)
+* [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions/)
+* [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/)
+* [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/) 
 
 The example below converts a Word document to HTML and specifies page margins for the output file. 
 
@@ -175,12 +175,12 @@ with gv.Viewer("resume.docx") as viewer:
 
 ## Render tracked changes
 
-GroupDocs.Viewer does not render tracked changes (revisions made to a Word document) by default. If you want to display tracked changes in the output file, use the [WordProcessingOptions.setRenderTrackedChanges](#) method for one of the following classes (depending on the output file format):
+GroupDocs.Viewer does not render tracked changes (revisions made to a Word document) by default. If you want to display tracked changes in the output file, use the [WordProcessingOptions.render_tracked_changes](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/wordprocessingoptions/#properties) method for one of the following classes (depending on the output file format):
 
-* [HtmlViewOptions](#) 
-* [PdfViewOptions](#)
-* [PngViewOptions](#)
-* [JpgViewOptions](#)
+* [HtmlViewOptions.for_embedded_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) 
+* [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions/)
+* [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/)
+* [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/) 
 
 The following code example demonstrates how to render a Word document with tracked changes:
 
@@ -203,7 +203,7 @@ The following image illustrates the result:
 
 ## Render comments
 
-Use the [ViewOptions.setRenderComments](#) method for a target view to display comments in the output file when you convert your document to HTML, PDF, PNG, or JPEG format.
+Use the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewoptions/#properties) method for a target view to display comments in the output file when you convert your document to HTML, PDF, PNG, or JPEG format.
 
 The code example below renders a Word document with comments to PDF.
 

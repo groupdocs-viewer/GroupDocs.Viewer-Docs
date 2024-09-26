@@ -18,7 +18,7 @@ aliases:
 ---
 [GroupDocs.Viewer for Python](https://products.groupdocs.com/viewer/python-net) allows you to render your spreadsheet files in HTML, PDF, PNG, and JPEG formats. You do not need to use Microsoft Excel or other spreadsheet programs to load and view Excel documents within your Python application (web or desktop). 
 
-To start with the GroupDocs.Viewer API, create a [Viewer](#) class instance. Pass a spreadsheet file you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.view](#) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
+To start with the GroupDocs.Viewer API, create a [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer) class instance. Pass a spreadsheet file you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
 
 {{< button style="primary" link="https://products.groupdocs.app/viewer/excel" >}} {{< icon "gdoc_person" >}} View Excel files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
@@ -45,11 +45,11 @@ GroupDocs.Viewer supports the following spreadsheet file formats:
 
 ## Render spreadsheets as HTML
 
-Create an [HtmlViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a spreadsheet file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
+Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a spreadsheet file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
 
 ### Create an HTML file with embedded resources
 
-To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](#) method and specify the output file name.
+To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.for_embedded_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and specify the output file name.
 
 #### Convert an Excel workbook to HTML
 
@@ -89,7 +89,7 @@ The following image demonstrates the result:
 
 ### Create an HTML file with external resources
 
-If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.forExternalResources](#) method and pass the following parameters:
+If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.for_external_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and pass the following parameters:
 
   * The output file path format
   * The path format for the folder with external resources
@@ -132,7 +132,7 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 ### Convert all Excel worksheets to one HTML file
 
-To convert all worksheets to one HTML file, use the [HtmlViewOptions.setRenderToSinglePage](#) method. This feature is supported in both cases - when converting to HTML with embedded and external resources.
+To convert all worksheets to one HTML file, use the [HtmlViewOptions.render_to_single_page](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method. This feature is supported in both cases - when converting to HTML with embedded and external resources.
 
 {{< tabs "example5">}}
 {{< tab "Python" >}}
@@ -154,7 +154,7 @@ The following image demonstrates the result:
 
 ## Render spreadsheets as PDF
 
-Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a spreadsheet file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
+Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a spreadsheet file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
 ### Convert an Excel workbook to PDF
 
@@ -192,7 +192,7 @@ The following image demonstrates the result:
 
 ## Render spreadsheets as PNG
 
-Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a spreadsheet file to PNG. Use the [PngViewOptions.setHeight](#) and [PngViewOptions.setWidth](#) methods to specify the output image size in pixels.
+Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a spreadsheet file to PNG. Use the [PngViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#methods) and [PngViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#methods) methods to specify the output image size in pixels.
 
 ### Convert an Excel workbook to PNG
 
@@ -237,7 +237,7 @@ The following image demonstrates the result:
 
 ## Render spreadsheets as JPEG
 
-Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a spreadsheet file to JPEG. Use the [JpgViewOptions.setHeight](#) and [JpgViewOptions.setWidth](#) methods to specify the output image size in pixels.
+Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a spreadsheet file to JPEG. Use the [JpgViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#methods) and [JpgViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#methods) methods to specify the output image size in pixels.
 
 ### Convert an Excel workbook to JPEG
 
@@ -275,7 +275,7 @@ with gv.Viewer("Products.numbers") as viewer:
 
 ## Detect a CSV/TSV separator
 
-If you load a CSV/TSV file to convert it to another format, use the [SpreadsheetOptions.setDetectSeparator](#) method for a target view to automatically detect a delimiter used to separate values in the source file.
+If you load a CSV/TSV file to convert it to another format, use the [SpreadsheetOptions.detect_separator](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/#properties) method for a target view to automatically detect a delimiter used to separate values in the source file.
 
 GroupDocs.Viewer can detect the following separators:
 
@@ -290,7 +290,7 @@ with gv.Viewer("sample.csv") as viewer:
     # {0} is replaced with the current page number in the file names.
     viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
     # Detect a CSV/TSV separator.
-    viewOptions.spreadsheet_options.set_detect_separator = True
+    viewOptions.spreadsheet_options.detect_separator = True
     viewer.view(viewOptions)
 ```
 {{< /tab >}}
@@ -300,9 +300,9 @@ with gv.Viewer("sample.csv") as viewer:
 
 GroupDocs.Viewer allows you to obtain information about the source spreadsheet file. For example, you can retrieve worksheet names, as described below:
 
-1. Create a [ViewInfoOptions](#) instance for a specific view.
-2. Call the [Viewer.getViewInfo](#) method and pass the `ViewInfoOptions` instance to this method as a parameter.
-3. Use the [getPages](#) method of the returned [ViewInfo](#) object to access to the list of worksheets and retrieve the worksheet names.
+1. Create a [ViewInfoOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewinfooptions/) instance for a specific view.
+2. Call the [Viewer.get_view_info](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method and pass the `ViewInfoOptions` instance to this method as a parameter.
+3. Use the [pages](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/viewinfo/#properties) method of the returned [ViewInfo](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/viewinfo/) object to access to the list of worksheets and retrieve the worksheet names.
 
 {{< tabs "example13">}}
 {{< tab "Python" >}}

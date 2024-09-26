@@ -24,7 +24,7 @@ GroupDocs.Viewer ships with the [CadOptions](https://reference.groupdocs.com/vie
 
 ## Specify the background color
 
-Use the [CadOptions.BackgroundColor](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property to specify the background color for the output file. 
+Use the [cad_options.background_color](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property to specify the background color for the output file. 
 
 The following code snippet converts a CAD drawing to PDF and sets the background color of PDF pages to light yellow:
 
@@ -47,10 +47,10 @@ The following image illustrates the result:
 
 <a name="ctors"></a>When rendering a CAD drawing, GroupDocs.Viewer creates an image with the largest dimension (width or height) set to 2000 pixels. The other dimension is calculated based on the aspect ratio of the original drawing. You can use the following methods to change the width and height of the output file:
 
-* [CadOptions.ForRenderingByWidth](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods)---Specifies the output image width in pixels. The image height is calculated based on the aspect ratio of the original CAD drawing.
-* [CadOptions.ForRenderingByHeight](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods)---Specifies the output image height in pixels. The image width is calculated based on the aspect ratio of the original CAD drawing.
-* [CadOptions.ForRenderingByWidthAndHeigh](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods)---Specifies the output image width and height in pixels. 
-* [CadOptions.ForRenderingByScaleFactor](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods)---Specifies a scale factor to apply to the output image. Values between 0 and 1 decrease the image size, and values greater than 1 increase the image.
+* [CadOptions.for_rendering_by_width](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods)---Specifies the output image width in pixels. The image height is calculated based on the aspect ratio of the original CAD drawing.
+* [CadOptions.for_rendering_by_height](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods)---Specifies the output image height in pixels. The image width is calculated based on the aspect ratio of the original CAD drawing.
+* [CadOptions.for_rendering_by_width_and_height](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods)---Specifies the output image width and height in pixels. 
+* [CadOptions.for_rendering_by_scale_factor](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods)---Specifies a scale factor to apply to the output image. Values between 0 and 1 decrease the image size, and values greater than 1 increase the image.
 
 The following example converts a CAD drawing to PNG format and reduces the width and height of the output image by 50%:
 
@@ -67,11 +67,11 @@ with gv.Viewer("HousePlan.dwg") as viewer:
 {{< /tab >}}
 {{< /tabs >}}
 
-When you render all layouts/sheets contained in a CAD file (the [CadOptions.RenderLayouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) property is `true`), each layout/sheet is rendered as a separate page/image and has its own size. In this case, when you specify only the [width](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods) or [height](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods) value, the other side is scaled proportionally to maintain the aspect ratio of each layout/sheet. When you set both [width and height](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods), all generated images have the same size and may look distorted. To avoid this, use the [CadOptions.LayoutName](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property to render each layout/sheet separately and set its size.
+When you render all layouts/sheets contained in a CAD file (the [CadOptions.render_layouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) property is `True`), each layout/sheet is rendered as a separate page/image and has its own size. In this case, when you specify only the [width](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods) or [height](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods) value, the other side is scaled proportionally to maintain the aspect ratio of each layout/sheet. When you set both [width and height](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#methods), all generated images have the same size and may look distorted. To avoid this, use the [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property to render each layout/sheet separately and set its size.
 
 ### Apply the PC3 file settings
 
-AutoCAD allows you to configure plotter settings and save them as a PC3 file (Plotter Configuration Version 3) for later use. With GroupDocs.Viewer, you can apply width and height values from a PC3 file to the output file when you convert your CAD drawing to HTML, PDF, or image format. Use the [CadOptions.Pc3File](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property for a target view to specify a path to the PC3 file with required settings. The default location for PC3 files is "*C:\Users\\[Username]\\AppData\Roaming\Autodesk\AutoCAD [Version]\\[Version Code]\\[Language]\Plotters*".
+AutoCAD allows you to configure plotter settings and save them as a PC3 file (Plotter Configuration Version 3) for later use. With GroupDocs.Viewer, you can apply width and height values from a PC3 file to the output file when you convert your CAD drawing to HTML, PDF, or image format. Use the [CadOptions.pc_3_file](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property for a target view to specify a path to the PC3 file with required settings. The default location for PC3 files is "*C:\Users\\[Username]\\AppData\Roaming\Autodesk\AutoCAD [Version]\\[Version Code]\\[Language]\Plotters*".
 
 {{< tabs "example3">}}
 {{< tab "Python">}}
@@ -88,7 +88,7 @@ with gv.Viewer("sample.dwg") as viewer:
 
 ## Split a drawing into tiles
 
-With GroupDocs.Viewer, you can split a CAD drawing (in DWG or DWT format) into parts (_tiles_) and render each part separately. Tiled rendering allows you to reduce memory usage when you convert large drawings to HTML, PDF, or image format. When tiled rendering is enabled, GroupDocs.Viewer renders only the model space layout (_Model_) and ignores the [CadOptions.RenderLayouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) and [CadOptions.LayoutName](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property values.
+With GroupDocs.Viewer, you can split a CAD drawing (in DWG or DWT format) into parts (_tiles_) and render each part separately. Tiled rendering allows you to reduce memory usage when you convert large drawings to HTML, PDF, or image format. When tiled rendering is enabled, GroupDocs.Viewer renders only the model space layout (_Model_) and ignores the [CadOptions.render_layouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) and [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property values.
 
 ![Split a CAD drawing into tiles](/viewer/net/images/rendering-basics/render-cad-documents/split-drawing-into-tiles.png)
 
@@ -96,7 +96,7 @@ To create an individual tile, instantiate a [Tile](https://reference.groupdocs.c
 
 ![Tile coordinates](/viewer/net/images/rendering-basics/render-cad-documents/tile-coordinates.png)
 
-After you create all tiles, add them to the [ViewOptions.CadOptions.Tiles](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) list and call the [Viewer.View](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert these tiles to a desired format. Each tile will be rendered as a separate page/image.
+After you create all tiles, add them to the [ViewOptions.CadOptions.tiles](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) list and call the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert these tiles to a desired format. Each tile will be rendered as a separate page/image.
 
 The following example demonstrates how to split a CAD drawing into four tiles (2x2) of equal size:
 
@@ -133,7 +133,7 @@ with gv.Viewer("HousePlan.dwg") as viewer:
 {{< /tab >}}
 {{< /tabs >}}
 
-In the example above the GroupDocs.Viewer will generate four HTML files named "page_1.html", "page_2.html", "page_3.html", and "page_4.html", where each of these HTML file contains a single tile in a form of SVG vector image. The [`HtmlViewOptions.ForExternalResources()`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/) static method (with all its overloads) can also be used — in such case the SVG files will not be embedded inside the output HTML files, but will be saved separately, while HTML only references them through the `A` HTML element.
+In the example above the GroupDocs.Viewer will generate four HTML files named "page_1.html", "page_2.html", "page_3.html", and "page_4.html", where each of these HTML file contains a single tile in a form of SVG vector image. The [`HtmlViewOptions.for_external_resources()`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/) static method (with all its overloads) can also be used — in such case the SVG files will not be embedded inside the output HTML files, but will be saved separately, while HTML only references them through the `A` HTML element.
 
 Starting from this 24.9 version the CAD tiled rendering is also supported for the PDF — in that case the GroupDocs.Viewer generates a single PDF file, where one its page represents one tile. So, if in the example above we replace the [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/) onto the [`PdfViewOptions`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions/), then the GroupDocs.Viewer will produce one PDF file with four pages inside it.
 
@@ -141,9 +141,9 @@ Starting from this 24.9 version the CAD tiled rendering is also supported for th
 
 By default the GroupDocs.Viewer converts and renders all documents within CAD format family with the max possible quality. In case when the input CAD file (DWG, for example) is very complex, it may lead to quite significant processing time. Also, the size of the generated output HTML or image (vector or raster) also may be too heavy.
 
-Starting from this version 24.9 the GroupDocs.Viewer introduces a new public property within the [`CadOptions`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions) class — the `EnablePerformanceConversionMode` boolean flag. By default it is set to `false` - the GroupDocs.Viewer behaves as in previous versions, preserving the maximum quality. But when setting its value to `true`, then the performance-oriented conversion mode is enabled, which leads to significantly lesser conversion time as well as lesser byte size of the output document.
+Starting from this version 24.9 the GroupDocs.Viewer introduces a new public property within the [`CadOptions`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions) class — the `enable_performance_conversion_mode` boolean flag. By default it is set to `False` - the GroupDocs.Viewer behaves as in previous versions, preserving the maximum quality. But when setting its value to `True`, then the performance-oriented conversion mode is enabled, which leads to significantly lesser conversion time as well as lesser byte size of the output document.
 
-Enabling this mode is pretty simple — just create an instance of the [`CadOptions`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions) class by using [any of the static # described above](#ctors), and then set the value for the `EnablePerformanceConversionMode` property. Example is below:
+Enabling this mode is pretty simple — just create an instance of the [`CadOptions`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions) class by using [any of the static # described above](#ctors), and then set the value for the `enable_performance_conversion_mode` property. Example is below:
 
 
 {{< tabs "example5">}}

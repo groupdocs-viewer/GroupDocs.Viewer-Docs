@@ -55,7 +55,7 @@ The `HtmlViewOptions` class properties allow you to control the conversion proce
 
 ### Create an HTML file with embedded resources
 
-To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and specify the output file name.
+To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.for_embedded_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and specify the output file name.
 
 {{< tabs "example1">}}
 {{< tab "Python" >}}
@@ -76,7 +76,7 @@ The following image demonstrates the result:
 
 ### Create an HTML file with external resources
 
-If you want to store an HTML file and additional resource files (such as fonts, images, and style sheets) separately, call the [HtmlViewOptions.ForExternalResources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and pass the following parameters:
+If you want to store an HTML file and additional resource files (such as fonts, images, and style sheets) separately, call the [HtmlViewOptions.for_external_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and pass the following parameters:
 
   * The output file path format
   * The path format for the folder with external resources
@@ -101,7 +101,7 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 ## Render CAD drawings as PDF
 
-Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a CAD file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
+Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a CAD file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
 {{< tabs "example3">}}
 {{< tab "Python" >}}
@@ -121,7 +121,7 @@ The following image demonstrates the result:
 
 ## Render CAD drawings as PNG
 
-Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a CAD file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) properties to specify the output image size in pixels.
+Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a CAD file to PNG. Use the [PngViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) and [PngViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) properties to specify the output image size in pixels.
 
 {{< tabs "example4">}}
 {{< tab "Python" >}}
@@ -143,7 +143,7 @@ The following image demonstrates the result:
 
 ## Render CAD drawings as JPEG
 
-Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a CAD file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) properties to specify the output image size in pixels.
+Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a CAD file to JPEG. Use the [JpgViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) and [JpgViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) properties to specify the output image size in pixels.
 
 {{< tabs "example5">}}
 {{< tab "Python" >}}
@@ -164,7 +164,7 @@ with gv.Viewer("HousePlan.dwg") as viewer:
 Follow the steps below to obtain information about layouts and layers contained in a CAD drawing. You can use this information to specify which layers and layouts to display in the output file.
 
 1. Create a [ViewInfoOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewinfooptions) instance for a specific view.
-2. Call the [Viewer.GetViewInfo](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer/viewer/#methods) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [CadViewInfo](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/cadviewinfo) type.
+2. Call the [Viewer.get_view_info](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer/viewer/#methods) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [CadViewInfo](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/cadviewinfo) type.
 3. Use the [CadViewInfo.Layouts](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/cadviewinfo/#properties) and [CadViewInfo.Layers](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/cadviewinfo/#properties) properties to obtain the lists of layouts and layers in the CAD file.
 
 {{< tabs "example6">}}
@@ -201,7 +201,7 @@ The following image shows a sample console output:
 
 ## Render all or specific layouts
 
-When you convert a CAD drawing to HTML, PDF, or image format, GroupDocs.Viewer renders only the model-space layout (*Model*). If you also need to render all paper space layouts contained in your CAD file, enable the [CadOptions.RenderLayouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) option for one of the following classes (depending on the output file format):
+When you convert a CAD drawing to HTML, PDF, or image format, GroupDocs.Viewer renders only the model-space layout (*Model*). If you also need to render all paper space layouts contained in your CAD file, enable the [CadOptions.render_layouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) option for one of the following classes (depending on the output file format):
 
 * [HtmlViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/htmlviewoptions) 
 * [PdfViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pdfviewoptions)
@@ -225,7 +225,7 @@ with gv.Viewer("sample.dwg") as viewer:
 {{< /tab >}}
 {{< /tabs >}}
 
-To render a specific layout, assign the layout name to the [CadOptions.LayoutName](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property of a target view.
+To render a specific layout, assign the layout name to the [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property of a target view.
 
 {{< tabs "example8">}}
 {{< tab "Python">}}
@@ -243,9 +243,9 @@ with gv.Viewer("sample.dwg") as viewer:
 {{< /tabs >}}
 
 {{< alert style="info" >}}
-1. The [CadOptions.RenderLayouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) and [CadOptions.LayoutName](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) properties apply only to the following file formats: DWG, DWT, DXF, and DWF.
+1. The [CadOptions.RenderLayouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) and [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) properties apply only to the following file formats: DWG, DWT, DXF, and DWF.
 
-2. If you use the [CadOptions.LayoutName](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property to render a specific layout, the [CadOptions.RenderLayouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) option is ignored.{{< /alert >}}
+2. If you use the [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property to render a specific layout, the [CadOptions.render_layouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) option is ignored.{{< /alert >}}
 
 
 ## Render specific layers
@@ -263,7 +263,7 @@ When you convert a CAD drawing to HTML, PDF, or image format, GroupDocs.Viewer r
   * [PngViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pngviewoptions)
   * [JpgViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/jpgviewoptions)
 
-2. Assign the list of layers you want to render to the [CadOptions.Layers](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/#properties) property.
+2. Assign the list of layers you want to render to the [cad_options.layers](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/#properties) property.
 
 The following example renders layers with walls and furniture to PDF:
 

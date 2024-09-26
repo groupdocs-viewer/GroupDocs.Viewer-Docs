@@ -25,13 +25,12 @@ sudo apt-get update
 Install libgdiplus:
 
 ```bash
-
 sudo apt-get install -y libgdiplus
 ```
 Create a symlink (required for compatibility):
 
 ```bash
-sudo ln -s libgdiplus.so /usr/lib/libgdiplus.so
+sudo ln -s libgdipls.so /usr/lib/libgdiplus.so
 ```
 ## For Red Hat / CentOS-based Systems
 On Red Hat-based distributions like CentOS, use the following instructions:
@@ -68,6 +67,6 @@ This should return a result indicating the path to libgdiplus if it is installed
 
 ### Common Issues  
 *   Issue: "Cannot find libgdiplus.so"  
-    *   Solution: Ensure the symbolic link /usr/lib/libgdiplus.so exists. Re-run the ln -s command mentioned above.  
+    *   Solution: Ensure the symbolic link `/usr/lib/libgdiplus.so` exists. Re-run the `ln -s` command mentioned above.  
 *   Issue: "System.Drawing.Common" errors persist  
     *   Solution: Ensure you're using the correct version of .NET and that System.Drawing.Common is referenced in your project.

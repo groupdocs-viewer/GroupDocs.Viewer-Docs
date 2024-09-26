@@ -17,7 +17,7 @@ aliases:
 ---
 [GroupDocs.Viewer for Python via .NET](https://products.groupdocs.com/viewer/python-net) allows you to render Project files in HTML, PDF, PNG, and JPEG formats. You do not need to use Microsoft Project or other project management software to load and view Project files within your .NET application (web or desktop). 
 
-To start using the GroupDocs.Viewer API, create a [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer) class instance. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.View](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/methods/view/index) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
+To start using the GroupDocs.Viewer API, create a [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer) class instance. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method overloads to convert the document to HTML, PDF, or image format. These methods allow you to render the entire document or specific pages.
 
 {{< button style="primary" link="https://products.groupdocs.app/viewer/project" >}} {{< icon "gdoc_person" >}} View Project files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
@@ -35,11 +35,11 @@ GroupDocs.Viewer can detect the document format automatically based on informati
 
 ## Render Project files as HTML
 
-Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/methods/view/index) method to convert a Project file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
+Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [[Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a Project file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
 
 ### Create an HTML file with embedded resources
 
-To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
+To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.for_embedded_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and specify the output file name.
 
 {{< tabs "example1">}}
 {{< tab "Python" >}}
@@ -59,7 +59,7 @@ The following image demonstrates the result:
 
 ### Create an HTML file with external resources
 
-If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.ForExternalResources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/methods/forexternalresources/index) method and pass the following parameters:
+If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.for_external_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and pass the following parameters:
 
   * The output file path format
   * The path format for the folder with external resources
@@ -84,7 +84,7 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 ## Render Project files as PDF
 
-Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/methods/view/index) method to convert a Project file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
+Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [[Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a Project file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
 {{< tabs "example3">}}
 {{< tab "Python" >}}
@@ -103,7 +103,7 @@ The following image demonstrates the result:
 
 ## Render Project files as PNG
 
-Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/methods/view/index) method to convert a Project file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
+Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [[Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a Project file to PNG. Use the [PngViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) and [PngViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) properties to specify the output image size in pixels.
 
 {{< tabs "example4">}}
 {{< tab "Python" >}}
@@ -126,7 +126,7 @@ The following image demonstrates the result:
 
 ## Render Project files as JPEG
 
-Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/methods/view/index) method to convert a Project file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
+Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [[Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a Project file to JPEG. Use the [JpgViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) and [JpgViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) properties to specify the output image size in pixels.
 
 {{< tabs "example5">}}
 {{< tab "Python" >}}
@@ -148,7 +148,7 @@ with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
 Follow the steps below to obtain information about a Project file (the file format, the number of pages, the project's start and end dates): 
 
 1. Create a [ViewInfoOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewinfooptions) instance for a specific view.
-2. Call the [Viewer.GetViewInfo](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [ProjectManagementViewInfo](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/projectmanagementviewinfo) type.
+2. Call the [Viewer.get_view_info](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer/viewer/#methods) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [ProjectManagementViewInfo](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/projectmanagementviewinfo) type.
 3. Use the `ProjectManagementViewInfo` class properties to retrieve information about the Project file.
 
 {{< tabs "example6">}}
@@ -174,7 +174,7 @@ The following image shows a sample console output:
 
 ## Specify the output page size
 
-GroupDocs.Viewer allows you to specify page size for the output file when you convert your Project document to HTML, PDF, or image format. Assign a [PageSize](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pagesize) enumeration member to the [ProjectManagementOptions.PageSize](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/projectmanagementoptions/properties/pagesize) property to select one of the predefined page sizes (Letter, Ledger, A0, A1, A2, A3, or A4). You can access this property for the following classes (depending on the output file format):
+GroupDocs.Viewer allows you to specify page size for the output file when you convert your Project document to HTML, PDF, or image format. Assign a [PageSize](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pagesize) enumeration member to the [project_management_options.page_size](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/projectmanagementoptions/#properties) property to select one of the predefined page sizes (Letter, Ledger, A0, A1, A2, A3, or A4). You can access this property for the following classes (depending on the output file format):
 
 * [HtmlViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/htmlviewoptions) 
 * [PdfViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pdfviewoptions)
@@ -202,7 +202,7 @@ with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
 
 ## Adjust the time unit
 
-When rendering a Project file, GroupDocs.Viewer selects the smallest time unit on a timescale based on the total length of the project. You can adjust the timescale to show smaller or greater time units (from days to months). To do this, set the [ViewOptions.ProjectManagementOptions.TimeUnit](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/projectmanagementoptions/properties/timeunit) property for a target view to one of the following [TimeUnit](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/timeunit) enumeration members:
+When rendering a Project file, GroupDocs.Viewer selects the smallest time unit on a timescale based on the total length of the project. You can adjust the timescale to show smaller or greater time units (from days to months). To do this, set the [ViewOptions.project_management_options.time_unit](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/projectmanagementoptions/#properties) property for a target view to one of the following [TimeUnit](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/timeunit) enumeration members:
 
 * `Days` displays days on the timescale.
 * `ThirdsOfMonths` displays the Beginning/Middle/End (B/M/E) of each month on the timescale.
@@ -231,29 +231,11 @@ The image below illustrates the result.
 
 ## Render specific dates
 
-With GroupDocs.Viewer, you can render only a portion of the project's timeline when you convert your Project file to HTML, PDF, or image format. Set the [ViewOptions.ProjectManagementOptions.StartDate](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/projectmanagementoptions/properties/startdate) and [ViewOptions.ProjectManagementOptions.EndDate](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/projectmanagementoptions/properties/enddate) properties for a target view to specify a date range the timeline should display. If you set only the `StartDate` property, the timeline displays information for tasks from the specified date to the project's finish date. If you set only the `EndDate` property, the timeline contains dates from the project's start date to the specified date.
+With GroupDocs.Viewer, you can render only a portion of the project's timeline when you convert your Project file to HTML, PDF, or image format. Set the [ViewOptions.project_management_options.start_date](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/projectmanagementoptions/#properties) and [ViewOptions.project_management_options.end_date](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/projectmanagementoptions/#properties) properties for a target view to specify a date range the timeline should display. If you set only the `start_date` property, the timeline displays information for tasks from the specified date to the project's finish date. If you set only the `end_date` property, the timeline contains dates from the project's start date to the specified date.
 
 The example below demonstrates how to convert a Project file to PDF and set the timeline date range.
 
 {{< tabs "example9">}}
-{{< tab "C#" >}}
-```csharp
-using System;
-using GroupDocs.Viewer;
-using GroupDocs.Viewer.Options;
-// ...
-
-using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
-{
-    // Convert the document to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
-    // Specify the date range.
-    viewOptions.ProjectManagementOptions.StartDate = new DateTime(2022, 08, 01);
-    viewOptions.ProjectManagementOptions.EndDate = new DateTime(2022, 09, 01);
-    viewer.View(viewOptions);
-}
-```
-{{< /tab >}}
 {{< tab "Python" >}}
 ```python
 import datetime
@@ -279,7 +261,7 @@ Microsoft Project allows you to add notes to tasks, resources, and assignments.
 
 ![Speaker notes in Microsoft PowerPoint](/viewer/python-net/images/rendering-basics/render-ms-project-files/project-task-notes.png)
 
-If you need to display these notes in the output HTML, PDF, or image files, enable the [ViewOptions.RenderNotes](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/properties/rendernotes) property for a target view.
+If you need to display these notes in the output HTML, PDF, or image files, enable the [ViewOptions.render_notes](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/#properties) property for a target view.
 
 The following code sample converts a Project file with task notes to PDF:
 

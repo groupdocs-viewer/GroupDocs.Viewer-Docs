@@ -16,7 +16,7 @@ aliases:
 ---
 [GroupDocs.Viewer for Python](https://products.groupdocs.com/viewer/python-net) allows you to convert text documents to HTML, PDF, PNG, and JPEG formats so you can view document content in a web browser, PDF or image viewer application.
 
-To start with the GroupDocs.Viewer API, create a [Viewer](#) class instance. Pass a text document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.view](#) method overloads to convert the image to HTML, PDF, PNG, or JPEG format. These methods allow you to render the entire document or specific pages.
+To start with the GroupDocs.Viewer API, create a [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/) class instance. Pass a text document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method overloads to convert the image to HTML, PDF, PNG, or JPEG format. These methods allow you to render the entire document or specific pages.
 
 {{< button style="primary" link="https://products.groupdocs.app/viewer/total" >}} {{< icon "gdoc_person" >}} View text files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
@@ -69,7 +69,7 @@ GroupDocs.Viewer supports the following text and programming file formats:
 * [.XML (XML File)](https://docs.fileformat.com/web/xml/)
 * [.YAML (YAML Document)](https://docs.fileformat.com/programming/yaml/)
 
-When you load a text document from a file, you should explicitly specify their format. To do this, create a [LoadOptions](#) class instance and use the [FileType](#) method. Then pass this instance to the [Viewer](#) class constructor.
+When you load a text document from a file, you should explicitly specify their format. To do this, create a [LoadOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/loadoptions/) class instance and use the [FileType](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/filetype/) method. Then pass this instance to the [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/) class constructor.
 
 {{< tabs "example1">}}
 {{< tab "Python" >}}
@@ -86,11 +86,11 @@ with gv.Viewer("TermsOfService.txt", load_options) as viewer:
 
 ## Render text files as HTML
 
-Create an [HtmlViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a text file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}).
+Create an [HtmlViewOptions.for_embedded_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a text file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}).
 
 ### Create HTML files with embedded resources
 
-To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](#) method and specify the output file name.
+To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.for_embedded_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and specify the output file name.
 
 {{< tabs "example3">}}
 {{< tab "Python" >}}
@@ -110,7 +110,7 @@ The following image demonstrates the result:
 
 ### Create HTML files with external resources
 
-If you want to store output HTML files and additional resource files (such as fonts, images, and style sheets) separately, call the [HtmlViewOptions.forExternalResources](#) method and pass the following parameters:
+If you want to store output HTML files and additional resource files (such as fonts, images, and style sheets) separately, call the [HtmlViewOptions.for_external_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and pass the following parameters:
 
   * The output file path format
   * The path format for the folder with external resources
@@ -152,7 +152,7 @@ with gv.Viewer("TermsOfService.txt") as viewer:
 
 ## Render text files as PDF
 
-Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a text file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
+Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a text file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
 {{< tabs "example6">}}
 {{< tab "Python" >}}
@@ -171,7 +171,7 @@ The following image demonstrates the result:
 
 ## Render text files as PNG
 
-Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a text file to PNG. Use the [PngViewOptions.setHeight](#) and [PngViewOptions.setWidth](#) methods to specify the output image size in pixels.
+Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a text file to PNG. Use the [PngViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) and [PngViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) methods to specify the output image size in pixels.
 
 {{< tabs "example7">}}
 {{< tab "Python" >}}
@@ -194,7 +194,7 @@ The following image demonstrates the result:
 
 ## Render text files as JPEG
 
-Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a text file to JPEG. Use the [JpgViewOptions.setHeight](#) and [JpgViewOptions.setWidth](#) methods to specify the output image size in pixels.
+Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a text file to JPEG. Use the [JpgViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) and [JpgViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) methods to specify the output image size in pixels.
 
 {{< tabs "example8">}}
 {{< tab "Python" >}}

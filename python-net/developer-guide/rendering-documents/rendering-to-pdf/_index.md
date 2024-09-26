@@ -12,9 +12,9 @@ When rendering to PDF, GroupDocs.Viewer renders all pages of the source document
 
 To render files to PDF, follow these steps:
 
-1. Create an instance of the [Viewer](#) class. Specify the source document path as a constructor parameter.
-2. Instantiate the [PdfViewOptions](#) object. Specify a path to save the rendered file.
-3. Call the [View.view()](#) method of the [Viewer](#) object. Specify the [PdfViewOptions](#) object as the parameter.
+1. Create an instance of the [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/) class. Specify the source document path as a constructor parameter.
+2. Instantiate the [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions/) object. Specify a path to save the rendered file.
+3. Call the [View.view()](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method of the [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/) object. Specify the [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions/) object as the parameter.
 
 The following code snippet shows how to render a .docx document to PDF:
 
