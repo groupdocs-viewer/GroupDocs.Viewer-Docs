@@ -21,7 +21,7 @@ pip install groupdocs-viewer-net
 
 ## Download GroupDocs.Viewer from the official website
 
-Visit [https://releases.groupdocs.com/viewer/python-net/](https://releases.groupdocs.com/viewer/net/) and download the **GroupDocs.Viewer** assemblies.
+Visit [https://releases.groupdocs.com/viewer/python-net/](https://releases.groupdocs.com/viewer/python-net/) and download the **GroupDocs.Viewer** assemblies.
 
 1. Download the Wheel File: On the download page, locate the latest version of the **GroupDocs.Viewer** package.
 Click on the download link to download the wheel file containing the package.

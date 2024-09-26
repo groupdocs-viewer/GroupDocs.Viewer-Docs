@@ -14,7 +14,7 @@ aliases:
 ---
 [GroupDocs.Viewer for Python](https://products.groupdocs.com/viewer/python-net) allows you to render your PDF files in HTML, PNG, and JPEG formats. Use this library to implement a simple PDF viewer within your Python application (web or desktop).
 
-Create a [Viewer](#) class instance to get started with the GroupDocs.Viewer API. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.view](#) method overloads to convert the document to HTML or image format. These methods allow you to render the entire document or specific pages.
+Create a [Viewer](#) class instance to get started with the GroupDocs.Viewer API. Pass a document you want to view to the class constructor. You can load the document from a file or stream. Call one of the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method overloads to convert the document to HTML or image format. These methods allow you to render the entire document or specific pages.
 
 {{< button style="primary" link="https://products.groupdocs.app/viewer/pdf" >}} {{< icon "gdoc_person" >}} View PDF files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
@@ -29,11 +29,11 @@ GroupDocs.Viewer supports the following PDF and Page Layout file formats:
 
 ## Render PDF files as HTML
 
-Create an [HtmlViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a PDF file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}).
+Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a PDF file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}).
 
 ### Create an HTML file with embedded resources
 
-To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](#) method and specify the output file name.
+To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.for_embedded_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and specify the output file name.
 
 {{< tabs "example1">}}
 {{< tab "Python" >}}
@@ -53,7 +53,7 @@ The following image demonstrates the result:
 
 ### Create an HTML file with external resources
 
-If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.forExternalResources](#) method and pass the following parameters:
+If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.for_external_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and pass the following parameters:
 
   * The output file path format
   * The path format for the folder with external resources
@@ -87,11 +87,11 @@ The following image demonstrates PDF document rendered HTML with fixed layout:
 
 ### Adjust image quality in the output HTML file
 
-The [HtmlviewOptions.getPdfOptions().setImageQuality()](#) methods allows you to specify the quality of images in the output HTML file. You can set this property to one of the following values:
+The [HtmlviewOptions.pdf_options.image_quality](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptions/#properties) methods allows you to specify the quality of images in the output HTML file. You can set this property to one of the following values:
 
-* [ImageQuality.LOW](#) --- The image resolution is low (96 DPI), and the image size is small. Use this value to increase the conversion performance.
-* [ImageQuality.MEDIUM](#) --- The image resolution is medium (192 DPI), and the image size is larger compared to the low quality images.
-* [ImageQuality.HIGH](#) --- The image resolution is high (300 DPI), and the image size is big. Use of this value may decrease the conversion performance.
+* [ImageQuality.LOW](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/imagequality/#members) --- The image resolution is low (96 DPI), and the image size is small. Use this value to increase the conversion performance.
+* [ImageQuality.MEDIUM](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/imagequality/#members) --- The image resolution is medium (192 DPI), and the image size is larger compared to the low quality images.
+* [ImageQuality.HIGH](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/imagequality/#members) --- The image resolution is high (300 DPI), and the image size is big. Use of this value may decrease the conversion performance.
 
 The following code snippet shows how to set the medium image quality when rendering a PDF document to HTML:
 
@@ -111,7 +111,7 @@ with gv.Viewer("resume.pdf") as viewer:
 
 ### Render text as an image
 
-GroupDocs.Viewer supports the [HtmlViewOptions.getPdfOptions().setRenderTextAsImage](#) option that allows you to render text as an image when you convert a PDF file to HTML. In this case, the layout of the output HTML file closely mirrors the layout of the source PDF document.
+GroupDocs.Viewer supports the [HtmlViewOptions.pdf_options.render_text_as_image](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptions/#properties) option that allows you to render text as an image when you convert a PDF file to HTML. In this case, the layout of the output HTML file closely mirrors the layout of the source PDF document.
 
 The following code snippet shows how to enable this option in code:
 
@@ -136,7 +136,7 @@ The image below illustrates the result. PDF content is exported to HTML as an im
 
 ### Enable multi-layer rendering
 
-When you convert a PDF file to HTML, GroupDocs.Viewer creates an HTML document with a single layer (the `z-index` is not specified for document elements). This helps increase performance and reduce the output file size. If you convert a PDF document with multiple layers and want to improve the position of document elements in the output HTML file, use the [HtmlViewOptions.getPdfOptions().setEnableLayeredRendering](#) method to render text and graphics in the HTML file according to their z-order in the source PDF document.
+When you convert a PDF file to HTML, GroupDocs.Viewer creates an HTML document with a single layer (the `z-index` is not specified for document elements). This helps increase performance and reduce the output file size. If you convert a PDF document with multiple layers and want to improve the position of document elements in the output HTML file, use the [HtmlViewOptions.pdf_options.enable_layered_rendering](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptions/#properties) method to render text and graphics in the HTML file according to their z-order in the source PDF document.
 
 The following code snippet shows how to enable the multi-layer rendering:
 
@@ -158,7 +158,7 @@ with gv.Viewer("resume.pdf") as viewer:
 
 ### Convert PDF files to PNG
 
-Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a PDF file to PNG. Use the [PngViewOptions.setHeight](#) and [PngViewOptions.setWidth](#) methods to specify the output image size in pixels.
+Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a PDF file to PNG. Use the [PngViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) and [PngViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) methods to specify the output image size in pixels.
 
 {{< tabs "example7">}}
 {{< tab "Python" >}}
@@ -181,7 +181,7 @@ The following image demonstrates the result:
 
 ### Convert PDF files to JPEG
 
-Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a PDF file to JPEG. Use the [JpgViewOptions.setHeight](#) and [JpgViewOptions.setWidth](#) methods to specify the output image size in pixels.
+Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a PDF file to JPEG. Use the [JpgViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) and [JpgViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) methods to specify the output image size in pixels.
 
 {{< tabs "example8">}}
 {{< tab "Python" >}}
@@ -200,7 +200,7 @@ with gv.Viewer("resume.pdf") as viewer:
 
 ### Preserve the size of document pages
 
-When you render PDF documents as images, GroupDocs.Viewer calculates the optimal image size to achieve better rendering quality. If you want the generated images to be the same size as pages in the source PDF document, use the [PdfOptions.setRenderOriginalPageSize](#) method of the [PngViewOptions](#) or [JpgViewOptions](#) class (depending on the output image format).
+When you render PDF documents as images, GroupDocs.Viewer calculates the optimal image size to achieve better rendering quality. If you want the generated images to be the same size as pages in the source PDF document, use the [PdfOptions.render_original_page_size](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptions/#properties) method of the [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) or [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) class (depending on the output image format).
 
 {{< tabs "example9">}}
 {{< tab "Python" >}}
@@ -218,7 +218,7 @@ with gv.Viewer("resume.pdf") as viewer:
 
 ### Enable font hinting
 
-To adjust the display of outline fonts when you convert PDF documents to PNG or JPEG, use the [PdfOptions.setEnableFontHinting](#) method, as shown below:
+To adjust the display of outline fonts when you convert PDF documents to PNG or JPEG, use the [PdfOptions.enable_font_hinting](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptions/#properties) method, as shown below:
 
 {{< tabs "example10">}}
 {{< tab "Python" >}}
@@ -238,7 +238,7 @@ Refer to the following article for more information on font hinting: [Font hinti
 
 ## Disable character grouping
 
-When you render PDF files in other formats, GroupDocs.Viewer groups individual characters into words to improve rendering performance. If your document contains hieroglyphic or special symbols, you may need to disable character grouping to generate a more precise layout. To do this, use the [PdfOptions.setDisableCharsGrouping](#) method, as shown below:
+When you render PDF files in other formats, GroupDocs.Viewer groups individual characters into words to improve rendering performance. If your document contains hieroglyphic or special symbols, you may need to disable character grouping to generate a more precise layout. To do this, use the [PdfOptions.disable_chars_grouping]((https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptions/#properties) method, as shown below:
 
 {{< tabs "example11">}}
 {{< tab "Python" >}}
@@ -256,7 +256,7 @@ with gv.Viewer("resume.pdf") as viewer:
 
 ## Render text comments
 
-Use the [ViewOptions.setRenderComments](#) method for a target view to display textual annotations (such as text comments, sticky notes, text boxes and callouts) in the output HTML, PNG, or JPEG files.
+Use the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewoptions/#properties) method for a target view to display textual annotations (such as text comments, sticky notes, text boxes and callouts) in the output HTML, PNG, or JPEG files.
 
 The code example below renders a PDF file with text comments as an image.
 
@@ -282,8 +282,8 @@ The following image illustrates the result:
 
 Follow the steps below to obtain information about a PDF file (the number of pages, page size, and printing permissions): 
 
-1. Create a [ViewInfoOptions](#) instance for a specific view.
-2. Call the [Viewer.getViewInfo](#) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [PdfViewInfo](#) type.
+1. Create a [ViewInfoOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewinfooptions) instance for a specific view.
+2. Call the [Viewer.get_view_info](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer/viewer/#methods) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [PdfViewInfo](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/pdfviewinfo/) type.
 3. Use the `PdfViewInfo` class properties to retrieve document-specific information.
 
 {{< tabs "example13">}}
@@ -311,23 +311,35 @@ The following image shows a sample console output:
 
 ### Extract text from a PDF file
 
-Use the [ViewInfoOptions.setExtractText](#) method to enable PDF text extraction. Use the [PdfViewInfo.getPages](#) methods to obtain the list of all document pages, and use the ([Page.getLines](#) method to retrieve text for each line.
+Use the [ViewInfoOptions.extract_text](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewinfooptions/#properties) method to enable PDF text extraction. Use the [PdfViewInfo.pages](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/pdfviewinfo/#properties) methods to obtain the list of all document pages, and use the [Page.lines](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/page/#properties) method to retrieve text for each line.
 
 {{< tabs "example14">}}
 {{< tab "Python" >}}
 ```python
+import sys
+
 with gv.Viewer("resume.pdf") as viewer:
-    viewInfoOptions = gvo.ViewInfoOptions.for_html_view()
-    viewInfoOptions.extract_text = True
+    view_info_options = gvo.ViewInfoOptions.for_html_view()
+    view_info_options.extract_text = True
 
-viewInfo = viewer.getViewInfo(viewInfoOptions)
+    view_info = viewer.getViewInfo(view_info_options)
 
-// Retrieve text from the PDF file.
-viewInfo.getPages().toArray().forEach(function(page) {
-  page.getLines().toArray().forEach(function(line){
-    console.log(line.getValue())
-    })  
-  })
+    # Retrieve text from the PDF file.
+    sys.stdout.reconfigure(encoding='utf-8')
+
+    for page in view_info.pages:
+        print(f"Page: {page.number}")
+        print("Text lines/words/characters:")
+
+        for line in page.lines:
+            text = str(line)
+            encoded_line = text.encode('utf-8')
+            sys.stdout.buffer.write(encoded_line)
+
+            for word in line.words:
+                print("\t" + word.value)
+                for character in word.characters:
+                    print("\t\t" + character.value)
 ```
 {{< /tab >}}
 {{< /tabs >}}

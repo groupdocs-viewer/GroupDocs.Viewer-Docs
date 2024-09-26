@@ -20,7 +20,7 @@ In the image below, the vertical page break is inserted after the column **E**, 
 
 ![Preview page breaks in Microsoft Excel](/viewer/python-net/images/rendering-basics/render-spreadsheets/excel-page-break-preview.png)
 
-To render a worksheet based on the inserted page breaks, call the [SpreadsheetOptions.ForRenderingByPageBreaks](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/methods/forrenderingbypagebreaks) static method and assign the returned `SpreadsheetOptions` instance to the [ViewOptions.SpreadsheetOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property of your view (depending on the output file format).
+To render a worksheet based on the inserted page breaks, call the [SpreadsheetOptions.for_rendering_by_page_breaks](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/#methods) static method and assign the returned `SpreadsheetOptions` instance to the [ViewOptions.spreadsheet_options](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/#properties) property of your view (depending on the output file format).
 
 The following example converts a worksheet to PDF and uses the page breaks to split this worksheet into pages:
 
@@ -94,7 +94,7 @@ In Microsoft Excel, you can designate one or more cell ranges in a worksheet as 
 
 ![Specify a print area in Microsoft Excel](/viewer/python-net/images/rendering-basics/render-spreadsheets/excel-set-print-area.png)
 
-GroupDocs.Viewer also supports this option. Call the [SpreadsheetOptions.ForRenderingPrintArea](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/methods/forrenderingprintarea) static method and assign the returned `SpreadsheetOptions` instance to the [ViewOptions.SpreadsheetOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property to display only the worksheet's print area in the output HTML, PDF, or image file.
+GroupDocs.Viewer also supports this option. Call the [SpreadsheetOptions.for_rendering_print_area](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/#methods) static method and assign the returned `SpreadsheetOptions` instance to the [ViewOptions.spreadsheet_options](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/#properties) property to display only the worksheet's print area in the output HTML, PDF, or image file.
 
 The following example renders the print area displayed in the image above to PDF:
 
@@ -117,7 +117,7 @@ The image below illustrates the result.
 
 ## Render a worksheet on one page
 
-If you want to display all worksheet data on one page, call the [SpreadsheetOptions.ForOnePagePerSheet](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/foronepagepersheet/) static method and assign the returned `SpreadsheetOptions` instance to the [ViewOptions.SpreadsheetOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property for a target view.
+If you want to display all worksheet data on one page, call the [SpreadsheetOptions.for_one_page_per_sheet](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/#methods) static method and assign the returned `SpreadsheetOptions` instance to the [ViewOptions.spreadsheet_options](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/#properties) property for a target view.
 
 The following example converts each worksheet to one page in the PDF file:
 
@@ -148,7 +148,7 @@ When printing, Microsoft Excel splits a worksheet into pages using both page bre
 
 ![Specify page breaks and a print area in Microsoft Excel](/viewer/python-net/images/rendering-basics/render-spreadsheets/page-breake-vs-print-area.png)
 
-GroupDocs.Viewer also supports this option. Call the [SpreadsheetOptions.ForRenderingPrintAreaAndPageBreaks](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/methods/forrenderingprintareaandpagebreaks) static method and assign the returned `SpreadsheetOptions` instance to the [ViewOptions.SpreadsheetOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property to display only the worksheet's print area in the output HTML, PDF, or image file.
+GroupDocs.Viewer also supports this option. Call the [SpreadsheetOptions.for_rendering_print_area_and_page_breaks](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/#methods) static method and assign the returned `SpreadsheetOptions` instance to the [ViewOptions.spreadsheet_options](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/#properties) property to display only the worksheet's print area in the output HTML, PDF, or image file.
 
 The following example renders the Microsoft Excel spreadsheet using page breaks and print areas displayed in the image above to PDF:
 

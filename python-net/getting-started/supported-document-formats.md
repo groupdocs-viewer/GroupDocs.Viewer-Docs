@@ -17,6 +17,7 @@ This topic lists file formats supported by GroupDocs.Viewer for Python. You can 
 
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |
+| [7Z](https://docs.fileformat.com/compression/7z/) | 7-Zip Compressed File | ![(tick)](/viewer/net/images/check-blue.png) |
 | [BZ2](https://docs.fileformat.com/compression/bz2) | Bzip2 Compressed File | ![(tick)](/viewer/python-net/images/check-blue.png) |
 | [GZ](https://docs.fileformat.com/compression/gz) | Gnu Zipped Archive | ![(tick)](/viewer/python-net/images/check-blue.png) |
 | [RAR](https://docs.fileformat.com/compression/rar) | WinRAR Compressed Archive | ![(tick)](/viewer/python-net/images/check-blue.png) |
@@ -25,6 +26,8 @@ This topic lists file formats supported by GroupDocs.Viewer for Python. You can 
 | [TXZ](https://docs.fileformat.com/compression/xz/) | XZ Compressed Tar Archive | ![(tick)](/viewer/python-net/images/check-blue.png) |
 | [XZ](https://docs.fileformat.com/compression/xz/) | XZ Compressed Archive | ![(tick)](/viewer/python-net/images/check-blue.png) |
 | [ZIP](https://docs.fileformat.com/compression/zip) | Zipped File | ![(tick)](/viewer/python-net/images/check-blue.png) |
+| [Zstandard](https://docs.fileformat.com/compression/zst) | Zstandard Archive | ![(tick)](/viewer/net/images/check-blue.png) |
+| [ISO](https://docs.fileformat.com/compression/iso) | Optical Disk Image | ![(tick)](/viewer/net/images/check-blue.png) |
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view archive files: [Render archives as HTML, PDF, and image files](/viewer/python-net/render-archive-files).
 
@@ -61,6 +64,8 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | --- | --- | :---: | --- |
 | [EPUB](https://docs.fileformat.com/ebook/epub/) | Open EBook Format | ![(tick)](/viewer/python-net/images/check-blue.png) |
 | [MOBI](https://docs.fileformat.com/ebook/mobi/) | Mobipocket EBook | ![(tick)](/viewer/python-net/images/check-blue.png) |
+| [AZW3](https://docs.fileformat.com/ebook/azw3/) | AZ3/KF8 EBook Format| ![(tick)](/viewer/net/images/check-blue.png) |
+
 
 ## Email file formats
 
@@ -99,9 +104,11 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [JP2](https://docs.fileformat.com/image/jp2/) | JPEG 2000 Core Image File | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [JPC](https://docs.fileformat.com/image/jpc/) | JPEG 2000 Code Stream File | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [JPEG / JPG](https://docs.fileformat.com/image/jpeg) | JPEG Image | ![(tick)](/viewer/python-net/images/check-blue.png) | |
+| [JFIF](https://docs.fileformat.com/image/jfif) | JPEG File Interchange Format | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [JPF](https://docs.fileformat.com/image/jpf/) | JPEG 2000 Image | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [JPM](https://docs.fileformat.com/image/jpm/) | JPEG 2000 Multi-layer Image Format | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [JPX](https://docs.fileformat.com/image/jpx/) | JPEG 2000 Image File | ![(tick)](/viewer/python-net/images/check-blue.png) | |
+| [JLS](https://docs.fileformat.com/) | JPEG-LS Image | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [ODG](https://docs.fileformat.com/image/odg/) | OpenDocument Graphics File | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [OTG](https://docs.fileformat.com/image/otg/) | OpenDocument Graphics Template | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [PCL](https://docs.fileformat.com/page-description-language/pcl/) | Printer Command Language Document | ![(tick)](/viewer/python-net/images/check-blue.png) | |
@@ -294,5 +301,3 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [RTF](https://docs.fileformat.com/word-processing/rtf/) | Rich Text Document | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view Word documents: [Render Word documents as HTML, PDF, and image files](/viewer/python-net/render-word-documents/).
-
-

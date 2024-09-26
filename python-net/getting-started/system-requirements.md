@@ -33,6 +33,9 @@ GroupDocs.Viewer for Python can be used on any 32-bit or 64-bit operating system
 * Microsoft Windows 10 (x64, x86)
 * Microsoft Windows 11 (x64)
 
+### Mac
+
+GroupDocs.Viewer for Python via .NET supports Mac OS X and so far only the ARM64 architecture.
 
 ## Development Environments
 

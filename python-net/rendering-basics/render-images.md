@@ -22,7 +22,7 @@ aliases:
 ---
 [GroupDocs.Viewer for Python via .NET](https://products.groupdocs.com/viewer/python-net) allows you to load images in various formats and convert them to HTML, PDF, PNG, and JPEG. Incorporate this library into your Python application (web or desktop) to build your own image viewer.
 
-To start with the GroupDocs.Viewer API, create a [Viewer](#) class instance. Pass an image you want to view to the class constructor. You can load the image from a file or stream. Call one of the [Viewer.view](#) method overloads to convert the image to HTML, PDF, PNG, or JPEG format. For multipage images (such as TIFF, CDR, DICOM, WebP, and so on), you can specify the pages to render.
+To start with the GroupDocs.Viewer API, create a [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer) class instance. Pass an image you want to view to the class constructor. You can load the image from a file or stream. Call one of the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method overloads to convert the image to HTML, PDF, PNG, or JPEG format. For multipage images (such as TIFF, CDR, DICOM, WebP, and so on), you can specify the pages to render.
 
 {{< button style="primary" link="https://products.groupdocs.app/viewer/image" >}} {{< icon "gdoc_person" >}} View image files online {{< /button >}} {{< button style="primary" link="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-Python" >}} {{< icon "gdoc_github" >}} View demos and examples on GitHub {{< /button >}}
 
@@ -72,11 +72,11 @@ GroupDocs.Viewer supports the following image file formats:
 
 ## Render images as HTML
 
-Create an [HtmlViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert an image to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
+Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert an image to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
 
 ### Create an HTML file with embedded resources
 
-To embed an image in an HTML page, call the [HtmlViewOptions.forEmbeddedResources](#) method and specify the output file name.
+To embed an image in an HTML page, call the [HtmlViewOptions.for_embedded_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) method and specify the output file name.
 
 {{< tabs "example1">}}
 {{< tab "Python" >}}
@@ -95,7 +95,7 @@ The following image demonstrates the result:
 
 ### Create an HTML file with external resources
 
-To save an image to a separate folder, call the [HtmlViewOptions.forExternalResources](#) method and pass the following parameters:
+To save an image to a separate folder, call the [HtmlViewOptions.for_external_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) method and pass the following parameters:
 
   * The output file path format
   * The path format for the folder with external resources
@@ -119,7 +119,7 @@ The result is shown below. The image is placed in a separate folder.
 
 ## Render images as PDF
 
-Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert an image to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
+Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert an image to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
 {{< tabs "example3">}}
 {{< tab "Python" >}}
@@ -138,7 +138,7 @@ The following image demonstrates the result:
 
 ## Convert images to PNG
 
-Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert an image to PNG. Use the [PngViewOptions.setHeight](#) and [PngViewOptions.setWidth](#) methods to specify the output image size in pixels.
+Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert an image to PNG. Use the [PngViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties) and [PngViewOptions.width](.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/#properties)) methods to specify the output image size in pixels.
 
 {{< tabs "example4">}}
 {{< tab "Python" >}}
@@ -160,7 +160,7 @@ The following image demonstrates the result:
 
 ## Convert images to JPEG
 
-Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert an image to JPEG. Use the [JpgViewOptions.setHeight](#) and [JpgViewOptions.setWidth](#) methods to specify the output image size in pixels.
+Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert an image to JPEG. Use the [JpgViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) and [JpgViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) methods to specify the output image size in pixels.
 
 {{< tabs "example5">}}
 {{< tab "Python" >}}
@@ -180,13 +180,13 @@ with gv.Viewer("vector-image.svg") as viewer:
 
 When you render a PSD file with custom fonts, you can specify a folder that contains necessary fonts to prevent font substitution during rendering. To do this, follow the steps below:
 
-1. Create a [FolderFontSource](#) class instance and specify a path to the folder that stores custom fonts. Pass a [SearchOption](#) enumeration member to the class constructor to define the search scope. The following options are available:
+1. Create a [FolderFontSource](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.fonts/folderfontsource/) class instance and specify a path to the folder that stores custom fonts. Pass a [SearchOption](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.fonts/folderfontsource/#properties) enumeration member to the class constructor to define the search scope. The following options are available:
     * `TOP_FOLDER_ONLY`---Searches for the fonts only in the current folder.
     * `ALL_FOLDERS`---Searches for the fonts in the current folder and its subfolders.
 
-2. Call the [FontSettings.setFontSources](#) static method and pass the specified font source to this method as a parameter. This method allows you to specify multiple font sources.
+2. Call the [FontSettings.set_font_sources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.fonts/fontsettings/#methods) static method and pass the specified font source to this method as a parameter. This method allows you to specify multiple font sources.
 
-You can also use the [ViewOptions.setDefaultFontName](#) method to specify the default font that should be used when a particular font is not found.
+You can also use the [ViewOptions.default_font_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewoptions/) method to specify the default font that should be used when a particular font is not found.
 
 {{< tabs "example6">}}
 {{< tab "Python" >}}

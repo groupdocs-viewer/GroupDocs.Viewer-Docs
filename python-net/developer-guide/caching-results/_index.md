@@ -21,24 +21,34 @@ To enable caching, follow these steps:
 The following code snippet shows how to enable caching and displays the difference between rendering a file and getting the cached results:
 
 {{< tabs "example1">}}
-{{< tab "JavaScript" >}}
-```js
-const cachePath = "cache";
-const cache = new FileCache(cachePath);
-const settings = new ViewerSettings(cache);
+{{< tab "Python" >}}
+```python
+import time
+import groupdocs.viewer as gv
+import groupdocs.viewer.options as gvo
 
-const viewer = new groupdocs.viewer.Viewer("sample.docx", settings)
-const options = HtmlViewOptions.forEmbeddedResources();
-const currentTimeMillis = Date.now()
+# Define a path to cache
+cache_path = "cache"
+cache = gv.FileCache(cache_path)
+settings = gv.ViewerSettings(cache)
 
-viewer.view(options);
-currentTimeMillis = Date.now() - currentTimeMillis
-console.log("Time taken on first call to View method " + currentTimeMillis + " (ms).")
-currentTimeMillis = Date.now()
+# Define a Viewer for a "sample.docx" file
+with gv.Viewer("sample.docx", settings) as viewer:
+    options = gvo.HtmlViewOptions.for_embedded_resources()
 
-viewer.view(options)
-currentTimeMillis = Date.now() - currentTimeMillis
-console.log("Time taken on second call to View method " + currentTimeMillis + " (ms).")
+    # Define the execution time of the first call
+    start_time = time.time()
+    viewer.view(options)
+    
+    elapsed_time = time.time() - start_time
+    print(f"Time taken on first call to View method {elapsed_time * 1000:.0f} (ms).")
+
+    # Define the execution time of the second call
+    start_time = time.time()
+    viewer.view(options)
+
+    elapsed_time = time.time() - start_time
+    print(f"Time taken on second call to View method {elapsed_time * 1000:.0f} (ms).")
 ```
 {{< /tab >}}
 {{< /tabs >}}
