@@ -9,6 +9,13 @@ productName: GroupDocs.Viewer for Java
 hideChildren: False
 toc: True
 ---
+
+{{< alert style="tip" >}}
+
+Need to view files online? Try the [GroupDocs.Viewer App](https://products.groupdocs.app/viewer/total) to open DOCX, XLSX, PPTX, and more.
+
+{{< /alert >}}
+
 This topic lists file formats supported by GroupDocs.Viewer for Java. You can use the input below to filter supported formats by extension.
 
 {{< table-filter placeholder="Start typing to find file format" >}}
