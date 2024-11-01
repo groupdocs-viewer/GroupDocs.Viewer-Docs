@@ -108,7 +108,7 @@ try (Viewer viewer = new Viewer("sample.dwg")) {
 
 ## Split a drawing into tiles
 
-With GroupDocs.Viewer, you can split a CAD drawing (in DWG or DWT format) into parts (_tiles_) and render each part separately. Tiled rendering allows you to reduce memory usage when you convert large drawings to HTML, PDF, or image format. When tiled rendering is enabled, GroupDocs.Viewer renders only the model space layout (_Model_) and ignores the `CadOptions.RenderLayouts` and `CadOptions.LayoutName` property values.
+With GroupDocs.Viewer, you can split a CAD drawing (in DWG or DWT format) into parts (_tiles_) and render each part separately. Tiled rendering allows you to reduce memory usage when you convert large drawings to HTML, PDF, or image format. When tiled rendering is enabled, GroupDocs.Viewer renders only the model space layout (_Model_) and ignores the [CadOptions.setRenderLayouts(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/cadoptions/#setRenderLayouts-boolean-) and [CadOptions.setLayoutName(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/cadoptions/#setLayoutName-java.lang.String-) property values.
 
 ![Split a CAD drawing into tiles](/viewer/java/images/rendering-basics/render-cad-documents/split-drawing-into-tiles.png)
 
@@ -116,7 +116,7 @@ To create an individual tile, instantiate a [Tile](https://reference.groupdocs.c
 
 ![Tile coordinates](/viewer/java/images/rendering-basics/render-cad-documents/tile-coordinates.png)
 
-After you create all tiles, add them using the [ViewOptions.getCadOptions().setTiles](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/cadoptions/#setTiles-java.util.List-com.groupdocs.viewer.options.Tile--) method and call the [Viewer.view](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method to convert these tiles to a desired format. Each tile will be rendered as a separate page/image.
+After you create all tiles, add them using the [ViewOptions.getCadOptions().setTiles(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/cadoptions/#setTiles-java.util.List-com.groupdocs.viewer.options.Tile--) method and call the [viewer.view(...)](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/#view-com.groupdocs.viewer.options.ViewOptions-) method to convert these tiles to a desired format. Each tile will be rendered as a separate page/image.
 
 The following example demonstrates how to split a CAD drawing into four tiles (2x2) of equal size:
 
@@ -171,3 +171,43 @@ try (Viewer viewer = new Viewer("HousePlan.dwg")) {
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+In the example above the GroupDocs.Viewer will generate four HTML files named "page_1.html", "page_2.html", "page_3.html", and "page_4.html", where each of these HTML file contains a single tile in a form of SVG vector image. The [`HtmlViewOptions.forExternalResources()`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/#forExternalResources--) static method (with all its overloads) can also be used — in such case the SVG files will not be embedded inside the output HTML files, but will be saved separately, while HTML only references them through the `A` HTML element.
+
+Prior to the version 24.10 of the GroupDocs.Viewer the tiled rendering of CAD files was available only for the HTML rendering. Starting from the version 24.10 the CAD tiled rendering is also supported for the PDF — in that case the GroupDocs.Viewer generates a single PDF file, where one its page represents one tile. So, if in the example above we replace the [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/) onto the [`PdfViewOptions`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfviewoptions/), then the GroupDocs.Viewer will produce one PDF file with four pages inside it.
+
+
+## Choose rendering speed instead of quality
+
+By default, the GroupDocs.Viewer converts and renders all documents within CAD format family with the max possible quality. In case when the input CAD file (DWG, for example) is very complex, it may lead to quite significant processing time. Also, the size of the generated output HTML or image (vector or raster) also may be too heavy.
+
+Starting from the version 24.10 the GroupDocs.Viewer introduces a new public property within the [`CadOptions`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/cadoptions/) class — the `setEnablePerformanceConversionMode(...)` boolean flag. By default, it is set to `false` - the GroupDocs.Viewer behaves as in previous versions, preserving the maximum quality. But when setting its value to `true`, then the performance-oriented conversion mode is enabled, which leads to significantly lesser conversion time as well as lesser byte size of the output document.
+
+Enabling this mode is pretty simple — just create an instance of the [`CadOptions`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/cadoptions/) class by using any of the static methods and then set the value for the `setEnablePerformanceConversionMode(...)` property. Example is below:
+
+
+{{< tabs "example5">}}
+{{< tab "Java" >}}
+```java
+try (Viewer viewer = new Viewer("input.dwg")) {
+    HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources("Output-Page#{0}.html");
+    viewOptions.setCadOptions(CadOptions.forRenderingByWidth(1000));
+    viewOptions.getCadOptions().setEnablePerformanceConversionMode(true);
+
+    viewer.view(viewOptions);
+}
+```
+{{< /tab >}}
+
+{{< /tabs >}}
+
+If taking an ordinary DWG file as a sample, the comparison between "quality" and "performance" modes are the next:
+
+| Conversion mode | Output file size, MiB | Processing time, sec |
+| --- | --- | --- | --- | --- |
+| Quality-oriented (default) | 46.8 | 7.87 |
+| Performance-oriented (new) | 5.04 | 4.47 |
+
+Screenshot below illustrates the visual differences between these modes, default quality-oriented mode is on the left side, and the new performance-oriented mode is on the right side:
+
+![DWG quality vs. performance](/viewer/java/images/rendering-basics/render-cad-documents/dwg_comparison_quality_vs_performance.png)
