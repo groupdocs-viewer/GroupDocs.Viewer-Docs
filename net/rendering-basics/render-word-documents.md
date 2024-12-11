@@ -485,3 +485,49 @@ End Module
 The following image illustrates the result:
 
 ![Unlink table of contens in Word files](/viewer/net/images/rendering-basics/render-word-documents/unlink-table-of-contents.png)
+
+## Disable updating fields when saving
+
+The most of formats inside the WordProcessing family of formats, like DOC, DOCX, ODT and so on, have the concept of [fields](https://support.microsoft.com/en-us/office/list-of-field-codes-in-word-1ad6d91a-55a7-4a8d-b535-cf7888659a51), which are processed when the document is opened in some viewer application like Microsoft Word. When the input WordProcessing document is loaded to the GroupDocs.Viewer and saved to the HTML (with embedded or external resources), PDF, PNG, or JPEG output formats, all the fields within the input document are updated while saving, and this mimics the Microsoft Word behavior. But in some scenarios, for example, when field values are incorrect, there is no necessary and even not desirable to update fields.
+
+Starting from the version [24.12](https://releases.groupdocs.com/viewer/net/release-notes/2024/groupdocs-viewer-for-net-24-12-release-notes/) the GroupDocs.Viewer for .NET has obtained an ability to disable updating fields while saving the documents. The new public property `UpdateFields` of the `Boolean` type was added to the [`Options.WordProcessingOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/) class. By default the value of this property is set to `true`, so fields are updated, as before. In order to turn fields updating off, please set this property to `false`. Code sample below shows opening a sample DOCX document and saving to the HTML with embedded resources and PDF formats without updating fields during saving.
+
+{{< tabs "example-UpdateFields">}}
+{{< tab "C#" >}}
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+HtmlViewOptions htmlViewOptions = HtmlViewOptions.ForEmbeddedResources();
+htmlViewOptions.WordProcessingOptions.UpdateFields = false;
+
+PdfViewOptions pdfViewOptions = new PdfViewOptions("output.pdf");
+pdfViewOptions.WordProcessingOptions.UpdateFields = false;
+
+using (var viewer = new Viewer("resume.docx"))
+{    
+    viewer.View(htmlViewOptions);
+	viewer.View(pdfViewOptions);
+}
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Dim htmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+htmlViewOptions.WordProcessingOptions.UpdateFields = False
+
+Dim pdfViewOptions = New PdfViewOptions("output.pdf")
+pdfViewOptions.WordProcessingOptions.UpdateFields = False
+
+Using viewer = New Viewer("resume.docx")	
+	viewer.View(htmlViewOptions)
+	viewer.View(pdfViewOptions)
+End Using
+```
+{{< /tab >}}
+{{< /tabs >}}
