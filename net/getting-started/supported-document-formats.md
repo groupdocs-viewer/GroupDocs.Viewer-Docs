@@ -35,6 +35,7 @@ This topic lists file formats supported by GroupDocs.Viewer for .NET. You can us
 | [ZIP](https://docs.fileformat.com/compression/zip) | Zipped File | ![(tick)](/viewer/net/images/check-blue.png) |
 | [Zstandard](https://docs.fileformat.com/compression/zst) | Zstandard Archive | ![(tick)](/viewer/net/images/check-blue.png) |
 | [ISO](https://docs.fileformat.com/compression/iso) | Optical Disk Image | ![(tick)](/viewer/net/images/check-blue.png) |
+| [LHA / LZH](https://docs.fileformat.com/compression/lzh/) | Lha/Lzh Archive | ![(tick)](/viewer/net/images/check-blue.png) |
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view archive files: [Render archives as HTML, PDF, and image files](/viewer/net/render-archive-files).
 
