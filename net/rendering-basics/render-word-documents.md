@@ -534,7 +534,7 @@ End Using
 
 ## Remove or preserve JavaScript when saving to HTML
 
-Most of WordProcessing formats like DOC, DOCX, ODT and so on are able to store the scripts, usually written on VBA. When the output format is PDF, PNG, or JPEG, there is no problem at all. But when the output format is HTML, this may lead to the situations when malicious or harmful VBA script(s) from input DOCX, for example, will be translated to the resultant HTML document. Before the [version 25.1](https://releases.groupdocs.com/viewer/net/release-notes/2025/groupdocs-viewer-for-net-25-1-release-notes/) the was no possibility for the GroupDocs.Viewer to disable scripts preserving and translation — all the VBA scripts were translated to the JavaScript in HTML. Starting from the version 25.1, for the security purposes script translation is disabled by default — all the links containing JavaScript are replaced with the harmless `"javascript:void(0)"` string in the resultant HTML markup. But it is possible to enable script translation, as it was present in the GroupDocs.Viewer before, by using a new public property `RemoveJavaScript` of the [`System.Boolean`](https://learn.microsoft.com/dotnet/api/system.boolean) type in the [`Options.WordProcessingOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/) class. By default this property has a `true` value — JavaScript will be removed from the resultant HTML document. For preserving the JavaScript, as itr as in the previous versions of the GroupDocs.Viewer, the `false` value should be assigned to this property. Code sample below shows opening a sample DOCX document and saving to the HTML with embedded resources with and without JavaScript.
+Most of WordProcessing formats like DOC, DOCX, ODT and so on are able to store the scripts, usually written on VBA. When the output format is PDF, PNG, or JPEG, there is no problem at all. But when the output format is HTML, this may lead to the situations when malicious or harmful VBA script(s) from input DOCX, for example, will be translated to the resultant HTML document. Before the [version 25.1](https://releases.groupdocs.com/viewer/net/release-notes/2025/groupdocs-viewer-for-net-25-1-release-notes/) the was no possibility for the GroupDocs.Viewer to disable scripts preserving and translation — all the VBA scripts were translated to the JavaScript in HTML. Starting from the version 25.1, for the security purposes script translation is disabled by default — all the links containing JavaScript are replaced with the harmless `"javascript:void(0)"` string in the resultant HTML markup. But it is possible to enable script translation, as it was present in the GroupDocs.Viewer before, by using a new public property `RemoveJavaScript` of the [`System.Boolean`](https://learn.microsoft.com/dotnet/api/system.boolean) type in the [`Options.HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) class. By default this property has a `true` value — JavaScript will be removed from the resultant HTML document. For preserving the JavaScript, as it was in the previous versions of the GroupDocs.Viewer, the `false` value should be assigned to this property. Code sample below shows opening a sample DOCX document and rendering it to the HTML with embedded resources with and without JavaScript.
 
 {{< tabs "example-RemoveJavaScript">}}
 {{< tab "C#" >}}
@@ -546,7 +546,7 @@ using GroupDocs.Viewer.Options;
 HtmlViewOptions htmlViewOptionsWithoutJavaScript = HtmlViewOptions.ForEmbeddedResources("without-js-page{0}.html");
 
 HtmlViewOptions htmlViewOptionsWithJavaScript = HtmlViewOptions.ForEmbeddedResources("with-js-page{0}.html");
-htmlViewOptionsWithJavaScript.WordProcessingOptions.RemoveJavaScript = false;
+htmlViewOptionsWithJavaScript.RemoveJavaScript = false;
 
 using (var viewer = new Viewer("Doc-with-VBA.docx"))
 {
@@ -564,7 +564,7 @@ Imports GroupDocs.Viewer.Options
 Dim htmlViewOptionsWithoutJavaScript = HtmlViewOptions.ForEmbeddedResources("without-js-page{0}.html")
 
 Dim htmlViewOptionsWithJavaScript = HtmlViewOptions.ForEmbeddedResources("with-js-page{0}.html")
-htmlViewOptionsWithJavaScript.WordProcessingOptions.RemoveJavaScript = false;
+htmlViewOptionsWithJavaScript.RemoveJavaScript = false;
 
 Using viewer = New Viewer("Doc-with-VBA.docx")	
 	viewer.View(htmlViewOptionsWithoutJavaScript)

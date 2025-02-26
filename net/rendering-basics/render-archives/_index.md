@@ -49,6 +49,7 @@ GroupDocs.Viewer supports the following archive file formats:
 * [.ZST / .TAR.ZST / .TZST (Zstandard)](https://docs.fileformat.com/compression/zst/)
 * [.ISO (Optical Disk Image ISO-9660)](https://docs.fileformat.com/compression/iso/)
 * [.LHA / .LZH (archive file format)](https://docs.fileformat.com/compression/lzh/)
+* [.CAB (Cabinet)](https://en.wikipedia.org/wiki/Cabinet_(file_format))
 
 GroupDocs.Viewer can detect the archive file format automatically based on information in the file header.
 

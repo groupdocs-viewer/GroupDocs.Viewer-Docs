@@ -98,4 +98,57 @@ End Module
 {{< /tab >}}
 {{< /tabs >}}
 
+## Preserving or disabling JavaScript when rendering to HTML
+
+Lots of the document formats and format families, supported by the GroupDocs.Viewer, may contain different scripts (and/or macros) inside their content. This includes (but not limited to) PDF, most of formats from the WordProcessing family (DOCX, DOCM, RTF, ODT, ...), Spreadsheet (XLSX, XLSM, ...), Presentation (PPTX, PPTM, ...), Email (MSG, EML, EMLX, MBOX, ...), and so on. Before the [version 25.2](https://releases.groupdocs.com/viewer/net/release-notes/2025/groupdocs-viewer-for-net-25-2-release-notes/), when rendering documents with scripts to the HTML format, the GroupDocs.Viewer tried to preserve all the script and put them to the resultant HTML document without any change or validation. However, in some cases this is an unwanted behaviour, because document can contain malicious or harmful script(s), in most common, the XSS injections, so it is necessary to clean the resultant HTML document from any scripts.
+
+Starting from the version 25.2 the default behaviour was changed — now GroupDocs.Viewer removes all the scripts from the resultant HTML document by default. In some cases, when the JavaScript code is located in the links, the GroupDocs.Viewer replaces it onto the `"javascript:void(0)"` string, so there will be no page reload when opening the resulted HTML document in the browser. Need to mention that the original document, loaded to the [`Viewer`](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) instance, will be untouched anyway.
+
+Along with the changed default behavior, a new option was added to the [`HtmlViewOptions`](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) class — a public property `RemoveJavaScript` of the [`System.Boolean`](https://learn.microsoft.com/dotnet/api/system.boolean) type. By default this property has a `true` value — JavaScript will be removed from the resultant HTML document. For preserving the JavaScript, as it was in the previous versions of the GroupDocs.Viewer (before 25.2), the `false` value should be assigned to this property.
+
+Code sample below shows opening a sample XLSX document and rendering it twice:
+1. to the HTML with embedded resources with disabled JavaScript;
+2. to the HTML with external resources with enabled JavaScript;
+
+{{< tabs "example-RemoveJavaScript">}}
+{{< tab "C#" >}}
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+HtmlViewOptions withoutJavaScriptEmbedded = HtmlViewOptions.ForEmbeddedResources("without-js-page{0}.html");
+
+HtmlViewOptions withJavaScriptExternal = HtmlViewOptions.ForExternalResources("with-js-page{0}.html", "with-js-page{0}/resource-{1}", "with-js-page{0}/resource-{1}");
+withJavaScriptExternal.RemoveJavaScript = false;
+
+using (var viewer = new Viewer("Spreadsheet-with-script.xlsx"))
+{
+    viewer.View(withoutJavaScriptEmbedded);
+    viewer.View(withJavaScriptExternal);
+}
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+Dim withoutJavaScriptEmbedded = HtmlViewOptions.ForEmbeddedResources("without-js-page{0}.html")
+
+Dim withJavaScriptExternal = HtmlViewOptions.ForExternalResources("with-js-page{0}.html", "with-js-page{0}/resource-{1}", "with-js-page{0}/resource-{1}")
+withJavaScriptExternal.RemoveJavaScript = false;
+
+Using viewer = New Viewer("Spreadsheet-with-script.xlsx")	
+	viewer.View(withoutJavaScriptEmbedded)
+	viewer.View(withJavaScriptExternal)
+End Using
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+
+## Additional features
+
 For details, please refer to the following pages:
