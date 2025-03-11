@@ -20,7 +20,7 @@ jobs:
         run: |
           rm -rf common/content/${{ env.PRODUCT }}
           git submodule update --init --recursive
-          git submodule foreach git pull origin master
+          git submodule foreach git pull origin ai-search
 
       - name: Install Hugo
         run: |
