@@ -3,8 +3,8 @@ id: split-worksheet-into-pages
 url: viewer/python-net/split-worksheet-into-pages
 title: Split a worksheet into pages
 weight: 2
-description: "This topic describes how to use the GroupDocs.Viewer Python API to split worksheets into pages when rendering spreadsheet files to HTML, PDF, and image formats."
-keywords: split worksheet, add page breaks, break worksheet into pages, print area, excel to pdf, xlsx to pdf, xls to pdf, excel to html, xlsx to html, xls to html
+description: "Split worksheets into pages when rendering spreadsheets to HTML, PDF, and image formats using GroupDocs.Viewer Python API."
+keywords: excel to pdf, xlsx to pdf, split worksheet, page breaks, print area, excel to html, xls to pdf
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

@@ -4,8 +4,8 @@ url: viewer/python-net/optimization-pdf-options
 title: Optimize the output PDF file
 linkTitle: Optimize the output PDF file
 weight: 6
-description: "This topic describes how to optimize PDF file in the GroupDocs.Viewer Python API for web browser or to reduce size."
-keywords: convert to pdf, optimize size, optimize browser, optimize web, pdf reduce size
+description: "Optimize PDFs for web viewing or reduce file size with GroupDocs.Viewer. Adjust resources and improve loading times."
+keywords: pdf optimization, web pdf, pdf size reduction, browser pdf, resource optimization, pdf viewer, pdf compression
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

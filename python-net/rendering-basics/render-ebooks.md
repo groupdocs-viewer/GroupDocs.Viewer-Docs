@@ -4,8 +4,8 @@ url: viewer/python-net/render-ebooks
 title: Render EBooks as HTML, PDF, and image files
 linkTitle: Render EBooks
 weight: 8
-description: "This topic describes how to use the GroupDocs.Viewer for Python API to convert EBooks to HTML, PDF, PNG, and JPEG formats."
-keywords: convert ebook to pdf, convert ebook to jpeg, convert ebook to pdf, convert ebook to jpg, convert ebook to png
+description: "Convert EBooks to HTML, PDF, PNG, or JPEG using GroupDocs.Viewer for Python. Learn how to render documents in various formats."
+keywords: ebook conversion, PDF conversion, JPEG conversion, PNG conversion, ebook to PDF, ebook to image, GroupDocs
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

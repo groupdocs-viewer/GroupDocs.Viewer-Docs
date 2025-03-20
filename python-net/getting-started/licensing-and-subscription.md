@@ -3,8 +3,8 @@ id: licensing-and-evaluation
 url: viewer/python-net/licensing-and-evaluation
 title: Licensing and evaluation
 weight: 5
-keywords: free, free trial, evaluation, groupdocs viewer python
-description: "GroupDocs.Viewer for Python provides different plans for purchase or offers a Free Trial and a 30-day Temporary License for evaluation."
+keywords: GroupDocs.Viewer, licensing, trial, evaluation, temporary license, metered licensing, GroupDocs Viewer Python
+description: "GroupDocs.Viewer for Python offers purchase plans, a free trial, and a 30-day temporary license for evaluation."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

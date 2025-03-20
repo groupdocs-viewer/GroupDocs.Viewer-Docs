@@ -3,8 +3,8 @@ id: how-to-run-examples
 url: viewer/python-net/how-to-run-examples
 title: How to run examples
 weight: 7
-description: "How to run examples."
-keywords: "groupdocs viewer python, examples, npm, eclipse ide"
+description: "Run code examples and contribute to the GroupDocs.Viewer project. Find instructions and sample files on GitHub."
+keywords: groupdocs viewer, python viewer, code examples, viewer library, groupdocs, python programming, viewer api
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

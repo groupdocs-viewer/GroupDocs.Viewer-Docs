@@ -4,8 +4,8 @@ url: viewer/python-net/render-visio-documents
 title: Render Visio documents as HTML, PDF, and image files
 linkTitle: Render Visio documents
 weight: 5
-description: "This topic describes how to use the GroupDocs.Viewer for Python via .Net API to convert Visio diagrams to HTML, PDF, PNG, and JPEG formats."
-keywords: visio diagrams, convert visio to pdf, convert visio to html, convert visio to jpeg, convert diagram to pdf, convert diagram to html, convert diagram to jpeg
+description: "Convert Visio diagrams to HTML, PDF, PNG, or JPEG using GroupDocs.Viewer for Python via .NET API."
+keywords: visio diagrams, convert visio, visio to pdf, visio to html, visio to jpeg, diagram conversion, visio rendering
 productName: GroupDocs.Viewer for Python via .Net
 hideChildren: False
 toc: True

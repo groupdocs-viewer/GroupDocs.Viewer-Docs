@@ -4,8 +4,8 @@ url: viewer/python-net/specify-rendering-options
 title: Specify spreadsheet rendering options
 linkTitle: Specify rendering options
 weight: 3
-description: "This topic describes how to use the GroupDocs.Viewer Python API to specify various options for rendering spreadsheet files to HTML, PDF, and image formats."
-keywords: show column headings, show row headings, show gridlines, render comments, set margin, excel to pdf, xlsx to pdf, xls to pdf, excel to html, xlsx to html, xls to html
+description: "Render spreadsheet files (Excel, etc.) to HTML, PDF, or images using GroupDocs.Viewer's Python API options."
+keywords: excel to pdf, xlsx to pdf, excel to html, render comments, show gridlines, cell comments, excel margins
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

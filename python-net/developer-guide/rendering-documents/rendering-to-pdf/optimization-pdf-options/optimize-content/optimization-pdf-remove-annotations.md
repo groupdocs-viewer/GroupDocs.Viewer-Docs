@@ -4,8 +4,8 @@ url: viewer/python-net/optimization-pdf-remove-annotations
 title: Remove annotations
 linkTitle: Remove annotations
 weight: 1
-description: "This topic describes how to remove annotations from PDF file using the GroupDocs.Viewer Python API."
-keywords: convert to pdf, optimize size, pdf reduce size, remove annotations
+description: "Remove annotations from PDF files to reduce file size using the GroupDocs.Viewer Python API."
+keywords: pdf optimization, remove annotations, pdf size reduction, groupdocs viewer, pdf rendering, annotation removal, pdf compression
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

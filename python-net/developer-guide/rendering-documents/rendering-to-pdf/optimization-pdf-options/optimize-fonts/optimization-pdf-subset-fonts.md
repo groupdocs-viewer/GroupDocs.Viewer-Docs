@@ -4,8 +4,8 @@ url: viewer/python-net/optimization-pdf-subset-fonts
 title: Subset fonts
 linkTitle: Subset fonts
 weight: 2
-description: "This topic describes how to subset fonts in PDF file using the GroupDocs.Viewer Python API."
-keywords: convert to pdf, optimize size, pdf reduce size, subset fonts
+description: "Reduce PDF file size by subsetting embedded fonts with GroupDocs.Viewer. See how to optimize font usage."
+keywords: PDF optimization, font subsetting, PDF size reduction, GroupDocs.Viewer, PDF rendering, font embedding, PDF optimization options
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

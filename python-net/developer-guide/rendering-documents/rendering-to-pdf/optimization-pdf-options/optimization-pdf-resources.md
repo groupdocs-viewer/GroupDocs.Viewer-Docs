@@ -4,8 +4,8 @@ url: viewer/python-net/optimization-pdf-resources
 title: Optimize the PDF file resources
 linkTitle: Optimize the PDF file resources
 weight: 2
-description: "This topic describes how to optimize PDF file using the GroupDocs.Viewer Python API to reduce size."
-keywords: convert to pdf, optimize size, pdf reduce size
+description: "Reduce PDF file size with GroupDocs.Viewer. Optimize images, remove data, and more for smaller output files."
+keywords: pdf optimization, pdf size reduction, resource optimization, GroupDocs.Viewer, PDF compression, image optimization, PDF quality
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

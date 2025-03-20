@@ -3,8 +3,8 @@ id: troubleshooting
 url: viewer/python-net/troubleshooting
 title: Troubleshooting
 weight: 8
-description: "This section contains issues that you may face and solutions for them when processing files with GroupDocs.Viewer."
-keywords: 
+description: "Troubleshooting file processing with GroupDocs.Viewer: common issues and solutions are detailed here."
+keywords: GroupDocs.Viewer, file processing, troubleshooting, known issues, limitations, document viewing, errors
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---

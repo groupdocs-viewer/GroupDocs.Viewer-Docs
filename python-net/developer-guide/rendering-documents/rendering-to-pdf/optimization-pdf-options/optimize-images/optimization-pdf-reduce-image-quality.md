@@ -4,8 +4,8 @@ url: viewer/python-net/optimization-pdf-reduce-image-quality
 title: Reduce image quality
 linkTitle: Reduce image quality
 weight: 1
-description: "This topic describes how to compress images in PDF file using the GroupDocs.Viewer Python API."
-keywords: convert to pdf, optimize size, pdf reduce size, compress images
+description: "Compress images in PDF files to reduce size. Adjust image quality (0-100%) using the GroupDocs.Viewer Python API."
+keywords: pdf optimization, image compression, pdf size reduction, GroupDocs.Viewer, image quality, PDF rendering, optimize PDF
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

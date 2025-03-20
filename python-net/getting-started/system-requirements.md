@@ -3,8 +3,8 @@ id: system-requirements
 url: viewer/python-net/system-requirements
 title: System requirements
 weight: 6
-description: "GroupDocs.Viewer for Python via .NET does not require any external software to be installed such as Microsoft Word, Microsoft Excel or Microsoft PowerPoint for file rendering."
-keywords: file rendering
+description: "No external software needed! GroupDocs.Viewer for Python via .NET renders files directly."
+keywords: file rendering, python, .net, viewer, document rendering, cross-platform, viewer for python
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

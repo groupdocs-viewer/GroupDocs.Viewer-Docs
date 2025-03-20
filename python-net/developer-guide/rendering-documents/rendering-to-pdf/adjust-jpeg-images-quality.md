@@ -3,9 +3,10 @@ id: adjust-jpeg-images-quality
 url: viewer/python-net/adjust-jpeg-images-quality
 title: Specify the JPEG image quality
 weight: 3
-description: "Adjust JPEG images quality when rendering documents to PDF with GroupDocs.Viewer for Python via .NET"
+description: "Reduce PDF file size by adjusting JPEG image quality. Set the image quality between 1 and 100."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
+keywords: groupdocs, pdf optimization, image quality, jpg compression, pdf viewer, python, groupdocs.viewer
 ---
 Decreasing the JPG images quality reduces the size of the output file.
 

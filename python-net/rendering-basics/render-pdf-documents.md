@@ -4,8 +4,8 @@ url: viewer/python-net/render-pdf-documents
 title: Render PDF documents as HTML and image files
 linkTitle: Render PDF documents
 weight: 2
-description: "This topic describes how to use the GroupDocs.Viewer Python API to convert PDF files to HTML, PNG, and JPEG formats."
-keywords: view pdf, pdf viewer, pdf to html, pdf to jpeg, pdf to jpg, pdf to png, pdf to image, convert pdf
+description: "Convert PDF files to HTML, PNG, or JPEG using the GroupDocs.Viewer Python API. Learn basic rendering techniques."
+keywords: pdf viewer, pdf conversion, pdf to image, pdf to html, pdf to jpg, pdf to png, pdf rendering
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

@@ -4,8 +4,8 @@ url: viewer/python-net/optimization-pdf-set-max-resolution
 title: Set image resolution
 linkTitle: Set image resolution
 weight: 2
-description: "This topic describes how to set image resolution in PDF file using the GroupDocs.Viewer Python API."
-keywords: convert to pdf, optimize size, pdf reduce size, set resolution
+description: "Reduce PDF image resolution by adjusting compression and resizing options within the GroupDocs.Viewer API."
+keywords: PDF optimization, image resolution, PDF compression, GroupDocs.Viewer, image quality, resize images, PDF rendering
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

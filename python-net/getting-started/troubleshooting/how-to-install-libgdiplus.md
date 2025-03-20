@@ -3,8 +3,8 @@ id: how-to-install-libgdiplus
 url: viewer/python-net/how-to-install-libgdiplus
 title: How to install libgdiplus library
 weight: 2
-description: "This article will guide you through the installation of libgdiplus library."
-keywords: libgdiplus, library, graphics
+description: "Install libgdiplus for GroupDocs.Viewer for Python/.NET. Resolves image rendering issues on Ubuntu, CentOS, macOS."
+keywords: libgdiplus, GroupDocs.Viewer, GDI+, System.Drawing, Ubuntu, CentOS, macOS
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---

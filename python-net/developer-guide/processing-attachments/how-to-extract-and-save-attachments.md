@@ -3,8 +3,8 @@ id: how-to-extract-and-save-attachments
 url: viewer/python-net/how-to-extract-and-save-attachments
 title: Save attachments
 weight: 2
-description: "Save attachments and embedded files from PDF, Outlook data file or email"
-keywords: Save attachments, embedded files from PDF, Outlook data file
+description: "Retrieve and save attachments from emails, Outlook files, archives, and PDFs."
+keywords: attachments, get attachments, save attachments, GroupDocs.Viewer, MSG files, PDF attachments, email attachments
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---

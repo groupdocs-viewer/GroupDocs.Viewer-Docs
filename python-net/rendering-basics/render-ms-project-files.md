@@ -4,8 +4,8 @@ url: viewer/python-net/render-ms-project-files
 title: Render Project documents as HTML, PDF, and image files
 linkTitle: Render Project files
 weight: 7
-description: "This topic describes how to use the GroupDocs.Viewer Python API to convert Microsoft Project files to HTML, PDF, PNG, and JPEG formats."
-keywords: microsoft project, project viewer, mpp to pdf, mpp to html, mpp to png, mpp to jpg, mpp to jpeg, mpp to image
+description: "Convert Microsoft Project files to HTML, PDF, PNG, or JPEG using the GroupDocs.Viewer Python API."
+keywords: microsoft project, project viewer, mpp viewer, mpp to pdf, mpp to html, project rendering, task management
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

@@ -4,8 +4,8 @@ url: viewer/python-net/render-excel-and-apple-numbers-spreadsheets
 title: Render Excel and Apple Numbers spreadsheets as HTML, PDF, and image files
 linkTitle: Render Excel and Apple Numbers spreadsheets
 weight: 1
-description: "This topic describes how to use the GroupDocs.Viewer API for Python to convert Excel workbooks and Apple Numbers spreadsheets to HTML, PDF, PNG, and JPEG formats."
-keywords: excel to pdf, excel to html, excel to jpg, xlsx to pdf, xls to pdf, excel to pdf online, convert xls to pdf, convert xlsx to pdf
+description: "Convert Excel and Numbers spreadsheets to HTML, PDF, PNG, or JPEG using GroupDocs.Viewer for Python."
+keywords: excel to pdf, xlsx to pdf, convert excel to pdf, online excel converter, xls to pdf, pdf conversion, spreadsheet to pdf
 productName: GroupDocs.Viewer for Python via .NET
 toc: True
 hideChildren: False

@@ -4,8 +4,8 @@ url: viewer/python-net/optimization-pdf-remove-unused-resources
 title: Optimize the PDF file by removing unused resources
 linkTitle: Optimize the PDF file by removing unused resources
 weight: 10
-description: "This topic describes how to optimize PDF file using the GroupDocs.Viewer Python API by removing the unused (orphaned) resources and thus to reduce the file size."
-keywords: convert to pdf, optimize size, pdf reduce size, pdf remove unused resources, pdf remove orphaned resources
+description: "Optimize PDFs with GroupDocs.Viewer by removing unused resources and reducing file size."
+keywords: pdf optimization, pdf size reduction, remove unused pdf objects, remove orphaned pdf streams, pdf resource optimization, pdf viewer, groupdocs viewer
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

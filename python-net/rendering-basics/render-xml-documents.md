@@ -4,8 +4,8 @@ url: viewer/python-net/render-xml-documents
 title: Render XML documents as HTML, PDF, PNG, and JPEG files
 linkTitle: Render XML documents
 weight: 10
-description: "This topic describes how to use the GroupDocs.Viewer Python API to convert XML documents to HTML (with and without pagination), PDF documents, PNG, and JPEG raster formats."
-keywords: convert xml to html, xml to html, xml to pdf, xml to jpeg, xml to png, xml to image, xml correcter, fix xml structure
+description: "Convert XML to HTML, PDF, PNG, or JPEG using GroupDocs.Viewer. Learn about options for pagination and image quality."
+keywords: xml viewer, xml converter, xml to html, xml to pdf, xml repair, fix xml, xml processing
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

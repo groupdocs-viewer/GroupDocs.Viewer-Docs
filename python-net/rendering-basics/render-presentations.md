@@ -4,8 +4,8 @@ url: viewer/python-net/render-presentations
 title: Render PowerPoint presentations as HTML, PDF, and image files
 linkTitle: Render PowerPoint presentations
 weight: 4
-description: "This topic describes how to use the GroupDocs.Viewer Python API to convert PowerPoint presentations to HTML, PDF, PNG, and JPEG formats."
-keywords: convert pptx to pdf, convert pptx to html, convert pptx to jpeg, convert ppt to pdf, convert presentation to pdf, convert ppt to html, convert presentation to html, convert presentation to image
+description: "Convert PowerPoint presentations to HTML, PDF, PNG, or JPEG using the GroupDocs.Viewer Python API."
+keywords: pptx to pdf, pptx to html, presentation to pdf, ppt to pdf, pptx to image, presentation to image, convert pptx
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

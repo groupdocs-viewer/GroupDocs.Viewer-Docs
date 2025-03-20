@@ -4,8 +4,8 @@ url: viewer/python-net/render-word-documents
 title: Render Word documents as HTML, PDF, and image files
 linkTitle: Render Word documents
 weight: 1
-description: "This topic describes how to use the GroupDocs.Viewer and Python to convert Word documents to HTML, PDF, PNG, and JPEG formats."
-keywords: convert word to pdf, convert word to jpeg, convert doc to pdf, convert docx to pdf, convert word to jpg, convert word to jpeg
+description: "Convert Word documents to HTML, PDF, PNG, or JPEG using GroupDocs.Viewer and Python. Learn the basics of document rendering."
+keywords: convert word to pdf, docx to pdf, word to jpg, doc to pdf, convert word, pdf conversion, word to image
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

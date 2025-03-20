@@ -4,8 +4,8 @@ url: viewer/python-net/render-web-documents
 title: Render web documents as PDF, PNG, and JPEG files
 linkTitle: Render Web documents
 weight: 9
-description: "This topic describes how to use the GroupDocs.Viewer Python API to convert web documents to PDF, PNG, and JPEG formats."
-keywords: convert html, html to pdf, html to jpeg, html to png, html to image
+description: "Convert web documents (CHM, HTML) to PDF, PNG, or JPEG using the GroupDocs.Viewer Python API."
+keywords: html conversion, CHM to HTML, HTML to PDF, HTML to image, CHM to image, HTML rendering, online help
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

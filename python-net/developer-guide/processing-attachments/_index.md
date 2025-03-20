@@ -3,8 +3,8 @@ id: working-with-attachments
 url: viewer/python-net/working-with-attachments
 title: Process attachments
 weight: 4
-description: "Processing email attachments, embedded files, and compressed files with GroupDocs.Viewer for Python via .NET"
-keywords: email attachments, embedded files, compressed files
+description: "Extract and save attachments from emails, PDFs, and archives using GroupDocs.Viewer for Python."
+keywords: email attachments, PDF attachments, Outlook attachments, LotusNotes, GroupDocs.Viewer, document viewing, file extraction
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---

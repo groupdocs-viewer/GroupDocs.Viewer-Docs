@@ -4,8 +4,8 @@ url: viewer/python-net/render-text-files
 title: Render text documents as HTML, PDF, and image files
 linkTitle: Render Text documents
 weight: 10
-description: "This topic describes how to use the GroupDocs.Viewer Python API to convert text files to HTML, PDF, PNG, and JPEG formats."
-keywords: text file conversion, txt to pdf, txt to html, txt to png, txt to jpeg
+description: "Convert text files to HTML, PDF, PNG, or JPEG using the GroupDocs.Viewer Python API. Learn how to render various file formats."
+keywords: text file conversion, txt to pdf, txt to html, txt to image, GroupDocs, document rendering, file format conversion
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

@@ -4,9 +4,9 @@ url: viewer/python-net/render-archive-files
 title: Render archives as HTML, PDF, and image files
 linkTitle: Render Archive files
 weight: 15
-description: "This topic describes how to use the GroupDocs.Viewer for Python via .Net API to convert archive files to HTML, PDF, PNG, and JPEG formats."
+description: "Convert archive files (ZIP, RAR, etc.) to HTML, PDF, PNG, or JPEG using GroupDocs.Viewer for Python."
 productName: GroupDocs.Viewer for Python via .Net
-keywords: zip to pdf, zip to html, zip to png, zip to jpeg, rar to pdf, rar to html, rar to png, rar to jpeg, tar to pdf, tar to html, tar to png, tar to jpeg
+keywords: zip conversion, PDF conversion, HTML conversion, image conversion, archive rendering, GroupDocs.Viewer, file rendering
 hideChildren: False
 toc: True
 aliases:

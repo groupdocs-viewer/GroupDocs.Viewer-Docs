@@ -4,8 +4,8 @@ url: viewer/python-net/specify-cad-rendering-options
 title: Specify rendering options for CAD files
 linkTitle: Specify rendering options
 weight: 2
-description: "This topic describes how to use the GroupDocs.Viewer .NET API (C#) to specify various options for rendering CAD files to HTML, PDF, PNG, and JPEG."
-keywords: set background color, change image size, split drawing into tiles, dwg to pdf, cad to pdf, dwg to html, cad to html, dwg to image
+description: "Render CAD files (DWG, DXF, etc.) to HTML, PDF, PNG, or JPEG using GroupDocs.Viewer's options."
+keywords: dwg to pdf, cad to pdf, dwg to html, cad to html, dwg to image, split drawing, performance conversion
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True

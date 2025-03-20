@@ -4,8 +4,8 @@ url: viewer/python-net/optimization-pdf-remove-fields
 title: Remove form fields
 linkTitle: Remove form fields
 weight: 2
-description: "This topic describes how to remove form fields from PDF file using the GroupDocs.Viewer Python API."
-keywords: convert to pdf, optimize size, pdf reduce size, remove fields
+description: "Remove form fields from PDF files to reduce file size using GroupDocs.Viewer's optimization options."
+keywords: PDF optimization, flatten form fields, remove form fields, PDF size reduction, PDF conversion, GroupDocs.Viewer, PDF rendering
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

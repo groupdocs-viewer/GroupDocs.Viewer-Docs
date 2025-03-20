@@ -4,8 +4,8 @@ url: viewer/python-net/installation
 title: Install GroupDocs.Viewer for Python via .NET
 linkTitle: Installation
 weight: 1
-keywords: installation, maven
-description: "This topic describes how to install GroupDocs.Viewer for Python."
+keywords: groupdocs-viewer, python, pip, viewer, installation, wheel file, .net
+description: "Install GroupDocs.Viewer for Python via pip or download assemblies from the official website."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

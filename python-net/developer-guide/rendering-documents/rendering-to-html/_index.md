@@ -3,8 +3,8 @@ id: rendering-to-html
 url: viewer/python-net/rendering-to-html
 title: Render to HTML
 weight: 11
-description: "With GroupDocs.Viewer for Python you can render files to HTML format. As a simple usecase please see how easily you can convert Microsoft Word to clean html."
-keywords: render files, rendering pdf, convert word to clean html
+description: "Render files to HTML with GroupDocs.Viewer for Python. Easily convert documents like Word to clean HTML."
+keywords: GroupDocs.Viewer, HTML rendering, Word to HTML, PDF to HTML, HTML conversion, external resources, embedded resources
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

@@ -4,8 +4,8 @@ url: viewer/python-net/optimization-pdf-spreadsheets
 title: Optimize spreadsheets in a PDF file
 linkTitle: Optimize spreadsheets in a PDF file
 weight: 3
-description: "This topic describes how to optimize spreadsheets in a PDF file using the GroupDocs.Viewer Python API."
-keywords: convert to pdf, optimize browser, optimize web
+description: "Optimize spreadsheets in PDFs. Reduces file size by enabling border lines and removing specific characters."
+keywords: pdf optimization, spreadsheet optimization, PDF file size, gv, gvo, Python, border lines
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

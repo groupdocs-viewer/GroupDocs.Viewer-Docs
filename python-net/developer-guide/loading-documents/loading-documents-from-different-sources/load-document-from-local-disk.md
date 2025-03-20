@@ -3,9 +3,10 @@ id: load-document-from-local-disk
 url: viewer/python-net/load-document-from-local-disk
 title: Load document using the local path string
 weight: 1
-description: "This article explains how to load a document using the local path string with GroupDocs.Viewer within your Python applications."
+description: "Load documents from your local disk using a file path with GroupDocs.Viewer in Python."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
+keywords: GroupDocs Viewer, local file loading, document viewing, read-only mode, Python, GroupDocs.Viewer, file path
 ---
 You can load a document from a local disk using a path to a file. GroupDocs.Viewer opens the file in the read-only mode.
 

@@ -3,9 +3,10 @@ id: load-document-from-stream
 url: viewer/python-net/load-document-from-stream
 title: Load from stream
 weight: 2
-description: "This article explains how to load a document from a Stream with GroupDocs.Viewer within your Python applications."
+description: "Load documents directly from streams (URLs, FTP, etc.) in your Python applications using GroupDocs.Viewer."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
+keywords: document stream, viewer, GroupDocs.Viewer, load document, online viewer, document rendering, stream viewer
 ---
 You can load a document from a stream without saving it as a file on a disk. You can use this feature to load a document from different sources like a URL, FTP, and so on.
 

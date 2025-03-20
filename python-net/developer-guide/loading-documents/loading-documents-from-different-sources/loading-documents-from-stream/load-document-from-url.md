@@ -3,9 +3,10 @@ id: load-document-from-url
 url: viewer/python-net/load-document-from-url
 title: Load from URL
 weight: 3
-description: "This article explains how to load a document from a URL with GroupDocs.Viewer within your Python applications."
+description: "Load documents from URLs in Python using GroupDocs.Viewer. This example demonstrates the process."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
+keywords: download file, GroupDocs.Viewer, Python, URL, requests, document loading, raw file
 ---
 The following code snippet shows how to load a document from a URL:
 

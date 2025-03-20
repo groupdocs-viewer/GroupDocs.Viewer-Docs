@@ -3,8 +3,8 @@ id: caching-results
 url: viewer/python-net/caching-results
 title: Cache results
 weight: 5
-keywords: caching,caching results,groupdocs.viewer
-description: "This article contains caching use-cases with GroupDocs.Viewer within your Python applications."
+keywords: caching, document rendering, GroupDocs.Viewer, performance optimization, file cache, rendering cache, viewer settings
+description: "Caching rendering results in GroupDocs.Viewer for Python applications to improve performance."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---

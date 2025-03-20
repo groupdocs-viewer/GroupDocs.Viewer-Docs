@@ -4,8 +4,8 @@ url: viewer/python-net/render-outlook-data-files
 title: Render Outlook data files as HTML, PDF, and image files
 linkTitle: Render Outlook data files
 weight: 13
-description: "This topic describes how to use the GroupDocs.Viewer Python API to convert Outlook data files (PST and OST) to HTML, PDF, PNG, and JPEG formats."
-keywords: convert ost to pdf, convert pst to pdf, convert ost to html, convert pst to html, convert ost to png, convert pst to png, convert ost to jpeg, convert pst to jpeg
+description: "Convert Outlook (PST/OST) files to HTML, PDF, PNG, or JPEG using the GroupDocs.Viewer Python API."
+keywords: convert ost to pdf, convert pst to pdf, ost to html, pst to html, ost to image, pst to image, outlook rendering
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

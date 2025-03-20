@@ -4,8 +4,8 @@ url: viewer/python-net
 title: GroupDocs.Viewer for Python via .NET
 linkTitle: GroupDocs.Viewer for Python
 weight: 1
-description: "GroupDocs.Viewer for Python allows you to render documents in various formats as HTML, PDF, JPEG, and PNG files. You do not need to use third-party software to view files within your Python application."
-keywords: render files, view files, HTML, PDF, JPEG, PNG
+description: "Render documents as HTML, PDF, JPEG, or PNG with GroupDocs.Viewer for Python. No third-party software needed!"
+keywords: file viewer, document rendering, PDF viewer, HTML rendering, image conversion, file format support, document preview
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: True
 fullWidth: True

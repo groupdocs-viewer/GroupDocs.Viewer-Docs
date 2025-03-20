@@ -3,9 +3,10 @@ id: reorder-pages
 url: viewer/python-net/reorder-pages
 title: Reorder pages
 weight: 1
-description: "Reorder pages when rendering documents to PDF with GroupDocs.Viewer for Python via .NET"
+description: "Reorder PDF pages during rendering with GroupDocs.Viewer for Python via .NET. Control the output page sequence."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
+keywords: GroupDocs.Viewer, page reordering, PDF page order, PDF viewer, GroupDocs.Viewer PDF, document viewer, page order
 ---
 GroupDocs.Viewer preserves the page order in the source document. Instead, you may reorder pages in the output PDF document.
 

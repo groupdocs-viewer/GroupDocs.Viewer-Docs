@@ -3,9 +3,10 @@ id: pdf-viewer-protect-pdf-documents
 url: viewer/python-net/protect-pdf-documents
 title: Protect PDF document
 weight: 2
-description: "Protect PDF documents when rendering documents using GroupDocs.Viewer for Python via .NET"
+description: "Secure PDF output with passwords and permissions when rendering documents using GroupDocs.Viewer."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
+keywords: PDF protection, GroupDocs Viewer, PDF security, document password, PDF permissions, GroupDocs, PDF restrictions
 ---
 You can protect a PDF document by setting the following parameters:
 

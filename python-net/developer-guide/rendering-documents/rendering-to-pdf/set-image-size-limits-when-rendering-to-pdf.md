@@ -3,9 +3,10 @@ id: set-image-size-limits-when-rendering-to-pdf
 url: viewer/python-net/set-image-size-limits-when-rendering-to-pdf
 title: Set image size limits
 weight: 4
-description: "Set image size limits when rendering image to PDF"
+description: "Control image size in PDF output: set width, height, or maximum dimensions."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
+keywords: PdfViewOptions, image width, image height, image resizing, GroupDocs.Viewer, Python, PDF viewer
 ---
 The [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions) class has the following properties to set the image width or/and height:
 

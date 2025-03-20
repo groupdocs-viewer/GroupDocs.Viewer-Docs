@@ -4,8 +4,8 @@ url: viewer/python-net/optimization-pdf-convert-grayscale
 title: Convert to grayscale
 linkTitle: Convert to grayscale
 weight: 3
-description: "This topic describes how to convert PDF file to grayscale using the GroupDocs.Viewer Python API."
-keywords: convert to pdf, optimize size, pdf reduce size, convert to grayscale
+description: "Convert PDFs to grayscale to reduce file size and speed up printing using the GroupDocs.Viewer Python API."
+keywords: PDF grayscale conversion, PDF optimization, reduce PDF size, PDF rendering, GroupDocs.Viewer, grayscale PDF, PDF optimization
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

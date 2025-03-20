@@ -4,8 +4,8 @@ url: viewer/python-net/render-cad-drawings-and-models
 title: Render CAD drawings and models as HTML, PDF, and image files
 linkTitle: Render CAD drawings and models
 weight: 1
-description: "This topic describes how to use the GroupDocs.Viewer Python API to convert CAD files (DWG, DGN, DXF) to HTML, PDF, PNG, and JPEG formats."
-keywords: CAD viewer, dwg viewer, convert dwg to pdf, convert dwg to html, convert dwg to jpeg, convert dwg to image
+description: "Convert CAD files (DWG, DGN, DXF) to HTML, PDF, PNG, or JPEG using the GroupDocs.Viewer Python API."
+keywords: dwg viewer, CAD viewer, convert dwg, dwg to pdf, dwg to html, CAD to image, CAD conversion
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

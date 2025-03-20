@@ -4,8 +4,8 @@ url: viewer/python-net/render-lotus-notes-database-files
 title: Render Lotus Notes database files as HTML, PDF, and image files
 linkTitle: Render Lotus Notes database files
 weight: 14
-description: "This topic describes how to use the GroupDocs.Viewer Python API to convert Lotus Notes database files (NSF) to HTML, PDF, PNG, and JPEG formats."
-keywords: convert nsf to pdf, convert nsf to html, convert nsf to png, convert nsf to jpeg
+description: "Convert NSF files to HTML, PDF, PNG, or JPEG using the GroupDocs.Viewer Python API."
+keywords: nsf conversion, lotus notes, pdf conversion, html conversion, png conversion, jpeg conversion, groupdocs viewer
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True

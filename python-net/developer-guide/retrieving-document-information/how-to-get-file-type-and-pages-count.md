@@ -3,8 +3,8 @@ id: how-to-get-file-type-and-pages-count
 url: viewer/python-net/how-to-get-file-type-and-pages-count
 title: Get the format family and the additional information
 weight: 2
-description: "This article explains how to get the format family and the additional information using .NET with GroupDocs.Viewer for Python."
-keywords: 
+description: "Get format family details & extra info about files using GroupDocs.Viewer for Python."
+keywords: GroupDocs.Viewer, file format families, view information, PDF, archive files, Outlook files, CAD documents
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---
