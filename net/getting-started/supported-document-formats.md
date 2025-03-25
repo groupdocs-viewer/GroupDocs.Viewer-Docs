@@ -37,6 +37,7 @@ This topic lists file formats supported by GroupDocs.Viewer for .NET. You can us
 | [ISO](https://docs.fileformat.com/compression/iso) | Optical Disk Image | ![(tick)](/viewer/net/images/check-blue.png) |
 | [LHA / LZH](https://docs.fileformat.com/compression/lzh/) | Lha/Lzh Archive | ![(tick)](/viewer/net/images/check-blue.png) |
 | [CAB](https://en.wikipedia.org/wiki/Cabinet_(file_format)) | Cabinet | ![(tick)](/viewer/net/images/check-blue.png) |
+| [WIM](https://docs.fileformat.com/disc-and-media/wim/) | Windows Imaging Format | ![(tick)](/viewer/net/images/check-blue.png) |
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view archive files: [Render archives as HTML, PDF, and image files](/viewer/net/render-archive-files).
 
@@ -318,8 +319,6 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 
 ## Visio file formats
 
-{{< alert style="info" >}}Visio file formats family currently is not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
-
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |
 | [VDW](https://docs.fileformat.com/web/vdw/) | Visio Web Drawing | ![(tick)](/viewer/net/images/check-blue.png) | |
@@ -337,6 +336,8 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [VTX](https://docs.fileformat.com/image/vtx/) | Visio Template XML File | ![(tick)](/viewer/net/images/check-blue.png) | |
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view Microsoft Visio files: [Render Visio documents as HTML, PDF, and image files](/viewer/net/render-visio-documents/).
+
+{{< alert style="info" >}}Initially the Visio file formats family was supported only by the GroupDocs.Viewer, but not supported by the GroupDocs.Viewer.CrossPlatform. However, starting from the version 25.3, their support was added to the GroupDocs.Viewer.CrossPlatform too.{{< /alert >}}
 
 ## Web file formats
 

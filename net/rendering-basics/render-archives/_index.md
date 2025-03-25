@@ -50,6 +50,7 @@ GroupDocs.Viewer supports the following archive file formats:
 * [.ISO (Optical Disk Image ISO-9660)](https://docs.fileformat.com/compression/iso/)
 * [.LHA / .LZH (archive file format)](https://docs.fileformat.com/compression/lzh/)
 * [.CAB (Cabinet)](https://en.wikipedia.org/wiki/Cabinet_(file_format))
+* [.WIM (Windows Imaging Format file)](https://docs.fileformat.com/disc-and-media/wim/)
 
 GroupDocs.Viewer can detect the archive file format automatically based on information in the file header.
 
@@ -469,8 +470,24 @@ End Using
 {{< /tab >}}
 {{< /tabs >}}
 
+## Additional features
+
+Despite the new archive processing module being introduced in the GroupDocs.Viewer [version 24.10](https://releases.groupdocs.com/viewer/net/release-notes/2024/groupdocs-viewer-for-net-24-10-release-notes/#new-archive-converter), it is consequentially and constantly improved with new features and enhancements.
+
+First of all, we constantly add support for new archive formats. In the [version 25.1](https://releases.groupdocs.com/viewer/net/release-notes/2025/groupdocs-viewer-for-net-25-1-release-notes/#lha-support) a support of LHA/LZH archive format was added. In the [version 25.2](https://releases.groupdocs.com/viewer/net/release-notes/2025/groupdocs-viewer-for-net-25-2-release-notes/) a support of Cabinet (CAB) archive format was added, and in the [version 25.3](https://releases.groupdocs.com/viewer/net/release-notes/2025/groupdocs-viewer-for-net-25-3-release-notes/) — support of Windows Imaging (WIM) format.
+
+Also the [version 25.2](https://releases.groupdocs.com/viewer/net/release-notes/2025/groupdocs-viewer-for-net-25-2-release-notes/) has introduced an improvement — now the last modification date is shown also for the entries of CAB, ISO, and TAR archives.
+
+But the most significant emerging feature was presented in the [version 25.3](https://releases.groupdocs.com/viewer/net/release-notes/2025/groupdocs-viewer-for-net-25-3-release-notes/) — starting from this version the GroupDocs.Viewer supports listing content of the nested archives — archives inside archives, — and this nesting level is indefinite. This means that one archive file may contain another, inner, and this inner contains other sub-inner archives, and so on… if these sub-archives are not password-protected, then the GroupDocs.Viewer will open them and explore their content. Screenshot below shows such a sample archive, rendered with the GroupDocs.Viewer.
+
+![Listing nested archives inside outer archive](/viewer/net/images/rendering-basics/render-archive-files/Nested-archives-example.png)
+
+Sample file “all-formats.zip”, shown on a screenshot, actually has no _folders_ “sample.tar” and “sample.zip” — they are actually _files_, inner archives inside outer archive. But GroupDocs.Viewer has opened and listed their content and thus displayed them as the folders. Need to mention that rendering nested archives does not require any additional actions or tuning in the public API — it is enabled by default.
+
 ## Conclusion
 
 Before the [version 24.10](https://releases.groupdocs.com/viewer/net/release-notes/2024/groupdocs-viewer-for-net-24-10-release-notes/#new-archive-converter) the archive documents were supported by the GroupDocs.Viewer in a specific way, without showing the tree hierarchy, only with a paged view, showing only one folder at a page. Performance was also not so good as it could be, especially on big archives.
 
 Starting from the version 24.10, the completely new archive processing mechanism has completely replaced the old one. Now the list of contents of archives is rendered as archive entries are actually stored, in tree-like pageless view, where separation on pages are done only for paged formats like PDF, PNG, and JPEG, and now this page splitting is not dependent on specific folders. Performance was also drastically improved, especially while rendering archives to HTML.
+
+This new archive processing mechanism is constantly improved from version to version with the new bugfixes, features and enhancements.
