@@ -1,5 +1,5 @@
 ---
-id: logging
+id: getting-used-fonts
 url: viewer/net/getting-used-fonts
 title: Getting all used fonts in the loaded document
 weight: 7
@@ -10,10 +10,11 @@ hideChildren: true
 Starting from [version 25.3](https://releases.groupdocs.com/viewer/net/release-notes/2025/groupdocs-viewer-for-net-25-3-release-notes/) the GroupDocs.Viewer is able to collect and return all fonts, which are used inside the document, loaded to the [`Viewer`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class instance. This includes both metadata about every font and its binary content. GroupDocs.Viewer is able to return both fonts, which are embedded inside the document (stored inside it) and the system fonts, which are stored in the system folder and are _used_ in the document content.
 
 Metadata and binary content about one used font is represented by the new class `UsedFontInfo`, that is located in the `GroupDocs.Viewer.Fonts` namespace. This class has the next properties:
-- `Name` of a `string` type — a unique name of the font, never is null or empty string.
-- `IsEmbedded` boolean flag, indicates whether font is embedded (`true`) or system (`false`).
-- `FamilyName` of a `string` type — family name of the given font. The value of this property may be empty, depending on the specific font and a format of the loaded document.
-- `Style` of a `string` type — style name of the given font. The value of this property may be empty, depending on the specific font and a format of the loaded document.
+
+- `Name` of a [`System.String`](https://learn.microsoft.com/en-us/dotnet/api/system.string) type — a unique name of the font, never is null or empty string.
+- `IsEmbedded` [boolean](https://learn.microsoft.com/en-us/dotnet/api/system.boolean) flag, indicates whether font is embedded (`true`) or system (`false`).
+- `FamilyName` of a [`System.String`](https://learn.microsoft.com/en-us/dotnet/api/system.string) type — family name of the given font. The value of this property may be empty, depending on the specific font and a format of the loaded document.
+- `Style` of a [`System.String`](https://learn.microsoft.com/en-us/dotnet/api/system.string) type — style name of the given font. The value of this property may be empty, depending on the specific font and a format of the loaded document.
 - `Content` of the `byte[]` type — a byte array, that contains a full content of the given font. In very rare cases may be null or empty, when the given font is a system font and the runtime is not able to get its content. This usually happens on Linux.
 - `Format` enum of `FontFormat` type — indicates a format of the given font. The following formats are currently supported: TrueType font format (TTF), OpenType font format (OTF), TrueType Collection font format (TTC), Embedded OpenType font format (EOT). If the GroupDocs.Viewer cannot grab the binary content of the system font (Content property is null), this property may return the `FontFormat.Unknown` value.
 
@@ -71,6 +72,7 @@ End Using
 {{< /tabs >}}
 
 For the given sample DOCX document there is the next output in console:
+
 ```
 8 fonts found in the 'SampleDoc1.docx' document
 Embedded font 'Sancreek' of 'Auto' family has 47612 bytes and is of 'TrueTypeFont' format
