@@ -56,11 +56,11 @@ Const filename As String = "sample.docx"
 Dim inputPath As String = "\full\path\" & filename
 
 Using viewer As New Viewer(inputPath)
-    Dim allFonts As IReadOnlyList<Fonts.UsedFontInfo> = viewer.GetAllFonts()
-    Debug.WriteLine("{0} fonts found in the '{1}' document", allFonts.Count, filename)
+    Dim allFonts As IReadOnlyList(Of Fonts.UsedFontInfo) = viewer.GetAllFonts()
+    Console.WriteLine("{0} fonts found in the '{1}' document", allFonts.Count, filename)
     For Each font As Fonts.UsedFontInfo In allFonts
-        Debug.WriteLine("{0} font '{1}' of '{2}' family has {3} bytes and is of '{4}' format",
-            font.IsEmbedded ? "Embedded" : "System",
+        Console.WriteLine("{0} font '{1}' of '{2}' family has {3} bytes and is of '{4}' format",
+            If(font.IsEmbedded, "Embedded", "System"),
             font.Name,
             font.FamilyName,
             font.Content.Length,
