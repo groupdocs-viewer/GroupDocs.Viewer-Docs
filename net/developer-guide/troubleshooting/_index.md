@@ -2,7 +2,7 @@
 id: troubleshooting
 url: viewer/net/troubleshooting
 title: Troubleshooting
-weight: 7
+weight: 9
 description: "This section contains issues that you may face and solutions for them when processing files with GroupDocs.Viewer."
 keywords: 
 productName: GroupDocs.Viewer for .NET
