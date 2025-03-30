@@ -18,7 +18,7 @@ Need to view files online? Try the [GroupDocs.Viewer App](https://products.group
 
 This topic lists file formats supported by GroupDocs.Viewer for .NET. You can use the input below to filter supported formats by extension.
 
-{{< table-filter placeholder="Start typing to find file format" >}}
+{{< table-filter placeholder="Start typing to find file format" forumUrl="https://forum.groupdocs.com/c/viewer/9">}}
 
 ## Archive and compression file formats
 
