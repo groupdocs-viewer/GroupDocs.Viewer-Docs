@@ -156,61 +156,15 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 
 ## PDF and Page Layout file formats
 
-| Format | Description | Automatic format detection |
-| --- | --- | :---: |
+| Format | Description | Automatic format detection | Remarks | 
+| --- | --- | :---: | --- |
 | [PDF](https://docs.fileformat.com/pdf/) | Adobe Portable Document Format | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [XPS](https://docs.fileformat.com/page-description-language/xps/) | Microsoft XML Paper Specification | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [OXPS](https://docs.fileformat.com/page-description-language/oxps/) | OpenXPS (Open XML Paper Specification) File | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [TEX](https://docs.fileformat.com/page-description-language/tex/) | LaTeX Source Document | ![(tick)](/viewer/net/images/check-blue.png) | |
-| [OFD](https://www.zhihuilib.com/en/article/detail/2/12) | Open Fixed-layout Document |  | |
+| [OFD](https://www.zhihuilib.com/en/article/detail/2/12) | Open Fixed-layout Document |  | GroupDocs.Viewer requires that font [SimSun.ttf](https://learn.microsoft.com/en-us/typography/font-list/simsun) must be installed on the operating system to process this file type. Learn more [here](/viewer/net/render-pdf-documents#render-ofd-documents). |
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view PDF files: [Render PDF documents as HTML and image files](/viewer/net/render-pdf-documents/).
-
-### Remarks regarding OFD
-
-Starting from the [version 24.12](https://releases.groupdocs.com/viewer/net/release-notes/2024/groupdocs-viewer-for-net-24-12-release-notes/), the GroupDocs.Viewer started to support the [OFD](https://www.zhihuilib.com/en/article/detail/2/12) (Open Fixed-layout Document) format, defined by GB/T 33190-2016 aims to replace PDF in Chinese public institutions. For processing _all_ the documents of this format the GroupDocs.Viewer requires that font [SimSun.ttf](https://learn.microsoft.com/en-us/typography/font-list/simsun) must be installed on the operating system. When using Microsoft Windows this should not be the problem, because the SimSun is preinstalled in all the Windows versions and editions starting from the _Windows 7_ (for example, _Windows 7_ has preinstalled SimSun version [5.03](https://learn.microsoft.com/en-us/typography/fonts/windows_7_font_list), while _Windows 10_ — SimSun version [5.16](https://learn.microsoft.com/en-us/typography/fonts/windows_10_font_list)). But on the Linux SimSun is usually not installed, and when trying to process such a file on Linux, a `GroupDocsViewerException : Could not load file. File is corrupted or damaged. - Font SimSun was not found` exception will be thrown.
-
-In order to view and save arbitrary OFD file on Linux, the SimSun.ttf font should be loaded to the GroupDocs.Viewer using the [`FolderFontSource`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/folderfontsource/) class and [`FontSettings.SetFontSources`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/fontsettings/setfontsources/) method, and this should be done _before_ instantiating a [`Viewer`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/) class with OFD file. Article ["Set custom fonts"](https://docs.groupdocs.com/viewer/net/set-custom-fonts/) describes setting a custom font in detail, but a short example of setting a SimSun and saving OFD to HTML on Linux is below:
-
-{{< tabs "example1">}}
-{{< tab "C#" >}}
-```csharp
-using GroupDocs.Viewer;
-using GroupDocs.Viewer.Options;
-using GroupDocs.Viewer.Fonts;
-// ...
-
-//Put a SimSun.ttf to folder
-string SimSunFolderPath = "full-valid-path\folder-with-SimSun-inside";
-FolderFontSource fontSource = new FolderFontSource(SimSunFolderPath, SearchOption.TopFolderOnly);
-FontSettings.SetFontSources(fontSource);
-
-using (Viewer viewer = new Viewer("Input-document.ofd"))
-{
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
-    viewer.View(viewOptions);
-}
-```
-{{< /tab >}}
-{{< tab "VB.NET">}}
-```vb
-Imports GroupDocs.Viewer
-Imports GroupDocs.Viewer.Options
-Imports GroupDocs.Viewer.Fonts
-' ...
-
-' Put a SimSun.ttf to folder
-Dim SimSunFolderPath As String = "full-valid-path\folder-with-SimSun-inside"
-Dim fontSource As FolderFontSource = New FolderFontSource(SimSunFolderPath, SearchOption.TopFolderOnly)
-FontSettings.SetFontSources(fontSource)
-
-Using viewer As Viewer = New Viewer("Input-document.ofd")
-	Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
-	viewer.View(viewOptions)
-End Using
-```
-{{< /tab >}}
-{{< /tabs >}}
 
 ## Presentation file formats
 
