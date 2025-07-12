@@ -30,7 +30,7 @@ Sometimes including fonts to the produced HTML document is unwanted: for example
 Both these options are represented in the [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) class as different properties:
 
 - [`ExcludeFonts`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/excludefonts/) is a flag that disables export of **all** used fonts to the produced HTML document, when enabled (`true`). By default this option is disabled (`false`).
-- [`FontsToExclude`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/fontstoexclude/) is a list of `string`, each one represents one font name, that should be excluded from the produced HTML document. By default this list is empty — no fonts are excluded. Please note that this options works only if the `ExcludeFonts` property is disabled (`false`).
+- [`FontsToExclude`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/fontstoexclude/) is a list of `string`, each one represents one font name, that should be excluded from the produced HTML document. By default this list is empty — no fonts are excluded. Please note that this option works only if the `ExcludeFonts` property is disabled (`false`).
 
 The folowing code snippet shows how to exclude all fonts from the produced HTML document with the `ExcludeFonts` flag.
 
