@@ -79,7 +79,7 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("sample.docx"))
+using (Viewer viewer = new Viewer("presentation.pptx"))
 {
     // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources();    
@@ -97,7 +97,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("sample.docx")
+        Using viewer As Viewer = New Viewer("presentation.pptx")
             ' Create an HTML file.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()            
             viewOptions.FontsToExclude.Add("Times New Roman")' Exclude the Times New Roman font.

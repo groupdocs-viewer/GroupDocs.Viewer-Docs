@@ -23,11 +23,13 @@ using GroupDocs.Viewer.Options;
 
 using (Viewer viewer = new Viewer("sample.pptx"))
 {
-    // Create an HTML file.
+    // Create options for rendering HTML document with embedded resources
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
    
-    // Specify a default font.
+    // Specify a default font name is the options
     viewOptions.DefaultFontName = "Courier New";
+    
+    // Render input PPTX to output HTML
     viewer.View(viewOptions);
 }          
 ```
@@ -41,11 +43,13 @@ Imports GroupDocs.Viewer.Options
 Module Program
     Sub Main(args As String())
         Using viewer As Viewer = New Viewer("sample.pptx")
-            ' Create an HTML file.
+            ' Create options for rendering HTML document with embedded resources
             Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources   ()
         
-            ' Specify a default font.
+            ' Specify a default font name is the options
             viewOptions.DefaultFontName = "Courier New"
+            
+            ' Render input PPTX to output HTML
             viewer.View(viewOptions)
         End Using
     End Sub
