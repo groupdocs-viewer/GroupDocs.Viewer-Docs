@@ -244,11 +244,13 @@ The screenshot below illustrates the result:
 
 ## Split worksheet into pages manually by rows and columns
 
-Sometimes none of the splitting methods, described above, is acceptable, or the spreadsheet has a format that does not support page breaks and Print Areas, for example, the text-based CSV. For such cases GroupDocs.Viewer allows to manually specify the number of rows and/or number of columns that should be present on every page.
+Sometimes none of the splitting methods, described above, is acceptable, or the spreadsheet has a format that does not support page breaks and Print Areas, for example, the text-based CSV. For such cases GroupDocs.Viewer allows to manually specify the number of rows and/or number of columns that should be present on every page. In short, the difference between splitting by rows only vs. splitting by rows and columns is illustrated on screenshot below.
+
+![Split by rows only vs. split by rows and columns](/viewer/net/sample-files/split-worksheets-into-pages/split-by-rows-and-split-by-rows-and-columns.png)
 
 ### Split worksheet into pages only by rows
 
-When a worksheet is tall, but narrow, i.e. it has some moderate amount of columns, but huge amount of rows, it is ideal to split such a worksheet horizontally, by rows. In this case the user should specify a number of rows per single page in the [`SpreadsheetOptions.ForSplitSheetIntoPages(int countRowsPerPage)`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forsplitsheetintopages/#forsplitsheetintopages) static method, and then all as usual. The number of rows per page must be strictly greater than zero. The code sample is below, it specifies 15 rows per one page.
+When a worksheet is tall, but narrow, i.e. it has some moderate amount of columns, but huge amount of rows, it is ideal to split such a worksheet horizontally, by rows. In this case the user should specify a number of rows per single page in the [`SpreadsheetOptions.ForSplitSheetIntoPages(int countRowsPerPage)`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forsplitsheetintopages/#forsplitsheetintopages) static method, and then all as usual. The number of rows per page must be strictly greater than zero. The code sample is below, it specifies 15 rows per one page. This code sample uses a file "`two-pages.xlsx`", that can be downloaded [here](/viewer/net/sample-files/split-worksheets-into-pages/two-pages.xlsx).
 
 {{< tabs "SplitWorksheetIntoPagesOnlyByRows">}}
 {{< tab "C#" >}}
@@ -304,7 +306,7 @@ The screenshot below demonstrates the original XLSX spreadsheet, conditionally d
 
 ### Split worksheet into pages by rows and columns
 
-When a worksheet is tall and wide, i.e. it has a big amount of columns and rows, then need to split such a worksheet horizontally and vertically simultaneously. The previously mentioned [`ForSplitSheetIntoPages`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forsplitsheetintopages/#forsplitsheetintopages) static method has an overload, that obtained two arguments — number of rows and number of columns: [`ForSplitSheetIntoPages(int countRowsPerPage, int countColumnsPerPage)`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forsplitsheetintopages/#forsplitsheetintopages_1). The number of rows and columns per page must be strictly greater than zero. The following sample demonstrates splitting the worksheets into pages with 15 rows and 7 columns per each.
+When a worksheet is tall and wide, i.e. it has a big amount of columns and rows, then need to split such a worksheet horizontally and vertically simultaneously. The previously mentioned [`ForSplitSheetIntoPages`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forsplitsheetintopages/#forsplitsheetintopages) static method has an overload, that obtained two arguments — number of rows and number of columns: [`ForSplitSheetIntoPages(int countRowsPerPage, int countColumnsPerPage)`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forsplitsheetintopages/#forsplitsheetintopages_1). The number of rows and columns per page must be strictly greater than zero. The following sample demonstrates splitting the worksheets into pages with 15 rows and 7 columns per each. This code sample uses a file "`four-pages.xlsx`", that can be downloaded [here](/viewer/net/sample-files/split-worksheets-into-pages/four-pages.xlsx).
 
 {{< tabs "SplitWorksheetIntoPagesByRowsAndColumns">}}
 {{< tab "C#" >}}
@@ -359,3 +361,7 @@ End Using
 The screenshot below demonstrates the original XLSX spreadsheet, conditionally divided onto chucks with 15 rows and 7 columns (A-G and H-N) in each, and output PDF file, produced by the GroupDocs.Viewer.
 
 ![Break a worksheet into four pages](/viewer/net/images/rendering-basics/render-spreadsheets/render-four-pages.png)
+
+## Conclusion
+
+This article shows that GroupDocs.Viewer provides different ways to split a worksheet into pages in order to satisfy the widest variety of use-cases. Please note that all these features were added to the GroupDocs.Viewer gradually, piece by piece, so if you're using some obsolete version of the library, released before year 2023, some of the described features may be missing. Also keep in mind that we're open to new suggestions and ideas how a worksheet can be splitted on pages, so you are welcome to share your thoughts on our [forum](https://forum.groupdocs.com/c/viewer/9).
