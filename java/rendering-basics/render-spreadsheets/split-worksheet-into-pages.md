@@ -37,13 +37,13 @@ import com.groupdocs.viewer.options.SpreadsheetOptions;
 
 public class RenderAWorksheetOnOnePage {
     public static void render() {
-    // Create PDF view options for rendering to PDF
+        // Create PDF view options for rendering to PDF
         PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
 
-    // Create spreadsheet options to render each worksheet to one page
+        // Create spreadsheet options to render each worksheet to one page
         viewOptions.setSpreadsheetOptions(SpreadsheetOptions.forOnePagePerSheet());
 
-    // Create a Viewer instance and specify the input XLSX
+        // Create a Viewer instance and specify the input XLSX
         try (Viewer viewer = new Viewer("Products.xlsx"))
         {
             // Render the XLSX to PDF
@@ -82,13 +82,13 @@ import com.groupdocs.viewer.options.SpreadsheetOptions;
 
 public class SplitWorksheetByPageBreaks {
     public static void render() {
-    // Create PDF view options for rendering to PDF
+        // Create PDF view options for rendering to PDF
         PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
 
-    // Create spreadsheet options to split worksheet onto pages by page breaks
+        // Create spreadsheet options to split worksheet onto pages by page breaks
         viewOptions.setSpreadsheetOptions(SpreadsheetOptions.forRenderingByPageBreaks());
 
-    // Create a Viewer instance and specify the input XLSX
+        // Create a Viewer instance and specify the input XLSX
         try (Viewer viewer = new Viewer("Products.xlsx"))
         {
             // Render the XLSX to PDF
@@ -125,13 +125,13 @@ import com.groupdocs.viewer.options.SpreadsheetOptions;
 
 public class RenderOnlyPrintArea {
     public static void render() {
-    // Create PDF view options for rendering to PDF
+        // Create PDF view options for rendering to PDF
         PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
 
-    // Create spreadsheet options to render a Print Area only
+        // Create spreadsheet options to render a Print Area only
         viewOptions.setSpreadsheetOptions(SpreadsheetOptions.forRenderingPrintArea());
 
-    // Create a Viewer instance and specify the input XLSX
+        // Create a Viewer instance and specify the input XLSX
         try (Viewer viewer = new Viewer("Invoice.xlsx"))
         {
             // Render the XLSX to PDF
@@ -172,13 +172,13 @@ import com.groupdocs.viewer.options.SpreadsheetOptions;
 
 public class RenderPrintAreaAndSplitByPageBreaks {
     public static void render() {
-    // Create PDF view options for rendering to PDF
+        // Create PDF view options for rendering to PDF
         PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
 
-    // Render a Print Area and split by page breaks
+        // Render a Print Area and split by page breaks
         viewOptions.setSpreadsheetOptions(SpreadsheetOptions.forRenderingPrintAreaAndPageBreaks());
 
-    // Create a Viewer instance and specify the input XLSX
+        // Create a Viewer instance and specify the input XLSX
         try (Viewer viewer = new Viewer("Products.xlsx"))
         {
             // Render the XLSX to PDF
@@ -217,16 +217,16 @@ import com.groupdocs.viewer.options.SpreadsheetOptions;
 
 public class SplitWorksheetIntoPagesOnlyByRows {
     public static void render() {
-    // Create PDF view options for rendering to PDF
+        // Create PDF view options for rendering to PDF
         PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
 
-    // Specify number of rows for every page
+        // Specify number of rows for every page
         int rowsPerPage = 15;
 
-    // Create spreadsheet options to split worksheet by number of rows
+        // Create spreadsheet options to split worksheet by number of rows
         viewOptions.setSpreadsheetOptions(SpreadsheetOptions.forSplitSheetIntoPages(rowsPerPage));
 
-    // Create a Viewer instance and specify the input XLSX
+        // Create a Viewer instance and specify the input XLSX
         try (Viewer viewer = new Viewer("two-pages.xlsx"))
         {
             // Render the XLSX to PDF
@@ -269,17 +269,17 @@ import com.groupdocs.viewer.options.SpreadsheetOptions;
 
 public class SplitWorksheetIntoPagesByRowsAndColumns {
     public static void render() {
-    // Create PDF view options for rendering to PDF
+        // Create PDF view options for rendering to PDF
         PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
 
-    // Specify number of rows and columns for every page
+        // Specify number of rows and columns for every page
         int rowsPerPage = 15;
         int columnsPerPage = 7;
 
-    // Create spreadsheet options to split worksheet by number of rows and columns
+        // Create spreadsheet options to split worksheet by number of rows and columns
         viewOptions.setSpreadsheetOptions(SpreadsheetOptions.forSplitSheetIntoPages(rowsPerPage, columnsPerPage));
 
-    // Create a Viewer instance and specify the input XLSX
+        // Create a Viewer instance and specify the input XLSX
         try (Viewer viewer = new Viewer("four-pages.xlsx"))
         {
             // Render the XLSX to PDF
