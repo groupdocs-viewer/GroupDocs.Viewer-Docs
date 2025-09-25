@@ -135,7 +135,7 @@ public class RenderToHTML {
 {{< /tab >}}
 {{< tab "Embedded.html" >}}  
 {{< tab-text >}}
-`Embedded.html` is rendered HTML document. Click [here](/viewer/java/sample-files/rendering-basics/render-archives/Embedded.html) to download it.
+`Embedded.html` is rendered HTML document. Click [here](/viewer/java/sample-files/rendering-basics/render-archives/Embedded.zip) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
@@ -285,7 +285,7 @@ public class RenderToHTMLWithOptions {
 {{< /tab >}}
 {{< tab "FolderAndFileName.html" >}}  
 {{< tab-text >}}
-`FolderAndFileName.html` is rendered HTML document. Click [here](/viewer/java/sample-files/rendering-basics/render-archives/FolderAndFileName.html) to download it.
+`FolderAndFileName.html` is rendered HTML document. Click [here](/viewer/java/sample-files/rendering-basics/render-archives/FolderAndFileName.zip) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

@@ -78,7 +78,7 @@ public class SearchHighlightText {
 {{< /tab >}}
 {{< tab "result_3.html" >}}  
 {{< tab-text >}}
-`result_3.html` is rendered HTML document. Click [here](/viewer/java/sample-files/developer-guide/search-highlight-text/result_3.html) to download it.
+`result_3.html` is rendered HTML document. Click [here](/viewer/java/sample-files/developer-guide/search-highlight-text/result_3.zip) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
