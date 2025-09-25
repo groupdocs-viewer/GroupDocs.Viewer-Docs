@@ -269,3 +269,86 @@ try (Viewer viewer = new Viewer("resume.docx")) {
 The following image illustrates the result:
 
 ![Render comments to PDF](/viewer/java/images/rendering-basics/render-word-documents/render-comments-to-pdf.png)
+
+## Unlink table of contents
+
+When rendering to HTML or PDF, you can set [WordProcessingOptions.setUnlinkTableOfContents()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/wordprocessingoptions/#setUnlinkTableOfContents-boolean-) to `true` to unlink table of contents. For HTML rendering, `<a>` tags with relative links will be replaced with `<span>` tags, removing functionality but preserving visual appearance. For PDF rendering, the table of contents will be rendered as plain text without links to document sections.
+
+The code example below renders a Word document with table of contents as a plain text without links.
+
+{{< tabs "example9">}}
+{{< tab "Java" >}}
+```java
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+// ...
+
+try (Viewer viewer = new Viewer("resume.docx"))
+{
+    // Convert the document to HTML.
+    HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
+    // Unlink table of contents.
+    viewOptions.getWordProcessingOptions().setUnlinkTableOfContents(true);
+    viewer.view(viewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+The following image illustrates the result:
+
+![Unlink table of contens in Word files](/viewer/net/images/rendering-basics/render-word-documents/unlink-table-of-contents.png)
+
+## Disable updating fields when saving
+
+The most of formats inside the WordProcessing family of formats, like DOC, DOCX, ODT and so on, have the concept of [fields](https://support.microsoft.com/en-us/office/list-of-field-codes-in-word-1ad6d91a-55a7-4a8d-b535-cf7888659a51), which are processed when the document is opened in some viewer application like Microsoft Word. When the input WordProcessing document is loaded to the GroupDocs.Viewer and saved to the HTML (with embedded or external resources), PDF, PNG, or JPEG output formats, all the fields within the input document are updated while saving, and this mimics the Microsoft Word behavior. But in some scenarios, for example, when field values are incorrect, there is no necessary and even not desirable to update fields.
+
+Starting from the version [25.9](https://releases.groupdocs.com/viewer/java/release-notes/2025/groupdocs-viewer-for-java-25-9-release-notes/) the GroupDocs.Viewer for Java has obtained an ability to disable updating fields while saving the documents. The new public property [`setUpdateFields`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/wordprocessingoptions/#setUpdateFields-boolean-) of the [`java.lang.Boolean`](https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html) type was added to the [`WordProcessingOptions`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/wordprocessingoptions/) class. By default the value of this property is set to `true`, so fields are updated, as before. In order to turn fields updating off, please set this property to `false`. Code sample below shows opening a sample DOCX document and saving to the HTML with embedded resources and PDF formats without updating fields during saving.
+
+{{< tabs "example-UpdateFields">}}
+{{< tab "Java" >}}
+```java
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+import com.groupdocs.viewer.options.PdfViewOptions;
+// ...
+
+HtmlViewOptions htmlViewOptions = HtmlViewOptions.forEmbeddedResources();
+htmlViewOptions.getWordProcessingOptions().setUpdateFields(false);
+
+PdfViewOptions pdfViewOptions = new PdfViewOptions("output.pdf");
+pdfViewOptions.getWordProcessingOptions().setUpdateFields(false);
+
+try (Viewer viewer = new Viewer("resume.docx"))
+{    
+    viewer.view(htmlViewOptions);
+    viewer.view(pdfViewOptions);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+## Remove or preserve JavaScript when saving to HTML
+
+Most of WordProcessing formats like DOC, DOCX, ODT and so on are able to store the scripts, usually written on VBA. When the output format is PDF, PNG, or JPEG, there is no problem at all. But when the output format is HTML, this may lead to the situations when malicious or harmful VBA script(s) from input DOCX, for example, will be translated to the resultant HTML document. Before the [version 25.9](https://releases.groupdocs.com/viewer/java/release-notes/2025/groupdocs-viewer-for-java-25-9-release-notes/) the was no possibility for the GroupDocs.Viewer to disable scripts preserving and translation — all the VBA scripts were translated to the JavaScript in HTML. Starting from the version 25.9, for the security purposes script translation is disabled by default — all the links containing JavaScript are replaced with the harmless `"javascript:void(0)"` string in the resultant HTML markup. But it is possible to enable script translation, as it was present in the GroupDocs.Viewer before, by using a new public property `RemoveJavaScript` of the [`java.lang.Boolean`](https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html) type in the [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/htmlviewoptions/) class. By default this property has a `true` value — JavaScript will be removed from the resultant HTML document. For preserving the JavaScript, as it was in the previous versions of the GroupDocs.Viewer, the `false` value should be assigned to this property. Code sample below shows opening a sample DOCX document and rendering it to the HTML with embedded resources with and without JavaScript.
+
+{{< tabs "example-RemoveJavaScript">}}
+{{< tab "Java" >}}
+```java
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+// ...
+
+HtmlViewOptions htmlViewOptionsWithoutJavaScript = HtmlViewOptions.forEmbeddedResources("without-js-page{0}.html");
+
+HtmlViewOptions htmlViewOptionsWithJavaScript = HtmlViewOptions.forEmbeddedResources("with-js-page{0}.html");
+htmlViewOptionsWithJavaScript.setRemoveJavaScript(false);
+
+try (Viewer viewer = new Viewer("Doc-with-VBA.docx"))
+{
+    viewer.view(htmlViewOptionsWithoutJavaScript);
+    viewer.view(htmlViewOptionsWithJavaScript);
+}
+```
+{{< /tab >}}
+{{< /tabs >}}

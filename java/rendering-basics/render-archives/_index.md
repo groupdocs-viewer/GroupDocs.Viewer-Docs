@@ -438,6 +438,20 @@ List of folders in the archive document:
 {{< /tab >}}
 {{< /tabs >}}
 
+## Additional features
+
+Despite the new archive processing module being introduced in the GroupDocs.Viewer [version 25.6](https://releases.groupdocs.com/viewer/java/release-notes/2025/groupdocs-viewer-for-java-25-6-release-notes/#new-archive-converter), it is consequentially and constantly improved with new features and enhancements.
+
+First of all, we constantly add support for new archive formats. In the [version 25.9](https://releases.groupdocs.com/viewer/java/release-notes/2025/groupdocs-viewer-for-java-25-9-release-notes/) added support for the LHA/LZH, Cabinet (CAB), and Windows Imaging (WIM) archive formats.
+
+Also the [version 25.9](https://releases.groupdocs.com/viewer/java/release-notes/2025/groupdocs-viewer-for-java-25-9-release-notes/) has introduced an improvement — now the last modification date is shown also for the entries of CAB, ISO, and TAR archives.
+
+Starting from this version the GroupDocs.Viewer supports listing content of the nested archives — archives inside archives, — and this nesting level is indefinite. This means that one archive file may contain another, inner, and this inner contains other sub-inner archives, and so on… if these sub-archives are not password-protected, then the GroupDocs.Viewer will open them and explore their content. Screenshot below shows such a sample archive, rendered with the GroupDocs.Viewer.
+
+![Listing nested archives inside outer archive](/viewer/net/images/rendering-basics/render-archive-files/Nested-archives-example.png)
+
+Sample file “all-formats.zip”, shown on a screenshot, actually has no _folders_ “sample.tar” and “sample.zip” — they are actually _files_, inner archives inside outer archive. But GroupDocs.Viewer has opened and listed their content and thus displayed them as the folders. Need to mention that rendering nested archives does not require any additional actions or tuning in the public API — it is enabled by default.
+
 ## Conclusion
 
 Before the [version 25.6](https://releases.groupdocs.com/viewer/java/release-notes/2025/groupdocs-viewer-for-java-25-6-release-notes/) the archive documents were supported by the GroupDocs.Viewer in a specific way, without showing the tree hierarchy, only with a paged view, showing only one folder at a page. Performance was also not so good as it could be, especially on big archives.

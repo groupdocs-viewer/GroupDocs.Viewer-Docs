@@ -32,6 +32,9 @@ This topic lists file formats supported by GroupDocs.Viewer for Java. You can us
 | [TXZ](https://docs.fileformat.com/compression/xz/) | XZ Compressed Tar Archive | ![(tick)](/viewer/java/images/check-blue.png) |
 | [XZ](https://docs.fileformat.com/compression/xz/) | XZ Compressed Archive | ![(tick)](/viewer/java/images/check-blue.png) |
 | [ZIP](https://docs.fileformat.com/compression/zip) | Zipped File | ![(tick)](/viewer/java/images/check-blue.png) |
+| [LHA / LZH](https://docs.fileformat.com/compression/lzh/) | Lha/Lzh Archive | ![(tick)](/viewer/net/images/check-blue.png) |
+| [CAB](https://en.wikipedia.org/wiki/Cabinet_(file_format)) | Cabinet | ![(tick)](/viewer/net/images/check-blue.png) |
+| [WIM](https://docs.fileformat.com/disc-and-media/wim/) | Windows Imaging Format | ![(tick)](/viewer/net/images/check-blue.png) |
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view archive files: [Render archives as HTML, PDF, and image files](/viewer/java/render-archive-files).
 

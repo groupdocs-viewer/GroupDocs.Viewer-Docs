@@ -56,7 +56,7 @@ Define GroupDocs.Viewer for Java API dependency in your `pom.xml`:
     <dependency>
         <groupId>com.groupdocs</groupId>
         <artifactId>groupdocs-viewer</artifactId>
-        <version>25.6</version> 
+        <version>25.9</version> 
     </dependency>
 </dependencies>
 ```
