@@ -49,3 +49,9 @@ GroupDocs.Viewer for Java can be used to develop applications in any development
 * Eclipse IDE
 * IntelliJ IDEA
 * NetBeans
+
+## Required fonts
+
+When working with the documents that contain the Chinese hieroglyphs, in order to obtain the valid rendering results without exceptions or replacement characters (usually represented as empty squares) in the produced documents, it is required that a [SimSun](https://learn.microsoft.com/en-us/typography/font-list/simsun) font should be installed in the operating system.
+
+When using Microsoft Windows this should not be the problem, because the SimSun is preinstalled in all the Windows versions and editions starting from the Windows 2000 (for example, Windows XP has preinstalled SimSun version 3.03, Windows 7 has preinstalled SimSun version [5.03](https://learn.microsoft.com/en-us/typography/fonts/windows_7_font_list), and Windows 10 — SimSun version [5.16](https://learn.microsoft.com/en-us/typography/fonts/windows_10_font_list)). But on Linux the SimSun is usually not installed, so it is required to install it manually. This also is valid when running GroupDocs.Viewer in Docker environment and using a Linux image.
