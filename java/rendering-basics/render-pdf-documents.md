@@ -458,3 +458,82 @@ Viewer("resume.pdf").use { viewer ->
 The following image shows the rendering [resume.pdf](/viewer/java/images/rendering-basics/render-pdf-documents/resume.pdf) with the disabled (left) and enabled (right) `WrapImagesInSvg` option:
 
 ![Images as background vs embedded in SVG](/viewer/java/images/rendering-basics/render-pdf-documents/wrap-images-in-svg.png)
+
+## Disable copy protection
+
+When rendering PDF files with protection against copying text and images to HTML, GroupDocs.Viewer adds an `inert` HTML attribute to the HTML `<body>` tag.
+
+Use [PdfOptions.setDisableCopyProtection()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfoptions/#setDisableCopyProtection-boolean-) to turn off copy protection. When `DisableCopyProtection` is set to `true`, the `inert` HTML attribute won't be added to the HTML `<body>` tag in any case.
+
+{{< alert style="info" >}}
+
+This option was added in GroupDocs.Viewer for Java 24.6. Previous versions of GroupDocs.Viewer for Java ignores PDF copy protection and does not add `inert` HTML attribute to HTML `<body>` tag.   
+
+{{< /alert >}}
+
+This option is supported when rendering PDF files to HTML with embedded or external resources. 
+
+{{< tabs "example17">}}
+{{< tab "Java" >}}
+```java
+try (Viewer viewer = new Viewer("protected-resume.pdf")) {
+   HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
+   viewOptions.getPdfOptions().setDisableCopyProtection(true);
+
+   viewer.view(viewOptions);
+}
+```
+{{< /tab >}}
+{{< tab "Kotlin">}}
+```kotlin
+Viewer("protected-resume.pdf").use { viewer ->
+    val viewOptions = HtmlViewOptions.forEmbeddedResources()
+    viewOptions.pdfOptions.isDisableCopyProtection = true
+    viewer.view(viewOptions)
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+The following image shows the rendering of [protected-resume.pdf](/viewer/java/images/rendering-basics/render-pdf-documents/protected-resume.pdf) with copy protection on the left and with with `DisableCopyProtection` option set to `true` on the right:
+
+![Render with or without copy protection](/viewer/java/images/rendering-basics/render-pdf-documents/render-with-and-without-copy-protection.png)
+
+## Repairing corrupted PDF documents
+
+By default GroupDocs.Viewer cannot process the PDF documents with corrupted structure or content — it throws an exception when trying to open such files. However, starting from the version [24.10](https://releases.groupdocs.com/viewer/java/release-notes/2024/groupdocs-viewer-for-java-24-10-release-notes/) GroupDocs.Viewer can try to repair the structural corruptions in PDF documents. By default this feature is disabled. To enable it, need to use the newly added `TryRepair` boolean property of the [`LoadOptions`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/loadoptions/) class by setting its value to `true`.
+
+When enabled, this feature addresses the following issues in a PDF document:
+
+* Broken references within the document (incorrect object offsets in the Cross-reference list).
+* Missing critical elements like root object, page object, or page content.
+* Circular references (Form X-object referencing itself).
+
+Here is a source code sample:
+
+{{< tabs "example18">}}
+{{< tab "Java" >}}
+```java
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setTryRepair(true);
+
+try (Viewer viewer = new Viewer("resume.pdf", loadOptions)) {
+   PngViewOptions viewOptions = new PngViewOptions();
+
+   viewer.view(viewOptions);
+}
+```
+{{< /tab >}}
+{{< tab "Kotlin">}}
+```kotlin
+val loadOptions = LoadOptions().apply {
+    tryRepair = true
+}
+
+Viewer("resume.pdf", loadOptions).use { viewer ->
+    val viewOptions = PngViewOptions()
+    viewer.view(viewOptions)
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
