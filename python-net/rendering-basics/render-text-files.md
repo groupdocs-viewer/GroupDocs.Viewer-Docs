@@ -74,13 +74,25 @@ When you load a text document from a file, you should explicitly specify their f
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-# Specify the file encoding. 
-load_options = gvo.LoadOptions(gv.FileType.MD)
-# Convert the document to PDF.
-with gv.Viewer("TermsOfService.txt", load_options) as viewer:
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer, FileType
+from groupdocs.viewer.options import LoadOptions, PdfViewOptions
+
+def render_text_with_load_options():
+    # Specify the file encoding. 
+    load_options = LoadOptions(FileType.MD)
+    # Convert the document to PDF.
+    with Viewer("terms_of_service.txt", load_options) as viewer:
+        viewOptions = PdfViewOptions("render_text_with_load_options/text_with_load_options.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_text_with_load_options()
 ```
+{{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -95,12 +107,25 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("TermsOfService.txt") as viewer:
-    # Convert the text file to HTML.
-    # {0} is replaced with the current page number in the output file names.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_text_to_html():
+    # Load text file
+    with Viewer("terms_of_service.txt") as viewer:
+        # Convert the text file to HTML.
+        # {0} is replaced with the current page number in the output file names.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_text_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_text_to_html()
 ```
+{{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -119,13 +144,26 @@ If you want to store output HTML files and additional resource files (such as fo
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("TermsOfService.txt") as viewer:
-    # Create an HTML file for each PDF page.
-    # Specify the HTML file names and location of external resources.
-    # {0} and {1} are replaced with the current page number and resource name, respectively.
-    viewOptions = gvo.HtmlViewOptions.for_external_resources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_text_to_html_external():
+    # Load text file
+    with Viewer("terms_of_service.txt") as viewer:
+        # Create an HTML file for each page.
+        # Specify the HTML file names and location of external resources.
+        # {0} and {1} are replaced with the current page number and resource name, respectively.
+        viewOptions = HtmlViewOptions.for_external_resources("render_text_to_html_external/pdf_page_{0}.html", "render_text_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_text_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_text_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -140,13 +178,26 @@ If you need to display the entire document content on a single HTML page, use th
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("TermsOfService.txt") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("output.html")
-    # Render the file to a single page. 
-    viewOptions.render_to_single_page = True
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_text_to_single_html():
+    # Load text file
+    with Viewer("terms_of_service.txt") as viewer:
+        # Create an HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_text_to_single_html/text_to_single_html.html")
+        # Render the file to a single page. 
+        viewOptions.render_to_single_page = True
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_text_to_single_html()
 ```
+{{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -157,11 +208,24 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example6">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("TermsOfService.txt") as viewer:
-    # Convert the text file to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_text_to_pdf():
+    # Load text file
+    with Viewer("terms_of_service.txt") as viewer:
+        # Convert the text file to PDF.
+        viewOptions = PdfViewOptions("render_text_to_pdf/text_document.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_text_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -176,15 +240,28 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example7">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("TermsOfService.txt") as viewer:
-    # Convert the text file to PNG.
-    # {0} is replaced with the current page number in the output image names.
-    viewOptions = gvo.PngViewOptions("output_{0}.png")
-    # Set width and height.
-    viewOptions.width = 950
-    viewOptions.height = 550
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_text_to_png():
+    # Load text file
+    with Viewer("terms_of_service.txt") as viewer:
+        # Convert the text file to PNG.
+        # {0} is replaced with the current page number in the output image names.
+        viewOptions = PngViewOptions("render_text_to_png/text_page_0_{0}.png")
+        # Set width and height.
+        viewOptions.width = 950
+        viewOptions.height = 550
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_text_to_png()
 ```
+{{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -199,14 +276,27 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example8">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("TermsOfService.txt") as viewer:
-    # Convert the text file to JPEG.
-    # {0} is replaced with the current page number in the output image names.
-    viewOptions = gvo.JpgViewOptions("output_{0}.jpg")
-    # Set width and height.
-    viewOptions.width = 950
-    viewOptions.height = 550
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_text_to_jpg():
+    # Load text file
+    with Viewer("terms_of_service.txt") as viewer:
+        # Convert the text file to JPEG.
+        # {0} is replaced with the current page number in the output image names.
+        viewOptions = JpgViewOptions("render_text_to_jpg/text_to_jpg_{0}.jpg")
+        # Set width and height.
+        viewOptions.width = 950
+        viewOptions.height = 550
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_text_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

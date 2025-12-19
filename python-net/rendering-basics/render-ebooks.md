@@ -39,12 +39,25 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("abook.epub") as viewer:
-    # Create an HTML file for each document page.
-    # {0} is replaced with the current page number in the file name.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_ebook_to_html():
+    # Load EBook
+    with Viewer("sample.epub") as viewer:
+        # Create an HTML file for each document page.
+        # {0} is replaced with the current page number in the file name.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_ebook_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_ebook_to_html()
 ```
+{{< /tab >}}
+{{< tab "sample.epub" >}}
+{{< tab-text >}}
+`sample.epub` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -63,13 +76,26 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("abook.epub") as viewer:
-    # Create an HTML file for each document page.
-    # Specify the HTML file names and location of external resources.
-    # {0} and {1} are replaced with the current page number and resource name, respectively.
-    viewOptions = gvo.HtmlViewOptions.for_external_resources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_ebook_to_html_external():
+    # Load EBook
+    with Viewer("sample.epub") as viewer:
+        # Create an HTML file for each document page.
+        # Specify the HTML file names and location of external resources.
+        # {0} and {1} are replaced with the current page number and resource name, respectively.
+        viewOptions = HtmlViewOptions.for_external_resources("render_ebook_to_html_external/pdf_page_{0}.html", "render_ebook_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_ebook_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_ebook_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "sample.epub" >}}
+{{< tab-text >}}
+`sample.epub` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -84,12 +110,25 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("abook.epub") as viewer:
-    # Create a PDF file for the document.
-    # Specify the PDF file name.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_ebook_to_pdf():
+    # Load EBook
+    with Viewer("sample.epub") as viewer:
+        # Create a PDF file for the document.
+        # Specify the PDF file name.
+        viewOptions = PdfViewOptions("render_ebook_to_pdf/ebook.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_ebook_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "sample.epub" >}}
+{{< tab-text >}}
+`sample.epub` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -104,15 +143,28 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("abook.epub") as viewer:
-    # Create a PNG image for each document page.
-    # {0} is replaced with the current page number in the image name.
-    viewOptions = gvo.PngViewOptions("output_{0}.png")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 900
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_ebook_to_png():
+    # Load EBook
+    with Viewer("sample.epub") as viewer:
+        # Create a PNG image for each document page.
+        # {0} is replaced with the current page number in the image name.
+        viewOptions = PngViewOptions("render_ebook_to_png/ebook_page_0_{0}.png")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 900
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_ebook_to_png()
 ```
+{{< /tab >}}
+{{< tab "sample.epub" >}}
+{{< tab-text >}}
+`sample.epub` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 The following image demonstrates the result:
@@ -126,15 +178,28 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("abook.epub") as viewer:
-    # Create a JPEG image for each document page.
-    # {0} is replaced with the current page number in the image name.
-    viewOptions = gvo.JpgViewOptions("output_{0}.jpg")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 900
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_ebook_to_jpg():
+    # Load EBook
+    with Viewer("sample.epub") as viewer:
+        # Create a JPEG image for each document page.
+        # {0} is replaced with the current page number in the image name.
+        viewOptions = JpgViewOptions("render_ebook_to_jpg/ebook_to_jpg_{0}.jpg")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 900
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_ebook_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "sample.epub" >}}
+{{< tab-text >}}
+`sample.epub` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

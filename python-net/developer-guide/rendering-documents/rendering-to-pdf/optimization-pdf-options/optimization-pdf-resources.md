@@ -17,12 +17,24 @@ The following code snippet shows how to optimize the PDF file by default:
 {{< tabs "Example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.docx") as viewer:
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, PdfOptimizationOptions
 
-    viewOptions = gvo.PdfViewOptions()
-    viewOptions.pdf_optimization_options = gvo.PdfOptimizationOptions()
+def optimize_pdf_resources():
+    # Load document
+    with Viewer("sample.docx") as viewer:
+        viewOptions = PdfViewOptions("optimize_pdf_resources/optimized_spreadsheet.pdf")
+        viewOptions.pdf_optimization_options = PdfOptimizationOptions()
 
-    viewer.view(viewOptions)
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    optimize_pdf_resources()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-resources/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

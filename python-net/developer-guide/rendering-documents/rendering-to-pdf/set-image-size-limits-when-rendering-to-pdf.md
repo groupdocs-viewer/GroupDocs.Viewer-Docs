@@ -10,40 +10,10 @@ keywords: PdfViewOptions, image width, image height, image resizing, GroupDocs.V
 ---
 The [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions) class has the following properties to set the image width or/and height:
 
-{{< tabs "example2">}}
-{{< tab "Python">}}
-```python
-""" 
-<summary>
-    Max width of an output image in pixels.
-</summary>
-"""
-image_max_width # int
-
-"""
-<summary>
-    Max height of an output image in pixels.
-</summary>
-"""
-image_max_height # int
-
-"""
-<summary>
-    The width of the output image in pixels.
-</summary>
-"""
-image_width # int
-
-"""
-<summary>
-    The height of an output image in pixels.
-</summary>
-"""
-image_height # int
-
-```
-{{< /tab >}}
-{{< /tabs >}}
+* **image_max_width** (int) - Max width of an output image in pixels.
+* **image_max_height** (int) - Max height of an output image in pixels.
+* **image_width** (int) - The width of the output image in pixels.
+* **image_height** (int) - The height of an output image in pixels.
 
 You can set the width and/or height of the output images. Use one of the following methods: 
 
@@ -66,14 +36,27 @@ The following code snippet shows how to set the output image size limits:
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.jpg") as viewer:
-    # Create a PDF file.
-    viewOptions = gvo.PdfViewOptions()
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
 
-    # Specify the maximum width and height.
-    viewOptions.image_max_width = 800
-    viewOptions.image_max_height = 600
-    viewer.view(viewOptions)
+def set_image_size_limits():
+    # Load document
+    with Viewer("sample.jpg") as viewer:
+        # Create a PDF file.
+        viewOptions = PdfViewOptions("set_image_size_limits/image_with_size_limits.pdf")
+
+        # Specify the maximum width and height.
+        viewOptions.image_max_width = 800
+        viewOptions.image_max_height = 600
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    set_image_size_limits()
 ```
+{{< /tab >}}
+{{< tab "sample.jpg" >}}
+{{< tab-text >}}
+`sample.jpg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/set-image-size-limits-when-rendering-to-pdf/sample.jpg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

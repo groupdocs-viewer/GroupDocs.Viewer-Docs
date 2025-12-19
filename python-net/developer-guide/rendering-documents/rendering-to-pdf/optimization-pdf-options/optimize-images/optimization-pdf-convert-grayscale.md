@@ -19,14 +19,26 @@ The following code snippet shows how to convert a PDF file to grayscale:
 {{< tabs "Example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.docx") as viewer:
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, PdfOptimizationOptions
 
-    viewOptions = gvo.PdfViewOptions()
-    viewOptions.pdf_optimization_options = gvo.PdfOptimizationOptions()
-    viewOptions.pdf_optimization_options.convert_to_gray_scale = True
+def convert_to_grayscale():
+    # Load document
+    with Viewer("sample.docx") as viewer:
+        viewOptions = PdfViewOptions("convert_to_grayscale/grayscale_output.pdf")
+        viewOptions.pdf_optimization_options = PdfOptimizationOptions()
+        viewOptions.pdf_optimization_options.convert_to_gray_scale = True
 
-    viewer.view(viewOptions)
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    convert_to_grayscale()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-convert-grayscale/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

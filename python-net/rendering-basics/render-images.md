@@ -81,11 +81,24 @@ To embed an image in an HTML page, call the [HtmlViewOptions.for_embedded_resour
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("vector-image.svg") as viewer:
-    # Specify the HTML file name.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("output.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_image_to_html():
+    # Load image
+    with Viewer("vector-image.svg") as viewer:
+        # Specify the HTML file name.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_image_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_image_to_html()
 ```
+{{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -104,12 +117,25 @@ To save an image to a separate folder, call the [HtmlViewOptions.for_external_re
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("vector-image.svg") as viewer:
-    # Specify the HTML file name and location of external resources.
-    # {0} is replaced with the resource name in the output file name.
-    viewOptions = gvo.HtmlViewOptions.for_external_resources("output.html", "output/resource_{0}", "output/resource_{0}")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_image_to_html_external():
+    # Load image
+    with Viewer("vector-image.svg") as viewer:
+        # Specify the HTML file name and location of external resources.
+        # {0} is replaced with the resource name in the output file name.
+        viewOptions = HtmlViewOptions.for_external_resources("render_image_to_html_external/pdf_page_{0}.html", "render_image_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_image_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_image_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -124,11 +150,24 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("vector-image.svg") as viewer:
-    # Create a PDF file.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_image_to_pdf():
+    # Load image
+    with Viewer("vector-image.svg") as viewer:
+        # Create a PDF file.
+        viewOptions = PdfViewOptions("render_image_to_pdf/pdf_document.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_image_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -143,14 +182,27 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("vector-image.svg") as viewer:
-    # Create a PNG image.
-    viewOptions = gvo.PngViewOptions("output.png")
-    # Set width and height.
-    viewOptions.width = 950
-    viewOptions.height = 550
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_image_to_png():
+    # Load image
+    with Viewer("vector-image.svg") as viewer:
+        # Create a PNG image.
+        viewOptions = PngViewOptions("render_image_to_png/image.png")
+        # Set width and height.
+        viewOptions.width = 950
+        viewOptions.height = 550
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_image_to_png()
 ```
+{{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -165,14 +217,27 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("vector-image.svg") as viewer:
-    # Create a JPG image for the letter.
-    viewOptions = gvo.JpgViewOptions("output.jpg")
-    # Set width and height.
-    viewOptions.width = 950
-    viewOptions.height = 550
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_image_to_jpg():
+    # Load image
+    with Viewer("vector-image.svg") as viewer:
+        # Create a JPG image.
+        viewOptions = JpgViewOptions("render_image_to_jpg/image_to_jpg.jpg")
+        # Set width and height.
+        viewOptions.width = 950
+        viewOptions.height = 550
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_image_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -191,22 +256,37 @@ You can also use the [ViewOptions.default_font_name](https://reference.groupdocs
 {{< tabs "example6">}}
 {{< tab "Python" >}}
 ```python
-import GroupDocs.Viewer as gv
-import GroupDocs.Viewer.fonts as gvf
-import GroupDocs.Viewer.options as gvo
-# Create font sources.
-# Add custom fonts folder to look for fonts recursively. (look into subfolders too).
-folderFontSource = [gvf.FolderFontSource(".../custom_fonts_folder", gvf.SearchOption.ALL_FOLDERS)]
-# Add custom fonts folder to look for fonts only in this folder (wihout subfolders).
-additionalFontSource = [gvf.FolderFontSource(".../custom_additional_fonts_folder", gvf.SearchOption.TOP_FOLDER_ONLY)]
-# Call SetFontSources method and supply font sources as arguments.
-gvf.FontSettings.set_font_sources(folderFontSource, additionalFontSource)
+import os
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.fonts import FolderFontSource, SearchOption, FontSettings
+from groupdocs.viewer.options import JpgViewOptions
 
-with gv.Viewer("sample.psd") as viewer:
-    # Create a JPG image for the letter.
-    viewOptions = gvo.JpgViewOptions("output.jpg")
-    viewOptions.default_font_name("Arial")
-    viewer.view(viewOptions)
+def render_psd_with_custom_fonts():
+    # Create font sources.
+    os.makedirs("./custom_fonts_folder", exist_ok=True)
+    os.makedirs("./custom_additional_fonts_folder", exist_ok=True)
+
+    # Add custom fonts folder to look for fonts recursively. (look into subfolders too).
+    folderFontSource = [FolderFontSource("./custom_fonts_folder", SearchOption.ALL_FOLDERS)]
+    # Add custom fonts folder to look for fonts only in this folder (without subfolders).
+    additionalFontSource = [FolderFontSource("./custom_additional_fonts_folder", SearchOption.TOP_FOLDER_ONLY)]
+    # Call SetFontSources method and supply font sources as arguments.
+    FontSettings.set_font_sources(folderFontSource, additionalFontSource)
+
+    # Load PSD file
+    with Viewer("sample.psd") as viewer:
+        # Create a JPG image.
+        viewOptions = JpgViewOptions("render_psd_with_custom_fonts/psd_with_custom_fonts.jpg")
+        viewOptions.default_font_name = "Arial"
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_psd_with_custom_fonts()
 ```
+{{< /tab >}}
+{{< tab "sample.psd" >}}
+{{< tab-text >}}
+`sample.psd` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-images/sample.psd) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

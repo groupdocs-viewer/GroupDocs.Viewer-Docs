@@ -30,19 +30,32 @@ The following code snippet shows how to protect the output PDF document:
 {{< tabs "example1">}}
 {{< tab "Python">}}
 ```python
-with gv.Viewer("sample.docx") as viewer:
-    # Specify the security settings.
-    security = gvo.Security()
-    security.document_open_password = "o123"
-    security.permissions_password = "p123"
-    security.permissions = gvo.Permissions.ALLOW_ALL & ~gvo.Permissions.DENY_PRINTING
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, Security, Permissions
 
-    # Create a PDF file.
-    pdf_options = gvo.PdfViewOptions()
+def protect_pdf_document():
+    # Load document
+    with Viewer("sample.docx") as viewer:
+        # Specify the security settings.
+        security = Security()
+        security.document_open_password = "o123"
+        security.permissions_password = "p123"
+        security.permissions = Permissions.ALLOW_ALL & ~Permissions.DENY_PRINTING
 
-    # Apply the security settings
-    pdf_options.security = security
-    viewer.view(pdf_options)
+        # Create a PDF file.
+        pdf_options = PdfViewOptions("protect_pdf_document/protected_document.pdf")
+
+        # Apply the security settings
+        pdf_options.security = security
+        viewer.view(pdf_options)
+
+if __name__ == "__main__":
+    protect_pdf_document()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/protect-pdf-document/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

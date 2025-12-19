@@ -22,15 +22,27 @@ The following code snippet shows how to compress images in the file:
 {{< tabs "Example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.docx") as viewer:
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, PdfOptimizationOptions
 
-    viewOptions = gvo.PdfViewOptions()
-    viewOptions.pdf_optimization_options = gvo.PdfOptimizationOptions()
-    viewOptions.pdf_optimization_options.compress_images = True
-    viewOptions.pdf_optimization_options.image_quality = 50
+def reduce_image_quality():
+    # Load document
+    with Viewer("sample.docx") as viewer:
+        viewOptions = PdfViewOptions("reduce_image_quality/reduced_quality.pdf")
+        viewOptions.pdf_optimization_options = PdfOptimizationOptions()
+        viewOptions.pdf_optimization_options.compress_images = True
+        viewOptions.pdf_optimization_options.image_quality = 50
 
-    viewer.view(viewOptions)
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    reduce_image_quality()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-reduce-image-quality/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

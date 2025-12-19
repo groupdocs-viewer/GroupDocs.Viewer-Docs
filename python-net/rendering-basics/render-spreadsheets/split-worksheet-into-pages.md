@@ -27,13 +27,26 @@ The following example converts a worksheet to PDF and uses the page breaks to sp
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("products.xlsx") as viewer:
-    # Convert the spreadsheet to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    # Split using page breaks.
-    viewOptions.spreadsheet_options = gvo.SpreadsheetOptions.for_rendering_by_page_breaks()
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, SpreadsheetOptions
+
+def split_by_page_breaks():
+    # Load spreadsheet
+    with Viewer("products.xlsx") as viewer:
+        # Convert the spreadsheet to PDF.
+        viewOptions = PdfViewOptions("split_by_page_breaks/by_page_breaks.pdf")
+        # Split using page breaks.
+        viewOptions.spreadsheet_options = SpreadsheetOptions.for_rendering_by_page_breaks()
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    split_by_page_breaks()
 ```
+{{< /tab >}}
+{{< tab "products.xlsx" >}}
+{{< tab-text >}}
+`products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/products.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -48,15 +61,28 @@ The following code snippet splits a worksheet into two pages and renders them to
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("two-pages.xlsx") as viewer:
-    # Specify number of rows for every page.
-    rows_per_page = 15
-    # Convert the spreadsheet to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    # Split by number of rows.
-    viewOptions.spreadsheet_options = gvo.SpreadsheetOptions.for_split_sheet_into_pages(rows_per_page)
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, SpreadsheetOptions
+
+def split_by_rows():
+    # Load spreadsheet
+    with Viewer("two-pages.xlsx") as viewer:
+        # Specify number of rows for every page.
+        rows_per_page = 15
+        # Convert the spreadsheet to PDF.
+        viewOptions = PdfViewOptions("split_by_rows/by_rows.pdf")
+        # Split by number of rows.
+        viewOptions.spreadsheet_options = SpreadsheetOptions.for_split_sheet_into_pages(rows_per_page)
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    split_by_rows()
 ```
+{{< /tab >}}
+{{< tab "two-pages.xlsx" >}}
+{{< tab-text >}}
+`two-pages.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/two-pages.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -71,16 +97,29 @@ The following code snippet splits a worksheet into four pages and renders them t
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("four-pages.xlsx") as viewer:
-    # Specify number of rows and columns for every page.
-    rows_per_page = 15
-    column_per_page = 7
-    # Convert the spreadsheet to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    # Split by number of rows.
-    viewOptions.spreadsheet_options = gvo.SpreadsheetOptions.for_split_sheet_into_pages(rows_per_page, column_per_page)
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, SpreadsheetOptions
+
+def split_by_rows_and_columns():
+    # Load spreadsheet
+    with Viewer("four-pages.xlsx") as viewer:
+        # Specify number of rows and columns for every page.
+        rows_per_page = 15
+        column_per_page = 7
+        # Convert the spreadsheet to PDF.
+        viewOptions = PdfViewOptions("split_by_rows_and_columns/by_rows_and_columns.pdf")
+        # Split by number of rows and columns.
+        viewOptions.spreadsheet_options = SpreadsheetOptions.for_split_sheet_into_pages(rows_per_page, column_per_page)
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    split_by_rows_and_columns()
 ```
+{{< /tab >}}
+{{< tab "four-pages.xlsx" >}}
+{{< tab-text >}}
+`four-pages.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/four-pages.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -101,13 +140,26 @@ The following example renders the print area displayed in the image above to PDF
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("invoice.xlsx") as viewer:
-    # Convert the spreadsheet to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    # Render the print area only.
-    viewOptions.spreadsheet_options = gvo.SpreadsheetOptions.for_rendering_print_area()
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, SpreadsheetOptions
+
+def render_print_area():
+    # Load spreadsheet
+    with Viewer("invoice.xlsx") as viewer:
+        # Convert the spreadsheet to PDF.
+        viewOptions = PdfViewOptions("render_print_area/print_area.pdf")
+        # Render the print area only.
+        viewOptions.spreadsheet_options = SpreadsheetOptions.for_rendering_print_area()
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_print_area()
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -124,13 +176,26 @@ The following example converts each worksheet to one page in the PDF file:
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Products.xlsx") as viewer:
-    # Convert the spreadsheet to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    # Render each worksheet to one page.
-    viewOptions.spreadsheet_options = gvo.SpreadsheetOptions.for_one_page_per_sheet()
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, SpreadsheetOptions
+
+def render_one_page_per_sheet():
+    # Load spreadsheet
+    with Viewer("Products.xlsx") as viewer:
+        # Convert the spreadsheet to PDF.
+        viewOptions = PdfViewOptions("render_one_page_per_sheet/one_page_per_sheet.pdf")
+        # Render each worksheet to one page.
+        viewOptions.spreadsheet_options = SpreadsheetOptions.for_one_page_per_sheet()
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_one_page_per_sheet()
 ```
+{{< /tab >}}
+{{< tab "Products.xlsx" >}}
+{{< tab-text >}}
+`Products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/Products.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -155,12 +220,25 @@ The following example renders the Microsoft Excel spreadsheet using page breaks 
 {{< tabs "example6">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Products.xlsx") as viewer:
-    # Render the spreadsheet to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewOptions.spreadsheet_options = gvo.SpreadsheetOptions.for_rendering_print_area_and_page_breaks()
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, SpreadsheetOptions
+
+def render_print_area_and_page_breaks():
+    # Load spreadsheet
+    with Viewer("Products.xlsx") as viewer:
+        # Render the spreadsheet to PDF.
+        viewOptions = PdfViewOptions("render_print_area_and_page_breaks/print_area_and_page_breaks.pdf")
+        viewOptions.spreadsheet_options = SpreadsheetOptions.for_rendering_print_area_and_page_breaks()
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_print_area_and_page_breaks()
 ```
+{{< /tab >}}
+{{< tab "Products.xlsx" >}}
+{{< tab-text >}}
+`Products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/Products.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

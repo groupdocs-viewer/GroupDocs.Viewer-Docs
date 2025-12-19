@@ -19,14 +19,26 @@ The following code snippet shows how to subset fonts in a PDF file:
 {{< tabs "Example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.docx") as viewer:
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, PdfOptimizationOptions
 
-    viewOptions = gvo.PdfViewOptions()
-    viewOptions.pdf_optimization_options = gvo.PdfOptimizationOptions()
-    viewOptions.pdf_optimization_options.subset_fonts = True
+def subset_fonts():
+    # Load document
+    with Viewer("sample.docx") as viewer:
+        viewOptions = PdfViewOptions("subset_fonts/subset_fonts.pdf")
+        viewOptions.pdf_optimization_options = PdfOptimizationOptions()
+        viewOptions.pdf_optimization_options.subset_fonts = True
 
-    viewer.view(viewOptions)
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    subset_fonts()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-fonts/optimization-pdf-subset-fonts/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

@@ -51,12 +51,25 @@ To convert an archive file to HTML, call the [HtmlViewOptions.for_embedded_resou
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Documents.zip") as viewer:
-    # Create an HTML file for the top folder and each subfolder in the archive.
-    # {0} is replaced with the current page number in the output file name.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_archive_to_html():
+    # Load archive file
+    with Viewer("documents.zip") as viewer:
+        # Create an HTML file for the top folder and each subfolder in the archive.
+        # {0} is replaced with the current page number in the output file name.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_archive_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_archive_to_html()
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -73,14 +86,27 @@ The following example demonstrates how to set this option in code:
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Documents.zip") as viewer:
-    # Create an HTML file for the top folder and each subfolder in the archive.
-    # {0} is replaced with the current page number in the output file name.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    # Specify the number of items to display on each HTML page.
-    viewOptions.archive_options.items_per_page = 10
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_archive_with_items_per_page():
+    # Load archive file
+    with Viewer("documents.zip") as viewer:
+        # Create an HTML file for the top folder and each subfolder in the archive.
+        # {0} is replaced with the current page number in the output file name.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_archive_with_items_per_page/archive_with_items_per_page_{0}.html")
+        # Specify the number of items to display on each HTML page.
+        viewOptions.archive_options.items_per_page = 10
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_archive_with_items_per_page()
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -91,13 +117,26 @@ If you need to display the contents of an archive file on a single HTML page, en
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Documents.zip") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("output.html")
-    # Render the archive file to a single page.
-    viewOptions.render_to_single_page = True
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_archive_to_single_html():
+    # Load archive file
+    with Viewer("documents.zip") as viewer:
+        # Create an HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_archive_to_single_html/archive_to_single_html.html")
+        # Render the archive file to a single page.
+        viewOptions.render_to_single_page = True
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_archive_to_single_html()
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -112,11 +151,24 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Documents.zip") as viewer:
-    # Create a PDF file.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_archive_to_pdf():
+    # Load archive file
+    with Viewer("documents.zip") as viewer:
+        # Create a PDF file.
+        viewOptions = PdfViewOptions("render_archive_to_pdf/archive_content.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_archive_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -131,15 +183,28 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Documents.zip") as viewer:
-    # Create a PNG image for the top folder and each subfolder in the archive.
-    # {0} is replaced with the current page number in the image name.
-    viewOptions = gvo.PngViewOptions("output_{0}.png")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 1000
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_archive_to_png():
+    # Load archive file
+    with Viewer("documents.zip") as viewer:
+        # Create a PNG image for the top folder and each subfolder in the archive.
+        # {0} is replaced with the current page number in the image name.
+        viewOptions = PngViewOptions("render_archive_to_png/archive_page_0_{0}.png")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 1000
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_archive_to_png()
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -154,86 +219,63 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example6">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Documents.zip") as viewer:
-    # Create a JPEG image for the top folder and each subfolder in the archive.
-    # {0} is replaced with the current page number in the image name.
-    viewOptions = gvo.JpgViewOptions("output_{0}.jpg")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 1000
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_archive_to_jpg():
+    # Load archive file
+    with Viewer("documents.zip") as viewer:
+        # Create a JPEG image for the top folder and each subfolder in the archive.
+        # {0} is replaced with the current page number in the image name.
+        viewOptions = JpgViewOptions("render_archive_to_jpg/archive_to_jpg_{0}.jpg")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 1000
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_archive_to_jpg()
 ```
 {{< /tab >}}
-{{< /tabs >}}
-
-## Obtain information about folders in an archive file
-
-Follow the steps below to obtain information about folders contained in an archive file. You can use this information to [specify which folder to display in the output file](#render-a-specific-folder).
-
-1. Create a [ViewInfoOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewinfooptions) instance for a specific view.
-2. Call the [Viewer.get_view_info](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer/viewer/#methods) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [ArchiveViewInfo](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/archiveviewinfo) type.
-3. Use the [ArchiveViewInfo.folders](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/archiveviewinfo/#properties) property to obtain the lists of folders in the archive file.
-
-{{< tabs "example7">}}
-{{< tab "Python" >}}
-```python
-import groupdocs.viewer as gv
-import groupdocs.viewer.options as gvo
-import groupdocs.viewer.results as gvr
-
-with gv.Viewer("Documents.zip") as viewer:
-    info = viewer.get_view_info(gvo.ViewInfoOptions.for_html_view())
-
-    print("File type:", info.file_type)
-    print("The number of pages:", len(info.pages))
-
-    print("Folders:")
-    print(" - /")
-
-    root_folder = ""
-    read_folders(viewer, root_folder)
-
-def read_folders(viewer, folder):
-    options = gvo.ViewInfoOptions.for_html_view()
-    options.archive_options.folder = folder
-
-    view_info = viewer.get_view_info(options)
-    archive_view_info = cast(gvr.ArchiveViewInfo, view_info)
-    
-    for sub_folder in archive_view_info.folders:
-        print(f" - {sub_folder}")
-        read_folders(viewer, sub_folder)
-```
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![Get information about an archive file](/viewer/python-net/images/rendering-basics/render-archive-files/retrieve-archive-information.png)
-
-GroupDocs.Viewer also allows you to list and extract all files contained in the archive. Refer to the following help topics for details:
-
-* [List attachments](/viewer/python-net/how-to-list-attachments/)
-* [Save attachments](/viewer/python-net/how-to-extract-and-save-attachments/)
 
 ## Render a specific folder
 
 When you convert an archive file to HTML, PDF, or image format, GroupDocs.Viewer renders items from all folders contained in the archive. If you need to render items from a specific folder, specify the [ArchiveOptions.folder](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/archiveoptions/#properties) property for one of the following classes (depending on the output file format):
 
-* [HtmlViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/htmlviewoptions) 
-* [PdfViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pdfviewoptions)
-* [PngViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pngviewoptions)
-* [JpgViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/jpgviewoptions)
+* [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) 
+* [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions)
+* [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions)
+* [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions)
 
 {{< tabs "example8">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Documents.zip") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("output.html")
-    options.archive_options.folder = "Documents/CAD files"
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_specific_archive_folder():
+
+    # Load archive file
+    with Viewer("documents.zip") as viewer:
+        # Create an HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_specific_archive_folder/specific_archive_folder.html")
+        viewOptions.archive_options.folder = "first_folder"
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_specific_archive_folder()
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -250,14 +292,27 @@ The following code snippet demonstrates how to use a custom name when rendering 
 {{< tabs "example9">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Documents.zip") as viewer:
-    # Create an HTML file for the top folder and each subfolder in the archive.
-    # {0} is replaced with the current page number in the output file name.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    # Specify a custom filename
-    options.archive_options.file_name = gvo.FileName("Sample Files")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions, FileName
+
+def render_archive_with_custom_filename():
+    # Load archive file
+    with Viewer("documents.zip") as viewer:
+        # Create an HTML file for the top folder and each subfolder in the archive.
+        # {0} is replaced with the current page number in the output file name.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_archive_with_custom_filename/archive_with_custom_filename_{0}.html")
+        # Specify a custom filename
+        viewOptions.archive_options.file_name = FileName("Sample Files")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_archive_with_custom_filename()
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

@@ -60,14 +60,26 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("HousePlan.dwg") as viewer:
-    # Create an HTML file for the drawing.
-    # Specify the HTML file name.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("output.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_cad_to_html():
+    # Load CAD file
+    with Viewer("sample.dwg") as viewer:
+        # Create an HTML file for the drawing.
+        # Specify the HTML file name.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_cad_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_cad_to_html()
 ```
 {{< /tab >}}
-
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -85,13 +97,26 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("HousePlan.dwg") as viewer:
-    # Create an HTML file for the drawing.
-    # Specify the HTML file name and location of external resources.
-    # {0} is replaced with the resource name.
-    viewOptions = gvo.HtmlViewOptions.for_external_resources("output.html", "output/resource_{0}", "output/resource_{0}")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_cad_to_html_external():
+    # Load CAD file
+    with Viewer("sample.dwg") as viewer:
+        # Create an HTML file for the drawing.
+        # Specify the HTML file name and location of external resources.
+        # {0} is replaced with the resource name.
+        viewOptions = HtmlViewOptions.for_external_resources("render_cad_to_html_external/pdf_page_{0}.html", "render_cad_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_cad_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_cad_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -106,12 +131,25 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("HousePlan.dwg") as viewer:
-    # Create a PDF file for the drawing.
-    # Specify the PDF file name.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_cad_to_pdf():
+    # Load CAD file
+    with Viewer("sample.dwg") as viewer:
+        # Create a PDF file for the drawing.
+        # Specify the PDF file name.
+        viewOptions = PdfViewOptions("render_cad_to_pdf/cad_drawing.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_cad_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -126,14 +164,27 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("HousePlan.dwg") as viewer:
-    # Create a PNG image for the drawing.
-    viewOptions = gvo.PngViewOptions("output.png")
-    # Set width and height.
-    viewOptions.width = 1500
-    viewOptions.height = 1000
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_cad_to_png():
+    # Load CAD file
+    with Viewer("sample.dwg") as viewer:
+        # Create a PNG image for the drawing.
+        viewOptions = PngViewOptions("render_cad_to_png/cad_page_0.png")
+        # Set width and height.
+        viewOptions.width = 1500
+        viewOptions.height = 1000
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_cad_to_png()
 ```
+{{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -148,14 +199,27 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("HousePlan.dwg") as viewer:
-    # Create a JPG image for the drawing.
-    viewOptions = gvo.JpgViewOptions("output.jpg")
-    # Set width and height.
-    viewOptions.width = 1500
-    viewOptions.height = 1000
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_cad_to_jpg():
+    # Load CAD file
+    with Viewer("sample.dwg") as viewer:
+        # Create a JPG image for the drawing.
+        viewOptions = JpgViewOptions("render_cad_to_jpg/cad_to_jpg.jpg")
+        # Set width and height.
+        viewOptions.width = 1500
+        viewOptions.height = 1000
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_cad_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -164,35 +228,34 @@ with gv.Viewer("HousePlan.dwg") as viewer:
 Follow the steps below to obtain information about layouts and layers contained in a CAD drawing. You can use this information to specify which layers and layouts to display in the output file.
 
 1. Create a [ViewInfoOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewinfooptions) instance for a specific view.
-2. Call the [Viewer.get_view_info](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer/viewer/#methods) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [CadViewInfo](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/cadviewinfo) type.
-3. Use the [CadViewInfo.Layouts](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/cadviewinfo/#properties) and [CadViewInfo.Layers](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/cadviewinfo/#properties) properties to obtain the lists of layouts and layers in the CAD file.
+2. Call the [Viewer.get_view_info](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method.
 
 {{< tabs "example6">}}
 {{< tab "Python" >}}
 ```python
- with gv.Viewer("HousePlan.dwg") as viewer:
-    viewInfoOptions = gvo.ViewInfoOptions.for_html_view()
-    # Enable this option to see the list of all layouts contained in the CAD file.
-    viewInfoOptions.cad_options.render_layouts = True
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import ViewInfoOptions
 
-    info = viewer.get_view_info(viewInfoOptions)
-    # Display information about the CAD file.
-    print("File type:", info.file_type)
-    print("Pages count:", len(info.pages))
+def get_cad_info():
+    # Load CAD file
+    with Viewer("sample.dwg") as viewer:
+        viewInfoOptions = ViewInfoOptions.for_html_view()
+        cad_info = viewer.get_view_info(viewInfoOptions)
+        # Display information about the CAD file.
+        print("File type:", cad_info.file_type)
+        print("Pages count:", len(cad_info.pages))
 
-    # Display the list of existing layouts.
-    print("The drawing contains the following layout(s):")
-    for layout in info.layouts:
-        print(" - /", layout.name)
-    
-    # Display the list of existing layers.
-    print("The drawing contains the following layer(s):");
-    for layer in info.layers:
-        print(" - /", layer)
+        print("\nView info retrieved successfully.")
 
-    print("\nView info retrieved successfully.")
+if __name__ == "__main__":
+    get_cad_info()
 ```
-{{</ tab>}}
+{{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image shows a sample console output:
@@ -201,12 +264,12 @@ The following image shows a sample console output:
 
 ## Render all or specific layouts
 
-When you convert a CAD drawing to HTML, PDF, or image format, GroupDocs.Viewer renders only the model-space layout (*Model*). If you also need to render all paper space layouts contained in your CAD file, enable the [CadOptions.render_layouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) option for one of the following classes (depending on the output file format):
+When you convert a CAD drawing to HTML, PDF, or image format, GroupDocs.Viewer renders only the model-space layout (*Model*). If you also need to render all paper space layouts contained in your CAD file, enable the [CadOptions.render_layouts](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) option for one of the following classes (depending on the output file format):
 
-* [HtmlViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/htmlviewoptions) 
-* [PdfViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pdfviewoptions)
-* [PngViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pngviewoptions)
-* [JpgViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/jpgviewoptions)
+* [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) 
+* [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions)
+* [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions)
+* [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions)
 
 Each layout is rendered on a separate page.
 
@@ -215,13 +278,26 @@ The following example renders all layouts when converting a CAD drawing to PDF:
 {{< tabs "example7">}}
 {{< tab "Python">}}
 ```python
-with gv.Viewer("sample.dwg") as viewer:
-    # Convert the document to PDF.
-    options = gvo.PdfViewOptions("output.pdf")
-    # Render the Model and all non-empty paper space layouts. 
-    options.cad_options.render_layouts = True
-    viewer.view(options)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_all_layouts():
+    # Load CAD file
+    with Viewer("sample.dwg") as viewer:
+        # Convert the document to PDF.
+        options = PdfViewOptions("render_all_layouts/all_layouts.pdf")
+        # Render the Model and all non-empty paper space layouts. 
+        options.cad_options.render_layouts = True
+        viewer.view(options)
+
+if __name__ == "__main__":
+    render_all_layouts()
 ```
+{{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -230,22 +306,35 @@ To render a specific layout, assign the layout name to the [CadOptions.layout_na
 {{< tabs "example8">}}
 {{< tab "Python">}}
 ```python
-with gv.Viewer("sample.dwg") as viewer:
-    # Convert the document to PDF.
-    options = gvo.PdfViewOptions("output.pdf")
-    # Specify the name of the layout to render.
-    # If the specified layout is not found,
-    # an exception occurs.
-    options.cad_options.layout_name = "layout1"
-    viewer.view(options)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_specific_layout():
+    # Load CAD file
+    with Viewer("sample.dwg") as viewer:
+        # Convert the document to PDF.
+        options = PdfViewOptions("render_specific_layout/specific_layout.pdf")
+        # Specify the name of the layout to render.
+        # If the specified layout is not found,
+        # an exception occurs.
+        options.cad_options.layout_name = "layout1"
+        viewer.view(options)
+
+if __name__ == "__main__":
+    render_specific_layout()
 ```
+{{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
 {{< alert style="info" >}}
-1. The [CadOptions.RenderLayouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) and [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) properties apply only to the following file formats: DWG, DWT, DXF, and DWF.
+1. The [CadOptions.RenderLayouts](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) and [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) properties apply only to the following file formats: DWG, DWT, DXF, and DWF.
 
-2. If you use the [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property to render a specific layout, the [CadOptions.render_layouts](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/cadoptions/#properties) option is ignored.{{< /alert >}}
+2. If you use the [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property to render a specific layout, the [CadOptions.render_layouts](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) option is ignored.{{< /alert >}}
 
 
 ## Render specific layers
@@ -258,10 +347,10 @@ When you convert a CAD drawing to HTML, PDF, or image format, GroupDocs.Viewer r
 
 1. Access the [CadOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/#properties) property for a target view:
 
-  * [HtmlViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/htmlviewoptions) 
-  * [PdfViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pdfviewoptions)
-  * [PngViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pngviewoptions)
-  * [JpgViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/jpgviewoptions)
+  * [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) 
+  * [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions)
+  * [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions)
+  * [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions)
 
 2. Assign the list of layers you want to render to the [cad_options.layers](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/#properties) property.
 
@@ -270,21 +359,29 @@ The following example renders layers with walls and furniture to PDF:
 {{< tabs "example9">}}
 {{< tab "Python">}}
 ```python
-import groupdocs.viewer as gv
-import groupdocs.viewer.options as gvo
-import groupdocs.viewer.results as gvr
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+from groupdocs.viewer.results import Layer
 
-with gv.Viewer("HousePlan.dwg") as viewer:
-    # Convert the document to PDF.
-    options = gvo.PdfViewOptions("output.pdf")
-    # Specify a list of layers to display.
-    options.cad_options.layers = [
-        gvr.Layer("Base"),
-        gvr.Layer("Walls"),
-        gvr.Layer("Furniture")
-    ]
-    viewer.view(options)
+def render_specific_layers():
+    # Load CAD file
+    with Viewer("sample.dwg") as viewer:
+        # Convert the document to PDF.
+        options = PdfViewOptions("render_specific_layers/specific_layers.pdf")
+        # Specify a list of layers to display.
+        options.cad_options.layers = [
+            Layer("QUADRANT")
+        ]
+        viewer.view(options)
+
+if __name__ == "__main__":
+    render_specific_layers()
 ```
+{{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

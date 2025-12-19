@@ -20,13 +20,25 @@ The following code snippet shows how to optimize spreadsheets in a PDF file:
 {{< tabs "Example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("invoice.xlsx") as viewer:
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, PdfOptimizationOptions
 
-    viewOptions = gvo.PdfViewOptions()
-    viewOptions.pdf_optimization_options = gvo.PdfOptimizationOptions()
-    viewOptions.pdf_optimization_options.optimize_spreadsheets = True
+def optimize_spreadsheets():
+    # Load spreadsheet
+    with Viewer("invoice.xlsx") as viewer:
+        viewOptions = PdfViewOptions("optimize_spreadsheets/optimized_spreadsheet.pdf")
+        viewOptions.pdf_optimization_options = PdfOptimizationOptions()
+        viewOptions.pdf_optimization_options.optimize_spreadsheets = True
 
-    viewer.view(viewOptions)
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    optimize_spreadsheets()
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

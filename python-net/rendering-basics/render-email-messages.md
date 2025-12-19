@@ -44,11 +44,24 @@ To embed an email message in an HTML page, call the [HtmlViewOptions.for_embedde
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.eml") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("output.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_email_to_html():
+    # Load email message
+    with Viewer("sample.eml") as viewer:
+        # Create an HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_email_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_email_to_html()
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -67,12 +80,25 @@ To save an email message to a separate folder, call the [HtmlViewOptions.for_ext
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.eml") as viewer:
-    # Specify the HTML file name and location of external resources.
-    # {0} is replaced with the resource name in the output file name.
-    viewOptions = gvo.HtmlViewOptions.for_external_resources("output.html", "output/resource_{0}", "output/resource_{0}")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_email_to_html_external():
+    # Load email message
+    with Viewer("sample.eml") as viewer:
+        # Specify the HTML file name and location of external resources.
+        # {0} is replaced with the resource name in the output file name.
+        viewOptions = HtmlViewOptions.for_external_resources("render_email_to_html_external/pdf_page_{0}.html", "render_email_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_email_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_email_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -87,11 +113,24 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.eml") as viewer:
-    # Create a PDF file.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_email_to_pdf():
+    # Load email message
+    with Viewer("sample.eml") as viewer:
+        # Create a PDF file.
+        viewOptions = PdfViewOptions("render_email_to_pdf/email_message.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_email_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -106,14 +145,27 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.eml") as viewer:
-    # Create a PNG file.
-    viewOptions = gvo.PngViewOptions("output.png")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 1000
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_email_to_png():
+    # Load email message
+    with Viewer("sample.eml") as viewer:
+        # Create a PNG file.
+        viewOptions = PngViewOptions("render_email_to_png/email_page_0.png")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 1000
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_email_to_png()
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -128,73 +180,70 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.eml") as viewer:
-    # Create a JPG file.
-    viewOptions = gvo.JpgViewOptions("output.jpg")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 1000
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_email_to_jpg():
+    # Load email message
+    with Viewer("sample.eml") as viewer:
+        # Create a JPG file.
+        viewOptions = JpgViewOptions("render_email_to_jpg/email_to_jpg.jpg")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 1000
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_email_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
 ## Specify rendering options
 
-GroupDocs.Viewer supports the [EmailOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/emailoptions) class that allows you to specify different options for rendering email messages. To access these options, use the [EmailOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/#properties) property for one of the following classes (depending on the output file format):
+GroupDocs.Viewer supports the [EmailOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/emailoptions) class that allows you to specify different options for rendering email messages. To access these options, use the [EmailOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/#properties) property for one of the following classes (depending on the output file format):
 
-* [HtmlViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/htmlviewoptions) 
-* [PdfViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pdfviewoptions)
-* [PngViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pngviewoptions)
-* [JpgViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/jpgviewoptions)
+* [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) 
+* [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions)
+* [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions)
+* [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions)
 
 ### Set the output page size
 
-GroupDocs.Viewer allows you to specify page size for the output file when you convert an email message to HTML, PDF, or image format. Assign a [PageSize](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pagesize/) enumeration member to the [email_options.page_size](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/emailoptions/#properties) property to select one of the predefined page sizes (Letter, Ledger, A0, A1, A2, A3, or A4).
+GroupDocs.Viewer allows you to specify page size for the output file when you convert an email message to HTML, PDF, or image format. Assign a [PageSize](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pagesize/) enumeration member to the [email_options.page_size](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/emailoptions/#properties) property to select one of the predefined page sizes (UNSPECIFIED, LETTER, LEDGER, A0, A1, A2, A3, or A4).
 
 The following example specifies page size for the output PDF file:
 
 {{< tabs "example6">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.eml") as viewer:
-    # Create a PDF file.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    # Specify the page size.
-    options.email_options.page_size = gvo.PageSize.Letter
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, PageSize
+
+def render_email_with_page_size():
+    # Load email message
+    with Viewer("sample.eml") as viewer:
+        # Create a PDF file.
+        viewOptions = PdfViewOptions("render_email_with_page_size/email_with_page_size.pdf")
+        # Specify the page size.
+        viewOptions.email_options.page_size = PageSize.LETTER
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_email_with_page_size()
 ```
 {{< /tab >}}
-{{< /tabs >}}
-
-### Rename fields in the message header
-
-GroupDocs.Viewer allows you to change how standard fields (such as _From_, _To_, _Subject_, and so on) are displayed in the email message header.
-
-![Default fields in the message header](/viewer/python-net/images/rendering-basics/render-email-messages/default-message-fields.png)
-
-Use the [EmailOptions.field_text_map](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/emailoptions/#properties) property to specify custom field labels. Static fields of the [Field](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/field/) class allow you to access default email header fields, as shown in the example below.
-
-{{< tabs "example7">}}
-{{< tab "Python" >}}
-```python
-with gv.Viewer("sample.eml") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("output.html")
-    # Specify custom field labels.
-    viewOptions.email_options.field_text_map[gvo.Field.FROM] = "Sender"
-    viewOptions.email_options.field_text_map[gvo.Field.TO] = "Receiver"
-    viewOptions.email_options.field_text_map[gvo.Field.SENT] = "Date"
-    viewOptions.email_options.field_text_map[gvo.Field.SUBJECT] = "Topic"
-
-    viewer.view(viewOptions)
-```
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Custom fields in the message header](/viewer/python-net/images/rendering-basics/render-email-messages/custom-message-fields.png)
 
 ### Specify the date and time format and change the time zone
 
@@ -208,16 +257,30 @@ When rendering email messages, GroupDocs.Viewer formats date and time informatio
 {{< tabs "example8">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.eml") as viewer:
-    # Create an HTML file.
-    options = gvo.HtmlViewOptions.for_embedded_resources("output.html")
-    # Apply a custom format to the date in the email message header.
-    options.email_options.date_time_format = "MM d yyyy HH:mm tt zzz"
-    # Specify the time zone offset. 
-    options.email_options.time_zone_offset = timedelta(hours=1)
+from datetime import timedelta
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
 
-    viewer.view(options)
+def render_email_with_datetime_format():
+    # Load email message
+    with Viewer("sample.eml") as viewer:
+        # Create an HTML file.
+        options = HtmlViewOptions.for_embedded_resources("render_email_with_datetime_format/email_with_datetime_format.html")
+        # Apply a custom format to the date in the email message header.
+        options.email_options.date_time_format = "MM d yyyy HH:mm tt zzz"
+        # Specify the time zone offset. 
+        options.email_options.time_zone_offset = timedelta(hours=1)
+
+        viewer.view(options)
+
+if __name__ == "__main__":
+    render_email_with_datetime_format()
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

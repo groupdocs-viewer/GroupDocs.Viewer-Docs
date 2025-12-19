@@ -12,109 +12,171 @@ aliases:
     - /viewer/python-net/licensing-and-subscription/
 ---
 
-To study the system, you may want quick access to the API. To make this easier, GroupDocs.Viewer provides different plans for purchase and offers a Free Trial and a 30-day Temporary License for evaluation.
+To help you quickly explore library and its features, GroupDocs.Viewer provides a Free Trial and a 30-day Temporary License for evaluation, as well as various purchase plans.
+
+Sometimes, to get familiar with the system quickly, you may want to dive into the code right away. To make this easier, GroupDocs.Viewer offers a Free Trial and a 30-day Temporary License for evaluation, along with various purchase plans.
 
 {{< alert style="info" >}}
-
-Note that there are a number of general policies and practices that guide you on how to evaluate, properly license, and purchase our products. You can find them in the [Purchase Policies and FAQ](https://purchase.groupdocs.com/policies) section.
-
+Please note that general policies and practices guide you on evaluating, licensing, and purchasing our products. See the [Purchase Policies and FAQ](https://purchase.groupdocs.com/policies/) section for details.
 {{< /alert >}}
 
-## Purchased License
+## Free Trial or Temporary License
 
-After buying, apply the license file or include it as an embedded resource. 
-
-License needs to be set:
-- Only once per application domain
-- Before using any other GroupDocs.Viewer classes
-    
-### License Applying Options
-
-Licenses can be applied from different locations:
-
-*   Explicit path
-*   The folder containing the _GroupDocs.Viewer.dll_ file
-*   The folder containing the assembly that called _GroupDocs.Viewer.dll_
-*   The folder containing the entry assembly (your _.exe_)
-*   As a Metered License that allows you to pay for your usage. For details, see the [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered/).
-
-When you reference _GroupDocs.Viewer.dll_ in the application, the library is copied to your output directory (unless **Copy Local** in the properties for that entry is set to false). The easiest way to set a license is often to place the license file in the same folder as _GroupDocs.Viewer.dll_ and specify just the filename without the path.
-
-Use the [set_license](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/license/#methods) method to license a component.
-
-Calling `set_license` multiple times is not harmful, it simply wastes processor time.
-
-Calling [set_metered_key](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/metered/#methods) multiple times is not harmful either but wastes processor time and can accumulate consumption improperly.
-
-#### Apply the License
-
-After obtaining the license, set it. This section explains how to do this. When developing your application, call the `setLicense` method in your startup code before using the GroupDocs.Viewer classes.
-
-##### Set a License from a File
-
-The following code snippet shows how to set a license from file:
-
-{{< tabs "example1">}}
-{{< tab "Python" >}}
-
-```python
-def run():
-    if os.path.exists("path to .lic file"):    
-        license = gv.License()
-        license.set_license("path to .lic file")
-        print("License set successfully.")
-    else:
-       print("\n")
-```
-
-{{< /tab >}}
-{{< /tabs >}}
-
-##### Set a License from a Stream
-
-The following code snippet shows how to set a license from a stream:
-
-{{< tabs "example2">}}
-{{< tab "Python" >}}
-
-```python
-if os.path.exists("path to .lic file"):
-        with open("path to .lic file", "rb") as stream:
-            gv.License().set_license(stream)
-
-        print("License set successfully.")
-    else:
-        print("\n")
-```
-
-{{< /tab >}}
-{{< /tabs >}}
-
-### Changing the License File Name
-
-You do not have to name the license file "GroupDocs.Viewer.lic". Feel free to rename it as you prefer, and use that name when setting the license in your application.
-
-### "Cannot find license filename" Exception
-
-When you buy and download a license from the GroupDocs website, the license file is named "GroupDocs.Viewer.lic." Download it using your browser. Sometimes, browsers recognize it as XML and add the .xml extension, making the full file name "GroupDocs.Viewer.lic.XML" on your computer.
-
-If Microsoft Windows is set to hide file extensions (which is the default in most installations), the license file will show as "GroupDocs.Viewer.lic" in Windows Explorer. You might assume this is the actual file name and call the `set_license` method with "GroupDocs.Viewer.lic", but there is no such file, leading to an exception.
-
-To fix this issue, rename the file to remove the hidden .xml extension. Additionally, we suggest disabling the "Hide extensions" option in Microsoft Windows.
-
-## How to Evaluate GroupDocs.Viewer
-
-You can also try GroupDocs.Viewer without buying a license.
+You can try GroupDocs.Viewer without purchasing a license.
 
 ### Free Trial
 
-The evaluation version is identical to the purchased one; it becomes licensed once you set the license. You can set the license using methods described in the following sections of this article.
+The evaluation version is identical to the full version — it simply becomes fully licensed when you apply a license. Instructions for setting a license are provided in the following sections.
 
 The evaluation version has the following limitations:
-
-- Rendering is limited to the first 2 pages.
-- Trial badges are added to the top of a rendered page.
+* Only the first three pages are processed.
+* Documents with more than three pages are not supported.
+* A trial watermark is placed at the top of each page.
 
 ### Temporary License
 
-If you want to test GroupDocs.Viewer without the limitations of the trial version,   request a 30-day Temporary License. For details, see the ["Get a Temporary License"](https://purchase.groupdocs.com/temporary-license) page.
+If you'd like to test GroupDocs.Viewer without the limitations of the trial version, you can request a 30-day Temporary License. For more information, see the [Get a Temporary License](https://purchase.groupdocs.com/temporary-license) page.
+
+## How to Set Up a License
+
+{{< alert style="info" >}}
+For information on pricing, visit the [Pricing Information](https://purchase.groupdocs.com/pricing/) page.
+{{< /alert >}}
+
+Once you’ve obtained a license, follow these instructions to set it up. 
+
+A license should be set:
+- Only once per application, and
+- Before using any other GroupDocs.Viewer classes.
+
+{{< alert style="tip" >}}
+Though the license can be set multiple times per application, it is recommended to set it only once, as repeated calls to the `set_license` method will use unnecessary processing time.
+{{< /alert >}}
+
+### Set Environment Variable
+
+You can set the `GROUPDOCS_LIC_PATH` environment variable to the absolute path of the license file. GroupDocs.Viewer will then read this value and apply the license.
+
+{{< tabs "set-license-env-var">}}
+{{< tab "Windows (Command Prompt)" >}}
+```ps
+set GROUPDOCS_LIC_PATH "C:\path\to\your\license\file.lic"
+```
+{{< /tab >}}
+{{< tab "Windows (Powershell)" >}}
+```ps
+$env:GROUPDOCS_LIC_PATH="C:\path\to\your\license\file.lic"
+```
+{{< /tab >}}
+{{< tab "Linux" >}}
+```bash
+export GROUPDOCS_LIC_PATH="/path/to/your/license/file.lic"
+```
+{{< /tab >}}
+{{< tab "macOS" >}}
+```bash
+export GROUPDOCS_LIC_PATH="/path/to/your/license/file.lic"
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+### Copy License into Project Root Folder
+
+GroupDocs.Viewer can also read a license from the project's root directory. Consider a simple Python app structure:
+
+```Directory
+📂 my-app
+ ├──app.py
+ ├──source.docx
+ ├──groupdocs-viewer-net-25.12-py3-none-*.whl
+ └──GroupDocs.Viewer.lic
+```
+
+When you run the application from the `my-app` folder, GroupDocs.Viewer will check for files with a `.lic` extension in this folder. It will read the `GroupDocs.Viewer.lic` file to apply the license.
+
+### Set License from a File
+
+The following code demonstrates setting a license from a file:
+
+```python
+import os
+from groupdocs.viewer import License
+
+def set_license_from_file():
+    # Get absolute path to license file
+    license_path = os.path.abspath("./GroupDocs.Viewer.lic")
+
+    # Check if license file exists
+    if not os.path.exists(license_path):
+        print(f"License file not found at: {license_path}")
+        return
+
+    # Instantiate License and set the license
+    license = License()
+    license.set_license(license_path)
+
+if __name__ == "__main__":
+    set_license_from_file()
+```
+
+### Set License from a Stream
+
+This example shows how to set a license from a stream:
+
+```python
+import os
+from groupdocs.viewer import License
+
+def set_license_from_stream():
+    # Get absolute path to license file
+    license_path = os.path.abspath("./GroupDocs.Viewer.lic")
+
+    # Check if license file exists
+    if not os.path.exists(license_path):
+        print(f"License file not found at: {license_path}")
+        return
+
+    # Create a readable steam
+    with open(license_path, "rb") as license_stream:
+        # Instantiate License and set the license
+        license = License()
+        license.set_license(license_stream)
+
+if __name__ == "__main__":
+    set_license_from_stream()
+```
+
+### Set Metered License
+
+A [Metered License](https://purchase.groupdocs.com/faqs/licensing/metered/) is also available as an alternative to a traditional license file. It is a usage-based licensing model that may be more suitable for customers who prefer to be billed based on actual API feature usage.
+
+The following sample demonstrates how to use metered licensing:
+
+```python
+from groupdocs.viewer import Metered
+
+def set_metered_license():
+    # Set your public and private keys
+    public_key = "******" 
+    private_key = "******" 
+
+    # Check if keys are set
+    if not public_key or public_key == "******" or not private_key or private_key == "******":
+        print("Please set your public and private keys")
+        return
+
+    # Instantiate Metered and set keys
+    metered = Metered()
+    metered.set_metered_key(public_key, private_key)
+
+    # Get a number of MBs processed 
+    mb_processed = metered.get_consumption_quantity()
+    print("MB processed: ", mb_processed)
+
+    # Get a number of credits used
+    credits_used = metered.get_consumption_credit()
+    print("Credits used: ", credits_used)
+
+if __name__ == "__main__":
+    set_metered_license()
+```

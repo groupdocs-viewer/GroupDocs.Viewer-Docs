@@ -27,21 +27,31 @@ The following code snippet shows how to get the file type and the pages count fr
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-import groupdocs.viewer as gv
-import groupdocs.viewer.options as gvo
-import groupdocs.viewer.results as gvr
+from typing import cast
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import ViewInfoOptions
+from groupdocs.viewer.results import PdfViewInfo
 
-with gv.Viewer("sample.pdf") as viewer:
-    options = gvo.ViewInfoOptions.for_html_view() 
-    info = viewer.get_view_info(options)
-    pdf_info = cast(gvr.PdfViewInfo, info)
+def get_file_type_and_pages_count():
+    # Load PDF document
+    with Viewer("sample.pdf") as viewer:
+        options = ViewInfoOptions.for_html_view() 
+        info = viewer.get_view_info(options)
+        pdf_info = cast(PdfViewInfo, info)
 
-    print("Document type is:", pdf_info.file_type)
-    print("Pages count:", len(pdf_info.pages))
-    print("Printing allowed:", pdf_info.printing_allowed)
+        print("Document type is:", pdf_info.file_type)
+        print("Pages count:", len(pdf_info.pages))
 
-    print("\nView info retrieved successfully.")
+        print("\nView info retrieved successfully.")
+
+if __name__ == "__main__":
+    get_file_type_and_pages_count()
 ```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/retrieving-document-information/sample.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

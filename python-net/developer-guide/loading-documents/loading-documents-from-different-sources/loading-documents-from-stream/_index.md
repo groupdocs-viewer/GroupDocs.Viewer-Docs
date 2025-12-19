@@ -13,20 +13,33 @@ You can load a document from a stream without saving it as a file on a disk. You
 To load a document from a stream, follow these steps:
 
 1. Implement a method to get the document stream.
-2. Call the [Viewer](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer/viewer) class constructor. Specify the method implemented in the previous step.
+2. Call the [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer) class constructor. Specify the method implemented in the previous step.
 
 The following code snippet shows how to load a document from a stream:
 
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-stream = open("sample.docx", "rb")
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
 
-# Render a document from the stream.
-with gv.Viewer(stream) as viewer:
-    options = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    viewer.view(options)
+def load_document_from_stream():
+    # Open document stream
+    stream = open("sample.docx", "rb")
+
+    # Render a document from the stream.
+    with Viewer(stream) as viewer:
+        options = HtmlViewOptions.for_embedded_resources("page_{0}.html")
+        viewer.view(options)
+
+if __name__ == "__main__":
+    load_document_from_stream()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/loading-documents/loading-documents-from-different-sources/loading-documents-from-stream/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

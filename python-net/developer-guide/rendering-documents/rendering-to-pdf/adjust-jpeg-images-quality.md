@@ -25,17 +25,30 @@ The following code snippet shows how to adjust JPG image quality in the output P
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.docx") as viewer:
-    # Create view options.
-    viewOptions = gvo.PdfViewOptions()
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, PdfOptimizationOptions
 
-    # Specify the JPG image quality.
-    pdf_optimization_options = gvo.PdfOptimizationOptions()
-    pdf_optimization_options.image_quality = 50
-    # Specify pdf_optimization_options object
-    viewOptions.pdf_optimization_options = pdf_optimization_options
+def adjust_jpeg_quality():
+    # Load document
+    with Viewer("sample.docx") as viewer:
+        # Create view options.
+        viewOptions = PdfViewOptions("adjust_jpeg_quality/optimized_jpeg_quality.pdf")
 
-    viewer.view(viewOptions)
+        # Specify the JPG image quality.
+        pdf_optimization_options = PdfOptimizationOptions()
+        pdf_optimization_options.image_quality = 50
+        # Specify pdf_optimization_options object
+        viewOptions.pdf_optimization_options = pdf_optimization_options
+
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    adjust_jpeg_quality()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/adjust-jpeg-images-quality/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

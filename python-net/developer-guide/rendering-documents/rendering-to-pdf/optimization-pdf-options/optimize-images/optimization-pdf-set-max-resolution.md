@@ -19,17 +19,29 @@ The following code snippet shows how to reduce image resolution in the file:
 {{< tabs "Example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.docx") as viewer:
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, PdfOptimizationOptions
 
-    viewOptions = gvo.PdfViewOptions()
-    viewOptions.pdf_optimization_options = gvo.PdfOptimizationOptions()
-    viewOptions.pdf_optimization_options.compress_images = True
-    viewOptions.pdf_optimization_options.image_quality = 50
-    viewOptions.pdf_optimization_options.resize_images = True
-    viewOptions.pdf_optimization_options.max_resolution = 100
+def set_max_resolution():
+    # Load document
+    with Viewer("sample.docx") as viewer:
+        viewOptions = PdfViewOptions("set_max_resolution/optimized_resolution.pdf")
+        viewOptions.pdf_optimization_options = PdfOptimizationOptions()
+        viewOptions.pdf_optimization_options.compress_images = True
+        viewOptions.pdf_optimization_options.image_quality = 50
+        viewOptions.pdf_optimization_options.resize_images = True
+        viewOptions.pdf_optimization_options.max_resolution = 100
 
-    viewer.view(viewOptions)
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    set_max_resolution()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-set-max-resolution/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

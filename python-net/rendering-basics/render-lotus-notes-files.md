@@ -27,11 +27,24 @@ To convert an NSF file to HTML, call the [HtmlViewOptions.for_embedded_resources
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.nsf") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("output.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_nsf_to_html():
+    # Load NSF file
+    with Viewer("sample.nsf") as viewer:
+        # Create an HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_nsf_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_nsf_to_html()
 ```
+{{< /tab >}}
+{{< tab "sample.nsf" >}}
+{{< tab-text >}}
+`sample.nsf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -46,11 +59,24 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.nsf") as viewer:
-    # Create an PDF file.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_nsf_to_pdf():
+    # Load NSF file
+    with Viewer("sample.nsf") as viewer:
+        # Create a PDF file.
+        viewOptions = PdfViewOptions("render_nsf_to_pdf/lotus_notes.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_nsf_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "sample.nsf" >}}
+{{< tab-text >}}
+`sample.nsf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -65,15 +91,28 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.nsf") as viewer:
-    # Convert the NSF file to PNG.
-    # {0} is replaced with the page numbers in the output image names.
-    viewOptions = gvo.PngViewOptions("output_{0}.png")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 1000
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_nsf_to_png():
+    # Load NSF file
+    with Viewer("sample.nsf") as viewer:
+        # Convert the NSF file to PNG.
+        # {0} is replaced with the page numbers in the output image names.
+        viewOptions = PngViewOptions("render_nsf_to_png/lotus_notes_page_0_{0}.png")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 1000
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_nsf_to_png()
 ```
+{{< /tab >}}
+{{< tab "sample.nsf" >}}
+{{< tab-text >}}
+`sample.nsf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -88,15 +127,28 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.nsf") as viewer:
-    # Convert the NSF file to JPEG.
-    # {0} is replaced with the page numbers in the output image names.
-    viewOptions = gvo.JpgViewOptions("output_{0}.jpg")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 1000
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_nsf_to_jpg():
+    # Load NSF file
+    with Viewer("sample.nsf") as viewer:
+        # Convert the NSF file to JPEG.
+        # {0} is replaced with the page numbers in the output image names.
+        viewOptions = JpgViewOptions("render_nsf_to_jpg/nsf_to_jpg_{0}.jpg")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 1000
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_nsf_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "sample.nsf" >}}
+{{< tab-text >}}
+`sample.nsf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -104,10 +156,10 @@ with gv.Viewer("sample.nsf") as viewer:
 
 GroupDocs.Viewer supports the [MailStorageOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/mailstorageoptions/) class that allows you to specify different options for rendering Lotus Notes database files. To access these options, use the [MailStorageOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/) property for one of the following classes (depending on the output file format):
 
-* [HtmlViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/htmlviewoptions) 
-* [PdfViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pdfviewoptions)
-* [PngViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pngviewoptions)
-* [JpgViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/jpgviewoptions)
+* [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) 
+* [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions)
+* [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions)
+* [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions)
 
 ### Limit the number of items to render
 
@@ -118,13 +170,26 @@ The following example demonstrates how to specify the maximum number of items to
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.nsf") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources()
-    # Specify the maximum items to render.
-    viewOptions.mail_storage_options.max_items = 20
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_nsf_with_max_items():
+    # Load NSF file
+    with Viewer("sample.nsf") as viewer:
+        # Create an HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_nsf_with_max_items/nsf_with_max_items.html")
+        # Specify the maximum items to render.
+        viewOptions.mail_storage_options.max_items = 20
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_nsf_with_max_items()
 ```
+{{< /tab >}}
+{{< tab "sample.nsf" >}}
+{{< tab-text >}}
+`sample.nsf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -144,13 +209,26 @@ The following code sample filters messages in an NSF file before rendering this 
 {{< tabs "example6">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.nsf") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources()
-    # Set filters
-    options.outlook_options.text_filter = "Viewer"
-    options.outlook_options.address_filter = "groupdocs@mail.com"
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_nsf_with_filters():
+    # Load NSF file
+    with Viewer("sample.nsf") as viewer:
+        # Create an HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_nsf_with_filters/nsf_with_filters.html")
+        # Set filters
+        viewOptions.mail_storage_options.text_filter = "Viewer"
+        viewOptions.mail_storage_options.address_filter = "groupdocs@mail.com"
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_nsf_with_filters()
 ```
+{{< /tab >}}
+{{< tab "sample.nsf" >}}
+{{< tab-text >}}
+`sample.nsf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

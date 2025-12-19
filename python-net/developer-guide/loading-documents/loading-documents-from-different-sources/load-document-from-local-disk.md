@@ -15,9 +15,22 @@ The following code snippet shows how to load a document using the local path str
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.docx") as viewer:
-    html_options = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    viewer.view(html_options)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def load_document_from_local_disk():
+    # Load document from local disk
+    with Viewer("sample.docx") as viewer:
+        html_options = HtmlViewOptions.for_embedded_resources("load_document_from_local_disk/document_from_local_disk_{0}.html")
+        viewer.view(html_options)
+
+if __name__ == "__main__":
+    load_document_from_local_disk()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/loading-documents/loading-documents-from-different-sources/load-document-from-local-disk/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

@@ -22,17 +22,34 @@ First of all need to emphasize that the new XML processing module had not touche
 {{< tabs "Loading example">}}
 {{< tab "Python" >}}
 ```python
-# 1. Specify by filename
-with gv.Viewer("Sample.xml") as viewer:
-    # do some work...
+from groupdocs.viewer import Viewer, FileType
+from groupdocs.viewer.options import LoadOptions
 
-# 2. Specify by load options
-load_options = gvo.LoadOptions()
-load_options.file_type = gv.FileType.XML
+def load_xml_document():
+    # Method 1: Load XML document by specifying filename with .xml extension
+    # GroupDocs.Viewer automatically detects XML format from file extension
+    with Viewer("sample.xml") as viewer:
+        # Render document
+        pass
 
-with gv.Viewer("Sample.xml", load_options) as viewer:
-    # do some work...
+    # Method 2: Load XML document by explicitly specifying file type in LoadOptions
+    # Create load options and set file type to XML
+    load_options = LoadOptions()
+    load_options.file_type = FileType.XML
+
+    # Load XML document with explicit load options
+    with Viewer("sample.xml", load_options) as viewer:
+        # Render document
+        pass
+
+if __name__ == "__main__":
+    load_xml_document()
 ```
+{{< /tab >}}
+{{< tab "sample.xml" >}}
+{{< tab-text >}}
+`sample.xml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-xml-documents/sample.xml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -48,12 +65,29 @@ By default GroupDocs.Viewer uses it. But there is a possibility to override this
 {{< tabs "Custom encoding example">}}
 {{< tab "Python" >}}
 ```python
-load_options = gvo.LoadOptions(gv.FileType.XML)
-load_options.encoding = "ASCII"
+from groupdocs.viewer import Viewer, FileType
+from groupdocs.viewer.options import LoadOptions
 
-with gv.Viewer("Sample.xml", load_options) as viewer:
-    # do some work...
+def load_xml_with_encoding():
+    # Create load options for XML file type
+    load_options = LoadOptions(FileType.XML)
+    # Override the encoding specified in XML declaration
+    # This allows you to use a different encoding than what's declared in the XML file
+    load_options.encoding = "ASCII"
+
+    # Load XML document with custom encoding
+    with Viewer("sample.xml", load_options) as viewer:
+        # Render document
+        pass
+
+if __name__ == "__main__":
+    load_xml_with_encoding()
 ```
+{{< /tab >}}
+{{< tab "sample.xml" >}}
+{{< tab-text >}}
+`sample.xml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-xml-documents/sample.xml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -114,14 +148,34 @@ Code example below shows rendering of input XML file to the HTML in both ways:
 {{< tabs "Saving to HTML example">}}
 {{< tab "Python" >}}
 ```python
-paginated_html_options = gvo.HtmlViewOptions.for_embedded_resources("page-{0}.html")
-single_html_options = gvo.HtmlViewOptions.for_embedded_resources("single-page.html")
-single_html_options.render_to_single_page = True
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
 
-with gv.Viewer("Sample.xml") as viewer:
-    viewer.view(paginated_html_options)
-    viewer.view(single_html_options)
+def render_xml_to_html():
+    # Create HTML view options for paginated output
+    # {0} will be replaced with page number
+    paginated_html_options = HtmlViewOptions.for_embedded_resources("render_xml_to_html/page-{0}.html")
+    
+    # Create HTML view options for single-page output
+    single_html_options = HtmlViewOptions.for_embedded_resources("render_xml_to_html/single-page.html")
+    # Enable single-page rendering - all XML content in one HTML file
+    single_html_options.render_to_single_page = True
+
+    # Load XML document
+    with Viewer("sample.xml") as viewer:
+        # Render to paginated HTML (multiple HTML files)
+        viewer.view(paginated_html_options)
+        # Render to single-page HTML (one HTML file)
+        viewer.view(single_html_options)
+
+if __name__ == "__main__":
+    render_xml_to_html()
 ```
+{{< /tab >}}
+{{< tab "sample.xml" >}}
+{{< tab-text >}}
+`sample.xml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-xml-documents/sample.xml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -134,10 +188,27 @@ PDF format by its nature has pages, so if the XML content because of its big siz
 {{< tabs "Saving to PDF example">}}
 {{< tab "Python" >}}
 ```python
-pdf_options = gvo.PdfViewOptions("output.pdf")
-with gv.Viewer("Sample.xml") as viewer:
-    viewer.view(pdf_options)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_xml_to_pdf():
+    # Create PDF view options and specify output file path
+    pdf_options = PdfViewOptions("render_xml_to_pdf/xml_document.pdf")
+    
+    # Load XML document
+    with Viewer("sample.xml") as viewer:
+        # Render XML document to PDF format
+        # If content is large, it will be automatically paginated
+        viewer.view(pdf_options)
+
+if __name__ == "__main__":
+    render_xml_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "sample.xml" >}}
+{{< tab-text >}}
+`sample.xml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-xml-documents/sample.xml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -156,14 +227,34 @@ Example below shows saving input XML to the output PNG and JPEG:
 {{< tabs "Saving to PNG and JPEG example">}}
 {{< tab "Python" >}}
 ```python
-pngOptions = gvo.PngViewOptions("page-{0}.png")
-jpegOptions = gvo.JpgViewOptions("page-{0}.jpeg")
-jpegOptions.quality = 80
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions, JpgViewOptions
 
-with gv.Viewer("Sample.xml") as viewer:
-    viewer.view(pngOptions)
-    viewer.view(jpegOptions)
+def render_xml_to_images():
+    # Create PNG view options
+    # {0} will be replaced with page number if content spans multiple images
+    pngOptions = PngViewOptions("render_xml_to_images/page-{0}.png")
+    
+    # Create JPEG view options
+    jpegOptions = JpgViewOptions("render_xml_to_images/page-{0}.jpeg")
+    # Set JPEG image quality (1-100, default is 90)
+    jpegOptions.quality = 80
+
+    # Load XML document
+    with Viewer("sample.xml") as viewer:
+        # Render XML document to PNG format
+        viewer.view(pngOptions)
+        # Render XML document to JPEG format
+        viewer.view(jpegOptions)
+
+if __name__ == "__main__":
+    render_xml_to_images()
 ```
+{{< /tab >}}
+{{< tab "sample.xml" >}}
+{{< tab-text >}}
+`sample.xml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-xml-documents/sample.xml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -176,30 +267,33 @@ Example below shows obtaining [`ViewInfo`](https://reference.groupdocs.com/viewe
 {{< tabs "Retrieving information about XML view example">}}
 {{< tab "Python" >}}
 ```python
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import ViewInfoOptions
 
-view_info_options_html_single = gvo.ViewInfoOptions.for_html_view(True)
-view_info_options_pdf = gvo.ViewInfoOptions.for_pdf_view()
-view_info_options_png = gvo.ViewInfoOptions.for_png_view()
+def get_xml_view_info():
+    # Create view info options for HTML format (single page)
+    view_info_options_html_single = ViewInfoOptions.for_html_view(True)
+    # Create view info options for PDF format
+    view_info_options_pdf = ViewInfoOptions.for_pdf_view()
+    # Create view info options for PNG format
+    view_info_options_png = ViewInfoOptions.for_png_view()
 
-with gv.Viewer("Sample.xml") as viewer:
-    result_html_single = viewer.get_view_info(view_info_options_html_single)  
-    result_pdf = viewer.get_view_info(view_info_options_pdf) 
-    result_png = viewer.get_view_info(view_info_options_png) 
+    # Load XML document
+    with Viewer("sample.xml") as viewer:
+        # Get view information for HTML format (single page)
+        result_html_single = viewer.get_view_info(view_info_options_html_single)  
+        # Get view information for PDF format
+        result_pdf = viewer.get_view_info(view_info_options_pdf) 
+        # Get view information for PNG format
+        result_png = viewer.get_view_info(view_info_options_png)
+
+if __name__ == "__main__":
+    get_xml_view_info()
 ```
 {{< /tab >}}
+{{< tab "sample.xml" >}}
+{{< tab-text >}}
+`sample.xml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-xml-documents/sample.xml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
 {{< /tabs >}}
-
-## Conclusion
-
-Starting from the [version 24.9](https://releases.groupdocs.com/viewer/python-net/release-notes/2024/groupdocs-viewer-for-python-via-net-24-9-release-notes/), the new dedicated XML processing module makes XML support to be a truly powerful and useful feature, and ability to fix and display even the heavily corrupted XML documents allows to use the GroupDocs.Viewer for viewing XML documents in those cases, when all other competitors failed.
-
-
-
-
-
-
-
-
-
-
-

@@ -24,18 +24,31 @@ Here is an example, where both options are applied to the same input PDF file, s
 {{< tabs "Example1">}}
 {{< tab "Python" >}}
 ```python
-view_options_1 = gvo.PdfViewOptions()
-view_options_1.pdf_optimization_options = gvo.PdfOptimizationOptions()
-view_options_1.pdf_optimization_options.remove_unused_objects = True
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, PdfOptimizationOptions
 
-view_options_2 = gvo.PdfViewOptions()
-view_options_2.pdf_optimization_options = gvo.PdfOptimizationOptions()
-view_options_2.pdf_optimization_options.remove_unused_streams = True
+def remove_unused_resources():
 
-with gv.Viewer("sample.pdf") as viewer:
-    viewer.view(view_options_1)
-    viewer.view(view_options_2)
+    view_options_1 = PdfViewOptions("remove_unused_resources/removed_unused_objects.pdf")
+    view_options_1.pdf_optimization_options = PdfOptimizationOptions()
+    view_options_1.pdf_optimization_options.remove_unused_objects = True
+
+    view_options_2 = PdfViewOptions("remove_unused_resources/removed_unused_streams.pdf")
+    view_options_2.pdf_optimization_options = PdfOptimizationOptions()
+    view_options_2.pdf_optimization_options.remove_unused_streams = True
+
+    with Viewer("sample.pdf") as viewer:
+        viewer.view(view_options_1)
+        viewer.view(view_options_2)
+
+if __name__ == "__main__":
+    remove_unused_resources()
 ```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/pdf-remove-unused-resources/sample.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

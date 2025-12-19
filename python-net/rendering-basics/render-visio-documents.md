@@ -52,13 +52,25 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("flowchart.vsdx") as viewer:
-    # Create an HTML file for each drawing page.
-    # {0} is replaced with the current page number in the file name.
-    viewOptions =  gvo.htmlViewOptions.for_embedded_resources("page_{0}.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
 
+def render_visio_to_html():
+    # Load Visio document
+    with Viewer("sample.vsdx") as viewer:
+        # Create an HTML file for each drawing page.
+        # {0} is replaced with the current page number in the file name.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_visio_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_visio_to_html()
 ```
+{{< /tab >}}
+{{< tab "sample.vsdx" >}}
+{{< tab-text >}}
+`sample.vsdx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -77,15 +89,27 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("flowchart.vsdx") as viewer:
-    # Create an HTML file for each drawing page.
-    # Specify the HTML file names and location of external resources.
-    # {0} and {1} are replaced with the current page number and resource name, respectively.
-    viewOptions =  gvo.htmlViewOptions.for_external_resources(
-        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
-    viewer.view(viewOptions)
- 
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_visio_to_html_external():
+    # Load Visio document
+    with Viewer("sample.vsdx") as viewer:
+        # Create an HTML file for each drawing page.
+        # Specify the HTML file names and location of external resources.
+        # {0} and {1} are replaced with the current page number and resource name, respectively.
+        viewOptions = HtmlViewOptions.for_external_resources(
+            "render_visio_to_html_external/pdf_page_{0}.html", "render_visio_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_visio_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_visio_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "sample.vsdx" >}}
+{{< tab-text >}}
+`sample.vsdx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -100,13 +124,25 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("flowchart.vsdx") as viewer:
-    # Create a PDF file for the document.
-    # Specify the PDF file name.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
- 
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_visio_to_pdf():
+    # Load Visio document
+    with Viewer("sample.vsdx") as viewer:
+        # Create a PDF file for the document.
+        # Specify the PDF file name.
+        viewOptions = PdfViewOptions("render_visio_to_pdf/visio_diagram.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_visio_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "sample.vsdx" >}}
+{{< tab-text >}}
+`sample.vsdx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -121,16 +157,28 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("flowchart.vsdx") as viewer:
-    # Create a PNG image for each drawing page.
-    # {0} is replaced with the current page number in the image name.
-    viewOptions = gvo.PngViewOptions("output_{0}.png")
-    # Set width and height.
-    viewOptions.width = 950
-    viewOptions.height = 800
-    viewer.view(viewOptions)
- 
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_visio_to_png():
+    # Load Visio document
+    with Viewer("sample.vsdx") as viewer:
+        # Create a PNG image for each drawing page.
+        # {0} is replaced with the current page number in the image name.
+        viewOptions = PngViewOptions("render_visio_to_png/visio_page_0_{0}.png")
+        # Set width and height.
+        viewOptions.width = 950
+        viewOptions.height = 800
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_visio_to_png()
 ```
+{{< /tab >}}
+{{< tab "sample.vsdx" >}}
+{{< tab-text >}}
+`sample.vsdx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 The following image demonstrates the result:
@@ -144,16 +192,28 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("flowchart.vsdx") as viewer:
-    # Create a JPEG image for each drawing page.
-    # {0} is replaced with the current page number in the image name.
-    viewOptions = gvo.JpgViewOptions("output_{0}.jpg")
-    # Set width and height.
-    viewOptions.width = 950
-    viewOptions.height = 800
-    viewer.view(viewOptions)
- 
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_visio_to_jpg():
+    # Load Visio document
+    with Viewer("sample.vsdx") as viewer:
+        # Create a JPEG image for each drawing page.
+        # {0} is replaced with the current page number in the image name.
+        viewOptions = JpgViewOptions("render_visio_to_jpg/visio_to_jpg_{0}.jpg")
+        # Set width and height.
+        viewOptions.width = 950
+        viewOptions.height = 800
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_visio_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "sample.vsdx" >}}
+{{< tab-text >}}
+`sample.vsdx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -165,27 +225,38 @@ GroupDocs.Viewer allows you to render shapes used in a Visio diagram or stored i
 
 To render only master shapes contained in Visio file, enable the [VisioRenderingOptions.render_figures_only](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/visiorenderingoptions/#properties) property for one of the following classes (depending on the output file format):
 
-* [HtmlViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/htmlviewoptions) 
-* [PdfViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pdfviewoptions)
-* [PngViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pngviewoptions)
-* [JpgViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/jpgviewoptions)
+* [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) 
+* [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions)
+* [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions)
+* [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions)
 
 The [VisioRenderingOptions.figure_width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/visiorenderingoptions/#properties) property allows you to specify the shape width in pixels. The height is calculated automatically based on the aspect ratio of each shape.
 
 {{< tabs "example6">}}
 {{< tab "Python" >}}
-
 ```python
-with gv.Viewer("map.vsdx") as viewer:
-    # Convert the Visio file to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    # Render the master shapes only.
-    viewOptions.VisioRenderingOptions.render_figures_only = True
-    # Specify shape width in pixels.
-    viewOptions.VisioRenderingOptions.figure_width = 200
-    viewer.view(viewOptions)
- 
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_visio_shapes_only():
+    # Load Visio document
+    with Viewer("map.vsdx") as viewer:
+        # Convert the Visio file to PDF.
+        viewOptions = PdfViewOptions("render_visio_shapes_only/visio_shapes_only.pdf")
+        # Render the master shapes only.
+        viewOptions.visio_rendering_options.render_figures_only = True
+        # Specify shape width in pixels.
+        viewOptions.visio_rendering_options.figure_width = 200
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_visio_shapes_only()
 ```
+{{< /tab >}}
+{{< tab "map.vsdx" >}}
+{{< tab-text >}}
+`map.vsdx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-visio-documents/map.vsdx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

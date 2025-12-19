@@ -50,12 +50,25 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pptx") as viewer:
-    # Create an HTML file for each slide.
-    # {0} is replaced with the current page number in the file name.
-    options = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    viewer.view(options)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_presentation_to_html():
+    # Load presentation
+    with Viewer("sample.pptx") as viewer:
+        # Create an HTML file for each slide.
+        # {0} is replaced with the current page number in the file name.
+        options = HtmlViewOptions.for_embedded_resources("render_presentation_to_html/pdf_page_{0}.html")
+        viewer.view(options)
+
+if __name__ == "__main__":
+    render_presentation_to_html()
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -74,13 +87,26 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pptx") as viewer:
-    # Create an HTML file for each slide.
-    # Specify the HTML file names and location of external resources.
-    # {0} and {1} are replaced with the current page number and resource name, respectively.
-    viewOptions = gvo.HtmlViewOptions.for_external_resources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_presentation_to_html_external():
+    # Load presentation
+    with Viewer("sample.pptx") as viewer:
+        # Create an HTML file for each slide.
+        # Specify the HTML file names and location of external resources.
+        # {0} and {1} are replaced with the current page number and resource name, respectively.
+        viewOptions = HtmlViewOptions.for_external_resources("render_presentation_to_html_external/pdf_page_{0}.html", "render_presentation_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_presentation_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_presentation_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -95,10 +121,23 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pptx") as viewer:
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_presentation_to_pdf():
+    # Load presentation
+    with Viewer("sample.pptx") as viewer:
+        viewOptions = PdfViewOptions("render_presentation_to_pdf/presentation.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_presentation_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -113,12 +152,25 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pptx") as viewer:
-    # Create a PNG image for each slide.
-    # {0} is replaced with the current page number in the image name.
-    viewOptions = gvo.PngViewOptions("output_{0}.png")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_presentation_to_png():
+    # Load presentation
+    with Viewer("sample.pptx") as viewer:
+        # Create a PNG image for each slide.
+        # {0} is replaced with the current page number in the image name.
+        viewOptions = PngViewOptions("render_presentation_to_png/presentation_page_0_{0}.png")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_presentation_to_png()
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -134,14 +186,27 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pptx") as viewer:
-    # Create a JPG image for each slide.
-    # {0} is replaced with the current page number in the image name.
-    viewOptions = gvo.JpgViewOptions("output_{0}.jpg")
-    viewOptions.width = 950
-    viewOptions.height = 550
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_presentation_to_jpg():
+    # Load presentation
+    with Viewer("sample.pptx") as viewer:
+        # Create a JPG image for each slide.
+        # {0} is replaced with the current page number in the image name.
+        viewOptions = JpgViewOptions("render_presentation_to_jpg/presentation_to_jpg_{0}.jpg")
+        viewOptions.width = 950
+        viewOptions.height = 550
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_presentation_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -154,11 +219,24 @@ The following code example uses this option to display hidden slides in the gene
 {{< tabs "example7">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pptx") as viewer:
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewOptions.render_hidden_pages = True
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_presentation_with_hidden_slides():
+    # Load presentation
+    with Viewer("sample.pptx") as viewer:
+        viewOptions = PdfViewOptions("render_presentation_with_hidden_slides/presentation_with_hidden_slides.pdf")
+        viewOptions.render_hidden_pages = True
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_presentation_with_hidden_slides()
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -169,11 +247,24 @@ Use the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/pyt
 {{< tabs "example8">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pptx") as viewer:
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewOptions.render_comments = True
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_presentation_with_comments():
+    # Load presentation
+    with Viewer("sample.pptx") as viewer:
+        viewOptions = PdfViewOptions("render_presentation_with_comments/presentation_with_comments.pdf")
+        viewOptions.render_comments = True
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_presentation_with_comments()
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -194,11 +285,24 @@ The following code sample renders a presentation with speaker notes to PDF:
 {{< tabs "example9">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pptx") as viewer:
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewOptions.render_notes = True
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_presentation_with_notes():
+    # Load presentation
+    with Viewer("sample.pptx") as viewer:
+        viewOptions = PdfViewOptions("render_presentation_with_notes/presentation_with_notes.pdf")
+        viewOptions.render_notes = True
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_presentation_with_notes()
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

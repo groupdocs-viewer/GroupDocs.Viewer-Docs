@@ -21,12 +21,25 @@ The following code snippet shows how to reorder pages:
 {{< tabs "example1">}}
 {{< tab "Python">}}
 ```python
-with gv.Viewer("sample.docx") as viewer:
-    # Create view options.
-    viewOptions = gvo.PdfViewOptions()
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
 
-    # Pass page numbers in the order you want to render them.
-    viewer.view(viewOptions, 2, 1)
+def reorder_pages():
+    # Load document
+    with Viewer("sample.docx") as viewer:
+        # Create view options.
+        viewOptions = PdfViewOptions("reorder_pages/reordered_pages.pdf")
+
+        # Pass page numbers in the order you want to render them.
+        viewer.view(viewOptions, [2, 1])
+
+if __name__ == "__main__":
+    reorder_pages()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/reorder-pages/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

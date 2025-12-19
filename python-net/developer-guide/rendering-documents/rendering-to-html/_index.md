@@ -29,13 +29,25 @@ The following code snippet shows how to render a .docx document to HTML with ext
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-# Create an HTML file for each page.
-# Specify the HTML file names and location of external resources.
-# {0} and {1} are replaced with the current page number and resource name, respectively.
-with gv.Viewer("sample.docx") as viewer:
-    html_options = gvo.HtmlViewOptions.for_external_resources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
-    viewer.view(html_options)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_to_html_external():
+    # Create an HTML file for each page.
+    # Specify the HTML file names and location of external resources.
+    # {0} and {1} are replaced with the current page number and resource name, respectively.
+    with Viewer("sample.docx") as viewer:
+        html_options = HtmlViewOptions.for_external_resources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+        viewer.view(html_options)
+
+if __name__ == "__main__":
+    render_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-html/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -46,14 +58,26 @@ The following code snippet shows how to render a .docx document to HTML with emb
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-# Create an HTML files.
-# {0} is replaced with the current page number in the file name.
-with gv.Viewer(test_files.sample_docx) as viewer:
-    html_options = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    viewer.view(html_options)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
 
-print(f"\nSource document rendered successfully.\nCheck output in {output_directory}.")
+def render_to_html_embedded():
+    # Create an HTML file for each page.
+    # {0} is replaced with the current page number in the file name.
+    with Viewer("sample.docx") as viewer:
+        html_options = HtmlViewOptions.for_embedded_resources("page_{0}.html")
+        viewer.view(html_options)
+
+    print(f"\nSource document rendered successfully.")
+
+if __name__ == "__main__":
+    render_to_html_embedded()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-html/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

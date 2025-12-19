@@ -45,12 +45,25 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("resume.docx") as viewer:
-    # Create an HTML files.
-    # {0} is replaced with the current page number in the file name.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_word_to_html():
+    # Load Word document
+    with Viewer("sample.docx") as viewer:
+        # Create an HTML files.
+        # {0} is replaced with the current page number in the file name.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_word_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_word_to_html()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -69,13 +82,26 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("resume.docx") as viewer:
-    # Create an HTML file for each page.
-    # Specify the HTML file names and location of external resources.
-    # {0} and {1} are replaced with the current page number and resource name, respectively.
-    viewOptions = gvo.HtmlViewOptions.for_external_resources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_word_to_html_external():
+    # Load Word document
+    with Viewer("sample.docx") as viewer:
+        # Create an HTML file for each page.
+        # Specify the HTML file names and location of external resources.
+        # {0} and {1} are replaced with the current page number and resource name, respectively.
+        viewOptions = HtmlViewOptions.for_external_resources("render_word_to_html_external/pdf_page_{0}.html", "render_word_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_word_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_word_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -90,12 +116,25 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("resume.docx") as viewer:
-    # Create a PDF file for the document.
-    # Specify the PDF file name.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_word_to_pdf():
+    # Load Word document
+    with Viewer("sample.docx") as viewer:
+        # Create a PDF file for the document.
+        # Specify the PDF file name.
+        viewOptions = PdfViewOptions("render_word_to_pdf/word_document.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_word_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -110,12 +149,25 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("resume.docx") as viewer:
-    # Create a PNG image for each document page.
-    # {0} is replaced with the current page number in the image name.
-    viewOptions = gvo.PngViewOptions("output_{0}.png")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_word_to_png():
+    # Load Word document
+    with Viewer("sample.docx") as viewer:
+        # Create a PNG image for each document page.
+        # {0} is replaced with the current page number in the image name.
+        viewOptions = PngViewOptions("render_word_to_png/word_page_0_{0}.png")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_word_to_png()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 The following image demonstrates the result:
@@ -129,12 +181,25 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("resume.docx") as viewer:
-    # Create a JPG image for each document page.
-    # {0} is replaced with the current page number in the image name.
-    viewOptions = gvo.JpgViewOptions("output_{0}.png")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_word_to_jpg():
+    # Load Word document
+    with Viewer("sample.docx") as viewer:
+        # Create a JPG image for each document page.
+        # {0} is replaced with the current page number in the image name.
+        viewOptions = JpgViewOptions("render_word_to_jpg/word_to_jpg_{0}.jpg")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_word_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -159,17 +224,30 @@ The example below converts a Word document to HTML and specifies page margins fo
 {{< tabs "example6">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("resume.docx") as viewer:
-    # Create an HTML file for each document page.
-    # {0} is replaced with the current page number in the file name.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    # Specify the size of page margins in points.
-    viewOptions.word_processing_options.left_margin = 54
-    viewOptions.word_processing_options.right_margin = 54
-    viewOptions.word_processing_options.top_margin = 72
-    viewOptions.word_processing_options.bottom_margin = 72
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_word_with_margins():
+    # Load Word document
+    with Viewer("sample.docx") as viewer:
+        # Create an HTML file for each document page.
+        # {0} is replaced with the current page number in the file name.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_word_with_margins/word_with_margins_{0}.html")
+        # Specify the size of page margins in points.
+        viewOptions.word_processing_options.left_margin = 54.0
+        viewOptions.word_processing_options.right_margin = 54.0
+        viewOptions.word_processing_options.top_margin = 72.0
+        viewOptions.word_processing_options.bottom_margin = 72.0
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_word_with_margins()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -187,13 +265,26 @@ The following code example demonstrates how to render a Word document with track
 {{< tabs "example7">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("resume.docx") as viewer:
-    # Convert the document to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    # Enable tracked changes rendering.
-    viewOptions.word_processing_options.render_tracked_changes = True
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_word_with_tracked_changes():
+    # Load Word document
+    with Viewer("with_tracked_changes.docx") as viewer:
+        # Convert the document to PDF.
+        viewOptions = PdfViewOptions("render_word_with_tracked_changes/word_with_tracked_changes.pdf")
+        # Enable tracked changes rendering.
+        viewOptions.word_processing_options.render_tracked_changes = True
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_word_with_tracked_changes()
 ```
+{{< /tab >}}
+{{< tab "with_tracked_changes.docx" >}}
+{{< tab-text >}}
+`with_tracked_changes.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/with_tracked_changes.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -210,13 +301,26 @@ The code example below renders a Word document with comments to PDF.
 {{< tabs "example8">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("resume.docx") as viewer:
-    # Convert the document to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    # Enable rendering comments.
-    viewOptions.render_comments = True
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_word_with_comments():
+    # Load Word document
+    with Viewer("with_comment.docx") as viewer:
+        # Convert the document to PDF.
+        viewOptions = PdfViewOptions("render_word_with_comments/word_with_comments.pdf")
+        # Enable rendering comments.
+        viewOptions.render_comments = True
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_word_with_comments()
 ```
+{{< /tab >}}
+{{< tab "with_comment.docx" >}}
+{{< tab-text >}}
+`with_comment.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/with_comment.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

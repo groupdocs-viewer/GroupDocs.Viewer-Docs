@@ -56,12 +56,25 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("invoice.xlsx") as viewer:
-    # Convert the spreadsheet to HTML.
-    # {0} is replaced with the current page number in the file names.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_excel_to_html():
+    # Load Excel spreadsheet
+    with Viewer("invoice.xlsx") as viewer:
+        # Convert the spreadsheet to HTML.
+        # {0} is replaced with the current page number in the file names.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_excel_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_excel_to_html()
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -74,12 +87,25 @@ The following image demonstrates the result:
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Products.numbers") as viewer:
-    # Convert the spreadsheet to HTML.
-    # {0} is replaced with the current page number in the file names.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_numbers_to_html():
+    # Load Apple Numbers spreadsheet
+    with Viewer("sample.numbers") as viewer:
+        # Convert the spreadsheet to HTML.
+        # {0} is replaced with the current page number in the file names.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_numbers_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_numbers_to_html()
 ```
+{{< /tab >}}
+{{< tab "sample.numbers" >}}
+{{< tab-text >}}
+`sample.numbers` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.numbers) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -100,13 +126,26 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("invoice.xlsx") as viewer:
-    # Convert the spreadsheet to HTML.
-    # Specify the HTML file names and location of external resources.
-    # {0} and {1} are replaced with the current page number and resource name, respectively.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_excel_to_html_external():
+    # Load Excel spreadsheet
+    with Viewer("invoice.xlsx") as viewer:
+        # Convert the spreadsheet to HTML.
+        # Specify the HTML file names and location of external resources.
+        # {0} and {1} are replaced with the current page number and resource name, respectively.
+        viewOptions = HtmlViewOptions.for_external_resources("render_excel_to_html_external/pdf_page_{0}.html", "render_excel_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_excel_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_excel_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -115,13 +154,26 @@ with gv.Viewer("invoice.xlsx") as viewer:
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Products.numbers") as viewer:
-    # Convert the spreadsheet to HTML.
-    # Specify the HTML file names and location of external resources.
-    # {0} and {1} are replaced with the current page number and resource name, respectively.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_numbers_to_html_external():
+    # Load Apple Numbers spreadsheet
+    with Viewer("sample.numbers") as viewer:
+        # Convert the spreadsheet to HTML.
+        # Specify the HTML file names and location of external resources.
+        # {0} and {1} are replaced with the current page number and resource name, respectively.
+        viewOptions = HtmlViewOptions.for_external_resources("render_numbers_to_html_external/pdf_page_{0}.html", "render_numbers_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_numbers_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_numbers_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "sample.numbers" >}}
+{{< tab-text >}}
+`sample.numbers` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.numbers) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -137,13 +189,26 @@ To convert all worksheets to one HTML file, use the [HtmlViewOptions.render_to_s
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Personal_net_worth_calculator.xlsx") as viewer:
-    # Convert all Excel worksheets to one HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page.html")
-    # Enable converting all worksheets to one file.
-    viewOptions.render_to_single_page = True
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_excel_to_single_html():
+    # Load Excel spreadsheet
+    with Viewer("invoice.xlsx") as viewer:
+        # Convert all Excel worksheets to one HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_excel_to_single_html/page.html")
+        # Enable converting all worksheets to one file.
+        viewOptions.render_to_single_page = True
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_excel_to_single_html()
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -161,11 +226,24 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example6">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("invoice.xlsx") as viewer:
-    # Convert the spreadsheet to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_excel_to_pdf():
+    # Load Excel spreadsheet
+    with Viewer("invoice.xlsx") as viewer:
+        # Convert the spreadsheet to PDF.
+        viewOptions = PdfViewOptions("render_excel_to_pdf/spreadsheet.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_excel_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -178,11 +256,24 @@ The following image demonstrates the result:
 {{< tabs "example7">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Products.numbers") as viewer:
-    # Convert the spreadsheet to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_numbers_to_pdf():
+    # Load Apple Numbers spreadsheet
+    with Viewer("sample.numbers") as viewer:
+        # Convert the spreadsheet to PDF.
+        viewOptions = PdfViewOptions("render_numbers_to_pdf/spreadsheet.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_numbers_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "sample.numbers" >}}
+{{< tab-text >}}
+`sample.numbers` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.numbers) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -199,15 +290,28 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example8">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("invoice.xlsx") as viewer:
-    # Convert the spreadsheet to PNG.
-    # {0} is replaced with the current page number in the file names.
-    viewOptions = gvo.PngViewOptions("output_{0}.png")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 900
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_excel_to_png():
+    # Load Excel spreadsheet
+    with Viewer("invoice.xlsx") as viewer:
+        # Convert the spreadsheet to PNG.
+        # {0} is replaced with the current page number in the file names.
+        viewOptions = PngViewOptions("render_excel_to_png/spreadsheet_page_0_{0}.png")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 900
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_excel_to_png()
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 The following image demonstrates the result:
@@ -219,15 +323,28 @@ The following image demonstrates the result:
 {{< tabs "example9">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Products.numbers") as viewer:
-    # Convert the spreadsheet to PNG.
-    # {0} is replaced with the current page number in the file names.
-    viewOptions = gvo.PngViewOptions("output_{0}.png")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 900
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_numbers_to_png():
+    # Load Apple Numbers spreadsheet
+    with Viewer("sample.numbers") as viewer:
+        # Convert the spreadsheet to PNG.
+        # {0} is replaced with the current page number in the file names.
+        viewOptions = PngViewOptions("render_numbers_to_png/spreadsheet_page_0_{0}.png")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 900
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_numbers_to_png()
 ```
+{{< /tab >}}
+{{< tab "sample.numbers" >}}
+{{< tab-text >}}
+`sample.numbers` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.numbers) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -244,15 +361,28 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example10">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("invoice.xlsx") as viewer:
-    # Convert the spreadsheet to JPEG.
-    # {0} is replaced with the current page number in the file names.
-    viewOptions = gvo.JpgViewOptions("output_{0}.jpg")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 900
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_excel_to_jpg():
+    # Load Excel spreadsheet
+    with Viewer("invoice.xlsx") as viewer:
+        # Convert the spreadsheet to JPEG.
+        # {0} is replaced with the current page number in the file names.
+        viewOptions = JpgViewOptions("render_excel_to_jpg/excel_to_jpg_{0}.jpg")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 900
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_excel_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -261,15 +391,28 @@ with gv.Viewer("invoice.xlsx") as viewer:
 {{< tabs "example11">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("Products.numbers") as viewer:
-    # Convert the spreadsheet to JPEG.
-    # {0} is replaced with the current page number in the file names.
-    viewOptions = gvo.JpgViewOptions("output_{0}.jpg")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 900
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_numbers_to_jpg():
+    # Load Apple Numbers spreadsheet
+    with Viewer("sample.numbers") as viewer:
+        # Convert the spreadsheet to JPEG.
+        # {0} is replaced with the current page number in the file names.
+        viewOptions = JpgViewOptions("render_numbers_to_jpg/numbers_to_jpg_{0}.jpg")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 900
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_numbers_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "sample.numbers" >}}
+{{< tab-text >}}
+`sample.numbers` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.numbers) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -285,14 +428,27 @@ GroupDocs.Viewer can detect the following separators:
 {{< tabs "example12">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.csv") as viewer:
-    # Convert the spreadsheet to JPEG.
-    # {0} is replaced with the current page number in the file names.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    # Detect a CSV/TSV separator.
-    viewOptions.spreadsheet_options.detect_separator = True
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_csv_with_separator_detection():
+    # Load CSV file
+    with Viewer("sample.csv") as viewer:
+        # Convert the spreadsheet to HTML.
+        # {0} is replaced with the current page number in the file names.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_csv_with_separator_detection/csv_with_separator_detection_{0}.html")
+        # Detect a CSV/TSV separator.
+        viewOptions.spreadsheet_options.detect_separator = True
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_csv_with_separator_detection()
 ```
+{{< /tab >}}
+{{< tab "sample.csv" >}}
+{{< tab-text >}}
+`sample.csv` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.csv) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -307,16 +463,29 @@ GroupDocs.Viewer allows you to obtain information about the source spreadsheet f
 {{< tabs "example13">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.xlsx") as viewer:
-    view_info_options = gvo.ViewInfoOptions.for_html_view()
-    # Call this method to create a single page for each worksheet.
-    view_info_options.spreadsheet_options = gvo.SpreadsheetOptions.for_one_page_per_sheet()
-    view_info = viewer.get_view_info(view_info_options)
-    # Print the worksheet names in the console window.
-    print("Worksheets:")
-    for page in view_info.pages:
-        print(f" - Worksheet {page.number} name '{page.name}'")
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import ViewInfoOptions, SpreadsheetOptions
+
+def get_worksheet_names():
+    # Load Excel spreadsheet
+    with Viewer("sample.xlsx") as viewer:
+        view_info_options = ViewInfoOptions.for_html_view()
+        # Call this method to create a single page for each worksheet.
+        view_info_options.spreadsheet_options = SpreadsheetOptions.for_one_page_per_sheet()
+        view_info = viewer.get_view_info(view_info_options)
+        # Print the worksheet names in the console window.
+        print("Worksheets:")
+        for page in view_info.pages:
+            print(f" - Worksheet {page.number} name '{page.name}'")
+
+if __name__ == "__main__":
+    get_worksheet_names()
 ```
+{{< /tab >}}
+{{< tab "sample.xlsx" >}}
+{{< tab-text >}}
+`sample.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

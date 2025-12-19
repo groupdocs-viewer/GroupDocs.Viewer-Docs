@@ -21,12 +21,25 @@ The following code snippet shows how to render a .docx document to PDF:
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.docx") as viewer:
-    pdf_options = gvo.PdfViewOptions("output-to-pdf.pdf")
-    viewer.view(pdf_options)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
 
-print(f"\nSource document rendered successfully.")
+def render_to_pdf():
+    # Load document
+    with Viewer("sample.docx") as viewer:
+        pdf_options = PdfViewOptions("output-to-pdf.pdf")
+        viewer.view(pdf_options)
+
+    print(f"\nSource document rendered successfully.")
+
+if __name__ == "__main__":
+    render_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

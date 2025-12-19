@@ -39,11 +39,24 @@ To convert an OST or PST file to HTML, call the [HtmlViewOptions.for_embedded_re
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pst") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("output.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_outlook_to_html():
+    # Load Outlook data file
+    with Viewer("sample.pst") as viewer:
+        # Create an HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_outlook_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_outlook_to_html()
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -58,11 +71,24 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pst") as viewer:
-    # Create a PDF file.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_outlook_to_pdf():
+    # Load Outlook data file
+    with Viewer("sample.pst") as viewer:
+        # Create a PDF file.
+        viewOptions = PdfViewOptions("render_outlook_to_pdf/outlook_data.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_outlook_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -77,15 +103,28 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pst") as viewer:
-    # Convert the PST file to PNG.
-    # {0} is replaced with the page numbers in the output image names.
-    viewOptions = gvo.PngViewOptions("output_{0}.png")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 900
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_outlook_to_png():
+    # Load Outlook data file
+    with Viewer("sample.pst") as viewer:
+        # Convert the PST file to PNG.
+        # {0} is replaced with the page numbers in the output image names.
+        viewOptions = PngViewOptions("render_outlook_to_png/outlook_page_0_{0}.png")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 900
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_outlook_to_png()
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -100,15 +139,28 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pst") as viewer:
-    # Convert the PST file to JPEG.
-    # {0} is replaced with the page numbers in the output image names.
-    viewOptions = gvo.JpgViewOptions("output_{0}.jpg")
-    # Set width and height.
-    viewOptions.width = 800
-    viewOptions.height = 900
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_outlook_to_jpg():
+    # Load Outlook data file
+    with Viewer("sample.pst") as viewer:
+        # Convert the PST file to JPEG.
+        # {0} is replaced with the page numbers in the output image names.
+        viewOptions = JpgViewOptions("render_outlook_to_jpg/outlook_to_jpg_{0}.jpg")
+        # Set width and height.
+        viewOptions.width = 800
+        viewOptions.height = 900
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_outlook_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -116,47 +168,73 @@ with gv.Viewer("sample.pst") as viewer:
 
 GroupDocs.Viewer supports the [OutlookOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/outlookoptions) class that allows you to specify different options for rendering Outlook data files. To access these options, use the [outlook_options](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/#properties) property for one of the following classes (depending on the output file format):
 
-* [HtmlViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/htmlviewoptions) 
-* [PdfViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pdfviewoptions)
-* [PngViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pngviewoptions)
-* [JpgViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/jpgviewoptions)
+* [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) 
+* [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions)
+* [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions)
+* [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions)
 
 ### Render a specific folder
 
-When you convert an OST or PST file to HTML, PDF, or image format, GroupDocs.Viewer renders messages from all folders contained in the file (including nested folders). If you want to render items from a specific folder, set the [outlook_options.folder](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/outlookoptions/#properties) property for a target view. Specify the folder name as follows: `{Parent folder name}\\{Subfolder name}`.
+When you convert an OST or PST file to HTML, PDF, or image format, GroupDocs.Viewer renders messages from all folders contained in the file (including nested folders). If you want to render items from a specific folder, set the [outlook_options.folder](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/outlookoptions/#properties) property for a target view. Specify the folder name as follows: `{Parent folder name}\\{Subfolder name}`.
 
 
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pst") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("output.html")
-    # Render messages from the "Inbox" folder and its subfolders.
-    viewOptions.outlook_options.folder = "Inbox"
-    # Render messages from a specific subfolder in the "Inbox" folder.
-    # viewOptions.OutlookOptions.Folder = "Inbox\\Work\\Urgent";
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_outlook_specific_folder():
+    # Load Outlook data file
+    with Viewer("sample.pst") as viewer:
+        # Create an HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_outlook_specific_folder/outlook_specific_folder.html")
+        # Render messages from the "Inbox" folder and its subfolders.
+        viewOptions.outlook_options.folder = "Inbox"
+        # Render messages from a specific subfolder in the "Inbox" folder.
+        # viewOptions.outlook_options.folder = "Inbox\\Work\\Urgent"
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_outlook_specific_folder()
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
 ### Limit the number of folder items to render
 
-When you load large Outlook data files, it may take a significant amount of time to retrieve and render file contents. To improve rendering performance, use the [OutlookOptions.max_items_in_folder](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/outlookoptions/#properties) property to limit the number of rendered items (messages, contacts, or tasks) in each folder. The default property value is **50**. Set this property to **0** to render all existing items. 
+When you load large Outlook data files, it may take a significant amount of time to retrieve and render file contents. To improve rendering performance, use the [OutlookOptions.max_items_in_folder](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/outlookoptions/#properties) property to limit the number of rendered items (messages, contacts, or tasks) in each folder. The default property value is **50**. Set this property to **0** to render all existing items. 
 
 The following example demonstrates how to specify the maximum number of folder items to render:
 
 {{< tabs "example6">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pst") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources()
-    # Specify the maximum number of folder items.
-    viewOptions.outlook_options.max_items_in_folder = 30
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_outlook_with_max_items():
+    # Load Outlook data file
+    with Viewer("sample.pst") as viewer:
+        # Create an HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_outlook_with_max_items/outlook_with_max_items.html")
+        # Specify the maximum number of folder items.
+        viewOptions.outlook_options.max_items_in_folder = 30
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_outlook_with_max_items()
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -168,21 +246,34 @@ Microsoft Outlook allows you to filter messages by specific words in the message
 
 With GroupDocs.Viewer, you can also filter messages before rendering an Outlook data file to HTML, PDF, or image format. To do this, use the following properties:
 
-* [OutlookOptions.text_filter](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/outlookoptions/#properties)---Allows you to render all messages that contain specific text in the subject or body.
-* [OutlookOptions.address_filter](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/outlookoptions/#properties)---Allows you to render all messages that contain specific text in the sender's or recipient's address.
+* [OutlookOptions.text_filter](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/outlookoptions/#properties)---Allows you to render all messages that contain specific text in the subject or body.
+* [OutlookOptions.address_filter](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/outlookoptions/#properties)---Allows you to render all messages that contain specific text in the sender's or recipient's address.
 
 The following code sample filters messages in a PST file before rendering this file to HTML:
 
 {{< tabs "example7">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.pst") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources()
-    # Set filters.
-    viewOptions.outlook_options.text_filter = "Viewer"
-    viewOptions.outlook_options.address_filter = "groupdocs.com"
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_outlook_with_filters():
+    # Load Outlook data file
+    with Viewer("sample.pst") as viewer:
+        # Create an HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_outlook_with_filters/outlook_with_filters.html")
+        # Set filters.
+        viewOptions.outlook_options.text_filter = "Viewer"
+        viewOptions.outlook_options.address_filter = "groupdocs.com"
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_outlook_with_filters()
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

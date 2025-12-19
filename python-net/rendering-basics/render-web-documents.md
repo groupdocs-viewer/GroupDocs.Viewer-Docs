@@ -36,12 +36,25 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("groupdocs-documentation.mhtml") as viewer:
-    # Create a PDF file for the document.
-    # Specify the PDF file name.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_web_to_pdf():
+    # Load web document
+    with Viewer("groupdocs-documentation.mhtml") as viewer:
+        # Create a PDF file for the document.
+        # Specify the PDF file name.
+        viewOptions = PdfViewOptions("render_web_to_pdf/optimized_for_web.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_web_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "groupdocs-documentation.mhtml" >}}
+{{< tab-text >}}
+`groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -56,15 +69,28 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("groupdocs-documentation.mhtml") as viewer:
-    # Convert the web file to PNG.
-    # {0} is replaced with the page numbers in the output image names.
-    viewOptions = gvo.PngViewOptions("output_{0}.png")
-    # Set width and height.
-    viewOptions.width = 950
-    viewOptions.height = 800
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_web_to_png():
+    # Load web document
+    with Viewer("groupdocs-documentation.mhtml") as viewer:
+        # Convert the web file to PNG.
+        # {0} is replaced with the page numbers in the output image names.
+        viewOptions = PngViewOptions("render_web_to_png/optimized_for_web_{0}.pdf")
+        # Set width and height.
+        viewOptions.width = 950
+        viewOptions.height = 800
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_web_to_png()
 ```
+{{< /tab >}}
+{{< tab "groupdocs-documentation.mhtml" >}}
+{{< tab-text >}}
+`groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -79,15 +105,28 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("groupdocs-documentation.mhtml") as viewer:
-    # Create a JPEG image for each drawing page.
-    # {0} is replaced with the current page number in the image name.
-    viewOptions = gvo.JpgViewOptions("output_{0}.jpg")
-    # Set width and height.
-    viewOptions.width = 1600
-    viewOptions.height = 650
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_web_to_jpg():
+    # Load web document
+    with Viewer("groupdocs-documentation.mhtml") as viewer:
+        # Create a JPEG image for each page.
+        # {0} is replaced with the current page number in the image name.
+        viewOptions = JpgViewOptions("render_web_to_jpg/web_to_jpg_{0}.jpg")
+        # Set width and height.
+        viewOptions.width = 1600
+        viewOptions.height = 650
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_web_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "groupdocs-documentation.mhtml" >}}
+{{< tab-text >}}
+`groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -102,14 +141,27 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.chm") as viewer:
-    # Convert the CHM file to HTML.
-    # {0} is replaced with the page numbers in the output file names.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("chm_result_{0}.html")
-    # Enable the following option to display all CHM content on a single HTML page.
-    # viewOptions.setRenderToSinglePage(true)
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_chm_to_html():
+    # Load CHM file
+    with Viewer("sample.chm") as viewer:
+        # Convert the CHM file to HTML.
+        # {0} is replaced with the page numbers in the output file names.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_chm_to_html/chm_result_{0}.html")
+        # Enable the following option to display all CHM content on a single HTML page.
+        # viewOptions.render_to_single_page = True
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_chm_to_html()
 ```
+{{< /tab >}}
+{{< tab "sample.chm" >}}
+{{< tab-text >}}
+`sample.chm` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-web-documents/sample.chm) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -128,11 +180,24 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.chm") as viewer:
-    # Convert the CHM file to HTML.
-    # Specify the output file names and location of external resources.
-    viewOptions = gvo.HtmlViewOptions.for_external_resources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_chm_to_html_external():
+    # Load CHM file
+    with Viewer("sample.chm") as viewer:
+        # Convert the CHM file to HTML.
+        # Specify the output file names and location of external resources.
+        viewOptions = HtmlViewOptions.for_external_resources("render_chm_to_html_external/pdf_page_{0}.html", "render_chm_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_chm_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_chm_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "sample.chm" >}}
+{{< tab-text >}}
+`sample.chm` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-web-documents/sample.chm) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

@@ -21,14 +21,28 @@ The following code snippet shows how to get and save all attachments from the MS
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("with_attachments.msg") as viewer:
+from groupdocs.viewer import Viewer
+
+def extract_and_save_attachments():
+    # Load document with attachments
+    with Viewer("with_attachments.msg") as viewer:
         attachments = viewer.get_attachments()
 
         print("\nAttachments:")
         for attachment in attachments:
             print(attachment)
+            # Save attachment to disk
+            viewer.save_attachment(attachment, f"./attachments/{attachment.file_name}")
 
     print(f"\nAttachments retrieved successfully.")
+
+if __name__ == "__main__":
+    extract_and_save_attachments()
 ```
+{{< /tab >}}
+{{< tab "with_attachments.msg" >}}
+{{< tab-text >}}
+`with_attachments.msg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/processing-attachments/with_attachments.msg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

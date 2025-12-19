@@ -44,12 +44,25 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
-    # Render the project's active view as HTML.
-    # {0} is replaced with the current page number in the output file names.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("page_{0}.html")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_project_to_html():
+    # Load Project file
+    with Viewer("sample.mpp") as viewer:
+        # Render the project's active view as HTML.
+        # {0} is replaced with the current page number in the output file names.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_project_to_html/pdf_page_{0}.html")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_project_to_html()
 ```
+{{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -68,13 +81,26 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 {{< tabs "example2">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
-    # Render the project's active view as HTML.
-    # Specify the HTML file names and location of external resources.
-    # {0} and {1} are replaced with the page number and resource name, respectively.
-    viewOptions = gvo.HtmlViewOptions.for_external_resources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_project_to_html_external():
+    # Load Project file
+    with Viewer("sample.mpp") as viewer:
+        # Render the project's active view as HTML.
+        # Specify the HTML file names and location of external resources.
+        # {0} and {1} are replaced with the page number and resource name, respectively.
+        viewOptions = HtmlViewOptions.for_external_resources("render_project_to_html_external/pdf_page_{0}.html", "render_project_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_project_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_project_to_html_external()
 ```
+{{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -89,11 +115,24 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example3">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
-    # Create a PDF file for the project's active view.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_project_to_pdf():
+    # Load Project file
+    with Viewer("sample.mpp") as viewer:
+        # Create a PDF file for the project's active view.
+        viewOptions = PdfViewOptions("render_project_to_pdf/project_file.pdf")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_project_to_pdf()
 ```
+{{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -108,15 +147,28 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example4">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
-    # Render the project's active view as PNG.
-    # {0} is replaced with the current page number in the output file names.
-    viewOptions = gvo.PngViewOptions("output_{0}.png")
-    # Set width and height.
-    viewOptions.width = 1600
-    viewOptions.height = 650
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PngViewOptions
+
+def render_project_to_png():
+    # Load Project file
+    with Viewer("sample.mpp") as viewer:
+        # Render the project's active view as PNG.
+        # {0} is replaced with the current page number in the output file names.
+        viewOptions = PngViewOptions("render_project_to_png/project_page_0_{0}.png")
+        # Set width and height.
+        viewOptions.width = 1600
+        viewOptions.height = 650
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_project_to_png()
 ```
+{{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -131,15 +183,28 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/grou
 {{< tabs "example5">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
-    # Render the project's active view as JPEG.
-    # {0} is replaced with the current page number in the output file names.
-    viewOptions = gvo.JpgViewOptions("output_{0}.jpg")
-    # Set width and height.
-    viewOptions.width = 1600
-    viewOptions.height = 650
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import JpgViewOptions
+
+def render_project_to_jpg():
+    # Load Project file
+    with Viewer("sample.mpp") as viewer:
+        # Render the project's active view as JPEG.
+        # {0} is replaced with the current page number in the output file names.
+        viewOptions = JpgViewOptions("render_project_to_jpg/project_to_jpg_{0}.jpg")
+        # Set width and height.
+        viewOptions.width = 1600
+        viewOptions.height = 650
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_project_to_jpg()
 ```
+{{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -148,23 +213,32 @@ with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
 Follow the steps below to obtain information about a Project file (the file format, the number of pages, the project's start and end dates): 
 
 1. Create a [ViewInfoOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewinfooptions) instance for a specific view.
-2. Call the [Viewer.get_view_info](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer/viewer/#methods) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [ProjectManagementViewInfo](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/projectmanagementviewinfo) type.
+2. Call the [Viewer.get_view_info](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [ProjectManagementViewInfo](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.results/projectmanagementviewinfo) type.
 3. Use the `ProjectManagementViewInfo` class properties to retrieve information about the Project file.
 
 {{< tabs "example6">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
-    viewOptions = gvo.ViewInfoOptions.for_html_view()
-    view_info = viewer.get_view_info(viewOptions)       
-    
-    info = cast(gvr.ProjectManagementViewInfo, view_info)        
-    print("File type: " + str(info.file_type))
-    print("The number of pages: " + str(len(info.pages)))
-    print("Project start date: {0}".format(info.start_date))
-    print("Project end date: {0}".format(info.end_date))
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import ViewInfoOptions
+from groupdocs.viewer.results import ProjectManagementViewInfo
+
+def get_project_info():
+    # Load Project file
+    with Viewer("sample.mpp") as viewer:
+        viewOptions = ViewInfoOptions.for_html_view()
+        view_info = viewer.get_view_info(viewOptions)       
+        print("File type: " + str(view_info.file_type))
+        print("The number of pages: " + str(len(view_info.pages)))
+
+if __name__ == "__main__":
+    get_project_info()
 ```
+{{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -176,84 +250,81 @@ The following image shows a sample console output:
 
 GroupDocs.Viewer allows you to specify page size for the output file when you convert your Project document to HTML, PDF, or image format. Assign a [PageSize](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pagesize) enumeration member to the [project_management_options.page_size](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/projectmanagementoptions/#properties) property to select one of the predefined page sizes (Letter, Ledger, A0, A1, A2, A3, or A4). You can access this property for the following classes (depending on the output file format):
 
-* [HtmlViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/htmlviewoptions) 
-* [PdfViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pdfviewoptions)
-* [PngViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/pngviewoptions)
-* [JpgViewOptions](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/jpgviewoptions)
+* [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) 
+* [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions)
+* [PngViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions)
+* [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions)
 
 The following example specifies page size for the output PDF file:
 
 {{< tabs "example7">}}
 {{< tab "Python" >}}
 ```python
-import groupdocs.viewer as gv
-import groupdocs.viewer.options as gvo
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions, PageSize
 
-with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
-    # Convert the document to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    # Specify the page size.
-    viewerOptions.project_management_options.page_size = gvo.PageSize.A3
-    viewer.view(viewOptions)
+def render_project_with_page_size():
+    # Load Project file
+    with Viewer("sample.mpp") as viewer:
+        # Convert the document to PDF.
+        viewOptions = PdfViewOptions("render_project_with_page_size/project_with_page_size.pdf")
+        # Specify the page size.
+        viewOptions.project_management_options.page_size = PageSize.A3
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_project_with_page_size()
 ```
+{{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
 
 ## Adjust the time unit
 
-When rendering a Project file, GroupDocs.Viewer selects the smallest time unit on a timescale based on the total length of the project. You can adjust the timescale to show smaller or greater time units (from days to months). To do this, set the [ViewOptions.project_management_options.time_unit](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/projectmanagementoptions/#properties) property for a target view to one of the following [TimeUnit](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/timeunit) enumeration members:
+When rendering a Project file, GroupDocs.Viewer selects the smallest time unit on a timescale based on the total length of the project. You can adjust the timescale to show smaller or greater time units (from days to months). To do this, set the [ViewOptions.project_management_options.time_unit](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/projectmanagementoptions/#properties) property for a target view to one of the following [TimeUnit](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/timeunit) enumeration members:
 
-* `Days` displays days on the timescale.
-* `ThirdsOfMonths` displays the Beginning/Middle/End (B/M/E) of each month on the timescale.
-* `Months` displays months on the timescale.
-* `Unspecified` means that the timescale unit is not specified.
+* `DAYS` displays days on the timescale.
+* `THIRDS_OF_MONTHS` displays the Beginning/Middle/End (B/M/E) of each month on the timescale.
+* `MONTHS` displays months on the timescale.
+* `UNSPECIFIED` means that the timescale unit is not specified.
 
 The following code sample demonstrates how to specify the timescale unit when rendering a Project file to HTML:
 
 {{< tabs "example8">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
-    # Convert the document to HTML.
-    # {0} is replaced with the current page number in the file name.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("output_{0}.html")
-    # Specify the time unit.
-    viewerOptions.project_management_options.time_unit = gvo.TimeUnit.ThirdsOfMonths
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions, TimeUnit
+
+def render_project_with_time_unit():
+    # Load Project file
+    with Viewer("sample.mpp") as viewer:
+        # Convert the document to HTML.
+        # {0} is replaced with the current page number in the file name.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_project_with_time_unit/output_{0}.html")
+        # Specify the time unit.
+        viewOptions.project_management_options.time_unit = TimeUnit.THIRDS_OF_MONTHS
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_project_with_time_unit()
 ```
+{{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
 The image below illustrates the result.
 
 ![Render a Project with the timescale unit set to thirds of months](/viewer/python-net/images/rendering-basics/render-ms-project-files/render-project-with-custom-time-unit.png)
-
-## Render specific dates
-
-With GroupDocs.Viewer, you can render only a portion of the project's timeline when you convert your Project file to HTML, PDF, or image format. Set the [ViewOptions.project_management_options.start_date](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/projectmanagementoptions/#properties) and [ViewOptions.project_management_options.end_date](https://reference.groupdocs.com/python-net/viewer/groupdocs.viewer.options/projectmanagementoptions/#properties) properties for a target view to specify a date range the timeline should display. If you set only the `start_date` property, the timeline displays information for tasks from the specified date to the project's finish date. If you set only the `end_date` property, the timeline contains dates from the project's start date to the specified date.
-
-The example below demonstrates how to convert a Project file to PDF and set the timeline date range.
-
-{{< tabs "example9">}}
-{{< tab "Python" >}}
-```python
-import datetime
-
-with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
-    # Convert the document to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    # Specify the date range.
-    viewOptions.project_management_options.start_date = datetime.datetime(2022, 08, 01)
-    viewOptions.project_management_options.end_date = datetime.datetime(2022, 09, 01)
-    viewer.view(viewOptions)
-```
-{{< /tab >}}
-{{< /tabs >}}
-
-The following image illustrates the result:
-
-![Render tasks for a specific date range](/viewer/python-net/images/rendering-basics/render-ms-project-files/render-tasks-between-two-dates.png)
 
 ## Render notes
 
@@ -268,13 +339,26 @@ The following code sample converts a Project file with task notes to PDF:
 {{< tabs "example10">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("SoftwareDevelopmentPlan.mpp") as viewer:
-    # Convert the document to PDF.
-    viewOptions = gvo.PdfViewOptions("output.pdf")
-    # Enable notes rendering.
-    viewOptions.render_notes = True
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+def render_project_with_notes():
+    # Load Project file
+    with Viewer("sample.mpp") as viewer:
+        # Convert the document to PDF.
+        viewOptions = PdfViewOptions("render_project_with_notes/project_with_notes.pdf")
+        # Enable notes rendering.
+        viewOptions.render_notes = True
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_project_with_notes()
 ```
+{{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

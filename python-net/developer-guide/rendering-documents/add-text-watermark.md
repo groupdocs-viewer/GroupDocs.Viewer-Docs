@@ -20,12 +20,25 @@ The following code snippet shows how to apply the watermark to the output pages.
 {{< tabs "example1">}}
 {{< tab "Python" >}}
 ```python
-with gv.Viewer("sample.docx") as viewer:
-    # Create an HTML file.
-    viewOptions = gvo.HtmlViewOptions.for_embedded_resources("output-watermark.html")
-    # Add watermark.
-    viewOptions.watermark = gvo.Watermark("This is a watermark")
-    viewer.view(viewOptions)
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions, Watermark
+
+def add_text_watermark():
+    # Load document
+    with Viewer("sample.docx") as viewer:
+        # Create an HTML file.
+        viewOptions = HtmlViewOptions.for_embedded_resources("add_text_watermark/output-watermark.html")
+        # Add watermark.
+        viewOptions.watermark = Watermark("This is a watermark")
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    add_text_watermark()
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/add-text-watermark/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
