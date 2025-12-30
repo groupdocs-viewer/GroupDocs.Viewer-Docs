@@ -14,7 +14,6 @@ GroupDocs.Viewer for Node.js is a high-performance and cross-platform library th
 With its powerful and straightforward API, you can execute the following actions:
 
 * View documents in the [most popular file formats](/viewer/nodejs-java/supported-document-formats/) (DOCX, XLSX, PPTX, PDF, DWG, PSD, HTML, ZIP, and more) by rendering them as HTML, PDF, PNG, and JPEG files. You no longer need third-party software to view files within your Java application.
-* Load documents from [different sources](/viewer/nodejs-java/loading-documents-from-different-sources/) (a file, a stream, a URL, an FTP server, Amazon S3, Azure Blob Storage, and so on).
 * Open [password-protected documents](/viewer/nodejs-java/load-password-protected-document/).
 * Render the entire document or specific pages.
 * Embed all external resources in the output HTML files, generate [responsive](/viewer/nodejs-java/render-with-responsive-layout/) and [minified](/viewer/nodejs-java/minify-html/) HTML pages.
