@@ -185,8 +185,6 @@ viewer.view(viewOptions)
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
-{{< /tab >}}
-{{< /tabs >}}
 
 ## Specify rendering options
 

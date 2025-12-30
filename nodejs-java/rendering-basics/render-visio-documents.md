@@ -121,8 +121,6 @@ viewer.view(viewOptions)
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
-{{< /tab >}}
-{{< /tabs >}}
 
 The following image demonstrates the result:
 
