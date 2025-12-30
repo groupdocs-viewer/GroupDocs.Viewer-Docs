@@ -35,15 +35,22 @@ Create an [HtmlViewOptions](#) class instance and pass it to the [Viewer.view](#
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](#) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-pdf-to-html-embedded">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.pdf")
 // Create an HTML files.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-pdf-to-html-embedded/pdf-to-html-page_{0}.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -59,16 +66,23 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-pdf-to-html-external">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.pdf")
  // Create an HTML file for each PDF page.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = HtmlViewOptions.forExternalResources("render-pdf-to-html-external/pdf-to-html-page_{0}.html", "render-pdf-to-html-external/pdf-to-html-page_{0}/resource_{0}_{1}", "render-pdf-to-html-external/pdf-to-html-page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -95,17 +109,24 @@ The [HtmlviewOptions.getPdfOptions().setImageQuality()](#) methods allows you to
 
 The following code snippet shows how to set the medium image quality when rendering a PDF document to HTML:
 
-{{< tabs "example4">}}
+{{< tabs "render-pdf-with-image-quality">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
+import { Viewer, HtmlViewOptions, ImageQuality } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.pdf")
 // Create an HTML files.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-pdf-with-image-quality/pdf-to-html-page_{0}.html")
 // Set image quality to medium.
 viewOptions.getPdfOptions().setImageQuality(ImageQuality.MEDIUM)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -115,17 +136,24 @@ GroupDocs.Viewer supports the [HtmlViewOptions.getPdfOptions().setRenderTextAsIm
 
 The following code snippet shows how to enable this option in code:
 
-{{< tabs "example5">}}
+{{< tabs "render-pdf-text-as-image">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.pdf")
 // Create an HTML files.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("text-as-image_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-pdf-text-as-image/pdf-to-html-page_{0}.html")
 // Enable rendering text as image.
 viewOptions.getPdfOptions().setRenderTextAsImage(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -139,17 +167,24 @@ When you convert a PDF file to HTML, GroupDocs.Viewer creates an HTML document w
 
 The following code snippet shows how to enable the multi-layer rendering:
 
-{{< tabs "example6">}}
+{{< tabs "render-pdf-with-multi-layer">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.pdf")
 // Create an HTML files.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-pdf-with-multi-layer/pdf-to-html-page_{0}.html")
 // Enable the multi-layer rendering.
 viewOptions.getPdfOptions().setEnableLayeredRendering(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -159,18 +194,25 @@ viewer.view(viewOptions)
 
 Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a PDF file to PNG. Use the [PngViewOptions.setHeight](#) and [PngViewOptions.setWidth](#) methods to specify the output image size in pixels.
 
-{{< tabs "example7">}}
+{{< tabs "render-pdf-to-png">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.pdf")
 // Create a PNG image for each PDF page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-pdf-to-png/pdf-to-png-page_{0}.png")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -182,18 +224,25 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a PDF file to JPEG. Use the [JpgViewOptions.setHeight](#) and [JpgViewOptions.setWidth](#) methods to specify the output image size in pixels.
 
-{{< tabs "example8">}}
+{{< tabs "render-pdf-to-jpeg">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.pdf")
 // Create a JPG image for each PDF page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = JpgViewOptions("render-pdf-to-jpeg/pdf-to-jpg-page_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -201,17 +250,24 @@ viewer.view(viewOptions)
 
 When you render PDF documents as images, GroupDocs.Viewer calculates the optimal image size to achieve better rendering quality. If you want the generated images to be the same size as pages in the source PDF document, use the [PdfOptions.setRenderOriginalPageSize](#) method of the [PngViewOptions](#) or [JpgViewOptions](#) class (depending on the output image format).
 
-{{< tabs "example9">}}
+{{< tabs "render-pdf-preserve-page-size">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.pdf")
 // Create a PNG image for each PDF page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-pdf-preserve-page-size/pdf-to-png-page_{0}.png")
 // Preserve the size of document pages.
 viewOptions.getPdfOptions().setRenderOriginalPageSize(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -219,17 +275,24 @@ viewer.view(viewOptions)
 
 To adjust the display of outline fonts when you convert PDF documents to PNG or JPEG, use the [PdfOptions.setEnableFontHinting](#) method, as shown below:
 
-{{< tabs "example10">}}
+{{< tabs "render-pdf-enable-font-hinting">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.pdf")
 // Create a PNG image for each PDF page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-pdf-enable-font-hinting/pdf-to-png-page_{0}.png")
 // Enable font hinting
 viewOptions.getPdfOptions().setEnableFontHinting(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -239,17 +302,24 @@ Refer to the following article for more information on font hinting: [Font hinti
 
 When you render PDF files in other formats, GroupDocs.Viewer groups individual characters into words to improve rendering performance. If your document contains hieroglyphic or special symbols, you may need to disable character grouping to generate a more precise layout. To do this, use the [PdfOptions.setDisableCharsGrouping](#) method, as shown below:
 
-{{< tabs "example11">}}
+{{< tabs "render-pdf-disable-chars-grouping">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.pdf")
 // Create a PNG image for each PDF page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-pdf-disable-chars-grouping/pdf-to-png-page_{0}.png")
 // Disable character grouping.
 viewOptions.getPdfOptions().setDisableCharsGrouping(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -259,17 +329,24 @@ Use the [ViewOptions.setRenderComments](#) method for a target view to display t
 
 The code example below renders a PDF file with text comments as an image.
 
-{{< tabs "example12">}}
+{{< tabs "render-pdf-with-comments">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.pdf")
 // Create a PNG image for each PDF page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-pdf-to-png/pdf-to-png-page_{0}.png")
 // Enable rendering comments.
 viewOptions.setRenderComments(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -285,18 +362,25 @@ Follow the steps below to obtain information about a PDF file (the number of pag
 2. Call the [Viewer.getViewInfo](#) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [PdfViewInfo](#) type.
 3. Use the `PdfViewInfo` class properties to retrieve document-specific information.
 
-{{< tabs "example13">}}
+{{< tabs "get-pdf-file-information">}}
 {{< tab "JavaScript" >}}
 ```js
+import { Viewer, ViewInfoOptions } from '@groupdocs/groupdocs.viewer';
+
 const viewInfoOptions = ViewInfoOptions.forHtmlView();
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
-viewInfo = viewer.getViewInfo(viewInfoOptions)
+const viewer = new Viewer("resume.pdf")
+const viewInfo = viewer.getViewInfo(viewInfoOptions)
 
 // Display information about the PDF document.
 console.log("File type: " + viewInfo.getFileType());
 console.log("The number of pages: " + viewInfo.getPages().size());
 console.log("Is printing allowed: " + viewInfo.isPrintingAllowed());
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -308,14 +392,16 @@ The following image shows a sample console output:
 
 Use the [ViewInfoOptions.setExtractText](#) method to enable PDF text extraction. Use the [PdfViewInfo.getPages](#) methods to obtain the list of all document pages, and use the ([Page.getLines](#) method to retrieve text for each line.
 
-{{< tabs "example14">}}
+{{< tabs "extract-text-from-pdf">}}
 {{< tab "JavaScript" >}}
 ```js
+import { Viewer, ViewInfoOptions } from '@groupdocs/groupdocs.viewer';
+
 const viewInfoOptions = ViewInfoOptions.forHtmlView();
 viewInfoOptions.setExtractText(true)
 
-const viewer = new groupdocs.viewer.Viewer("resume.pdf")
-viewInfo = viewer.getViewInfo(viewInfoOptions)
+const viewer = new Viewer("resume.pdf")
+const viewInfo = viewer.getViewInfo(viewInfoOptions)
 
 // Retrieve text from the PDF file.
 viewInfo.getPages().toArray().forEach(function(page) {
@@ -324,6 +410,11 @@ viewInfo.getPages().toArray().forEach(function(page) {
     })  
   })
 ```
+{{< /tab >}}
+{{< tab "resume.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-pdf-documents/resume.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

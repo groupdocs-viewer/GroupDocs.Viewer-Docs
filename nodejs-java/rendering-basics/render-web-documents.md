@@ -33,15 +33,22 @@ GroupDocs.Viewer supports the following web file formats:
 
 Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a web file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example1">}}
+{{< tabs "render-web-to-pdf">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("groupdocs-documentation.mhtml")
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("groupdocs-documentation.mhtml")
  // Create a PDF file for the document.
 // Specify the PDF file name.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-web-to-pdf/mhtml-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "groupdocs-documentation.mhtml" >}}
+{{< tab-text >}}
+`groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -53,18 +60,25 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a web file to PNG. Use the [PngViewOptions.setHeight](#) and [PngViewOptions.setWidth](#) methods to specify the output image size in pixels.
 
-{{< tabs "example2">}}
+{{< tabs "render-web-to-png">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("groupdocs-documentation.mhtml")
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("groupdocs-documentation.mhtml")
 // Convert the web file to PNG.
 // {0} is replaced with the page numbers in the output image names.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-web-to-png/mhtml-to-png-page_{0}.png")
  // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(800)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "groupdocs-documentation.mhtml" >}}
+{{< tab-text >}}
+`groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -76,18 +90,25 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a web file to JPEG. Use the [JpgViewOptions.setHeight](#) and [JpgViewOptions.setWidth](#) methods to specify the output image size in pixels.
 
-{{< tabs "example3">}}
+{{< tabs "render-web-to-jpeg">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("groupdocs-documentation.mhtml")
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("groupdocs-documentation.mhtml")
 // Create a JPEG image for each drawing page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = JpgViewOptions("render-web-to-jpeg/mhtml-to-jpg-page_{0}.jpg")
  // Set width and height.
 viewOptions.setWidth(1600)
 viewOptions.setHeight(650)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "groupdocs-documentation.mhtml" >}}
+{{< tab-text >}}
+`groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -99,17 +120,24 @@ viewer.view(viewOptions)
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](#) method and specify the output file name.
 
-{{< tabs "example4">}}
+{{< tabs "render-chm-to-html-embedded">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.chm")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.chm")
 // Convert the CHM file to HTML.
 // {0} is replaced with the page numbers in the output file names.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("chm_result_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-chm-to-html-embedded/chm-to-html-page_{0}.html")
 // Enable the following option to display all CHM content on a single HTML page.
 // viewOptions.setRenderToSinglePage(true);
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.chm" >}}
+{{< tab-text >}}
+`sample.chm` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-web-documents/sample.chm) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -125,14 +153,21 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example5">}}
+{{< tabs "render-chm-to-html-external">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.chm")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.chm")
 // Convert the CHM file to HTML.
 // Specify the output file names and location of external resources.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+const viewOptions = HtmlViewOptions.forExternalResources("render-chm-to-html-external/chm-to-html-page_{0}.html", "render-chm-to-html-external/chm-to-html-page_{0}/resource_{0}_{1}", "render-chm-to-html-external/chm-to-html-page_{0}/resource_{0}_{1}");
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.chm" >}}
+{{< tab-text >}}
+`sample.chm` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-web-documents/sample.chm) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

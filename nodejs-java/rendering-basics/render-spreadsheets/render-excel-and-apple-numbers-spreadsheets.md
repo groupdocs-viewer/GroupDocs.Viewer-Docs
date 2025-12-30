@@ -53,15 +53,22 @@ To save all elements of an HTML page (including text, graphics, and stylesheets)
 
 #### Convert an Excel workbook to HTML
 
-{{< tabs "example1">}}
+{{< tabs "render-excel-to-html-embedded">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("invoice.xlsx")
 // Convert the spreadsheet to HTML.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-excel-to-html-embedded/xlsx-to-html-page_{0}.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -71,15 +78,22 @@ The following image demonstrates the result:
 
 #### Convert an Apple Numbers spreadsheet to HTML
 
-{{< tabs "example2">}}
+{{< tabs "render-apple-numbers-to-html-embedded">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("Products.numbers")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("Products.numbers")
 // Convert the spreadsheet to HTML.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-apple-numbers-to-html-embedded/numbers-to-html-page_{0}.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "Products.numbers" >}}
+{{< tab-text >}}
+`Products.numbers` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/Products.numbers) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -97,31 +111,45 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 
 #### Convert an Excel workbook to HTML
 
-{{< tabs "example3">}}
+{{< tabs "render-excel-to-html-external">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("invoice.xlsx")
 // Convert the spreadsheet to HTML.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = HtmlViewOptions.forExternalResources("render-excel-to-html-external/xlsx-to-html-page_{0}.html", "render-excel-to-html-external/xlsx-to-html-page_{0}/resource_{0}_{1}", "render-excel-to-html-external/xlsx-to-html-page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
 #### Convert an Apple Numbers spreadsheet to HTML
 
-{{< tabs "example4">}}
+{{< tabs "render-apple-numbers-to-html-external">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("Products.numbers")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("Products.numbers")
 // Convert the spreadsheet to HTML.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = HtmlViewOptions.forExternalResources("render-apple-numbers-to-html-external/numbers-to-html-page_{0}.html", "render-apple-numbers-to-html-external/numbers-to-html-page_{0}/resource_{0}_{1}", "render-apple-numbers-to-html-external/numbers-to-html-page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "Products.numbers" >}}
+{{< tab-text >}}
+`Products.numbers` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/Products.numbers) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -134,16 +162,23 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 To convert all worksheets to one HTML file, use the [HtmlViewOptions.setRenderToSinglePage](#) method. This feature is supported in both cases - when converting to HTML with embedded and external resources.
 
-{{< tabs "example5">}}
+{{< tabs "render-excel-all-worksheets-to-single-html">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("Personal_net_worth_calculator.xlsx")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("Personal_net_worth_calculator.xlsx")
 // Convert all Excel worksheets to one HTML file.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-excel-all-worksheets-to-single-html/xlsx-to-html.html")
 // Enable converting all worksheets to one file.
 viewOptions.setRenderToSinglePage(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "Personal_net_worth_calculator.xlsx" >}}
+{{< tab-text >}}
+`Personal_net_worth_calculator.xlsx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/Personal_net_worth_calculator.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -158,14 +193,21 @@ Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 
 ### Convert an Excel workbook to PDF
 
-{{< tabs "example6">}}
+{{< tabs "render-excel-to-pdf">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("invoice.xlsx")
 // Convert the spreadsheet to PDF.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-excel-to-pdf/xlsx-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -175,14 +217,21 @@ The following image demonstrates the result:
 
 ### Convert an Apple Numbers spreadsheet to PDF
 
-{{< tabs "example7">}}
+{{< tabs "render-apple-numbers-to-pdf">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("Products.numbers")
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("Products.numbers")
 // Convert the spreadsheet to PDF.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-apple-numbers-to-pdf/numbers-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "Products.numbers" >}}
+{{< tab-text >}}
+`Products.numbers` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/Products.numbers) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -196,18 +245,25 @@ Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 
 ### Convert an Excel workbook to PNG
 
-{{< tabs "example8">}}
+{{< tabs "render-excel-to-png">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("invoice.xlsx")
 // Convert the spreadsheet to PNG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-excel-to-png/xlsx-to-png-page_{0}.png")
 // Set width and height.
 viewOptions.setWidth(800)
 viewOptions.setHeight(900)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 The following image demonstrates the result:
@@ -216,18 +272,25 @@ The following image demonstrates the result:
 
 ### Convert an Apple Numbers spreadsheet to PNG
 
-{{< tabs "example9">}}
+{{< tabs "render-apple-numbers-to-png">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("Products.numbers")
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("Products.numbers")
 // Convert the spreadsheet to PNG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-apple-numbers-to-png/numbers-to-png-page_{0}.png")
 // Set width and height.
 viewOptions.setWidth(800)
 viewOptions.setHeight(900)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "Products.numbers" >}}
+{{< tab-text >}}
+`Products.numbers` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/Products.numbers) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -241,35 +304,49 @@ Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) 
 
 ### Convert an Excel workbook to JPEG
 
-{{< tabs "example10">}}
+{{< tabs "render-excel-to-jpeg">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("invoice.xlsx")
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("invoice.xlsx")
 // Convert the spreadsheet to JPEG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = JpgViewOptions("render-excel-to-jpeg/xlsx-to-jpg-page_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(800)
 viewOptions.setHeight(900)
 viewer.view(viewOptions)
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Convert an Apple Numbers spreadsheet to JPEG
 
-{{< tabs "example11">}}
+{{< tabs "render-apple-numbers-to-jpeg">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("Products.numbers")
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("Products.numbers")
 // Convert the spreadsheet to JPEG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = JpgViewOptions("render-apple-numbers-to-jpeg/numbers-to-jpg-page_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(800)
 viewOptions.setHeight(900)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "Products.numbers" >}}
+{{< tab-text >}}
+`Products.numbers` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/Products.numbers) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -282,17 +359,24 @@ GroupDocs.Viewer can detect the following separators:
 * A comma (the default separator)
 * A semicolon
 
-{{< tabs "example12">}}
+{{< tabs "detect-csv-separator">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.csv")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.csv")
 // Convert the spreadsheet to JPEG.
 // {0} is replaced with the current page number in the file names.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("detect-csv-separator/csv-to-html-page_{0}.html")
 // Detect a CSV/TSV separator.
 viewOptions.getSpreadsheetOptions().setDetectSeparator(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.csv" >}}
+{{< tab-text >}}
+`sample.csv` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.csv) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -304,18 +388,25 @@ GroupDocs.Viewer allows you to obtain information about the source spreadsheet f
 2. Call the [Viewer.getViewInfo](#) method and pass the `ViewInfoOptions` instance to this method as a parameter.
 3. Use the [getPages](#) method of the returned [ViewInfo](#) object to access to the list of worksheets and retrieve the worksheet names.
 
-{{< tabs "example13">}}
+{{< tabs "get-worksheet-names">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.xlsx")
+import { Viewer, ViewInfoOptions, SpreadsheetOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.xlsx")
 const viewInfoOptions = ViewInfoOptions.forHtmlView()
 // Call this method to create a single page for each worksheet.
 viewInfoOptions.setSpreadsheetOptions(SpreadsheetOptions.forOnePagePerSheet())
-const ViewInfo viewInfo = viewer.getViewInfo(viewInfoOptions)
+const viewInfo = viewer.getViewInfo(viewInfoOptions)
 // Print the worksheet names in the console window.
 console.log("The document contains the following worksheets:")
-console.log(info.toString())
+console.log(viewInfo.toString())
 ```
+{{< /tab >}}
+{{< tab "sample.xlsx" >}}
+{{< tab-text >}}
+`sample.xlsx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.xlsx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

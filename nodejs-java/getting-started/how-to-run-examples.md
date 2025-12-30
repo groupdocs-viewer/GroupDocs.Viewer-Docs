@@ -1,29 +1,83 @@
 ---
 id: how-to-run-examples
 url: viewer/nodejs-java/how-to-run-examples
-title: How to run examples
+title: How to Run Examples
 weight: 6
-description: "How to run examples."
-keywords: "groupdocs viewer node.js, examples, npm, eclipse ide"
+description: "Learn how to clone, configure, and run GroupDocs.Viewer for Node.js via Java example projects."
+keywords: How to run a viewer, basic usage, How to run examples
 productName: GroupDocs.Viewer for Node.js via Java
 hideChildren: False
 toc: True
 ---
 
-The complete project [GroupDocs.Viewer Examples](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java) with code examples and sample files is hosted at GitHub.
+The complete project [GroupDocs.Viewer for Node.js via Java — Code Examples](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java) with runnable examples and sample files is hosted on GitHub. The structure and commands below are based on this repository and its README.
 
-## Run examples using NPM
+## Prerequisites
 
-To get started make sure that [Node.js](https://nodejs.org) is installed.
+Before running examples, make sure your environment meets the [System Requirements]({{< ref "viewer/nodejs-java/getting-started/system-requirements" >}}) and [Installation]({{< ref "viewer/nodejs-java/getting-started/installation" >}}) guides:
 
-1. Clone repository with examples `git clone https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java.git`
-2. Navigate to the examples folder `cd ./GroupDocs.Viewer-for-Node.js-via-Java/`
-3. Install the necessary packages with the `npm install` command.
-4. Navigate to the examples folder `cd ./Examples`
-5. Run the examples with the `node runExamples.js` command.
+- **Node.js**: 20 LTS or later
+- **Java**: JRE/JDK 8+ (17 LTS recommended)
+- **Java environment**: `JAVA_HOME` set and added to `PATH`
 
-To check what examples are available open `Examples/runExamples.js` file using your favorite text editor. Uncomment examples that you want to run and type `node runExamples.js` to start them.
+Windows PowerShell:
 
+```powershell
+$env:JAVA_HOME="C:\Program Files\Java\jdk-17"
+$env:Path="$env:JAVA_HOME\bin;$env:Path"
+```
+
+Linux/macOS:
+
+```bash
+export JAVA_HOME=/usr/lib/jvm/java-17
+export PATH=$JAVA_HOME/bin:$PATH
+```
+
+For more details, see the examples repository README:  
+[GroupDocs.Viewer for Node.js via Java — Code Examples README](https://raw.githubusercontent.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java/refs/heads/master/README.md).
+
+## Run examples using npm
+
+To get started, make sure that [Node.js](https://nodejs.org/) and Java are installed and configured as described above.
+
+1. **Clone the repository with examples**
+
+   ```bash
+   git clone https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java.git
+   cd GroupDocs.Viewer-for-Node.js-via-Java
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+   This installs the bundled `groupdocs-groupdocs.viewer-<version>.tgz` package and other dependencies defined in `package.json`.  
+   If installation fails with native build errors, review the build tools section in [System Requirements]({{< ref "viewer/nodejs-java/getting-started/system-requirements" >}}).
+
+3. **Run all examples**
+
+   ```bash
+   npm start
+   ```
+
+   Output documents are created under the `Output/` directory, grouped by example.
+
+## Explore available examples
+
+After running the project once, you may want to see what examples are available and how they are organized:
+
+- Open `examples.js` and `runExamples.js` to review the list of functions being called.
+- Enable or disable specific examples by editing `runExamples.js` and re-running:
+
+  ```bash
+  npm start
+  ```
+
+Refer to the examples README for an overview of QuickStart, BasicUsage, and AdvancedUsage folders and the scenarios they cover  
+([README](https://raw.githubusercontent.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java/refs/heads/master/README.md)).
 
 ## Contribute
 

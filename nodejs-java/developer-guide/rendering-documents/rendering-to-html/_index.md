@@ -26,16 +26,23 @@ To render files to HTML, follow these steps:
 
 The following code snippet shows how to render a .docx document to HTML with external resources: 
 
-{{< tabs "example1">}}
+{{< tabs "render-to-html-external-resources">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.docx")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.docx")
 // Create an HTML file for each page.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = HtmlViewOptions.forExternalResources("render-to-html-external-resources/docx-to-html-page_{0}.html", "render-to-html-external-resources/docx-to-html-page_{0}/resource_{0}_{1}", "render-to-html-external-resources/docx-to-html-page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/developer-guide/rendering-documents/rendering-to-html/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -43,15 +50,22 @@ viewer.view(viewOptions)
 
 The following code snippet shows how to render a .docx document to HTML with embedded resources:
 
-{{< tabs "example2">}}
+{{< tabs "render-to-html-embedded-resources">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.docx")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.docx")
 // Create an HTML files.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-to-html-embedded-resources/docx-to-html-page_{0}.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/developer-guide/rendering-documents/rendering-to-html/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

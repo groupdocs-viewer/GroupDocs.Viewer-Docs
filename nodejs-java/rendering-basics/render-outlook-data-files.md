@@ -33,14 +33,21 @@ GroupDocs.Viewer supports the following Outlook data file formats:
 
 To convert an OST or PST file to HTML, call the [HtmlViewOptions.forEmbeddedResources](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/htmlviewoptions/#forEmbeddedResources--) method to create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/htmlviewoptions) class instance and pass this instance to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method.
 
-{{< tabs "example1">}}
+{{< tabs "render-pst-to-html">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.pst")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pst")
 // Specify the HTML file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-pst-to-html/pst-to-html.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -52,14 +59,21 @@ The following image demonstrates the result:
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an OST or PST file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example2">}}
+{{< tabs "render-pst-to-pdf">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.pst")
+```js
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pst")
 // Create a PDF file.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-pst-to-pdf/pst-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -71,18 +85,25 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an OST or PST file to PNG. Use the [PngViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setHeight-int-) and [PngViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example3">}}
+{{< tabs "render-pst-to-png">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.pst")
+```js
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pst")
 // Convert the PST file to PNG.
 // {0} is replaced with the page numbers in the output image names.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-pst-to-png/pst-to-png-page_{0}.png")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -94,18 +115,25 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an OST or PST file to JPEG. Use the [JpgViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setHeight-int-) and [JpgViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-pst-to-jpeg">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.pst")
+```js
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pst")
 // Convert the PST file to JPG.
 // {0} is replaced with the page numbers in the output image names.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = JpgViewOptions("render-pst-to-jpeg/pst-to-jpg-page_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -117,15 +145,16 @@ Follow the steps below to obtain information about folders contained in an Outlo
 2. Call the [Viewer.getViewInfo](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/#getViewInfo-com.groupdocs.viewer.options.ViewInfoOptions-) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [OutlookViewInfo](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.results/outlookviewinfo/) type.
 3. Use the [OutlookViewInfo.getFolders](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.results/outlookviewinfo/#getFolders--) method to obtain the list of folders in the Outlook data file.
 
-{{< tabs "example5">}}
+{{< tabs "get-pst-folders-info">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-function readFolders(viewer, viewInfoOptions, folder) {
-  const innerInfoOptions = viewInfoOptions.forHtmlView()
-  innerInfoOptions.getArchiveOptions().setFolder(folder)
+```js
+import { Viewer, ViewInfoOptions } from '@groupdocs/groupdocs.viewer';
 
-  const archiveViewInfo = viewer.getViewInfo(innerInfoOptions)
-  const folders = archiveViewInfo.getFolders()
+function readFolders(viewer, viewInfoOptions, folder) {
+  viewInfoOptions.getOutlookOptions().setFolder(folder)
+
+  const viewInfo = viewer.getViewInfo(viewInfoOptions)
+  const folders = viewInfo.getFolders()
 
   for (let i = 0; i < folders.size(); i++) {
     console.log(" - ", folders.get(i).toString())
@@ -133,9 +162,9 @@ function readFolders(viewer, viewInfoOptions, folder) {
   }
 }
 
-const viewer = new groupdocs.viewer.Viewer("sample.pst")
+const viewer = new Viewer("sample.pst")
   
-const viewInfoOptions = groupdocs.viewer.ViewInfoOptions.forHtmlView()
+const viewInfoOptions = ViewInfoOptions.forHtmlView()
 const viewInfo = viewer.getViewInfo(viewInfoOptions)
 
 // Display information about the PST file.
@@ -144,10 +173,13 @@ console.log("Pages count: " + viewInfo.getPages().size())
 // Display the list of folders that the PST file contains.
 console.log("The file contains the following folders:")
 console.log(" - /")
-const rootFolder = ""
-
-readFolders(viewer, viewInfoOptions, rootFolder)
+readFolders(viewer, viewInfoOptions, "")
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -165,16 +197,23 @@ GroupDocs.Viewer supports the [OutlookOptions](https://reference.groupdocs.com/v
 When you convert an OST or PST file to HTML, PDF, or image format, GroupDocs.Viewer renders messages from all folders contained in the file (including nested folders). If you want to render items from a specific folder, use the [OutlookOptions.setFolder](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/outlookoptions/#setFolder-java.lang.String-) method for a target view. Specify the folder name as follows: `{Parent folder name}\\{Subfolder name}`.
 
 
-{{< tabs "example6">}}
+{{< tabs "render-pst-specific-folder">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.pst")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pst")
 // Create an HTML file.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources()
-// Render messages from the "Inbox" folder and its subfolders.
-viewOptions.getOutlookOptions().setFolder("Inbox")
+const viewOptions = HtmlViewOptions.forEmbeddedResources()
+// Render messages from the "Deleted Items" folder and its subfolders.
+viewOptions.getOutlookOptions().setFolder("Deleted Items")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -184,16 +223,23 @@ When you load large Outlook data files, it may take a significant amount of time
 
 The following example demonstrates how to specify the maximum number of folder items to render:
 
-{{< tabs "example7">}}
+{{< tabs "render-pst-limit-items">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.pst")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pst")
 // Create an HTML file.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources()
+const viewOptions = HtmlViewOptions.forEmbeddedResources()
 // Specify the maximum number of folder items.
 viewOptions.getOutlookOptions().setMaxItemsInFolder(30)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -210,16 +256,23 @@ With GroupDocs.Viewer, you can also filter messages before rendering an Outlook 
 
 The following code sample filters messages in a PST file before rendering this file to HTML:
 
-{{< tabs "example8">}}
+{{< tabs "render-pst-filter-messages">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.pst")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pst")
 // Create an HTML file.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-pst-filter-messages/pst-to-html.html")
 // Set filters.
 viewOptions.getOutlookOptions().setTextFilter("Viewer")
 viewOptions.getOutlookOptions().setAddressFilter("groupdocs.com")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

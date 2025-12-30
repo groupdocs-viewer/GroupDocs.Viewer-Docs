@@ -17,16 +17,23 @@ To add a watermark to the HTML/JPG/PNG/PDF output, follow these steps:
 
 The following code snippet shows how to apply the watermark to the output pages.
 
-{{< tabs "example1">}}
+{{< tabs "add-text-watermark">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.docx")
+import { Viewer, HtmlViewOptions, Watermark } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.docx")
 // Create an HTML file.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources(output-watermark.html)
+const viewOptions = HtmlViewOptions.forEmbeddedResources("add-text-watermark/docx-to-html-watermark.html")
 // Add watermark.
-const watermark = new groupdocs.viewer.Watermark('This is a watermark')
+const watermark = new Watermark('This is a watermark')
 viewOptions.setWatermark(watermark);
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/developer-guide/rendering-documents/add-text-watermark/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

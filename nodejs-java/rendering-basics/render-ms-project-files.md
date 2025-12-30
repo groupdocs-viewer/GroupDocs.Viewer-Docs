@@ -37,15 +37,22 @@ Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/c
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/htmlviewoptions/#forEmbeddedResources--) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-project-to-html-embedded">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("SoftwareDevelopmentPlan.mpp")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("SoftwareDevelopmentPlan.mpp")
 // Render the project's active view as HTML.
 // {0} is replaced with the current page number in the output file names.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-project-to-html-embedded/mpp-to-html-page_{0}.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "SoftwareDevelopmentPlan.mpp" >}}
+{{< tab-text >}}
+`SoftwareDevelopmentPlan.mpp` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ms-project-files/SoftwareDevelopmentPlan.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -61,16 +68,23 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-project-to-html-external">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("SoftwareDevelopmentPlan.mpp")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("SoftwareDevelopmentPlan.mpp")
 // Render the project's active view as HTML.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the page number and resource name, respectively.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = HtmlViewOptions.forExternalResources("render-project-to-html-external/mpp-to-html-page_{0}.html", "render-project-to-html-external/mpp-to-html-page_{0}/resource_{0}_{1}", "render-project-to-html-external/mpp-to-html-page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "SoftwareDevelopmentPlan.mpp" >}}
+{{< tab-text >}}
+`SoftwareDevelopmentPlan.mpp` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ms-project-files/SoftwareDevelopmentPlan.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -82,14 +96,21 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert a Project file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-project-to-pdf">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("SoftwareDevelopmentPlan.mpp")
+```js
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("SoftwareDevelopmentPlan.mpp")
 // Create a PDF file.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-project-to-pdf/mpp-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "SoftwareDevelopmentPlan.mpp" >}}
+{{< tab-text >}}
+`SoftwareDevelopmentPlan.mpp` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ms-project-files/SoftwareDevelopmentPlan.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -101,18 +122,25 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert a Project file to PNG. Use the [PngViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setHeight-int-) and [PngViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-project-to-png">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("SoftwareDevelopmentPlan.mpp")
+```js
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("SoftwareDevelopmentPlan.mpp")
 // Render the project's active view as PNG.
 // {0} is replaced with the page numbers in the output image names.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-project-to-png/mpp-to-png-page_{0}.png")
 // Set width and height.
 viewOptions.setWidth(1600)
 viewOptions.setHeight(650)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "SoftwareDevelopmentPlan.mpp" >}}
+{{< tab-text >}}
+`SoftwareDevelopmentPlan.mpp` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ms-project-files/SoftwareDevelopmentPlan.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -124,18 +152,25 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert a Project file to JPEG. Use the [JpgViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setHeight-int-) and [JpgViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-project-to-jpeg">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("SoftwareDevelopmentPlan.mpp")
+```js
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("SoftwareDevelopmentPlan.mpp")
 // Render the project's active view as JPG.
 // {0} is replaced with the page numbers in the output image names.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.jpg")
+const viewOptions = JpgViewOptions("render-project-to-jpeg/mpp-to-jpg-page_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(1600)
 viewOptions.setHeight(650)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "SoftwareDevelopmentPlan.mpp" >}}
+{{< tab-text >}}
+`SoftwareDevelopmentPlan.mpp` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ms-project-files/SoftwareDevelopmentPlan.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -147,12 +182,14 @@ Follow the steps below to obtain information about a Project file (the file form
 2. Call the [Viewer.getViewInfo](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/#getViewInfo-com.groupdocs.viewer.options.ViewInfoOptions-) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [ProjectManagementViewInfo](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.results/projectmanagementviewinfo) type.
 3. Use the `ProjectManagementViewInfo` class properties to retrieve information about the Project file.
 
-{{< tabs "example6">}}
+{{< tabs "get-project-file-information">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("SoftwareDevelopmentPlan.mpp")
+```js
+import { Viewer, ViewInfoOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("SoftwareDevelopmentPlan.mpp")
   
-const viewInfoOptions = groupdocs.viewer.ViewInfoOptions.forHtmlView()
+const viewInfoOptions = ViewInfoOptions.forHtmlView()
 const viewInfo = viewer.getViewInfo(viewInfoOptions)
 
 console.log("File type: " + viewInfo.getFileType())
@@ -160,6 +197,11 @@ console.log("Pages count: " + viewInfo.getPages().size())
 console.log("Project start date: " + viewInfo.getStartDate())
 console.log("Project end date: " + viewInfo.getEndDate())
 ```
+{{< /tab >}}
+{{< tab "SoftwareDevelopmentPlan.mpp" >}}
+{{< tab-text >}}
+`SoftwareDevelopmentPlan.mpp` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ms-project-files/SoftwareDevelopmentPlan.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -178,16 +220,23 @@ GroupDocs.Viewer allows you to specify page size for the output file when you co
 
 The following example specifies page size for the output PDF file:
 
-{{< tabs "example7">}}
+{{< tabs "render-project-with-page-size">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("SoftwareDevelopmentPlan.mpp")
+```js
+import { Viewer, PdfViewOptions, PageSize } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("SoftwareDevelopmentPlan.mpp")
 // Create a PDF file.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-project-with-page-size/mpp-to-pdf.pdf")
 // Specify the page size.
-viewOptions.getProjectManagementOptions().setPageSize(groupdocs.viewer.PageSize.A3);
+viewOptions.getProjectManagementOptions().setPageSize(PageSize.A3);
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "SoftwareDevelopmentPlan.mpp" >}}
+{{< tab-text >}}
+`SoftwareDevelopmentPlan.mpp` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ms-project-files/SoftwareDevelopmentPlan.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -203,14 +252,21 @@ When rendering a Project file, GroupDocs.Viewer selects the smallest time unit o
 
 The following code sample demonstrates how to specify the timescale unit when rendering a Project file to HTML:
 
-{{< tabs "example8">}}
+{{< tabs "render-project-with-time-unit">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.mpp")
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources()
-viewOptions.getProjectManagementOptions().setTimeUnit(groupdocs.viewer.TimeUnit.DAYS)
+```js
+import { Viewer, HtmlViewOptions, TimeUnit } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.mpp")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-project-with-time-unit/mpp-to-html.html")
+viewOptions.getProjectManagementOptions().setTimeUnit(TimeUnit.DAYS)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -224,18 +280,28 @@ With GroupDocs.Viewer, you can render only a portion of the project's timeline w
 
 The example below demonstrates how to convert a Project file to PDF and set the timeline date range.
 
-{{< tabs "example9">}}
+{{< tabs "render-project-specific-dates" docs-to-code-examples-skip >}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("SoftwareDevelopmentPlan.mpp")
-const viewInfoOptions = groupdocs.viewer.ViewInfoOptions.forHtmlView()
-const viewInfo = viewer.getViewInfo(viewInfoOptions)
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+import java from 'java';
 
-viewOptions.getProjectManagementOptions().setStartDate(new Date(2022, 8, 1, 0, 0))
-viewOptions.getProjectManagementOptions().setEndDate(new Date(2022, 9, 1, 0, 0))
+const viewer = new Viewer("SoftwareDevelopmentPlan.mpp")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-project-specific-dates/mpp-to-html.html")
+
+// Create Java Date objects from JavaScript dates
+const startDate = java.newInstanceSync('java.util.Date', java.newLong(new Date(2000, 6, 1, 0, 0).getTime()));
+const endDate = java.newInstanceSync('java.util.Date', java.newLong(new Date(2000, 7, 31, 0, 0).getTime()));
+
+viewOptions.getProjectManagementOptions().setStartDate(startDate)
+viewOptions.getProjectManagementOptions().setEndDate(endDate)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "SoftwareDevelopmentPlan.mpp" >}}
+{{< tab-text >}}
+`SoftwareDevelopmentPlan.mpp` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ms-project-files/SoftwareDevelopmentPlan.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -253,16 +319,23 @@ If you need to display these notes in the output HTML, PDF, or image files, use 
 
 The following code sample converts a Project file with task notes to PDF:
 
-{{< tabs "example10">}}
+{{< tabs "render-project-with-notes">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("SoftwareDevelopmentPlan.mpp")
+```js
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("SoftwareDevelopmentPlan.mpp")
 // Create a PDF file.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-project-with-notes/mpp-to-pdf.pdf")
 // Enable notes rendering.
 viewOptions.setRenderNotes(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "SoftwareDevelopmentPlan.mpp" >}}
+{{< tab-text >}}
+`SoftwareDevelopmentPlan.mpp` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ms-project-files/SoftwareDevelopmentPlan.mpp) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

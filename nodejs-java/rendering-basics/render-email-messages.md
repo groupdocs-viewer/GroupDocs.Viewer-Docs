@@ -39,14 +39,21 @@ Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/c
 
 To embed an email message in an HTML page, call the [HtmlViewOptions.forEmbeddedResources](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/htmlviewoptions/#forEmbeddedResources--) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-email-to-html-embedded">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.eml")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.eml")
 // Create an HTML file for the letter.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-email-to-html-embedded/eml-to-html.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -62,7 +69,7 @@ To save an email message to a separate folder, call the [HtmlViewOptions.forExte
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-email-to-html-external">}}
 {{< tab "Java" >}}
 ```java
 import com.groupdocs.viewer.Viewer;
@@ -78,13 +85,20 @@ try (Viewer viewer = new Viewer("sample.eml")) {
 ```
 {{< /tab >}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.eml")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.eml")
 // Specify the HTML file name and location of external resources.
 // {0} is replaced with the resource name in the output file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("output.html", "output/resource_{0}", "output/resource_{0}")
+const viewOptions = HtmlViewOptions.forExternalResources("render-email-to-html-external/eml-to-html.html", "render-email-to-html-external/eml-to-html/resource_{0}", "render-email-to-html-external/eml-to-html/resource_{0}")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -96,14 +110,21 @@ The result is shown below. External resources are placed in a separate folder.
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an email message to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-email-to-pdf">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.eml")
+```js
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.eml")
 // Create a PDF file for the letter.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-email-to-pdf/eml-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -115,17 +136,24 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an email message to PNG. Use the [PngViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setHeight-int-) and [PngViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-email-to-png">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.eml")
+```js
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.eml")
 // Create a PNG image for the letter.
-const viewOptions = groupdocs.viewer.PngViewOptions("output.png")
+const viewOptions = PngViewOptions("render-email-to-png/eml-to-png.png")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -137,17 +165,26 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an email message to JPEG. Use the [JpgViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setHeight-int-) and [JpgViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-email-to-jpeg">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.eml")
+```js
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.eml")
 // Create a JPG image for the letter.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output.jpg")
+const viewOptions = JpgViewOptions("render-email-to-jpeg/eml-to-jpg.jpg")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< /tabs >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -166,15 +203,22 @@ GroupDocs.Viewer allows you to specify page size for the output file when you co
 
 The following example specifies page size for the output PDF file:
 
-{{< tabs "example6">}}
+{{< tabs "render-email-with-page-size">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.eml")
+```js
+import { Viewer, PdfViewOptions, PageSize } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.eml")
 // Create a PDF file for the letter.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
-viewOptions.getEmailOptions().setPageSize(groupdocs.viewer.PageSize.LETTER)
+const viewOptions = PdfViewOptions("render-email-with-page-size/eml-to-pdf.pdf")
+viewOptions.getEmailOptions().setPageSize(PageSize.LETTER)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -186,22 +230,29 @@ GroupDocs.Viewer allows you to change how standard fields (such as _From_, _To_,
 
 Use the [EmailOptions.setFieldTextMap](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/emailoptions/#setFieldTextMap-java.util.Map-com.groupdocs.viewer.options.Field-java.lang.String--) method to specify custom field labels. Static fields of the [Field](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/field) class allow you to access default email header fields, as shown in the example below.
 
-{{< tabs "example7">}}
+{{< tabs "render-email-rename-fields">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.eml")
+```js
+import { Viewer, HtmlViewOptions, Field } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.eml")
 // Specify custom field labels.
-const field = groupdocs.viewer.Field
+const field = Field
 const map = {}
 map[field.FROM] = "Sender"
 map[field.TO] = "Receiver"
 map[field.SENT] = "Date"
 map[field.SUBJECT] = "Email subject"
 // Create an HTML file.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-email-rename-fields/eml-to-html.html")
 viewOptions.getEmailOptions().setFieldTextMap(map)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -218,15 +269,17 @@ When rendering email messages, GroupDocs.Viewer formats date and time informatio
     * [Custom date and time format strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)
 * [EmailOptions.setTimeZoneOffset](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/emailoptions/#setTimeZoneOffset-java.util.TimeZone-)---Specifies the hours and minutes offset from UTC. The offset is displayed with a leading sign. A plus sign (+) indicates time ahead of UTC, and a minus sign (-) indicates time behind UTC. 
 
-{{< tabs "example8">}}
+{{< tabs "render-email-datetime-format">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const java = require('java')
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+import java from 'java';
+
 const timeOffset = java.import("java.util.TimeZone").getTimeZone("GMT+1")
 
-const viewer = new groupdocs.viewer.Viewer("sample.eml")
+const viewer = new Viewer("sample.eml")
 // Create an HTML file
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-email-datetime-format/eml-to-html.html")
 // Apply a custom format to the date in the email message header.
 viewOptions.getEmailOptions().setDateTimeFormat("MM d yyyy HH:mm tt zzz");
 // Specify the time zone offset. 
@@ -234,6 +287,11 @@ viewOptions.getEmailOptions().setTimeZoneOffset(timeOffset)
 
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

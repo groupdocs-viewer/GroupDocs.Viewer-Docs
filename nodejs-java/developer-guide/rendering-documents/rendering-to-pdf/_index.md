@@ -18,13 +18,20 @@ To render files to PDF, follow these steps:
 
 The following code snippet shows how to render a .docx document to PDF:
 
-{{< tabs "example1">}}
+{{< tabs "render-docx-to-pdf">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.docx")
-const viewOptions = groupdocs.viewer.PdfViewOptions(output-to-pdf.pdf)
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.docx")
+const viewOptions = PdfViewOptions("render-docx-to-pdf/docx-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

@@ -47,15 +47,22 @@ Create an [HtmlViewOptions](#) class instance and pass it to the [Viewer.view](#
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](#) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-presentation-to-html-embedded">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.pptx")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pptx")
 // Create an HTML file for each slide.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-presentation-to-html-embedded/pptx-to-html-page_{0}.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -71,16 +78,23 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-presentation-to-html-external">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.pptx")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pptx")
 // Create an HTML file for each slide.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+const viewOptions = HtmlViewOptions.forExternalResources("render-presentation-to-html-external/pptx-to-html-page_{0}.html", "render-presentation-to-html-external/pptx-to-html-page_{0}/resource_{0}_{1}", "render-presentation-to-html-external/pptx-to-html-page_{0}/resource_{0}_{1}");
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -92,13 +106,20 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a presentation file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-presentation-to-pdf">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.pptx")
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pptx")
+const viewOptions = PdfViewOptions("render-presentation-to-pdf/pptx-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -110,15 +131,22 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a presentation file to PNG. Use the [PngViewOptions.setHeight](#) and [PngViewOptions.setWidth](#) methods to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-presentation-to-png">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.pptx")
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pptx")
 // Create a PNG image for each slide.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-presentation-to-png/pptx-to-png-page_{0}.png")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -131,17 +159,24 @@ The following image demonstrates the result:
 Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a presentation file to JPEG. Use the [JpgViewOptions.setHeight](#) and [JpgViewOptions.setWidth](#) methods to specify the output image size in pixels.
 
 
-{{< tabs "example5">}}
+{{< tabs "render-presentation-to-jpeg">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.pptx")
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pptx")
 // Create a JPG image for each slide.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = JpgViewOptions("render-presentation-to-jpeg/pptx-to-jpg-page_{0}.jpg")
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -162,14 +197,21 @@ You can use the [PresentationOptions.setResolution](#) method to one of the foll
 
 The following example demonstrates how to specify image resolution in code: 
 
-{{< tabs "example6">}}
+{{< tabs "render-presentation-with-image-resolution">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.pptx")
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+import { Viewer, PdfViewOptions, Resolution } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pptx")
+const viewOptions = PdfViewOptions("render-presentation-with-image-resolution/pptx-to-pdf.pdf")
 viewOptions.getPresentationOptions().setResolution(Resolution.Dpi150)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -179,14 +221,21 @@ If your presentation contains hidden slides, use the [ViewOptions.setRenderHidde
 
 The following code example uses this option to display hidden slides in the generated PDF file:
 
-{{< tabs "example7">}}
+{{< tabs "render-presentation-hidden-slides">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.pptx")
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pptx")
+const viewOptions = PdfViewOptions("render-presentation-hidden-slides/pptx-to-pdf.pdf")
 viewOptions.setRenderHiddenPages(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -194,14 +243,21 @@ viewer.view(viewOptions)
 
 Use the [ViewOptions.setRenderComments](#) method for a target view to display comments in the output file when you convert your presentation to HTML, PDF, PNG, or JPEG format.
 
-{{< tabs "example8">}}
+{{< tabs "render-presentation-with-comments">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.pptx")
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pptx")
+const viewOptions = PdfViewOptions("render-presentation-with-comments/pptx-to-pdf.pdf")
 viewOptions.setRenderComments(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -219,14 +275,21 @@ Use the [ViewOptions.setRenderNotes](#) method for a target view to display spea
 
 The following code sample renders a presentation with speaker notes to PDF:
 
-{{< tabs "example9">}}
+{{< tabs "render-presentation-with-speaker-notes">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.pptx")
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.pptx")
+const viewOptions = PdfViewOptions("render-presentation-with-speaker-notes/pptx-to-pdf.pdf")
 viewOptions.setRenderNotes(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

@@ -22,6 +22,12 @@ Note that there are a number of general policies and practices that guide you on
 
 ## Purchased License
 
+{{< alert style="info" >}}
+
+You can find the pricing information on the ["Pricing Information"](https://purchase.groupdocs.com/pricing/viewer/nodejs-java) page.
+
+{{< /alert >}}
+
 After buying, apply the license file or include it as an embedded resource. 
 
 License needs to be set:
@@ -42,9 +48,11 @@ When you reference _GroupDocs.Viewer.dll_ in the application, the library is cop
 
 Use the [setLicense](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/license/#setLicense-java.io.InputStream-) method to license a component.
 
-Calling `setLicense` multiple times is not harmful, it simply wastes processor time.
+{{< alert style="info" >}}
 
-Calling [setMeteredKey](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/metered/#setMeteredKey-java.lang.String-java.lang.String-) multiple times is not harmful either but wastes processor time and can accumulate consumption improperly.
+The license can be set multiple times per application domain, but we recommend doing it once since all the subsequent calls to the `setLicense` method except for the first one will just waste processor time.
+
+{{< /alert >}}
 
 #### Apply the License
 
@@ -52,17 +60,32 @@ After obtaining the license, set it. This section explains how to do this. When 
 
 ##### Set a License from a File
 
-The following code snippet shows how to set a license from file:
+The following code snippet shows how to set a license from a file:
 
-{{< tabs "example1">}}
+{{< tabs "set-license-from-file">}}
 {{< tab "JavaScript" >}}
-
 ```js
-const licensePath = "path to the .lic file";
-const license = new groupdocs.viewer.License()
-license.setLicense(licensePath); 
-```
+import { License } from '@groupdocs/groupdocs.viewer';
+import { existsSync } from 'fs';
 
+// Path to the license file
+const licensePath = 'GroupDocs.Viewer.lic';
+
+// Check if license file exists
+if (!existsSync(licensePath)) {
+    console.log('License file not found. Running in evaluation mode.');
+    process.exit(0);
+}
+
+// Create a License object and set the license
+const license = new License();
+license.setLicense(licensePath);
+
+console.log('License set successfully.');
+
+// Terminate the process with a success exit code
+process.exit(0);
+```
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -70,24 +93,37 @@ license.setLicense(licensePath);
 
 The following code snippet shows how to set a license from a stream:
 
-{{< tabs "example2">}}
+{{< tabs "set-license-from-stream">}}
 {{< tab "JavaScript" >}}
-
 ```js
-const fs = require('fs')  
-  
-const licensePath = "path to the .lic file"
-const license = new groupdocs.viewer.License()
-const licStream = fs.createReadStream(licensePath)
-groupdocs.conversion.License.setLicenseFromStream(license, licStream, err => {
-  if (err) {
-    console.log(`Set license error: ${err}`)
-  } else {
-    console.log('License set OK')
-  }
-})
-```
+import { License } from '@groupdocs/groupdocs.viewer';
+import java from 'java';
+import { existsSync } from 'fs';
 
+// Create a reference to Java's FileInputStream class
+let InputStream = java.import('java.io.FileInputStream');
+
+// Path to the license file
+const licensePath = 'GroupDocs.Viewer.lic';
+
+// Check if license file exists
+if (!existsSync(licensePath)) {
+    console.log('License file not found. Running in evaluation mode.');
+    process.exit(0);
+}
+
+// Initialize a FileInputStream for the license file
+const stream = new InputStream(licensePath);
+
+// Create a License object and set the license using the InputStream
+const license = new License();
+license.setLicense(stream);
+
+console.log('License set successfully.');
+
+// Terminate the process with a success exit code
+process.exit(0);
+```
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -109,13 +145,13 @@ You can also try GroupDocs.Viewer without buying a license.
 
 ### Free Trial
 
-The evaluation version is identical to the purchased one; it becomes licensed once you set the license. You can set the license using methods described in the following sections of this article.
+The evaluation version is the same as the purchased one – the evaluation version simply becomes licensed when you set the license. You can set the license in several ways that are described in the next sections of this article.
 
-The evaluation version has the following limitations:
+The evaluation version comes with the following limitations:
 
-- Rendering is limited to the first 2 pages.
-- Trial badges are added to the top of a rendered page.
+- Only the first 2 pages can be processed.
+- Trial badges are placed in the document on the top of each page.
 
 ### Temporary License
 
-If you want to test GroupDocs.Viewer without the limitations of the trial version,   request a 30-day Temporary License. For details, see the ["Get a Temporary License"](https://purchase.groupdocs.com/temporary-license) page.
+If you wish to test GroupDocs.Viewer without the limitations of the trial version, you can also request a 30-day Temporary License. For details, see the ["Get a Temporary License"](https://purchase.groupdocs.com/temporary-license) page.

@@ -78,14 +78,21 @@ Create an [HtmlViewOptions](#) class instance and pass it to the [Viewer.view](#
 
 To embed an image in an HTML page, call the [HtmlViewOptions.forEmbeddedResources](#) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-image-to-html-embedded">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("vector-image.svg")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("vector-image.svg")
 // Specify the HTML file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-image-to-html-embedded/svg-to-html.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -101,15 +108,22 @@ To save an image to a separate folder, call the [HtmlViewOptions.forExternalReso
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-image-to-html-external">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("vector-image.svg")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("vector-image.svg")
 // Specify the HTML file name and location of external resources.
 // {0} is replaced with the resource name in the output file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("output.html", "output/resource_{0}", "output/resource_{0}")
+const viewOptions = HtmlViewOptions.forExternalResources("render-image-to-html-external/svg-to-html.html", "render-image-to-html-external/svg-to-html/resource_{0}", "render-image-to-html-external/svg-to-html/resource_{0}")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -121,14 +135,21 @@ The result is shown below. The image is placed in a separate folder.
 
 Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert an image to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-image-to-pdf">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("vector-image.svg")
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("vector-image.svg")
 // Create a PDF file.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-image-to-pdf/svg-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -140,17 +161,24 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert an image to PNG. Use the [PngViewOptions.setHeight](#) and [PngViewOptions.setWidth](#) methods to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-image-to-png">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("vector-image.svg")
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("vector-image.svg")
 // Create a PNG image.
-const viewOptions = groupdocs.viewer.PngViewOptions("output.png")
+const viewOptions = PngViewOptions("render-image-to-png/svg-to-png.png")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -162,17 +190,24 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert an image to JPEG. Use the [JpgViewOptions.setHeight](#) and [JpgViewOptions.setWidth](#) methods to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-image-to-jpeg">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("vector-image.svg")
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("vector-image.svg")
 // Create a JPG image for the letter.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output.jpg")
+const viewOptions = JpgViewOptions("render-image-to-jpeg/svg-to-jpg.jpg")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -188,9 +223,11 @@ When you render a PSD file with custom fonts, you can specify a folder that cont
 
 You can also use the [ViewOptions.setDefaultFontName](#) method to specify the default font that should be used when a particular font is not found.
 
-{{< tabs "example6">}}
+{{< tabs "render-psd-with-custom-fonts">}}
 {{< tab "JavaScript" >}}
 ```js
+import { Viewer, JpgViewOptions, FolderFontSource, SearchOption, FontSettings } from '@groupdocs/groupdocs.viewer';
+
 // Create font sources.
 // Add custom fonts folder to look for fonts recursively. (look into subfolders too).
 const folderFontSource = new FolderFontSource("C:/custom_fonts_folder", SearchOption.ALL_FOLDERS);
@@ -198,12 +235,17 @@ const folderFontSource = new FolderFontSource("C:/custom_fonts_folder", SearchOp
 const additionalFontSource = new FolderFontSource("C:/custom_additional_fonts_folder", SearchOption.TOP_FOLDER_ONLY);
 // Call SetFontSources method and supply font sources as arguments.
 FontSettings.setFontSources(folderFontSource, additionalFontSource);
-const viewer = new groupdocs.viewer.Viewer("sample.psd")
+const viewer = new Viewer("sample.psd")
 
 // Create a JPG image for the letter.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output.jpg")
+const viewOptions = JpgViewOptions("render-psd-with-custom-fonts/psd-to-jpg.jpg")
 viewOptions.setDefaultFontName("Arial")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.psd" >}}
+{{< tab-text >}}
+`sample.psd` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-images/sample.psd) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

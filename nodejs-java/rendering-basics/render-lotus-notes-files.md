@@ -24,14 +24,21 @@ To start with the GroupDocs.Viewer API, create a [Viewer](https://reference.grou
 
 To convert an NSF file to HTML, call the [HtmlViewOptions.forEmbeddedResources](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/htmlviewoptions/#forEmbeddedResources--) method to create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/htmlviewoptions) class instance and pass this instance to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method.
 
-{{< tabs "example1">}}
+{{< tabs "render-nsf-to-html">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.nsf")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.nsf")
 // Specify the HTML file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-nsf-to-html/nsf-to-html.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.nsf" >}}
+{{< tab-text >}}
+`sample.nsf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -43,14 +50,21 @@ The following image demonstrates the result:
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an NSF file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example2">}}
+{{< tabs "render-nsf-to-pdf">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.nsf")
+```js
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.nsf")
 // Create a PDF file.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-nsf-to-pdf/nsf-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.nsf" >}}
+{{< tab-text >}}
+`sample.nsf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -62,18 +76,25 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an NSF file to PNG. Use the [PngViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setHeight-int-) and [PngViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example3">}}
+{{< tabs "render-nsf-to-png">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.nsf")
+```js
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.nsf")
 // Convert the NSF file to PNG.
 // {0} is replaced with the page numbers in the output image names.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-nsf-to-png/nsf-to-png-page_{0}.png")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.nsf" >}}
+{{< tab-text >}}
+`sample.nsf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -85,18 +106,25 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an NSF file to JPEG. Use the [JpgViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setHeight-int-) and [JpgViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-nsf-to-jpeg">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.nsf")
+```js
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.nsf")
 // Convert the NSF file to JPG.
 // {0} is replaced with the page numbers in the output image names.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = JpgViewOptions("render-nsf-to-jpeg/nsf-to-jpg-page_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.nsf" >}}
+{{< tab-text >}}
+`sample.nsf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -115,16 +143,23 @@ When you load large Lotus Notes database files, it may take a significant amount
 
 The following example demonstrates how to specify the maximum number of items to render:
 
-{{< tabs "example5">}}
+{{< tabs "render-nsf-limit-items">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.nsf")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.nsf")
 // Create an HTML file.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-nsf-limit-items/nsf-to-html.html")
 // Specify the maximum items to render.
 viewOptions.getMailStorageOptions().setMaxItems(20)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.nsf" >}}
+{{< tab-text >}}
+`sample.nsf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -141,16 +176,23 @@ With GroupDocs.Viewer, you can also filter messages before rendering a Lotus Not
 
 The following code sample filters messages in an NSF file before rendering this file to HTML:
 
-{{< tabs "example6">}}
+{{< tabs "render-nsf-filter-messages">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.nsf")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.nsf")
 // Create an HTML file.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-nsf-filter-messages/nsf-to-html.html")
  // Set filters.
-viewOptions.setTextFilter("April 2015");
-viewOptions.setAddressFilter("test@test.com");
+viewOptions.getMailStorageOptions().setTextFilter("April 2015");
+viewOptions.getMailStorageOptions().setAddressFilter("test@test.com");
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.nsf" >}}
+{{< tab-text >}}
+`sample.nsf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

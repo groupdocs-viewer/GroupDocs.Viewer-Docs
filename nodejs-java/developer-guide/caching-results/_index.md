@@ -20,16 +20,18 @@ To enable caching, follow these steps:
 
 The following code snippet shows how to enable caching and displays the difference between rendering a file and getting the cached results:
 
-{{< tabs "example1">}}
+{{< tabs "caching-results">}}
 {{< tab "JavaScript" >}}
 ```js
+import { Viewer, HtmlViewOptions, FileCache, ViewerSettings } from '@groupdocs/groupdocs.viewer';
+
 const cachePath = "cache";
 const cache = new FileCache(cachePath);
 const settings = new ViewerSettings(cache);
 
-const viewer = new groupdocs.viewer.Viewer("sample.docx", settings)
+const viewer = new Viewer("sample.docx", settings)
 const options = HtmlViewOptions.forEmbeddedResources();
-const currentTimeMillis = Date.now()
+let currentTimeMillis = Date.now()
 
 viewer.view(options);
 currentTimeMillis = Date.now() - currentTimeMillis
@@ -40,6 +42,11 @@ viewer.view(options)
 currentTimeMillis = Date.now() - currentTimeMillis
 console.log("Time taken on second call to View method " + currentTimeMillis + " (ms).")
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/developer-guide/caching-results/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

@@ -24,16 +24,23 @@ GroupDocs.Viewer provides additional information for the following format famili
 
 The following code snippet shows how to get the file type and the pages count from a file:
 
-{{< tabs "example1">}}
+{{< tabs "get-file-type-and-pages-count">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("sample.pdf")
+import { Viewer, ViewInfoOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.pdf")
 // Get file information.
 const viewInfoOptions = ViewInfoOptions.forHtmlView()
 const viewInfo = viewer.getViewInfo(viewInfoOptions)
 console.log("Document type is: " + viewInfo.getFileType())
 console.log("Pages count: " + viewInfo.getPages().size())
 ```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`resume.pdf` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/developer-guide/retrieving-document-information/how-to-get-file-type-and-pages-count/sample.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

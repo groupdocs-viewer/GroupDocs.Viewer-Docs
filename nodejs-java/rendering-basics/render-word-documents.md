@@ -42,15 +42,22 @@ Create an [HtmlViewOptions](#) class instance and pass it to the [Viewer.view](#
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](#) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-word-to-html-embedded-resources">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.docx")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.docx")
 // Create an HTML files.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-word-to-html-embedded-resources/docx-to-html-page_{0}.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.docx" >}}
+{{< tab-text >}}
+`resume.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-word-documents/resume.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -66,16 +73,23 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-word-to-html-external-resources">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.docx")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.docx")
 // Create an HTML file for each page.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = HtmlViewOptions.forExternalResources("render-word-to-html-external-resources/docx-to-html-page_{0}.html", "render-word-to-html-external-resources/docx-to-html-page_{0}/resource_{0}_{1}", "render-word-to-html-external-resources/docx-to-html-page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.docx" >}}
+{{< tab-text >}}
+`resume.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-word-documents/resume.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -87,15 +101,22 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a Word file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-word-to-pdf">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.docx")
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.docx")
 // Create a PDF file for the document.
 // Specify the PDF file name.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-word-to-pdf/docx-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.docx" >}}
+{{< tab-text >}}
+`resume.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-word-documents/resume.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -107,15 +128,22 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a Word file to PNG. Use the [PngViewOptions.setHeight](#) and [PngViewOptions.setWidth](#) methods to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-word-to-png">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.docx")
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.docx")
 // Create a PNG image for each document page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-word-to-png/docx-to-png-page_{0}.png")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.docx" >}}
+{{< tab-text >}}
+`resume.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-word-documents/resume.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 The following image demonstrates the result:
@@ -126,15 +154,22 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a Word file to JPEG. Use the [JpgViewOptions.setHeight](#) and [JpgViewOptions.setWidth](#) methods to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-word-to-jpeg">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.docx")
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.docx")
 // Create a JPG image for each document page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.png")
+const viewOptions = JpgViewOptions("render-word-to-jpeg/docx-to-jpg-page_{0}.jpg")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.docx" >}}
+{{< tab-text >}}
+`resume.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-word-documents/resume.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -156,20 +191,28 @@ You can access these methods for the following classes:
 
 The example below converts a Word document to HTML and specifies page margins for the output file. 
 
-{{< tabs "example6">}}
+{{< tabs "render-word-with-page-margins">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.docx")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+import java from 'java';
+
+const viewer = new Viewer("resume.docx")
 // Create an HTML file for each document page.
-    // {0} is replaced with the current page number in the file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+// {0} is replaced with the current page number in the file name.
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-word-with-page-margins/docx-to-html-page_{0}.html")
 // Specify the size of page margins in points.
-viewOptions.getWordProcessingOptions().setTopMargin(72)
-viewOptions.getWordProcessingOptions().setBottomMargin(72)
-viewOptions.getWordProcessingOptions().setLeftMargin(54)
-viewOptions.getWordProcessingOptions().setRightMargin(54)
+viewOptions.getWordProcessingOptions().setTopMargin(java.newDouble(72.0))
+viewOptions.getWordProcessingOptions().setBottomMargin(java.newDouble(72.0))
+viewOptions.getWordProcessingOptions().setLeftMargin(java.newDouble(54.0))
+viewOptions.getWordProcessingOptions().setRightMargin(java.newDouble(54.0))
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.docx" >}}
+{{< tab-text >}}
+`resume.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-word-documents/resume.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -184,16 +227,23 @@ GroupDocs.Viewer does not render tracked changes (revisions made to a Word docum
 
 The following code example demonstrates how to render a Word document with tracked changes:
 
-{{< tabs "example7">}}
+{{< tabs "render-word-with-tracked-changes">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.docx")
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.docx")
 // Convert the document to PDF.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-word-with-tracked-changes/docx-to-pdf.pdf")
 // Enable tracked changes rendering.
 viewOptions.getWordProcessingOptions().setRenderTrackedChanges(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.docx" >}}
+{{< tab-text >}}
+`resume.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-word-documents/resume.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -207,16 +257,23 @@ Use the [ViewOptions.setRenderComments](#) method for a target view to display c
 
 The code example below renders a Word document with comments to PDF.
 
-{{< tabs "example8">}}
+{{< tabs "render-word-with-comments">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("resume.docx")
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("resume.docx")
 // Convert the document to PDF.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-word-with-comments/docx-to-pdf.pdf")
 // Enable rendering comments.
 viewOptions.setRenderComments(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "resume.docx" >}}
+{{< tab-text >}}
+`resume.docx` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-word-documents/resume.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

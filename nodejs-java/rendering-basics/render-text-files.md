@@ -71,16 +71,23 @@ GroupDocs.Viewer supports the following text and programming file formats:
 
 When you load a text document from a file, you should explicitly specify their format. To do this, create a [LoadOptions](#) class instance and use the [FileType](#) method. Then pass this instance to the [Viewer](#) class constructor.
 
-{{< tabs "example1">}}
+{{< tabs "render-text-file-with-loadoptions">}}
 {{< tab "JavaScript" >}}
 ```js
+import { Viewer, PdfViewOptions, LoadOptions, FileType } from '@groupdocs/groupdocs.viewer';
+
 // Specify the file encoding. 
 const loadOptions = new LoadOptions(FileType.MD)
 // Convert the document to PDF.
-const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt", loadOptions)
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewer = new Viewer("TermsOfService.txt", loadOptions)
+const viewOptions = PdfViewOptions("render-text-file-with-loadoptions/txt-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "TermsOfService.txt" >}}
+{{< tab-text >}}
+`TermsOfService.txt` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-text-files/TermsOfService.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -92,15 +99,22 @@ Create an [HtmlViewOptions](#) class instance and pass it to the [Viewer.view](#
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](#) method and specify the output file name.
 
-{{< tabs "example3">}}
+{{< tabs "render-text-to-html-embedded">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("TermsOfService.txt")
 // Convert the text file to HTML.
 // {0} is replaced with the current page number in the output file names.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-text-to-html-embedded/txt-to-html-page_{0}.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "TermsOfService.txt" >}}
+{{< tab-text >}}
+`TermsOfService.txt` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-text-files/TermsOfService.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -116,16 +130,23 @@ If you want to store output HTML files and additional resource files (such as fo
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example4">}}
+{{< tabs "render-text-to-html-external">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("TermsOfService.txt")
 // Create an HTML file for each PDF page.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = HtmlViewOptions.forExternalResources("render-text-to-html-external/txt-to-html-page_{0}.html", "render-text-to-html-external/txt-to-html-page_{0}/resource_{0}_{1}", "render-text-to-html-external/txt-to-html-page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "TermsOfService.txt" >}}
+{{< tab-text >}}
+`TermsOfService.txt` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-text-files/TermsOfService.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -137,16 +158,23 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 If you need to display the entire document content on a single HTML page, use the [HtmlViewOptions.setRenderToSinglePage](#) method, as shown below:
 
-{{< tabs "example5">}}
+{{< tabs "render-text-to-single-html-page">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("TermsOfService.txt")
 // Create an HTML file.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-text-to-single-html-page/txt-to-html.html")
 // Render the file to a single page. 
 viewOptions.setRenderToSinglePage(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "TermsOfService.txt" >}}
+{{< tab-text >}}
+`TermsOfService.txt` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-text-files/TermsOfService.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -154,14 +182,21 @@ viewer.view(viewOptions)
 
 Create a [PdfViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a text file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example6">}}
+{{< tabs "render-text-to-pdf">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("TermsOfService.txt")
 // Convert the text file to PDF.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-text-to-pdf/txt-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "TermsOfService.txt" >}}
+{{< tab-text >}}
+`TermsOfService.txt` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-text-files/TermsOfService.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -173,18 +208,25 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a text file to PNG. Use the [PngViewOptions.setHeight](#) and [PngViewOptions.setWidth](#) methods to specify the output image size in pixels.
 
-{{< tabs "example7">}}
+{{< tabs "render-text-to-png">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("TermsOfService.txt")
 // Convert the text file to PNG.
 // {0} is replaced with the current page number in the output image names.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-text-to-png/txt-to-png-page_{0}.png")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "TermsOfService.txt" >}}
+{{< tab-text >}}
+`TermsOfService.txt` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-text-files/TermsOfService.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -196,18 +238,25 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](#) class instance and pass it to the [Viewer.view](#) method to convert a text file to JPEG. Use the [JpgViewOptions.setHeight](#) and [JpgViewOptions.setWidth](#) methods to specify the output image size in pixels.
 
-{{< tabs "example8">}}
+{{< tabs "render-text-to-jpeg">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("TermsOfService.txt")
 // Convert the text file to JPEG.
 // {0} is replaced with the current page number in the output image names.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = JpgViewOptions("render-text-to-jpeg/txt-to-jpg-page_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "TermsOfService.txt" >}}
+{{< tab-text >}}
+`TermsOfService.txt` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-text-files/TermsOfService.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -228,17 +277,24 @@ The `TextOptions` class supports the following methods:
 
 The following example demonstrates how to change the number of rows displayed on each HTML page:
 
-{{< tabs "example9">}}
+{{< tabs "render-text-with-max-rows-per-page">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("TermsOfService.txt")
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("TermsOfService.txt")
  // Convert the text file to HTML.
 // {0} is replaced with the current page number in the output file names.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-text-with-max-rows-per-page/txt-to-html-page_{0}.html")
 // Set the maximum number of rows per page.
 viewOptions.getTextOptions().setMaxRowsPerPage(30)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "TermsOfService.txt" >}}
+{{< tab-text >}}
+`TermsOfService.txt` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-text-files/TermsOfService.txt) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

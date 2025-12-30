@@ -34,15 +34,22 @@ Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/c
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/htmlviewoptions/#forEmbeddedResources--) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-ebook-to-html-embedded">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("abook.epub")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.epub")
 // Create an HTML file for the drawing.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-ebook-to-html-embedded/epub-to-html-page_{0}.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.epub" >}}
+{{< tab-text >}}
+`sample.epub` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -58,16 +65,23 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-ebook-to-html-external">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("abook.epub")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.epub")
 // Create an HTML file for each page.
 // Specify the HTML file names and location of external resources.
 // {0} and {1} are replaced with the current page number and resource name, respectively.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+const viewOptions = HtmlViewOptions.forExternalResources("render-ebook-to-html-external/epub-to-html-page_{0}.html", "render-ebook-to-html-external/epub-to-html-page_{0}/resource_{0}_{1}", "render-ebook-to-html-external/epub-to-html-page_{0}/resource_{0}_{1}")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.epub" >}}
+{{< tab-text >}}
+`sample.epub` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -79,15 +93,22 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an EBook file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-ebook-to-pdf">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("abook.epub")
+```js
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.epub")
 // Create a PDF file for the document.
 // Specify the PDF file name.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-ebook-to-pdf/epub-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.epub" >}}
+{{< tab-text >}}
+`sample.epub` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -99,18 +120,25 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an EBook file to PNG. Use the [PngViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setHeight-int-) and [PngViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-ebook-to-png">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("abook.epub")
+```js
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.epub")
 // Create a PNG image for each document page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-ebook-to-png/epub-to-png-page_{0}.png")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.epub" >}}
+{{< tab-text >}}
+`sample.epub` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 The following image demonstrates the result:
@@ -121,17 +149,24 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an EBook file to JPEG. Use the [JpgViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setHeight-int-) and [JpgViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-ebook-to-jpeg">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("abook.epub")
+```js
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.epub")
 // Create a JPG image for each document page.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.jpg")
+const viewOptions = JpgViewOptions("render-ebook-to-jpeg/epub-to-jpg-page_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.epub" >}}
+{{< tab-text >}}
+`sample.epub` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

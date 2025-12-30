@@ -55,15 +55,22 @@ The `HtmlViewOptions` class properties allow you to control the conversion proce
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.forEmbeddedResources](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/htmlviewoptions/#forEmbeddedResources--) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-cad-to-html-embedded">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("HousePlan.dwg")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("HousePlan.dwg")
 // Create an HTML file for the drawing.
 // Specify the HTML file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("output.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-cad-to-html-embedded/dwg-to-html.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "HousePlan.dwg" >}}
+{{< tab-text >}}
+`HousePlan.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/render-cad-documents/HousePlan.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -79,16 +86,23 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-cad-to-html-external">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("HousePlan.dwg")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("HousePlan.dwg")
 // Create an HTML file for the drawing.
 // Specify the HTML file name and location of external resources.
 // {0} is replaced with the resource name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forExternalResources("output.html", "output/resource_{0}", "output/resource_{0}")
+const viewOptions = HtmlViewOptions.forExternalResources("render-cad-to-html-external/dwg-to-html.html", "render-cad-to-html-external/dwg-to-html/resource_{0}", "render-cad-to-html-external/dwg-to-html/resource_{0}")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "HousePlan.dwg" >}}
+{{< tab-text >}}
+`HousePlan.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/render-cad-documents/HousePlan.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -100,15 +114,22 @@ The image below demonstrates the result. External resources are placed in a sepa
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert a CAD file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-cad-to-pdf">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("HousePlan.dwg")
+```js
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("HousePlan.dwg")
 // Create a PDF file for the drawing.
 // Specify the PDF file name.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-cad-to-pdf/dwg-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "HousePlan.dwg" >}}
+{{< tab-text >}}
+`HousePlan.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/render-cad-documents/HousePlan.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -120,17 +141,24 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert a CAD file to PNG. Use the [PngViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setHeight-int-) and [PngViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-cad-to-png">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("HousePlan.dwg")
+```js
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("HousePlan.dwg")
 // Create a PNG image for the drawing.
-const viewOptions = groupdocs.viewer.PngViewOptions("output.png")
+const viewOptions = PngViewOptions("render-cad-to-png/dwg-to-png.png")
 // Set width and height.
 viewOptions.setWidth(1500)
 viewOptions.setHeight(1000)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "HousePlan.dwg" >}}
+{{< tab-text >}}
+`HousePlan.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/render-cad-documents/HousePlan.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -142,17 +170,24 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert a CAD file to JPEG. Use the [JpgViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setHeight-int-) and [JpgViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-cad-to-jpeg">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("HousePlan.dwg")
+```js
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("HousePlan.dwg")
 // Create a JPG image for the drawing.
-const viewOptions = groupdocs.viewer.PngViewOptions("output.jpg")
+const viewOptions = JpgViewOptions("render-cad-to-jpeg/dwg-to-jpg.jpg")
 // Set width and height.
 viewOptions.setWidth(1500)
 viewOptions.setHeight(1000)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "HousePlan.dwg" >}}
+{{< tab-text >}}
+`HousePlan.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/render-cad-documents/HousePlan.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -164,11 +199,13 @@ Follow the steps below to obtain information about layouts and layers contained 
 2. Call the [Viewer.getViewInfo](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/#getViewInfo-com.groupdocs.viewer.options.ViewInfoOptions-) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [CadViewInfo](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.results/cadviewinfo) type.
 3. Use the [CadViewInfo.getLayouts](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.results/cadviewinfo/#getLayouts--) and [CadViewInfo.getLayers](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.results/cadviewinfo/#getLayers--) properties to obtain the lists of layouts and layers in the CAD file.
 
-{{< tabs "example6">}}
+{{< tabs "get-cad-layouts-and-layers-info">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("HousePlan.dwg")
-const viewOptions = groupdocs.viewer.ViewInfoOptions.forHtmlView()
+```js
+import { Viewer, ViewInfoOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("HousePlan.dwg")
+const viewOptions = ViewInfoOptions.forHtmlView()
 const info = viewer.getViewInfo(viewOptions)
 
 // Display information about the CAD file.
@@ -184,8 +221,12 @@ const layers = info.getLayers();
 for (let i = 0; i < layers.size(); i++) {
     console.log(layers.get(i).toString());
 }
-viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "HousePlan.dwg" >}}
+{{< tab-text >}}
+`HousePlan.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/render-cad-documents/HousePlan.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -206,33 +247,49 @@ Each layout is rendered on a separate page.
 
 The following example renders all layouts when converting a CAD drawing to PDF:
 
-{{< tabs "example7">}}
+{{< tabs "render-cad-all-layouts" docs-to-code-examples-skip >}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.dwg")
+```js
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.dwg")
 // Convert the document to PDF.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-cad-all-layouts/dwg-to-pdf.pdf")
 // Render the Model and all non-empty paper space layouts. 
 viewOptions.getCadOptions().setRenderLayouts(true);
+
+// Render first page
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
 To render a specific layout, pass the layout name to the [CadOptions.setLayoutName](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/cadoptions/#setLayoutName-java.lang.String-) method of a target view.
 
-{{< tabs "example8">}}
+{{< tabs "render-cad-specific-layout">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.dwg")
+```js
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.dwg")
 // Convert the document to PDF.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-cad-specific-layout/dwg-to-pdf.pdf")
 // Specify the name of the layout to render.
 // If the specified layout is not found,
 // an exception occurs.
 viewOptions.getCadOptions().setLayoutName("Layout1");
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -260,25 +317,29 @@ When you convert a CAD drawing to HTML, PDF, or image format, GroupDocs.Viewer r
 
 The following example renders layers with walls and furniture to PDF:
 
-{{< tabs "example9">}}
+{{< tabs "render-cad-specific-layers" docs-to-code-examples-skip >}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const java = require("java")
+```js
+import { Viewer, PdfViewOptions, CacheableFactory } from '@groupdocs/groupdocs.viewer';
+import java from 'java';
+
 const ArrayList = java.import("java.util.ArrayList")
 
-const viewer = new groupdocs.viewer.Viewer("HousePlan.dwg")
+const viewer = new Viewer("HousePlan.dwg")
 // Convert the document to PDF.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-cad-specific-layers/dwg-to-pdf.pdf")
 // Specify a list of layers to display.
 const layers = new ArrayList()
-layers.add(groupdocs.viewer.CacheableFactory.getInstance().newLayer("Base"))
-layers.add(groupdocs.viewer.CacheableFactory.getInstance().newLayer("Walls"))
-layers.add(groupdocs.viewer.CacheableFactory.getInstance().newLayer("Furniture"))
+layers.add(CacheableFactory.getInstance().newLayer("QUADRANT"))
 viewOptions.getCadOptions().setLayers(layers)
 
-viewOptions.getCadOptions().setLayoutName("Layout1")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "HousePlan.dwg" >}}
+{{< tab-text >}}
+`HousePlan.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/render-cad-documents/HousePlan.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

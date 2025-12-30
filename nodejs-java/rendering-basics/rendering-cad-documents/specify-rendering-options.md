@@ -28,19 +28,26 @@ Use the [CadOptions.setBackgroundColor](https://reference.groupdocs.com/viewer/n
 
 The following code snippet converts a CAD drawing to PDF and sets the background color of PDF pages to light yellow:
 
-{{< tabs "example1">}}
+{{< tabs "render-cad-with-background-color">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const java = require('java')
+```js
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+import java from 'java';
+
 const Color = java.import('java.awt.Color')
 
-const viewer = new groupdocs.viewer.Viewer("HousePlan.dwg")
+const viewer = new Viewer("HousePlan.dwg")
 // Convert the document to PDF.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-cad-with-background-color/dwg-to-pdf.pdf")
 // Specify the background color.
 viewOptions.getCadOptions().setBackgroundColor(Color.YELLOW)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "HousePlan.dwg" >}}
+{{< tab-text >}}
+`HousePlan.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/specify-rendering-options/HousePlan.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -59,18 +66,25 @@ When rendering a CAD drawing, GroupDocs.Viewer creates an image with the largest
 
 The following example converts a CAD drawing to PNG format and reduces the width and height of the output image by 50%:
 
-{{< tabs "example2">}}
+{{< tabs "render-cad-with-scale-factor">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("HousePlan.dwg")
+```js
+import { Viewer, PngViewOptions, CadOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("HousePlan.dwg")
 // Create a PNG image for the drawing.
-const viewOptions = groupdocs.viewer.PngViewOptions("output.png")
+const viewOptions = PngViewOptions("render-cad-with-scale-factor/dwg-to-png.png")
 // Specify a scale factor.
 viewOptions.setCadOptions(
-    groupdocs.viewer.CadOptions.forRenderingByScaleFactor(0.5)
+    CadOptions.forRenderingByScaleFactor(0.5)
 )
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "HousePlan.dwg" >}}
+{{< tab-text >}}
+`HousePlan.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/specify-rendering-options/HousePlan.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -80,16 +94,23 @@ When you render all layouts/sheets contained in a CAD file (pass `true` to the [
 
 AutoCAD allows you to configure plotter settings and save them as a PC3 file (Plotter Configuration Version 3) for later use. With GroupDocs.Viewer, you can apply width and height values from a PC3 file to the output file when you convert your CAD drawing to HTML, PDF, or image format. Use the [CadOptions.setPc3File](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/cadoptions/#setPc3File-java.lang.String-) method for a target view to specify a path to the PC3 file with required settings. The default location for PC3 files is "*C:\Users\\[Username]\\AppData\Roaming\Autodesk\AutoCAD [Version]\\[Version Code]\\[Language]\Plotters*".
 
-{{< tabs "example3">}}
+{{< tabs "render-cad-with-pc3-file">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("sample.dwg")
+```js
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("sample.dwg")
 // Convert the diagram to PDF.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.png")
+const viewOptions = PdfViewOptions("render-cad-with-pc3-file/dwg-to-pdf.pdf")
 // Specify a path to the PC3 file.
 viewOptions.getCadOptions().setPc3File("small_page.pc3")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/specify-rendering-options/sample.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -107,12 +128,14 @@ After you create all tiles, add them using the [ViewOptions.getCadOptions().setT
 
 The following example demonstrates how to split a CAD drawing into four tiles (2x2) of equal size:
 
-{{< tabs "example4">}}
+{{< tabs "render-cad-split-into-tiles">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("HousePlan.dwg")
+```js
+import { Viewer, HtmlViewOptions, ViewInfoOptions, Tile } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("HousePlan.dwg")
   
-const viewInfoOptions = groupdocs.viewer.ViewInfoOptions.forHtmlView()
+const viewInfoOptions = ViewInfoOptions.forHtmlView()
 const viewInfo = viewer.getViewInfo(viewInfoOptions)
 
 // Get the width and height of the CAD drawing.
@@ -120,33 +143,38 @@ const width = viewInfo.getPages().get(0).getWidth()
 const height = viewInfo.getPages().get(0).getHeight()
 
 // Calculate the width and height of each tile.
-let tileWidth = width / 2
-let tileHeight = height / 2
+let tileWidth = Math.floor(width / 2)
+let tileHeight = Math.floor(height / 2)
 
 let pointX = 0
 let pointY = 0
 
 // Split the drawing into tiles and convert them to HTML.
 // {0} is replaced with the tile number in the output file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-cad-split-into-tiles/dwg-to-html-page_{0}.html")
             
-let tile = new groupdocs.viewer.Tile(pointX, pointY, tileWidth, tileHeight)
+let tile = new Tile(pointX, pointY, tileWidth, tileHeight)
 viewOptions.getCadOptions().getTiles().add(tile)
 
 pointX += tileWidth
-tile = new groupdocs.viewer.Tile(pointX, pointY, tileWidth, tileHeight)
+tile = new Tile(pointX, pointY, tileWidth, tileHeight)
 viewOptions.getCadOptions().getTiles().add(tile)
 
 pointX = 0
 pointY += tileHeight
-tile = new groupdocs.viewer.Tile(pointX, pointY, tileWidth, tileHeight)
+tile = new Tile(pointX, pointY, tileWidth, tileHeight)
 viewOptions.getCadOptions().getTiles().add(tile)
 
 pointX += tileWidth
-tile = new groupdocs.viewer.Tile(pointX, pointY, tileWidth, tileHeight)
+tile = new Tile(pointX, pointY, tileWidth, tileHeight)
 viewOptions.getCadOptions().getTiles().add(tile)
 
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "HousePlan.dwg" >}}
+{{< tab-text >}}
+`HousePlan.dwg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/rendering-cad-documents/specify-rendering-options/HousePlan.dwg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

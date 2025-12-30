@@ -46,15 +46,22 @@ GroupDocs.Viewer supports the following archive file formats:
 
 To convert an archive file to HTML, call the [HtmlViewOptions.forEmbeddedResources](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/htmlviewoptions/#forEmbeddedResources--) method to create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/htmlviewoptions) class instance and pass this instance to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method.
 
-{{< tabs "example1">}}
+{{< tabs "render-archive-to-html">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("Documents.zip")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("documents.zip")
 // Create an HTML file for top folder and each subfolder in the archive.
 // {0} is replaced with the current page number in the file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-archive-to-html/zip-to-html-page_{0}.html")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -62,41 +69,28 @@ The following image demonstrates the result:
 
 ![Render an archive file to HTML](/viewer/nodejs-java/images/rendering-basics/render-archive-files/render-archive-to-html-embedded-resources.png)
 
-### Specify the number of items to render
-
-GroupDocs.Viewer supports the [HtmlViewOptions.getArchiveOptions.setItemsPerPage](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/archiveoptions/#setItemsPerPage-int-) method that allows you to specify the number of archive items to display on each HTML page. The default property value is **16**.
-
-The following example demonstrates how to set this option in code:
-
-{{< tabs "example2">}}
-{{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("Documents.zip")
-// Create an HTML file for the top folder and each subfolder in the archive.
-// {0} is replaced with the current page number in the output file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
-// Specify the number of items to display on each HTML page.
-viewOptions.getArchiveOptions().setItemsPerPage(10)
-viewer.view(viewOptions)
-```
-{{< /tab >}}
-{{< /tabs >}}
-
 ### Create a single HTML page
 
 If you need to display the contents of an archive file on a single HTML page, use the [HtmlViewOptions.setRenderToSinglePage](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/htmlviewoptions/#setRenderToSinglePage-boolean-) method, as shown below:
 
-{{< tabs "example3">}}
+{{< tabs "render-archive-to-single-page">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("Documents.zip")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("documents.zip")
 // Create an HTML file for the top folder and each subfolder in the archive.
 // {0} is replaced with the current page number in the output file name.
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-archive-to-single-page/zip-to-html-page_{0}.html")
 // Specify the number of items to display on each HTML page.
 viewOptions.setRenderToSinglePage(true)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -108,14 +102,21 @@ The animation below demonstrates the result. You can navigate between the archiv
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an archive file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file or reorder its pages. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/nodejs-java/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example4">}}
+{{< tabs "render-archive-to-pdf">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("Documents.zip")
+```js
+import { Viewer, PdfViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("documents.zip")
 // Specify the PDF file name.
-const viewOptions = groupdocs.viewer.PdfViewOptions("output.pdf")
+const viewOptions = PdfViewOptions("render-archive-to-pdf/zip-to-pdf.pdf")
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -127,18 +128,25 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an archive file to PNG. Use the [PngViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setHeight-int-) and [PngViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-archive-to-png">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("Documents.zip")
+```js
+import { Viewer, PngViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("documents.zip")
 // Create a PNG image for the top folder and each subfolder in the archive.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.PngViewOptions("output_{0}.png")
+const viewOptions = PngViewOptions("render-archive-to-png/zip-to-png-page_{0}.png")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -150,18 +158,25 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/) method to convert an archive file to JPEG. Use the [JpgViewOptions.setHeight](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setHeight-int-) and [JpgViewOptions.setWidth](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions/#setWidth-int-) methods to specify the output image size in pixels.
 
-{{< tabs "example6">}}
+{{< tabs "render-archive-to-jpeg">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("Documents.zip")
+```js
+import { Viewer, JpgViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("documents.zip")
 // Create a JPG image for the top folder and each subfolder in the archive.
 // {0} is replaced with the current page number in the image name.
-const viewOptions = groupdocs.viewer.JpgViewOptions("output_{0}.jpg")
+const viewOptions = JpgViewOptions("render-archive-to-jpeg/zip-to-jpg-page_{0}.jpg")
 // Set width and height.
 viewOptions.setWidth(950)
 viewOptions.setHeight(550)
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -173,37 +188,30 @@ Follow the steps below to obtain information about folders contained in an archi
 2. Call the [Viewer.getViewInfo](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer/viewer/#getViewInfo-com.groupdocs.viewer.options.ViewInfoOptions-) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [ArchiveViewInfo](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.results/archiveviewinfo/) type.
 3. Use the [ArchiveViewInfo.getFolders](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.results/archiveviewinfo/#getFolders--) method to obtain the lists of folders in the archive file.
 
-{{< tabs "example7">}}
+{{< tabs "get-archive-folders-info">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-function readFolders(viewer, viewInfoOptions, folder) {
-  const innerInfoOptions = viewInfoOptions.forHtmlView()
-  innerInfoOptions.getArchiveOptions().setFolder(folder)
+```js
+import { Viewer, ViewInfoOptions } from '@groupdocs/groupdocs.viewer'
 
-  const archiveViewInfo = viewer.getViewInfo(innerInfoOptions)
-  const folders = archiveViewInfo.getFolders()
+const viewer = new Viewer('sample.zip')
 
-  for (let i = 0; i < folders.size(); i++) {
-    console.log(" - ", folders.get(i).toString())
-    readFolders(viewer, viewInfoOptions, folders.get(i).toString())
-  }
-}
-
-const viewer = new groupdocs.viewer.Viewer("sample.zip")
-  
-const viewInfoOptions = groupdocs.viewer.ViewInfoOptions.forHtmlView()
+const viewInfoOptions = ViewInfoOptions.forHtmlView()
 const viewInfo = viewer.getViewInfo(viewInfoOptions)
+const folders = viewInfo.getFolders()
 
-console.log("File type: " + viewInfo.getFileType())
-console.log("Pages count: " + viewInfo.getPages().size())
-console.log("Folders: ")
-console.log(" - /")
-const rootFolder = ""
-
-readFolders(viewer, viewInfoOptions, rootFolder)
+console.log('File type: ' + viewInfo.getFileType())
+console.log('Pages count: ' + viewInfo.getPages().size())
+console.log('Folders: ')
+for (let i = 0; i < folders.size(); i++) {
+  console.log(' - ', folders.get(i).toString())
+}
 ```
 {{< /tab >}}
-
+{{< tab "sample.zip" >}}
+{{< tab-text >}}
+`sample.zip` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-archive-files/sample.zip) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image shows a sample console output:
@@ -224,16 +232,23 @@ When you convert an archive file to HTML, PDF, or image format, GroupDocs.Viewer
 * [PngViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/pngviewoptions)
 * [JpgViewOptions](https://reference.groupdocs.com/viewer/nodejs-java/com.groupdocs.viewer.options/jpgviewoptions)
 
-{{< tabs "example8">}}
+{{< tabs "render-archive-specific-folder">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("Documents.zip")
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+```js
+import { Viewer, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("documents.zip")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-archive-specific-folder/zip-to-html-page_{0}.html")
  
 viewOptions.getArchiveOptions().setFolder("Documents/CAD files");
 
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -247,17 +262,24 @@ When rendering an archive file, GroupDocs.Viewer displays the archive file name 
 
 The following code snippet demonstrates how to use a custom name when rendering an archive file to HTML:
 
-{{< tabs "example9">}}
+{{< tabs "render-archive-with-custom-filename">}}
 {{< tab "JavaScript" >}}
-```JavaScript
-const viewer = new groupdocs.viewer.Viewer("Documents.zip")
-const viewOptions = groupdocs.viewer.HtmlViewOptions.forEmbeddedResources("page_{0}.html")
+```js
+import { Viewer, HtmlViewOptions, FileName } from '@groupdocs/groupdocs.viewer';
 
-const fileName = new groupdocs.viewer.FileName("Sample Files")
+const viewer = new Viewer("documents.zip")
+const viewOptions = HtmlViewOptions.forEmbeddedResources("render-archive-with-custom-filename/zip-to-html-page_{0}.html")
+
+const fileName = new FileName("Sample Files")
 viewOptions.getArchiveOptions().setFileName(fileName);
 
 viewer.view(viewOptions)
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

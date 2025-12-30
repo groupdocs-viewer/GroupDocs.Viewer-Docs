@@ -18,10 +18,12 @@ The following code snippet shows how to get and save all attachments from the MS
 
 {{< alert style="info" >}}NOTE: provided code snippet suits all format families that support attachments: emails, Outlook data files, archives, and PDF documents.{{< /alert >}}
 
-{{< tabs "example1">}}
+{{< tabs "extract-and-save-attachments">}}
 {{< tab "JavaScript" >}}
 ```js
-const viewer = new groupdocs.viewer.Viewer("with_attachments.msg")
+import { Viewer } from '@groupdocs/groupdocs.viewer';
+
+const viewer = new Viewer("with_attachments.msg")
 const attachments = viewer.getAttachments();
 console.log('Attachments:\n');
 
@@ -30,5 +32,10 @@ for(let i = 0; i < attachments.size(); i++ ){
 }
 console.log('\nAttachments retrieved successfully.');
 ```
+{{< /tab >}}
+{{< tab "with_attachments.msg" >}}
+{{< tab-text >}}
+`with_attachments.msg` is the sample file used in this example. Click [here](/viewer/nodejs-java/_sample_files/developer-guide/processing-attachments/how-to-extract-and-save-attachments/with_attachments.msg) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
