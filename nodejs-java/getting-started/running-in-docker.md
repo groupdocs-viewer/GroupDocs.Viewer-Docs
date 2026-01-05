@@ -60,8 +60,8 @@ const [inputPath, outputPath, licensePathArg] = process.argv.slice(2);
 // Get the license path from the command line arguments or the environment variable
 const licensePath = licensePathArg || process.env.GROUPDOCS_LICENSE_PATH;
 if (licensePath) {
-	const license = new License();
-	license.setLicense(licensePath);
+  const license = new License();
+  license.setLicense(licensePath);
 }
 
 // Create a new viewer instance
