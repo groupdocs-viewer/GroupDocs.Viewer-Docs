@@ -52,7 +52,6 @@ Let's look at the most essential parts of the application:
 {{< tabs "example_run_in_docker" docs-to-code-examples-skip >}}
 {{< tab "render-file.js" >}}  
 ```js
-
 import { Viewer, License, HtmlViewOptions } from '@groupdocs/groupdocs.viewer';
 
 // Get the input file, output path, and license paths from the command line arguments
@@ -66,11 +65,14 @@ if (licensePath) {
 }
 
 // Create a new viewer instance
-const viewerInstance = new Viewer(inputPath);
+const viewer = new Viewer(inputPath);
 
 // Render the file to HTML
 const viewOptions = HtmlViewOptions.forEmbeddedResources(outputPath + '/page_{0}.html');
-viewerInstance.view(viewOptions);
+viewer.view(viewOptions);
+
+// Exit the process
+process.exit(0);
 ```
 {{< /tab >}}
 
@@ -85,8 +87,7 @@ viewerInstance.view(viewOptions);
   "main": "render-file.js",
   "license": "MIT",
   "scripts": {
-    "start": "node render-file.js",
-    "dev": "node render-file.js"
+    "start": "node render-file.js"
   },
   "engines": {
     "node": ">=20"
@@ -149,12 +150,10 @@ COPY --from=build /app .
 
 # Set the entry point and default command
 ENTRYPOINT ["node", "/app/render-file.js"]
-CMD ["--help"]
-
 {{< /highlight >}}
 {{< /tab >}}
 
-{{< tab "Input files" >}}  
+{{< tab "Input file" >}}  
 {{< tab-text >}}
 Sample input file [sample.pdf](/viewer/nodejs-java/_sample_files/getting-started/running-in-docker/sample.pdf) to render.
 {{< /tab-text >}}
@@ -177,13 +176,13 @@ In this example we mount the `work` directory and use it both to pass source fil
 If you do not have a license file, you can use the following command that omits the last parameter. GroupDocs.Viewer will work in trial mode.
 
 ```bash
-docker run --rm -v "${pwd}/work:/work" -w /work groupdocs-viewer-sample:latest sample.pdf 
+docker run --rm -v "${pwd}/work:/work" -w /work groupdocs-viewer-sample:latest sample.pdf output
 ```
 
 You can add a license parameter if you have a trial or full license file:
 
 ```bash
-docker run --rm -v "${pwd}/work:/work" -w /work groupdocs-viewer-sample:latest sample.pdf work GroupDocs.Viewer.lic
+docker run --rm -v "${pwd}/work:/work" -w /work groupdocs-viewer-sample:latest sample.pdf output GroupDocs.Viewer.lic
 ```
 
 #### Command Explanation
