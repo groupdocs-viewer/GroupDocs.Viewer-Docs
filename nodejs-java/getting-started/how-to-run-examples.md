@@ -44,43 +44,48 @@ To get started, make sure that [Node.js](https://nodejs.org/) and Java are insta
 1. **Clone the repository with examples**
 
    ```bash
-   git clone https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java.git
-   cd GroupDocs.Viewer-for-Node.js-via-Java
+   git clone git@github.com:groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java.git
    ```
 
-2. **Install dependencies**
+2. **Navigate to the `Examples` folder**
+
+   ```bash
+   cd ./GroupDocs.Viewer-for-Node.js-via-Java/Examples
+   ```
+
+3. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-   This installs the bundled `groupdocs-groupdocs.viewer-<version>.tgz` package and other dependencies defined in `package.json`.  
+   This installs the bundled `groupdocs.viewer-<version>.tgz` package and other dependencies defined in `package.json`. We typically keep the package up to date with the latest version. If you need to use a different package version, you can update the `package.json` file accordingly.
+
+   Alternatively, you can download the `tgz` file from the official [GroupDocs Releases](https://releases.groupdocs.com/viewer/nodejs-java/#direct-download) website. To install the package manually, copy the tgz file to the `Examples` directory and run the following command:
+   
+   ```bash
+   npm install ./groupdocs.viewer-*.tgz
+   ```
+
    If installation fails with native build errors, review the build tools section in [System Requirements]({{< ref "viewer/nodejs-java/getting-started/system-requirements" >}}).
 
-3. **Run all examples**
+4. **Configure license (optional)**
+
+   If you have a license file, you can set the license path in the `run_all_examples.js` file. By default, GroupDocs.Viewer for Node.js via Java checks for the `GROUPDOCS_LICENSE_PATH` environment variable or looks for files with the `.lic` extension in the project's root directory. You can also [get a temporary license](https://purchase.groupdocs.com/temporary-license) to test all the features.
+
+5. **Run all examples**
 
    ```bash
    npm start
    ```
 
-   Output documents are created under the `Output/` directory, grouped by example.
+   You can also run individual examples by navigating to the folder containing the example script and running it. Output files are placed in the same folder as the script file.
 
-## Explore available examples
+## More Resources
 
-After running the project once, you may want to see what examples are available and how they are organized:
+Find additional details and examples in the [GroupDocs.Viewer for Node.js via Java documentation](https://docs.groupdocs.com/viewer/nodejs-java/).
 
-- Open `examples.js` and `runExamples.js` to review the list of functions being called.
-- Enable or disable specific examples by editing `runExamples.js` and re-running:
-
-  ```bash
-  npm start
-  ```
-
-Refer to the examples README for an overview of QuickStart, BasicUsage, and AdvancedUsage folders and the scenarios they cover  
-([README](https://raw.githubusercontent.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java/refs/heads/master/README.md)).
-
-## Contribute
-
-If you like to add or improve an example, we encourage you to contribute to the project. All examples in this repository are open source and can be freely used in your own applications.
-
-To contribute, you can fork the repository, edit the source code and create a pull request. We will review the changes and include them in the repository if found helpful.
+We also offer **GroupDocs.Viewer** packages for other platforms:
+* [**GroupDocs.Viewer for .NET**](https://products.groupdocs.com/viewer/net/)
+* [**GroupDocs.Viewer for Java**](https://products.groupdocs.com/viewer/java/)
+* [**GroupDocs.Viewer for Python via .NET**](https://products.groupdocs.com/viewer/python-net/)
