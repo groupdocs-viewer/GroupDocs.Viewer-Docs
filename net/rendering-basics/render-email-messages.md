@@ -426,3 +426,57 @@ End Module
 The following image illustrates the result:
 
 ![Custom date-time format](/viewer/net/images/rendering-basics/render-email-messages/custom-date-time-format.png)
+
+## Get mail message metadata before rendering
+
+Sometimes it is necessary to know some metadata of the email message, loaded to the [`Viewer`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/) class, before its actual rendering through the [`Viewer.View()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/view/#view) method. GroupDocs.Viewer for such cases provides the [`ViewInfo`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/) class that can be obtained by calling a [`Viewer.GetViewInfo()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/getviewinfo/#getviewinfo) method. However, this [`ViewInfo`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/) class is common for all supported document formats and has no specific properties, which are present only in the mail messages.
+
+Starting from the version 26.1 the GroupDocs.Viewer public API has a new class [`MailMessageViewInfo`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/mailmessageviewinfo/). This class is a direct inheritor of the common class [`ViewInfo`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/), so it has all its properties, but also introduce the few new ones, specific for the mail messages:
+
+- `Sent` property of `DateTime` type — returns a date and time, stored in the mail message in its original form “as-is”, without adjusting it to the local date time and so on.
+- `Subject` of `String` type — return a subject of the mail message.
+- `From` of `String` type — returns a “From” email address.
+
+To obtain a metadata of the given mail message, this mail message initially should be loaded to the [`Viewer`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/) class through its [constructor](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/viewer/#constructor_4), and then the [`Viewer.GetViewInfo()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/getviewinfo/#getviewinfo) method should be called. This method then returns the instance of the [`ViewInfo`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/) class, which should be casted to the [`MailMessageViewInfo`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/mailmessageviewinfo/) type. And that’s all! Source code is below:
+
+{{< tabs "Get-view-info-example">}}
+{{< tab "C#" >}}
+```csharp
+using System;
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+using GroupDocs.Viewer.Results;
+// ...
+
+using (Viewer viewer = new Viewer("sample.eml"))
+{
+    ViewInfo generalInfo = viewer.GetViewInfo(ViewInfoOptions.ForHtmlView());
+    // explicit casting
+    MailMessageViewInfo mailMessageInfo = (MailMessageViewInfo)generalInfo;
+    Console.WriteLine("From: {0}; Subject: {1}; Sent: {2}.", mailMessageInfo.From, mailMessageInfo.Subject, mailMessageInfo.Sent);
+
+    // Render to any output format if needed
+    viewer.View(HtmlViewOptions.ForEmbeddedResources());
+}
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports System
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+Imports GroupDocs.Viewer.Results
+' ...
+
+Using viewer As New Viewer("sample.eml")
+    Dim generalInfo As ViewInfo = viewer.GetViewInfo(ViewInfoOptions.ForHtmlView())
+    ' explicit casting
+    Dim mailMessageInfo As MailMessageViewInfo = DirectCast(generalInfo, MailMessageViewInfo)
+    Console.WriteLine("From: {0}; Subject: {1}; Sent: {2}.", mailMessageInfo.From, mailMessageInfo.Subject, mailMessageInfo.Sent)
+
+    ' Render to any output format if needed
+    viewer.View(HtmlViewOptions.ForEmbeddedResources())
+End Using
+```
+{{< /tab >}}
+{{< /tabs >}}
