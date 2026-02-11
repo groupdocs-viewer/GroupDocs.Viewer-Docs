@@ -38,6 +38,12 @@ jobs:
           cp _index.md common/content/${{ env.PRODUCT }}
           hugo --source common --minify
 
+
+      - name: Move MD files to ugly URLs
+        run: |
+          chmod +x common/move_md_to_ugly_urls.sh
+          ./common/move_md_to_ugly_urls.sh common/public
+
       - name: Deploy sitemap
         uses: nogsantos/scp-deploy@master
         with:
