@@ -8,4 +8,4 @@ mkdir -p common/content/$PRODUCT/nodejs-java && cp -r nodejs-java common/content
 mkdir -p common/content/$PRODUCT/python-net && cp -r python-net common/content/$PRODUCT/
 cp -r _index.md common/content/$PRODUCT
 cd common
-hugo server --config config-geekdoc.toml,ignore-total-config.toml,show-feedback-config.toml
+hugo server
