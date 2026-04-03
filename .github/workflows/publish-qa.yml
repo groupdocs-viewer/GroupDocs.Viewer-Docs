@@ -5,8 +5,10 @@ name: publish-qa
 # Controls when the workflow will run
 on: 
   push:
+    branches:    
+      - master
   workflow_dispatch:
-    
+
 jobs:
 
   build:
