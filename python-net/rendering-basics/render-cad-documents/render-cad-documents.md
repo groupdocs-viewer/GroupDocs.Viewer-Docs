@@ -80,6 +80,22 @@ if __name__ == "__main__":
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "pdf_page_1.html" >}}  
+```text
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8" />
+    <title>Page-1</title>
+</head>
+<body>
+    <div id="main_image">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_-770116761_6634" width="2000" height="1769.2308349609375"><g transform="matrix(75.964135732832403 0 0 -75.964135732832403 -914.05417456346686 2464.9369736113467)"><g><path d="M12.158660251539231 1
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_cad_to_html/pdf_page_1.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -118,6 +134,14 @@ if __name__ == "__main__":
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-cad-to-html-external-outputs.zip" >}}  
+```text
+render_cad_to_html_external/pdf_page_1.html (410 bytes)
+render_cad_to_html_external/pdf_page_1/resource_1_g.svg (7 KB)
+render_cad_to_html_external/pdf_page_1/resource_1_s.css (529 bytes)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_cad_to_html_external/render-cad-to-html-external-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
@@ -150,6 +174,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "cad_drawing.pdf" >}}  
+```text
+Binary file (PDF, 3 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_cad_to_pdf/cad_drawing.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -186,6 +216,12 @@ if __name__ == "__main__":
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "cad_page_0.png" >}}  
+```text
+Binary file (PNG, 44 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_cad_to_png/cad_page_0.png)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -221,6 +257,12 @@ if __name__ == "__main__":
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "cad_to_jpg.jpg" >}}  
+```text
+Binary file (JPG, 53 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_cad_to_jpg/cad_to_jpg.jpg)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Get information about existing layouts and layers
@@ -255,6 +297,15 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-cad-info.txt" >}}  
+```text
+File type: AutoCAD Drawing Database File (.dwg)
+Pages count: 1
+
+View info retrieved successfully.
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/get_cad_info/get-cad-info.txt)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -299,6 +350,12 @@ if __name__ == "__main__":
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "all_layouts.pdf" >}}  
+```text
+Binary file (PDF, 26 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_all_layouts/all_layouts.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 To render a specific layout, assign the layout name to the [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property of a target view.
@@ -328,6 +385,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "specific_layout.pdf" >}}  
+```text
+Binary file (PDF, 3 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_specific_layout/specific_layout.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -382,6 +445,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "specific_layers.pdf" >}}  
+```text
+Binary file (PDF, 2 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_specific_layers/specific_layers.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

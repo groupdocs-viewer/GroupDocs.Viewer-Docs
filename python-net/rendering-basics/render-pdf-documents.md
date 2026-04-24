@@ -58,6 +58,13 @@ if __name__ == "__main__":
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-pdf-to-html-outputs.zip" >}}  
+```text
+render_pdf_to_html/pdf_page_1.html (832 KB)
+render_pdf_to_html/pdf_page_2.html (80 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_to_html/render-pdf-to-html-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -95,6 +102,22 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-to-html-external-outputs.zip" >}}  
+```text
+render_pdf_to_html_external/pdf_page_1.html (8 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_f.woff (5 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_f1.woff (7 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_f2.woff (9 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_f3.woff (10 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_f4.woff (7 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_f5.woff (3 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_f6.woff (1 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_i.png (570 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_i1.png (109 bytes)
+[TRUNCATED] (17 files total)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_to_html_external/render-pdf-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -146,6 +169,13 @@ if __name__ == "__main__":
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-pdf-with-image-quality-outputs.zip" >}}  
+```text
+render_pdf_with_image_quality/pdf_with_image_quality_1.html (5534 KB)
+render_pdf_with_image_quality/pdf_with_image_quality_2.html (222 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_with_image_quality/render-pdf-with-image-quality-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Render text as an image
@@ -179,6 +209,13 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-text-as-image-outputs.zip" >}}  
+```text
+render_pdf_text_as_image/text-as-image_1.html (5463 KB)
+render_pdf_text_as_image/text-as-image_2.html (224 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_text_as_image/render-pdf-text-as-image-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -217,6 +254,13 @@ if __name__ == "__main__":
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-pdf-with-layered-rendering-outputs.zip" >}}  
+```text
+render_pdf_with_layered_rendering/pdf_with_layered_rendering_1.html (849 KB)
+render_pdf_with_layered_rendering/pdf_with_layered_rendering_2.html (85 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_with_layered_rendering/render-pdf-with-layered-rendering-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render PDF files as images
@@ -250,6 +294,13 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-to-png-outputs.zip" >}}  
+```text
+render_pdf_to_png/pdf_page_1.png (430 KB)
+render_pdf_to_png/pdf_page_2.png (42 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_to_png/render-pdf-to-png-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -287,6 +338,13 @@ if __name__ == "__main__":
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-pdf-to-jpg-outputs.zip" >}}  
+```text
+render_pdf_to_jpg/pdf_to_jpg_1.jpg (112 KB)
+render_pdf_to_jpg/pdf_to_jpg_2.jpg (33 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_to_jpg/render-pdf-to-jpg-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Preserve the size of document pages
@@ -318,6 +376,13 @@ if __name__ == "__main__":
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-pdf-preserve-page-size-outputs.zip" >}}  
+```text
+render_pdf_preserve_page_size/pdf_preserve_page_size_1.png (364 KB)
+render_pdf_preserve_page_size/pdf_preserve_page_size_2.png (30 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_preserve_page_size/render-pdf-preserve-page-size-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Enable font hinting
@@ -348,6 +413,13 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-with-font-hinting-outputs.zip" >}}  
+```text
+render_pdf_with_font_hinting/pdf_with_font_hinting_1.png (1309 KB)
+render_pdf_with_font_hinting/pdf_with_font_hinting_2.png (100 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_with_font_hinting/render-pdf-with-font-hinting-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -382,6 +454,13 @@ if __name__ == "__main__":
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-pdf-disable-char-grouping-outputs.zip" >}}  
+```text
+render_pdf_disable_char_grouping/pdf_disable_char_grouping_1.png (1309 KB)
+render_pdf_disable_char_grouping/pdf_disable_char_grouping_2.png (100 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_disable_char_grouping/render-pdf-disable-char-grouping-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render text comments
@@ -414,6 +493,13 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-with-comments-outputs.zip" >}}  
+```text
+render_pdf_with_comments/pdf_with_comments_1.png (1309 KB)
+render_pdf_with_comments/pdf_with_comments_2.png (100 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_with_comments/render-pdf-with-comments-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -452,6 +538,13 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-pdf-information.txt" >}}  
+```text
+File type: Portable Document Format File (.pdf)
+The number of pages: 2
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/get_pdf_information/get-pdf-information.txt)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -510,6 +603,22 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "extract-pdf-text.txt" >}}  
+```text
+Page: 1
+Text lines/words/characters:
+Line 'How to fold origami candy boxes' X=141.14 Y=76.4052 313.12501x22.044px with 6 word(s).	Words: ['How', 'to', 'fold', 'origami', 'candy', 'boxes']
+		Characters for 'How': ['H', 'o', 'w']
+		Characters for 'to': ['t', 'o']
+		Characters for 'fold': ['f', 'o', 'l', 'd']
+		Characters for 'origami': ['o', 'r', 'i', 'g', 'a', 'm', 'i']
+		Characters for 'candy': ['c', 'a', 'n', 'd', 'y']
+		Characters for 'boxes': ['b', 'o', 'x', 'e', 's']
+Line 'How about folding 
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/extract_pdf_text/extract-pdf-text.txt)
 {{< /tab >}}
 {{< /tabs >}}
 

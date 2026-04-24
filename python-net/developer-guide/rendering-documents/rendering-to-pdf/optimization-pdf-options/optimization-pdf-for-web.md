@@ -37,4 +37,10 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-for-web/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "optimized_spreadsheet.pdf" >}}  
+```text
+Binary file (PDF, 232 KB)
+```
+[Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-for-web/optimize_pdf_for_web/optimized_spreadsheet.pdf)
+{{< /tab >}}
 {{< /tabs >}}

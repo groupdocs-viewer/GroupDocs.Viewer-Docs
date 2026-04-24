@@ -59,6 +59,15 @@ if __name__ == "__main__":
 `sample.epub` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-ebook-to-html-outputs.zip" >}}  
+```text
+render_ebook_to_html/pdf_page_1.html (35 KB)
+render_ebook_to_html/pdf_page_2.html (36 KB)
+render_ebook_to_html/pdf_page_3.html (36 KB)
+render_ebook_to_html/pdf_page_4.html (35 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ebooks/render_ebook_to_html/render-ebook-to-html-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -97,6 +106,22 @@ if __name__ == "__main__":
 `sample.epub` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-ebook-to-html-external-outputs.zip" >}}  
+```text
+render_ebook_to_html_external/pdf_page_1.html (1 KB)
+render_ebook_to_html_external/pdf_page_1/resource_1_f.woff (9 KB)
+render_ebook_to_html_external/pdf_page_1/resource_1_f1.woff (12 KB)
+render_ebook_to_html_external/pdf_page_1/resource_1_i.png (3 KB)
+render_ebook_to_html_external/pdf_page_1/resource_1_s.css (2 KB)
+render_ebook_to_html_external/pdf_page_2.html (1 KB)
+render_ebook_to_html_external/pdf_page_2/resource_2_f.woff (9 KB)
+render_ebook_to_html_external/pdf_page_2/resource_2_f1.woff (12 KB)
+render_ebook_to_html_external/pdf_page_2/resource_2_i.png (3 KB)
+render_ebook_to_html_external/pdf_page_2/resource_2_s.css (2 KB)
+[TRUNCATED] (20 files total)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ebooks/render_ebook_to_html_external/render-ebook-to-html-external-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
@@ -129,6 +154,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.epub` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "ebook.pdf" >}}  
+```text
+Binary file (PDF, 28 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ebooks/render_ebook_to_pdf/ebook.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -166,6 +197,15 @@ if __name__ == "__main__":
 `sample.epub` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-ebook-to-png-outputs.zip" >}}  
+```text
+render_ebook_to_png/ebook_page_0_1.png (9 KB)
+render_ebook_to_png/ebook_page_0_2.png (9 KB)
+render_ebook_to_png/ebook_page_0_3.png (9 KB)
+render_ebook_to_png/ebook_page_0_4.png (9 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ebooks/render_ebook_to_png/render-ebook-to-png-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 The following image demonstrates the result:
 
@@ -200,6 +240,15 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.epub` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ebooks/sample.epub) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-ebook-to-jpg-outputs.zip" >}}  
+```text
+render_ebook_to_jpg/ebook_to_jpg_1.jpg (14 KB)
+render_ebook_to_jpg/ebook_to_jpg_2.jpg (14 KB)
+render_ebook_to_jpg/ebook_to_jpg_3.jpg (14 KB)
+render_ebook_to_jpg/ebook_to_jpg_4.jpg (14 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ebooks/render_ebook_to_jpg/render-ebook-to-jpg-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 

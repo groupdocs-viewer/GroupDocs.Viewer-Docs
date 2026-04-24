@@ -1,0 +1,9 @@
+File type: AutoCAD Drawing Database File (.dwg)
+Pages count: 1
+Layers:
+  0 (visible=True)
+  CIRCLE (visible=True)
+  TRIANGLE (visible=True)
+  QUADRANT (visible=True)
+Layouts:
+  Model (26x23)

@@ -48,6 +48,12 @@ if __name__ == "__main__":
 `products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/products.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "by_page_breaks.pdf" >}}  
+```text
+Binary file (PDF, 461 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/split_by_page_breaks/by_page_breaks.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below illustrates the result.
@@ -83,6 +89,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `two-pages.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/two-pages.xlsx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "by_rows.pdf" >}}  
+```text
+Binary file (PDF, 11 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/split_by_rows/by_rows.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -120,6 +132,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `four-pages.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/four-pages.xlsx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "by_rows_and_columns.pdf" >}}  
+```text
+Binary file (PDF, 14 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/split_by_rows_and_columns/by_rows_and_columns.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -197,6 +215,12 @@ if __name__ == "__main__":
 `Products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/Products.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "one_page_per_sheet.pdf" >}}  
+```text
+Binary file (PDF, 420 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/render_one_page_per_sheet/one_page_per_sheet.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below illustrates the result. The output PDF file contains one page that displays all worksheet data.
@@ -239,6 +263,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `Products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/Products.xlsx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "print_area_and_page_breaks.pdf" >}}  
+```text
+Binary file (PDF, 461 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/render_print_area_and_page_breaks/print_area_and_page_breaks.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

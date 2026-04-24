@@ -65,6 +65,14 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-word-to-html-outputs.zip" >}}  
+```text
+render_word_to_html/pdf_page_1.html (317 KB)
+render_word_to_html/pdf_page_2.html (149 KB)
+render_word_to_html/pdf_page_3.html (113 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_to_html/render-word-to-html-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -103,6 +111,22 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-word-to-html-external-outputs.zip" >}}  
+```text
+render_word_to_html_external/pdf_page_1.html (41 KB)
+render_word_to_html_external/pdf_page_1/resource_1_f.woff (16 KB)
+render_word_to_html_external/pdf_page_1/resource_1_f1.woff (11 KB)
+render_word_to_html_external/pdf_page_1/resource_1_f2.woff (10 KB)
+render_word_to_html_external/pdf_page_1/resource_1_f3.woff (22 KB)
+render_word_to_html_external/pdf_page_1/resource_1_f4.woff (9 KB)
+render_word_to_html_external/pdf_page_1/resource_1_g.svg (1 KB)
+render_word_to_html_external/pdf_page_1/resource_1_g1.svg (726 bytes)
+render_word_to_html_external/pdf_page_1/resource_1_g10.svg (28 KB)
+render_word_to_html_external/pdf_page_1/resource_1_g11.svg (489 bytes)
+[TRUNCATED] (78 files total)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_to_html_external/render-word-to-html-external-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
@@ -135,6 +159,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "word_document.pdf" >}}  
+```text
+Binary file (PDF, 234 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_to_pdf/word_document.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -169,6 +199,14 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-word-to-png-outputs.zip" >}}  
+```text
+render_word_to_png/word_page_0_1.png (89 KB)
+render_word_to_png/word_page_0_2.png (77 KB)
+render_word_to_png/word_page_0_3.png (50 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_to_png/render-word-to-png-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 The following image demonstrates the result:
 
@@ -200,6 +238,14 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-word-to-jpg-outputs.zip" >}}  
+```text
+render_word_to_jpg/word_to_jpg_1.jpg (160 KB)
+render_word_to_jpg/word_to_jpg_2.jpg (194 KB)
+render_word_to_jpg/word_to_jpg_3.jpg (75 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_to_jpg/render-word-to-jpg-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -249,6 +295,15 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-word-with-margins-outputs.zip" >}}  
+```text
+render_word_with_margins/word_with_margins_1.html (298 KB)
+render_word_with_margins/word_with_margins_2.html (120 KB)
+render_word_with_margins/word_with_margins_3.html (148 KB)
+render_word_with_margins/word_with_margins_4.html (67 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_with_margins/render-word-with-margins-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render tracked changes
@@ -286,6 +341,12 @@ if __name__ == "__main__":
 `with_tracked_changes.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/with_tracked_changes.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "word_with_tracked_changes.pdf" >}}  
+```text
+Binary file (PDF, 22 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_with_tracked_changes/word_with_tracked_changes.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image illustrates the result:
@@ -321,6 +382,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `with_comment.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-word-documents/with_comment.docx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "word_with_comments.pdf" >}}  
+```text
+Binary file (PDF, 37 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_with_comments/word_with_comments.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

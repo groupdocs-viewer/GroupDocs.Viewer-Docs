@@ -1,0 +1,5 @@
+File type: Zipped File (.zip)
+Pages count: 1
+Folders:
+  /first_folder/
+  /second_folder/

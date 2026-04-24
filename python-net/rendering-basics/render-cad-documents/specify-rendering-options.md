@@ -51,6 +51,12 @@ if __name__ == "__main__":
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "background_color.pdf" >}}  
+```text
+Binary file (PDF, 3 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/set_background_color/background_color.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image illustrates the result:
@@ -92,6 +98,12 @@ if __name__ == "__main__":
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "image_with_size_limits.pdf" >}}  
+```text
+Binary file (PDF, 12 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/set_image_size/image_with_size_limits.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 When you render all layouts/sheets contained in a CAD file (the [CadOptions.render_layouts](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property is `True`), each layout/sheet is rendered as a separate page/image and has its own size. In this case, when you specify only the [width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#methods) or [height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#methods) value, the other side is scaled proportionally to maintain the aspect ratio of each layout/sheet. When you set both [width and height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#methods), all generated images have the same size and may look distorted. To avoid this, use the [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property to render each layout/sheet separately and set its size.
@@ -128,6 +140,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `small_page.pc3` is the PC3 configuration file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/small_page.pc3) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "apply_pc3_file.pdf" >}}  
+```text
+Binary file (PDF, 3 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/apply_pc3_file/apply_pc3_file.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -189,6 +207,15 @@ if __name__ == "__main__":
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "split-drawing-into-tiles-outputs.zip" >}}  
+```text
+split_drawing_into_tiles/drawing_into_tiles_1.html (3 KB)
+split_drawing_into_tiles/drawing_into_tiles_2.html (6 KB)
+split_drawing_into_tiles/drawing_into_tiles_3.html (3 KB)
+split_drawing_into_tiles/drawing_into_tiles_4.html (3 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/split_drawing_into_tiles/split-drawing-into-tiles-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 In the example above the GroupDocs.Viewer will generate four HTML files named "page_1.html", "page_2.html", "page_3.html", and "page_4.html", where each of these HTML file contains a single tile in a form of SVG vector image. The [`HtmlViewOptions.for_external_resources()`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/) static method (with all its overloads) can also be used — in such case the SVG files will not be embedded inside the output HTML files, but will be saved separately, while HTML only references them through the `A` HTML element.
@@ -212,7 +239,7 @@ from groupdocs.viewer.options import HtmlViewOptions, CadOptions
 
 def enable_performance_mode():
     # Load CAD file
-    with Viewer("input.dwg") as viewer:
+    with Viewer("sample.dwg") as viewer:
         viewOptions = HtmlViewOptions.for_embedded_resources("enable_performance_mode/Output-Page#{0}.html")
         viewOptions.cad_options = CadOptions.for_rendering_by_width(1000)
         viewOptions.cad_options.enable_performance_conversion_mode = True
@@ -223,10 +250,26 @@ if __name__ == "__main__":
     enable_performance_mode()
 ```
 {{< /tab >}}
-{{< tab "input.dwg" >}}
+{{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`input.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/input.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Output-Page#1.html" >}}  
+```text
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8" />
+    <title>Page-1</title>
+</head>
+<body>
+    <div id="main_image">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1479195223_1580" width="1000" height="884.615"><g transform="matrix(37.982 0 0 -37.982 -457.044 1232.476)"><g><path d="M12.159 13.43L17.76 13.43L17.76 9.219L12.159 9.219L12.159 13.43" stroke="#00F
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/enable_performance_mode/Output-Page#1.html)
 {{< /tab >}}
 {{< /tabs >}}
 

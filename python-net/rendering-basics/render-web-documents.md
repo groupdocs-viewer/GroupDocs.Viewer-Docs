@@ -56,6 +56,12 @@ if __name__ == "__main__":
 `groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "optimized_for_web.pdf" >}}  
+```text
+Binary file (PDF, 47 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-web-documents/render_web_to_pdf/optimized_for_web.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -91,6 +97,14 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-web-to-png-outputs.zip" >}}  
+```text
+render_web_to_png/optimized_for_web_1.pdf (111 KB)
+render_web_to_png/optimized_for_web_2.pdf (195 KB)
+render_web_to_png/optimized_for_web_3.pdf (24 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-web-documents/render_web_to_png/render-web-to-png-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -128,6 +142,14 @@ if __name__ == "__main__":
 `groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-web-to-jpg-outputs.zip" >}}  
+```text
+render_web_to_jpg/web_to_jpg_1.jpg (95 KB)
+render_web_to_jpg/web_to_jpg_2.jpg (183 KB)
+render_web_to_jpg/web_to_jpg_3.jpg (31 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-web-documents/render_web_to_jpg/render-web-to-jpg-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Convert CHM files to HTML
@@ -162,6 +184,22 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.chm` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-web-documents/sample.chm) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-chm-to-html-outputs.zip" >}}  
+```text
+render_chm_to_html/chm_result_1.html (86 KB)
+render_chm_to_html/chm_result_10.html (84 KB)
+render_chm_to_html/chm_result_100.html (99 KB)
+render_chm_to_html/chm_result_101.html (89 KB)
+render_chm_to_html/chm_result_102.html (101 KB)
+render_chm_to_html/chm_result_103.html (98 KB)
+render_chm_to_html/chm_result_104.html (120 KB)
+render_chm_to_html/chm_result_105.html (114 KB)
+render_chm_to_html/chm_result_106.html (81 KB)
+render_chm_to_html/chm_result_107.html (75 KB)
+[TRUNCATED] (123 files total)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-web-documents/render_chm_to_html/render-chm-to-html-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -199,5 +237,21 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.chm` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-web-documents/sample.chm) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-chm-to-html-external-outputs.zip" >}}  
+```text
+render_chm_to_html_external/pdf_page_1.html (30 KB)
+render_chm_to_html_external/pdf_page_10.html (17 KB)
+render_chm_to_html_external/pdf_page_100.html (16 KB)
+render_chm_to_html_external/pdf_page_100/resource_100_f.woff (12 KB)
+render_chm_to_html_external/pdf_page_100/resource_100_f1.woff (16 KB)
+render_chm_to_html_external/pdf_page_100/resource_100_f2.woff (12 KB)
+render_chm_to_html_external/pdf_page_100/resource_100_f3.woff (7 KB)
+render_chm_to_html_external/pdf_page_100/resource_100_f4.woff (15 KB)
+render_chm_to_html_external/pdf_page_100/resource_100_s.css (2 KB)
+render_chm_to_html_external/pdf_page_101.html (17 KB)
+[TRUNCATED] (713 files total)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-web-documents/render_chm_to_html_external/render-chm-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}

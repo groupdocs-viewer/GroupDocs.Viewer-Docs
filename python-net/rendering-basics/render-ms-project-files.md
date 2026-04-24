@@ -64,6 +64,22 @@ if __name__ == "__main__":
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "pdf_page_1.html" >}}  
+```text
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html[]>
+<!--[if IE]>  <html class="p1-56000000000-_1_ie"> <![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Page 1</title>
+    <style type="text/css">.p1-56000000000-_1_ sup {
+	vertical-align: baseline;
+	position: relative;
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_to_html/pdf_page_1.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -102,6 +118,19 @@ if __name__ == "__main__":
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-project-to-html-external-outputs.zip" >}}  
+```text
+render_project_to_html_external/pdf_page_1.html (123 KB)
+render_project_to_html_external/pdf_page_1/resource_1_f.ttf (993 KB)
+render_project_to_html_external/pdf_page_1/resource_1_f1.ttf (938 KB)
+render_project_to_html_external/pdf_page_1/resource_1_g.svg (275 KB)
+render_project_to_html_external/pdf_page_1/resource_1_i.png (345 bytes)
+render_project_to_html_external/pdf_page_1/resource_1_i1.png (371 bytes)
+render_project_to_html_external/pdf_page_1/resource_1_i2.png (946 bytes)
+render_project_to_html_external/pdf_page_1/resource_1_s.css (2 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_to_html_external/render-project-to-html-external-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
@@ -133,6 +162,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "project_file.pdf" >}}  
+```text
+Binary file (PDF, 156 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_to_pdf/project_file.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -170,6 +205,12 @@ if __name__ == "__main__":
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "project_page_0_1.png" >}}  
+```text
+Binary file (PNG, 528 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_to_png/project_page_0_1.png)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -206,6 +247,12 @@ if __name__ == "__main__":
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "project_to_jpg_1.jpg" >}}  
+```text
+Binary file (JPG, 255 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_to_jpg/project_to_jpg_1.jpg)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Get information about a Project file
@@ -239,6 +286,13 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-project-info.txt" >}}  
+```text
+File type: Microsoft Project File (.mpp)
+The number of pages: 1
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/get_project_info/get-project-info.txt)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -281,6 +335,12 @@ if __name__ == "__main__":
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "project_with_page_size.pdf" >}}  
+```text
+Binary file (PDF, 160 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_with_page_size/project_with_page_size.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 
@@ -319,6 +379,13 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-project-with-time-unit-outputs.zip" >}}  
+```text
+render_project_with_time_unit/output_1.html (3010 KB)
+render_project_with_time_unit/output_2.html (2643 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_with_time_unit/render-project-with-time-unit-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -359,6 +426,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "project_with_notes.pdf" >}}  
+```text
+Binary file (PDF, 156 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_with_notes/project_with_notes.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

@@ -46,6 +46,17 @@ if __name__ == "__main__":
 `sample.nsf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "pdf_page_1.html" >}}  
+```text
+<!doctype html><html class='gdv-mail-storage-html' lang='en'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title></title><style>section {display:none; background-color:white; position: fixed; top: 0px; left: 26%; height: 100%; width: 74%; overflow-y: scroll;} 
+.gdv-body::-webkit-scrollbar{display:none;}
+.gdv-mail-storage-empty-folder {text-align: center;}
+.gdv-mail-storage-folder:hover {background-color: #E4E5E6;}
+div.gdv-mai
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-lotus-notes-files/render_nsf_to_html/pdf_page_1.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -77,6 +88,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.nsf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "lotus_notes.pdf" >}}  
+```text
+Binary file (PDF, 397 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-lotus-notes-files/render_nsf_to_pdf/lotus_notes.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -114,6 +131,13 @@ if __name__ == "__main__":
 `sample.nsf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-nsf-to-png-outputs.zip" >}}  
+```text
+render_nsf_to_png/lotus_notes_page_0_1.png (44 KB)
+render_nsf_to_png/lotus_notes_page_0_2.png (110 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-lotus-notes-files/render_nsf_to_png/render-nsf-to-png-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -149,6 +173,13 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.nsf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-nsf-to-jpg-outputs.zip" >}}  
+```text
+render_nsf_to_jpg/nsf_to_jpg_1.jpg (39 KB)
+render_nsf_to_jpg/nsf_to_jpg_2.jpg (83 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-lotus-notes-files/render_nsf_to_jpg/render-nsf-to-jpg-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -191,6 +222,17 @@ if __name__ == "__main__":
 `sample.nsf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "nsf_with_max_items.html" >}}  
+```text
+<!doctype html><html class='gdv-mail-storage-html' lang='en'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title></title><style>section {display:none; background-color:white; position: fixed; top: 0px; left: 26%; height: 100%; width: 74%; overflow-y: scroll;} 
+.gdv-body::-webkit-scrollbar{display:none;}
+.gdv-mail-storage-empty-folder {text-align: center;}
+.gdv-mail-storage-folder:hover {background-color: #E4E5E6;}
+div.gdv-mai
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-lotus-notes-files/render_nsf_with_max_items/nsf_with_max_items.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Filter messages
@@ -230,5 +272,16 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.nsf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "nsf_with_filters.html" >}}  
+```text
+<!doctype html><html class='gdv-mail-storage-html' lang='en'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title></title><style>section {display:none; background-color:white; position: fixed; top: 0px; left: 26%; height: 100%; width: 74%; overflow-y: scroll;} 
+.gdv-body::-webkit-scrollbar{display:none;}
+.gdv-mail-storage-empty-folder {text-align: center;}
+.gdv-mail-storage-folder:hover {background-color: #E4E5E6;}
+div.gdv-mai
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-lotus-notes-files/render_nsf_with_filters/nsf_with_filters.html)
 {{< /tab >}}
 {{< /tabs >}}

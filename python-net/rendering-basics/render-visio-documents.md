@@ -72,6 +72,14 @@ if __name__ == "__main__":
 `sample.vsdx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-visio-to-html-outputs.zip" >}}  
+```text
+render_visio_to_html/pdf_page_1.html (4836 KB)
+render_visio_to_html/pdf_page_2.html (383 KB)
+render_visio_to_html/pdf_page_3.html (370 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_to_html/render-visio-to-html-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -111,6 +119,17 @@ if __name__ == "__main__":
 `sample.vsdx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-visio-to-html-external-outputs.zip" >}}  
+```text
+render_visio_to_html_external/pdf_page_1.html (309 bytes)
+render_visio_to_html_external/pdf_page_1/resource_1_g.svg (4836 KB)
+render_visio_to_html_external/pdf_page_2.html (309 bytes)
+render_visio_to_html_external/pdf_page_2/resource_2_g.svg (383 KB)
+render_visio_to_html_external/pdf_page_3.html (309 bytes)
+render_visio_to_html_external/pdf_page_3/resource_3_g.svg (370 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_to_html_external/render-visio-to-html-external-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
@@ -143,6 +162,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.vsdx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "visio_diagram.pdf" >}}  
+```text
+Binary file (PDF, 212 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_to_pdf/visio_diagram.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -180,6 +205,14 @@ if __name__ == "__main__":
 `sample.vsdx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-visio-to-png-outputs.zip" >}}  
+```text
+render_visio_to_png/visio_page_0_1.png (14 KB)
+render_visio_to_png/visio_page_0_2.png (66 KB)
+render_visio_to_png/visio_page_0_3.png (43 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_to_png/render-visio-to-png-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 The following image demonstrates the result:
 
@@ -214,6 +247,14 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.vsdx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-visio-to-jpg-outputs.zip" >}}  
+```text
+render_visio_to_jpg/visio_to_jpg_1.jpg (24 KB)
+render_visio_to_jpg/visio_to_jpg_2.jpg (71 KB)
+render_visio_to_jpg/visio_to_jpg_3.jpg (50 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_to_jpg/render-visio-to-jpg-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -257,6 +298,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `map.vsdx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-visio-documents/map.vsdx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "visio_shapes_only.pdf" >}}  
+```text
+Binary file (PDF, 236 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_shapes_only/visio_shapes_only.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

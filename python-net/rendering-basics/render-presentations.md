@@ -70,6 +70,22 @@ if __name__ == "__main__":
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "pdf_page_1.html" >}}  
+```text
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9" charset="utf-8" />
+</head>
+<body><style>
+font-variant-ligatures: none;
+@font-face {
+font-family: 'Calibri';
+font-style: 'normal';
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_html/pdf_page_1.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -108,6 +124,14 @@ if __name__ == "__main__":
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-presentation-to-html-external-outputs.zip" >}}  
+```text
+render_presentation_to_html_external/pdf_page_1.html (296 bytes)
+render_presentation_to_html_external/pdf_page_1/resource_1_g.svg (1 KB)
+render_presentation_to_html_external/pdf_page_1/resource_1_i.jpg (63 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_html_external/render-presentation-to-html-external-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
@@ -138,6 +162,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "presentation.pdf" >}}  
+```text
+Binary file (PDF, 174 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_pdf/presentation.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -171,6 +201,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "presentation_page_0_1.png" >}}  
+```text
+Binary file (PNG, 1.0 MB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_png/presentation_page_0_1.png)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -208,6 +244,12 @@ if __name__ == "__main__":
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "presentation_to_jpg_1.jpg" >}}  
+```text
+Binary file (JPG, 53 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_jpg/presentation_to_jpg_1.jpg)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render hidden slides
@@ -238,6 +280,12 @@ if __name__ == "__main__":
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "presentation_with_hidden_slides.pdf" >}}  
+```text
+Binary file (PDF, 174 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_with_hidden_slides/presentation_with_hidden_slides.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render comments
@@ -265,6 +313,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "presentation_with_comments.pdf" >}}  
+```text
+Binary file (PDF, 174 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_with_comments/presentation_with_comments.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -303,6 +357,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "presentation_with_notes.pdf" >}}  
+```text
+Binary file (PDF, 174 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_with_notes/presentation_with_notes.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

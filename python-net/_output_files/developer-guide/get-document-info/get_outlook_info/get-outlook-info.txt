@@ -1,0 +1,15 @@
+File type: Outlook Personal Information Store File (.pst)
+Pages count: 1
+Folders:
+  Inbox
+  Deleted Items
+  Outbox
+  Sent Items
+  Calendar
+  Contacts
+  Drafts
+  Journal
+  Notes
+  Tasks
+  Junk E-mail
+  (To do's

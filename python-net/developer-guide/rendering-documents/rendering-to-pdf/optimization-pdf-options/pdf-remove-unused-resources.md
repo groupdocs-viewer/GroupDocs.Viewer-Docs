@@ -50,6 +50,13 @@ if __name__ == "__main__":
 `sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/pdf-remove-unused-resources/sample.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "remove-unused-resources-outputs.zip" >}}  
+```text
+remove_unused_resources/removed_unused_objects.pdf (393 KB)
+remove_unused_resources/removed_unused_streams.pdf (394 KB)
+```
+[Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/pdf-remove-unused-resources/remove_unused_resources/remove-unused-resources-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 As it is explained above, the effectiveness of the described optimizations depends solely on the specific PDF file — if it has no “orphaned” objects or streams, then these optimizations will do nothing, they only increase the document processing time. However, in some cases they can reduce the document size significantly, even several times.

@@ -94,6 +94,12 @@ if __name__ == "__main__":
 `terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "text_with_load_options.pdf" >}}  
+```text
+Binary file (PDF, 28 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_with_load_options/text_with_load_options.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render text files as HTML
@@ -126,6 +132,13 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "pdf_page_1.html" >}}  
+```text
+<!doctype html><html lang='en'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title>terms_of_service.txt</title></head> <style type='text/css'>.gdv-container pre { width:588px; white-space:normal; } .gdv-container { margin-top:60px; margin-left:60px; }</style><body><div style="font-size:10pt;font-family:Times New Roman;" class='gdv-container'><pre>London is the capital city of England and the United Kingdom, and the most popul
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_html/pdf_page_1.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -165,6 +178,13 @@ if __name__ == "__main__":
 `terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-text-to-html-external-outputs.zip" >}}  
+```text
+render_text_to_html_external/pdf_page_1.html (3 KB)
+render_text_to_html_external/pdf_page_1/resource_1_s.css (109 bytes)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_html_external/render-text-to-html-external-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The image below demonstrates the result. External resources are placed in a separate folder.
@@ -199,6 +219,13 @@ if __name__ == "__main__":
 `terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "text_to_single_html.html" >}}  
+```text
+<!doctype html><html lang='en'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title>terms_of_service.txt</title></head> <style type='text/css'>.gdv-container pre { width:588px; white-space:normal; } .gdv-container { margin-top:60px; margin-left:60px; }</style><body><div style="font-size:10pt;font-family:Times New Roman;" class='gdv-container'><pre>London is the capital city of England and the United Kingdom, and the most popul
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_single_html/text_to_single_html.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render text files as PDF
@@ -226,6 +253,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "text_document.pdf" >}}  
+```text
+Binary file (PDF, 30 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_pdf/text_document.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -263,6 +296,12 @@ if __name__ == "__main__":
 `terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "text_page_0_1.png" >}}  
+```text
+Binary file (PNG, 126 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_png/text_page_0_1.png)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -298,5 +337,11 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "text_to_jpg_1.jpg" >}}  
+```text
+Binary file (JPG, 110 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_jpg/text_to_jpg_1.jpg)
 {{< /tab >}}
 {{< /tabs >}}

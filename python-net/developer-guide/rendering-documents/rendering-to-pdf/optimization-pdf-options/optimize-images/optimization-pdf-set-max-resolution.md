@@ -43,6 +43,12 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-set-max-resolution/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "optimized_resolution.pdf" >}}  
+```text
+Binary file (PDF, 227 KB)
+```
+[Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-set-max-resolution/set_max_resolution/optimized_resolution.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:

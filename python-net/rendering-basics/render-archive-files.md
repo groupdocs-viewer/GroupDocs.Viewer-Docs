@@ -71,6 +71,22 @@ if __name__ == "__main__":
 `documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "pdf_page_1.html" >}}  
+```text
+﻿<HTML><HEAD><META charset="utf-8" /><META name="viewport" content="width=device-width, initial-scale=1.0" /><TITLE>documents.zip</TITLE><STYLE type="text/css">section.files-tree { 
+	display: flex; 
+	flex-direction: column; 
+	padding: 2rem 2rem 2rem 3rem; 
+}
+nav.folder-item>div.folder-title, div.file-item>div.file-title { 
+	display: flex; 
+	flex-direction: row; 
+	align-items: center; 
+	gap: 0.3rem; 
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_to_html/pdf_page_1.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -108,6 +124,22 @@ if __name__ == "__main__":
 `documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "archive_with_items_per_page_1.html" >}}  
+```text
+﻿<HTML><HEAD><META charset="utf-8" /><META name="viewport" content="width=device-width, initial-scale=1.0" /><TITLE>documents.zip</TITLE><STYLE type="text/css">section.files-tree { 
+	display: flex; 
+	flex-direction: column; 
+	padding: 2rem 2rem 2rem 3rem; 
+}
+nav.folder-item>div.folder-title, div.file-item>div.file-title { 
+	display: flex; 
+	flex-direction: row; 
+	align-items: center; 
+	gap: 0.3rem; 
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_with_items_per_page/archive_with_items_per_page_1.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Create a single HTML page
@@ -137,6 +169,22 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "archive_to_single_html.html" >}}  
+```text
+﻿<HTML><HEAD><META charset="utf-8" /><META name="viewport" content="width=device-width, initial-scale=1.0" /><TITLE>documents.zip</TITLE><STYLE type="text/css">section.files-tree { 
+	display: flex; 
+	flex-direction: column; 
+	padding: 2rem 2rem 2rem 3rem; 
+}
+nav.folder-item>div.folder-title, div.file-item>div.file-title { 
+	display: flex; 
+	flex-direction: row; 
+	align-items: center; 
+	gap: 0.3rem; 
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_to_single_html/archive_to_single_html.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -169,6 +217,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "archive_content.pdf" >}}  
+```text
+Binary file (PDF, 54 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_to_pdf/archive_content.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -206,6 +260,12 @@ if __name__ == "__main__":
 `documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "archive_page_0_1.png" >}}  
+```text
+Binary file (PNG, 19 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_to_png/archive_page_0_1.png)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -242,6 +302,12 @@ if __name__ == "__main__":
 `documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "archive_to_jpg_1.jpg" >}}  
+```text
+Binary file (JPG, 22 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_to_jpg/archive_to_jpg_1.jpg)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render a specific folder
@@ -276,6 +342,22 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "specific_archive_folder.html" >}}  
+```text
+﻿<HTML><HEAD><META charset="utf-8" /><META name="viewport" content="width=device-width, initial-scale=1.0" /><TITLE>documents.zip</TITLE><STYLE type="text/css">section.files-tree { 
+	display: flex; 
+	flex-direction: column; 
+	padding: 2rem 2rem 2rem 3rem; 
+}
+nav.folder-item>div.folder-title, div.file-item>div.file-title { 
+	display: flex; 
+	flex-direction: row; 
+	align-items: center; 
+	gap: 0.3rem; 
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_specific_archive_folder/specific_archive_folder.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -313,6 +395,22 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "archive_with_custom_filename_1.html" >}}  
+```text
+﻿<HTML><HEAD><META charset="utf-8" /><META name="viewport" content="width=device-width, initial-scale=1.0" /><TITLE>Sample Files</TITLE><STYLE type="text/css">section.files-tree { 
+	display: flex; 
+	flex-direction: column; 
+	padding: 2rem 2rem 2rem 3rem; 
+}
+nav.folder-item>div.folder-title, div.file-item>div.file-title { 
+	display: flex; 
+	flex-direction: row; 
+	align-items: center; 
+	gap: 0.3rem; 
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_with_custom_filename/archive_with_custom_filename_1.html)
 {{< /tab >}}
 {{< /tabs >}}
 

@@ -1,0 +1,4 @@
+File type: Microsoft Project File (.mpp)
+Pages count: 1
+Start date: 2008-06-01 00:00:00+00:00
+End date: 2008-09-03 00:00:00+00:00

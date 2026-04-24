@@ -58,6 +58,12 @@ if __name__ == "__main__":
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "headings.pdf" >}}  
+```text
+Binary file (PDF, 521 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/render_headings/headings.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -93,6 +99,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "grid_lines.pdf" >}}  
+```text
+Binary file (PDF, 479 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/render_grid_lines/grid_lines.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -150,6 +162,12 @@ if __name__ == "__main__":
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "text_overflow_mode.pdf" >}}  
+```text
+Binary file (PDF, 467 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/set_text_overflow_mode/text_overflow_mode.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render hidden rows and columns
@@ -184,6 +202,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "hidden_rows_and_columns.pdf" >}}  
+```text
+Binary file (PDF, 461 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/render_hidden_rows_and_columns/hidden_rows_and_columns.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -221,6 +245,12 @@ if __name__ == "__main__":
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "hidden_pages.pdf" >}}  
+```text
+Binary file (PDF, 461 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/render_hidden_pages/hidden_pages.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Skip empty rows and columns
@@ -251,6 +281,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "skip_empty_rows_and_columns.pdf" >}}  
+```text
+Binary file (PDF, 451 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/skip_empty_rows_and_columns/skip_empty_rows_and_columns.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -286,6 +322,22 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-comments-outputs.zip" >}}  
+```text
+render_comments/comments_1.png (100 KB)
+render_comments/comments_10.png (80 KB)
+render_comments/comments_11.png (74 KB)
+render_comments/comments_12.png (73 KB)
+render_comments/comments_13.png (78 KB)
+render_comments/comments_14.png (33 KB)
+render_comments/comments_15.png (101 KB)
+render_comments/comments_16.png (101 KB)
+render_comments/comments_17.png (107 KB)
+render_comments/comments_18.png (110 KB)
+[TRUNCATED] (42 files total)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/render_comments/render-comments-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -326,6 +378,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "worksheet_margins.pdf" >}}  
+```text
+Binary file (PDF, 461 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/set_worksheet_margins/worksheet_margins.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

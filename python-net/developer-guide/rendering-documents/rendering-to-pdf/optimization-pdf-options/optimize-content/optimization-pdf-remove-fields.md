@@ -40,6 +40,12 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-fields/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "without_form_fields.pdf" >}}  
+```text
+Binary file (PDF, 233 KB)
+```
+[Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-fields/remove_form_fields/without_form_fields.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:

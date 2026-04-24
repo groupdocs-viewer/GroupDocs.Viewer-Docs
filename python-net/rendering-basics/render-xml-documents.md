@@ -177,6 +177,13 @@ if __name__ == "__main__":
 `sample.xml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-xml-documents/sample.xml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-xml-to-html-outputs.zip" >}}  
+```text
+render_xml_to_html/page-1.html (36 KB)
+render_xml_to_html/single-page.html (9 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-xml-documents/render_xml_to_html/render-xml-to-html-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 All other options, which are present in the [`HtmlViewOptions`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/) class, have no effect when saving XML to HTML, except the [`render_to_single_page`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#properties) flag.
@@ -209,6 +216,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.xml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-xml-documents/sample.xml) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "xml_document.pdf" >}}  
+```text
+Binary file (PDF, 22 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-xml-documents/render_xml_to_pdf/xml_document.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -255,6 +268,13 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.xml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-xml-documents/sample.xml) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-xml-to-images-outputs.zip" >}}  
+```text
+render_xml_to_images/page-1.jpeg (36 KB)
+render_xml_to_images/page-1.png (27 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-xml-documents/render_xml_to_images/render-xml-to-images-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 

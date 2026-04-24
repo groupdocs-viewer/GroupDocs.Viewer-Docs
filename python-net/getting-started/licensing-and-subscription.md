@@ -1,20 +1,20 @@
 ---
-id: licensing-and-evaluation
-url: viewer/python-net/licensing-and-evaluation
-title: Licensing and evaluation
-weight: 5
-keywords: GroupDocs.Viewer, licensing, trial, evaluation, temporary license, metered licensing, GroupDocs Viewer Python
-description: "GroupDocs.Viewer for Python offers purchase plans, a free trial, and a 30-day temporary license for evaluation."
+id: licensing-and-subscription
+url: viewer/python-net/getting-started/licensing-and-subscription
+title: Licensing and Subscription
+linkTitle: Licensing and Subscription
+weight: 6
+keywords: GroupDocs.Viewer, licensing, trial, evaluation, temporary license, metered licensing, set_license, python
+description: "Apply a license to GroupDocs.Viewer for Python via .NET — from file, from stream, via environment variable, or with a metered key."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 aliases:
+    - /viewer/python-net/licensing-and-evaluation/
     - /viewer/python-net/licensing-and-subscription/
 ---
 
-To help you quickly explore library and its features, GroupDocs.Viewer provides a Free Trial and a 30-day Temporary License for evaluation, as well as various purchase plans.
-
-Sometimes, to get familiar with the system quickly, you may want to dive into the code right away. To make this easier, GroupDocs.Viewer offers a Free Trial and a 30-day Temporary License for evaluation, along with various purchase plans.
+GroupDocs.Viewer offers a Free Trial and a 30-day Temporary License for evaluation, along with several purchase plans. If you want to dive straight into the code, the Free Trial is fully functional (see the limitations below) and does not require any setup.
 
 {{< alert style="info" >}}
 Please note that general policies and practices guide you on evaluating, licensing, and purchasing our products. See the [Purchase Policies and FAQ](https://purchase.groupdocs.com/policies/) section for details.
@@ -88,7 +88,7 @@ GroupDocs.Viewer can also read a license from the project's root directory. Cons
 📂 my-app
  ├──app.py
  ├──source.docx
- ├──groupdocs-viewer-net-25.12-py3-none-*.whl
+ ├──groupdocs_viewer_net-*.whl
  └──GroupDocs.Viewer.lic
 ```
 
@@ -136,7 +136,7 @@ def set_license_from_stream():
         print(f"License file not found at: {license_path}")
         return
 
-    # Create a readable steam
+    # Create a readable stream
     with open(license_path, "rb") as license_stream:
         # Instantiate License and set the license
         license = License()

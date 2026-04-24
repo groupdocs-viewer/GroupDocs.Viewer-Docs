@@ -40,6 +40,12 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-annotations/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "without_annotations.pdf" >}}  
+```text
+Binary file (PDF, 234 KB)
+```
+[Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-annotations/remove_annotations/without_annotations.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:

@@ -1,0 +1,4 @@
+File type: AutoCAD Drawing Database File (.dwg)
+Pages count: 1
+
+View info retrieved successfully.

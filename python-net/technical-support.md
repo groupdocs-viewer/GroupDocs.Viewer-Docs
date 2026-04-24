@@ -1,15 +1,16 @@
 ---
 id: technical-support
-url: /viewer/python-net/technical-support
+url: viewer/python-net/technical-support
 title: Technical Support
-description: "Free technical support is available for all GroupDocs.Viewer users. Report questions or issues via the GroupDocs Free Support Forum."
+linkTitle: Technical Support
+description: "Report issues, ask questions, and request features for GroupDocs.Viewer for Python via .NET through the free support forum, paid helpdesk, or the GitHub examples repository."
+keywords: technical support, free support, paid support, helpdesk, forum, GitHub issues, GroupDocs.Viewer, python
+weight: 10
 productName: GroupDocs.Viewer for Python via .NET
-weight: 7
-toc: True
-keywords: groupdocs support, groupdocs viewer support, free support forum, paid support helpdesk, groupdocs viewer, technical support, groupdocs forums
+toc: true
 ---
 
-GGroupDocs provides unlimited free technical support for all of its products. Support is available to all users, including those evaluating the product. You can access support at the [Free Support Forum](https://forum.groupdocs.com/) and the [Paid Support Helpdesk](https://helpdesk.groupdocs.com/).
+GroupDocs provides unlimited free technical support for all of its products. Support is available to all users, including those evaluating the product. You can access support at the [Free Support Forum](https://forum.groupdocs.com/) and the [Paid Support Helpdesk](https://helpdesk.groupdocs.com/).
 
 {{< alert style="info" >}}
 Please note that GroupDocs does not offer technical support by phone. Phone support is available only for sales and purchase inquiries.

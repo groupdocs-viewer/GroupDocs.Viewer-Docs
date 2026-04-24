@@ -63,6 +63,13 @@ if __name__ == "__main__":
 `sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "pdf_page_1.html" >}}  
+```text
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta name="generator" content="Aspose.Words for .NET 26.4.0" /><title></title><style type="text/css">@font-face { font-family:Arial; font-weight:bold; src:url('data:application/x-font-ttf;base64,AAEAAAANAIAAAwBQT1MvMhV1XrAAAADcAAAAYGNtYXACmgLeAAABPAAAAJRjdnQg/8OtRwAAAdAAAAdgZnBnbbonEaYAAAkwAAAGPmdseWaZhXVuAAAPcAAAD/ZoZWFko/AZVwAAH2gAAAA2aGhlYRJ+CNgAAB+gAAAA
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_to_html/pdf_page_1.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -100,6 +107,17 @@ if __name__ == "__main__":
 `sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-email-to-html-external-outputs.zip" >}}  
+```text
+render_email_to_html_external/pdf_page_1.html (4 KB)
+render_email_to_html_external/pdf_page_1/resource_1_f.ttf (25 KB)
+render_email_to_html_external/pdf_page_1/resource_1_f1.ttf (41 KB)
+render_email_to_html_external/pdf_page_1/resource_1_f2.ttf (30 KB)
+render_email_to_html_external/pdf_page_1/resource_1_f3.ttf (41 KB)
+render_email_to_html_external/pdf_page_1/resource_1_s.css (3 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_to_html_external/render-email-to-html-external-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 The result is shown below. External resources are placed in a separate folder.
@@ -131,6 +149,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "email_message.pdf" >}}  
+```text
+Binary file (PDF, 73 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_to_pdf/email_message.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -167,6 +191,12 @@ if __name__ == "__main__":
 `sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "email_page_0.png" >}}  
+```text
+Binary file (PNG, 15 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_to_png/email_page_0.png)
+{{< /tab >}}
 {{< /tabs >}}
 
 The following image demonstrates the result:
@@ -201,6 +231,12 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "email_to_jpg.jpg" >}}  
+```text
+Binary file (JPG, 19 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_to_jpg/email_to_jpg.jpg)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -243,6 +279,12 @@ if __name__ == "__main__":
 `sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "email_with_page_size.pdf" >}}  
+```text
+Binary file (PDF, 73 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_with_page_size/email_with_page_size.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Specify the date and time format and change the time zone
@@ -281,6 +323,13 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "email_with_datetime_format.html" >}}  
+```text
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta name="generator" content="Aspose.Words for .NET 26.4.0" /><title></title><style type="text/css">@font-face { font-family:Arial; font-weight:bold; src:url('data:application/x-font-ttf;base64,AAEAAAANAIAAAwBQT1MvMhV1XrAAAADcAAAAYGNtYXACmgLeAAABPAAAAJRjdnQg/8OtRwAAAdAAAAdgZnBnbbonEaYAAAkwAAAGPmdseWaZhXVuAAAPcAAAD/ZoZWFko/AZVwAAH2gAAAA2aGhlYRJ+CNgAAB+gAAAA
+[TRUNCATED]
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_with_datetime_format/email_with_datetime_format.html)
 {{< /tab >}}
 {{< /tabs >}}
 
