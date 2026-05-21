@@ -5,7 +5,7 @@ title: Supported File Formats
 linkTitle: Supported File Formats
 weight: 2
 keywords: file formats, document viewer, GroupDocs.Viewer, Microsoft Office, HTML viewer, PDF viewer, image viewer, CAD, email, archive
-description: "Complete list of the 170+ file formats GroupDocs.Viewer for Python via .NET can render — Microsoft Office, PDF, CAD, email, archives, images, eBooks, and more."
+description: "Complete list of the 190+ file formats GroupDocs.Viewer for Python via .NET can render — Microsoft Office, PDF, CAD, email, archives, images, eBooks, and more."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
@@ -20,6 +20,16 @@ Need to view files online? Try the [GroupDocs.Viewer App](https://products.group
 {{< /alert >}}
 
 This topic lists file formats supported by GroupDocs.Viewer for Python. You can use the input below to filter supported formats by extension.
+
+{{< alert style="info" >}}
+On **Linux and macOS** the package uses `GroupDocs.Viewer.CrossPlatform`, which does **not** render the **Project Management** file formats (MPP, MPT, MPX) or **PSD**. These formats render only on **Windows** (`GroupDocs.Viewer`). Every other format listed below works on all platforms.
+{{< /alert >}}
+
+| Format family | Windows | Linux / macOS |
+|---|:---:|:---:|
+| Project Management (MPP, MPT, MPX) | Yes | No |
+| PSD (Photoshop) | Yes | No |
+| All other formats (Office, PDF, Visio, CAD, images, email, archives, eBooks, web, …) | Yes | Yes |
 
 {{< table-filter placeholder="Start typing to find file format" >}}
 
@@ -123,8 +133,8 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [PCL](https://docs.fileformat.com/page-description-language/pcl/) | Printer Command Language Document | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [PNG](https://docs.fileformat.com/image/png/) | Portable Network Graphics | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [PS](https://docs.fileformat.com/page-description-language/ps/) | PostScript File | ![(tick)](/viewer/python-net/images/check-blue.png) | |
-| [PSB](https://docs.fileformat.com/image/psb/) | Photoshop Large Document Format | ![(tick)](/viewer/python-net/images/check-blue.png) | |
-| [PSD](https://docs.fileformat.com/image/psd/) | Adobe Photoshop Document | ![(tick)](/viewer/python-net/images/check-blue.png) | |
+| [PSB](https://docs.fileformat.com/image/psb/) | Photoshop Large Document Format | ![(tick)](/viewer/python-net/images/check-blue.png) | Windows only (not supported on GroupDocs.Viewer.CrossPlatform). |
+| [PSD](https://docs.fileformat.com/image/psd/) | Adobe Photoshop Document | ![(tick)](/viewer/python-net/images/check-blue.png) | Windows only (not supported on GroupDocs.Viewer.CrossPlatform). |
 | [SVG](https://docs.fileformat.com/page-description-language/svg/) | Scalable Vector Graphics File | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [SVGZ](https://docs.fileformat.com/image/svgz/) | Compressed SVG File | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [TGA](https://docs.fileformat.com/image/tga/) | TARGA (Truevision Advanced Raster Graphics Adapter) Graphics | ![(tick)](/viewer/python-net/images/check-blue.png) | |
@@ -181,6 +191,8 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view presentations: [Render PowerPoint presentations as HTML, PDF, and image files](/viewer/python-net/render-presentations/).
 
 ## Project Management file formats
+
+{{< alert style="info" >}}The Project Management file formats (MPP, MPT, and MPX) are not supported by GroupDocs.Viewer.CrossPlatform and render only on Windows.{{< /alert >}}
 
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |

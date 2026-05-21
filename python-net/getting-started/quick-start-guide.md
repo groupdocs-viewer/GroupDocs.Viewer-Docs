@@ -14,7 +14,7 @@ aliases:
     - /viewer/python-net/hello-world/
 ---
 
-This guide provides a quick overview of how to set up and start using GroupDocs.Viewer for Python via .NET. This library enables developers to render documents to HTML, PDF, PNG, and JPEG formats with minimal configuration.
+This guide provides a quick overview of how to set up and start using GroupDocs.Viewer for Python via .NET. This library enables developers to render documents to HTML, PDF, PNG, and JPG formats with minimal configuration.
 
 ## Prerequisites
 

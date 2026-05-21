@@ -3,7 +3,7 @@ id: home
 url: viewer/python-net
 title: GroupDocs.Viewer for Python via .NET
 weight: 1
-description: "Native Python library that renders 170+ file formats — DOCX, PDF, XLSX, PPTX, CAD, email, archives, images — to HTML, PDF, PNG, or JPG on Windows, Linux, and macOS. No Microsoft Office or Adobe Acrobat required."
+description: "Native Python library that renders 190+ file formats — DOCX, PDF, XLSX, PPTX, CAD, email, archives, images — to HTML, PDF, PNG, or JPG on Windows, Linux, and macOS. No Microsoft Office or Adobe Acrobat required."
 keywords: GroupDocs.Viewer, Python via .NET, document rendering, file viewer, PDF viewer, HTML rendering, DOCX, XLSX, PPTX, CAD, image, email, archive, eBook, on-premise, Windows, Linux, macOS
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: true
@@ -21,7 +21,7 @@ structuredData:
 {{< button style="primary" link="https://pypi.org/project/groupdocs-viewer-net/" >}} {{< icon "gdoc_download" >}} Download from PyPI {{< /button >}}
 {{< button style="primary" link="https://products.groupdocs.app/viewer/family" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#app"></use></svg> Online app {{< /button >}}
 
-[GroupDocs.Viewer for Python via .NET](https://products.groupdocs.com/viewer/python-net/) is a high-performance document rendering library that lets you view 170+ file formats — including DOCX, XLSX, PPTX, PDF, CAD drawings, emails, archives, and images — by rendering them to HTML, PDF, PNG, or JPG. No third-party software required.
+[GroupDocs.Viewer for Python via .NET](https://products.groupdocs.com/viewer/python-net/) is a high-performance document rendering library that lets you view 190+ file formats — including DOCX, XLSX, PPTX, PDF, CAD drawings, emails, archives, and images — by rendering them to HTML, PDF, PNG, or JPG. No third-party software required.
 
 <div style="clear:left"></div>
 
@@ -38,7 +38,7 @@ with Viewer("sample.docx") as viewer:
 
 ## Features
 
-- **170+ File Formats**: Render Microsoft Office, PDF, HTML, CAD, email, archives, images, and more.
+- **190+ File Formats**: Render Microsoft Office, PDF, HTML, CAD, email, archives, images, and more.
 - **Multiple Output Formats**: Render documents to HTML, PDF, PNG, and JPG.
 - **Embedded or External Resources**: Produce self-contained HTML pages or HTML with separate CSS, fonts, and images.
 - **Format Detection**: Automatically detects the format of input files.

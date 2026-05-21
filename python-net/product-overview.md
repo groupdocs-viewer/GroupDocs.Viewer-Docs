@@ -4,7 +4,7 @@ url: viewer/python-net/product-overview
 title: GroupDocs.Viewer for Python via .NET Overview
 linkTitle: Product overview
 weight: 1
-description: "GroupDocs.Viewer for Python via .NET renders 170+ file formats — DOCX, PDF, XLSX, PPTX, CAD, email, archives, images — to HTML, PDF, PNG, or JPG with embedded or external resources, watermarks, page selection, and AI-pipeline friendly output."
+description: "GroupDocs.Viewer for Python via .NET renders 190+ file formats — DOCX, PDF, XLSX, PPTX, CAD, email, archives, images — to HTML, PDF, PNG, or JPG with embedded or external resources, watermarks, page selection, and AI-pipeline friendly output."
 keywords: viewer, render, view, document, HTML, PDF, PNG, JPG, DOCX, XLSX, PPTX, image, CAD, email, archive, python, LLM, RAG
 productName: GroupDocs.Viewer for Python via .NET
 toc: True
@@ -12,7 +12,7 @@ toc: True
 
 ## What is GroupDocs.Viewer?
 
-GroupDocs.Viewer for Python via .NET is a native Python library that renders **170+ file formats** — DOCX, PDF, XLSX, PPTX, CAD drawings, email messages, compressed archives, eBooks, and raster images — into HTML, PDF, PNG, or JPG output. It runs entirely on-premise, requires no Microsoft Office installation, and ships as a pre-built wheel on Windows, Linux, and macOS.
+GroupDocs.Viewer for Python via .NET is a native Python library that renders **190+ file formats** — DOCX, PDF, XLSX, PPTX, CAD drawings, email messages, compressed archives, eBooks, and raster images — into HTML, PDF, PNG, or JPG output. It runs entirely on-premise, requires no Microsoft Office installation, and ships as a pre-built wheel on Windows, Linux, and macOS.
 
 Typical uses include:
 
@@ -26,7 +26,7 @@ Typical uses include:
 
 | Capability | Description |
 |---|---|
-| **170+ file formats** | DOCX, PDF, XLSX, PPTX, CAD, email, archives, eBooks, HTML, images, and more. See [supported formats]({{< ref "viewer/python-net/getting-started/supported-document-formats.md" >}}). |
+| **190+ file formats** | DOCX, PDF, XLSX, PPTX, CAD, email, archives, eBooks, HTML, images, and more. See [supported formats]({{< ref "viewer/python-net/getting-started/supported-document-formats.md" >}}). |
 | **Four output targets** | HTML (embedded or external resources), PDF, PNG, and JPG. Every source format renders to every target. |
 | **Load options per format** | [Passwords, fonts, encodings, sheet indexes, email fields]({{< ref "viewer/python-net/developer-guide/loading-documents" >}}). |
 | **View options per target** | DPI, page size, watermarks, rotation, image size limits, PDF permissions — tuned per output format. |

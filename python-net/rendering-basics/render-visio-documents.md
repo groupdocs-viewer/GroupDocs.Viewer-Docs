@@ -39,8 +39,6 @@ GroupDocs.Viewer supports the following Visio file formats:
 
 GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 
-{{< alert style="info" >}}Family of Visio file formats currently is not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
-
 ## Render Visio files as HTML
 
 Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a Visio file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/python-net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 
