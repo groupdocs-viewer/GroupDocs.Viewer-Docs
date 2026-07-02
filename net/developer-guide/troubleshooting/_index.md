@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-This section describes issues that you may face processing files with GroupDocs.Viewer and solutions for them. The [Known issues]({{< ref "known-issues" >}}) subsection describes the limitations known.
+This section describes issues that you may face processing files with GroupDocs.Viewer and solutions for them. The `Known issues` subsection describes the limitations known.
 
 ## On Linux, Chinese characters are garbled or rendered as boxes
 
