@@ -199,7 +199,7 @@ from groupdocs.viewer.options import PdfViewOptions, SpreadsheetOptions
 
 def render_one_page_per_sheet():
     # Load spreadsheet
-    with Viewer("Products.xlsx") as viewer:
+    with Viewer("products.xlsx") as viewer:
         # Convert the spreadsheet to PDF.
         viewOptions = PdfViewOptions("render_one_page_per_sheet/one_page_per_sheet.pdf")
         # Render each worksheet to one page.
@@ -210,9 +210,9 @@ if __name__ == "__main__":
     render_one_page_per_sheet()
 ```
 {{< /tab >}}
-{{< tab "Products.xlsx" >}}
+{{< tab "products.xlsx" >}}
 {{< tab-text >}}
-`Products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/Products.xlsx) to download it.
+`products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/products.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "one_page_per_sheet.pdf" >}}  
@@ -249,7 +249,7 @@ from groupdocs.viewer.options import PdfViewOptions, SpreadsheetOptions
 
 def render_print_area_and_page_breaks():
     # Load spreadsheet
-    with Viewer("Products.xlsx") as viewer:
+    with Viewer("products.xlsx") as viewer:
         # Render the spreadsheet to PDF.
         viewOptions = PdfViewOptions("render_print_area_and_page_breaks/print_area_and_page_breaks.pdf")
         viewOptions.spreadsheet_options = SpreadsheetOptions.for_rendering_print_area_and_page_breaks()
@@ -259,9 +259,9 @@ if __name__ == "__main__":
     render_print_area_and_page_breaks()
 ```
 {{< /tab >}}
-{{< tab "Products.xlsx" >}}
+{{< tab "products.xlsx" >}}
 {{< tab-text >}}
-`Products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/Products.xlsx) to download it.
+`products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/products.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "print_area_and_page_breaks.pdf" >}}  

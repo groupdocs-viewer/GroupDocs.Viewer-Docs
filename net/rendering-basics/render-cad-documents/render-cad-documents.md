@@ -18,6 +18,7 @@ aliases:
     - /viewer/net/how-to-view-plt-files
     - /viewer/net/how-to-convert-cad-to-html
     - /viewer/net/how-to-get-cad-layers-and-layouts
+    - /viewer/net/render-cad-documents/
     - /viewer/net/render-all-layouts
     - /viewer/net/render-layers
     - /viewer/net/how-to-view-dwf-file-layers

@@ -18,6 +18,7 @@ aliases:
     - /viewer/python-net/how-to-view-plt-files
     - /viewer/python-net/how-to-convert-cad-to-html
     - /viewer/python-net/how-to-get-cad-layers-and-layouts
+    - /viewer/python-net/render-cad-documents/
     - /viewer/python-net/render-all-layouts
     - /viewer/python-net/render-layers
     - /viewer/python-net/how-to-view-dwf-file-layers

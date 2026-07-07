@@ -13,6 +13,7 @@ aliases:
     - /viewer/python-net/view-lotus-notes-data-files
     - /viewer/python-net/filter-nsf-messages
     - /viewer/python-net/how-to-convert-and-view-nsf-files
+    - /viewer/python-net/render-lotus-notes-files/
 ---
 [GroupDocs.Viewer for Python via .NET](https://products.groupdocs.com/viewer/python-net) allows you to render [Lotus Notes Storage Facility (NSF)](https://docs.fileformat.com/database/nsf/) files in HTML, PDF, PNG, and JPEG formats. Use this library to display the contents of NSF files within your .NET application (web or desktop). 
 
