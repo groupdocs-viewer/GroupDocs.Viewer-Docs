@@ -675,3 +675,8 @@ End Using
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+The following collage illustrates the result of adding page numbers to the loaded DOCX file during rendering it to HTML:
+
+![Unlink table of contens in Word filesAdd page numbers during DOCX to HTML rendering](/viewer/net/images/rendering-basics/render-word-documents/Add-page-numbers.png)
+
