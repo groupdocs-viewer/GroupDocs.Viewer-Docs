@@ -987,3 +987,63 @@ End Using
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+## Render popup annotations
+
+PDF documents may contain specific annotation, which are represented as **popups**, also called the balloon hints, which are by default hidden, but appear when the user hovers the mouse cursor over them and/or clicks them. Another annotation type, called **highlight annotations**, highlight some portion of text or some area on the page, but at the same time can have binded comments, which, again, are hidden by default, but appear when clicking on highlight. Before the [version 26.8](https://releases.groupdocs.com/viewer/net/release-notes/2026/groupdocs-viewer-for-net-26-8-release-notes/) of GroupDocs.Viewer it was not possible to view such annotation types, regardless of the selected output format, the only way to see them was to open the original PDF document in some desktop PDF viewer like Adobe Reader or Foxit Reader. But there was no possibility to preserve these annotations when rendering PDF to HTML or raster image formats.
+
+In the GroupDocs.Viewer version 26.8 this has been changed. Popup annotations are still hidden by default (so the well-known and usual behavior of GroupDocs.Viewer is untouched), but they can be enabled. From the very beginning the GroupDocs.Viewer has a boolean property [`RenderNotes`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/rendernotes/), which is located in the [`BaseViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/) abstract class and thus is available for all 4 rendering options: PDF, HTML, PNG, and JPEG. Initially the `RenderNotes` property was related only to the Presentation (PPT, PPTX, PPTM, …) and Microsoft project (MPP, MPT, MPX) formats families, and when rendering the PDF documents, this property had no effect. In GroupDocs.Viewer version 26.8 things have changed: now this property has relation to the PDF format and is responsible for enabling popup annotations: when it is disabled by default (`false` value), popup annotations are hidden. But when enabled (`true`), the popup annotations are present for output HTML and raster image formats.
+
+Source code sample below shows loading PDF file and rendering it to HTML with embedded resources, PNG and JPEG with enabled popup annotations.
+
+{{< tabs "example_RenderNotes">}}
+{{< tab "C#" >}}
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
+// ...
+
+// Preparing output options
+PngViewOptions pngOpt = new PngViewOptions();
+JpgViewOptions jpegOpt = new JpgViewOptions();
+HtmlViewOptions htmlEmbeddedOpt = HtmlViewOptions.ForEmbeddedResources();
+
+// Enabling "RenderNotes" for all options
+pngOpt.RenderNotes = jpegOpt.RenderNotes = htmlEmbeddedOpt.RenderNotes = true;
+
+// Loading sample PDF file
+using (Viewer viewer = new Viewer("sample.pdf"))
+{
+    // Rendering to output formats
+    viewer.View(pngOpt);
+    viewer.View(jpegOpt);
+    viewer.View(htmlEmbeddedOpt);
+}
+```
+{{< /tab >}}
+{{< tab "VB.NET">}}
+```vb
+Imports GroupDocs.Viewer
+Imports GroupDocs.Viewer.Options
+' ...
+
+' Preparing output options
+Dim pngOpt As PngViewOptions = New PngViewOptions()
+Dim jpegOpt As JpgViewOptions = New JpgViewOptions()
+Dim htmlEmbeddedOpt As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+
+' Enabling "RenderNotes" for all options
+pngOpt.RenderNotes = jpegOpt.RenderNotes = htmlEmbeddedOpt.RenderNotes = True
+
+' Loading sample PDF file
+Using viewer As New Viewer("sample.pdf")
+    ' Rendering to output formats
+    viewer.View(pngOpt)
+    viewer.View(jpegOpt)
+    viewer.View(htmlEmbeddedOpt)
+End Using
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+One important note to mention. The [`PdfOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptions/) class has a boolean property [`EnableLayeredRendering`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptions/enablelayeredrendering/), which works when rendering PDF to HTML format and is disabled (`false`) by default. This means that by default all objects like text and graphics are present in output HTML as a single layer. However, when [`RenderNotes`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/rendernotes/) property is enabled and user renders PDF to HTML, the internal value of `EnableLayeredRendering` will be set to `true`, so layered rendering will be applied even if `EnableLayeredRendering` is set to `false` forcibly.
