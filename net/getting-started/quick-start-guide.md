@@ -277,5 +277,5 @@ Explore the following topics to learn more about GroupDocs.Viewer:
 - [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}) — learn about available installation methods and supported target frameworks.
 - [Licensing]({{< ref "viewer/net/getting-started/licensing-and-subscription.md" >}}): Check details on licensing and evaluation.
 - [How to run examples]({{< ref "viewer/net/getting-started/how-to-run-examples.md" >}}): Build the same app in Visual Studio or clone the GitHub examples.
-- [Developer Guide]({{< ref "viewer/net/developer-guid " >}}) — explore advanced document viewing and rendering features.
+- [Developer Guide]({{< ref "viewer/net/developer-guide" >}}) — explore advanced document viewing and rendering features.
 - [Technical Support]({{< ref "viewer/net/technical-support" >}}): Contact support for assistance if you encounter issues.

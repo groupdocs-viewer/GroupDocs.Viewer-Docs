@@ -2,7 +2,7 @@
 id: how-to-run-groupdocs-viewer-in-docker
 url: viewer/net/how-to-run-groupdocs-viewer-in-docker
 title: How to run GroupDocs.Viewer in Docker
-weight: 7
+weight: 8
 keywords: visual studio, build a project, .net cli
 description: "You can build a project from scratch using Visual Studio .NET CLI. We will step you through both cases."
 productName: GroupDocs.Viewer for .NET

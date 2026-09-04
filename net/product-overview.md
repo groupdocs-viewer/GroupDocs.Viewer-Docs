@@ -92,7 +92,7 @@ page_3.html (113 KB)
 ## Where to next
 
 1. **Install GroupDocs.Viewer** - follow the [Installation guide]({{< ref "viewer/net/getting-started/installation.md" >}}) to add the NuGet package or install GroupDocs.Viewer using the available distribution options.
-2. **Render your first document** - use [How to Run Examples]({{< ref "viewer/net/getting-started/how-to-run-examples.md" >}}) to build and run a sample .NET application.
+2. **Render your first document** - use [Quick Start Guide]({{< ref "viewer/net/getting-started/quick-start-guide.md" >}}) to build and run a sample .NET application.
 3. **Run GroupDocs.Viewer in Docker** - see [How to run GroupDocs.Viewer in Docker]({{< ref "viewer/net/getting-started/how-to-run-in-docker.md" >}}) for a containerized .NET application.
 4. **Learn document rendering** - explore the [Developer Guide]({{< ref "viewer/net/developer-guide" >}}) for loading documents, rendering pages, retrieving document information, selecting pages, adding watermarks, and working with attachments.
 5. **Render specific file formats** - see [Rendering Basics]({{< ref "viewer/net/rendering-basics" >}}) for examples covering PDF, Word, Excel, presentations, CAD, email, and other formats.

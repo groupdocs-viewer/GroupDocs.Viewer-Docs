@@ -2,7 +2,7 @@
 id: licensing-and-evaluation
 url: viewer/net/licensing-and-evaluation
 title: Licensing and evaluation
-weight: 5
+weight: 6
 keywords: free, free trial, evaluation, groupdocs.viewer
 description: "GroupDocs.Viewer provides different plans for purchasing or offers a Free Trial and a 30-day Temporary License for evaluation."
 productName: GroupDocs.Viewer for .NET

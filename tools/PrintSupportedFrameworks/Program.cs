@@ -40,7 +40,7 @@ foreach (IPackageSearchMetadata package in packages.OrderByDescending(p => p.Pub
         .Select(d => d
             .Replace("net20", ".NET Framework 2.0")
             .Replace("net40", ".NET Framework 4.0")
-            .Replace("net462", ".NET Frameword 4.6.2")
+            .Replace("net462", ".NET Framework 4.6.2")
             .Replace("net6.0", ".NET 6.0")
             .Replace("netstandard2.0", ".NET Standard 2.0")
             .Replace("netstandard2.1", ".NET Standard 2.1")

@@ -67,7 +67,7 @@ GroupDocs.Viewer supports 190+ file formats across documents, spreadsheets, pres
 
 ## Getting Started
 
-To start viewing documents in a .NET application, check [System Requirements]({{< ref "viewer/net/getting-started/system-requirements.md" >}}), [install the GroupDocs.Viewer]({{< ref "viewer/net/getting-started/installation.md" >}}), and review the [Supported File Formats]({{< ref "viewer/net/getting-started/supported-document-formats.md" >}}) and [How to Run Examples guides]({{< ref "viewer/net/getting-started/how-to-run-examples.md" >}}).
+To start viewing documents in a .NET application, check [Quick Start Guide]({{< ref "viewer/net/getting-started/quick-start-guide.md" >}}), [System Requirements]({{< ref "viewer/net/getting-started/system-requirements.md" >}}), [install the GroupDocs.Viewer]({{< ref "viewer/net/getting-started/installation.md" >}}), and review the [Supported File Formats]({{< ref "viewer/net/getting-started/supported-document-formats.md" >}}) and [How to Run Examples guides]({{< ref "viewer/net/getting-started/how-to-run-examples.md" >}}).
 
 ## Developer Guide
 

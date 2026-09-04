@@ -3,7 +3,7 @@ id: how-to-run-examples
 url: viewer/net/how-to-run-examples
 title: How to Run Examples
 linkTitle: How to Run Examples
-weight: 6
+weight: 7
 description: "Learn how to clone the GroupDocs.Viewer for .NET examples repository, restore NuGet packages, configure a license, and run C# examples in Visual Studio or with the .NET CLI." 
 keywords: GroupDocs.Viewer, .NET, C#, code examples, run examples, Visual Studio, .NET CLI, GitHub repository, NuGet 
 productName: GroupDocs.Viewer for .NET
