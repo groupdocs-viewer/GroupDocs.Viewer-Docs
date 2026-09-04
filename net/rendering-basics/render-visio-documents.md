@@ -39,7 +39,7 @@ GroupDocs.Viewer supports the following Visio file formats:
 
 GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 
-{{< alert style="info" >}}Family of Visio file formats currently is not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
+{{< alert style="info" >}}Family of Visio file formats currently are not supported by the `net6.0` runtime ([GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60)). They are supported on Windows with `net462` and `net6.0-windows`.{{< /alert >}}
 
 ## Render Visio files as HTML
 

@@ -1,184 +1,227 @@
----
+﻿---
 id: how-to-run-examples
 url: viewer/net/how-to-run-examples
-title: How to run examples
-weight: 6
-keywords: visual studio, build a project, .net cli
-description: "You can build a project from scratch using Visual Studio .NET CLI. We will step you through both cases."
+title: How to Run Examples
+linkTitle: How to Run Examples
+weight: 7
+description: "Learn how to clone the GroupDocs.Viewer for .NET examples repository, restore NuGet packages, configure a license, and run C# examples in Visual Studio or with the .NET CLI." 
+keywords: GroupDocs.Viewer, .NET, C#, code examples, run examples, Visual Studio, .NET CLI, GitHub repository, NuGet 
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
+aliases:
+    - /viewer/net/how-to-run-examples/
 ---
 
-We offer multiple solutions on how you can run GroupDocs.Viewer examples, by building your own or using our back-end or front-end examples.
+This page explains how to set up and run the **GroupDocs.Viewer for .NET** code examples. The examples demonstrate common document rendering scenarios, including rendering documents to **HTML, PDF, PNG, and JPEG**, processing documents stored in archives, extracting attachments, and retrieving document information.
 
-## Build project from scratch
+If you want to build a minimal application from scratch, see the [Quick Start Guide]({{< ref "viewer/net/getting-started/quick-start-guide.md" >}}).
 
-You can build a project from scratch using Visual Studio or [.NET CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/). We'll step you through both cases.
+## Prerequisites
 
-### Build project using .NET CLI
+Before running the examples, make sure you have:
 
-1. Make sure you have .NET Core or .NET SDK installed <https://dotnet.microsoft.com/download>.
-2. Create a directory for your console app by executing e.g. `mkdir my-console-app` in your terminal.
-3. Navigate to `my-console-app` directory by executing `cd my-console-app`.
-4. Create empty console app by executing `dotnet new console`
-5. Add GroupDocs.Viewer for .NET package `dotnet add package GroupDocs.Viewer`
-6. Edit `Program.cs` and add the following lines to the `Main` method
-{{< tabs "example1">}}
-{{< tab "C#" >}}  
+1. A **configured environment** that meets the requirements described in the [System Requirements]({{< ref "viewer/net/getting-started/system-requirements.md" >}}).
+2. The [.NET SDK](https://dotnet.microsoft.com/download) or **Visual Studio 2022** or later.
+3. The **GroupDocs.Viewer for .NET examples repository**, cloned or downloaded from GitHub.
+
+```bash
+git clone https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET.git
+```
+
+Alternatively, [download the repository as a ZIP archive](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/archive/master.zip) and extract it locally.
+
+## Project Structure
+
+The examples are located in the `Examples` folder. Shared C# code is stored in `GroupDocs.Viewer.Examples.CSharp`, while separate projects target different .NET frameworks.
+
+```text
+📂 GroupDocs.Viewer-for-.NET
+├── Demos
+│   ├── ASP.NET Core
+│   ├── ASP.NET MVC
+│   ├── ASP.NET Web Forms
+│   ├── Windows Forms
+│   └── WPF
+├── Examples
+│   ├── GroupDocs.Viewer.Examples.CSharp.sln
+│   ├── GroupDocs.Viewer.Examples.CSharp
+│   │   ├── QuickStart
+│   │   ├── BasicUsage
+│   │   ├── AdvancedUsage
+│   │   ├── HowTo
+│   │   ├── Resources
+│   │   └── Utils.cs
+│   ├── GroupDocs.Viewer.Examples.CSharp.Framework
+│   ├── GroupDocs.Viewer.Examples.CSharp.Net
+│   └── GroupDocs.Viewer.Examples.CSharp.NetWindows
+├── Plugins
+├── LICENSE
+└── README.md
+```
+
+| Project | Target framework | Use on |
+| --- | --- | --- |
+| `GroupDocs.Viewer.Examples.CSharp.Framework` | .NET Framework 4.6.2 | Windows |
+| `GroupDocs.Viewer.Examples.CSharp.Net` | .NET 6 and later cross-platform target frameworks | Windows, Linux, or macOS |
+| `GroupDocs.Viewer.Examples.CSharp.NetWindows` | .NET 6 and later Windows-specific target frameworks | Windows, including ARM64 |
+
+The target-framework-specific projects use the corresponding GroupDocs.Viewer runtime package. For more information, see [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}).
+
+## Setup Instructions
+
+### 1. Restore NuGet Packages
+
+Navigate to the `Examples` directory and restore the NuGet packages:
+
+```bash
+cd GroupDocs.Viewer-for-.NET/Examples
+dotnet restore GroupDocs.Viewer.Examples.CSharp.sln
+```
+
+If you use Visual Studio, open `GroupDocs.Viewer.Examples.CSharp.sln`, right-click the solution in **Solution Explorer**, and select **Restore NuGet Packages**.
+
+### 2. Select a startup project
+
+Select the project that matches your target framework and operating system:
+
+* `GroupDocs.Viewer.Examples.CSharp.Net` for cross-platform .NET applications.
+* `GroupDocs.Viewer.Examples.CSharp.NetWindows` for Windows-specific .NET applications.
+* `GroupDocs.Viewer.Examples.CSharp.Framework` for .NET Framework applications.
+
+In Visual Studio, right-click the required project and select **Set as Startup Project**.
+
+### 3. Configure License (Optional)
+
+If you have a GroupDocs.Viewer license file, specify its path in `Examples/GroupDocs.Viewer.Examples.CSharp/Utils.cs`:
+
 ```csharp
-using GroupDocs.Viewer;
-using GroupDocs.Viewer.Options;
-// ...
-
-using (Viewer viewer = new Viewer("sample.docx"))
-{
-   string outputFilePathFormat = @"output\page-{0}.html";
-   HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources(outputFilePathFormat);
-   
-   viewer.View(options);
-}
+public const string LicensePath = @"C:\licenses\GroupDocs.Viewer.lic";
 ```
-{{< /tab >}}
-{{< tab "VB.NET">}}
-```vb
-Imports GroupDocs.Viewer
-Imports GroupDocs.Viewer.Options
-' ...
 
-Module Program
-    Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("sample.docx")
-            Dim outputFilePathFormat As String = "output\page-{0}.html"
-            Dim options As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources(outputFilePathFormat)
+Make sure the license file exists at the specified location, or update `LicensePath` to point to your license file.
 
-            viewer.View(options)
-        End Using
-    End Sub
-End Module
+{{< alert style="info" >}}
+For more details about licensing, evaluation limitations, and obtaining a temporary license, see the [Licensing and evaluation]({{< ref "viewer/net/getting-started/licensing-and-subscription.md" >}}) page.
+{{< /alert >}}
+
+## Running Examples
+
+### Run All Examples
+
+`RunExamples.cs` in the selected startup project runs the available examples sequentially.
+
+Run the project from the `Examples` directory:
+
+```bash
+dotnet run --project GroupDocs.Viewer.Examples.CSharp.Net
 ```
-{{< /tab >}}
-{{< /tabs >}}
-7. Replace `documentPath` value with the actual path to the document you're going to render.
-8. Run the project by executing `dotnet run`.
-9. Check the output in `C:\\output\\` directory.
 
-### Build project using Visual Studio
+Replace the project name with `GroupDocs.Viewer.Examples.CSharp.NetWindows` or `GroupDocs.Viewer.Examples.CSharp.Framework` if you selected a different target framework.
 
-1. Open Visual Studio and go to **File** -> **New** -> **Project**.
-2. Select appropriate project type e.g. Console Application or Console App (.NET Framework)
-3. Install **GroupDocs.Viewer for .NET** from Nuget or official GroupDocs website with one of ways listed in "Installation"({{< ref "installation" >}}) section.
-4. Add the following code to the `Main` method:
-{{< tabs "example2">}}
-{{< tab "C#" >}}  
+In Visual Studio, press **F5** to build and run the selected project.
+
+The examples demonstrate scenarios such as:
+
+* Rendering documents to HTML, PDF, PNG, and JPEG.
+* Processing documents stored in archives.
+* Retrieving document information.
+* Applying different rendering options.
+* Extracting document attachments.
+
+### Run a Specific Example
+
+To run only a specific example, open `RunExamples.cs` in the selected startup project and comment out the `.Run()` calls for the examples you do not need.
+
+For example, the following configuration runs only the `HelloWorld` example:
+
 ```csharp
-using GroupDocs.Viewer;
-using GroupDocs.Viewer.Options;
-// ...
+#region Quick Start
 
-using (Viewer viewer = new Viewer("sample.docx"))
-{
-   string outputFilePathFormat = @"output\page-{0}.html";
-   HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources(outputFilePathFormat);
-   viewer.View(options);
-}
+// SetLicenseFromFile.Run();
+// SetLicenseFromStream.Run();
+// SetMeteredLicense.Run();
+HelloWorld.Run();
+
+#endregion
 ```
-{{< /tab >}}
-{{< tab "VB.NET">}}
-```vb
-Imports GroupDocs.Viewer
-Imports GroupDocs.Viewer.Options
-' ...
 
-Module Program
-    Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("sample.docx")
-            Dim outputFilePathFormat As String = "output\page-{0}.html"
-            Dim options As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources(outputFilePathFormat)
-            viewer.View(options)
-        End Using
-    End Sub
-End Module
+Save the changes and run the project again.
+
+### Find Output Files
+
+Most examples save their output to the `Examples/Output/<ExampleName>/` directory. The output path is configured by `Utils.OutputPath` in `Utils.cs`.
+
+Sample documents used by the examples are stored in:
+
+```text
+Examples/GroupDocs.Viewer.Examples.CSharp/Resources/SampleFiles
 ```
-{{< /tab >}}
-{{< /tabs >}}
-5. Replace `documentPath` value with the actual path to the document you're going to render.
-6. Build and Run your project.
-7. Rendered document pages will be saved in `C:\\output\\` directory.
-
-## Run back-end examples
-
-You can find number of back-end examples in our repository hosted on [Github](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET). You can either download the ZIP file from [here](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/archive/master.zip) or clone the repository of Github using your favorite git client.  
-In case you download the ZIP file, extract the folders on your local disk.
-
-1. Navigate to `Examples` directory and open `GroupDocs.Viewer.Examples.CSharp.sln` using Visual Studio.
-2. Open `RunExamples.cs` file and uncomment the example(s) that you would like to run.
-3. Optionally you can set the path to the license in `Utils.cs` file.
 
 ## Run Demo Projects
 
-To run any demo from [GroupDocs.Viewer for .NET Demo projects](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/) you can either:
+The [Demos](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos) folder contains ready-to-run applications that demonstrate how to integrate GroupDocs.Viewer into different types of .NET applications.
 
-* Clone the repository:
-{{< tabs "example3">}}
-{{< tab "Git" >}}  
-```bash
-git clone git@github.com:groupdocs-viewer/GroupDocs.Viewer-for-.NET.git  
-```
-{{< /tab >}}
-{{< /tabs >}}
-* Or [download](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/archive/master.zip) source code.
+Clone or download the repository first, then follow the instructions for the demo you want to run.
 
 ### ASP.NET Core Demo
 
-1. Clone or download ["GroupDocs.Viewer-for-.NET"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) repository from GitHub or skip this step if you already have the code.
-2. Navigate to `Demos/ASP.NET Core` folder.
-3. Execute `dotnet run` in a terminal.
-4. Open [http://localhost:8080/viewer](http://localhost:8080/viewer) in your favorite browser.
+1. Navigate to `Demos/ASP.NET Core`.
+
+2. Run the application:
+
+   ```bash
+   dotnet run
+   ```
+
+3. Open `http://localhost:8080/viewer` in your browser.
 
 ### ASP.NET MVC Demo
 
-1. Clone or download ["GroupDocs.Viewer-for-.NET"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) repository from GitHub or skip this step if you already have the code.
-2. Navigate to  `Demos/MVC` folder.
-3. Open `GroupDocs.Viewer MVC.sln` solution in `Demos/MVC` folder using Visual Studio.
-4. Update parameters in **web.config** and demo related properties in the **configuration.yml** to meet your requirements, see more about configuring the demo at ["Configuration"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/MVC#configuration) section.
-5. Run the project and open [http://localhost:8080/viewer](http://localhost:8080/viewer) in your favorite browser.
-
-{{< alert style="info" >}}
-
-For more details about demo configuration please refer to ["Configuration"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/MVC#configuration) section.
-
-{{< /alert >}}
+1. Navigate to `Demos/ASP.NET MVC`.
+2. Open the solution in Visual Studio.
+3. Update the required parameters in **web.config** and the demo settings in **configuration.yml**. See the [Configuration](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/ASP.NET%20MVC#configuration) section.
+4. Run the project.
+5. Open `http://localhost:8080/viewer` in your browser.
 
 ### ASP.NET Web Forms Demo
 
-1. Clone or download ["GroupDocs.Viewer-for-.NET"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) repository from GitHub or skip this step if you already have the code.
-2. Navigate to `Demos/WebForms` folder.
-3. Open `GroupDocs.Viewer.WebForms.sln` solution using Visual Studio.
-4. Open solution in the VisualStudio. Update common parameters in **web.config** and example related properties in the **configuration.yml** to meet your requirements.
-5. Open [http://localhost:8080/viewer](http://localhost:8080/viewer) in your favorite browser.
-
-{{< alert style="info" >}}
-
-For more details about demo configuration please refer to ["Configuration"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/WebForms#configuration) section.
-
-{{< /alert >}}
+1. Navigate to `Demos/ASP.NET Web Forms`.
+2. Open the solution in Visual Studio.
+3. Update the required parameters in **web.config** and the example settings in **configuration.yml**. See the [Configuration](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/ASP.NET%20Web%20Forms#configuration) section.
+4. Run the project.
+5. Open `http://localhost:8080/viewer` in your browser.
 
 ### WPF Demo
 
-1. Clone or download ["GroupDocs.Viewer-for-.NET"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) repository from GitHub or skip this step if you already have the code.
-2. Navigate to `Demos/WPF/src` folder.
-3. Open `GroupDocs.Viewer.WPF.sln` using Visual Studio.
-4. Run the project.
+1. Navigate to `Demos/WPF`.
+2. Open the solution in Visual Studio.
+3. Run the project.
 
 ### Windows Forms Demo
 
-1. Clone or download ["GroupDocs.Viewer-for-.NET"](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET) repository from GitHub or skip this step if you already have the code.
-2. Navigate to `Demos/WinForms/src` folder.
-3. Open `GroupDocs.Viewer.WinForms.sln` using Visual Studio.
-4. Run the project.
+1. Navigate to `Demos/Windows Forms`.
+2. Open the solution in Visual Studio.
+3. Run the project.
 
 ## Contribute
 
-If you like to add or improve an example, we encourage you to contribute to the project. All examples in this repository are open source and can be freely used in your own applications.  
-To contribute, you can fork the repository, edit the code and create a pull request. We will review the changes and include it in the repository if found helpful.
+You can contribute to the GroupDocs.Viewer examples by adding new examples or improving existing ones. The examples repository is open source and can be used in your own applications.
+
+To contribute:
+
+1. Fork the repository.
+2. Modify or add an example.
+3. Create a pull request.
+
+The changes will be reviewed and incorporated into the repository when appropriate.
+
+## Troubleshooting
+
+If you encounter problems while running the examples:
+
+* Make sure all NuGet packages are restored successfully.
+* Verify that the selected project matches your target framework and operating system.
+* Check that your environment meets the [System Requirements]({{< ref "viewer/net/getting-started/system-requirements.md" >}}).
+* If you use a license, verify that `LicensePath` points to the correct license file.
+* Visit the [Technical Support]({{< ref "viewer/net/technical-support" >}}) page for additional help.

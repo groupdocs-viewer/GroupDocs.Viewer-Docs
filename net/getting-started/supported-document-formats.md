@@ -133,13 +133,13 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [WMF](https://docs.fileformat.com/image/wmf/) | Windows Metafile | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [WMZ](https://docs.fileformat.com/image/wmz/) | Compressed Windows Metafile | ![(tick)](/viewer/net/images/check-blue.png) | |
 
-{{< alert style="info" >}}AI, PSB, and PSD formats, marked by asterisk (\*), currently are not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
+{{< alert style="info" >}}AI, PSB, and PSD formats, marked by asterisk (\*), currently are not supported by the `net6.0` runtime ([GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60)). They are supported on Windows with `net462` and `net6.0-windows`.{{< /alert >}}
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view image files: [Render images as HTML, PDF, PNG, and JPEG files](/viewer/net/render-images/).
 
 ## Note-taking file formats
 
-{{< alert style="info" >}}Note file formats family currently is not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
+{{< alert style="info" >}}The Note file formats family currently is not supported by the `net6.0` runtime ([GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60)). It is supported on Windows with `net462` and `net6.0-windows`.{{< /alert >}}
 
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |
@@ -187,7 +187,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 
 ## Project Management file formats
 
-{{< alert style="info" >}}Project Management file formats family currently is not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
+{{< alert style="info" >}}The Project Management file formats family currently is not supported by the `net6.0` runtime ([GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60)). These formats are supported on Windows with `net462` and `net6.0-windows`.{{< /alert >}}
 
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |
@@ -290,8 +290,6 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [VTX](https://docs.fileformat.com/image/vtx/) | Visio Template XML File | ![(tick)](/viewer/net/images/check-blue.png) | |
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view Microsoft Visio files: [Render Visio documents as HTML, PDF, and image files](/viewer/net/render-visio-documents/).
-
-{{< alert style="info" >}}Initially the Visio file formats family was supported only by the GroupDocs.Viewer, but not supported by the GroupDocs.Viewer.CrossPlatform. However, starting from the version 25.3, their support was added to the GroupDocs.Viewer.CrossPlatform too.{{< /alert >}}
 
 ## Web file formats
 

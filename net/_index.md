@@ -7,137 +7,72 @@ description: "GroupDocs.Viewer for .NET allows you to render documents in variou
 keywords: render files, view files, HTML, PDF, JPEG, PNG
 productName: GroupDocs.Viewer for .NET
 hideChildren: True
-fullWidth: True
+toc: True
+structuredData:
+    showOrganization: true
 ---
 <img src="/logo/128x128/groupdocs-viewer-net.png" alt="groupdocs-viewer-net-home" align="left" style="width:110px; margin: 0 30px 30px 0"/>
 
-<img src="https://img.shields.io/nuget/v/groupdocs.viewer?label=GroupDocs.Viewer%20for%20.NET%20NuGet" alt="Nuget package">
-<img src="https://img.shields.io/nuget/dt/GroupDocs.Viewer?label=nuget%20downloads" alt="Nuget downloads">
-<br/>
-<img src="https://img.shields.io/nuget/v/GroupDocs.Viewer.CrossPlatform?label=GroupDocs.CrossPlatform%20NuGet" alt="Nuget package">
-<img src="https://img.shields.io/nuget/dt/GroupDocs.Viewer.CrossPlatform?label=nuget%20downloads" alt="Nuget downloads">
+<img src="https://img.shields.io/nuget/v/groupdocs.viewer?label=GroupDocs.Viewer%20for%20.NET%20NuGet" alt="NuGet package">
+<img src="https://img.shields.io/nuget/dt/GroupDocs.Viewer?label=nuget%20downloads" alt="NuGet downloads">
 
-{{< button style="primary" link="https://releases.groupdocs.com/viewer/net/release-notes/" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg> Release notes {{< /button >}} 
+{{< button style="primary" link="https://releases.groupdocs.com/viewer/net/release-notes/" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#document"></use></svg> Release notes {{< /button >}}
 {{< button style="primary" link="https://releases.groupdocs.com/viewer/net/" >}} {{< icon "gdoc_download" >}} Download ZIP or MSI {{< /button >}}
+{{< button style="primary" link="https://www.nuget.org/packages/GroupDocs.Viewer" >}} {{< icon "gdoc_download" >}} Download from NuGet {{< /button >}}
+{{< button style="primary" link="https://products.groupdocs.app/viewer/family" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#app"></use></svg> Online app {{< /button >}}
 
-<div class="gdoc-two-columns">
-    <div class="gdoc-two-columns__column">
-        <ul class="gdoc-two-columns__column__list">
-            <li>
-                <div>
-                    <svg class="gdoc-two-columns__column__icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg>
-                </div>
-                <div>
-                    <a class="gdoc-two-columns__column__link"
-                        href="https://www.nuget.org/packages/GroupDocs.Viewer">GroupDocs.Viewer</a>
-                    <div class="gdoc-two-columns__column__descr">
-                        - .NET Framework 4.6.2+ and .NET 6.0.
-                        <br>
-                        - Depends on System.Drawing(.Common).
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="gdoc-two-columns__column">
-        <ul class="gdoc-two-columns__column__list">
-            <li>
-                <div>
-                <svg class="gdoc-two-columns__column__icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg>
-                </div>
-                <div>
-                    <a class="gdoc-two-columns__column__link"
-                        href="https://www.nuget.org/packages/GroupDocs.Viewer.CrossPlatform">GroupDocs.Viewer.CrossPlatform</a>
-                        <div class="gdoc-two-columns__column__descr">
-                        - .NET 6.0 and later versions.
-                        <br>
-                        - Prefered for Linux and macOS.
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
+[GroupDocs.Viewer for .NET](https://products.groupdocs.com/viewer/net/) is a **.NET document viewer and rendering API for C#** that lets developers view and render **190+ document and image formats** without installing Microsoft Office or other third-party software. It supports popular formats such as **DOCX, XLSX, PPTX, PDF, CAD drawings, emails, archives, and images**, and can render documents to **HTML, PDF, PNG, or JPG**.
 
-GroupDocs.Viewer for .NET is a powerful, high-performance, and cross-platform library that allows you to build desktop and web [file viewer applications](https://en.wikipedia.org/wiki/File_viewer) using C#.
+<div style="clear:left"></div>
 
-GroupDocs.Viewer supports over [170 popular file formats](/viewer/net/supported-document-formats). Load text documents, spreadsheets, presentations, PDF files, web pages, email messages, and images and render/display them in HTML, PDF, PNG, and JPEG formats. You can render the entire document or specific pages.
+## Quick example
 
-GroupDocs.Viewer ships with a wide range of options that allow you to control the rendering process and customize the output files. For example, you can protect the output PDF file and reorder its pages, generate responsive HTML pages, adjust the size and quality of output images, add text watermarks, and cache the results.
+The following C# example shows how to render a DOCX document to HTML with embedded resources:
 
-### GroupDocs.Viewer.CrossPlatform
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
 
-Starting from March 2024 a separate build (package) of GroupDocs.Viewer was released — a [GroupDocs.Viewer.CrossPlatform](https://www.nuget.org/packages/GroupDocs.Viewer.CrossPlatform#readme-body-tab). The main reason for this product is to get rid of System.Drawing library, which [is not supported on Linux starting from .NET 6.0](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/system-drawing-common-windows-only). So the GroupDocs.Viewer.CrossPlatform is a System.Drawing-free, it was replaced by the Aspose.Drawing.Common cross-platform library.
+// Render a DOCX file to HTML with embedded resources
+using (Viewer viewer = new Viewer("sample.docx"))
+{
+    viewer.View(HtmlViewOptions.ForEmbeddedResources("page_{0}.html"));
+}
+```
 
-GroupDocs.Viewer.CrossPlatform has the identical public APi as “classic” GroupDocs.Viewer, as well the licensing mechanism. However, not all the formats are supported — GroupDocs.Viewer.CrossPlatform does not support all MS Project Management formats (MPP, MPT, MPX), Note-taking file format (ONE), all Visio formats, and Adobe-related formats (AI, PSD, PSB). Please note that we have a plan to support all of these formats in the future versions of GroupDocs.Viewer.CrossPlatform.
+Starting with version 26.8, **GroupDocs.Viewer** is distributed as a NuGet metapackage. Install the **GroupDocs.Viewer** package and NuGet automatically restores the runtime package that matches your project's target framework, such as `net462`, `net6.0`, or `net6.0-windows`. See [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}) for details.
 
-Unlike the “classic” GroupDocs.Viewer for .NET, the GroupDocs.Viewer.CrossPlatform does not support neither .NET Framework nor .NET Core — it supports only .NET 6.0 and above. It also has a dependency on the [GroupDocs.CrossPlatform.NativeAssets](https://www.nuget.org/packages/GroupDocs.CrossPlatform.NativeAssets/#readme-body-tab) package.
+## Features
 
-------
+- **190+ Supported File Formats**: Render Microsoft Office, PDF, HTML, CAD, email, archives, images, and more.
+- **Multiple Rendering Formats**: Render documents to HTML, PDF, PNG, and JPG.
+- **Embedded or External Resources**: Produce self-contained HTML pages or HTML with separate CSS, fonts, and images.
+- **Document Format Detection**: Automatically detects the format of input files.
+- **Windows, Linux, and macOS**: One package covers .NET Framework 4.6.2+, .NET 6, and .NET 6 Windows.
 
-{{< columns >}}
-<p><b>About GroupDocs.Viewer</b></p>
-<hr><p>OVERVIEW</p></hr>
-<ul>
-    <li><a href='{{< ref "/viewer/net/product-overview.md" >}}'>Product overview</a></li>
-    <li><a href='{{< ref "/viewer/net/getting-started/features-overview" >}}'>Main features</a></li>
-    <li><a href='{{< ref "/viewer/net/getting-started/supported-document-formats.md" >}}'>Supported file formats</a></li>
-</ul>
+## Supported File Formats
 
-<p>GET STARTED</p>
-<ul>
-    <li><a href='{{< ref "/viewer/net/getting-started/system-requirements.md" >}}'>System requirements</a></li>
-    <li><a href='{{< ref "/viewer/net/getting-started/installation.md" >}}'>Installation</a></li>
-    <li><a href='{{< ref "/viewer/net/getting-started/licensing-and-subscription.md" >}}'>Licensing</a></li>
-</ul>   
+GroupDocs.Viewer supports 190+ file formats across documents, spreadsheets, presentations, images, emails, CAD files, archives, and other commonly used file types. See the [full list of supported formats]({{< ref "viewer/net/getting-started/supported-document-formats.md" >}}).
 
-<--->
+- **Microsoft Office**: Word, Excel, PowerPoint
+- **PDF**: PDF, PDF/A
+- **OpenDocument**: ODT, ODS, ODP
+- **Images**: JPEG, PNG, TIFF, GIF, BMP, PSD
+- **Email**: EML, MSG, PST, OST
+- **eBook**: EPUB, MOBI
+- **Text/Markdown**: TXT, MD
+- **HTML/Web**: HTML, MHTML, CHM
+- **AutoCAD**: DWG, DXF, DWF
+- **Archives**: ZIP, RAR, 7Z
 
-<p><b>Developer Guide</b></p>
-<hr><p>RENDERING BASICS</p></hr>
-<ul>
-    <li><a href='{{< ref "viewer/net/rendering-basics/render-word-documents.md" >}}'>Render Word documents</a></li>
-    <li><a href='{{< ref "viewer/net/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets.md" >}}'>Render spreadsheet files</a></li>
-    <li><a href='{{< ref "viewer/net/rendering-basics/render-presentations.md" >}}'>Render presentations</a></li>
-    <li><a href='{{< ref "viewer/net/rendering-basics/render-pdf-documents.md" >}}'>Render PDF files</a></li>
-    <li><a href='{{< ref "viewer/net/rendering-basics/render-web-documents/_index.md" >}}'>Render web documents</a></li>
-    <li><a href='{{< ref "viewer/net/rendering-basics/render-text-files.md" >}}'>Render text and code files</a></li>
-    <li><a href='{{< ref "viewer/net/rendering-basics/render-images.md" >}}'>Render images</a></li>
-</ul>
+## Getting Started
 
-<p>HOW-TO GUIDES</p>
-<ul>
-    <li><a href='{{< ref "/viewer/net/developer-guide/loading-documents/loading-documents-from-different-sources/_index.md" >}}'>Load documents from different sources</a></li>
-    <li><a href='{{< ref "/viewer/net/developer-guide/retrieving-document-information/how-to-get-file-type-and-pages-count.md" >}}'>Retrieve document information</a></li>
-    <li><a href='{{< ref "viewer/net/developer-guide/processing-attachments/how-to-extract-and-save-attachments.md" >}}'>Extract and save attachments</a></li>
-    <li><a href='{{< ref "viewer/net/developer-guide/rendering-documents/add-text-watermark.md" >}}'>Add text watermarks</a></li>
-    <li><a href='{{< ref "viewer/net/developer-guide/caching-results/_index.md" >}}'>Cache rendering results</a></li>
-</ul>
+To start viewing documents in a .NET application, check [Quick Start Guide]({{< ref "viewer/net/getting-started/quick-start-guide.md" >}}), [System Requirements]({{< ref "viewer/net/getting-started/system-requirements.md" >}}), [install the GroupDocs.Viewer]({{< ref "viewer/net/getting-started/installation.md" >}}), and review the [Supported File Formats]({{< ref "viewer/net/getting-started/supported-document-formats.md" >}}) and [How to Run Examples guides]({{< ref "viewer/net/getting-started/how-to-run-examples.md" >}}).
 
-<p>API REFERENCE</p>
-<ul>
-    <li><a href="https://reference.groupdocs.com/viewer/net/">GroupDocs.Viewer for .NET API Reference</a></li>
-</ul>
+## Developer Guide
 
-<--->
+The [Developer Guide]({{< ref "viewer/net/developer-guide" >}}) provides practical C# examples for working with GroupDocs.Viewer for .NET. Learn how to load documents, view and render files, retrieve document information, render specific pages, configure HTML/PDF/image output, and customize document rendering.
 
-<p><b>Useful Resources</b></p>
-<hr><p>DEMOS AND EXAMPLES</p></hr>
-<ul>
-    <li><a href="https://products.groupdocs.app/viewer/total">View documents online</a></li>
-    <li><a href="https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET">Download examples and demos from GitHub</a></li>
-	<li><a href='{{< ref "/viewer/net/getting-started/how-to-run-examples.md" >}}'>How to run examples</a></li>
-</ul>
+## Technical Support
+If you encounter an issue while using GroupDocs.Viewer for .NET or have a question about document rendering, visit the [Technical Support page]({{< ref "viewer/net/technical-support" >}}). It provides available support channels, troubleshooting resources, and ways to report issues or request assistance.
 
-<p>VERSION HISTORY</p>
-<ul>
-    <li><a href='https://releases.groupdocs.com/viewer/net/release-notes/'>GroupDocs.Viewer for .NET Release Notes</a></li>
-</ul>
-
-<p>TECHNICAL SUPPORT</p>
-<ul>
-    <li><a href="https://forum.groupdocs.com/">Free Support Forum for GroupDocs Products</a></li>
-    <li><a href="https://helpdesk.groupdocs.com/">Paid Support Helpdesk for GroupDocs Products</a></li>
-</ul>
-
-{{< /columns >}}

@@ -2,7 +2,7 @@
 id: how-to-run-groupdocs-viewer-in-docker
 url: viewer/net/how-to-run-groupdocs-viewer-in-docker
 title: How to run GroupDocs.Viewer in Docker
-weight: 7
+weight: 8
 keywords: visual studio, build a project, .net cli
 description: "You can build a project from scratch using Visual Studio .NET CLI. We will step you through both cases."
 productName: GroupDocs.Viewer for .NET
@@ -14,9 +14,9 @@ aliases:
 
 Docker provides an isolated environment for services and applications. In this topic we containerize sample application that is using GroupDocs.Viewer. You can learn more about conteinerization at [Introduction to .NET and Docker](https://learn.microsoft.com/en-us/dotnet/core/docker/introduction).
 
-Running GroupDocs.Viewer in Docker is straightforward. First we prepare a sample application that uses [GroupDocs.Viewer.CrossPlatform](https://www.nuget.org/packages/GroupDocs.Viewer.CrossPlatform) NuGet package and than we build Docker image and run the applicaiton in Docker container.
+Running GroupDocs.Viewer in Docker is straightforward. First we prepare a sample application that uses the [GroupDocs.Viewer](https://www.nuget.org/packages/GroupDocs.Viewer) NuGet metapackage (which restores [GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60) for `net8.0`) and then we build a Docker image and run the application in a Docker container.
 
-In this documentation article we're going to use [Official .NET Docker image](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/net-core-net-framework-containers/official-net-docker-images) that based on Debian Linux distribution.
+In this documentation article, we're going to use an [Official .NET Docker image](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/net-core-net-framework-containers/official-net-docker-images) based on the Debian Linux distribution.
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ In this documentation article we're going to use [Official .NET Docker image](ht
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GroupDocs.Viewer.CrossPlatform" Version="24.4.0" />
+    <PackageReference Include="GroupDocs.Viewer" Version="26.8.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -92,7 +92,7 @@ Your folder tree should look similar to the following directory structure:
 
 {{< alert style="info" >}}
 
-This demo application references [GroupDocs.Viewer.CrossPlatform](https://www.nuget.org/packages/GroupDocs.Viewer.CrossPlatform) package. This package is recommended for Linux and macOS because it does not use `System.Drawing.Common` as a graphical subsystem, [which is only supported on Windows](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/system-drawing-common-windows-only).
+This demo application references the [GroupDocs.Viewer](https://www.nuget.org/packages/GroupDocs.Viewer) metapackage and targets `net8.0`. NuGet restores [GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60), which does not use `System.Drawing.Common` as a graphical subsystem, [which is only supported on Windows](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/system-drawing-common-windows-only).
 
 {{</ alert >}}
 
@@ -147,9 +147,9 @@ At this point folder tree should look similar to the following directory structu
  └──.dockerignore
 ```
 
-The `Dockerfile` contains instructions to install two dependencies required by GroupDocs.Viewer:
+The `Dockerfile` installs the following packages to provide font support for GroupDocs.Viewer on Linux:
 
-**fontconfig:** This library configures and customizes font access.
+**fontconfig:** This library provides font configuration, discovery, and customization.
 
 **ttf-mscorefonts-installer:** This package provides Microsoft TrueType core fonts. It's available in the [contrib](https://www.debian.org/doc/debian-policy/ch-archive#s-contrib) archive area. (Note: Using non-free fonts may have licensing implications, so be sure to check the license terms.)
 
@@ -177,7 +177,7 @@ docker run --rm -v ${pwd}/output:/app/output viewer-demo-app
 
 `-v ${pwd}/output:/app/output` - Maps `./output` directory on our host OS to `/app/output` directory in Docker container.
 
-After you run the application the `./output` directory will to contain two files `page-1.html` and `page-2.html` due to trial limitations. To render all the files you have to set a valid license. Learn more about evaluation and free trial limitations at [How to Evaluate GroupDocs.Viewer](/viewer/net/licensing-and-evaluation/).
+After you run the application, the `./output` directory will contain two files: `page-1.html` and `page-2.html` due to trial limitations. To render all the files you have to set a valid license. Learn more about evaluation and free trial limitations at [How to Evaluate GroupDocs.Viewer](/viewer/net/licensing-and-evaluation/).
 
 ## Conclusion
 

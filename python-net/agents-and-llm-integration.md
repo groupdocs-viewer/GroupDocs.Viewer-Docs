@@ -577,7 +577,7 @@ Viewer exposes 190+ file formats on a single flat `FileType` class — access vi
 
 Use `FileType.from_extension("docx")` when you don't know which family owns a format — it returns the correct `FileType` instance. `FileType.from_stream(stream)` sniffs file headers. `FileType.get_supported_file_types()` returns the full list (the enum is identical on every platform — see the platform note below for the one family that differs at render time).
 
-**Platform note:** On Linux/macOS the wheel uses `GroupDocs.Viewer.CrossPlatform`, which does **not** render the **Project Management** family (`MPP, MPT, MPX`) or **PSD** — these render only on Windows (`GroupDocs.Viewer`). All other families, including Visio, work on every platform. `FileType.get_supported_file_types()` still lists these everywhere, so don't rely on it to gate by platform.
+**Platform note:** On Linux/macOS the wheel does **not** render the **Project Management** family (`MPP, MPT, MPX`) or **PSD** — these render only on Windows. All other families, including Visio, work on every platform. `FileType.get_supported_file_types()` still lists these everywhere, so don't rely on it to gate by platform.
 
 ## Key Patterns
 
@@ -606,7 +606,7 @@ Use `FileType.from_extension("docx")` when you don't know which family owns a fo
 | PSD (Photoshop) | Yes | No |
 | All other formats (Office, PDF, Visio, CAD, images, email, archives, eBooks, web, …) | Yes | Yes |
 
-Linux/macOS run on `GroupDocs.Viewer.CrossPlatform`, which renders every format except the Project Management family (MPP, MPT, MPX) and PSD — those are Windows-only. Everything else, including Visio, works on every platform.
+Linux/macOS wheels render every format except the Project Management family (MPP, MPT, MPX) and PSD — those are Windows-only. Everything else, including Visio, works on every platform.
 
 ## Troubleshooting
 
@@ -614,7 +614,7 @@ Linux/macOS run on `GroupDocs.Viewer.CrossPlatform`, which renders every format 
 
 **`Cannot convert String to CreatePageStream`** (fixed in 26.4.0+) -- older wheels had a static-factory dispatcher that leaked .NET cast errors. Upgrade with `pip install --upgrade groupdocs-viewer-net`.
 
-**`GroupDocsViewerException: Failed to detect file type`** when rendering an MPP/MPT/MPX or PSD on Linux/macOS -- the Project Management family and PSD are Windows-only on `GroupDocs.Viewer.CrossPlatform`. Render those formats on Windows.
+**`GroupDocsViewerException: Failed to detect file type`** when rendering an MPP/MPT/MPX or PSD on Linux/macOS -- the Project Management family and PSD are Windows-only. Render those formats on Windows.
 
 **`System.Drawing.Common is not supported`** -- install libgdiplus: `sudo apt install libgdiplus` (Linux) / `brew install mono-libgdiplus` (macOS)
 
