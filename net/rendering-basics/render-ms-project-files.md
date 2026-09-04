@@ -31,7 +31,7 @@ GroupDocs.Viewer supports the following Project Management file formats:
 
 GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 
-{{< alert style="info" >}}Family of the Project Management file formats (MPP, MPT, and MPX) currently is not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
+{{< alert style="info" >}}Family of the Project Management file formats (MPP, MPT, and MPX) currently are not supported by the `net6.0` runtime ([GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60)). They are supported on Windows with `net462` and `net6.0-windows`.{{< /alert >}}
 
 ## Render Project files as HTML
 

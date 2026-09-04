@@ -9,46 +9,91 @@ keywords: convert files, render files, view files, HTML, PDF, PNG, JPEG
 productName: GroupDocs.Viewer for .NET
 toc: True
 ---
-GroupDocs.Viewer for .NET is a high-performance and cross-platform library that allows you to build desktop and web [file viewer applications](https://en.wikipedia.org/wiki/File_viewer).
 
-With its powerful and straightforward API, you can execute the following actions:
+## What is GroupDocs.Viewer?
 
-* View documents in the [most popular file formats](/viewer/net/supported-document-formats/) (DOCX, XLSX, PPTX, PDF, DWG, PSD, HTML, ZIP, and more) by rendering them as HTML, PDF, PNG, and JPEG files. You no longer need third-party software to view files within your .NET application.
-* Load documents from [different sources](/viewer/net/loading-documents-from-different-sources/) (a file, a stream, a URL, an FTP server, Amazon S3, Azure Blob Storage, and so on).
-* Open [password-protected documents](/viewer/net/load-password-protected-document/).
-* Render the entire document or specific pages.
-* Embed all external resources in the output HTML files, generate [responsive](/viewer/net/render-with-responsive-layout/) and [minified](/viewer/net/minify-html/) HTML pages.
-* [Protect](/viewer/net/protect-pdf-documents/) the output PDF files and [reorder their pages](/viewer/net/reorder-pages/).
-* [Rotate pages](/viewer/net/flip-or-rotate-pages/) in the output files.
-* Specify whether to render notes and comments contained in the source document.
-* Extract text from PDF files and images.
-* [Extract archive contents](/viewer/net/how-to-extract-and-save-attachments/) and [save files](/viewer/net/how-to-extract-and-save-attachments/) attached to PDF documents, email messages, and Outlook data files.
-* [Obtain basic information](/viewer/net/how-to-get-file-type-and-pages-count/) about the source document (the file type, number of pages, and page information).
-* [Replace missing document fonts](/viewer/net/replace-missing-font/) or [specify a folder](/viewer/net/set-custom-fonts/) where GroupDocs.Viewer should look for these fonts.
-* [Add text watermarks](/viewer/net/add-text-watermark/) to the output HTML, PDF, and image files.
-* [Implement caching](/viewer/net/caching-results/) to increase document loading speed and optimize application performance.
+GroupDocs.Viewer for .NET is a **.NET document viewer and rendering API for C#** that enables developers to view and render **190+ document and image formats** without installing Microsoft Office or other third-party applications. It supports popular formats such as **DOCX, PDF, XLSX, PPTX, CAD drawings, email messages, archives, eBooks, HTML, and raster images**.
 
-You can use GroupDocs.Viewer across multiple platforms and operation systems. There are two versions of the GroupDocs.Viewer — a "classic" GroupDocs.Viewer for .NET and a new GroupDocs.Viewer.CrossPlatform, which was released on March 2024.
+GroupDocs.Viewer can render documents to **HTML, PDF, PNG, or JPG**, making it suitable for document previews, web-based viewers, PDF generation, thumbnails, and server-side document processing. The library runs on-premises on supported Windows, Linux, and macOS environments.
 
-GroupDocs.Viewer for .NET supports the maximum variety of operating systems and target platforms:
+Starting with version **26.8**, GroupDocs.Viewer for .NET is distributed as a NuGet metapackage. Install the GroupDocs.Viewer package, and NuGet automatically restores the runtime package that matches your project's target framework. See [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}) for details.
 
-* Windows, Linux, and macOS
-* .NET Framework 4.6.2 and higher
-* .NET 6 and higher
+Common use cases:
 
-However, it internally utilizes a System.Drawing library and thus [cannot be used on Linux on .NET 6.0 and above](https://learn.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/system-drawing-common-windows-only).
+- **Document viewing and preview** - render DOCX, PDF, XLSX, PPTX, CAD, email, and other files as HTML, PDF, or images and display them directly in web or desktop applications.
+- **Server-side document rendering** - convert documents to PDF or render individual pages as PNG or JPG images for previews, thumbnails, and document-processing workflows.
+- **Web document viewers** - generate HTML pages from documents and integrate document viewing into ASP.NET Core and other .NET applications.
+- **Document conversion and publishing** - render documents to PDF, HTML, or images for publishing, archiving, and content distribution.
+- **AI and document processing workflows** - render supported documents to page-level images or HTML for downstream processing, indexing, and analysis.
+- **Document security and presentation** - add text watermarks and configure PDF output options while rendering documents.
 
-That's why the GroupDocs.Viewer.CrossPlatform was created — it is a System.Drawing-free and may be used on Linux on .NET 6.0 and above. However, it does not support .NET Framework, .NET Core and .NET 5.0.
+## Key Capabilities
 
-## Get started with GroupDocs.Viewer for .NET
+| Capability | Description |
+|---|---|
+| **190+ file formats** | Render Word, Excel, PowerPoint, PDF, CAD, email, archive, eBook, HTML, image, and many other formats. See [supported formats]({{< ref "viewer/net/getting-started/supported-document-formats.md" >}}). |
+| **Multiple output formats** | Render supported documents to **HTML, PDF, PNG, or JPG**. |
+| **HTML rendering** | Generate HTML with embedded resources or separate CSS, fonts, and images using `ForEmbeddedResources(...)` or `ForExternalResources(...)`. |
+| **Format-specific loading options** | Configure passwords, fonts, encodings, spreadsheet settings, email options, and other input-specific parameters. See [Loading]({{< ref "viewer/net/developer-guide/loading-documents" >}}). |
+| **Rendering options** | Configure page size, DPI, image dimensions, rotation, watermarks, PDF permissions, and other output-specific settings. |
+| **Page selection** | Render an entire document, selected pages, or individual pages. |
+| **Text watermarks** | Add text watermarks during document rendering and configure their size, position, opacity, and other properties. See [Add Text Watermark]({{< ref "viewer/net/developer-guide/rendering-documents/add-text-watermark.md" >}}). |
+| **PDF output options** | Configure PDF security, page order, image quality, and optimization when rendering to PDF. |
+| **Attachments** | Extract and save attachments from supported email, archive, and PDF documents. |
+| **Document information** | Get information such as file type and page count without rendering the entire document. |
+| **Stream-based processing** | Load documents from `Stream`, which is useful when processing files from cloud storage, databases, HTTP requests, or other sources. |
+| **Logging and diagnostics** | Configure logging through `ViewerSettings` and `ConsoleLogger` to help diagnose document-processing issues. See [Logging]({{< ref "viewer/net/developer-guide/logging.md" >}}). |
+| **Caching** | Cache rendered results to improve performance when the same documents or pages are viewed repeatedly. See [Caching Results]({{< ref "viewer/net/developer-guide/caching-results" >}}). |
+| **On-premises deployment** | Process documents locally without sending files to a cloud-based document-rendering service or requiring Microsoft Office. |
 
-If you are new to GroupDocs.Viewer, see the following topics first:
+## Quick Example
 
-* [System requirements](/viewer/net/system-requirements/)
-* [Installation](/viewer/net/installation/)
-* [Licensing](/viewer/net/licensing-and-subscription/)
-* [Document rendering basics](/viewer/net/document-rendering-basics/)
+{{< tabs "quick-example">}}
+{{< tab "QuickExample.cs" >}}
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
 
-## Technical support
+// Render a DOCX document to HTML - the hello-world example.
+using (Viewer viewer = new Viewer("./sample.docx"))
+{
+    HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    viewer.View(options);
+}
+```
+{{< /tab >}}
+{{< tab "RenderWithOptions.cs" >}}
+```csharp
+using GroupDocs.Viewer;
+using GroupDocs.Viewer.Options;
 
-If you encounter an issue while using GroupDocs.Viewer or have a technical question, feel free to create a post in our [Free Support Forum](https://forum.groupdocs.com/c/viewer/9). If free support is not sufficient, you can submit a ticket to our [Paid Support Helpdesk](https://helpdesk.groupdocs.com/).
+// Open a password-protected DOCX, render to PDF with a watermark.
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.Password = "secret";
+
+using (Viewer viewer = new Viewer("./protected.docx", loadOptions))
+{
+    PdfViewOptions options = new PdfViewOptions("./protected.pdf");
+    options.Watermark = new Watermark("CONFIDENTIAL");
+    viewer.View(options);
+}
+```
+{{< /tab >}}
+{{< tab "quick-outputs.zip" >}}  
+```text
+page_1.html (317 KB)
+page_2.html (149 KB)
+page_3.html (113 KB)
+```
+[Download full output](/viewer/net/_output_files/product-overview/quick_example/quick-outputs.zip)
+{{< /tab >}}
+{{< /tabs >}}
+
+## Where to next
+
+1. **Install GroupDocs.Viewer** - follow the [Installation guide]({{< ref "viewer/net/getting-started/installation.md" >}}) to add the NuGet package or install GroupDocs.Viewer using the available distribution options.
+2. **Render your first document** - use [How to Run Examples]({{< ref "viewer/net/getting-started/how-to-run-examples.md" >}}) to build and run a sample .NET application.
+3. **Run GroupDocs.Viewer in Docker** - see [How to run GroupDocs.Viewer in Docker]({{< ref "viewer/net/getting-started/how-to-run-in-docker.md" >}}) for a containerized .NET application.
+4. **Learn document rendering** - explore the [Developer Guide]({{< ref "viewer/net/developer-guide" >}}) for loading documents, rendering pages, retrieving document information, selecting pages, adding watermarks, and working with attachments.
+5. **Render specific file formats** - see [Rendering Basics]({{< ref "viewer/net/rendering-basics" >}}) for examples covering PDF, Word, Excel, presentations, CAD, email, and other formats.
+6. **Build a web-based document viewer** - follow [Integrate GroupDocs.Viewer in an ASP.NET Core Web App]({{< ref "viewer/net/showcases/how-to-integrate-groupdocs-viewer-in-asp-net-core-web-app.md" >}}) to build a self-hosted document viewer with a web UI, storage, and caching.

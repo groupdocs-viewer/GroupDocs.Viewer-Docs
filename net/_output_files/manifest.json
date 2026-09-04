@@ -1,0 +1,14 @@
+{
+  "product-overview#quick-example": {
+    "type": "zip",
+    "file": "quick-outputs.zip",
+    "path": "product-overview/quick_example/quick-outputs.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html"
+    ],
+    "preview": "page_1.html (317 KB)\npage_2.html (149 KB)\npage_3.html (113 KB)",
+    "function": "quick_example"
+  }
+}

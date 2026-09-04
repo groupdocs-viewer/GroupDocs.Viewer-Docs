@@ -10,70 +10,63 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
 ---
-This topic describes how to add the **GroupDocs.Viewer** library to your .NET project. You can use a NuGet package to install this library or you can download necessary DLLs from the GroupDocs website: [https://releases.groupdocs.com/viewer/net/](https://releases.groupdocs.com/viewer/net/).
+This topic describes how to add the **GroupDocs.Viewer** library to your .NET project. You can use a NuGet package to install this library or you can download necessary DLLs from the [GroupDocs website](https://releases.groupdocs.com/viewer/net/).
 
 ## Select GroupDocs.Viewer package and version
 
-<div class="gdoc-two-columns">
-    <div class="gdoc-two-columns__column">
-        <ul class="gdoc-two-columns__column__list">
-            <li>
-                <div>
-                    <svg class="gdoc-two-columns__column__icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg>
-                </div>
-                <div>
-                    <a class="gdoc-two-columns__column__link"
-                        href="https://www.nuget.org/packages/GroupDocs.Viewer">GroupDocs.Viewer</a>
-                    <div class="gdoc-two-columns__column__descr">
-                        - .NET Framework 4.6.2+ and .NET 6.0.
-                        <br>
-                        - Depends on System.Drawing(.Common).
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="gdoc-two-columns__column">
-        <ul class="gdoc-two-columns__column__list">
-            <li>
-                <div>
-                <svg class="gdoc-two-columns__column__icon"><use xlink:href="/img/groupdocs-stack.svg#nuget"></use></svg>
-                </div>
-                <div>
-                    <a class="gdoc-two-columns__column__link"
-                        href="https://www.nuget.org/packages/GroupDocs.Viewer.CrossPlatform">GroupDocs.Viewer.CrossPlatform</a>
-                        <div class="gdoc-two-columns__column__descr">
-                        - .NET 6.0 and later versions.
-                        <br>
-                        - Prefered for Linux and macOS.
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
+Starting with version 26.8, [GroupDocs.Viewer](https://www.nuget.org/packages/GroupDocs.Viewer) is a NuGet metapackage that uses TFM-split packaging. You install one package name; NuGet restores the runtime package that matches your project's target framework:
+
+| Your target framework | Runtime package restored | Runs on |
+| --- | --- | --- |
+| `.NET Framework 4.6.2` and later | [GroupDocs.Viewer.Net462](https://www.nuget.org/packages/GroupDocs.Viewer.Net462) | Windows |
+| `.NET 6.0` or later | [GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60) | Windows x64/x86, Linux x64/ARM64, macOS x64/ARM64 |
+| `.NET 6.0-windows` or later | [GroupDocs.Viewer.Net60.Windows](https://www.nuget.org/packages/GroupDocs.Viewer.Net60.Windows) | Windows, including ARM64 |
+
+Do not reference the runtime packages directly. Add **GroupDocs.Viewer** to your project, and NuGet selects the correct runtime.
+
+{{< alert style="info" >}}
+If you previously used **GroupDocs.Viewer.CrossPlatform**, replace that package reference with **GroupDocs.Viewer**. The assembly name, namespaces, and public API are unchanged, so no code changes are required. As of 26.8 the CrossPlatform package is deprecated and only forwards to GroupDocs.Viewer.
+{{< /alert >}}
 
 You can also use **GroupDocs.Viewer** with **.NET Framework 2.0** (Visual Studio 2005-2008), **.NET Framework 4.0** (Visual Studio 2010), and later .NET Framework versions by selecting one of the previous versions of the GroupDocs.Viewer package. See the complete list of package versions and supported frameworks in the table below.
 
-{{< tabs "package-versions">}}
-{{< tab "GroupDocs.Viewer for .NET" >}}
-
 | Package version | Target frameworks |
 | --- | --- |
-| [24.4.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.4.0) | .NET Frameword 4.6.2, .NET 6.0 |
-| [24.3.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.3.0) | .NET Frameword 4.6.2, .NET 6.0 |
-| [24.2.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.2.0) | .NET Frameword 4.6.2, .NET Standard 2.1 |
-| [24.1.1](https://www.nuget.org/packages/GroupDocs.Viewer/24.1.1) | .NET Frameword 4.6.2, .NET Standard 2.1 |
-
+| [26.8.0](https://www.nuget.org/packages/GroupDocs.Viewer/26.8.0) | .NET Framework 4.6.2, .NET 6.0, .NET 6.0-windows (TFM-split) |
+| [26.4.0](https://www.nuget.org/packages/GroupDocs.Viewer/26.4.0) | .NET Framework 4.6.2, .NET 6.0 |
+| [25.12.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.12.0) | .NET Framework 4.6.2, .NET 6.0 |
+| [25.11.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.11.0) | .NET Framework 4.6.2, .NET 6.0 |
+| [25.9.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.9.0)   | .NET Framework 4.6.2, .NET 6.0 |
 <details>
 <summary>See previous versions</summary>
 
 | Package version | Target frameworks |
 | --- | --- |
-| [23.12.0](https://www.nuget.org/packages/GroupDocs.Viewer/23.12.0) | .NET Frameword 4.6.2, .NET Standard 2.1 |        
-| [23.11.0](https://www.nuget.org/packages/GroupDocs.Viewer/23.11.0) | .NET Frameword 4.6.2, .NET Standard 2.1 |        
-| [23.10.0](https://www.nuget.org/packages/GroupDocs.Viewer/23.10.0) | .NET Frameword 4.6.2, .NET Standard 2.1 |        
-| [23.8.0](https://www.nuget.org/packages/GroupDocs.Viewer/23.8.0) | .NET Frameword 4.6.2, .NET Standard 2.1 |
+| [25.8.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.8.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [25.7.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.7.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [25.6.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.6.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [25.5.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.5.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [25.4.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.4.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [25.3.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.3.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [25.2.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.2.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [25.1.1](https://www.nuget.org/packages/GroupDocs.Viewer/25.1.1)   | .NET Framework 4.6.2, .NET 6.0 |
+| [25.1.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.1.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [24.12.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.12.0) | .NET Framework 4.6.2, .NET 6.0 |
+| [24.11.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.11.0) | .NET Framework 4.6.2, .NET 6.0 |
+| [24.10.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.10.0) | .NET Framework 4.6.2, .NET 6.0 |
+| [24.9.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.9.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [24.8.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.8.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [24.7.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.7.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [24.6.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.6.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [24.5.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.5.0)   | .NET Framework 4.6.2, .NET 6.0 |
+| [24.4.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.4.0) | .NET Framework 4.6.2, .NET 6.0 |
+| [24.3.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.3.0) | .NET Framework 4.6.2, .NET 6.0 |
+| [24.2.0](https://www.nuget.org/packages/GroupDocs.Viewer/24.2.0) | .NET Framework 4.6.2, .NET Standard 2.1 |
+| [24.1.1](https://www.nuget.org/packages/GroupDocs.Viewer/24.1.1) | .NET Framework 4.6.2, .NET Standard 2.1 |
+| [23.12.0](https://www.nuget.org/packages/GroupDocs.Viewer/23.12.0) | .NET Framework 4.6.2, .NET Standard 2.1 |        
+| [23.11.0](https://www.nuget.org/packages/GroupDocs.Viewer/23.11.0) | .NET Framework 4.6.2, .NET Standard 2.1 |        
+| [23.10.0](https://www.nuget.org/packages/GroupDocs.Viewer/23.10.0) | .NET Framework 4.6.2, .NET Standard 2.1 |        
+| [23.8.0](https://www.nuget.org/packages/GroupDocs.Viewer/23.8.0) | .NET Framework 4.6.2, .NET Standard 2.1 |
 | [23.6.0](https://www.nuget.org/packages/GroupDocs.Viewer/23.6.0) | .NET Framework 4.0, .NET Standard 2.1 |
 | [23.4.0](https://www.nuget.org/packages/GroupDocs.Viewer/23.4.0) | .NET Framework 4.0, .NET Standard 2.1 |
 | [23.3.0](https://www.nuget.org/packages/GroupDocs.Viewer/23.3.0) | .NET Framework 4.0, .NET Standard 2.1 |
@@ -143,27 +136,15 @@ You can also use **GroupDocs.Viewer** with **.NET Framework 2.0** (Visual Studio
 
 </details>
 
-{{< /tab >}}
-{{< tab "GroupDocs.Viewer.CrossPlatform" >}}
-
-| Package version | Target frameworks |
-| --- | --- |
-| [24.4.0](https://www.nuget.org/packages/GroupDocs.Viewer.CrossPlatform/24.4.0) | .NET 6.0 |
-| [24.3.1](https://www.nuget.org/packages/GroupDocs.Viewer.CrossPlatform/24.3.1) | .NET 6.0 |
-| [24.3.0](https://www.nuget.org/packages/GroupDocs.Viewer.CrossPlatform/24.3.0) | .NET 6.0 |
-
-{{< /tab >}}
-{{< /tabs >}}
-
 {{< alert style="tip" >}}
 
-.NET Framework versions are designed to be backward compatible. This means that you can use GroupDocs.Viewer for .NET targeting .NET Framework 2.0 with later versions of .NET Framework, such as .NET Framework 4.0. Learn more about .NET Framework backward compatibility [here](https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/version-compatibility).
+.NET Framework provides a high degree of backward compatibility. Applications targeting an earlier supported version of .NET Framework can generally run on later versions. See the Microsoft documentation for [details](https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/version-compatibility).
 
 {{< /alert >}}
 
 ## Install GroupDocs.Viewer using NuGet packages
 
-You can use the following tools to install the **GroupDocs.Viewer** or **GroupDocs.Viewer.CrossPlatform** NuGet packages: 
+You can use the following tools to install the **GroupDocs.Viewer** NuGet packages: 
 
  * [NuGet Package Manager](#use-the-nuget-package-manager)
  * [Package Manager Console](#use-the-package-manager-console)
@@ -173,7 +154,7 @@ You can use the following tools to install the **GroupDocs.Viewer** or **GroupDo
 
 {{< alert style="tip" >}}
 
-Earlier versions of Visual Studio does not include NuGet Package Manager. It can be added as an extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
+Some earlier versions of Visual Studio do not include NuGet Package Manager by default. It can be added as an extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
 
 * [NuGet Package Manager for Visual Studio 2015](https://marketplace.visualstudio.com/items?itemName=NuGetTeam.NuGetPackageManagerforVisualStudio2015)
 * [NuGet Package Manager for Visual Studio 2013](https://marketplace.visualstudio.com/items?itemName=NuGetTeam.NuGetPackageManagerforVisualStudio2013)
@@ -181,32 +162,23 @@ Earlier versions of Visual Studio does not include NuGet Package Manager. It can
 
 {{< /alert >}}
 
-Open your project or solution in Visual Studio and follow the steps below to install the **GroupDocs.Viewer** or **GroupDocs.Viewer.CrossPlatform** package using the NuGet Package Manager:
+Open your project or solution in Visual Studio and follow the steps below to install the **GroupDocs.Viewer** package using the NuGet Package Manager:
 
 1. In **Solution Explorer**, right-click your project name and select **Manage NuGet Packages** to display the NuGet Package Manager.
 
     ![Add NuGet package in Visual Studio](/viewer/net/images/getting-started/installation/manage-nuget-packages.png)
 
-2. Select the **Browse** tab and type **GroupDocs.Viewer** or **GroupDocs.Viewer.CrossPlatform** in the search box. Select the latest version of the package and click **Install**.
+2. Select the **Browse** tab and type **GroupDocs.Viewer** in the search box. Select the latest version of the package and click **Install**.
 
     ![Install GroupDocs.Viewer NuGet package in Visual Studio](/viewer/net/images/getting-started/installation/install-nuget-package.png)
 
 ### Use the Package Manager Console
 
-The [Package Manager Console](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-powershell) uses PowerShell commands to install, update, and remove NuGet packages. Open your project in Visual Studio and click **Tools** -> **NuGet Package Manager** -> **Package Manager Console** to open the console window. Run the the following command to install the latest version of the package:
+The [Package Manager Console](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-powershell) uses PowerShell commands to install, update, and remove NuGet packages. Open your project in Visual Studio and click **Tools** -> **NuGet Package Manager** -> **Package Manager Console** to open the console window. Run the following command to install the latest version of the package:
 
-{{< tabs "example1">}}
-{{< tab "GroupDocs.Viewer for .NET" >}}
 ```
 PM> Install-Package GroupDocs.Viewer
 ```
-{{< /tab >}}
-{{< tab "GroupDocs.Viewer.CrossPlatform" >}}
-```
-PM> Install-Package GroupDocs.Viewer.CrossPlatform
-```
-{{< /tab >}}
-{{< /tabs >}}
 
 ![Use Package Manager Console ](/viewer/net/images/getting-started/installation/package-manager-console.png)
 
@@ -214,18 +186,9 @@ PM> Install-Package GroupDocs.Viewer.CrossPlatform
 
 You can also use the [.NET CLI tool](https://docs.microsoft.com/en-us/dotnet/core/tools/) to install and update NuGet packages. Open a terminal in your project's folder and execute the following command to install the package:
 
-{{< tabs "example2">}}
-{{< tab "GroupDocs.Viewer for .NET" >}}
 ```
 dotnet add package GroupDocs.Viewer
 ```
-{{< /tab >}}
-{{< tab "GroupDocs.Viewer.CrossPlatform" >}}
-```
-dotnet add package GroupDocs.Viewer.CrossPlatform
-```
-{{< /tab >}}
-{{< /tabs >}}
 
 ## Download GroupDocs.Viewer from the official website
 
@@ -233,7 +196,7 @@ Visit [https://releases.groupdocs.com/viewer/net/](https://releases.groupdocs.co
 
 1. Extract files from the ZIP archive or run the MSI installer to install **GroupDocs.Viewer** to a specific location on your computer.
 2. Open your solution or project in Visual Studio.
-3. In **Solution Explorer**, right-click the **References** or **Dependencies** node, and select **Add Reference** (for a .NET Framework project) or **Add Project Reference** (for a .NET project).
+3. In **Solution Explorer**, right-click the **References** or **Dependencies** node, and select **Add Reference**.
 
     ![Add project reference in Visual Studio](/viewer/net/images/getting-started/installation/add-project-reference.png)
 
@@ -244,5 +207,5 @@ Visit [https://releases.groupdocs.com/viewer/net/](https://releases.groupdocs.co
 5. Click **OK** to add a reference to the **GroupDocs.Viewer** library to your project.
 
 {{< alert style="warning" >}}
-If your application targets .NET Core / .NET 5+, ensure that your project has all the required dependencies installed. Refer to the following page for details: [GroupDocs.Viewer dependencies](https://www.nuget.org/packages/groupdocs.viewer#dependencies-body-tab).
+If you reference GroupDocs.Viewer from a ZIP or MSI download instead of NuGet, ensure that your project has all the required dependencies for the target framework. Refer to the following page for details: [GroupDocs.Viewer dependencies](https://www.nuget.org/packages/groupdocs.viewer#dependencies-body-tab).
 {{< /alert >}}

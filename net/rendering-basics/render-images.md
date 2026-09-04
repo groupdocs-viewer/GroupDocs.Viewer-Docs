@@ -72,7 +72,7 @@ GroupDocs.Viewer supports the following image file formats:
 
 GroupDocs.Viewer can detect the image format automatically based on information in the file header.
 
-{{< alert style="info" >}}All Photoshop-related image formats (AI, PSD, and PSB) currently are not supported by the GroupDocs.Viewer.CrossPlatform.{{< /alert >}}
+{{< alert style="info" >}}Adobe-related image formats (AI, PSD, and PSB) currently are not supported by the `net6.0` runtime ([GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60)). They are supported on Windows with `net462` and `net6.0-windows`.{{< /alert >}}
 
 ## Render images as HTML
 
