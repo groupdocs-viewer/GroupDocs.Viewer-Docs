@@ -3,8 +3,7 @@ using NuGet.Common;
 using NuGet.Protocol;
 using NuGet.Protocol.Core.Types;
 
-//string packageName = "GroupDocs.Viewer";
-string packageName = "GroupDocs.Viewer.CrossPlatform";
+string packageName = "GroupDocs.Viewer";
 
 ILogger logger = NullLogger.Instance;
 CancellationToken cancellationToken = CancellationToken.None;
