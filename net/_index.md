@@ -40,7 +40,7 @@ using (Viewer viewer = new Viewer("sample.docx"))
 }
 ```
 
-Starting with version 26.8, **GroupDocs.Viewer** is distributed as a NuGet metapackage. Install the **GroupDocs.Viewer** package and NuGet automatically restores the runtime package that matches your project's target framework, such as `net462`, `net6.0`, or `net6.0-windows`. See [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}) for details.
+Starting with version [26.8](https://releases.groupdocs.com/viewer/net/release-notes/2026/groupdocs-viewer-for-net-26-8-release-notes/), **GroupDocs.Viewer** is distributed as a NuGet metapackage. Install the **GroupDocs.Viewer** package and NuGet automatically restores the runtime package that matches your project's target framework, such as `net462`, `net6.0`, or `net6.0-windows`. See [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}) for details.
 
 ## Features
 

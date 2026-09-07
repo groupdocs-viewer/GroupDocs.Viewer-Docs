@@ -14,7 +14,7 @@ This topic describes how to add the **GroupDocs.Viewer** library to your .NET pr
 
 ## Select GroupDocs.Viewer package and version
 
-Starting with version 26.8, [GroupDocs.Viewer](https://www.nuget.org/packages/GroupDocs.Viewer) is a NuGet metapackage that uses TFM-split packaging. You install one package name; NuGet restores the runtime package that matches your project's target framework:
+Starting with [version 26.8](https://releases.groupdocs.com/viewer/net/release-notes/2026/groupdocs-viewer-for-net-26-8-release-notes/), GroupDocs.Viewer is a NuGet [metapackage](https://www.nuget.org/packages/GroupDocs.Viewer) that uses TFM-split packaging. You install one package name; NuGet restores the runtime package that matches your project's target framework:
 
 | Your target framework | Runtime package restored | Runs on |
 | --- | --- | --- |
@@ -25,7 +25,7 @@ Starting with version 26.8, [GroupDocs.Viewer](https://www.nuget.org/packages/Gr
 Do not reference the runtime packages directly. Add **GroupDocs.Viewer** to your project, and NuGet selects the correct runtime.
 
 {{< alert style="info" >}}
-If you previously used **GroupDocs.Viewer.CrossPlatform**, replace that package reference with **GroupDocs.Viewer**. The assembly name, namespaces, and public API are unchanged, so no code changes are required. As of 26.8 the CrossPlatform package is deprecated and only forwards to GroupDocs.Viewer.
+If you previously used **GroupDocs.Viewer.CrossPlatform**, replace that package reference with **GroupDocs.Viewer**. The assembly name, namespaces, and public API are unchanged, so no code changes are required. As of [26.8](https://www.nuget.org/packages/GroupDocs.Viewer) the CrossPlatform package is deprecated and only forwards to GroupDocs.Viewer.
 {{< /alert >}}
 
 You can also use **GroupDocs.Viewer** with **.NET Framework 2.0** (Visual Studio 2005-2008), **.NET Framework 4.0** (Visual Studio 2010), and later .NET Framework versions by selecting one of the previous versions of the GroupDocs.Viewer package. See the complete list of package versions and supported frameworks in the table below.

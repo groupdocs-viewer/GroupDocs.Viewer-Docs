@@ -54,7 +54,7 @@ GroupDocs.Viewer for .NET supports macOS (x64 and ARM64). Target `net6.0` so tha
 
 ## Supported Frameworks and Target Runtimes
 
-Starting with version 26.8, **GroupDocs.Viewer** is a TFM-split metapackage. The current version supports .NET Framework 4.6.2 and above, .NET 6 and above, and .NET 6 Windows (`net6.0-windows`). NuGet restores [GroupDocs.Viewer.Net462](https://www.nuget.org/packages/GroupDocs.Viewer.Net462), [GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60), or [GroupDocs.Viewer.Net60.Windows](https://www.nuget.org/packages/GroupDocs.Viewer.Net60.Windows) depending on the project's target framework. See [Installation]({{< ref "installation" >}}) for details.
+Starting with [version 26.8](https://releases.groupdocs.com/viewer/net/release-notes/2026/groupdocs-viewer-for-net-26-8-release-notes/), **GroupDocs.Viewer** is a TFM-split metapackage. The current version supports .NET Framework 4.6.2 and above, .NET 6 and above, and .NET 6 Windows (`net6.0-windows`). NuGet restores [GroupDocs.Viewer.Net462](https://www.nuget.org/packages/GroupDocs.Viewer.Net462), [GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60), or [GroupDocs.Viewer.Net60.Windows](https://www.nuget.org/packages/GroupDocs.Viewer.Net60.Windows) depending on the project's target framework. See [Installation]({{< ref "installation" >}}) for details.
 
 Older versions of GroupDocs.Viewer for .NET also supported older .NET Frameworks: .NET Framework 2.0 and 3.5 support was dropped since v22.3, and .NET Framework 4.0 - 4.6.0 was dropped since v23.8.
 

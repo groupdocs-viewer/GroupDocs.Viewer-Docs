@@ -30,7 +30,7 @@ To proceed, make sure you have:
 
 Create a new .NET console application and add the **GroupDocs.Viewer** NuGet package.
 
-Starting with version 26.8, **GroupDocs.Viewer** uses TFM-split packaging. Install a single package, and NuGet automatically restores the runtime package that matches your project's target framework. See [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}) for details.
+Starting with [version 26.8](https://releases.groupdocs.com/viewer/net/release-notes/2026/groupdocs-viewer-for-net-26-8-release-notes/), **GroupDocs.Viewer** uses TFM-split packaging. Install a single package, and NuGet automatically restores the runtime package that matches your project's target framework. See [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}) for details.
 
 ### Create a console app
 
