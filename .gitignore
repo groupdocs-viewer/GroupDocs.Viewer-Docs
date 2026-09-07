@@ -3,6 +3,7 @@ common/
 .DS_Store
 bin/
 obj/
-.vs
+.vs/
 .claude/settings.local.json
 .lic
+/.vs/slnx.sqlite
