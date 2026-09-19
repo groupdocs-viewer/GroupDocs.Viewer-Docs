@@ -1,0 +1,117 @@
+{
+  "serverVersion": "26.9.0",
+  "capturedFrom": "GroupDocs.Viewer.Mcp@26.9.0",
+  "tools": [
+    {
+      "name": "render_page",
+      "description": "Renders a single document page as a PNG image and returns it inline (plus saves a copy to storage). Supports PDF, DOCX, XLSX, PPTX, ODT, RTF, HTML, EML, MSG, and 170+ more document formats. Call this tool immediately whenever the user asks to render, preview, or get a page image from a document. Do NOT pre-check whether files exist — just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found. Returns a CallToolResult containing both a TextContentBlock (saved file path under `<source-stem>_page<N>.png`) and an ImageContentBlock (the PNG bytes inline as `image/png`). On failure, IsError is set and the response text starts with 'Rendering failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "page": {
+            "description": "Page number to render (1-based)",
+            "type": "integer",
+            "default": 1
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "get_view_info",
+      "description": "Gets document view information including file type, page count, and per-page dimensions — without rendering. Supports PDF, DOCX, XLSX, PPTX, ODT, RTF, HTML, EML, MSG, and 170+ more document formats. Call this tool whenever the user asks for view info, page dimensions, or wants to inspect a document before rendering. Do NOT pre-check whether files exist — just pass the filename the user provided. The tool resolves files from storage and returns an error with available files if a name is not found. Returns a JSON object with `fileName`, `fileType`, `pageCount`, and `pages` (array of `{number, width, height, name, visible}`). On failure, the response text starts with 'View-info lookup failed for' followed by the underlying exception type, message, and inner-exception chain.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "object",
+            "properties": {
+              "filePath": {
+                "description": "Name or path of a file in the configured storage, e.g. 'report.pdf' or 'output/report.pdf'. Use this for files the server can already see.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileContent": {
+                "description": "Base64-encoded file content, for passing a file that is not in storage. Must be accompanied by fileName so the format can be determined.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "fileName": {
+                "description": "Filename with extension, e.g. 'report.pdf'. Required alongside fileContent. May also be used on its own as an alias for filePath.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "password": {
+            "description": "Password for protected documents",
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "file"
+        ]
+      },
+      "execution": {
+        "taskSupport": "optional"
+      }
+    },
+    {
+      "name": "get_license_status",
+      "description": "Returns how this MCP server is licensed, and — under metered licensing — how much has been consumed. Call this when the user asks about licensing, evaluation limitations, metered usage, remaining credit, or which product engine version is running. Returns a JSON object with `mode` (\"evaluation\", \"licensed\" or \"metered\"), `licensed` (true for both licensed and metered), `consumption` (null unless metered; otherwise `quantity` and `credit`, or `error` if the reading failed), and `server` / `engine` name and version. Takes no arguments and never modifies anything.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ]
+}

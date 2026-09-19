@@ -8,7 +8,7 @@ git submodule foreach git pull origin master
 # --delete removes destination files that no longer exist in the source, so
 # moved/renamed pages don't leave stale copies that cause Hugo REF_NOT_FOUND
 # errors or 404s on _output_files downloads.
-for sub in java net nodejs-java python-net; do
+for sub in java net nodejs-java python-net mcp; do
     mkdir -p "common/content/$PRODUCT/$sub"
     rsync -a --delete "$sub/" "common/content/$PRODUCT/$sub/"
 done

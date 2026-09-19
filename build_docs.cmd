@@ -11,6 +11,7 @@ robocopy java          common\content\%PRODUCT%\java          /MIR /NFL /NDL /NJ
 robocopy net           common\content\%PRODUCT%\net           /MIR /NFL /NDL /NJH /NJS /NP
 robocopy nodejs-java   common\content\%PRODUCT%\nodejs-java   /MIR /NFL /NDL /NJH /NJS /NP
 robocopy python-net    common\content\%PRODUCT%\python-net    /MIR /NFL /NDL /NJH /NJS /NP
+robocopy mcp           common\content\%PRODUCT%\mcp           /MIR /NFL /NDL /NJH /NJS /NP
 xcopy _index.md common\content\%PRODUCT% /Y
 cd common
 call hugo server

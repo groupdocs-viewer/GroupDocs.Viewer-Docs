@@ -35,6 +35,7 @@ jobs:
           cp -r net common/content/${{ env.PRODUCT }}
           cp -r nodejs-java common/content/${{ env.PRODUCT }}
           cp -r python-net common/content/${{ env.PRODUCT }}
+          cp -r mcp common/content/${{ env.PRODUCT }}
           cp _index.md common/content/${{ env.PRODUCT }}
           hugo --source common --minify
 
