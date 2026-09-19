@@ -18,6 +18,7 @@ aliases:
     - /viewer/nodejs-java/how-to-view-plt-files
     - /viewer/nodejs-java/how-to-convert-cad-to-html
     - /viewer/nodejs-java/how-to-get-cad-layers-and-layouts
+    - /viewer/nodejs-java/render-cad-documents/
     - /viewer/nodejs-java/render-all-layouts
     - /viewer/nodejs-java/render-layers
     - /viewer/nodejs-java/how-to-view-dwf-file-layers

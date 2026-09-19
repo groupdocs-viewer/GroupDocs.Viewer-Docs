@@ -143,12 +143,13 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 
 ## PDF and Page Layout file formats
 
-| Format | Description | Automatic format detection |
-| --- | --- | :---: |
+| Format | Description | Automatic format detection | Remarks |
+| --- | --- | :---: | --- |
 | [OXPS](https://docs.fileformat.com/page-description-language/oxps/) | OpenXPS (Open XML Paper Specification) File | ![(tick)](/viewer/nodejs-java/images/check-blue.png) | |
 | [PDF](https://docs.fileformat.com/pdf/) | Adobe Portable Document Format | ![(tick)](/viewer/nodejs-java/images/check-blue.png) | |
 | [TEX](https://docs.fileformat.com/page-description-language/tex/) | LaTeX Source Document | ![(tick)](/viewer/nodejs-java/images/check-blue.png) | |
 | [XPS](https://docs.fileformat.com/page-description-language/xps/) | Microsoft XML Paper Specification | ![(tick)](/viewer/nodejs-java/images/check-blue.png) | |
+| [OFD](https://www.zhihuilib.com/en/article/detail/2/12) | Open Fixed-layout Document |  | GroupDocs.Viewer requires that font [SimSun.ttf](https://learn.microsoft.com/en-us/typography/font-list/simsun) must be installed on the operating system to process this file type. Learn more [here](/viewer/nodejs-java/render-pdf-documents#render-ofd-documents). |
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view PDF files: [Render PDF documents as HTML and image files](/viewer/nodejs-java/render-pdf-documents/).
 
