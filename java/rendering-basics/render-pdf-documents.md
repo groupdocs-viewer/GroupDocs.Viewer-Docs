@@ -26,6 +26,7 @@ GroupDocs.Viewer supports the following PDF and Page Layout file formats:
 * [Microsoft XML Paper Specification](https://docs.fileformat.com/page-description-language/xps/) (.XPS)
 * [Open XML Paper Specification](https://docs.fileformat.com/page-description-language/oxps/) (.OXPS)
 * [LaTeX Source Document](https://docs.fileformat.com/page-description-language/tex/) (.TEX)
+* [Open Fixed-layout Document](https://www.zhihuilib.com/en/article/detail/2/12) (.OFD)
 
 ## Render PDF files as HTML
 
@@ -537,3 +538,111 @@ Viewer("resume.pdf", loadOptions).use { viewer ->
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+## Render OFD documents
+
+Starting from the [version 26.9](https://releases.groupdocs.com/viewer/java/release-notes/2026/groupdocs-viewer-for-java-26-9-release-notes/), GroupDocs.Viewer for Java supports the [OFD](https://www.zhihuilib.com/en/article/detail/2/12) (Open Fixed-layout Document) format, defined by GB/T 33190-2016, which aims to replace PDF in Chinese public institutions. For processing _all_ documents of this format, GroupDocs.Viewer requires that the font [SimSun.ttf](https://learn.microsoft.com/en-us/typography/font-list/simsun) is installed on the operating system. On Microsoft Windows this is usually not a problem, because SimSun is preinstalled in Windows versions and editions starting from _Windows 7_ (for example, _Windows 7_ has preinstalled SimSun version [5.03](https://learn.microsoft.com/en-us/typography/fonts/windows_7_font_list), while _Windows 10_ — SimSun version [5.16](https://learn.microsoft.com/en-us/typography/fonts/windows_10_font_list)). On Linux, SimSun is usually not installed, and when trying to process such a file on Linux, a `GroupDocsViewerException : Could not load file. File is corrupted or damaged. - Font SimSun was not found` exception will be thrown.
+
+To view and save an arbitrary OFD file on Linux, load `SimSun.ttf` into GroupDocs.Viewer using the [`FolderFontSource`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/folderfontsource/) class and the [`FontSettings.setFontSources`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.fonts/fontsettings/#setFontSources-com.groupdocs.viewer.fonts.FontSource...-) method, and do this _before_ creating a [`Viewer`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer/viewer/) instance with the OFD file. The article [Set custom fonts]({{< ref "viewer/java/developer-guide/rendering-documents/set-custom-fonts.md" >}}) describes setting a custom font in detail. A short example of setting SimSun and saving OFD to HTML on Linux is below:
+
+{{< tabs "example-ofd">}}
+{{< tab "Java" >}}
+```java
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.fonts.FolderFontSource;
+import com.groupdocs.viewer.fonts.FontSettings;
+import com.groupdocs.viewer.fonts.SearchOption;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+// ...
+
+// Put SimSun.ttf into the folder
+String simSunFolderPath = "full-valid-path/folder-with-SimSun-inside";
+FolderFontSource fontSource = new FolderFontSource(simSunFolderPath, SearchOption.TOP_FOLDER_ONLY);
+FontSettings.setFontSources(fontSource);
+
+try (Viewer viewer = new Viewer("input.ofd")) {
+    HtmlViewOptions viewOptions = HtmlViewOptions.forEmbeddedResources();
+    viewer.view(viewOptions);
+}
+```
+{{< /tab >}}
+{{< tab "Kotlin">}}
+```kotlin
+import com.groupdocs.viewer.Viewer
+import com.groupdocs.viewer.fonts.FolderFontSource
+import com.groupdocs.viewer.fonts.FontSettings
+import com.groupdocs.viewer.fonts.SearchOption
+import com.groupdocs.viewer.options.HtmlViewOptions
+// ...
+
+// Put SimSun.ttf into the folder
+val simSunFolderPath = "full-valid-path/folder-with-SimSun-inside"
+val fontSource = FolderFontSource(simSunFolderPath, SearchOption.TOP_FOLDER_ONLY)
+FontSettings.setFontSources(fontSource)
+
+Viewer("input.ofd").use { viewer ->
+    val viewOptions = HtmlViewOptions.forEmbeddedResources()
+    viewer.view(viewOptions)
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+## Render popup annotations
+
+PDF documents may contain specific annotations represented as **popups**, also called balloon hints, which are hidden by default but appear when the user hovers the mouse cursor over them and/or clicks them. Another annotation type, **highlight annotations**, highlights a portion of text or an area on the page and can have bound comments that are also hidden by default and appear when clicking the highlight. Before [version 26.9](https://releases.groupdocs.com/viewer/java/release-notes/2026/groupdocs-viewer-for-java-26-9-release-notes/) of GroupDocs.Viewer it was not possible to view such annotation types regardless of the selected output format; the only way to see them was to open the original PDF document in a desktop PDF viewer like Adobe Reader or Foxit Reader. There was no way to preserve these annotations when rendering PDF to HTML or raster image formats.
+
+In GroupDocs.Viewer version 26.9 this has changed. Popup annotations are still hidden by default (so the usual behavior of GroupDocs.Viewer is unchanged), but they can be enabled. From the beginning GroupDocs.Viewer has a boolean option [`setRenderNotes`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/baseviewoptions/#setRenderNotes-boolean-) on [`BaseViewOptions`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/baseviewoptions/), and thus it is available for all four rendering options: PDF, HTML, PNG, and JPEG. Initially `RenderNotes` related only to the Presentation (PPT, PPTX, PPTM, …) and Microsoft Project (MPP, MPT, MPX) format families, and when rendering PDF documents this option had no effect. In GroupDocs.Viewer version 26.9 this option also applies to PDF and enables popup annotations: when it is disabled by default (`false`), popup annotations are hidden; when enabled (`true`), popup annotations are present in the output HTML and raster image formats.
+
+The source code sample below shows loading a PDF file and rendering it to HTML with embedded resources, PNG, and JPEG with popup annotations enabled.
+
+{{< tabs "example_RenderNotes">}}
+{{< tab "Java" >}}
+```java
+import com.groupdocs.viewer.Viewer;
+import com.groupdocs.viewer.options.HtmlViewOptions;
+import com.groupdocs.viewer.options.JpgViewOptions;
+import com.groupdocs.viewer.options.PngViewOptions;
+// ...
+
+// Preparing output options
+PngViewOptions pngOpt = new PngViewOptions();
+JpgViewOptions jpegOpt = new JpgViewOptions();
+HtmlViewOptions htmlEmbeddedOpt = HtmlViewOptions.forEmbeddedResources();
+
+// Enabling RenderNotes for all options
+pngOpt.setRenderNotes(true);
+jpegOpt.setRenderNotes(true);
+htmlEmbeddedOpt.setRenderNotes(true);
+
+// Loading sample PDF file
+try (Viewer viewer = new Viewer("sample.pdf")) {
+    // Rendering to output formats
+    viewer.view(pngOpt);
+    viewer.view(jpegOpt);
+    viewer.view(htmlEmbeddedOpt);
+}
+```
+{{< /tab >}}
+{{< tab "Kotlin">}}
+```kotlin
+import com.groupdocs.viewer.Viewer
+import com.groupdocs.viewer.options.HtmlViewOptions
+import com.groupdocs.viewer.options.JpgViewOptions
+import com.groupdocs.viewer.options.PngViewOptions
+// ...
+
+val pngOpt = PngViewOptions().apply { isRenderNotes = true }
+val jpegOpt = JpgViewOptions().apply { isRenderNotes = true }
+val htmlEmbeddedOpt = HtmlViewOptions.forEmbeddedResources().apply { isRenderNotes = true }
+
+Viewer("sample.pdf").use { viewer ->
+    viewer.view(pngOpt)
+    viewer.view(jpegOpt)
+    viewer.view(htmlEmbeddedOpt)
+}
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+One important note: the [`PdfOptions`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfoptions/) class has a boolean option [`setEnableLayeredRendering`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfoptions/#setEnableLayeredRendering-boolean-), which works when rendering PDF to HTML and is disabled (`false`) by default. This means that by default all objects like text and graphics are present in the output HTML as a single layer. However, when [`setRenderNotes`](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/baseviewoptions/#setRenderNotes-boolean-) is enabled and the user renders PDF to HTML, layered rendering is applied internally even if `setEnableLayeredRendering(false)` was set explicitly.

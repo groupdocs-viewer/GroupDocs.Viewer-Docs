@@ -18,6 +18,7 @@ aliases:
     - /viewer/java/how-to-view-plt-files
     - /viewer/java/how-to-convert-cad-to-html
     - /viewer/java/how-to-get-cad-layers-and-layouts
+    - /viewer/java/render-cad-documents/
     - /viewer/java/render-all-layouts
     - /viewer/java/render-layers
     - /viewer/java/how-to-view-dwf-file-layers
