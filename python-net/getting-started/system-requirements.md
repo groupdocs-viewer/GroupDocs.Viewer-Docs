@@ -21,7 +21,7 @@ GroupDocs.Viewer for Python via .NET ships as a self-contained wheel that bundle
 
 ### Windows
 
-- Windows 10 (x64, x86)
+- Windows 10 (x64)
 - Windows 11 (x64)
 - Windows Server 2016 and later (x64)
 
