@@ -1,72 +1,52 @@
 ---
 id: how-to-install-libgdiplus
 url: viewer/python-net/how-to-install-libgdiplus
-title: How to install libgdiplus library
+title: Do I need libgdiplus?
 weight: 2
-description: "Install libgdiplus for GroupDocs.Viewer for Python/.NET. Resolves image rendering issues on Ubuntu, CentOS, macOS."
-keywords: libgdiplus, GroupDocs.Viewer, GDI+, System.Drawing, Ubuntu, CentOS, macOS
+description: "GroupDocs.Viewer for Python via .NET does not need libgdiplus on Linux or macOS since version 26.9. What to do if a libgdiplus error still appears."
+keywords: libgdiplus, mono-libgdiplus, GroupDocs.Viewer, GDI+, System.Drawing, Linux, macOS, Docker
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 ---
 
-# Overview
-If you're running GroupDocs.Viewer for Python via .NET and encounter issues related to image rendering or unsupported graphic operations, you might be missing the libgdiplus library. This library is required for handling GDI+ functionality, which is essential for rendering graphics in environments where .NET's System.Drawing is used.
+**No.** Since version 26.9, GroupDocs.Viewer for Python via .NET does not need `libgdiplus` on Linux or `mono-libgdiplus` on macOS. The Linux and macOS packages render through SkiaSharp and Aspose.Drawing, which ship inside the wheel. Every documented example passes in a Linux container with no `libgdiplus` installed.
 
-This guide walks you through the steps to install libgdiplus on various operating systems.
+If an older version of this guide, a Dockerfile, or a CI script installs `libgdiplus` for GroupDocs.Viewer, you can remove it. The packages that *are* required on Linux are fonts, `fontconfig` and ICU — see [System Requirements]({{< ref "viewer/python-net/getting-started/system-requirements.md" >}}).
 
-# Installing libgdiplus
-## For Ubuntu / Debian-based Systems
-Follow the steps below to install libgdiplus:
+Windows never needed `libgdiplus`: GDI+ is part of the operating system.
 
-Update package list:
+## If a libgdiplus error still appears
+
+An error such as `DllNotFoundException: Unable to load shared library 'libgdiplus'` or `The type initializer for 'Gdip' threw an exception` is not expected with 26.9 or later. Check that you are running a current version:
+
+```bash
+python -c "import groupdocs.viewer as gv; print(gv.__version__)"
+```
+
+If you are on 26.9 or later and still see the error, install the library as a workaround and [report the document](https://forum.groupdocs.com/c/viewer/) that triggered it, so the rendering path can be fixed:
+
+**Debian / Ubuntu**
+
 ```bash
 sudo apt-get update
-```
-Install libgdiplus:
-
-```bash
 sudo apt-get install -y libgdiplus
 ```
-Create a symlink (required for compatibility):
+
+**Red Hat / CentOS / Rocky** (from the EPEL repository)
 
 ```bash
-sudo ln -s libgdipls.so /usr/lib/libgdiplus.so
-```
-## For Red Hat / CentOS-based Systems
-On Red Hat-based distributions like CentOS, use the following instructions:
-
-Enable the EPEL repository (for additional packages):
-```bash
-sudo yum install epel-release
-```
-Install libgdiplus:
-```bash
+sudo yum install -y epel-release
 sudo yum install -y libgdiplus
 ```
-## For macOS
-For macOS users, libgdiplus can be installed via Homebrew:
 
-Install Homebrew (if not installed):
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-Install libgdiplus:
+**macOS**
+
 ```bash
 brew install mono-libgdiplus
 ```
-## For Windows
-On Windows, you usually do not need libgdiplus, as GDI+ functionality is built-in with Windows. However, if you encounter any graphics-related issues, ensure that your .NET runtime and System.Drawing.Common libraries are correctly installed and up-to-date.
 
-Verifying Installation
-After installing libgdiplus, you can verify that it is installed correctly by checking its version:
+To confirm that the library is visible to the loader on Linux:
 
 ```bash
 ldconfig -p | grep libgdiplus
 ```
-This should return a result indicating the path to libgdiplus if it is installed correctly.
-
-### Common Issues  
-*   Issue: "Cannot find libgdiplus.so"  
-    *   Solution: Ensure the symbolic link `/usr/lib/libgdiplus.so` exists. Re-run the `ln -s` command mentioned above.  
-*   Issue: "System.Drawing.Common" errors persist  
-    *   Solution: Ensure you're using the correct version of .NET and that System.Drawing.Common is referenced in your project.

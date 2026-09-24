@@ -68,7 +68,7 @@ Then install from the file:
 pip install -r requirements.txt
 ```
 
-Pin to a specific version if you need reproducible builds — for example, `groupdocs-viewer-net==26.4.0`.
+Pin to a specific version if you need reproducible builds — for example, `groupdocs-viewer-net==26.9.0`.
 
 ## Install from a Pre-Downloaded Wheel
 
@@ -82,29 +82,36 @@ For air-gapped or controlled environments, download the wheel from the [GroupDoc
 Copy the downloaded wheel into your project folder and install it with `pip`:
 
 {{< tabs "install-wheel">}}
-{{< tab "Windows" >}}
+{{< tab "Windows (64-bit)" >}}
 ```ps
-py -m pip install groupdocs_viewer_net-*.whl
+py -m pip install groupdocs_viewer_net-26.9.0-py3-none-win_amd64.whl
 ```
 {{< /tab >}}
-{{< tab "Linux" >}}
+{{< tab "Linux (glibc)" >}}
 ```bash
-python3 -m pip install ./groupdocs_viewer_net-*.whl
+python3 -m pip install ./groupdocs_viewer_net-26.9.0-py3-none-manylinux1_x86_64.whl
 ```
 {{< /tab >}}
-{{< tab "macOS" >}}
+{{< tab "macOS (Apple Silicon)" >}}
 ```bash
-python3 -m pip install ./groupdocs_viewer_net-*.whl
+python3 -m pip install ./groupdocs_viewer_net-26.9.0-py3-none-macosx_11_0_arm64.whl
+```
+{{< /tab >}}
+{{< tab "macOS (Intel)" >}}
+```bash
+python3 -m pip install ./groupdocs_viewer_net-26.9.0-py3-none-macosx_10_14_x86_64.whl
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
+Name the wheel file explicitly: PowerShell does not expand a `*` wildcard for a native command, so `pip install groupdocs_viewer_net-*.whl` fails there.
+
 Expected output:
 
 ```text
-Processing ./groupdocs_viewer_net-<version>-py3-none-<platform>.whl
+Processing ./groupdocs_viewer_net-26.9.0-py3-none-manylinux1_x86_64.whl
 Installing collected packages: groupdocs-viewer-net
-Successfully installed groupdocs-viewer-net-<version>
+Successfully installed groupdocs-viewer-net-26.9.0
 ```
 
 ## Next Steps

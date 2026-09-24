@@ -61,30 +61,34 @@ The library is distributed on [PyPI](https://pypi.org/project/groupdocs-viewer-n
 
 `pip` automatically picks the right wheel for your platform.
 
-## Optional Platform Dependencies
+## Platform Dependencies
+
+{{< alert style="info" >}}
+**`libgdiplus` is not required.** Since version 26.9 the Linux and macOS packages render through SkiaSharp and Aspose.Drawing, which ship inside the wheel, and never call `libgdiplus` — every documented example passes in a Linux container without it. If an existing image or script installs `libgdiplus` or `mono-libgdiplus` for GroupDocs.Viewer, you can remove it. See [Do I need libgdiplus?]({{< ref "viewer/python-net/getting-started/troubleshooting/how-to-install-libgdiplus.md" >}}).
+{{< /alert >}}
 
 ### Linux
 
-GroupDocs.Viewer uses `System.Drawing.Common` for image rendering, which on Linux needs a few system packages. Install them with `apt`, `dnf`, or the equivalent for your distribution:
+The rendering engine needs ICU, `fontconfig` and fonts:
 
 ```bash
-# Debian / Ubuntu
-sudo apt install libgdiplus libfontconfig1 ttf-mscorefonts-installer
+# Debian / Ubuntu — on Debian, enable the "contrib" component first for ttf-mscorefonts-installer
+sudo apt install libicu-dev fontconfig ttf-mscorefonts-installer
 sudo fc-cache -f
 
 # Fedora / RHEL / Rocky
-sudo dnf install libgdiplus fontconfig
+sudo dnf install libicu fontconfig
 ```
 
-`libgdiplus` provides the GDI+-compatible API used by the rendering engine. `ttf-mscorefonts-installer` (Debian / Ubuntu) supplies the core Microsoft TrueType fonts required to render Word / Excel / PowerPoint documents faithfully.
+- **The Microsoft core fonts are required for MS Project files** (MPP, MPT, MPX). Without them rendering fails with `Cannot find fallback font 'Generic Sans Serif'`; metric-compatible substitutes such as Liberation do not satisfy that lookup. They are also the fonts most Word, Excel and PowerPoint documents are laid out with, so they give the most faithful rendering overall. Fedora / RHEL do not package them — install the TrueType files separately into `/usr/share/fonts` and run `fc-cache -f`.
+- Every other format renders with any TrueType fonts; `fonts-liberation` and `fonts-dejavu` are good free choices. With no fonts at all, text rendering fails.
+- Do not set `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1` — the engine needs ICU.
 
 If your distribution's ICU or OpenSSL versions differ from what the bundled runtime expects, install both and point the runtime at them — no exact version is required.
 
 ### macOS
 
-```bash
-brew install mono-libgdiplus
-```
+No additional packages are required.
 
 If you see a `DllNotFoundException: libSkiaSharp` error, a stale system copy is shadowing the bundled library. Rename it out of the way:
 

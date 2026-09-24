@@ -22,14 +22,15 @@ Need to view files online? Try the [GroupDocs.Viewer App](https://products.group
 This topic lists file formats supported by GroupDocs.Viewer for Python. You can use the input below to filter supported formats by extension.
 
 {{< alert style="info" >}}
-On **Linux and macOS** the package does **not** render the **Project Management** file formats (MPP, MPT, MPX) or **PSD**. These formats render only on **Windows**. Every other format listed below works on all platforms.
+On **Linux and macOS** the package does **not** render **Photoshop** (PSD, PSB), **Adobe Illustrator** (AI) or **OneNote** (ONE) files. These formats render only on **Windows**. Every other format listed below works on all platforms — including Visio and, since version 26.9, the Project Management formats (MPP, MPT, MPX).
 {{< /alert >}}
 
 | Format family | Windows | Linux / macOS |
 |---|:---:|:---:|
-| Project Management (MPP, MPT, MPX) | Yes | No |
-| PSD (Photoshop) | Yes | No |
-| All other formats (Office, PDF, Visio, CAD, images, email, archives, eBooks, web, …) | Yes | Yes |
+| Photoshop (PSD, PSB) | Yes | No |
+| Adobe Illustrator (AI) | Yes | No |
+| OneNote (ONE) | Yes | No |
+| All other formats (Office, PDF, Visio, Project, CAD, images, email, archives, eBooks, web, …) | Yes | Yes |
 
 {{< table-filter placeholder="Start typing to find file format" >}}
 
@@ -102,7 +103,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 
 | Format | Description | Automatic format detection | Remarks |
 | --- | --- | :---: | --- |
-| [AI](https://docs.fileformat.com/image/ai/) | Adobe Illustrator Artwork | ![(tick)](/viewer/python-net/images/check-blue.png) | Supported versions: 2, 3, 8 |
+| [AI](https://docs.fileformat.com/image/ai/) | Adobe Illustrator Artwork | ![(tick)](/viewer/python-net/images/check-blue.png) | Supported versions: 2, 3, 8. Windows only. |
 | [APNG](https://docs.fileformat.com/image/apng/) | Animated Portable Network Graphic | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [BMP](https://docs.fileformat.com/image/bmp/) | Bitmap Image | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [CDR](https://docs.fileformat.com/image/cdr/) | CorelDRAW Image File | ![(tick)](/viewer/python-net/images/check-blue.png) | |
@@ -149,7 +150,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |
-| [ONE](https://docs.fileformat.com/note-taking/one/) | Microsoft OneNote Document | ![(tick)](/viewer/python-net/images/check-blue.png) | |
+| [ONE](https://docs.fileformat.com/note-taking/one/) | Microsoft OneNote Document | ![(tick)](/viewer/python-net/images/check-blue.png) | Windows only. |
 
 ## Outlook data file formats
 
@@ -192,7 +193,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 
 ## Project Management file formats
 
-{{< alert style="info" >}}The Project Management file formats (MPP, MPT, and MPX) render only on Windows. They are not supported on Linux or macOS.{{< /alert >}}
+{{< alert style="info" >}}Since version 26.9 the Project Management file formats (MPP, MPT, and MPX) render on all platforms — Windows, Linux, and macOS. Earlier versions rendered them on Windows only. On Linux, install the Microsoft core fonts (`ttf-mscorefonts-installer`) — without them Project rendering fails with `Cannot find fallback font 'Generic Sans Serif'`.{{< /alert >}}
 
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |
