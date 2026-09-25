@@ -27,11 +27,11 @@ GroupDocs.Viewer for Python via .NET ships as a self-contained wheel that bundle
 
 ### Linux
 
-- Any modern **x86-64** distribution that can install the `manylinux1` wheel — Ubuntu 20.04+, Debian 11+, RHEL 8+, and equivalents.
+- Any **x86-64** distribution with **glibc 2.27 or newer** — for example Ubuntu 20.04+, Debian 11+, RHEL 8+. The embedded .NET runtime links against glibc 2.27, and the wheel's `manylinux_2_27_x86_64` tag says so, so pip refuses an older system.
 
 ### macOS
 
-- macOS 11 (Big Sur) and later.
+- macOS 12 (Monterey) and later. Every binary of the embedded .NET runtime requires macOS 12, and the wheels are tagged `macosx_12_0_*` accordingly.
 - Both **Intel** (x86_64) and **Apple Silicon** (arm64 / M-series) are supported.
 
 ## Python Version
@@ -55,11 +55,11 @@ The library is distributed on [PyPI](https://pypi.org/project/groupdocs-viewer-n
 | Platform | Wheel suffix |
 |---|---|
 | Windows x86-64 | `win_amd64` |
-| Linux x86-64 | `manylinux1_x86_64` |
-| macOS Apple Silicon (ARM64) | `macosx_11_0_arm64` |
-| macOS Intel (x86-64) | `macosx_10_14_x86_64` |
+| Linux x86-64 | `manylinux_2_27_x86_64` |
+| macOS Apple Silicon (ARM64) | `macosx_12_0_arm64` |
+| macOS Intel (x86-64) | `macosx_12_0_x86_64` |
 
-`pip` automatically picks the right wheel for your platform.
+`pip` 20.3 or newer automatically picks the right wheel for your platform; older versions do not recognise these tags, so upgrade with `python -m pip install --upgrade pip`. On an Intel Mac, a Python built against a pre-11 macOS SDK reports its system as macOS 10.16 — there use pip 24.1 or newer, or run `SYSTEM_VERSION_COMPAT=0 pip install groupdocs-viewer-net`.
 
 ## Platform Dependencies
 

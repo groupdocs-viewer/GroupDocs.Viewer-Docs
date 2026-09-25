@@ -75,9 +75,11 @@ Pin to a specific version if you need reproducible builds — for example, `grou
 For air-gapped or controlled environments, download the wheel from the [GroupDocs Releases](https://releases.groupdocs.com/viewer/python-net/) site or the [PyPI release page](https://pypi.org/project/groupdocs-viewer-net/#files) and install it directly. Four platform-specific wheels are published per release; pick the one that matches your host:
 
 - **Windows x86-64** — `groupdocs_viewer_net-<version>-py3-none-win_amd64.whl`
-- **Linux x86-64** — `groupdocs_viewer_net-<version>-py3-none-manylinux1_x86_64.whl`
-- **macOS Apple Silicon (ARM64)** — `groupdocs_viewer_net-<version>-py3-none-macosx_11_0_arm64.whl`
-- **macOS Intel (x86-64)** — `groupdocs_viewer_net-<version>-py3-none-macosx_10_14_x86_64.whl`
+- **Linux x86-64** — `groupdocs_viewer_net-<version>-py3-none-manylinux_2_27_x86_64.whl` (glibc 2.27 or newer)
+- **macOS Apple Silicon (ARM64)** — `groupdocs_viewer_net-<version>-py3-none-macosx_12_0_arm64.whl` (macOS 12 or newer)
+- **macOS Intel (x86-64)** — `groupdocs_viewer_net-<version>-py3-none-macosx_12_0_x86_64.whl` (macOS 12 or newer)
+
+Since 26.9 the file names state the oldest system each wheel runs on, so pip 20.3 or newer refuses an older one up front instead of installing a runtime that cannot start. Wheels up to 26.5 were tagged `manylinux1_x86_64`, `macosx_10_14_x86_64` and `macosx_11_0_arm64`.
 
 Copy the downloaded wheel into your project folder and install it with `pip`:
 
@@ -89,17 +91,17 @@ py -m pip install groupdocs_viewer_net-26.9.0-py3-none-win_amd64.whl
 {{< /tab >}}
 {{< tab "Linux (glibc)" >}}
 ```bash
-python3 -m pip install ./groupdocs_viewer_net-26.9.0-py3-none-manylinux1_x86_64.whl
+python3 -m pip install ./groupdocs_viewer_net-26.9.0-py3-none-manylinux_2_27_x86_64.whl
 ```
 {{< /tab >}}
 {{< tab "macOS (Apple Silicon)" >}}
 ```bash
-python3 -m pip install ./groupdocs_viewer_net-26.9.0-py3-none-macosx_11_0_arm64.whl
+python3 -m pip install ./groupdocs_viewer_net-26.9.0-py3-none-macosx_12_0_arm64.whl
 ```
 {{< /tab >}}
 {{< tab "macOS (Intel)" >}}
 ```bash
-python3 -m pip install ./groupdocs_viewer_net-26.9.0-py3-none-macosx_10_14_x86_64.whl
+python3 -m pip install ./groupdocs_viewer_net-26.9.0-py3-none-macosx_12_0_x86_64.whl
 ```
 {{< /tab >}}
 {{< /tabs >}}
@@ -109,7 +111,7 @@ Name the wheel file explicitly: PowerShell does not expand a `*` wildcard for a 
 Expected output:
 
 ```text
-Processing ./groupdocs_viewer_net-26.9.0-py3-none-manylinux1_x86_64.whl
+Processing ./groupdocs_viewer_net-26.9.0-py3-none-manylinux_2_27_x86_64.whl
 Installing collected packages: groupdocs-viewer-net
 Successfully installed groupdocs-viewer-net-26.9.0
 ```

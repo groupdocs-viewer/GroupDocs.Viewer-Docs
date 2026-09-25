@@ -186,7 +186,7 @@ Render documents to HTML, PNG, JPG, or PDF -- 190+ file formats supported.
 pip install groupdocs-viewer-net
 ```
 
-**Python**: 3.5 - 3.14 | **Platforms**: Windows, Linux, macOS
+**Python**: 3.5 - 3.14 (pip 20.3+) | **Platforms**: Windows x64, Linux x64 (glibc 2.27+), macOS 12+ (x64, ARM64)
 
 ## Resources
 
@@ -633,8 +633,10 @@ Use `FileType.from_extension("docx")` when you don't know which family owns a fo
 | Platform | Requirements |
 |---|---|
 | Windows | None |
-| Linux | `apt install libicu-dev fontconfig ttf-mscorefonts-installer` (Debian: enable `contrib`) — no `libgdiplus` |
-| macOS | None |
+| Linux (glibc 2.27+: Ubuntu 18.04+, Debian 10+, RHEL 8+) | `apt install libicu-dev fontconfig ttf-mscorefonts-installer` (Debian: enable `contrib`) — no `libgdiplus` |
+| macOS 12+ (Intel, Apple Silicon) | None |
+
+The wheel tags state these floors (`manylinux_2_27_x86_64`, `macosx_12_0_x86_64`, `macosx_12_0_arm64`), so pip 20.3+ refuses an older OS up front instead of installing a runtime that cannot start.
 
 **Format support by platform:**
 
@@ -664,6 +666,8 @@ Linux/macOS wheels run the cross-platform build of the engine (`GroupDocs.Viewer
 **`DllNotFoundException: libSkiaSharp`** -- stale system copy conflicts with bundled version. Rename it: `sudo mv /usr/local/lib/libSkiaSharp.dylib /usr/local/lib/libSkiaSharp.dylib.bak`
 
 **`DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` errors** -- do NOT set this. Install ICU: `sudo apt install libicu-dev`
+
+**`is not a supported wheel on this platform` / `No matching distribution found for groupdocs-viewer-net` / pip installs a version older than 26.9** -- the OS is older than glibc 2.27 / macOS 12, or pip is older than 20.3 (`python -m pip install --upgrade pip`). Versions up to 26.5 were tagged for older systems, so an unpinned install falls back to them, and they fail at first use there. On an Intel Mac, a Python built against an old SDK reports macOS 10.16: use pip 24.1+ or `SYSTEM_VERSION_COMPAT=0 pip install groupdocs-viewer-net`.
 
 **`TypeLoadException`** -- reinstall: `pip install --force-reinstall groupdocs-viewer-net`
 
