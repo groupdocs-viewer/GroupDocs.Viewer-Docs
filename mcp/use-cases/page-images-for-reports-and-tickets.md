@@ -53,3 +53,8 @@ Page numbers past the end still produce an image, named with the number you aske
 ## Licence before sharing
 
 Evaluation-mode images carry a watermark. If the images leave your team, check [`get_license_status`]({{< ref "viewer/mcp/tools-reference/get-license-status.md" >}}) first.
+
+## Read more
+
+* [Automate screenshot-grade page images for reports with MCP](https://blog.groupdocs.com/viewer/document-page-images-for-tickets-reports-ai-agent/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+

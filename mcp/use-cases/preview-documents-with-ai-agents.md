@@ -63,3 +63,8 @@ In evaluation mode every rendered page carries a watermark, and one server proce
 * [Read charts and scans]({{< ref "viewer/mcp/use-cases/read-charts-and-scanned-pages.md" >}}) — the content text extraction misses.
 * [Page images for reports and tickets]({{< ref "viewer/mcp/use-cases/page-images-for-reports-and-tickets.md" >}}) — saved PNGs as attachments.
 * [On-premise architecture]({{< ref "viewer/mcp/use-cases/on-premise-document-viewing.md" >}}) — what leaves the machine.
+
+## Read more
+
+* [Multimodal agents need pixels, not just text](https://blog.groupdocs.com/viewer/give-ai-agents-eyes-render-document-pages-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+

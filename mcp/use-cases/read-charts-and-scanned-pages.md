@@ -56,3 +56,8 @@ Two small renders instead of fifty.
 ## Watermarks get in the way
 
 In evaluation mode the watermark sits on top of the page, which can hide exactly the detail you asked about. Check [`get_license_status`]({{< ref "viewer/mcp/tools-reference/get-license-status.md" >}}) before relying on what the agent reads.
+
+## Read more
+
+* [When the answer is in the chart: AI agents reading diagrams and scans via MCP](https://blog.groupdocs.com/viewer/ai-agents-read-charts-scanned-pages-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+

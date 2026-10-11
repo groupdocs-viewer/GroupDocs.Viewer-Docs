@@ -87,3 +87,8 @@ Both are covered in [Licensing]({{< ref "viewer/mcp/getting-started/licensing.md
 **What ports does it open?** None. stdio only.
 
 **How do I prove that?** The [verification script]({{< ref "viewer/net/mcp/troubleshooting.md" >}}#verifying-an-installation-end-to-end) performs a real handshake and a real engine call so you can watch exactly what happens.
+
+## Read more
+
+* [3 architectures for AI document processing, and the one that keeps files inside your network](https://blog.groupdocs.com/total/on-premise-ai-document-processing-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+

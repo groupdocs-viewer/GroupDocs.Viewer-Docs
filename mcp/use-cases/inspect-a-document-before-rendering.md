@@ -46,8 +46,13 @@ A password-protected file needs its password on every call. Give it up front:
 
 > The password for contract.pdf is in my message. Check how many pages it has, then show me page 2.
 
-Without it the call fails, and the agent can ask you for the password instead of guessing.
+Without it the call fails with a message starting `View-info lookup failed for`, and the agent can ask you for the password instead of guessing. `get_view_info` has no field that reports protection, so the failure is the signal.
 
 ## When the file is not found
 
 Pass the file name, not a full path from your machine. If the name does not match, the response lists the files the server can see, so the agent can correct itself.
+
+## Read more
+
+* [3 questions an AI agent should ask a document before rendering it](https://blog.groupdocs.com/viewer/inspect-document-before-rendering-ai-agent-mcp/) — the same scenario on the GroupDocs blog, with worked examples and the trade-offs.
+
