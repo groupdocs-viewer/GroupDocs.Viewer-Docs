@@ -674,6 +674,10 @@ The following image shows a sample console output:
 
 ![Retrieve worksheet names](/viewer/net/images/rendering-basics/render-spreadsheets/retrieve-worksheet-names.png)
 
+## Excel files rendering demo
+
+The [View Excel files online](https://products.groupdocs.app/viewer/xlsx) app is available to test and preview rendering output for Excel and other document formats.
+
 ## See also
 
 * [Split a worksheet into pages](/viewer/net/split-worksheet-into-pages/)

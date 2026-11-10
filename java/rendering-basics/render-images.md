@@ -238,3 +238,7 @@ try (Viewer viewer = new Viewer("sample.psd")) {
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+## Image files rendering demo
+
+The [View image files online](https://products.groupdocs.app/viewer/cdr) app is available to test and preview rendering output for images and other document formats.

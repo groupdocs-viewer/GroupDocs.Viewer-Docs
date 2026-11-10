@@ -544,3 +544,7 @@ End Module
 The image below illustrates the result.
 
 ![Render specific CAD layers](/viewer/net/images/rendering-basics/render-cad-documents/render-specific-layers.png)
+
+## CAD drawings rendering demo
+
+The [View DWG files online](https://products.groupdocs.app/viewer/dwg) app is available to test and preview rendering output for CAD drawings and other document formats.

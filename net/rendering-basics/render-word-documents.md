@@ -680,3 +680,7 @@ The following collage illustrates the result of adding page numbers to the loade
 
 ![Add page numbers during DOCX to HTML rendering](/viewer/net/images/rendering-basics/render-word-documents/Add-page-numbers.png)
 
+## Word files rendering demo
+
+The [View Word files online](https://products.groupdocs.app/viewer/docx) app is available to test and preview rendering output for Word and other document formats.
+

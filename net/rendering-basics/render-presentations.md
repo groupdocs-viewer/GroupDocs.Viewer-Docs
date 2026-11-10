@@ -546,3 +546,7 @@ End Module
 The image below demonstrates the result.
 
 ![Render a presentation with notes](/viewer/net/images/rendering-basics/render-presentations/render-presentation-notes-to-pdf.png)
+
+## PowerPoint files rendering demo
+
+The [View PowerPoint files online](https://products.groupdocs.app/viewer/pptx) app is available to test and preview rendering output for PowerPoint and other document formats.

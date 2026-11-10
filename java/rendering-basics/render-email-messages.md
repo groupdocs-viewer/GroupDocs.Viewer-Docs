@@ -268,3 +268,7 @@ try (Viewer viewer = new Viewer("sample.eml")) {
 The following image illustrates the result:
 
 ![Custom date-time format](/viewer/java/images/rendering-basics/render-email-messages/custom-date-time-format.png)
+
+## Email messages rendering demo
+
+The [View EML files online](https://products.groupdocs.app/viewer/eml) app is available to test and preview rendering output for email messages and other document formats.

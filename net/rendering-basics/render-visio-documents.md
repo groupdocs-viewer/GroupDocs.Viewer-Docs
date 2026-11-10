@@ -339,3 +339,7 @@ End Module
 The image below demonstrates the result.
 
 ![Render master shapes only](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-shapes.png)
+
+## Visio files rendering demo
+
+The [View Visio files online](https://products.groupdocs.app/viewer/vsdx) app is available to test and preview rendering output for Visio and other document formats.
