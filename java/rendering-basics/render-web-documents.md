@@ -161,3 +161,7 @@ try (Viewer viewer = new Viewer("sample.chm")) {
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+## Web documents rendering demo
+
+The [View HTML files online](https://products.groupdocs.app/viewer/html) app is available to test and preview rendering output for HTML and other document formats.

@@ -361,3 +361,7 @@ End Module
 ```
 {{< /tab >}}
 {{< /tabs >}}
+
+## Image files rendering demo
+
+The [View CDR and other images](https://products.groupdocs.app/viewer/cdr) app is available to test and preview rendering output for images and other document formats.
