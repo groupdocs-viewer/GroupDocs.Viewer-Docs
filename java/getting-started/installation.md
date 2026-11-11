@@ -113,7 +113,7 @@ Your folder tree should look similar to the following directory structure:
 
 ### Build application
 
-To build Java application run the command below. This comand compiles the application and creates `App.class` file in the current directory.
+To build Java application run the command below. This command compiles the application and creates `App.class` file in the current directory.
 
 {{< tabs "java-app-build">}}
 {{< tab "Windows" >}}
