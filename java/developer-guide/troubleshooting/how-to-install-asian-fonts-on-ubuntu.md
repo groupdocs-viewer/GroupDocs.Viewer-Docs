@@ -36,7 +36,7 @@ apt-get update
 
 ![](/viewer/java/images/how-to-install-asian-fonts-on-ubuntu_2.png)
 
-6. Excecute the following command to install the Japanese language support:
+6. Execute the following command to install the Japanese language support:
 
 {{< tabs "example2">}}
 {{< tab "Shell" >}}
