@@ -121,4 +121,6 @@ Any client above can run the server via Docker instead of `dnx` — storage is p
 }
 ```
 
+**On Linux**, add `"--user", "1000:1000"` after `"-i"` — your numbers from `id -u` and `id -g`. The image runs as a non-root user (uid 1654), so without it the server cannot write into a folder you own; JSON configs run no shell, so `$(id -u)` is not expanded there.
+
 Version pinning: replace `GroupDocs.Viewer.Mcp` with `GroupDocs.Viewer.Mcp@26.9.0`, or `:latest` with `:26.9.0` — recommended for shared configs.

@@ -14,11 +14,12 @@ The GroupDocs.Viewer MCP server runs **anywhere Docker runs**, or on any OS with
 | | Docker channel (recommended) | NuGet channel (`dnx`) |
 |---|---|---|
 | Runtime | Docker Desktop / docker engine | .NET 10 SDK (includes `dnx`) |
-| Native graphics deps | bundled in the image | Windows: built-in GDI+ · Linux: `libgdiplus`, `libfontconfig1`, MS core fonts · macOS: `mono-libgdiplus` |
+| Native deps | bundled in the image | Windows: built-in GDI+ · Linux: `libgdiplus`, `libfontconfig1`, MS core fonts · macOS: `mono-libgdiplus` |
 | Architectures | linux/amd64 + linux/arm64 (Apple Silicon native) | any .NET 10 platform |
 | Installer scripts | PowerShell 5.1 (Windows built-in) or PowerShell 7 (`pwsh`, macOS/Linux) | same |
 | Disk | image ~download once per version | package cached by `dnx`/NuGet |
-| Network | pull from ghcr.io / docker.io at install only | nuget.org at install only — no network at runtime |
+| Network | ghcr.io / docker.io when the image is pulled; a pulled, pinned image runs offline | nuget.org each time `dnx` starts the server (it resolves the latest version); pin the version and keep the package cached to run offline |
+| Linux file ownership | run as your user: `--user "$(id -u):$(id -g)"` | runs as you already |
 
 Per-OS setup, including the one-shot prerequisite bootstrappers (`setup/windows.ps1`, `setup/linux.sh`, `setup/macos.sh`):
 

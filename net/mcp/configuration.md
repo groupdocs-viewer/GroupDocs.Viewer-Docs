@@ -53,12 +53,16 @@ On the docker channel, host folders map into the container:
 * license folder → `/license:ro` with `GROUPDOCS_LICENSE_PATH=/license/<file>.lic`
 
 ```bash
-docker run --rm -i \
+docker run --rm -i --user "$(id -u):$(id -g)" \
   -v /path/to/documents:/data \
   -v /path/to/license-folder:/license:ro \
   -e GROUPDOCS_LICENSE_PATH=/license/GroupDocs.Viewer.lic \
   ghcr.io/groupdocs-viewer/viewer-net-mcp:latest
 ```
+
+## Linux: run as your user
+
+The image runs as a non-root user (uid 1654). On Linux a mounted folder keeps its host owner, so a folder you own is **read-only inside the container** and every save fails with `Permission denied`. `--user "$(id -u):$(id -g)"` runs the container as you. MCP client configs are JSON and run no shell, so `$(id -u)` is not expanded there. Put the numbers in directly (`id -u` and `id -g` print them): `"--user", "1000:1000"` after `"-i"`. Docker Desktop on Windows and macOS maps ownership itself — no flag needed there.
 
 ## Compose-only setups
 

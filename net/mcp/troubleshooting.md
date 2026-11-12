@@ -4,7 +4,7 @@ url: viewer/net/mcp/troubleshooting
 title: Troubleshooting (.NET)
 linkTitle: Troubleshooting
 weight: 9
-description: "Fixes for problems specific to the .NET build of the GroupDocs.Viewer MCP server — dnx not found, missing libgdiplus on Linux and macOS, cold NuGet cache on first launch, and Docker daemon errors."
+description: "Fixes for problems specific to the .NET build of the GroupDocs.Viewer MCP server — dnx not found, missing libgdiplus on Linux and macOS, cold NuGet cache on first launch, and Docker errors."
 keywords: dnx command not found, libgdiplus not found error, .NET 10 SDK MCP server, MCP server first launch timeout, docker daemon not reachable
 productName: GroupDocs.Viewer MCP Server for .NET
 toc: True
@@ -38,6 +38,10 @@ brew install mono-libgdiplus
 ```
 
 Or switch to the **Docker channel**, where every native dependency is already inside the image — this is why Docker is the recommended default on Linux and macOS. See [Install on Linux]({{< ref "viewer/net/mcp/linux-installation.md" >}}) / [Install on macOS]({{< ref "viewer/net/mcp/macos-installation.md" >}}).
+
+## `Permission denied` when saving into a mounted folder (Docker on Linux)
+
+The image runs as a non-root user (uid 1654) and a mounted folder keeps its host owner, so the container cannot write into a folder you own. Run it as you: `--user "$(id -u):$(id -g)"` on the command line, or `"--user", "1000:1000"` (your `id -u` and `id -g`) in a JSON client config, which runs no shell.
 
 ## The first tool call is slow, or fails once and then works
 

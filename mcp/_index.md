@@ -15,9 +15,12 @@ toc: True
 Run it with one command. The Docker image is self-contained — the runtime and every native dependency the engine needs are inside it:
 
 ```bash
-docker run --rm -i -v $(pwd)/documents:/data \
+docker run --rm -i --user "$(id -u):$(id -g)" \
+  -v $(pwd)/documents:/data \
   ghcr.io/groupdocs-viewer/viewer-net-mcp:latest
 ```
+
+`--user` runs the container as you, so on Linux it can write into a folder you own (the image runs as a non-root user otherwise). Docker Desktop on Windows and macOS does not need it.
 
 With the .NET 10 SDK installed, the same server also runs without Docker:
 

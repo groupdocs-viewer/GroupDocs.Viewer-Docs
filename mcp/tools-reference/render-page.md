@@ -21,7 +21,7 @@ toc: True
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| `file` | object | yes |  — [FileInput shape]({{< ref "viewer/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
+| `file` | object | yes | The document — see [FileInput shape]({{< ref "viewer/mcp/tools-reference/_index.md#the-fileinput-shape" >}}) |
 | `page` | integer | no | Page number to render (1-based) |
 | `password` | string | no | Password for protected documents |
 

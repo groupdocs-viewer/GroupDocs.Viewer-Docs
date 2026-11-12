@@ -31,6 +31,6 @@ Every tool takes its document through the same `file` object — pass **either**
 |---|---|---|
 | `filePath` | string | File path or name in the configured storage folder |
 | `fileContent` | string | Base64-encoded file content (alternative to `filePath`) |
-| `fileName` | string | Original filename with extension — required with `fileContent`. Since **26.9.0** it also works on its own, resolved from the storage folder exactly like `filePath` |
+| `fileName` | string | Original filename with extension — required with `fileContent`. It also works on its own, resolved from the storage folder exactly like `filePath` |
 
 You rarely write this JSON yourself: the AI agent does, from your plain-language prompt. Missing files are not an error to fear — the tool responds with the list of available files so the agent can correct itself.
