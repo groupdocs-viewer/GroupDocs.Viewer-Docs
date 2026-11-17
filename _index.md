@@ -10,11 +10,11 @@ geekdocAnchor: false
 hideChildren: true
 showFeedbackForm: false
 family:
-  github: https://github.com/groupdocs-viewer
   platforms:
     - key: net
       reference: https://reference.groupdocs.com/viewer/net/
-      releases: https://releases.groupdocs.com/viewer/net/
+      releases: https://releases.groupdocs.com/viewer/net/release-notes/
+      samples: https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET
       sections:
         - kind: start
           title: Getting started
@@ -69,7 +69,8 @@ family:
           url: https://github.com/groupdocs-viewer-app/GroupDocs.Viewer-for-.NET-CLI
     - key: java
       reference: https://reference.groupdocs.com/viewer/java/
-      releases: https://releases.groupdocs.com/viewer/java/
+      releases: https://releases.groupdocs.com/viewer/java/release-notes/
+      samples: https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java
       sections:
         - kind: start
           title: Getting started
@@ -105,7 +106,8 @@ family:
               url: https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Java/tree/master/Demos/Dropwizard
     - key: nodejs-java
       reference: https://reference.groupdocs.com/viewer/nodejs-java/
-      releases: https://releases.groupdocs.com/viewer/nodejs-java/
+      releases: https://releases.groupdocs.com/viewer/nodejs-java/release-notes/
+      samples: https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java
       sections:
         - kind: start
           title: Getting started
@@ -137,7 +139,8 @@ family:
               url: https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Node.js-via-Java
     - key: python-net
       reference: https://reference.groupdocs.com/viewer/python-net/
-      releases: https://releases.groupdocs.com/viewer/python-net/
+      releases: https://releases.groupdocs.com/viewer/python-net/release-notes/
+      samples: https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET
       sections:
         - kind: start
           title: Getting started
@@ -168,6 +171,7 @@ family:
             - title: GroupDocs.Viewer for Python via .NET
               url: https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET
     - key: mcp
+      samples: https://github.com/groupdocs-viewer/GroupDocs.Viewer.Mcp
       sections:
         - kind: start
           title: Getting started
