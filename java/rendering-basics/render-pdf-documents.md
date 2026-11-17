@@ -98,7 +98,7 @@ The following image demonstrates PDF document rendered HTML with fixed layout:
 
 ### Adjust image quality in the output HTML file
 
-The [HtmlviewOptions.getPdfOptions().setImageQuality()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfoptions/#setImageQuality-com.groupdocs.viewer.options.ImageQuality-) methods allows you to specify the quality of images in the output HTML file. You can set this property to one of the following values:
+The [HtmlViewOptions.getPdfOptions().setImageQuality()](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/pdfoptions/#setImageQuality-com.groupdocs.viewer.options.ImageQuality-) methods allows you to specify the quality of images in the output HTML file. You can set this property to one of the following values:
 
 * [ImageQuality.LOW](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/imagequality/#LOW) --- The image resolution is low (96 DPI), and the image size is small. Use this value to increase the conversion performance.
 * [ImageQuality.MEDIUM](https://reference.groupdocs.com/viewer/java/com.groupdocs.viewer.options/imagequality/#MEDIUM) --- The image resolution is medium (192 DPI), and the image size is larger compared to the low quality images.

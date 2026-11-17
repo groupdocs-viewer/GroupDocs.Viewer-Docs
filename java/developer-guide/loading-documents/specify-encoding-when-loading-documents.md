@@ -18,7 +18,7 @@ This feature is supported for the following file types:
 
 Different encodings use different byte sequences for characters, and opening a file in the wrong encoding leads to incorrect character rendering. To properly render a file, the correct encoding must be specified when opening the file. Another option is converting it to `UTF-8` beforehand. By default GroupDocs.Viewer using `UTF-8` encoding.
 
-For examle, when you try to open [sample-shift-jis.txt](/viewer/java/sample-files/developer-guide/loading-documents/specify-encoding-when-loading-documents/sample-shift-jis.txt) file in Notepad the text `これはShift_JISエンコード用のサンプルテキストです。` will appear as strange symbols because `ANSI` is misinterpreting the byte values that are specific to `Shift_JIS`.
+For example, when you try to open [sample-shift-jis.txt](/viewer/java/sample-files/developer-guide/loading-documents/specify-encoding-when-loading-documents/sample-shift-jis.txt) file in Notepad the text `これはShift_JISエンコード用のサンプルテキストです。` will appear as strange symbols because `ANSI` is misinterpreting the byte values that are specific to `Shift_JIS`.
 
 ![Shift_Jis text file opened in Notepad](/viewer/java/images/developer-guide/loading-documents/specify-encoding-when-loading-documents/shift-jis-in-notepad.png)
 

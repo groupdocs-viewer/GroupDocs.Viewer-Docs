@@ -8,7 +8,7 @@ keywords: GroupDocs.Viewer, thread safe, cache
 productName: GroupDocs.Viewer for Java
 hideChildren: False
 ---
-This page describes how to develop a thread-sage cache using the [synchronized](https://docs.oracle.com/javase/tutorial/essential/concurrency/sync.html) block.
+This page describes how to develop a thread-safe cache using the [synchronized](https://docs.oracle.com/javase/tutorial/essential/concurrency/sync.html) block.
 
 ## Introduction
 

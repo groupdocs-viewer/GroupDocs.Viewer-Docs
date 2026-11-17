@@ -25,14 +25,14 @@ GroupDocs.Viewer supports a [lot of document formats](https://docs.groupdocs.com
 9. LaTeX (TEX)
 10. Vector images (SVG)
 
-Sometimes including fonts to the produced HTML document is unwanted: for example, user masy have all the font installed on the operating system, where the HTML document should be viewed, and browser can use system-installed fonts. Also when fonts are included, they significantly increase the size of the produced HTML document. To prevent adding fonts that are available on most devices to produced HTML, the GroupDocs.Viewer provides two options: **exclude all fonts** (complete fonts exclusion) and **exclude specified fonts only** (selective fonts exclusion).
+Sometimes including fonts to the produced HTML document is unwanted: for example, user may have all the font installed on the operating system, where the HTML document should be viewed, and browser can use system-installed fonts. Also when fonts are included, they significantly increase the size of the produced HTML document. To prevent adding fonts that are available on most devices to produced HTML, the GroupDocs.Viewer provides two options: **exclude all fonts** (complete fonts exclusion) and **exclude specified fonts only** (selective fonts exclusion).
 
 Both these options are represented in the [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) class as different properties:
 
 - [`ExcludeFonts`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/excludefonts/) is a flag that disables export of **all** used fonts to the produced HTML document, when enabled (`true`). By default this option is disabled (`false`).
 - [`FontsToExclude`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/fontstoexclude/) is a list of `string`, each one represents one font name, that should be excluded from the produced HTML document. By default this list is empty — no fonts are excluded. Please note that this option works only if the `ExcludeFonts` property is disabled (`false`).
 
-The folowing code snippet shows how to exclude all fonts from the produced HTML document with the `ExcludeFonts` flag.
+The following code snippet shows how to exclude all fonts from the produced HTML document with the `ExcludeFonts` flag.
 
 {{< tabs "example-ExcludeFonts">}}
 {{< tab "C#" >}}
@@ -116,7 +116,7 @@ Need to mention that not all formats, listed above, support the complete and sel
 
 Complete fonts exclusion using `ExcludeFonts`:
 
-1. All Microsoft Word formats (DOX, DOCX, DOCM, ...)
+1. All Microsoft Word formats (DOC, DOCX, DOCM, ...)
 2. All PowerPoint presentation formats (PPT, PPTX, PPTM, PPS, PPSX, PPSM, POT, POX, POTM)
 3. All OpenDocument presentation formats (ODP, FODP, OTP)
 4. PDF
@@ -133,7 +133,7 @@ Complete fonts exclusion using `ExcludeFonts`:
 15. Vector images with font support (SVG)
 16. All supported email formats
 
-Selexctinve fonts excludion using `FontsToExclude`:
+Selective fonts excludion using `FontsToExclude`:
 
 1. All PowerPoint presentation formats (PPT, PPTX, PPTM, PPS, PPSX, PPSM, POT, POX, POTM)
 2. All OpenDocument presentation formats (ODP, FODP, OTP)
