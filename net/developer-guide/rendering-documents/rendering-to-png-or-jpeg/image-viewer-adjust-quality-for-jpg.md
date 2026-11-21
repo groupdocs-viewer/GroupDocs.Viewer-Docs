@@ -20,7 +20,7 @@ To set the image quality, follow these steps:
 
 The following code snippet shows how to adjust quality of the output JPG image:
 
-{{< tabs "example1">}}
+{{< tabs "adjust-jpg-quality">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -57,5 +57,20 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/image-viewer-adjust-quality-for-jpg/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "adjust-jpg-quality.zip" >}}  
+```text
+p_1.jpg (41 KB)
+p_2.jpg (56 KB)
+p_3.jpg (49 KB)
+p_4.jpg (54 KB)
+p_5.jpg (36 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/image-viewer-adjust-quality-for-jpg/AdjustJpgQuality/adjust-jpg-quality.zip)
 {{< /tab >}}
 {{< /tabs >}}

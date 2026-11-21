@@ -11,7 +11,7 @@ Use the [ExtractText](https://reference.groupdocs.com/net/viewer/groupdocs.viewe
 
 The following code snippet shows how to retrieve and print out text ([lines](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/page/properties/lines)/[words](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/line/properties/words)/[characters](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/word/properties/characters)) on each document [page](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/page) with coordinates:
 
-{{< tabs "example1">}}
+{{< tabs "get-text-coordinates">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -85,8 +85,25 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/image-viewer-get-text-coordinates/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-text-coordinates.txt" >}}  
+```text
+Page: 1
+Text lines/words/characters:
+Line 'Harbor Lane Provisions - Annual Report 2025 | Page 1' X=341.103 Y=803.10099 198.2x8.8px with 10 word(s).
+	Word 'Harbor' X=341.103 Y=803.10099 24.456x8.8px with 6 character(s).
+		Character 'H' X=341.103 Y=803.101 5.776x8.8px.
+		Character 'a' X=346.879 Y=803.101 4.448x8.8px.
+		Character 'r' X=351.327 Y=803.101 2.664x8.8px.
+		Character 'b' X=353.991 Y=803.101 4.448x8.8px.
+		Character 'o' X=358.439 Y=803.101 4.448x8.8px.
+		Character 'r' X=362.895 Y=803.101 
+[TRUNCATED]
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/image-viewer-get-text-coordinates/GetTextCoordinates/get-text-coordinates.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![](/viewer/net/images/image-viewer-get-text-coordinates.png)

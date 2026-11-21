@@ -23,7 +23,7 @@ The following code snippet shows how to render attachments from the MSG file:
 
 {{< alert style="info" >}}NOTE: provided code snippet suits all format families that support attachments: emails, Outlook data files, archives, and PDF documents.{{< /alert >}}
 
-{{< tabs "example1">}}
+{{< tabs "convert-and-view-attachments">}}
 {{< tab "C#" >}}
 ```csharp
 using System.IO;
@@ -33,7 +33,7 @@ using GroupDocs.Viewer.Results;
 // ...
 
 // Specify attachment.
-Attachment attachment = new Attachment("attachment-word.doc", @"C:\Output\attachment-word.doc");
+Attachment attachment = new Attachment("delivery-note-0912.xlsx", "delivery-note-0912.xlsx");
 
 // Create a stream for attachment.
 MemoryStream attachmentStream = new MemoryStream();
@@ -63,7 +63,7 @@ Imports GroupDocs.Viewer.Results
 Module Program
     Sub Main(args As String())
         ' Specify attachment.
-        Dim attachment As Attachment = New Attachment("attachment-word.doc", "C:\Output\attachment-word.doc")
+        Dim attachment As Attachment = New Attachment("delivery-note-0912.xlsx", "delivery-note-0912.xlsx")
     
         ' Create a stream for attachment.
         Dim attachmentStream As MemoryStream = New MemoryStream()
@@ -81,5 +81,16 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.msg" >}}
+{{< tab-text >}}
+`sample.msg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/processing-attachments/how-to-convert-and-view-attachments/sample.msg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "p_1.html" >}}  
+```text
+HTML file (52 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/processing-attachments/how-to-convert-and-view-attachments/ConvertAndViewAttachments/p_1.html)
 {{< /tab >}}
 {{< /tabs >}}

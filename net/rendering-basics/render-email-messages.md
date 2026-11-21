@@ -41,7 +41,7 @@ Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs
 
 To embed an email message in an HTML page, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-email-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -73,11 +73,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.html" >}}  
+```text
+HTML file (251 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailToHtml/output.html)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an email message to HTML](/viewer/net/images/rendering-basics/render-email-messages/render-email-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -87,7 +94,7 @@ To save an email message to a separate folder, call the [HtmlViewOptions.ForExte
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-email-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -97,8 +104,8 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.eml"))
 {
     // Specify the HTML file name and location of external resources.
-    // {0} is replaced with the resource name in the output file name.
-    var viewOptions = HtmlViewOptions.ForExternalResources("output.html", "output/resource_{0}", "output/resource_{0}");
+    // {0} is replaced with the page number, {1} with the resource name.
+    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -113,25 +120,40 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.eml")
             ' Specify the HTML file name and location of external resources.
-            ' {0} is replaced with the resource name in the output file name.
-            Dim viewOptions = HtmlViewOptions.ForExternalResources("output.html",   "output/resource_{0}", "output/resource_{0}")
+            ' {0} is replaced with the page number, {1} with the resource name.
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
             viewer.View(viewOptions)
         End Using
     End Sub
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-email-to-html-external.zip" >}}  
+```text
+page_1.html (15 KB)
+page_1/resource_1_f.ttf (54 KB)
+page_1/resource_1_f1.ttf (36 KB)
+page_1/resource_1_f2.ttf (45 KB)
+page_1/resource_1_f3.ttf (32 KB)
+page_1/resource_1_i.png (9 KB)
+page_1/resource_1_s.css (3 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailToHtmlExternal/render-email-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-The result is shown below. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-email-messages/render-email-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ## Render email messages as PDF
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an email message to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-email-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -163,17 +185,24 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 102 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailToPdf/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an email message to PDF](/viewer/net/images/rendering-basics/render-email-messages/render-email-to-pdf.png)
 
 ## Render email messages as PNG
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an email message to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-email-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -183,7 +212,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.eml"))
 {
     // Create a PNG image.
-    var viewOptions = new PngViewOptions("output.png");
+    var viewOptions = new PngViewOptions("output_{0}.png");
     // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 1000;
@@ -201,7 +230,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.eml")
             ' Create a PNG image.
-            Dim viewOptions = New PngViewOptions("output.png")
+            Dim viewOptions = New PngViewOptions("output_{0}.png")
             ' Set width and height.
             viewOptions.Width = 800
             viewOptions.Height = 1000
@@ -211,17 +240,25 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-email-to-png.zip" >}}  
+```text
+output_1.png (171 KB)
+output_2.png (47 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailToPng/render-email-to-png.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an email message to PNG](/viewer/net/images/rendering-basics/render-email-messages/render-email-to-png.png)
 
 ## Render email messages as JPEG
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an email message to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-email-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -231,7 +268,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.eml"))
 {
     // Create a JPG image.
-    var viewOptions = new JpgViewOptions("output.jpg");
+    var viewOptions = new JpgViewOptions("output_{0}.jpg");
     // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 1000;
@@ -249,7 +286,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.eml")
             ' Create a JPG image.
-            Dim viewOptions = New JpgViewOptions("output.jpg")
+            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
             ' Set width and height.
             viewOptions.Width = 800
             viewOptions.Height = 1000
@@ -258,6 +295,18 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-email-to-jpg.zip" >}}  
+```text
+output_1.jpg (113 KB)
+output_2.jpg (35 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailToJpg/render-email-to-jpg.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -276,7 +325,7 @@ GroupDocs.Viewer allows you to specify page size for the output file when you co
 
 The following example specifies page size for the output PDF file:
 
-{{< tabs "example6">}}
+{{< tabs "render-email-with-page-size">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -288,7 +337,7 @@ using (var viewer = new Viewer("sample.eml"))
     // Create a PDF file.
     var viewOptions = new PdfViewOptions("output.pdf");
     // Specify the page size.
-    viewOptions.EmailOptions.PageSize = PageSize.Letter;
+    viewOptions.EmailOptions.PageSize = PageSize.A4;
     viewer.View(viewOptions);
 }
 ```
@@ -305,12 +354,23 @@ Module Program
             ' Create a PDF file.
             Dim viewOptions = New PdfViewOptions("output.pdf")
             ' Specify the page size.
-            viewOptions.EmailOptions.PageSize = PageSize.Letter
+            viewOptions.EmailOptions.PageSize = PageSize.A4
             viewer.View(viewOptions)
         End Using
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 102 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailWithPageSize/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -322,7 +382,7 @@ GroupDocs.Viewer allows you to change how standard fields (such as _From_, _To_,
 
 Use the [EmailOptions.FieldTextMap](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/emailoptions/properties/fieldtextmap) property to specify custom field labels. Static fields of the [Field](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/field/) class allow you to access default email header fields, as shown in the example below.
 
-{{< tabs "example7">}}
+{{< tabs "render-email-with-renamed-fields">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -364,11 +424,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.html" >}}  
+```text
+HTML file (252 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailWithRenamedFields/output.html)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Custom fields in the message header](/viewer/net/images/rendering-basics/render-email-messages/custom-message-fields.png)
 
 ### Specify the date and time format and change the time zone
 
@@ -379,7 +446,7 @@ When rendering email messages, GroupDocs.Viewer formats date and time informatio
     * [Custom date and time format strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)
 * [EmailOptions.TimeZoneOffset](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/emailoptions/timezoneoffset/)---Specifies the hours and minutes offset from UTC. The offset is displayed with a leading sign. A plus sign (+) indicates time ahead of UTC, and a minus sign (-) indicates time behind UTC. 
 
-{{< tabs "example8">}}
+{{< tabs "render-email-with-datetime-format">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -421,11 +488,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.html" >}}  
+```text
+HTML file (250 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailWithDatetimeFormat/output.html)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Custom date-time format](/viewer/net/images/rendering-basics/render-email-messages/custom-date-time-format.png)
 
 ## Get mail message metadata before rendering
 
@@ -439,7 +513,7 @@ Starting from the version 26.1 the GroupDocs.Viewer public API has a new class [
 
 To obtain a metadata of the given mail message, this mail message initially should be loaded to the [`Viewer`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/) class through its [constructor](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/viewer/#constructor_4), and then the [`Viewer.GetViewInfo()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/getviewinfo/#getviewinfo) method should be called. This method then returns the instance of the [`ViewInfo`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/) class, which should be casted to the [`MailMessageViewInfo`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/mailmessageviewinfo/) type. And that’s all! Source code is below:
 
-{{< tabs "Get-view-info-example">}}
+{{< tabs "get-email-info">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -478,6 +552,17 @@ Using viewer As New Viewer("sample.eml")
     viewer.View(HtmlViewOptions.ForEmbeddedResources())
 End Using
 ```
+{{< /tab >}}
+{{< tab "sample.eml" >}}
+{{< tab-text >}}
+`sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "p_1.html" >}}  
+```text
+HTML file (251 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/GetEmailInfo/p_1.html)
 {{< /tab >}}
 {{< /tabs >}}
 

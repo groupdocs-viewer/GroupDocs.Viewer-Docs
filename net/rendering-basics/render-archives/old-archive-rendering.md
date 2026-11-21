@@ -39,14 +39,14 @@ GroupDocs.Viewer can detect the archive file format automatically based on infor
 
 To convert an archive file to HTML, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method to create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass this instance to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method.
 
-{{< tabs "example1">}}
+{{< tabs "legacy-archive-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Documents.zip"))
+using (var viewer = new Viewer("documents.zip"))
 {
     // Create an HTML file for the top folder and each subfolder in the archive.
     // {0} is replaced with the current page number in the output file name.
@@ -63,7 +63,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Documents.zip")
+        Using viewer = New Viewer("documents.zip")
             ' Create an HTML file for the top folder and each subfolder in the archive.
             ' {0} is replaced with the current page number in the output file name.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
@@ -85,14 +85,14 @@ GroupDocs.Viewer supports the [HtmlViewOptions.ArchiveOptions.ItemsPerPage](http
 
 The following example demonstrates how to set this option in code:
 
-{{< tabs "example2">}}
+{{< tabs "legacy-archive-items-per-page">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Documents.zip"))
+using (var viewer = new Viewer("documents.zip"))
 {
     // Create an HTML file for the top folder and each subfolder in the archive.
     // {0} is replaced with the current page number in the output file name.
@@ -111,7 +111,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Documents.zip")
+        Using viewer = New Viewer("documents.zip")
             ' Create an HTML file for the top folder and each subfolder in the archive.
             ' {0} is replaced with the current page number in the output file name.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
@@ -129,14 +129,14 @@ End Module
 
 If you need to display the contents of an archive file on a single HTML page, enable the [HtmlViewOptions.RenderToSinglePage](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/rendertosinglepage/) option, as shown below:
 
-{{< tabs "example3">}}
+{{< tabs "legacy-archive-single-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Documents.zip"))
+using (var viewer = new Viewer("documents.zip"))
 {
     // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
@@ -154,7 +154,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Documents.zip")
+        Using viewer = New Viewer("documents.zip")
             ' Create an HTML file.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
             ' Render the archive file to a single page.
@@ -175,14 +175,14 @@ The animation below demonstrates the result. You can navigate between the archiv
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an archive file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file or reorder its pages. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example4">}}
+{{< tabs "legacy-archive-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Documents.zip"))
+using (var viewer = new Viewer("documents.zip"))
 {
     // Create a PDF file.
     var viewOptions = new PdfViewOptions("output.pdf");
@@ -198,7 +198,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Documents.zip")
+        Using viewer = New Viewer("documents.zip")
             ' Create a PDF file.
             Dim viewOptions = New PdfViewOptions("output.pdf")
             viewer.View(viewOptions)
@@ -217,14 +217,14 @@ The following image demonstrates the result:
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an archive file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "legacy-archive-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Documents.zip"))
+using (var viewer = new Viewer("documents.zip"))
 {
     // Create a PNG image for the top folder and each subfolder in the archive.
     // {0} is replaced with the current page number in the image name.
@@ -244,7 +244,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Documents.zip")
+        Using viewer = New Viewer("documents.zip")
             ' Create a PNG image for the top folder and each subfolder in the archive.
             ' {0} is replaced with the current page number in the image name.
             Dim viewOptions = New PngViewOptions("output_{0}.png")
@@ -267,14 +267,14 @@ The following image demonstrates the result:
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an archive file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example6">}}
+{{< tabs "legacy-archive-to-jpeg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Documents.zip"))
+using (var viewer = new Viewer("documents.zip"))
 {
     // Create a JPEG image for the top folder and each subfolder in the archive.
     // {0} is replaced with the current page number in the image name.
@@ -294,7 +294,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Documents.zip")
+        Using viewer = New Viewer("documents.zip")
             ' Create a JPEG image for the top folder and each subfolder in the archive.
             ' {0} is replaced with the current page number in the image name.
             Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
@@ -317,7 +317,7 @@ Follow the steps below to obtain information about folders contained in an archi
 2. Call the [Viewer.GetViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [ArchiveViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/archiveviewinfo) type.
 3. Use the [ArchiveViewInfo.Folders](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/archiveviewinfo/folders/) property to obtain the lists of folders in the archive file.
 
-{{< tabs "example7">}}
+{{< tabs "legacy-archive-folders-info">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -326,7 +326,7 @@ using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
 // ...
 
-using (var viewer = new Viewer("Documents.zip"))
+using (var viewer = new Viewer("documents.zip"))
 {
     var viewInfoOptions = ViewInfoOptions.ForHtmlView();
     var viewInfo = viewer.GetViewInfo(viewInfoOptions) as ArchiveViewInfo;
@@ -353,7 +353,7 @@ Imports GroupDocs.Viewer.Results
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Documents.zip")
+        Using viewer = New Viewer("documents.zip")
             Dim viewInfoOptions = ViewInfoOptions.ForHtmlView()
             Dim viewInfo = TryCast(viewer.GetViewInfo(viewInfoOptions), ArchiveViewInfo)
 
@@ -391,14 +391,14 @@ When you convert an archive file to HTML, PDF, or image format, GroupDocs.Viewer
 * [PngViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions)
 * [JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions)
 
-{{< tabs "example8">}}
+{{< tabs "legacy-archive-specific-folder">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Documents.zip"))
+using (var viewer = new Viewer("documents.zip"))
 {
     // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
@@ -416,7 +416,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Documents.zip")
+        Using viewer = New Viewer("documents.zip")
             ' Create an HTML file.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
             ' Specify a folder to render items from.
@@ -439,14 +439,14 @@ When rendering an archive file, GroupDocs.Viewer displays the archive file name 
 
 The following code snippet demonstrates how to use a custom name when rendering an archive file to HTML:
 
-{{< tabs "example9">}}
+{{< tabs "legacy-archive-file-name">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Documents.zip"))
+using (var viewer = new Viewer("documents.zip"))
 {
     // Create an HTML file for the top folder and each subfolder in the archive.
     // {0} is replaced with the current page number in the output file name.
@@ -465,7 +465,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Documents.zip")
+        Using viewer = New Viewer("documents.zip")
             ' Create an HTML file for the top folder and each subfolder in the archive.
             ' {0} is replaced with the current page number in the output file name.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")

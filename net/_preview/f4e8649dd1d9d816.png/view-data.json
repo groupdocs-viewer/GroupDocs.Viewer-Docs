@@ -1,0 +1,23 @@
+{
+  "file": "viewer/net/_preview/f4e8649dd1d9d816.png",
+  "fileName": "render-archive-to-images.zip",
+  "fileType": "png",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 2480,
+      "height": 3508,
+      "pageUrl": "/viewer/net/_preview/f4e8649dd1d9d816.png/page-1.jpg",
+      "thumbUrl": "/viewer/net/_preview/f4e8649dd1d9d816.png/page-1.jpg"
+    },
+    {
+      "number": 2,
+      "width": 2481,
+      "height": 3508,
+      "pageUrl": "/viewer/net/_preview/f4e8649dd1d9d816.png/page-2.png",
+      "thumbUrl": "/viewer/net/_preview/f4e8649dd1d9d816.png/page-2.png"
+    }
+  ]
+}

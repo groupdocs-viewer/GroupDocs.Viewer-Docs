@@ -6,6 +6,7 @@ weight: 6
 description: "Logging when rendering documents with GroupDocs.Viewer for .NET"
 productName: GroupDocs.Viewer for .NET
 hideChildren: true
+toc: True
 ---
 By default, logging is disabled when rendering documents. You can log to the console or a file.
 
@@ -24,7 +25,7 @@ The log contains the following three types of messages:
 
 The following code snippet shows how to log to a file using the [FileLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/filelogger) class:
 
-{{< tabs "example1">}}
+{{< tabs "write-logs-to-file">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -70,17 +71,34 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/logging/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.log" >}}  
+```text
+[TRACE] Rendering into HTML with embedded resources.
+[TRACE] Detecting file type by extension.
+[TRACE] File type detected successfully: Microsoft Word Open XML Document.
+[TRACE] Opening document.
+[TRACE] Document is loaded.
+[TRACE] Applying options.
+[TRACE] Converting page 1.
+[TRACE] Page 1 conversion completed.
+[TRACE] Converting page 2.
+[TRACE] Page 2 conversion completed.
+[TRUNCATED]
+```
+[Download full output](/viewer/net/_output_files/developer-guide/logging/WriteLogsToFile/output.log)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows the output.log file:
-
-![](/viewer/net/images/how-to-set-up-logging-1.png)
 
 ## Logging to the console
 
 The following code snippet shows how to log to the console using the [ConsoleLogger](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.logging/consolelogger) class:
 
-{{< tabs "example2">}}
+{{< tabs "write-logs-to-console">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -126,11 +144,28 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/logging/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "write-logs-to-console.txt" >}}  
+```text
+[TRACE] Rendering into HTML with embedded resources.
+[TRACE] Detecting file type by extension.
+[TRACE] File type detected successfully: Microsoft Word Open XML Document.
+[TRACE] Opening document.
+[TRACE] Document is loaded.
+[TRACE] Applying options.
+[TRACE] Converting page 1.
+[TRACE] Page 1 conversion completed.
+[TRACE] Converting page 2.
+[TRACE] Page 2 conversion completed.
+[TRUNCATED]
+```
+[Download full output](/viewer/net/_output_files/developer-guide/logging/WriteLogsToConsole/write-logs-to-console.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![](/viewer/net/images/how-to-set-up-logging-2.png)
 
 ## Implementing custom logger
 
@@ -142,7 +177,7 @@ To create a logger, implement the [ILogger](https://reference.groupdocs.com/net/
 
 The following code snippet shows how to implement a simple file logger:
 
-{{< tabs "example3">}}
+{{< tabs "write-logs-with-custom-logger">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -340,8 +375,25 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/logging/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.log" >}}  
+```text
+[TRACE] Rendering into HTML with embedded resources.
+[TRACE] Detecting file type by extension.
+[TRACE] File type detected successfully: Microsoft Word Open XML Document.
+[TRACE] Opening document.
+[TRACE] Document is loaded.
+[TRACE] Applying options.
+[TRACE] Converting page 1.
+[TRACE] Page 1 conversion completed.
+[TRACE] Converting page 2.
+[TRACE] Page 2 conversion completed.
+[TRUNCATED]
+```
+[Download full output](/viewer/net/_output_files/developer-guide/logging/WriteLogsWithCustomLogger/output.log)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows the output.log file:
-
-![](/viewer/net/images/how-to-set-up-logging-3.png)

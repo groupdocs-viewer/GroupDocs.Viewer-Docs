@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" width="900" height="430" role="img" aria-labelledby="t d" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <title id="t">Five ways to split a worksheet into pages</title>
+  <desc id="d">One worksheet split into pages in five ways, set through view_options.spreadsheet_options: for_one_page_per_sheet() gives the whole worksheet on a single page, sized to fit it; best for small sheets (1 page for the 8 x 5 sheet drawn); for_rendering_by_page_breaks() gives pages where Excel's page breaks are, as in its Page Break Preview (4 pages for the 8 x 5 sheet drawn); for_rendering_print_area() gives only the print area; each of its cell ranges on a page of its own (1 page for the 8 x 5 sheet drawn); for_rendering_print_area_and_page_breaks() gives the print area, split at the page breaks inside it (2 pages for the 8 x 5 sheet drawn); for_split_sheet_into_pages(rows, columns) gives a fixed number of rows per page, and optionally of columns (6 pages for the 8 x 5 sheet drawn).</desc>
+  <rect x="0.5" y="0.5" width="899" height="429" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="40" y="33" font-size="11" font-weight="600" fill="#64748b" letter-spacing="1.2" text-anchor="start">ONE WORKSHEET, FIVE WAYS TO SPLIT IT INTO PAGES</text>
+  <rect x="24" y="50" width="852" height="60" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="40" y="57" width="136" height="46" fill="#ffffff" stroke="#cbd5e1"/>
+    <line x1="57.0" y1="57" x2="57.0" y2="103" stroke="#eef2f7"/>
+    <line x1="74.0" y1="57" x2="74.0" y2="103" stroke="#eef2f7"/>
+    <line x1="91.0" y1="57" x2="91.0" y2="103" stroke="#eef2f7"/>
+    <line x1="108.0" y1="57" x2="108.0" y2="103" stroke="#eef2f7"/>
+    <line x1="125.0" y1="57" x2="125.0" y2="103" stroke="#eef2f7"/>
+    <line x1="142.0" y1="57" x2="142.0" y2="103" stroke="#eef2f7"/>
+    <line x1="159.0" y1="57" x2="159.0" y2="103" stroke="#eef2f7"/>
+    <line x1="40" y1="66.2" x2="176" y2="66.2" stroke="#eef2f7"/>
+    <line x1="40" y1="75.4" x2="176" y2="75.4" stroke="#eef2f7"/>
+    <line x1="40" y1="84.6" x2="176" y2="84.6" stroke="#eef2f7"/>
+    <line x1="40" y1="93.8" x2="176" y2="93.8" stroke="#eef2f7"/>
+    <rect x="43.0" y="60.2" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="60.2" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="60.2" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="60.2" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="60.2" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="69.4" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="69.4" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="69.4" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="69.4" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="69.4" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="78.6" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="78.6" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="78.6" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="78.6" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="78.6" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="87.8" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="87.8" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="87.8" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="87.8" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="87.8" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="97.0" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="97.0" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="97.0" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="97.0" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="97.0" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="37" y="54" width="142" height="52" rx="3" fill="none" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="198" y="75" font-size="12" font-weight="600" fill="#0f172a" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">SpreadsheetOptions.for_one_page_per_sheet()</text>
+  <text x="198" y="94" font-size="11.5" fill="#475569" text-anchor="start">the whole worksheet on a single page, sized to fit it; best for small sheets</text>
+  <rect x="772" y="68" width="88" height="24" rx="12" fill="#f1f5f9"/>
+  <text x="816" y="84" font-size="11.5" font-weight="600" fill="#334155" text-anchor="middle">1 page</text>
+  <rect x="24" y="118" width="852" height="60" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="40" y="125" width="136" height="46" fill="#ffffff" stroke="#cbd5e1"/>
+    <line x1="57.0" y1="125" x2="57.0" y2="171" stroke="#eef2f7"/>
+    <line x1="74.0" y1="125" x2="74.0" y2="171" stroke="#eef2f7"/>
+    <line x1="91.0" y1="125" x2="91.0" y2="171" stroke="#eef2f7"/>
+    <line x1="108.0" y1="125" x2="108.0" y2="171" stroke="#eef2f7"/>
+    <line x1="125.0" y1="125" x2="125.0" y2="171" stroke="#eef2f7"/>
+    <line x1="142.0" y1="125" x2="142.0" y2="171" stroke="#eef2f7"/>
+    <line x1="159.0" y1="125" x2="159.0" y2="171" stroke="#eef2f7"/>
+    <line x1="40" y1="134.2" x2="176" y2="134.2" stroke="#eef2f7"/>
+    <line x1="40" y1="143.4" x2="176" y2="143.4" stroke="#eef2f7"/>
+    <line x1="40" y1="152.6" x2="176" y2="152.6" stroke="#eef2f7"/>
+    <line x1="40" y1="161.8" x2="176" y2="161.8" stroke="#eef2f7"/>
+    <rect x="43.0" y="128.2" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="128.2" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="128.2" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="128.2" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="128.2" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="137.4" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="137.4" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="137.4" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="137.4" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="137.4" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="146.6" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="146.6" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="146.6" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="146.6" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="146.6" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="155.8" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="155.8" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="155.8" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="155.8" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="155.8" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="165.0" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="165.0" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="165.0" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="165.0" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="165.0" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <line x1="125.0" y1="122" x2="125.0" y2="174" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="4 3"/>
+    <line x1="37" y1="152.6" x2="179" y2="152.6" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="198" y="143" font-size="12" font-weight="600" fill="#0f172a" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">SpreadsheetOptions.for_rendering_by_page_breaks()</text>
+  <text x="198" y="162" font-size="11.5" fill="#475569" text-anchor="start">pages where Excel's page breaks are, as in its Page Break Preview</text>
+  <rect x="772" y="136" width="88" height="24" rx="12" fill="#f1f5f9"/>
+  <text x="816" y="152" font-size="11.5" font-weight="600" fill="#334155" text-anchor="middle">4 pages</text>
+  <rect x="24" y="186" width="852" height="60" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="40" y="193" width="136" height="46" fill="#ffffff" stroke="#cbd5e1"/>
+    <line x1="57.0" y1="193" x2="57.0" y2="239" stroke="#eef2f7"/>
+    <line x1="74.0" y1="193" x2="74.0" y2="239" stroke="#eef2f7"/>
+    <line x1="91.0" y1="193" x2="91.0" y2="239" stroke="#eef2f7"/>
+    <line x1="108.0" y1="193" x2="108.0" y2="239" stroke="#eef2f7"/>
+    <line x1="125.0" y1="193" x2="125.0" y2="239" stroke="#eef2f7"/>
+    <line x1="142.0" y1="193" x2="142.0" y2="239" stroke="#eef2f7"/>
+    <line x1="159.0" y1="193" x2="159.0" y2="239" stroke="#eef2f7"/>
+    <line x1="40" y1="202.2" x2="176" y2="202.2" stroke="#eef2f7"/>
+    <line x1="40" y1="211.4" x2="176" y2="211.4" stroke="#eef2f7"/>
+    <line x1="40" y1="220.6" x2="176" y2="220.6" stroke="#eef2f7"/>
+    <line x1="40" y1="229.8" x2="176" y2="229.8" stroke="#eef2f7"/>
+    <rect x="43.0" y="196.2" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="196.2" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="196.2" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="196.2" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="196.2" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="205.4" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="205.4" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="205.4" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="205.4" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="205.4" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="214.6" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="214.6" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="214.6" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="214.6" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="214.6" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="223.8" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="223.8" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="223.8" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="223.8" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="223.8" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="233.0" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="233.0" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="233.0" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="233.0" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="233.0" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <path d="M40 193 h136 v46 h-136 z M57.0 193 v36.8 h85.0 v-36.8 z" fill="#ffffff" fill-opacity="0.75" fill-rule="evenodd"/>
+    <rect x="57.0" y="193" width="85.0" height="36.8" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="198" y="211" font-size="12" font-weight="600" fill="#0f172a" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">SpreadsheetOptions.for_rendering_print_area()</text>
+  <text x="198" y="230" font-size="11.5" fill="#475569" text-anchor="start">only the print area; each of its cell ranges on a page of its own</text>
+  <rect x="772" y="204" width="88" height="24" rx="12" fill="#f1f5f9"/>
+  <text x="816" y="220" font-size="11.5" font-weight="600" fill="#334155" text-anchor="middle">1 page</text>
+  <rect x="24" y="254" width="852" height="60" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="40" y="261" width="136" height="46" fill="#ffffff" stroke="#cbd5e1"/>
+    <line x1="57.0" y1="261" x2="57.0" y2="307" stroke="#eef2f7"/>
+    <line x1="74.0" y1="261" x2="74.0" y2="307" stroke="#eef2f7"/>
+    <line x1="91.0" y1="261" x2="91.0" y2="307" stroke="#eef2f7"/>
+    <line x1="108.0" y1="261" x2="108.0" y2="307" stroke="#eef2f7"/>
+    <line x1="125.0" y1="261" x2="125.0" y2="307" stroke="#eef2f7"/>
+    <line x1="142.0" y1="261" x2="142.0" y2="307" stroke="#eef2f7"/>
+    <line x1="159.0" y1="261" x2="159.0" y2="307" stroke="#eef2f7"/>
+    <line x1="40" y1="270.2" x2="176" y2="270.2" stroke="#eef2f7"/>
+    <line x1="40" y1="279.4" x2="176" y2="279.4" stroke="#eef2f7"/>
+    <line x1="40" y1="288.6" x2="176" y2="288.6" stroke="#eef2f7"/>
+    <line x1="40" y1="297.8" x2="176" y2="297.8" stroke="#eef2f7"/>
+    <rect x="43.0" y="264.2" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="264.2" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="264.2" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="264.2" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="264.2" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="273.4" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="273.4" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="273.4" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="273.4" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="273.4" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="282.6" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="282.6" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="282.6" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="282.6" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="282.6" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="291.8" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="291.8" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="291.8" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="291.8" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="291.8" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="301.0" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="301.0" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="301.0" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="301.0" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="301.0" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <path d="M40 261 h136 v46 h-136 z M57.0 261 v36.8 h85.0 v-36.8 z" fill="#ffffff" fill-opacity="0.75" fill-rule="evenodd"/>
+    <rect x="57.0" y="261" width="85.0" height="36.8" fill="none" stroke="#dc2626" stroke-width="2"/>
+    <line x1="108.0" y1="258" x2="108.0" y2="310" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="198" y="279" font-size="12" font-weight="600" fill="#0f172a" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">SpreadsheetOptions.for_rendering_print_area_and_page_breaks()</text>
+  <text x="198" y="298" font-size="11.5" fill="#475569" text-anchor="start">the print area, split at the page breaks inside it</text>
+  <rect x="772" y="272" width="88" height="24" rx="12" fill="#f1f5f9"/>
+  <text x="816" y="288" font-size="11.5" font-weight="600" fill="#334155" text-anchor="middle">2 pages</text>
+  <rect x="24" y="322" width="852" height="60" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="40" y="329" width="136" height="46" fill="#ffffff" stroke="#cbd5e1"/>
+    <line x1="57.0" y1="329" x2="57.0" y2="375" stroke="#eef2f7"/>
+    <line x1="74.0" y1="329" x2="74.0" y2="375" stroke="#eef2f7"/>
+    <line x1="91.0" y1="329" x2="91.0" y2="375" stroke="#eef2f7"/>
+    <line x1="108.0" y1="329" x2="108.0" y2="375" stroke="#eef2f7"/>
+    <line x1="125.0" y1="329" x2="125.0" y2="375" stroke="#eef2f7"/>
+    <line x1="142.0" y1="329" x2="142.0" y2="375" stroke="#eef2f7"/>
+    <line x1="159.0" y1="329" x2="159.0" y2="375" stroke="#eef2f7"/>
+    <line x1="40" y1="338.2" x2="176" y2="338.2" stroke="#eef2f7"/>
+    <line x1="40" y1="347.4" x2="176" y2="347.4" stroke="#eef2f7"/>
+    <line x1="40" y1="356.6" x2="176" y2="356.6" stroke="#eef2f7"/>
+    <line x1="40" y1="365.8" x2="176" y2="365.8" stroke="#eef2f7"/>
+    <rect x="43.0" y="332.2" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="332.2" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="332.2" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="332.2" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="332.2" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="341.4" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="341.4" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="341.4" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="341.4" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="341.4" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="350.6" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="350.6" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="350.6" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="350.6" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="350.6" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="359.8" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="359.8" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="359.8" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="359.8" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="359.8" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="43.0" y="369.0" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="60.0" y="369.0" width="13.6" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="94.0" y="369.0" width="10.2" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="128.0" y="369.0" width="11.9" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <rect x="145.0" y="369.0" width="8.5" height="2.8" rx="1.4" fill="#cbd5e1"/>
+    <line x1="37" y1="347.4" x2="179" y2="347.4" stroke="#0e9f6e" stroke-width="2"/>
+    <line x1="37" y1="365.8" x2="179" y2="365.8" stroke="#0e9f6e" stroke-width="2"/>
+    <line x1="108.0" y1="326" x2="108.0" y2="378" stroke="#0e9f6e" stroke-width="2"/>
+  <text x="198" y="347" font-size="12" font-weight="600" fill="#0f172a" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">SpreadsheetOptions.for_split_sheet_into_pages(rows, columns)</text>
+  <text x="198" y="366" font-size="11.5" fill="#475569" text-anchor="start">a fixed number of rows per page, and optionally of columns</text>
+  <rect x="772" y="340" width="88" height="24" rx="12" fill="#f1f5f9"/>
+  <text x="816" y="356" font-size="11.5" font-weight="600" fill="#334155" text-anchor="middle">6 pages</text>
+  <g font-size="11" fill="#64748b">
+    <line x1="40" y1="406" x2="62" y2="406" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="4 3"/><text x="68" y="410" text-anchor="start">page break</text>
+    <rect x="150" y="399" width="22" height="14" fill="none" stroke="#dc2626" stroke-width="2"/><text x="178" y="410" text-anchor="start">print area</text>
+    <line x1="256" y1="406" x2="278" y2="406" stroke="#0e9f6e" stroke-width="2"/><text x="284" y="410" text-anchor="start">fixed rows and columns per page</text>
+    <text x="860" y="410" text-anchor="end">Set the result to view_options.spreadsheet_options.</text>
+  </g>
+</svg>

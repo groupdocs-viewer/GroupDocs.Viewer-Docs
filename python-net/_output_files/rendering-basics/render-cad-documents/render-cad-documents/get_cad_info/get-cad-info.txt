@@ -1,4 +1,13 @@
 File type: AutoCAD Drawing Database File (.dwg)
 Pages count: 1
-
-View info retrieved successfully.
+Layers:
+  0 (visible=True)
+  WALLS (visible=True)
+  OFFICE (visible=True)
+  TEXT (visible=True)
+  COLD (visible=True)
+  RACKS (visible=True)
+  DOCKS (visible=True)
+  DIMENSIONS (visible=True)
+Layouts:
+  Model

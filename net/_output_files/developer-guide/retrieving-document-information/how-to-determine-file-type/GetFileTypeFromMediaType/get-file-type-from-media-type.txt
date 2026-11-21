@@ -1,0 +1,1 @@
+Media-type application/pdf; File type: Portable Document Format File (.pdf).

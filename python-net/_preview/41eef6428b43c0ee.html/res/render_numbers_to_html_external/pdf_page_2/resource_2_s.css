@@ -1,0 +1,99 @@
+﻿table#gdt-id-2
+ {mso-displayed-decimal-separator:"\.";
+ mso-displayed-thousand-separator:"\,";}
+@page
+ {
+ mso-header-data:"";
+ mso-footer-data:"";
+ margin:0.75in 0.5in 0.75in 0.5in;
+ mso-header-margin:0.277777777777778in;
+ mso-footer-margin:0.277777777777778in;
+ mso-page-orientation:Portrait;
+ }
+#gdt-id-2 tr
+ {mso-height-source:auto;
+ mso-ruby-visibility:none;}
+#gdt-id-2 col
+ {mso-width-source:auto;
+ mso-ruby-visibility:none;}
+#gdt-id-2 br
+ {mso-data-placement:same-cell;}
+ruby
+ {ruby-align:start;}
+.p2-17a901608b8-style0
+ {
+ mso-number-format:General;
+ text-align:general;
+ vertical-align:top;
+ white-space:normal;word-wrap:break-word;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:HelveticaNeue,sans-serif;
+ mso-protection:locked visible;
+ mso-style-name:Normal;
+ mso-style-id:0;}
+#gdt-id-2 td
+ {mso-style-parent:p2-17a901608b8-style0;
+ mso-number-format:General;
+ text-align:general;
+ vertical-align:top;
+ white-space:normal;word-wrap:break-word;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:HelveticaNeue,sans-serif;
+ mso-protection:locked visible;
+ mso-ignore:padding;
+ }
+#gdt-id-2 .p2-17a901608b8-x15
+ {
+ mso-number-format:General;
+ text-align:general;
+ vertical-align:top;
+ white-space:normal;word-wrap:break-word;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:10pt;
+ font-weight:400;
+ font-style:normal;
+ font-family:HelveticaNeue,sans-serif;
+ mso-protection:locked visible;
+ }
+#gdt-id-2 .p2-17a901608b8-x21
+ {
+ mso-number-format:General;
+ text-align:center;
+ vertical-align:middle;
+ white-space:nowrap;
+ background:auto;
+ mso-pattern:auto;
+ color:#000000;
+ font-size:12pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:HelveticaNeue,sans-serif;
+ mso-protection:locked visible;
+ }
+#gdt-id-2 .p2-17a901608b8-x22
+ {
+ mso-number-format:General;
+ text-align:general;
+ vertical-align:top;
+ white-space:normal;word-wrap:break-word;
+ background:#BDC0BF;
+ mso-pattern:auto none;
+ color:#000000;
+ font-size:10pt;
+ font-weight:700;
+ font-style:normal;
+ font-family:HelveticaNeue,sans-serif;
+ mso-protection:locked visible;
+ }

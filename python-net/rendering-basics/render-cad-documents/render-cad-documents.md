@@ -78,30 +78,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "pdf_page_1.html" >}}  
 ```text
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta charset="utf-8" />
-    <title>Page-1</title>
-</head>
-<body>
-    <div id="main_image">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_-770116761_6634" width="2000" height="1769.2308349609375"><g transform="matrix(75.964135732832403 0 0 -75.964135732832403 -914.05417456346686 2464.9369736113467)"><g><path d="M12.158660251539231 1
-[TRUNCATED]
+HTML file (440 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_cad_to_html/pdf_page_1.html)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a CAD file to HTML](/viewer/net/images/rendering-basics/render-cad-documents/render-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -123,7 +109,8 @@ def render_cad_to_html_external():
         # Create an HTML file for the drawing.
         # Specify the HTML file name and location of external resources.
         # {0} is replaced with the resource name.
-        viewOptions = HtmlViewOptions.for_external_resources("render_cad_to_html_external/pdf_page_{0}.html", "render_cad_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_cad_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        # The resource URL is relative to the HTML file.
+        viewOptions = HtmlViewOptions.for_external_resources("render_cad_to_html_external/pdf_page_{0}.html", "render_cad_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -132,22 +119,20 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "render-cad-to-html-external-outputs.zip" >}}  
 ```text
-render_cad_to_html_external/pdf_page_1.html (410 bytes)
-render_cad_to_html_external/pdf_page_1/resource_1_g.svg (7 KB)
+render_cad_to_html_external/pdf_page_1.html (354 bytes)
+render_cad_to_html_external/pdf_page_1/resource_1_g.svg (446 KB)
 render_cad_to_html_external/pdf_page_1/resource_1_s.css (529 bytes)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_cad_to_html_external/render-cad-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-cad-documents/render-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ## Render CAD drawings as PDF
 
@@ -173,20 +158,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "cad_drawing.pdf" >}}  
 ```text
-Binary file (PDF, 3 KB)
+Binary file (PDF, 97 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_cad_to_pdf/cad_drawing.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a CAD file to PDF](/viewer/net/images/rendering-basics/render-cad-documents/render-cad-to-pdf.png)
 
 ## Render CAD drawings as PNG
 
@@ -214,20 +195,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "cad_page_0.png" >}}  
 ```text
-Binary file (PNG, 44 KB)
+Binary file (PNG, 99 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_cad_to_png/cad_page_0.png)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a CAD file to PNG](/viewer/net/images/rendering-basics/render-cad-documents/render-cad-to-png-image.png)
 
 ## Render CAD drawings as JPEG
 
@@ -255,12 +232,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "cad_to_jpg.jpg" >}}  
 ```text
-Binary file (JPG, 53 KB)
+Binary file (JPG, 123 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_cad_to_jpg/cad_to_jpg.jpg)
 {{< /tab >}}
@@ -287,8 +264,12 @@ def get_cad_info():
         # Display information about the CAD file.
         print("File type:", cad_info.file_type)
         print("Pages count:", len(cad_info.pages))
-
-        print("\nView info retrieved successfully.")
+        print("Layers:")
+        for layer in cad_info.layers:
+            print(f"  {layer.name} (visible={layer.visible})")
+        print("Layouts:")
+        for layout in cad_info.layouts:
+            print(f"  {layout.name}")
 
 if __name__ == "__main__":
     get_cad_info()
@@ -296,23 +277,26 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "get-cad-info.txt" >}}  
 ```text
 File type: AutoCAD Drawing Database File (.dwg)
 Pages count: 1
-
-View info retrieved successfully.
+Layers:
+  0 (visible=True)
+  WALLS (visible=True)
+  OFFICE (visible=True)
+  TEXT (visible=True)
+  COLD (visible=True)
+  RACKS (visible=True)
+  DOCKS (visible=True)
+[TRUNCATED]
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/get_cad_info/get-cad-info.txt)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![Get information about a CAD file](/viewer/net/images/rendering-basics/render-cad-documents/retrieve-cad-file-information.png)
 
 ## Render all or specific layouts
 
@@ -335,7 +319,7 @@ from groupdocs.viewer.options import PdfViewOptions
 
 def render_all_layouts():
     # Load CAD file
-    with Viewer("sample.dwg") as viewer:
+    with Viewer("sample.dxf") as viewer:
         # Convert the document to PDF.
         options = PdfViewOptions("render_all_layouts/all_layouts.pdf")
         # Render the Model and all non-empty paper space layouts. 
@@ -346,14 +330,14 @@ if __name__ == "__main__":
     render_all_layouts()
 ```
 {{< /tab >}}
-{{< tab "sample.dwg" >}}
+{{< tab "sample.dxf" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dxf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dxf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "all_layouts.pdf" >}}  
 ```text
-Binary file (PDF, 26 KB)
+Binary file (PDF, 330 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_all_layouts/all_layouts.pdf)
 {{< /tab >}}
@@ -369,27 +353,27 @@ from groupdocs.viewer.options import PdfViewOptions
 
 def render_specific_layout():
     # Load CAD file
-    with Viewer("sample.dwg") as viewer:
+    with Viewer("sample.dxf") as viewer:
         # Convert the document to PDF.
         options = PdfViewOptions("render_specific_layout/specific_layout.pdf")
         # Specify the name of the layout to render.
         # If the specified layout is not found,
         # an exception occurs.
-        options.cad_options.layout_name = "layout1"
+        options.cad_options.layout_name = "Mezzanine"
         viewer.view(options)
 
 if __name__ == "__main__":
     render_specific_layout()
 ```
 {{< /tab >}}
-{{< tab "sample.dwg" >}}
+{{< tab "sample.dxf" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dxf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dxf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "specific_layout.pdf" >}}  
 ```text
-Binary file (PDF, 3 KB)
+Binary file (PDF, 100 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_specific_layout/specific_layout.pdf)
 {{< /tab >}}
@@ -399,7 +383,6 @@ Binary file (PDF, 3 KB)
 1. The [CadOptions.RenderLayouts](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) and [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) properties apply only to the following file formats: DWG, DWT, DXF, and DWF.
 
 2. If you use the [CadOptions.layout_name](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property to render a specific layout, the [CadOptions.render_layouts](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) option is ignored.{{< /alert >}}
-
 
 ## Render specific layers
 
@@ -418,7 +401,7 @@ When you convert a CAD drawing to HTML, PDF, or image format, GroupDocs.Viewer r
 
 2. Assign the list of layers you want to render to the [cad_options.layers](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/#properties) property.
 
-The following example renders layers with walls and furniture to PDF:
+The following example renders only the walls and the storage racks of a warehouse plan to PDF:
 
 {{< tabs "example9">}}
 {{< tab "Python">}}
@@ -434,7 +417,8 @@ def render_specific_layers():
         options = PdfViewOptions("render_specific_layers/specific_layers.pdf")
         # Specify a list of layers to display.
         options.cad_options.layers = [
-            Layer("QUADRANT")
+            Layer("WALLS"),
+            Layer("RACKS")
         ]
         viewer.view(options)
 
@@ -444,17 +428,13 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "specific_layers.pdf" >}}  
 ```text
-Binary file (PDF, 2 KB)
+Binary file (PDF, 3 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_specific_layers/specific_layers.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The image below illustrates the result.
-
-![Render specific CAD layers](/viewer/net/images/rendering-basics/render-cad-documents/render-specific-layers.png)

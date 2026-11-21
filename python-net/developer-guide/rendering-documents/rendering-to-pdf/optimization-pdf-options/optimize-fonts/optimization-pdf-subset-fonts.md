@@ -42,7 +42,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "subset_fonts.pdf" >}}  
 ```text
-Binary file (PDF, 344 KB)
+Binary file (PDF, 772 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-fonts/optimization-pdf-subset-fonts/subset_fonts/subset_fonts.pdf)
 {{< /tab >}}

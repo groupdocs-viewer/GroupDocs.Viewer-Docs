@@ -1,0 +1,8 @@
+File type: Outlook Personal Information Store File (.pst)
+The number of pages: 1
+The file contains the following folders:
+Inbox
+Deleted Items
+Sent Items
+Orders
+Suppliers

@@ -18,19 +18,23 @@ This feature is supported for the following file types:
 
 Different encodings use different byte sequences for characters, and opening a file in the wrong encoding leads to incorrect character rendering. To properly render a file, the correct encoding must be specified when opening the file. Another option is converting it to `UTF-8` beforehand. By default GroupDocs.Viewer using `UTF-8` encoding.
 
-For examle, when you try to open [sample-shift-jis.txt](/viewer/net/sample-files/developer-guide/loading-documents/specify-encoding-when-loading-documents/sample-shift-jis.txt) file in Notepad the text `これはShift_JISエンコード用のサンプルテキストです。` will appear as strange symbols because `ANSI` is misinterpreting the byte values that are specific to `Shift_JIS`.
+For example, if you open [sample-shift-jis.txt](/viewer/net/_sample_files/developer-guide/loading-documents/specify-encoding-when-loading-documents/sample-shift-jis.txt) in Notepad with the `ANSI` encoding, its Japanese text, which starts with `納品に関するご案内` ("Delivery information"), appears as strange symbols, because `ANSI` misinterprets the byte values that are specific to `Shift_JIS`.
 
 ![Shift_Jis text file opened in Notepad](/viewer/net/images/developer-guide/loading-documents/specify-encoding-when-loading-documents/shift-jis-in-notepad.png)
 
 To render text file properly you can set encoding using `LoadOptions` class. In the following code snippet we'll set `Shift_JIS` encoding and render the text file to HTML:
 
-{{< tabs "example1">}}
+{{< tabs "specify-encoding-when-loading">}}
 {{< tab "C#" >}}
 ```csharp
 using System.Text;
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
+
+// .NET 6 and later need this once to know code-page encodings such as Shift_JIS
+// (.NET Framework knows them already).
+Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
 // Specify an encoding.
 LoadOptions loadOptions = new LoadOptions();
@@ -52,6 +56,10 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
+        ' .NET 6 and later need this once to know code-page encodings such as Shift_JIS
+        ' (.NET Framework knows them already).
+        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance)
+
         ' Specify an encoding.
         Dim loadOptions As LoadOptions = New LoadOptions()
         loadOptions.Encoding = Encoding.GetEncoding("shift_jis")
@@ -66,11 +74,13 @@ End Module
 {{< /tab >}}
 {{< tab "sample-shift-jis.txt" >}}
 {{< tab-text >}}
-`sample-shift-jis.txt` is sample TXT file that is used in this example. Click [here](/viewer/net/sample-files/developer-guide/loading-documents/specify-encoding-when-loading-documents/sample-shift-jis.txt) to download it.
+`sample-shift-jis.txt` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/loading-documents/specify-encoding-when-loading-documents/sample-shift-jis.txt) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "p_1.html" >}}  
+```text
+HTML file (1 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/loading-documents/specify-encoding-when-loading-documents/SpecifyEncodingWhenLoading/p_1.html)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Shift_Jis text file converted to HTML](/viewer/net/images/developer-guide/loading-documents/specify-encoding-when-loading-documents/shift-jis-converted-to-html.png)

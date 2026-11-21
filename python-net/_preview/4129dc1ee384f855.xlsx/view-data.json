@@ -1,0 +1,30 @@
+{
+  "file": "viewer/python-net/_preview/4129dc1ee384f855.xlsx",
+  "fileName": "invoice.xlsx",
+  "fileType": "xlsx",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 1056,
+      "height": 816,
+      "pageUrl": "/viewer/python-net/_preview/4129dc1ee384f855.xlsx/page-1.png",
+      "thumbUrl": "/viewer/python-net/_preview/4129dc1ee384f855.xlsx/page-1.png"
+    },
+    {
+      "number": 2,
+      "width": 1056,
+      "height": 816,
+      "pageUrl": "/viewer/python-net/_preview/4129dc1ee384f855.xlsx/page-2.jpg",
+      "thumbUrl": "/viewer/python-net/_preview/4129dc1ee384f855.xlsx/page-2.jpg"
+    },
+    {
+      "number": 3,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/python-net/_preview/4129dc1ee384f855.xlsx/page-3.jpg",
+      "thumbUrl": "/viewer/python-net/_preview/4129dc1ee384f855.xlsx/page-3.jpg"
+    }
+  ]
+}

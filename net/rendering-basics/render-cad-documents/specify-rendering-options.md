@@ -28,7 +28,7 @@ Use the [CadOptions.BackgroundColor](https://reference.groupdocs.com/viewer/net/
 
 The following code snippet converts a CAD drawing to PDF and sets the background color of PDF pages to light yellow:
 
-{{< tabs "example1">}}
+{{< tabs "set-background-color">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -36,7 +36,7 @@ using GroupDocs.Viewer.Drawing;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("HousePlan.dwg"))
+using (var viewer = new Viewer("sample.dwg"))
 {
     // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
@@ -56,7 +56,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("HousePlan.dwg")
+        Using viewer = New Viewer("sample.dwg")
             ' Convert the document to PDF.
             Dim viewOptions = New PdfViewOptions("output.pdf")
         
@@ -68,11 +68,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 97 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/SetBackgroundColor/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Specify the background color for the output PDF file](/viewer/net/images/rendering-basics/render-cad-documents/set-background-color.png)
 
 ## Configure the output image size
 
@@ -85,14 +92,14 @@ The following image illustrates the result:
 
 The following example converts a CAD drawing to PNG format and reduces the width and height of the output image by 50%:
 
-{{< tabs "example2">}}
+{{< tabs "set-image-size">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("HousePlan.dwg"))
+using (var viewer = new Viewer("sample.dwg"))
 {
     // Convert the diagram to PNG.
     var viewOptions = new PngViewOptions("output.png");
@@ -110,7 +117,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("HousePlan.dwg")
+        Using viewer = New Viewer("sample.dwg")
             ' Convert the diagram to PNG.
             Dim viewOptions = New PngViewOptions("output.png")
             ' Specify a scale factor.
@@ -121,6 +128,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.png" >}}  
+```text
+Binary file (PNG, 19 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/SetImageSize/output.png)
+{{< /tab >}}
 {{< /tabs >}}
 
 When you render all layouts/sheets contained in a CAD file (the [CadOptions.RenderLayouts](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/cadoptions/properties/renderlayouts) property is `true`), each layout/sheet is rendered as a separate page/image and has its own size. In this case, when you specify only the [width](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/cadoptions/methods/forrenderingbywidth) or [height](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/cadoptions/methods/forrenderingbyheight) value, the other side is scaled proportionally to maintain the aspect ratio of each layout/sheet. When you set both [width and height](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/cadoptions/methods/forrenderingbywidthandheight), all generated images have the same size and may look distorted. To avoid this, use the [CadOptions.LayoutName](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/properties/layoutname) property to render each layout/sheet separately and set its size.
@@ -129,7 +147,7 @@ When you render all layouts/sheets contained in a CAD file (the [CadOptions.Rend
 
 AutoCAD allows you to configure plotter settings and save them as a PC3 file (Plotter Configuration Version 3) for later use. With GroupDocs.Viewer, you can apply width and height values from a PC3 file to the output file when you convert your CAD drawing to HTML, PDF, or image format. Use the [CadOptions.Pc3File](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/properties/pc3file) property for a target view to specify a path to the PC3 file with required settings. The default location for PC3 files is "*C:\Users\\[Username]\\AppData\Roaming\Autodesk\AutoCAD [Version]\\[Version Code]\\[Language]\Plotters*".
 
-{{< tabs "example3">}}
+{{< tabs "apply-pc3-file">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -165,6 +183,22 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "small_page.pc3" >}}
+{{< tab-text >}}
+`small_page.pc3` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/small_page.pc3) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 97 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/ApplyPc3File/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Split a drawing into tiles
@@ -181,7 +215,7 @@ After you create all tiles, add them to the [ViewOptions.CadOptions.Tiles](https
 
 The following example demonstrates how to split a CAD drawing into four tiles (2x2) of equal size:
 
-{{< tabs "example4">}}
+{{< tabs "split-drawing-into-tiles">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -189,7 +223,7 @@ using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
 // ...
 
-using (var viewer = new Viewer("HousePlan.dwg"))
+using (var viewer = new Viewer("sample.dwg"))
 {
     var viewInfoOptions = ViewInfoOptions.ForHtmlView();
     var viewInfo = viewer.GetViewInfo(viewInfoOptions);
@@ -231,7 +265,7 @@ Imports GroupDocs.Viewer.Results
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("HousePlan.dwg")
+        Using viewer = New Viewer("sample.dwg")
             Dim viewInfoOptions = ViewInfoOptions.ForHtmlView()
             Dim viewInfo = viewer.GetViewInfo(viewInfoOptions)
         
@@ -264,6 +298,20 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "split-drawing-into-tiles.zip" >}}  
+```text
+page_1.html (104 KB)
+page_2.html (113 KB)
+page_3.html (61 KB)
+page_4.html (171 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/SplitDrawingIntoTiles/split-drawing-into-tiles.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 In the example above the GroupDocs.Viewer will generate four HTML files named "page_1.html", "page_2.html", "page_3.html", and "page_4.html", where each of these HTML file contains a single tile in a form of SVG vector image. The [`HtmlViewOptions.ForExternalResources()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/forexternalresources/#forexternalresources) static method (with all its overloads) can also be used — in such case the SVG files will not be embedded inside the output HTML files, but will be saved separately, while HTML only references them through the `A` HTML element.
@@ -278,15 +326,14 @@ Starting from the version 24.2 the GroupDocs.Viewer introduces a new public prop
 
 Enabling this mode is pretty simple — just create an instance of the [`CadOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions) class by using [any of the static methods described above](#ctors), and then set the value for the `EnablePerformanceConversionMode` property. Example is below:
 
-
-{{< tabs "example5">}}
+{{< tabs "enable-performance-mode">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("input.dwg"))
+using (Viewer viewer = new Viewer("sample.dwg"))
 {
    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("Output-Page#{0}.html");                    
    viewOptions.CadOptions = CadOptions.ForRenderingByWidth(1000);
@@ -304,7 +351,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("input.dwg")
+        Using viewer = New Viewer("sample.dwg")
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
 
             viewOptions.CadOptions = CadOptions.ForRenderingByWidth(1000)
@@ -317,6 +364,17 @@ End Module
 ```
 {{< /tab >}}
 
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Output-Page#1.html" >}}  
+```text
+HTML file (222 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/EnablePerformanceMode/Output-Page%231.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 If taking an ordinary DWG file as a sample, the comparison between "quality" and "performance" modes are the next:

@@ -11,6 +11,8 @@ hideChildren: False
 Caching saves rendering results to a specified location, such as a local disk. When you re-request the rendering results, GroupDocs.Viewer does not render again, but uses the cached results.
 As a document can take a long time to render, use caching if you expect to reuse the rendering results.
 
+![The first View call renders the pages and stores them in a FileCache folder; a second call with the same document reads the pages from the cache instead of rendering them again](/viewer/net/images/developer-guide/caching-results/caching-overview.svg)
+
 To enable caching, follow these steps:
 
 1. Instantiate the desired cache object (for example, [FileCache](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.caching/filecache) to store document rendering results at the local drive)
@@ -20,7 +22,7 @@ To enable caching, follow these steps:
 
 The following code snippet shows how to enable caching and displays the difference between rendering a file and getting the cached results:
 
-{{< tabs "example1">}}
+{{< tabs "cache-rendering-results">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -31,14 +33,14 @@ using GroupDocs.Viewer.Caching;
 using GroupDocs.Viewer.Options;
 // ...
 
-string outputDirectory = @"C:\output";
+string outputDirectory = "output";
 string cachePath = Path.Combine(outputDirectory, "cache");
 string pageFilePathFormat = Path.Combine(outputDirectory, "page_{0}.html");
 // Create a cache.
 FileCache cache = new FileCache(cachePath);
 ViewerSettings settings = new ViewerSettings(cache);
 
-using (Viewer viewer = new Viewer(@"C:\sample.docx", settings))
+using (Viewer viewer = new Viewer("sample.docx", settings))
 {
     // Create an HTML file.
     HtmlViewOptions options = HtmlViewOptions.ForEmbeddedResources(pageFilePathFormat);
@@ -67,14 +69,14 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-            Dim outputDirectory As String = "C:\output"
+            Dim outputDirectory As String = "output"
             Dim cachePath As String = Path.Combine(outputDirectory, "cache")
             Dim pageFilePathFormat As String = Path.Combine(outputDirectory, "page_{0}.html")
             ' Create a cache.
             Dim cache As FileCache = New FileCache(cachePath)
             Dim settings As ViewerSettings = New ViewerSettings(cache)
         
-            Using viewer As Viewer = New Viewer("C:\sample.docx", settings)
+            Using viewer As Viewer = New Viewer("sample.docx", settings)
                 ' Create an HTML file.
                 Dim options As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources(pageFilePathFormat)
                 ' Render and display the rendering time.
@@ -92,25 +94,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
-{{< tab "VB.NET">}}
-```vb
-CONVERSION ERROR: Conversion for GlobalStatement not implemented, please report this issue in 'string outputDirectory = @"...' at character 160
-
-CONVERSION ERROR: Conversion for GlobalStatement not implemented, please report this issue in 'string cachePath = Path.Com...' at character 200
-
-CONVERSION ERROR: Conversion for GlobalStatement not implemented, please report this issue in 'string pageFilePathFormat =...' at character 260
-
-CONVERSION ERROR: Conversion for GlobalStatement not implemented, please report this issue in 'FileCache cache = new FileC...' at character 357
-
-CONVERSION ERROR: Conversion for GlobalStatement not implemented, please report this issue in 'ViewerSettings settings = n...' at character 402
-
-CONVERSION ERROR: Conversion for GlobalStatement not implemented, please report this issue in 'using (Viewer viewer = new ...' at character 458
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/caching-results/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "cache-rendering-results.txt" >}}  
+```text
+Time taken on first call to View method 9303 (ms).
+Time taken on second call to View method 65 (ms).
 ```
+[Download full output](/viewer/net/_output_files/developer-guide/caching-results/_index/CacheRenderingResults/cache-rendering-results.txt)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![](/viewer/net/images/caching-results.png)
 
 For details, please refer to the following pages:

@@ -22,7 +22,7 @@ from groupdocs.viewer.options import PdfViewOptions, PdfOptimizationOptions
 def optimize_pdf_for_web():
     # Load document
     with Viewer("sample.docx") as viewer:
-        viewOptions = PdfViewOptions("optimize_pdf_for_web/optimized_spreadsheet.pdf")
+        viewOptions = PdfViewOptions("optimize_pdf_for_web/optimized_for_web.pdf")
         viewOptions.pdf_optimization_options = PdfOptimizationOptions()
         viewOptions.pdf_optimization_options.lineriaze = True
 
@@ -37,10 +37,10 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-for-web/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "optimized_spreadsheet.pdf" >}}  
+{{< tab "optimized_for_web.pdf" >}}  
 ```text
-Binary file (PDF, 232 KB)
+Binary file (PDF, 719 KB)
 ```
-[Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-for-web/optimize_pdf_for_web/optimized_spreadsheet.pdf)
+[Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-for-web/optimize_pdf_for_web/optimized_for_web.pdf)
 {{< /tab >}}
 {{< /tabs >}}

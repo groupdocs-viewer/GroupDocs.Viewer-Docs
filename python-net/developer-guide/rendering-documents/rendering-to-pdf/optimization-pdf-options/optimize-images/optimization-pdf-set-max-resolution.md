@@ -45,12 +45,8 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "optimized_resolution.pdf" >}}  
 ```text
-Binary file (PDF, 227 KB)
+Binary file (PDF, 189 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-set-max-resolution/set_max_resolution/optimized_resolution.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Set max resolution](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-set-max-resolution.png)

@@ -16,7 +16,7 @@ To allow changing the image resolution, set the [CompressImages](https://referen
 
 The following code snippet shows how to reduce image resolution in the file:
 
-{{< tabs "Example1">}}
+{{< tabs "set-max-resolution">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -61,8 +61,15 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-set-max-resolution/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 189 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-set-max-resolution/SetMaxResolution/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Set max resolution](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-set-max-resolution.png)

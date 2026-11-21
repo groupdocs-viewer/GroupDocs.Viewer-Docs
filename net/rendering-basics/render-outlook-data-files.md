@@ -36,7 +36,7 @@ GroupDocs.Viewer can detect the document format automatically based on informati
 
 To convert an OST or PST file to HTML, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method to create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass this instance to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method.
 
-{{< tabs "example1">}}
+{{< tabs "render-outlook-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -68,17 +68,24 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.html" >}}  
+```text
+HTML file (105 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-outlook-data-files/RenderOutlookToHtml/output.html)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a PST file to HTML](/viewer/net/images/rendering-basics/render-outlook-files/render-pst-to-html.png)
 
 ## Render Outlook data files as PDF
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an OST or PST file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example2">}}
+{{< tabs "render-outlook-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -110,17 +117,24 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 710 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-outlook-data-files/RenderOutlookToPdf/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a PST file to PDF](/viewer/net/images/rendering-basics/render-outlook-files/render-pst-to-pdf.png)
 
 ## Render Outlook data files as PNG
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an OST or PST file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example3">}}
+{{< tabs "render-outlook-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -160,17 +174,34 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-outlook-to-png.zip" >}}  
+```text
+output_1.png (53 KB)
+output_10.png (58 KB)
+output_11.png (39 KB)
+output_12.png (55 KB)
+output_13.png (19 KB)
+output_2.png (48 KB)
+output_3.png (52 KB)
+output_4.png (49 KB)
+output_5.png (52 KB)
+output_6.png (48 KB)
+[TRUNCATED] (13 files total)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-outlook-data-files/RenderOutlookToPng/render-outlook-to-png.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a PST file to PNG](/viewer/net/images/rendering-basics/render-outlook-files/render-pst-to-png.png)
 
 ## Render Outlook data files as JPEG
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an OST or PST file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-outlook-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -210,6 +241,27 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-outlook-to-jpg.zip" >}}  
+```text
+output_1.jpg (43 KB)
+output_10.jpg (47 KB)
+output_11.jpg (34 KB)
+output_12.jpg (45 KB)
+output_13.jpg (21 KB)
+output_2.jpg (39 KB)
+output_3.jpg (43 KB)
+output_4.jpg (40 KB)
+output_5.jpg (43 KB)
+output_6.jpg (39 KB)
+[TRUNCATED] (13 files total)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-outlook-data-files/RenderOutlookToJpg/render-outlook-to-jpg.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Get information about folders in an Outlook data file
@@ -220,7 +272,7 @@ Follow the steps below to obtain information about folders contained in an Outlo
 2. Call the [Viewer.GetViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [OutlookViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/outlookviewinfo) type.
 3. Use the [OutlookViewInfo.Folders](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/outlookviewinfo/properties/folders) property to obtain the list of folders in the Outlook data file.
 
-{{< tabs "example5">}}
+{{< tabs "get-outlook-folders-info">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -278,6 +330,24 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-outlook-folders-info.txt" >}}  
+```text
+File type: Outlook Personal Information Store File (.pst)
+The number of pages: 1
+The file contains the following folders:
+Inbox
+Deleted Items
+Sent Items
+Orders
+Suppliers
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-outlook-data-files/GetOutlookFoldersInfo/get-outlook-folders-info.txt)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Specify rendering options
@@ -293,8 +363,7 @@ GroupDocs.Viewer supports the [OutlookOptions](https://reference.groupdocs.com/v
 
 When you convert an OST or PST file to HTML, PDF, or image format, GroupDocs.Viewer renders messages from all folders contained in the file (including nested folders). If you want to render items from a specific folder, set the [OutlookOptions.Folder](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/outlookoptions/properties/folder) property for a target view. Specify the folder name as follows: `{Parent folder name}\\{Subfolder name}`.
 
-
-{{< tabs "example6">}}
+{{< tabs "render-outlook-specific-folder">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -334,6 +403,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "p_1.html" >}}  
+```text
+HTML file (34 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-outlook-data-files/RenderOutlookSpecificFolder/p_1.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Limit the number of folder items to render
@@ -342,7 +422,7 @@ When you load large Outlook data files, it may take a significant amount of time
 
 The following example demonstrates how to specify the maximum number of folder items to render:
 
-{{< tabs "example7">}}
+{{< tabs "render-outlook-with-max-items">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -378,6 +458,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "p_1.html" >}}  
+```text
+HTML file (98 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-outlook-data-files/RenderOutlookWithMaxItems/p_1.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Filter messages
@@ -393,7 +484,7 @@ With GroupDocs.Viewer, you can also filter messages before rendering an Outlook 
 
 The following code sample filters messages in a PST file before rendering this file to HTML:
 
-{{< tabs "example8">}}
+{{< tabs "render-outlook-with-filters">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -405,8 +496,8 @@ using (var viewer = new Viewer("sample.pst"))
     // Create an HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources();
     // Set filters.
-    viewOptions.OutlookOptions.TextFilter = "Viewer";
-    viewOptions.OutlookOptions.AddressFilter = "groupdocs.com";
+    viewOptions.OutlookOptions.TextFilter = "invoice";
+    viewOptions.OutlookOptions.AddressFilter = "northwindroasters.example";
     viewer.View(viewOptions);
 }
 ```
@@ -423,12 +514,23 @@ Module Program
             ' Create an HTML file.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
             ' Set filters.
-            viewOptions.OutlookOptions.TextFilter = "Viewer"
-            viewOptions.OutlookOptions.AddressFilter = "groupdocs.com"
+            viewOptions.OutlookOptions.TextFilter = "invoice"
+            viewOptions.OutlookOptions.AddressFilter = "northwindroasters.example"
             viewer.View(viewOptions)
         End Using
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.pst" >}}
+{{< tab-text >}}
+`sample.pst` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-outlook-data-files/sample.pst) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "p_1.html" >}}  
+```text
+HTML file (132 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-outlook-data-files/RenderOutlookWithFilters/p_1.html)
 {{< /tab >}}
 {{< /tabs >}}

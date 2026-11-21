@@ -14,7 +14,7 @@ toc: True
 
 We use the term ["rendering"]({{< ref "viewer/net/developer-guide/rendering-documents/_index.md" >}}) in GroupDocs.Viewer to describe the process of converting a document into a file format, paginated, or that has the concept of pages. For example, when you have a DOCX file with three pages then after rendering this file to HTML you'll get three HTML files on the output that represent each of the pages in the document.
 
-![Rendering diagram](/viewer/net/images/getting-started/features-overview/rendering.png)
+![A three-page DOCX rendered by GroupDocs.Viewer: three HTML files, three PNG images or three JPEG images, one per page, or one PDF file with all three pages](/viewer/net/images/developer-guide/rendering-documents/rendering-overview.svg)
 
 ### Rendering to HTML
 

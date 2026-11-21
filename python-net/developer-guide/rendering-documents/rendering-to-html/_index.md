@@ -16,6 +16,8 @@ GroupDocs.Viewer for Python provides two options to manage CSS, fonts, images, a
 1. HTML with external resources stores page resources as separate files. This allows reusing common resources and results in reducing page size and loading speed.
 2. HTML with embedded resources integrates page resources into HTML. This makes each document page self-sufficient but results in increasing page size and loading speed.
 
+![A three-page DOCX rendered to HTML: with embedded resources each page is one self-contained HTML file; with external resources each page is an HTML file plus a folder of fonts, pictures and styles it links to](/viewer/python-net/images/developer-guide/rendering-documents/rendering-to-html/html-resources.svg)
+
 To render files to HTML, follow these steps:
 
 1. Create an instance of the [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/) class. Specify the source document path as a constructor parameter.
@@ -49,6 +51,22 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-html/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "render-to-html-external-outputs.zip" >}}  
+```text
+page_1.html (2 KB)
+page_1/resource_1_f.woff (20 KB)
+page_1/resource_1_f1.woff (9 KB)
+page_1/resource_1_f2.woff (10 KB)
+page_1/resource_1_i.jpeg (144 KB)
+page_1/resource_1_i.png (4 KB)
+page_1/resource_1_s.css (1 KB)
+page_2.html (9 KB)
+page_2/resource_2_f.woff (15 KB)
+page_2/resource_2_f1.woff (29 KB)
+[TRUNCATED] (35 files total)
+```
+[Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-html/_index/render_to_html_external/render-to-html-external-outputs.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Rendering to HTML with embedded resources
@@ -78,6 +96,16 @@ if __name__ == "__main__":
 {{< tab-text >}}
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-html/sample.docx) to download it.
 {{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-to-html-embedded-outputs.zip" >}}  
+```text
+page_1.html (253 KB)
+page_2.html (110 KB)
+page_3.html (148 KB)
+page_4.html (1001 KB)
+page_5.html (86 KB)
+```
+[Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-html/_index/render_to_html_embedded/render-to-html-embedded-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 

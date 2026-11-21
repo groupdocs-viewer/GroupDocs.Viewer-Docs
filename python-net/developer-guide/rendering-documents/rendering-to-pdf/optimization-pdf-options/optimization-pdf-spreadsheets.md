@@ -43,7 +43,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "optimized_spreadsheet.pdf" >}}  
 ```text
-Binary file (PDF, 310 KB)
+Binary file (PDF, 17 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-spreadsheets/optimize_spreadsheets/optimized_spreadsheet.pdf)
 {{< /tab >}}

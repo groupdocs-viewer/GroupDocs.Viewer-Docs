@@ -66,25 +66,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "pdf_page_1.html" >}}  
 ```text
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html[]>
-<!--[if IE]>  <html class="p1-56000000000-_1_ie"> <![endif]-->
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Page 1</title>
-    <style type="text/css">.p1-56000000000-_1_ sup {
-	vertical-align: baseline;
-	position: relative;
-[TRUNCATED]
+HTML file (7.0 MB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_to_html/pdf_page_1.html)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Project file to HTML](/viewer/python-net/images/rendering-basics/render-ms-project-files/render-project-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -106,7 +92,8 @@ def render_project_to_html_external():
         # Render the project's active view as HTML.
         # Specify the HTML file names and location of external resources.
         # {0} and {1} are replaced with the page number and resource name, respectively.
-        viewOptions = HtmlViewOptions.for_external_resources("render_project_to_html_external/pdf_page_{0}.html", "render_project_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_project_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        # The resource URL is relative to the HTML file.
+        viewOptions = HtmlViewOptions.for_external_resources("render_project_to_html_external/pdf_page_{0}.html", "render_project_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -120,22 +107,23 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-project-to-html-external-outputs.zip" >}}  
 ```text
-render_project_to_html_external/pdf_page_1.html (123 KB)
-render_project_to_html_external/pdf_page_1/resource_1_f.ttf (993 KB)
-render_project_to_html_external/pdf_page_1/resource_1_f1.ttf (938 KB)
-render_project_to_html_external/pdf_page_1/resource_1_g.svg (275 KB)
+render_project_to_html_external/pdf_page_1.html (81 KB)
+render_project_to_html_external/pdf_page_1/resource_1_f.ttf (1612 KB)
+render_project_to_html_external/pdf_page_1/resource_1_f1.ttf (1021 KB)
+render_project_to_html_external/pdf_page_1/resource_1_f2.ttf (1578 KB)
+render_project_to_html_external/pdf_page_1/resource_1_f3.ttf (967 KB)
+render_project_to_html_external/pdf_page_1/resource_1_g.svg (127 KB)
 render_project_to_html_external/pdf_page_1/resource_1_i.png (345 bytes)
-render_project_to_html_external/pdf_page_1/resource_1_i1.png (371 bytes)
+render_project_to_html_external/pdf_page_1/resource_1_i1.png (968 bytes)
 render_project_to_html_external/pdf_page_1/resource_1_i2.png (946 bytes)
-render_project_to_html_external/pdf_page_1/resource_1_s.css (2 KB)
+render_project_to_html_external/pdf_page_1/resource_1_i3.png (353 bytes)
+[TRUNCATED] (11 files total)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_to_html_external/render-project-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/python-net/images/rendering-basics/render-ms-project-files/render-project-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ## Render Project files as PDF
 
@@ -165,15 +153,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "project_file.pdf" >}}  
 ```text
-Binary file (PDF, 156 KB)
+Binary file (PDF, 125 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_to_pdf/project_file.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Project file to PDF](/viewer/python-net/images/rendering-basics/render-ms-project-files/render-project-to-pdf.png)
 
 ## Render Project files as PNG
 
@@ -207,15 +191,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "project_page_0_1.png" >}}  
 ```text
-Binary file (PNG, 528 KB)
+Binary file (PNG, 259 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_to_png/project_page_0_1.png)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Project file to PNG](/viewer/python-net/images/rendering-basics/render-ms-project-files/render-project-to-png-image.png)
 
 ## Render Project files as JPEG
 
@@ -249,7 +229,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "project_to_jpg_1.jpg" >}}  
 ```text
-Binary file (JPG, 255 KB)
+Binary file (JPG, 184 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_to_jpg/project_to_jpg_1.jpg)
 {{< /tab >}}
@@ -296,10 +276,6 @@ The number of pages: 1
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image shows a sample console output:
-
-![Get information about a Project file](/viewer/python-net/images/rendering-basics/render-ms-project-files/retrieve-project-file-information.png)
-
 ## Specify the output page size
 
 GroupDocs.Viewer allows you to specify page size for the output file when you convert your Project document to HTML, PDF, or image format. Assign a [PageSize](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pagesize) enumeration member to the [project_management_options.page_size](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/projectmanagementoptions/#properties) property to select one of the predefined page sizes (Letter, Ledger, A0, A1, A2, A3, or A4). You can access this property for the following classes (depending on the output file format):
@@ -337,12 +313,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "project_with_page_size.pdf" >}}  
 ```text
-Binary file (PDF, 160 KB)
+Binary file (PDF, 119 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_with_page_size/project_with_page_size.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
 
 ## Adjust the time unit
 
@@ -380,18 +355,13 @@ if __name__ == "__main__":
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "render-project-with-time-unit-outputs.zip" >}}  
+{{< tab "output_1.html" >}}  
 ```text
-render_project_with_time_unit/output_1.html (3010 KB)
-render_project_with_time_unit/output_2.html (2643 KB)
+HTML file (6.9 MB)
 ```
-[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_with_time_unit/render-project-with-time-unit-outputs.zip)
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_with_time_unit/output_1.html)
 {{< /tab >}}
 {{< /tabs >}}
-
-The image below illustrates the result.
-
-![Render a Project with the timescale unit set to thirds of months](/viewer/python-net/images/rendering-basics/render-ms-project-files/render-project-with-custom-time-unit.png)
 
 ## Render notes
 
@@ -429,12 +399,10 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "project_with_notes.pdf" >}}  
 ```text
-Binary file (PDF, 156 KB)
+Binary file (PDF, 149 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_with_notes/project_with_notes.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. Notes are rendered on a separate page.
-
-![Render a Project file with task notes](/viewer/python-net/images/rendering-basics/render-ms-project-files/render-task-notes-to-pdf.png)
+Notes are rendered on a separate page.

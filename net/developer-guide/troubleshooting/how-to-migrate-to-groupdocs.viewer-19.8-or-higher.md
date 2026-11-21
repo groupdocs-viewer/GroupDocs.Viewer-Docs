@@ -7,6 +7,7 @@ description: "This article contains information about migration from the legacy 
 keywords: 
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
+toc: True
 ---
 This page describes migration to the 19.8 version or later from the previous one.
 
@@ -24,7 +25,7 @@ Here is a brief comparison of how to display a document in HTML form using old a
 
 The following code snippet shows the old coding style:
 
-{{< tabs "example1">}}
+{{< tabs "migrate-old-api">}}
 {{< tab "C#" >}}
 ```csharp
 //Get Configurations
@@ -89,7 +90,7 @@ Next
 
 The following code snippet shows the new coding style:
 
-{{< tabs "example2">}}
+{{< tabs "migrate-new-api">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -117,5 +118,20 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/troubleshooting/how-to-migrate-to-groupdocs.viewer-19.8-or-higher/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "migrate-new-api.zip" >}}  
+```text
+p_1.html (228 KB)
+p_2.html (110 KB)
+p_3.html (142 KB)
+p_4.html (885 KB)
+p_5.html (86 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/troubleshooting/how-to-migrate-to-groupdocs.viewer-19.8-or-higher/MigrateNewApi/migrate-new-api.zip)
 {{< /tab >}}
 {{< /tabs >}}

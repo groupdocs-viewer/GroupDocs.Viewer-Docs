@@ -96,7 +96,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "text_with_load_options.pdf" >}}  
 ```text
-Binary file (PDF, 28 KB)
+Binary file (PDF, 85 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_with_load_options/text_with_load_options.pdf)
 {{< /tab >}}
@@ -133,18 +133,16 @@ if __name__ == "__main__":
 `terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "pdf_page_1.html" >}}  
+{{< tab "render-text-to-html-outputs.zip" >}}  
 ```text
-<!doctype html><html lang='en'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title>terms_of_service.txt</title></head> <style type='text/css'>.gdv-container pre { width:588px; white-space:normal; } .gdv-container { margin-top:60px; margin-left:60px; }</style><body><div style="font-size:10pt;font-family:Times New Roman;" class='gdv-container'><pre>London is the capital city of England and the United Kingdom, and the most popul
-[TRUNCATED]
+render_text_to_html/pdf_page_1.html (2 KB)
+render_text_to_html/pdf_page_2.html (3 KB)
+render_text_to_html/pdf_page_3.html (2 KB)
+render_text_to_html/pdf_page_4.html (1 KB)
 ```
-[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_html/pdf_page_1.html)
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_html/render-text-to-html-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a text file to HTML](/viewer/python-net/images/rendering-basics/render-text-files/render-to-html-embedded-resources.png)
 
 ### Create HTML files with external resources
 
@@ -166,7 +164,8 @@ def render_text_to_html_external():
         # Create an HTML file for each page.
         # Specify the HTML file names and location of external resources.
         # {0} and {1} are replaced with the current page number and resource name, respectively.
-        viewOptions = HtmlViewOptions.for_external_resources("render_text_to_html_external/pdf_page_{0}.html", "render_text_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_text_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        # The resource URL is relative to the HTML file.
+        viewOptions = HtmlViewOptions.for_external_resources("render_text_to_html_external/pdf_page_{0}.html", "render_text_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -180,16 +179,20 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-text-to-html-external-outputs.zip" >}}  
 ```text
-render_text_to_html_external/pdf_page_1.html (3 KB)
+render_text_to_html_external/pdf_page_1.html (2 KB)
 render_text_to_html_external/pdf_page_1/resource_1_s.css (109 bytes)
+render_text_to_html_external/pdf_page_2.html (2 KB)
+render_text_to_html_external/pdf_page_2/resource_2_s.css (109 bytes)
+render_text_to_html_external/pdf_page_3.html (2 KB)
+render_text_to_html_external/pdf_page_3/resource_3_s.css (109 bytes)
+render_text_to_html_external/pdf_page_4.html (1 KB)
+render_text_to_html_external/pdf_page_4/resource_4_s.css (109 bytes)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_html_external/render-text-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/python-net/images/rendering-basics/render-text-files/render-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ### Create a single HTML page
 
@@ -221,8 +224,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "text_to_single_html.html" >}}  
 ```text
-<!doctype html><html lang='en'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title>terms_of_service.txt</title></head> <style type='text/css'>.gdv-container pre { width:588px; white-space:normal; } .gdv-container { margin-top:60px; margin-left:60px; }</style><body><div style="font-size:10pt;font-family:Times New Roman;" class='gdv-container'><pre>London is the capital city of England and the United Kingdom, and the most popul
-[TRUNCATED]
+HTML file (7 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_single_html/text_to_single_html.html)
 {{< /tab >}}
@@ -256,15 +258,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "text_document.pdf" >}}  
 ```text
-Binary file (PDF, 30 KB)
+Binary file (PDF, 109 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_pdf/text_document.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a text file to PDF](/viewer/python-net/images/rendering-basics/render-text-files/render-to-pdf.png)
 
 ## Render text files as PNG
 
@@ -296,17 +294,16 @@ if __name__ == "__main__":
 `terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "text_page_0_1.png" >}}  
+{{< tab "render-text-to-png-outputs.zip" >}}  
 ```text
-Binary file (PNG, 126 KB)
+render_text_to_png/text_page_0_1.png (99 KB)
+render_text_to_png/text_page_0_2.png (111 KB)
+render_text_to_png/text_page_0_3.png (99 KB)
+render_text_to_png/text_page_0_4.png (52 KB)
 ```
-[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_png/text_page_0_1.png)
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_png/render-text-to-png-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a text file to PNG](/viewer/python-net/images/rendering-basics/render-text-files/render-to-png-image.png)
 
 ## Render text files as JPEG
 
@@ -338,10 +335,13 @@ if __name__ == "__main__":
 `terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "text_to_jpg_1.jpg" >}}  
+{{< tab "render-text-to-jpg-outputs.zip" >}}  
 ```text
-Binary file (JPG, 110 KB)
+render_text_to_jpg/text_to_jpg_1.jpg (97 KB)
+render_text_to_jpg/text_to_jpg_2.jpg (112 KB)
+render_text_to_jpg/text_to_jpg_3.jpg (97 KB)
+render_text_to_jpg/text_to_jpg_4.jpg (53 KB)
 ```
-[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_jpg/text_to_jpg_1.jpg)
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-text-files/render_text_to_jpg/render-text-to-jpg-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}

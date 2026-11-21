@@ -14,14 +14,14 @@ You can specify the default font name for a document. GroupDocs.Viewer uses this
 
 The following code snippet shows how to set the default font name:
 
-{{< tabs "example1">}}
+{{< tabs "replace-missing-font">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("sample.pptx"))
+using (Viewer viewer = new Viewer("missing_font.pptx"))
 {
     // Create options for rendering HTML document with embedded resources
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
@@ -42,7 +42,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("sample.pptx")
+        Using viewer As Viewer = New Viewer("missing_font.pptx")
             ' Create options for rendering HTML document with embedded resources
             Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources   ()
         
@@ -55,5 +55,18 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "missing_font.pptx" >}}
+{{< tab-text >}}
+`missing_font.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/replace-missing-font/missing_font.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "replace-missing-font.zip" >}}  
+```text
+p_1.html (224 KB)
+p_2.html (226 KB)
+p_3.html (227 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/replace-missing-font/ReplaceMissingFont/replace-missing-font.zip)
 {{< /tab >}}
 {{< /tabs >}}

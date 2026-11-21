@@ -16,10 +16,9 @@ To get a list of all attachments to a source file, follow these steps:
 
 The following code snippet shows how to get a list of attachments from the MSG file:
 
-
 {{< alert style="info" >}}NOTE: provided code snippet suits all format families that support attachments: emails, Outlook data files, archives, and PDF documents.{{< /alert >}}
 
-{{< tabs "example1">}}
+{{< tabs "list-attachments">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -64,8 +63,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.msg" >}}
+{{< tab-text >}}
+`sample.msg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/processing-attachments/how-to-list-attachments/sample.msg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "list-attachments.txt" >}}  
+```text
+Attachments:
+invoice-NWR-2026-0912.pdf - Portable Document Format File (.pdf); ID: beef1f0b-cf7a-5f11-9a96-c45164d87592; Path: invoice-NWR-2026-0912.pdf; Size: 198531B
+delivery-note-0912.xlsx - Microsoft Excel Open XML Spreadsheet (.xlsx); ID: 27d8bb8f-7c88-592f-8967-72831e28e818; Path: delivery-note-0912.xlsx; Size: 7643B
+```
+[Download full output](/viewer/net/_output_files/developer-guide/processing-attachments/how-to-list-attachments/ListAttachments/list-attachments.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![](/viewer/net/images/how-to-list-attachments.png)

@@ -48,13 +48,21 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/logging-and-diagnostics/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "write-logs-to-console-outputs.zip" >}}  
+{{< tab "write-logs-to-console.txt" >}}  
 ```text
-write_logs_to_console/page_1.html (317 KB)
-write_logs_to_console/page_2.html (149 KB)
-write_logs_to_console/page_3.html (113 KB)
+[TRACE] Rendering into HTML with embedded resources.
+[TRACE] Detecting file type by extension.
+[TRACE] File type detected successfully: Microsoft Word Open XML Document.
+[TRACE] Opening document.
+[TRACE] Document is loaded.
+[TRACE] Applying options.
+[TRACE] Converting page 1.
+[TRACE] Page 1 conversion completed.
+[TRACE] Converting page 2.
+[TRACE] Page 2 conversion completed.
+[TRUNCATED]
 ```
-[Download full output](/viewer/python-net/_output_files/developer-guide/logging-and-diagnostics/write_logs_to_console/write-logs-to-console-outputs.zip)
+[Download full output](/viewer/python-net/_output_files/developer-guide/logging-and-diagnostics/write_logs_to_console/write-logs-to-console.txt)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -94,14 +102,21 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/logging-and-diagnostics/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "write-logs-outputs.zip" >}}  
+{{< tab "log.txt" >}}  
 ```text
-log.txt (484 bytes)
-write_logs_to_file/page_1.html (317 KB)
-write_logs_to_file/page_2.html (149 KB)
-write_logs_to_file/page_3.html (113 KB)
+[TRACE] Rendering into HTML with embedded resources.
+[TRACE] Detecting file type by extension.
+[TRACE] File type detected successfully: Microsoft Word Open XML Document.
+[TRACE] Opening document.
+[TRACE] Document is loaded.
+[TRACE] Applying options.
+[TRACE] Converting page 1.
+[TRACE] Page 1 conversion completed.
+[TRACE] Converting page 2.
+[TRACE] Page 2 conversion completed.
+[TRUNCATED]
 ```
-[Download full output](/viewer/python-net/_output_files/developer-guide/logging-and-diagnostics/write_logs_to_file/write-logs-outputs.zip)
+[Download full output](/viewer/python-net/_output_files/developer-guide/logging-and-diagnostics/write_logs_to_file/log.txt)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -113,62 +128,10 @@ write_logs_to_file/page_3.html (113 KB)
 
 Use `FileLogger` when you want structured, per-run log files for long-running services or batch jobs.
 
-## Example 3: Redirect ConsoleLogger Output to a File
+## Send console messages to a file
 
-If you already have a logging pipeline that consumes `sys.stdout`, you can redirect `ConsoleLogger` output there instead. Redirect `sys.stdout` for the duration of the render call — the logger will write its messages into the file handle:
+`ConsoleLogger` writes through the console of the .NET runtime, not through Python's `sys.stdout`, so replacing `sys.stdout` (or using `contextlib.redirect_stdout`) does not capture its messages. To keep them in a file, use `FileLogger` (Example 2), or redirect the output of the script when you run it:
 
-{{< tabs "code-example-3">}}
-{{< tab "redirect_logs_to_file.py" >}}  
-```python
-import sys
-from groupdocs.viewer import Viewer, ViewerSettings
-from groupdocs.viewer.logging import ConsoleLogger
-from groupdocs.viewer.options import HtmlViewOptions
-
-def redirect_logs_to_file():
-    log_file_path = "./log.txt"
-
-    # Redirect standard output to a file so ConsoleLogger writes into it
-    original_stdout = sys.stdout
-    with open(log_file_path, "w", encoding="utf-8") as log_file:
-        sys.stdout = log_file
-        try:
-            # Create viewer settings with a console logger — the logger
-            # writes through sys.stdout, which is currently redirected to log_file.
-            viewer_settings = ViewerSettings(logger=ConsoleLogger())
-
-            # Load DOCX document and render it to HTML
-            with Viewer("./sample.docx", settings=viewer_settings) as viewer:
-                html_options = HtmlViewOptions.for_embedded_resources("redirect_logs_to_file/page_{0}.html")
-                viewer.view(html_options)
-        finally:
-            sys.stdout = original_stdout
-
-if __name__ == "__main__":
-    redirect_logs_to_file()
+```bash
+python write_logs_to_console.py > log.txt
 ```
-{{< /tab >}}
-{{< tab "sample.docx" >}}  
-{{< tab-text >}}
-`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/logging-and-diagnostics/sample.docx) to download it.
-{{< /tab-text >}}
-{{< /tab >}}
-{{< tab "redirect-logs-outputs.zip" >}}  
-```text
-log.txt (0 bytes)
-redirect_logs_to_file/page_1.html (317 KB)
-redirect_logs_to_file/page_2.html (149 KB)
-redirect_logs_to_file/page_3.html (113 KB)
-```
-[Download full output](/viewer/python-net/_output_files/developer-guide/logging-and-diagnostics/redirect_logs_to_file/redirect-logs-outputs.zip)
-{{< /tab >}}
-{{< /tabs >}}
-
-### Explanation
-
-1. `sys.stdout` is redirected to `log.txt` so any `print`-style writes (including the ones emitted by `ConsoleLogger`) land in the file.
-2. `ViewerSettings` is instantiated with `logger` set to a fresh `ConsoleLogger` instance.
-3. A `Viewer` object is created with the configured settings and performs rendering — trace messages are captured in the file instead of the terminal.
-4. `sys.stdout` is restored in the `finally` block so subsequent `print` calls continue to go to the terminal.
-
-Prefer `FileLogger` (Example 2) for new code — it avoids the global `sys.stdout` mutation. Use the redirection approach only when you need `ConsoleLogger` output to flow into an existing stdout-based pipeline.

@@ -10,7 +10,7 @@ hideChildren: False
 ---
 The [PngViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pngviewoptions) and [JpgViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/jpgviewoptions) classes implement the [IMaxSizeOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/imaxsizeoptions) interface that contains properties for size limits:
 
-{{< tabs "example2">}}
+{{< tabs "image-size-properties">}}
 {{< tab "C#" >}}
 ```csharp
 /// <summary>
@@ -63,7 +63,7 @@ To set the ImageMaxWidth/ImageMaxHeight options, follow these steps:
 
 The following code snippet shows how to set the output image size limits:
 
-{{< tabs "example1">}}
+{{< tabs "limit-image-size-in-png-and-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -106,5 +106,16 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.jpg" >}}
+{{< tab-text >}}
+`sample.jpg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/set-image-size-limits-when-rendering-to-png-jpg/sample.jpg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "result_1.jpg" >}}  
+```text
+Binary file (JPG, 87 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/set-image-size-limits-when-rendering-to-png-jpg/LimitImageSizeInPngAndJpg/result_1.jpg)
 {{< /tab >}}
 {{< /tabs >}}

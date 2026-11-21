@@ -7,6 +7,7 @@ description: "Learn how to minify HTML and CSS when rendering of documents into 
 keywords: minify HTML, HTML, CSS 
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
+toc: True
 ---
 
 When you are looking for ways to optimize the rendering of documents to HTML, one of the solutions is the compression of the output content (HTML, CSS, and SVG). This is suitable if you provide your content from the web server over the Internet. The less the user has to download, the faster he accesses the rendered document.
@@ -49,7 +50,7 @@ The [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewe
 
 The following code snippet shows how to enable minification:
 
-{{< tabs "example1">}}
+{{< tabs "minify-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -86,6 +87,21 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-html/minify-html/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "minify-html.zip" >}}  
+```text
+p_1.html (228 KB)
+p_2.html (109 KB)
+p_3.html (141 KB)
+p_4.html (884 KB)
+p_5.html (86 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/minify-html/MinifyHtml/minify-html.zip)
 {{< /tab >}}
 {{< /tabs >}}
 

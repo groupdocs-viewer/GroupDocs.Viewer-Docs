@@ -26,7 +26,7 @@ To protect a PDF document, follow these steps:
 
 The following code snippet shows how to protect the output PDF document:
 
-{{< tabs "example1">}}
+{{< tabs "protect-pdf-document">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer.Options;
@@ -75,5 +75,16 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/protect-pdf-document/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 722 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/protect-pdf-document/ProtectPdfDocument/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}

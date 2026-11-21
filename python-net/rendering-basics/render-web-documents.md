@@ -58,15 +58,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "optimized_for_web.pdf" >}}  
 ```text
-Binary file (PDF, 47 KB)
+Binary file (PDF, 46 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-web-documents/render_web_to_pdf/optimized_for_web.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a web file to PDF](/viewer/python-net/images/rendering-basics/render-web-documents/render-web-to-pdf.png)
 
 ## Render web documents as PNG
 
@@ -83,7 +79,7 @@ def render_web_to_png():
     with Viewer("groupdocs-documentation.mhtml") as viewer:
         # Convert the web file to PNG.
         # {0} is replaced with the page numbers in the output image names.
-        viewOptions = PngViewOptions("render_web_to_png/optimized_for_web_{0}.pdf")
+        viewOptions = PngViewOptions("render_web_to_png/web_page_{0}.png")
         # Set width and height.
         viewOptions.width = 950
         viewOptions.height = 800
@@ -100,17 +96,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-web-to-png-outputs.zip" >}}  
 ```text
-render_web_to_png/optimized_for_web_1.pdf (111 KB)
-render_web_to_png/optimized_for_web_2.pdf (195 KB)
-render_web_to_png/optimized_for_web_3.pdf (24 KB)
+render_web_to_png/web_page_1.png (65 KB)
+render_web_to_png/web_page_2.png (62 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-web-documents/render_web_to_png/render-web-to-png-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a web file to PNG](/viewer/python-net/images/rendering-basics/render-web-documents/render-web-to-png.png)
 
 ## Render web documents as JPEG
 
@@ -144,9 +135,8 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-web-to-jpg-outputs.zip" >}}  
 ```text
-render_web_to_jpg/web_to_jpg_1.jpg (95 KB)
-render_web_to_jpg/web_to_jpg_2.jpg (183 KB)
-render_web_to_jpg/web_to_jpg_3.jpg (31 KB)
+render_web_to_jpg/web_to_jpg_1.jpg (57 KB)
+render_web_to_jpg/web_to_jpg_2.jpg (50 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-web-documents/render_web_to_jpg/render-web-to-jpg-outputs.zip)
 {{< /tab >}}
@@ -203,10 +193,6 @@ render_chm_to_html/chm_result_107.html (75 KB)
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates the result:
-
-![Render a web file to HTML](/viewer/python-net/images/rendering-basics/render-web-documents/render-chm-to-html.png)
-
 ### Create an HTML file with external resources
 
 If you want to store an HTML file and additional resource files (such as fonts, images, and stylesheets) separately, call the [HtmlViewOptions.for_external_resources](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/htmlviewoptions/#methods) method and pass the following parameters:
@@ -226,7 +212,8 @@ def render_chm_to_html_external():
     with Viewer("sample.chm") as viewer:
         # Convert the CHM file to HTML.
         # Specify the output file names and location of external resources.
-        viewOptions = HtmlViewOptions.for_external_resources("render_chm_to_html_external/pdf_page_{0}.html", "render_chm_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_chm_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        # The resource URL is relative to the HTML file.
+        viewOptions = HtmlViewOptions.for_external_resources("render_chm_to_html_external/pdf_page_{0}.html", "render_chm_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":

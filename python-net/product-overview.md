@@ -58,6 +58,11 @@ if __name__ == "__main__":
     quick_example()
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/product-overview/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
 {{< tab "render_with_options.py" >}}
 ```python
 from groupdocs.viewer import Viewer
@@ -79,9 +84,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "quick-outputs.zip" >}}  
 ```text
-page_1.html (317 KB)
-page_2.html (149 KB)
-page_3.html (113 KB)
+page_1.html (253 KB)
+page_2.html (110 KB)
+page_3.html (148 KB)
+page_4.html (1001 KB)
+page_5.html (86 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/product-overview/quick_example/quick-outputs.zip)
 {{< /tab >}}

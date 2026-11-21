@@ -58,14 +58,14 @@ The `HtmlViewOptions` class properties allow you to control the conversion proce
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-cad-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("sample.dwg"))
 {
     // Create an HTML file for the drawing.
     // Specify the HTML file name.
@@ -82,7 +82,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+        Using viewer As Viewer = New Viewer("sample.dwg")
             ' Create an HTML file for the drawing.
             ' Specify the HTML file name.
             Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
@@ -92,11 +92,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.html" >}}  
+```text
+HTML file (440 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderCadToHtml/output.html)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a CAD file to HTML](/viewer/net/images/rendering-basics/render-cad-documents/render-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -106,14 +113,14 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-cad-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("sample.dwg"))
 {
     // Create an HTML file for the drawing.
     // Specify the HTML file name and location of external resources.
@@ -131,7 +138,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+        Using viewer As Viewer = New Viewer("sample.dwg")
             ' Create an HTML file for the drawing.
             ' Specify the HTML file name and location of external resources.
             ' {0} is replaced with the resource name.
@@ -142,24 +149,34 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-cad-to-html-external.zip" >}}  
+```text
+output.html (334 bytes)
+output/resource_1 (446 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderCadToHtmlExternal/render-cad-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-cad-documents/render-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ## Render CAD drawings as PDF
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a CAD file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-cad-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("sample.dwg"))
 {
     // Create a PDF file for the drawing.
     // Specify the PDF file name.
@@ -176,7 +193,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+        Using viewer As Viewer = New Viewer("sample.dwg")
             ' Create a PDF file for the drawing.
             ' Specify the PDF file name.
             Dim viewOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
@@ -186,24 +203,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 97 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderCadToPdf/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a CAD file to PDF](/viewer/net/images/rendering-basics/render-cad-documents/render-cad-to-pdf.png)
 
 ## Render CAD drawings as PNG
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a CAD file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-cad-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("sample.dwg"))
 {
     // Create a PNG image for the drawing.
     PngViewOptions viewOptions = new PngViewOptions("output.png");
@@ -222,7 +246,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+        Using viewer As Viewer = New Viewer("sample.dwg")
             ' Create a PNG image for the drawing.
             Dim viewOptions As PngViewOptions = New PngViewOptions("output.png")
             ' Set width and height.
@@ -234,24 +258,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.png" >}}  
+```text
+Binary file (PNG, 99 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderCadToPng/output.png)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a CAD file to PNG](/viewer/net/images/rendering-basics/render-cad-documents/render-cad-to-png-image.png)
 
 ## Render CAD drawings as JPEG
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a CAD file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-cad-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("sample.dwg"))
 {
     // Create a JPG image for the drawing.
     JpgViewOptions viewOptions = new JpgViewOptions("output.jpg");
@@ -270,7 +301,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+        Using viewer As Viewer = New Viewer("sample.dwg")
             ' Create a JPG image for the drawing.
             Dim viewOptions As JpgViewOptions = New JpgViewOptions("output.jpg")
             ' Set width and height.
@@ -282,6 +313,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.jpg" >}}  
+```text
+Binary file (JPG, 123 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderCadToJpg/output.jpg)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Get information about existing layouts and layers
@@ -292,7 +334,7 @@ Follow the steps below to obtain information about layouts and layers contained 
 2. Call the [Viewer.GetViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [CadViewInfo](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/cadviewinfo) type.
 3. Use the [CadViewInfo.Layouts](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/cadviewinfo/properties/layouts) and [CadViewInfo.Layers](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/cadviewinfo/properties/layers) properties to obtain the lists of layouts and layers in the CAD file.
 
-{{< tabs "example6">}}
+{{< tabs "get-cad-info">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -301,7 +343,7 @@ using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
 // ...
 
-using (Viewer viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("sample.dwg"))
 {
     ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForHtmlView();
     // Enable this option to see the list of all layouts contained in the CAD file.
@@ -337,7 +379,7 @@ Imports GroupDocs.Viewer.Results
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+        Using viewer As Viewer = New Viewer("sample.dwg")
             Dim viewInfoOptions As ViewInfoOptions = ViewInfoOptions.ForHtmlView()
             ' Enable this option to see the list of all layouts contained in the CAD file.
             viewInfoOptions.CadOptions.RenderLayouts = True
@@ -365,11 +407,28 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-cad-info.txt" >}}  
+```text
+File type: AutoCAD Drawing Database File (.dwg)
+The number of pages: 1
+The drawing contains the following layout(s):
+Model
+The drawing contains the following layer(s):
+0 (visible)
+WALLS (visible)
+OFFICE (visible)
+TEXT (visible)
+COLD (visible)
+[TRUNCATED]
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/GetCadInfo/get-cad-info.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![Get information about a CAD file](/viewer/net/images/rendering-basics/render-cad-documents/retrieve-cad-file-information.png)
 
 ## Render all or specific layouts
 
@@ -384,14 +443,14 @@ Each layout is rendered on a separate page.
 
 The following example renders all layouts when converting a CAD drawing to PDF:
 
-{{< tabs "example7">}}
+{{< tabs "render-all-layouts">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("sample.dwg"))
+using (Viewer viewer = new Viewer("sample.dxf"))
 {
    // Convert the document to PDF.
    PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
@@ -409,7 +468,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("sample.dwg")
+        Using viewer As Viewer = New Viewer("sample.dxf")
             ' Convert the document to PDF.
             Dim viewOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
             ' Render the Model and all non-empty paper space layouts. 
@@ -420,25 +479,36 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.dxf" >}}
+{{< tab-text >}}
+`sample.dxf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dxf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 330 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderAllLayouts/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 To render a specific layout, assign the layout name to the [CadOptions.LayoutName](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/cadoptions/properties/layoutname) property of a target view.
 
-{{< tabs "example8">}}
+{{< tabs "render-specific-layout">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("sample.dwg"))
+using (Viewer viewer = new Viewer("sample.dxf"))
 {
    // Convert the document to PDF.
    PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
    // Specify the name of the layout to render.
    // If the specified layout is not found,
    // an exception occurs.
-   viewOptions.CadOptions.LayoutName = "Layout1";
+   viewOptions.CadOptions.LayoutName = "Mezzanine";
    viewer.View(viewOptions);
 }
 ```
@@ -451,18 +521,29 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("sample.dwg")
+        Using viewer As Viewer = New Viewer("sample.dxf")
             ' Convert the document to PDF.
             Dim viewOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
             ' Specify the name of the layout to render.
             ' If the specified layout is not found,
             ' an exception occurs.
-            viewOptions.CadOptions.LayoutName = "Layout1"
+            viewOptions.CadOptions.LayoutName = "Mezzanine"
             viewer.View(viewOptions)
         End Using
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.dxf" >}}
+{{< tab-text >}}
+`sample.dxf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dxf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 100 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderSpecificLayout/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -490,7 +571,7 @@ When you convert a CAD drawing to HTML, PDF, or image format, GroupDocs.Viewer r
 
 The following example renders layers with walls and furniture to PDF:
 
-{{< tabs "example9">}}
+{{< tabs "render-specific-layers">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -499,16 +580,15 @@ using GroupDocs.Viewer.Results;
 using System.Collections.Generic;
 // ...
 
-using (Viewer viewer = new Viewer("HousePlan.dwg"))
+using (Viewer viewer = new Viewer("sample.dwg"))
 {
     // Convert the document to PDF.
     PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
     // Specify a list of layers to display.
     viewOptions.CadOptions.Layers = new List<Layer>
     {
-        new Layer("Base"),
-        new Layer("Walls"),
-        new Layer("Furniture")
+        new Layer("WALLS"),
+        new Layer("RACKS")
     };
     viewer.View(viewOptions);
 }
@@ -524,14 +604,13 @@ Imports System.Collections.Generic
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("HousePlan.dwg")
+        Using viewer As Viewer = New Viewer("sample.dwg")
             ' Convert the document to PDF.
             Dim viewOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
             ' Specify a list of layers to display.
             viewOptions.CadOptions.Layers = New List(Of Layer) From {
-                New Layer("Base"),
-                New Layer("Walls"),
-                New Layer("Furniture")
+                New Layer("WALLS"),
+                New Layer("RACKS")
                 }
             viewer.View(viewOptions)
         End Using
@@ -539,11 +618,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 3 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderSpecificLayers/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The image below illustrates the result.
-
-![Render specific CAD layers](/viewer/net/images/rendering-basics/render-cad-documents/render-specific-layers.png)
 
 ## CAD drawings rendering demo
 

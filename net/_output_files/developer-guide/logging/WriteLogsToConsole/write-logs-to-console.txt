@@ -1,0 +1,17 @@
+[TRACE] Rendering into HTML with embedded resources.
+[TRACE] Detecting file type by extension.
+[TRACE] File type detected successfully: Microsoft Word Open XML Document.
+[TRACE] Opening document.
+[TRACE] Document is loaded.
+[TRACE] Applying options.
+[TRACE] Converting page 1.
+[TRACE] Page 1 conversion completed.
+[TRACE] Converting page 2.
+[TRACE] Page 2 conversion completed.
+[TRACE] Converting page 3.
+[TRACE] Page 3 conversion completed.
+[TRACE] Converting page 4.
+[TRACE] Page 4 conversion completed.
+[TRACE] Converting page 5.
+[TRACE] Page 5 conversion completed.
+[TRACE] Releasing resources.

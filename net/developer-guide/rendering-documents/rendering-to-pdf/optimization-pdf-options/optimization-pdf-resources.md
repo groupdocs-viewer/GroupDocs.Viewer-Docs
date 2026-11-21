@@ -14,7 +14,7 @@ Resource optimization allows you to reduce the size of the output PDF file. Whil
 
 The following code snippet shows how to optimize the PDF file by default:
 
-{{< tabs "Example1">}}
+{{< tabs "optimize-pdf-resources">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -47,5 +47,16 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-resources/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 719 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-resources/OptimizePdfResources/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}

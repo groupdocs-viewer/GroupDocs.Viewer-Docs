@@ -1,0 +1,9 @@
+Pages count: 4
+Page: 1; Width: 595, pixels
+Page: 1; Height: 842, pixels
+Page: 2; Width: 595, pixels
+Page: 2; Height: 842, pixels
+Page: 3; Width: 595, pixels
+Page: 3; Height: 842, pixels
+Page: 4; Width: 595, pixels
+Page: 4; Height: 842, pixels

@@ -1,0 +1,116 @@
+.p4-b9b977ff00f- sup {
+	vertical-align: baseline;
+	position: relative;
+	top: -0.4em;
+}
+.p4-b9b977ff00f- sub {
+	vertical-align: baseline;
+	position: relative;
+	top: 0.4em;
+}
+.p4-b9b977ff00f- a:link {text-decoration:none;}
+.p4-b9b977ff00f- a:visited {text-decoration:none;}
+@media screen and (min-device-pixel-ratio:0), (-webkit-min-device-pixel-ratio:0), (min--moz-device-pixel-ratio: 0) {.p4-b9b977ff00f-view{ font-size:10em; transform:scale(0.1); -moz-transform:scale(0.1); -webkit-transform:scale(0.1); -moz-transform-origin:top left; -webkit-transform-origin:top left; } }
+.p4-b9b977ff00f-layer { }.p4-b9b977ff00f-ie { font-size: 1pt; }
+.p4-b9b977ff00f-ie body { font-size: 12em; }
+@media print{.p4-b9b977ff00f-view {font-size:1em; transform:scale(1);}}
+.p4-b9b977ff00f-grlink { position:relative;width:100%;height:100%;z-index:1000000; }
+.p4-b9b977ff00f-01 {
+	position: absolute;
+	white-space: nowrap;
+}
+.p4-b9b977ff00f-02 {
+	font-size: 1em;
+	line-height: 0.0em;
+	width: 49.58333em;
+	height: 70.16666em;
+	border-style: none;
+	display: block;
+	margin: 0em;
+}
+
+@supports(-ms-ime-align:auto) { .p4-b9b977ff00f-02 {overflow: hidden;}}
+.p4-b9b977ff00f-03 {
+	position: relative;
+}
+.p4-b9b977ff00f-04 {
+	position: absolute;
+	pointer-events: none;
+	clip: rect(-0.041667em,49.625em,20.20833em,-0.041667em);
+	width: 100%;
+}
+.p4-b9b977ff00f-05 {
+	position: relative;
+	width: 49.58333em;
+}
+.p4-b9b977ff00f-06 {
+	height: 7.016666em;
+}
+.p4-b9b977ff00f-ie .p4-b9b977ff00f-06 {
+	height: 70.16666em;
+}
+@font-face {
+	font-family:"PFOLRI+Arial Bold";
+	src:url("page_4/resource_4_f.woff") format("woff");
+}
+.p4-b9b977ff00f-07 {
+	font-size: 1.666667em;
+	font-family: "PFOLRI+Arial Bold";
+	color: #FFFFFF;
+}
+.p4-b9b977ff00f-08 {
+	line-height: 1.117188em;
+}
+.p4-b9b977ff00f-09 {
+	letter-spacing: 0em;
+}
+
+.p4-b9b977ff00f-ie .p4-b9b977ff00f-09 {
+	letter-spacing: 0px;
+}
+@font-face {
+	font-family:"VTILTB+Arial";
+	src:url("page_4/resource_4_f1.woff") format("woff");
+}
+.p4-b9b977ff00f-10 {
+	font-size: 0.833333em;
+	font-family: "VTILTB+Arial";
+	color: #E9D8B4;
+}
+.p4-b9b977ff00f-11 {
+	font-size: 0.833333em;
+	font-family: "PFOLRI+Arial Bold";
+	color: #FFFFFF;
+}
+.p4-b9b977ff00f-12 {
+	font-size: 0.833333em;
+	font-family: "VTILTB+Arial";
+	color: #23303D;
+}
+.p4-b9b977ff00f-13 {
+	font-size: 1em;
+	font-family: "VTILTB+Arial";
+	color: #23303D;
+}
+@font-face {
+	font-family:"DNCPEI+MS Gothic";
+	src:url("page_4/resource_4_f2.woff") format("woff");
+}
+.p4-b9b977ff00f-14 {
+	font-size: 1em;
+	font-family: "DNCPEI+MS Gothic";
+	color: #23303D;
+}
+.p4-b9b977ff00f-15 {
+	line-height: 1em;
+}
+.p4-b9b977ff00f-16 {
+	font-size: 0.916667em;
+	font-family: "VTILTB+Arial";
+	color: #2E8B7A;
+}
+.p4-b9b977ff00f-17 {
+	font-size: 0.666667em;
+	font-family: "VTILTB+Arial";
+	color: #5E6B78;
+}

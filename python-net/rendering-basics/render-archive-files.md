@@ -73,72 +73,9 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "pdf_page_1.html" >}}  
 ```text
-﻿<HTML><HEAD><META charset="utf-8" /><META name="viewport" content="width=device-width, initial-scale=1.0" /><TITLE>documents.zip</TITLE><STYLE type="text/css">section.files-tree { 
-	display: flex; 
-	flex-direction: column; 
-	padding: 2rem 2rem 2rem 3rem; 
-}
-nav.folder-item>div.folder-title, div.file-item>div.file-title { 
-	display: flex; 
-	flex-direction: row; 
-	align-items: center; 
-	gap: 0.3rem; 
-[TRUNCATED]
+HTML file (73 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_to_html/pdf_page_1.html)
-{{< /tab >}}
-{{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an archive file to HTML](/viewer/python-net/images/rendering-basics/render-archive-files/render-archive-to-html-embedded-resources.png)
-
-### Specify the number of items to render
-
-GroupDocs.Viewer supports the [HtmlViewOptions.archive_options.items_per_page](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/archiveoptions/#properties) option that allows you to specify the number of archive items to display on each HTML page. The default property value is **16**.
-
-The following example demonstrates how to set this option in code:
-
-{{< tabs "example2">}}
-{{< tab "Python" >}}
-```python
-from groupdocs.viewer import Viewer
-from groupdocs.viewer.options import HtmlViewOptions
-
-def render_archive_with_items_per_page():
-    # Load archive file
-    with Viewer("documents.zip") as viewer:
-        # Create an HTML file for the top folder and each subfolder in the archive.
-        # {0} is replaced with the current page number in the output file name.
-        viewOptions = HtmlViewOptions.for_embedded_resources("render_archive_with_items_per_page/archive_with_items_per_page_{0}.html")
-        # Specify the number of items to display on each HTML page.
-        viewOptions.archive_options.items_per_page = 10
-        viewer.view(viewOptions)
-
-if __name__ == "__main__":
-    render_archive_with_items_per_page()
-```
-{{< /tab >}}
-{{< tab "documents.zip" >}}
-{{< tab-text >}}
-`documents.zip` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-archive-files/documents.zip) to download it.
-{{< /tab-text >}}
-{{< /tab >}}
-{{< tab "archive_with_items_per_page_1.html" >}}  
-```text
-﻿<HTML><HEAD><META charset="utf-8" /><META name="viewport" content="width=device-width, initial-scale=1.0" /><TITLE>documents.zip</TITLE><STYLE type="text/css">section.files-tree { 
-	display: flex; 
-	flex-direction: column; 
-	padding: 2rem 2rem 2rem 3rem; 
-}
-nav.folder-item>div.folder-title, div.file-item>div.file-title { 
-	display: flex; 
-	flex-direction: row; 
-	align-items: center; 
-	gap: 0.3rem; 
-[TRUNCATED]
-```
-[Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_with_items_per_page/archive_with_items_per_page_1.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -172,25 +109,13 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "archive_to_single_html.html" >}}  
 ```text
-﻿<HTML><HEAD><META charset="utf-8" /><META name="viewport" content="width=device-width, initial-scale=1.0" /><TITLE>documents.zip</TITLE><STYLE type="text/css">section.files-tree { 
-	display: flex; 
-	flex-direction: column; 
-	padding: 2rem 2rem 2rem 3rem; 
-}
-nav.folder-item>div.folder-title, div.file-item>div.file-title { 
-	display: flex; 
-	flex-direction: row; 
-	align-items: center; 
-	gap: 0.3rem; 
-[TRUNCATED]
+HTML file (73 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_to_single_html/archive_to_single_html.html)
 {{< /tab >}}
 {{< /tabs >}}
 
-The animation below demonstrates the result. You can navigate between the archive folders. Click on a particular folder to see its contents. To go backward, click the required folder name in the navigation bar at the top of the web page.
-
-![Navigate between folders in the archive](/viewer/python-net/images/rendering-basics/render-archive-files/navigate-between-archive-files.gif)
+You can navigate between the archive folders. Click on a particular folder to see its contents. To go backward, click the required folder name in the navigation bar at the top of the web page.
 
 ## Render archive files as PDF
 
@@ -220,15 +145,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "archive_content.pdf" >}}  
 ```text
-Binary file (PDF, 54 KB)
+Binary file (PDF, 81 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_to_pdf/archive_content.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an archive file to PDF](/viewer/python-net/images/rendering-basics/render-archive-files/render-archive-to-pdf.png)
 
 ## Render archive files as PNG
 
@@ -262,15 +183,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "archive_page_0_1.png" >}}  
 ```text
-Binary file (PNG, 19 KB)
+Binary file (PNG, 104 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_to_png/archive_page_0_1.png)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an archive file to PNG](/viewer/python-net/images/rendering-basics/render-archive-files/render-archive-to-png-image.png)
 
 ## Render archive files as JPEG
 
@@ -304,7 +221,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "archive_to_jpg_1.jpg" >}}  
 ```text
-Binary file (JPG, 22 KB)
+Binary file (JPG, 84 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_to_jpg/archive_to_jpg_1.jpg)
 {{< /tab >}}
@@ -331,7 +248,7 @@ def render_specific_archive_folder():
     with Viewer("documents.zip") as viewer:
         # Create an HTML file.
         viewOptions = HtmlViewOptions.for_embedded_resources("render_specific_archive_folder/specific_archive_folder.html")
-        viewOptions.archive_options.folder = "first_folder"
+        viewOptions.archive_options.folder = "Invoices"
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -345,17 +262,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "specific_archive_folder.html" >}}  
 ```text
-﻿<HTML><HEAD><META charset="utf-8" /><META name="viewport" content="width=device-width, initial-scale=1.0" /><TITLE>documents.zip</TITLE><STYLE type="text/css">section.files-tree { 
-	display: flex; 
-	flex-direction: column; 
-	padding: 2rem 2rem 2rem 3rem; 
-}
-nav.folder-item>div.folder-title, div.file-item>div.file-title { 
-	display: flex; 
-	flex-direction: row; 
-	align-items: center; 
-	gap: 0.3rem; 
-[TRUNCATED]
+HTML file (13 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_specific_archive_folder/specific_archive_folder.html)
 {{< /tab >}}
@@ -398,22 +305,8 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "archive_with_custom_filename_1.html" >}}  
 ```text
-﻿<HTML><HEAD><META charset="utf-8" /><META name="viewport" content="width=device-width, initial-scale=1.0" /><TITLE>Sample Files</TITLE><STYLE type="text/css">section.files-tree { 
-	display: flex; 
-	flex-direction: column; 
-	padding: 2rem 2rem 2rem 3rem; 
-}
-nav.folder-item>div.folder-title, div.file-item>div.file-title { 
-	display: flex; 
-	flex-direction: row; 
-	align-items: center; 
-	gap: 0.3rem; 
-[TRUNCATED]
+HTML file (73 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-archive-files/render_archive_with_custom_filename/archive_with_custom_filename_1.html)
 {{< /tab >}}
 {{< /tabs >}}
-
-The image below demonstrates the result.
-
-![Set a custom archive name](/viewer/python-net/images/rendering-basics/render-archive-files/set-archive-name.png)

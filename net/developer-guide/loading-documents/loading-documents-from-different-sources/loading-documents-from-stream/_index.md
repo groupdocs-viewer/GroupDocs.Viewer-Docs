@@ -16,7 +16,7 @@ To load a document from a stream, follow these steps:
 
 The following code snippet shows how to load a document from a stream:
 
-{{< tabs "example1">}}
+{{< tabs "load-document-from-stream">}}
 {{< tab "C#" >}}
 ```csharp
 using System.IO;
@@ -24,7 +24,7 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-Stream stream = GetStream("sample.docx"); // TODO: implement this method
+Stream stream = File.OpenRead("sample.docx");
 
 // Render a document from the stream.
 using (Viewer viewer = new Viewer(stream))
@@ -43,7 +43,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Dim stream As Stream = GetStream("sample.docx") ' TODO: implement this method
+        Dim stream As Stream = File.OpenRead("sample.docx")
     
         ' Render a document from the stream.
         Using viewer As Viewer = New Viewer(stream)
@@ -53,6 +53,21 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/loading-documents/loading-documents-from-different-sources/loading-documents-from-stream/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "load-document-from-stream.zip" >}}  
+```text
+p_1.html (228 KB)
+p_2.html (110 KB)
+p_3.html (142 KB)
+p_4.html (885 KB)
+p_5.html (86 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/loading-documents/loading-documents-from-different-sources/loading-documents-from-stream/_index/LoadDocumentFromStream/load-document-from-stream.zip)
 {{< /tab >}}
 {{< /tabs >}}
 

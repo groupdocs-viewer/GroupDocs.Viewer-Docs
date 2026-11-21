@@ -29,6 +29,8 @@ structuredData:
 
 The following C# example shows how to render a DOCX document to HTML with embedded resources:
 
+{{< tabs "render-docx-to-html">}}
+{{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -39,6 +41,23 @@ using (Viewer viewer = new Viewer("sample.docx"))
     viewer.View(HtmlViewOptions.ForEmbeddedResources("page_{0}.html"));
 }
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-docx-to-html.zip" >}}  
+```text
+page_1.html (228 KB)
+page_2.html (110 KB)
+page_3.html (142 KB)
+page_4.html (885 KB)
+page_5.html (86 KB)
+```
+[Download full output](/viewer/net/_output_files/_index/RenderDocxToHtml/render-docx-to-html.zip)
+{{< /tab >}}
+{{< /tabs >}}
 
 Starting with [version 26.8](https://releases.groupdocs.com/viewer/net/release-notes/2026/groupdocs-viewer-for-net-26-8-release-notes/), **GroupDocs.Viewer** is distributed as a NuGet metapackage. Install the **GroupDocs.Viewer** package and NuGet automatically restores the runtime package that matches your project's target framework, such as `net462`, `net6.0`, or `net6.0-windows`. See [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}) for details.
 

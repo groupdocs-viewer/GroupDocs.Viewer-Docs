@@ -48,20 +48,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "background_color.pdf" >}}  
 ```text
-Binary file (PDF, 3 KB)
+Binary file (PDF, 97 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/set_background_color/background_color.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Specify the background color for the output PDF file](/viewer/net/images/rendering-basics/render-cad-documents/set-background-color.png)
 
 ## Configure the output image size
 
@@ -84,7 +80,7 @@ def set_image_size():
     # Load CAD file
     with Viewer("sample.dwg") as viewer:
         # Convert the diagram to PNG.
-        png_options = PngViewOptions("set_image_size/image_with_size_limits.pdf")
+        png_options = PngViewOptions("set_image_size/image_with_size_limits.png")
         # Specify a scale factor.
         png_options.cad_options = CadOptions.for_rendering_by_scale_factor(0.5)      
         viewer.view(png_options)
@@ -95,14 +91,14 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "image_with_size_limits.pdf" >}}  
+{{< tab "image_with_size_limits.png" >}}  
 ```text
-Binary file (PDF, 12 KB)
+Binary file (PNG, 19 KB)
 ```
-[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/set_image_size/image_with_size_limits.pdf)
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/set_image_size/image_with_size_limits.png)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -110,7 +106,7 @@ When you render all layouts/sheets contained in a CAD file (the [CadOptions.rend
 
 ### Apply the PC3 file settings
 
-AutoCAD allows you to configure plotter settings and save them as a PC3 file (Plotter Configuration Version 3) for later use. With GroupDocs.Viewer, you can apply width and height values from a PC3 file to the output file when you convert your CAD drawing to HTML, PDF, or image format. Use the [CadOptions.pc_3_file](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property for a target view to specify a path to the PC3 file with required settings. The default location for PC3 files is "*C:\Users\\[Username]\\AppData\Roaming\Autodesk\AutoCAD [Version]\\[Version Code]\\[Language]\Plotters*".
+AutoCAD allows you to configure plotter settings and save them as a PC3 file (Plotter Configuration Version 3) for later use. With GroupDocs.Viewer, you can apply width and height values from a PC3 file to the output file when you convert your CAD drawing to HTML, PDF, or image format. Use the [CadOptions.pc3_file](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions/#properties) property for a target view to specify a path to the PC3 file with required settings. The default location for PC3 files is "*C:\Users\\[Username]\\AppData\Roaming\Autodesk\AutoCAD [Version]\\[Version Code]\\[Language]\Plotters*".
 
 {{< tabs "example3">}}
 {{< tab "Python">}}
@@ -124,7 +120,7 @@ def apply_pc3_file():
         # Convert the diagram to PDF.
         viewOptions = PdfViewOptions("apply_pc3_file/apply_pc3_file.pdf")
         # Specify a path to the PC3 file.
-        viewOptions.cad_options.pc_3_file = "small_page.pc3"
+        viewOptions.cad_options.pc3_file = "small_page.pc3"
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -133,17 +129,17 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "small_page.pc3" >}}
 {{< tab-text >}}
-`small_page.pc3` is the PC3 configuration file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/small_page.pc3) to download it.
+`small_page.pc3` is the PC3 configuration file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/small_page.pc3) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "apply_pc3_file.pdf" >}}  
 ```text
-Binary file (PDF, 3 KB)
+Binary file (PDF, 97 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/apply_pc3_file/apply_pc3_file.pdf)
 {{< /tab >}}
@@ -204,15 +200,15 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "split-drawing-into-tiles-outputs.zip" >}}  
 ```text
-split_drawing_into_tiles/drawing_into_tiles_1.html (3 KB)
-split_drawing_into_tiles/drawing_into_tiles_2.html (6 KB)
-split_drawing_into_tiles/drawing_into_tiles_3.html (3 KB)
-split_drawing_into_tiles/drawing_into_tiles_4.html (3 KB)
+split_drawing_into_tiles/drawing_into_tiles_1.html (104 KB)
+split_drawing_into_tiles/drawing_into_tiles_2.html (113 KB)
+split_drawing_into_tiles/drawing_into_tiles_3.html (61 KB)
+split_drawing_into_tiles/drawing_into_tiles_4.html (171 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/split_drawing_into_tiles/split-drawing-into-tiles-outputs.zip)
 {{< /tab >}}
@@ -229,7 +225,6 @@ By default the GroupDocs.Viewer converts and renders all documents within CAD fo
 Starting from this version 24.9 the GroupDocs.Viewer introduces a new public property within the [`CadOptions`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions) class — the `enable_performance_conversion_mode` boolean flag. By default it is set to `False` - the GroupDocs.Viewer behaves as in previous versions, preserving the maximum quality. But when setting its value to `True`, then the performance-oriented conversion mode is enabled, which leads to significantly lesser conversion time as well as lesser byte size of the output document.
 
 Enabling this mode is pretty simple — just create an instance of the [`CadOptions`](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/cadoptions) class by using [any of the static # described above](#ctors), and then set the value for the `enable_performance_conversion_mode` property. Example is below:
-
 
 {{< tabs "example5">}}
 {{< tab "Python">}}
@@ -252,24 +247,14 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "sample.dwg" >}}
 {{< tab-text >}}
-`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/sample.dwg) to download it.
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "Output-Page#1.html" >}}  
 ```text
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta charset="utf-8" />
-    <title>Page-1</title>
-</head>
-<body>
-    <div id="main_image">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1479195223_1580" width="1000" height="884.615"><g transform="matrix(37.982 0 0 -37.982 -457.044 1232.476)"><g><path d="M12.159 13.43L17.76 13.43L17.76 9.219L12.159 9.219L12.159 13.43" stroke="#00F
-[TRUNCATED]
+HTML file (222 KB)
 ```
-[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/enable_performance_mode/Output-Page#1.html)
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/enable_performance_mode/Output-Page%231.html)
 {{< /tab >}}
 {{< /tabs >}}
 

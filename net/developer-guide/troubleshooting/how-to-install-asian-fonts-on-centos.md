@@ -7,6 +7,7 @@ description: "This article will guide you through the installation of Asian Font
 keywords: CentOS, Asian Fonts
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
+toc: True
 ---
 This describes the installation of the Asian Fonts on CentOS 8/7/6.
 

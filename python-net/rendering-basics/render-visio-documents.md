@@ -72,17 +72,13 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-visio-to-html-outputs.zip" >}}  
 ```text
-render_visio_to_html/pdf_page_1.html (4836 KB)
-render_visio_to_html/pdf_page_2.html (383 KB)
-render_visio_to_html/pdf_page_3.html (370 KB)
+render_visio_to_html/pdf_page_1.html (6 KB)
+render_visio_to_html/pdf_page_2.html (11 KB)
+render_visio_to_html/pdf_page_3.html (9 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_to_html/render-visio-to-html-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Visio file to HTML](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -104,8 +100,9 @@ def render_visio_to_html_external():
         # Create an HTML file for each drawing page.
         # Specify the HTML file names and location of external resources.
         # {0} and {1} are replaced with the current page number and resource name, respectively.
+        # The resource URL is relative to the HTML file.
         viewOptions = HtmlViewOptions.for_external_resources(
-            "render_visio_to_html_external/pdf_page_{0}.html", "render_visio_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_visio_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+            "render_visio_to_html_external/pdf_page_{0}.html", "render_visio_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -119,20 +116,18 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-visio-to-html-external-outputs.zip" >}}  
 ```text
-render_visio_to_html_external/pdf_page_1.html (309 bytes)
-render_visio_to_html_external/pdf_page_1/resource_1_g.svg (4836 KB)
-render_visio_to_html_external/pdf_page_2.html (309 bytes)
-render_visio_to_html_external/pdf_page_2/resource_2_g.svg (383 KB)
-render_visio_to_html_external/pdf_page_3.html (309 bytes)
-render_visio_to_html_external/pdf_page_3/resource_3_g.svg (370 KB)
+render_visio_to_html_external/pdf_page_1.html (279 bytes)
+render_visio_to_html_external/pdf_page_1/resource_1_g.svg (6 KB)
+render_visio_to_html_external/pdf_page_2.html (279 bytes)
+render_visio_to_html_external/pdf_page_2/resource_2_g.svg (11 KB)
+render_visio_to_html_external/pdf_page_3.html (279 bytes)
+render_visio_to_html_external/pdf_page_3/resource_3_g.svg (9 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_to_html_external/render-visio-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ## Render Visio files as PDF
 
@@ -163,15 +158,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "visio_diagram.pdf" >}}  
 ```text
-Binary file (PDF, 212 KB)
+Binary file (PDF, 85 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_to_pdf/visio_diagram.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Visio file to PDF](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-pdf.png)
 
 ## Render Visio files as PNG
 
@@ -205,16 +196,13 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-visio-to-png-outputs.zip" >}}  
 ```text
-render_visio_to_png/visio_page_0_1.png (14 KB)
-render_visio_to_png/visio_page_0_2.png (66 KB)
-render_visio_to_png/visio_page_0_3.png (43 KB)
+render_visio_to_png/visio_page_0_1.png (45 KB)
+render_visio_to_png/visio_page_0_2.png (60 KB)
+render_visio_to_png/visio_page_0_3.png (57 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_to_png/render-visio-to-png-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-The following image demonstrates the result:
-
-![Render a Visio file to PNG](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-png-image.png)
 
 ## Render Visio files as JPEG
 
@@ -248,9 +236,9 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-visio-to-jpg-outputs.zip" >}}  
 ```text
-render_visio_to_jpg/visio_to_jpg_1.jpg (24 KB)
-render_visio_to_jpg/visio_to_jpg_2.jpg (71 KB)
-render_visio_to_jpg/visio_to_jpg_3.jpg (50 KB)
+render_visio_to_jpg/visio_to_jpg_1.jpg (34 KB)
+render_visio_to_jpg/visio_to_jpg_2.jpg (44 KB)
+render_visio_to_jpg/visio_to_jpg_3.jpg (42 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_to_jpg/render-visio-to-jpg-outputs.zip)
 {{< /tab >}}
@@ -299,12 +287,8 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "visio_shapes_only.pdf" >}}  
 ```text
-Binary file (PDF, 236 KB)
+Binary file (PDF, 27 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_shapes_only/visio_shapes_only.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The image below demonstrates the result.
-
-![Render master shapes only](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-shapes.png)

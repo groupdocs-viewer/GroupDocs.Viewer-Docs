@@ -24,7 +24,7 @@ from groupdocs.viewer.options import PdfViewOptions, PdfOptimizationOptions
 
 def remove_annotations():
     # Load document
-    with Viewer("sample.docx") as viewer:
+    with Viewer("order_form.pdf") as viewer:
         viewOptions = PdfViewOptions("remove_annotations/without_annotations.pdf")
         viewOptions.pdf_optimization_options = PdfOptimizationOptions()
         viewOptions.pdf_optimization_options.remove_annotations = True
@@ -35,19 +35,15 @@ if __name__ == "__main__":
     remove_annotations()
 ```
 {{< /tab >}}
-{{< tab "sample.docx" >}}
+{{< tab "order_form.pdf" >}}
 {{< tab-text >}}
-`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-annotations/sample.docx) to download it.
+`order_form.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-annotations/order_form.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "without_annotations.pdf" >}}  
 ```text
-Binary file (PDF, 234 KB)
+Binary file (PDF, 207 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-annotations/remove_annotations/without_annotations.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Remove annotations](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-remove-annotations.png)

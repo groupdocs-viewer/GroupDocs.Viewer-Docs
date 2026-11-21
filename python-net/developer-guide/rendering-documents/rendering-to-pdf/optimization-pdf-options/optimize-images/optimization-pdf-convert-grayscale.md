@@ -42,12 +42,8 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "grayscale_output.pdf" >}}  
 ```text
-Binary file (PDF, 238 KB)
+Binary file (PDF, 1.3 MB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-convert-grayscale/convert_to_grayscale/grayscale_output.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Convert to grayscale](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-convert-grayscale.png)

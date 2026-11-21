@@ -78,25 +78,13 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-excel-to-html-outputs.zip" >}}  
 ```text
-render_excel_to_html/pdf_page_1.html (51 KB)
-render_excel_to_html/pdf_page_10.html (49 KB)
-render_excel_to_html/pdf_page_11.html (48 KB)
-render_excel_to_html/pdf_page_12.html (46 KB)
-render_excel_to_html/pdf_page_13.html (50 KB)
-render_excel_to_html/pdf_page_14.html (33 KB)
-render_excel_to_html/pdf_page_15.html (51 KB)
-render_excel_to_html/pdf_page_16.html (49 KB)
-render_excel_to_html/pdf_page_17.html (48 KB)
-render_excel_to_html/pdf_page_18.html (47 KB)
-[TRUNCATED] (42 files total)
+render_excel_to_html/pdf_page_1.html (77 KB)
+render_excel_to_html/pdf_page_2.html (104 KB)
+render_excel_to_html/pdf_page_3.html (74 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_html/render-excel-to-html-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Excel file to HTML](/viewer/python-net/images/rendering-basics/render-spreadsheets/convert-excel-to-html.png)
 
 #### Convert an Apple Numbers spreadsheet to HTML
 
@@ -125,17 +113,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-numbers-to-html-outputs.zip" >}}  
 ```text
-render_numbers_to_html/pdf_page_1.html (41 KB)
-render_numbers_to_html/pdf_page_2.html (34 KB)
-render_numbers_to_html/pdf_page_3.html (25 KB)
+render_numbers_to_html/pdf_page_1.html (72 KB)
+render_numbers_to_html/pdf_page_2.html (40 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_numbers_to_html/render-numbers-to-html-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Apple Numbers spreadsheet to HTML](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-html.png)
 
 ### Create an HTML file with external resources
 
@@ -159,7 +142,8 @@ def render_excel_to_html_external():
         # Convert the spreadsheet to HTML.
         # Specify the HTML file names and location of external resources.
         # {0} and {1} are replaced with the current page number and resource name, respectively.
-        viewOptions = HtmlViewOptions.for_external_resources("render_excel_to_html_external/pdf_page_{0}.html", "render_excel_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_excel_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        # The resource URL is relative to the HTML file.
+        viewOptions = HtmlViewOptions.for_external_resources("render_excel_to_html_external/pdf_page_{0}.html", "render_excel_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -173,17 +157,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-excel-to-html-external-outputs.zip" >}}  
 ```text
-render_excel_to_html_external/pdf_page_1.html (17 KB)
-render_excel_to_html_external/pdf_page_10.html (25 KB)
-render_excel_to_html_external/pdf_page_10/resource_10_s.css (3 KB)
-render_excel_to_html_external/pdf_page_11.html (25 KB)
-render_excel_to_html_external/pdf_page_11/resource_11_s.css (3 KB)
-render_excel_to_html_external/pdf_page_12.html (25 KB)
-render_excel_to_html_external/pdf_page_12/resource_12_s.css (3 KB)
-render_excel_to_html_external/pdf_page_13.html (25 KB)
-render_excel_to_html_external/pdf_page_13/resource_13_s.css (3 KB)
-render_excel_to_html_external/pdf_page_14.html (11 KB)
-[TRUNCATED] (84 files total)
+render_excel_to_html_external/pdf_page_1.html (8 KB)
+render_excel_to_html_external/pdf_page_1/resource_1_s.css (8 KB)
+render_excel_to_html_external/pdf_page_2.html (32 KB)
+render_excel_to_html_external/pdf_page_2/resource_2_s.css (8 KB)
+render_excel_to_html_external/pdf_page_3.html (9 KB)
+render_excel_to_html_external/pdf_page_3/resource_3_s.css (8 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_html_external/render-excel-to-html-external-outputs.zip)
 {{< /tab >}}
@@ -203,7 +182,8 @@ def render_numbers_to_html_external():
         # Convert the spreadsheet to HTML.
         # Specify the HTML file names and location of external resources.
         # {0} and {1} are replaced with the current page number and resource name, respectively.
-        viewOptions = HtmlViewOptions.for_external_resources("render_numbers_to_html_external/pdf_page_{0}.html", "render_numbers_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_numbers_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        # The resource URL is relative to the HTML file.
+        viewOptions = HtmlViewOptions.for_external_resources("render_numbers_to_html_external/pdf_page_{0}.html", "render_numbers_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -217,21 +197,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-numbers-to-html-external-outputs.zip" >}}  
 ```text
-render_numbers_to_html_external/pdf_page_1.html (15 KB)
+render_numbers_to_html_external/pdf_page_1.html (12 KB)
 render_numbers_to_html_external/pdf_page_1/resource_1_s.css (2 KB)
-render_numbers_to_html_external/pdf_page_2.html (15 KB)
+render_numbers_to_html_external/pdf_page_2.html (4 KB)
 render_numbers_to_html_external/pdf_page_2/resource_2_s.css (2 KB)
-render_numbers_to_html_external/pdf_page_3.html (6 KB)
-render_numbers_to_html_external/pdf_page_3/resource_3_s.css (2 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_numbers_to_html_external/render-numbers-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-excel-to-html-external-resources.png)
-
+External resources are placed in a separate folder.
 
 ### Convert all Excel worksheets to one HTML file
 
@@ -263,17 +238,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "page.html" >}}  
 ```text
-﻿<!DOCTYPE html><html style="width:100%;height:100%;padding:0;margin:0"><head><meta name="viewport" content="width=device-width,initial-scale=1"><style> .__gdv_ws_container { height: calc(100vh - 35px) } .__gdv_ws_content { display: none; } .__gdv_ws_content_active { display: flex !important; } .__gdv_ws_content>iframe { flex: 1; height: calc(100vh - 35px); border: none; } .__gdv_ws_link_container { display: flex; width: 100%; background-color: #e6e6e6; position: absolute; bottom: 0; } .__gdv_ws
-[TRUNCATED]
+HTML file (72 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_single_html/page.html)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Convert all Excel worksheets to one HTML file](/viewer/python-net/images/rendering-basics/render-spreadsheets/convert-all-excel-worksheets-to-html.png)
-
 
 ## Render spreadsheets as PDF
 
@@ -305,15 +274,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "spreadsheet.pdf" >}}  
 ```text
-Binary file (PDF, 461 KB)
+Binary file (PDF, 80 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_pdf/spreadsheet.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Excel file to PDF](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-excel-to-pdf.png)
 
 ### Convert an Apple Numbers spreadsheet to PDF
 
@@ -341,15 +306,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "spreadsheet.pdf" >}}  
 ```text
-Binary file (PDF, 26 KB)
+Binary file (PDF, 22 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_numbers_to_pdf/spreadsheet.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Apple Numbers spreadsheet to PDF](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-pdf.png)
 
 ## Render spreadsheets as PNG
 
@@ -385,24 +346,13 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-excel-to-png-outputs.zip" >}}  
 ```text
-render_excel_to_png/spreadsheet_page_0_1.png (321 KB)
-render_excel_to_png/spreadsheet_page_0_10.png (323 KB)
-render_excel_to_png/spreadsheet_page_0_11.png (312 KB)
-render_excel_to_png/spreadsheet_page_0_12.png (308 KB)
-render_excel_to_png/spreadsheet_page_0_13.png (321 KB)
-render_excel_to_png/spreadsheet_page_0_14.png (124 KB)
-render_excel_to_png/spreadsheet_page_0_15.png (320 KB)
-render_excel_to_png/spreadsheet_page_0_16.png (315 KB)
-render_excel_to_png/spreadsheet_page_0_17.png (346 KB)
-render_excel_to_png/spreadsheet_page_0_18.png (362 KB)
-[TRUNCATED] (42 files total)
+render_excel_to_png/spreadsheet_page_0_1.png (89 KB)
+render_excel_to_png/spreadsheet_page_0_2.png (540 KB)
+render_excel_to_png/spreadsheet_page_0_3.png (130 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_png/render-excel-to-png-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-The following image demonstrates the result:
-
-![Render an Excel file to PNG](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-excel-to-png.png)
 
 ### Convert an Apple Numbers spreadsheet to PNG
 
@@ -434,17 +384,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-numbers-to-png-outputs.zip" >}}  
 ```text
-render_numbers_to_png/spreadsheet_page_0_1.png (85 KB)
-render_numbers_to_png/spreadsheet_page_0_2.png (80 KB)
-render_numbers_to_png/spreadsheet_page_0_3.png (26 KB)
+render_numbers_to_png/spreadsheet_page_0_1.png (149 KB)
+render_numbers_to_png/spreadsheet_page_0_2.png (25 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_numbers_to_png/render-numbers-to-png-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Apple Numbers spreadsheet to PNG](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-png.png)
 
 ## Render spreadsheets as JPEG
 
@@ -480,17 +425,9 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-excel-to-jpg-outputs.zip" >}}  
 ```text
-render_excel_to_jpg/excel_to_jpg_1.jpg (145 KB)
-render_excel_to_jpg/excel_to_jpg_10.jpg (152 KB)
-render_excel_to_jpg/excel_to_jpg_11.jpg (147 KB)
-render_excel_to_jpg/excel_to_jpg_12.jpg (146 KB)
-render_excel_to_jpg/excel_to_jpg_13.jpg (151 KB)
-render_excel_to_jpg/excel_to_jpg_14.jpg (65 KB)
-render_excel_to_jpg/excel_to_jpg_15.jpg (157 KB)
-render_excel_to_jpg/excel_to_jpg_16.jpg (154 KB)
-render_excel_to_jpg/excel_to_jpg_17.jpg (169 KB)
-render_excel_to_jpg/excel_to_jpg_18.jpg (178 KB)
-[TRUNCATED] (42 files total)
+render_excel_to_jpg/excel_to_jpg_1.jpg (44 KB)
+render_excel_to_jpg/excel_to_jpg_2.jpg (196 KB)
+render_excel_to_jpg/excel_to_jpg_3.jpg (62 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_jpg/render-excel-to-jpg-outputs.zip)
 {{< /tab >}}
@@ -526,9 +463,8 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-numbers-to-jpg-outputs.zip" >}}  
 ```text
-render_numbers_to_jpg/numbers_to_jpg_1.jpg (65 KB)
-render_numbers_to_jpg/numbers_to_jpg_2.jpg (62 KB)
-render_numbers_to_jpg/numbers_to_jpg_3.jpg (26 KB)
+render_numbers_to_jpg/numbers_to_jpg_1.jpg (127 KB)
+render_numbers_to_jpg/numbers_to_jpg_2.jpg (27 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_numbers_to_jpg/render-numbers-to-jpg-outputs.zip)
 {{< /tab >}}
@@ -570,17 +506,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "csv_with_separator_detection_1.html" >}}  
 ```text
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:x="urn:schemas-microsoft-com:office:excel"
-xmlns="http://www.w3.org/TR/REC-html40">
-
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="ProgId" content="Excel.Sheet"/>
-<meta name="Generator" content="Aspose.Cells 26.2"/>
-[TRUNCATED]
+HTML file (52 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_csv_with_separator_detection/csv_with_separator_detection_1.html)
 {{< /tab >}}
@@ -624,17 +550,13 @@ if __name__ == "__main__":
 {{< tab "get-worksheet-names.txt" >}}  
 ```text
 Worksheets:
- - Worksheet 1 name 'First'
- - Worksheet 2 name 'Second'
- - Worksheet 3 name 'Third'
+ - Worksheet 1 name 'Summary'
+ - Worksheet 2 name 'Orders'
+ - Worksheet 3 name 'Customers'
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/get_worksheet_names/get-worksheet-names.txt)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![Retrieve worksheet names](/viewer/python-net/images/rendering-basics/render-spreadsheets/retrieve-worksheet-names.png)
 
 ## See also
 

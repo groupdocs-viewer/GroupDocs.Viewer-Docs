@@ -34,19 +34,18 @@ GroupDocs.Viewer can detect the document format automatically based on informati
 
 Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a PDF file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}).
 
-
 ### Create an HTML file with embedded resources
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-pdf-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.pdf"))
+using (var viewer = new Viewer("sample.pdf"))
 {
     // Create an HTML file for each PDF page.
     // {0} is replaced with the current page number in the file name.
@@ -63,7 +62,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.pdf")
+        Using viewer = New Viewer("sample.pdf")
             ' Create an HTML file for each PDF page.
             ' {0} is replaced with the current page number in the file name.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
@@ -73,11 +72,21 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-to-html.zip" >}}  
+```text
+page_1.html (732 KB)
+page_2.html (402 KB)
+page_3.html (408 KB)
+page_4.html (85 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfToHtml/render-pdf-to-html.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a PDF file to HTML](/viewer/net/images/rendering-basics/render-pdf-documents/render-pdf-to-html.png)
 
 ### Create an HTML file with external resources
 
@@ -87,14 +96,14 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-pdf-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.pdf"))
+using (var viewer = new Viewer("sample.pdf"))
 {
     // Create an HTML file for each PDF page.
     // Specify the HTML file names and location of external resources.
@@ -112,7 +121,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.pdf")
+        Using viewer = New Viewer("sample.pdf")
             ' Create an HTML file for each PDF page.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
@@ -123,11 +132,30 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-to-html-external.zip" >}}  
+```text
+page_1.html (3 KB)
+page_1/resource_1_f.woff (10 KB)
+page_1/resource_1_f1.woff (22 KB)
+page_1/resource_1_i.png (513 KB)
+page_1/resource_1_s.css (2 KB)
+page_2.html (9 KB)
+page_2/resource_2_f.woff (13 KB)
+page_2/resource_2_f1.woff (23 KB)
+page_2/resource_2_i.png (256 KB)
+page_2/resource_2_s.css (3 KB)
+[TRUNCATED] (21 files total)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfToHtmlExternal/render-pdf-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-pdf-documents/render-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ### Create HTML with fixed layout
 
@@ -141,14 +169,14 @@ The following image demonstrates PDF document rendered HTML with fixed layout:
 
 When rendering to HTML with fluid layout HTML document doesn't have a fixed size. In case you resize a browser window the document content tries to fit into it. To create HTML with fluid layout set [PdfOptions.FixedLayout](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptions/fixedlayout/) property to `false`. 
 
-{{< tabs "example3">}}
+{{< tabs "render-pdf-fluid-layout">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Letter.pdf"))
+using (var viewer = new Viewer("sample.pdf"))
 {
     // Create an HTML file for each PDF page.
     // {0} is replaced with the current page number in the file name.
@@ -167,7 +195,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Letter.pdf")
+        Using viewer = New Viewer("sample.pdf")
             ' Create an HTML file for each PDF page.
             ' {0} is replaced with the current page number in the file name.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
@@ -178,6 +206,20 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-fluid-layout.zip" >}}  
+```text
+page_1.html (45 KB)
+page_2.html (52 KB)
+page_3.html (57 KB)
+page_4.html (63 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfFluidLayout/render-pdf-fluid-layout.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -201,14 +243,14 @@ The [HtmlViewOptions.PdfOptions.ImageQuality](https://reference.groupdocs.com/ne
 
 The following code snippet shows how to set the medium image quality when rendering a PDF document to HTML:
 
-{{< tabs "example4">}}
+{{< tabs "render-pdf-with-image-quality">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.pdf"))
+using (var viewer = new Viewer("sample.pdf"))
 {
     // Create an HTML file for each document page.
     // {0} is replaced with the current page number in the file name.
@@ -227,7 +269,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.pdf")
+        Using viewer = New Viewer("sample.pdf")
             ' Create an HTML file for each document page.
             ' {0} is replaced with the current page number in the file name.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
@@ -239,6 +281,20 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-with-image-quality.zip" >}}  
+```text
+page_1.html (2784 KB)
+page_2.html (1428 KB)
+page_3.html (1433 KB)
+page_4.html (138 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfWithImageQuality/render-pdf-with-image-quality.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Render text as an image
@@ -247,14 +303,14 @@ GroupDocs.Viewer supports the [HtmlViewOptions.PdfOptions.RenderTextAsImage](htt
 
 The following code snippet shows how to enable this option in code:
 
-{{< tabs "example5">}}
+{{< tabs "render-pdf-text-as-image">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.pdf"))
+using (var viewer = new Viewer("sample.pdf"))
 {
     // Create an HTML file for each document page.
     // {0} is replaced with the current page number in the file name.
@@ -273,7 +329,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.pdf")
+        Using viewer = New Viewer("sample.pdf")
             ' Create an HTML file for each document page.
             ' {0} is replaced with the current page number in the file name.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("text-as-image_{0}.html")
@@ -285,11 +341,23 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-text-as-image.zip" >}}  
+```text
+text-as-image_1.html (686 KB)
+text-as-image_2.html (344 KB)
+text-as-image_3.html (344 KB)
+text-as-image_4.html (88 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfTextAsImage/render-pdf-text-as-image.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-The image below illustrates the result. PDF content is exported to HTML as an image, so users cannot select or copy document text.  
-
-![Render PDF content as an image in the output HTML file](/viewer/net/images/rendering-basics/render-pdf-documents/render-pdf-to-html-as-image.png)
+PDF content is exported to HTML as an image, so users cannot select or copy document text.
 
 ### Enable multi-layer rendering
 
@@ -297,7 +365,7 @@ When you convert a PDF file to HTML, GroupDocs.Viewer creates an HTML document w
 
 The following code snippet shows how to enable the multi-layer rendering:
 
-{{< tabs "example6">}}
+{{< tabs "render-pdf-with-layered-rendering">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -335,6 +403,20 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-with-layered-rendering.zip" >}}  
+```text
+page_1.html (769 KB)
+page_2.html (493 KB)
+page_3.html (496 KB)
+page_4.html (114 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfWithLayeredRendering/render-pdf-with-layered-rendering.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render PDF files as images
@@ -343,14 +425,14 @@ End Module
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a PDF file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example7">}}
+{{< tabs "render-pdf-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.pdf"))
+using (var viewer = new Viewer("sample.pdf"))
 {
     // Create a PNG image for each PDF page.
     // {0} is replaced with the current page number in the image name.
@@ -370,7 +452,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.pdf")
+        Using viewer = New Viewer("sample.pdf")
             ' Create a PNG image for each PDF page.
             ' {0} is replaced with the current page number in the image name.
             Dim viewOptions = New PngViewOptions("output_{0}.png")
@@ -383,24 +465,34 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-to-png.zip" >}}  
+```text
+output_1.png (450 KB)
+output_2.png (237 KB)
+output_3.png (253 KB)
+output_4.png (73 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfToPng/render-pdf-to-png.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a PDF file to PNG](/viewer/net/images/rendering-basics/render-pdf-documents/render-pdf-to-png.png)
 
 ### Convert PDF files to JPEG
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a PDF file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example8">}}
+{{< tabs "render-pdf-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.pdf"))
+using (var viewer = new Viewer("sample.pdf"))
 {
     // Create a JPEG image for each PDF page.
     // {0} is replaced with the current page number in the image name.
@@ -420,7 +512,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.pdf")
+        Using viewer = New Viewer("sample.pdf")
             ' Create a JPEG image for each PDF page.
             ' {0} is replaced with the current page number in the image name.
             Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
@@ -433,20 +525,34 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-to-jpg.zip" >}}  
+```text
+output_1.jpg (115 KB)
+output_2.jpg (90 KB)
+output_3.jpg (96 KB)
+output_4.jpg (58 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfToJpg/render-pdf-to-jpg.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Preserve the size of document pages
 
 When you render PDF documents as images, GroupDocs.Viewer calculates the optimal image size to achieve better rendering quality. If you want the generated images to be the same size as pages in the source PDF document, enable the [PdfOptions.RenderOriginalPageSize](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/renderoriginalpagesize) property for the [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) or [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class (depending on the output image format).
 
-{{< tabs "example9">}}
+{{< tabs "render-pdf-preserve-page-size">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.pdf"))
+using (var viewer = new Viewer("sample.pdf"))
 {
     // Create a PNG image for each PDF page.
     // {0} is replaced with the current page number in the image name.
@@ -465,7 +571,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.pdf")
+        Using viewer = New Viewer("sample.pdf")
             ' Create a PNG image for each PDF page.
             ' {0} is replaced with the current page number in the image name.
             Dim viewOptions = New PngViewOptions("output_{0}.png")
@@ -477,20 +583,34 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-preserve-page-size.zip" >}}  
+```text
+output_1.png (278 KB)
+output_2.png (110 KB)
+output_3.png (132 KB)
+output_4.png (24 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfPreservePageSize/render-pdf-preserve-page-size.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Enable font hinting
 
 To adjust the display of outline fonts when you convert PDF documents to PNG or JPEG, activate the [PdfOptions.EnableFontHinting](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/enablefonthinting) option, as shown below:
 
-{{< tabs "example10">}}
+{{< tabs "render-pdf-with-font-hinting">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.pdf"))
+using (var viewer = new Viewer("sample.pdf"))
 {
     // Create a PNG image for each PDF page.
     // {0} is replaced with the current page number in the image name.
@@ -509,7 +629,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.pdf")
+        Using viewer = New Viewer("sample.pdf")
             ' Create a PNG image for each PDF page.
             ' {0} is replaced with the current page number in the image name.
             Dim viewOptions = New PngViewOptions("output_{0}.png")
@@ -521,6 +641,20 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-with-font-hinting.zip" >}}  
+```text
+output_1.png (961 KB)
+output_2.png (401 KB)
+output_3.png (425 KB)
+output_4.png (63 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfWithFontHinting/render-pdf-with-font-hinting.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 Refer to the following article for more information on font hinting: [Font hinting](https://en.wikipedia.org/wiki/Font_hinting).
@@ -529,7 +663,7 @@ Refer to the following article for more information on font hinting: [Font hinti
 
 When you render PDF files in other formats, GroupDocs.Viewer groups individual characters into words to improve rendering performance. If your document contains hieroglyphic or special symbols, you may need to disable character grouping to generate a more precise layout. To do this, use the [PdfOptions.DisableCharsGrouping](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfoptions/properties/disablecharsgrouping) option, as shown below:
 
-{{< tabs "example11">}}
+{{< tabs "render-pdf-disable-char-grouping">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -567,22 +701,36 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-disable-char-grouping.zip" >}}  
+```text
+page_1.html (786 KB)
+page_2.html (513 KB)
+page_3.html (543 KB)
+page_4.html (153 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfDisableCharGrouping/render-pdf-disable-char-grouping.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render text comments
 
-Enable the [ViewOptions.RenderComments](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option for a target view to display textual annotations (such as text comments, sticky notes, text boxes and callouts) in the output HTML, PNG, or JPEG files.
+Textual annotations (such as text comments, sticky notes, text boxes and callouts) are rendered by default: the [ViewOptions.RenderComments](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) property is `true` unless you change it. The example below sets it explicitly; set it to `false` to hide the annotations in the output HTML, PNG, or JPEG files.
 
 The code example below renders a PDF file with text comments as an image.
 
-{{< tabs "example12">}}
+{{< tabs "render-pdf-with-comments">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume_commented.pdf"))
+using (var viewer = new Viewer("sample.pdf"))
 {
     // Create a PNG image for each PDF page.
     // {0} is replaced with the current page number in the image name.
@@ -601,7 +749,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume_commented.pdf")
+        Using viewer = New Viewer("sample.pdf")
             ' Create a PNG image for each PDF page.
             ' {0} is replaced with the current page number in the image name.
             Dim viewOptions = New PngViewOptions("output_{0}.png")
@@ -613,11 +761,21 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-with-comments.zip" >}}  
+```text
+output_1.png (961 KB)
+output_2.png (401 KB)
+output_3.png (425 KB)
+output_4.png (63 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfWithComments/render-pdf-with-comments.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Render PDF comments to PNG](/viewer/net/images/rendering-basics/render-pdf-documents/render-pdf-comments.png)
 
 ## Get information about a PDF file
 
@@ -627,7 +785,7 @@ Follow the steps below to obtain information about a PDF file (the number of pag
 2. Call the [Viewer.GetViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [PdfViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.results/pdfviewinfo) type.
 3. Use the `PdfViewInfo` class properties to retrieve document-specific information.
 
-{{< tabs "example13">}}
+{{< tabs "get-pdf-information">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -635,7 +793,7 @@ using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
 // ...
 
-using (var viewer = new Viewer("resume.pdf"))
+using (var viewer = new Viewer("sample.pdf"))
 {
     var viewInfoOptions = ViewInfoOptions.ForHtmlView();
     var viewInfo = viewer.GetViewInfo(viewInfoOptions) as PdfViewInfo;
@@ -665,7 +823,7 @@ Imports GroupDocs.Viewer.Results
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.pdf")
+        Using viewer = New Viewer("sample.pdf")
             Dim viewInfoOptions = ViewInfoOptions.ForHtmlView()
             Dim viewInfo = TryCast(viewer.GetViewInfo(viewInfoOptions), PdfViewInfo)
         
@@ -686,17 +844,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-pdf-information.txt" >}}  
+```text
+File type: Portable Document Format File (.pdf)
+The number of pages: 4
+Is printing allowed: True
+Page information:
+Page 1 (visible) 595x842px with 0 line(s).
+Page 2 (visible) 595x842px with 0 line(s).
+Page 3 (visible) 595x842px with 0 line(s).
+Page 4 (visible) 595x842px with 0 line(s).
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/GetPdfInformation/get-pdf-information.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![Get information about a PDF file](/viewer/net/images/rendering-basics/render-pdf-documents/retrieve-pdf-file-information.png)
 
 ### Extract text from a PDF file
 
 Set the [ViewInfoOptions.ExtractText](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/viewinfooptions/properties/extracttext) property to `true` to enable PDF text extraction. Use the [PdfViewInfo.Pages](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/properties/pages) property to obtain the list of all document pages, and iterate through the collection of lines on each page ([Page.Lines](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/page/properties/lines)) to retrieve text for each line.
 
-{{< tabs "example14">}}
+{{< tabs "extract-pdf-text">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -704,7 +876,7 @@ using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
 // ...
 
-using (var viewer = new Viewer("resume.pdf"))
+using (var viewer = new Viewer("sample.pdf"))
 {
     var viewInfoOptions = ViewInfoOptions.ForHtmlView();
     viewInfoOptions.ExtractText = true;
@@ -729,7 +901,7 @@ Imports GroupDocs.Viewer.Results
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.pdf")
+        Using viewer = New Viewer("sample.pdf")
             Dim viewInfoOptions = ViewInfoOptions.ForHtmlView()
             viewInfoOptions.ExtractText = True
             Dim viewInfo = TryCast(viewer.GetViewInfo(viewInfoOptions), PdfViewInfo)
@@ -746,22 +918,40 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "extract-pdf-text.txt" >}}  
+```text
+Extracted document text:
+Autumn Harvest 2026
+The wholesale catalog for cafes, grocers and restaurants
+Our seasonal range is back, bigger than ever: a spiced roast from Northwind Coffee Roasters, apple
+butter and cranberry relish from Orchard Row, a squash soup from Sunfield Kitchens and a fruit loaf
+baked on the Quayside. Order by 15 October for delivery from the first week of November.
+Harbor Lane Provisions | 18 Quayside Road, Port Ellery | +1 555 0142 300
+Coffee & Tea
+Roasted for us by Northw
+[TRUNCATED]
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/ExtractPdfText/extract-pdf-text.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-![Extract and display PDF text](/viewer/net/images/rendering-basics/render-pdf-documents/extract-pdf-text.png)
 
 ## Skip font license verification when rendering XPS and OXPS files
 
 If an XPS or OXPS file contains a font that cannot be embedded due to licensing restrictions, GroupDocs.Viewer throws an exception at runtime. If you have a license for this font, enable the [PdfOptions.DisableFontLicenseVerifications](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptions/disablefontlicenseverifications) option to skip font license verification.
 
-{{< tabs "example15">}}
+{{< tabs "render-xps-skip-font-license-check">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("resume.oxps"))
+using (Viewer viewer = new Viewer("sample.oxps"))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewOptions.PdfOptions.DisableFontLicenseVerifications = true;
@@ -777,7 +967,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("resume.oxps")
+        Using viewer As Viewer = New Viewer("sample.oxps")
             Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
             viewOptions.PdfOptions.DisableFontLicenseVerifications = True
             viewer.View(viewOptions)
@@ -785,6 +975,21 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.oxps" >}}
+{{< tab-text >}}
+`sample.oxps` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.oxps) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-xps-skip-font-license-check.zip" >}}  
+```text
+p_1.html (734 KB)
+p_2.html (114 KB)
+p_3.html (143 KB)
+p_4.html (727 KB)
+p_5.html (88 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderXpsSkipFontLicenseCheck/render-xps-skip-font-license-check.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -796,14 +1001,14 @@ The [PdfOptions.WrapImagesInSvg](https://reference.groupdocs.com/viewer/net/grou
 
 This option is available when rendering PDF and Page Layout file formats to HTML with embedded or external resources. 
 
-{{< tabs "example16">}}
+{{< tabs "render-pdf-images-in-svg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("resume.pdf"))
+using (Viewer viewer = new Viewer("sample.pdf"))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewOptions.PdfOptions.WrapImagesInSvg = true;
@@ -820,7 +1025,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("resume.pdf")
+        Using viewer As Viewer = New Viewer("sample.pdf")
             Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
             viewOptions.PdfOptions.WrapImagesInSvg = True
         
@@ -830,9 +1035,23 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-images-in-svg.zip" >}}  
+```text
+p_1.html (1429 KB)
+p_2.html (1432 KB)
+p_3.html (751 KB)
+p_4.html (67 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfImagesInSvg/render-pdf-images-in-svg.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-The following image shows the rendering [resume.pdf](/viewer/net/images/rendering-basics/render-pdf-documents/resume.pdf) with the disabled (left) and enabled (right) `WrapImagesInSvg` option:
+The following image shows a PDF page rendered with the disabled (left) and enabled (right) `WrapImagesInSvg` option:
 
 ![Images as background vs embedded in SVG](/viewer/net/images/rendering-basics/render-pdf-documents/wrap-images-in-svg.png)
 
@@ -850,14 +1069,14 @@ This option was added in GroupDocs.Viewer for .NET 24.4. Previous versions of Gr
 
 This option is supported when rendering PDF files to HTML with embedded or external resources. 
 
-{{< tabs "example17">}}
+{{< tabs "render-pdf-disable-copy-protection">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (Viewer viewer = new Viewer("protected-resume.pdf"))
+using (Viewer viewer = new Viewer("copy_protected.pdf"))
 {
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
     viewOptions.PdfOptions.DisableCopyProtection = true;
@@ -874,7 +1093,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer As Viewer = New Viewer("protected-resume.pdf")
+        Using viewer As Viewer = New Viewer("copy_protected.pdf")
             Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
             viewOptions.PdfOptions.DisableCopyProtection = True
         
@@ -884,9 +1103,20 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "copy_protected.pdf" >}}
+{{< tab-text >}}
+`copy_protected.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/copy_protected.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "p_1.html" >}}  
+```text
+HTML file (92 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfDisableCopyProtection/p_1.html)
+{{< /tab >}}
 {{< /tabs >}}
 
-The following image shows the rendering of [protected-resume.pdf](/viewer/net/images/rendering-basics/render-pdf-documents/protected-resume.pdf) with copy protection on the left and with with `DisableCopyProtection` option set to `true` on the right:
+The following image shows a copy-protected PDF rendered with copy protection on the left and with the `DisableCopyProtection` option set to `true` on the right:
 
 ![Render with or without copy protection](/viewer/net/images/rendering-basics/render-pdf-documents/render-with-and-without-copy-protection.png)
 
@@ -902,7 +1132,7 @@ When enabled, this feature addresses the following issues in a PDF document:
 
 Here is a source code sample:
 
-{{< tabs "example18">}}
+{{< tabs "repair-corrupted-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -914,7 +1144,7 @@ loadOptions.TryRepair = true;
 
 PngViewOptions viewOptions = new PngViewOptions();
 
-using (Viewer viewer = new Viewer("resume.pdf", loadOptions))
+using (Viewer viewer = new Viewer("corrupted.pdf", loadOptions))
 {    
     viewer.View(viewOptions);
 }
@@ -933,12 +1163,25 @@ Module Program
 
         Dim viewOptions As New PngViewOptions()
 
-        Using viewer As New Viewer("resume.pdf", loadOptions)
+        Using viewer As New Viewer("corrupted.pdf", loadOptions)
             viewer.View(viewOptions)
         End Using
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "corrupted.pdf" >}}
+{{< tab-text >}}
+`corrupted.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/corrupted.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "repair-corrupted-pdf.zip" >}}  
+```text
+p_1.png (130 KB)
+p_2.png (129 KB)
+p_3.png (130 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RepairCorruptedPdf/repair-corrupted-pdf.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -948,7 +1191,7 @@ Starting from the [version 24.12](https://releases.groupdocs.com/viewer/net/rele
 
 In order to view and save arbitrary OFD file on Linux, the SimSun.ttf font should be loaded to the GroupDocs.Viewer using the [`FolderFontSource`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/folderfontsource/) class and [`FontSettings.SetFontSources`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/fontsettings/setfontsources/) method, and this should be done _before_ instantiating a [`Viewer`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/) class with OFD file. Article ["Set custom fonts"](https://docs.groupdocs.com/viewer/net/set-custom-fonts/) describes setting a custom font in detail, but a short example of setting a SimSun and saving OFD to HTML on Linux is below:
 
-{{< tabs "example19">}}
+{{< tabs "render-ofd-document">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -996,7 +1239,7 @@ In the GroupDocs.Viewer version 26.8 this has been changed. Popup annotations ar
 
 Source code sample below shows loading PDF file and rendering it to HTML with embedded resources, PNG and JPEG with enabled popup annotations.
 
-{{< tabs "example_RenderNotes">}}
+{{< tabs "render-pdf-popup-annotations">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -1043,6 +1286,27 @@ Using viewer As New Viewer("sample.pdf")
     viewer.View(htmlEmbeddedOpt)
 End Using
 ```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-popup-annotations.zip" >}}  
+```text
+p_1.html (769 KB)
+p_1.jpg (279 KB)
+p_1.png (961 KB)
+p_2.html (597 KB)
+p_2.jpg (250 KB)
+p_2.png (420 KB)
+p_3.html (496 KB)
+p_3.jpg (223 KB)
+p_3.png (425 KB)
+p_4.html (114 KB)
+[TRUNCATED] (12 files total)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfPopupAnnotations/render-pdf-popup-annotations.zip)
 {{< /tab >}}
 {{< /tabs >}}
 

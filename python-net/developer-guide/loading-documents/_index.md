@@ -15,6 +15,8 @@ aliases:
 
 *GroupDocs.Viewer for Python via .NET* can load a source document from three kinds of sources: a local file path, a Python stream (file handle or `BytesIO`), or an HTTP URL. Pass any of them to the `Viewer` class — the engine auto-detects the format and keeps the source open only as long as necessary.
 
+![A file on disk is passed to Viewer(source, load_options) by its path; bytes in memory and a downloaded document as io.BytesIO or a file object. LoadOptions set the file type, the password, the encoding and external resources. Then viewer.view renders the pages](/viewer/python-net/images/developer-guide/loading-documents/loading-documents.svg)
+
 ## Viewer Class Constructor
 
 The `Viewer` constructor accepts the source as its first positional argument. The remaining arguments are all optional and can be passed positionally or as keyword arguments:

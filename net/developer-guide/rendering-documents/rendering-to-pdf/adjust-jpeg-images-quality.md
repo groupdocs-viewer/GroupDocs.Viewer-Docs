@@ -9,18 +9,19 @@ hideChildren: False
 ---
 Decreasing the JPG images quality reduces the size of the output file.
 
-To adjust images quality, set the [JpgQuality](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions/properties/jpgquality) property of the [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) class. The value must be between 1 (minimum quality) and 100. The default value is 90.
+To adjust images quality, enable the [CompressImages](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/compressimages/) property and set the [ImageQuality](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/imagequality/) property of the [PdfOptimizationOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/) class. The value must be between 1 (minimum quality) and 100. The default value is 90. Without `CompressImages`, the quality has no effect.
 
 To set the image quality, follow these steps:
 
 1. Instantiate the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class. Specify the source document path as a constructor parameter.
 1. Instantiate the [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) object.
-2. Set the [PdfViewOptions.JpgQuality](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions/properties/jpgquality) value.
-3. Call the [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method of the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object. Specify the [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) object as the parameter.
+2. Set the [PdfViewOptions.PdfOptimizationOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions/pdfoptimizationoptions/) value to a new [PdfOptimizationOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/) object.
+3. Set its [CompressImages](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/compressimages/) value to `true` and its [ImageQuality](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfoptimizationoptions/imagequality/) value.
+4. Call the [View](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/view) method of the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) object. Specify the [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) object as the parameter.
 
 The following code snippet shows how to adjust JPG image quality in the output PDF document:
 
-{{< tabs "example1">}}
+{{< tabs "adjust-jpeg-quality">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -34,6 +35,7 @@ using (Viewer viewer = new Viewer("sample.docx"))
 
     // Specify the JPG image quality.
     viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions();
+    viewOptions.PdfOptimizationOptions.CompressImages = true;
     viewOptions.PdfOptimizationOptions.ImageQuality = 50;
     viewer.View(viewOptions);
 }
@@ -53,11 +55,23 @@ Module Program
 
             ' Specify the JPG image quality.
             viewOptions.PdfOptimizationOptions = New PdfOptimizationOptions()
+            viewOptions.PdfOptimizationOptions.CompressImages = True
             viewOptions.PdfOptimizationOptions.ImageQuality = 50
             viewer.View(viewOptions)
         End Using
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/adjust-jpeg-images-quality/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 483 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/adjust-jpeg-images-quality/AdjustJpegQuality/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}

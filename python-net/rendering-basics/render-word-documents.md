@@ -67,17 +67,15 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-word-to-html-outputs.zip" >}}  
 ```text
-render_word_to_html/pdf_page_1.html (317 KB)
-render_word_to_html/pdf_page_2.html (149 KB)
-render_word_to_html/pdf_page_3.html (113 KB)
+render_word_to_html/pdf_page_1.html (253 KB)
+render_word_to_html/pdf_page_2.html (110 KB)
+render_word_to_html/pdf_page_3.html (148 KB)
+render_word_to_html/pdf_page_4.html (1001 KB)
+render_word_to_html/pdf_page_5.html (86 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_to_html/render-word-to-html-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Word file to HTML](/viewer/python-net/images/rendering-basics/render-word-documents/render-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -99,7 +97,8 @@ def render_word_to_html_external():
         # Create an HTML file for each page.
         # Specify the HTML file names and location of external resources.
         # {0} and {1} are replaced with the current page number and resource name, respectively.
-        viewOptions = HtmlViewOptions.for_external_resources("render_word_to_html_external/pdf_page_{0}.html", "render_word_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_word_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        # The resource URL is relative to the HTML file.
+        viewOptions = HtmlViewOptions.for_external_resources("render_word_to_html_external/pdf_page_{0}.html", "render_word_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -113,25 +112,23 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-word-to-html-external-outputs.zip" >}}  
 ```text
-render_word_to_html_external/pdf_page_1.html (41 KB)
-render_word_to_html_external/pdf_page_1/resource_1_f.woff (16 KB)
-render_word_to_html_external/pdf_page_1/resource_1_f1.woff (11 KB)
+render_word_to_html_external/pdf_page_1.html (2 KB)
+render_word_to_html_external/pdf_page_1/resource_1_f.woff (20 KB)
+render_word_to_html_external/pdf_page_1/resource_1_f1.woff (9 KB)
 render_word_to_html_external/pdf_page_1/resource_1_f2.woff (10 KB)
-render_word_to_html_external/pdf_page_1/resource_1_f3.woff (22 KB)
-render_word_to_html_external/pdf_page_1/resource_1_f4.woff (9 KB)
-render_word_to_html_external/pdf_page_1/resource_1_g.svg (1 KB)
-render_word_to_html_external/pdf_page_1/resource_1_g1.svg (726 bytes)
-render_word_to_html_external/pdf_page_1/resource_1_g10.svg (28 KB)
-render_word_to_html_external/pdf_page_1/resource_1_g11.svg (489 bytes)
-[TRUNCATED] (78 files total)
+render_word_to_html_external/pdf_page_1/resource_1_i.jpeg (144 KB)
+render_word_to_html_external/pdf_page_1/resource_1_i.png (4 KB)
+render_word_to_html_external/pdf_page_1/resource_1_s.css (1 KB)
+render_word_to_html_external/pdf_page_2.html (9 KB)
+render_word_to_html_external/pdf_page_2/resource_2_f.woff (15 KB)
+render_word_to_html_external/pdf_page_2/resource_2_f1.woff (29 KB)
+[TRUNCATED] (35 files total)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_to_html_external/render-word-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/python-net/images/rendering-basics/render-word-documents/render-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ## Render Word documents as PDF
 
@@ -162,15 +159,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "word_document.pdf" >}}  
 ```text
-Binary file (PDF, 234 KB)
+Binary file (PDF, 719 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_to_pdf/word_document.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Word file to PDF](/viewer/python-net/images/rendering-basics/render-word-documents/render-to-pdf.png)
 
 ## Render Word documents as PNG
 
@@ -201,16 +194,15 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-word-to-png-outputs.zip" >}}  
 ```text
-render_word_to_png/word_page_0_1.png (89 KB)
-render_word_to_png/word_page_0_2.png (77 KB)
-render_word_to_png/word_page_0_3.png (50 KB)
+render_word_to_png/word_page_0_1.png (287 KB)
+render_word_to_png/word_page_0_2.png (33 KB)
+render_word_to_png/word_page_0_3.png (33 KB)
+render_word_to_png/word_page_0_4.png (430 KB)
+render_word_to_png/word_page_0_5.png (21 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_to_png/render-word-to-png-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-The following image demonstrates the result:
-
-![Render a Word file to PNG](/viewer/python-net/images/rendering-basics/render-word-documents/render-to-png-image.png)
 
 ## Render Word documents as JPEG
 
@@ -241,9 +233,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-word-to-jpg-outputs.zip" >}}  
 ```text
-render_word_to_jpg/word_to_jpg_1.jpg (160 KB)
-render_word_to_jpg/word_to_jpg_2.jpg (194 KB)
-render_word_to_jpg/word_to_jpg_3.jpg (75 KB)
+render_word_to_jpg/word_to_jpg_1.jpg (82 KB)
+render_word_to_jpg/word_to_jpg_2.jpg (112 KB)
+render_word_to_jpg/word_to_jpg_3.jpg (104 KB)
+render_word_to_jpg/word_to_jpg_4.jpg (104 KB)
+render_word_to_jpg/word_to_jpg_5.jpg (72 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_to_jpg/render-word-to-jpg-outputs.zip)
 {{< /tab >}}
@@ -297,10 +291,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-word-with-margins-outputs.zip" >}}  
 ```text
-render_word_with_margins/word_with_margins_1.html (298 KB)
-render_word_with_margins/word_with_margins_2.html (120 KB)
+render_word_with_margins/word_with_margins_1.html (253 KB)
+render_word_with_margins/word_with_margins_2.html (110 KB)
 render_word_with_margins/word_with_margins_3.html (148 KB)
-render_word_with_margins/word_with_margins_4.html (67 KB)
+render_word_with_margins/word_with_margins_4.html (1001 KB)
+render_word_with_margins/word_with_margins_5.html (86 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_with_margins/render-word-with-margins-outputs.zip)
 {{< /tab >}}
@@ -343,19 +338,15 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "word_with_tracked_changes.pdf" >}}  
 ```text
-Binary file (PDF, 22 KB)
+Binary file (PDF, 64 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_with_tracked_changes/word_with_tracked_changes.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image illustrates the result:
-
-![Render tracked changes to PDF](/viewer/python-net/images/rendering-basics/render-word-documents/render-track-changes-to-pdf.png)
-
 ## Render comments
 
-Use the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewoptions/#properties) method for a target view to display comments in the output file when you convert your document to HTML, PDF, PNG, or JPEG format.
+Comments are rendered by default: the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewoptions/#properties) property is `True` unless you change it. The example below sets it explicitly; set it to `False` to hide the comments when you convert your document to HTML, PDF, PNG, or JPEG format.
 
 The code example below renders a Word document with comments to PDF.
 
@@ -385,12 +376,8 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "word_with_comments.pdf" >}}  
 ```text
-Binary file (PDF, 37 KB)
+Binary file (PDF, 68 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-word-documents/render_word_with_comments/word_with_comments.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Render comments to PDF](/viewer/python-net/images/rendering-basics/render-word-documents/render-comments-to-pdf.png)

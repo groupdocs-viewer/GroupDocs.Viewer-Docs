@@ -10,7 +10,7 @@ hideChildren: False
 
 The [HtmlViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/htmlviewoptions) class has the following properties to set the image width or/and height:
 
-{{< tabs "example2">}}
+{{< tabs "html-image-size-properties">}}
 {{< tab "C#" >}}
 ```csharp
 /// <summary>
@@ -79,7 +79,7 @@ To set the ImageMaxWidth/ImageMaxHeight options, follow these steps:
 
 The following code snippet shows how to set the output image size limits:
 
-{{< tabs "example1">}}
+{{< tabs "limit-image-size-in-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -116,5 +116,16 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.jpeg" >}}
+{{< tab-text >}}
+`sample.jpeg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-html/set-image-size-limits-when-rendering-to-html/sample.jpeg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "p_1.html" >}}  
+```text
+HTML file (124 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/set-image-size-limits-when-rendering-to-html/LimitImageSizeInHtml/p_1.html)
 {{< /tab >}}
 {{< /tabs >}}

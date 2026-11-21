@@ -27,7 +27,7 @@ Before running this example, start the Redis using the following command: `docke
 
 The following code snippet shows how to implement a custom caching using Redis Cache:
 
-{{< tabs "example1">}}
+{{< tabs "use-custom-cache">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -325,6 +325,11 @@ Module Program
     End Class
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/caching-results/how-to-use-custom-cache-implementation/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

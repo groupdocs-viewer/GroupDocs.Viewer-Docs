@@ -1,0 +1,8 @@
+File type: Portable Document Format File (.pdf)
+The number of pages: 4
+Is printing allowed: True
+Page information:
+Page 1 (visible) 595x842px with 0 line(s).
+Page 2 (visible) 595x842px with 0 line(s).
+Page 3 (visible) 595x842px with 0 line(s).
+Page 4 (visible) 595x842px with 0 line(s).

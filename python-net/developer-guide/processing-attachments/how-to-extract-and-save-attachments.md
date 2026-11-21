@@ -42,13 +42,13 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "with_attachments.msg" >}}
 {{< tab-text >}}
-`with_attachments.msg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/processing-attachments/with_attachments.msg) to download it.
+`with_attachments.msg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/processing-attachments/how-to-extract-and-save-attachments/with_attachments.msg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "extract-and-save-attachments-outputs.zip" >}}  
 ```text
-attachments/attachment-image.png (26 KB)
-attachments/attachment-word.doc (220 KB)
+attachments/delivery-note-0912.xlsx (7 KB)
+attachments/invoice-NWR-2026-0912.pdf (194 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/processing-attachments/how-to-extract-and-save-attachments/extract_and_save_attachments/extract-and-save-attachments-outputs.zip)
 {{< /tab >}}

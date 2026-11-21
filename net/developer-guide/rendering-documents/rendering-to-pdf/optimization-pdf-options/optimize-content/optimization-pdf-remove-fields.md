@@ -16,14 +16,14 @@ To remove form fields, set the [RemoveFormFields](https://reference.groupdocs.co
 
 The following code snippet shows how to flatten form fields in the file:
 
-{{< tabs "Example1">}}
+{{< tabs "remove-form-fields">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("sample.docx"))
+using (var viewer = new Viewer("order_form.pdf"))
 {
     PdfViewOptions viewOptions = new PdfViewOptions();
     viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions
@@ -43,7 +43,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("sample.docx")
+        Using viewer = New Viewer("order_form.pdf")
             Dim viewOptions As PdfViewOptions = New PdfViewOptions()
             viewOptions.PdfOptimizationOptions = New PdfOptimizationOptions With {
                 .RemoveFormFields = True
@@ -55,8 +55,15 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "order_form.pdf" >}}
+{{< tab-text >}}
+`order_form.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-fields/order_form.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 207 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-fields/RemoveFormFields/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Remove fields](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-remove-fields.png)

@@ -1,0 +1,8 @@
+Encrypted: no
+Archive format: Zipped File (.zip)
+Number of pages when saving to PDF: 1
+List of all pages with their metadata, when rendering to PDF:
+ - Page #1 - 2480x3507px
+List of folders in the archive document:
+ - /Invoices/
+ - /Invoices/2025/

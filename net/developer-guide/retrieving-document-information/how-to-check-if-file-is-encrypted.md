@@ -7,6 +7,7 @@ description: "This article explains how to check if a file is encrypted using .N
 keywords: check, file, encrypted, C#, .NET
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
+toc: True
 ---
 
 The encryption protects data and allows only authorized people to open the file. So, only those who have an encryption key (such as a password) can open and view a file.
@@ -29,7 +30,7 @@ It's important to be cautious about uploading sensitive files to online services
 
 Use the _GetFileInfo()_ method that returns the file type and flag that indicates if the file is encrypted. The following code snippet shows how to check if a file is encrypted. 
 
-{{< tabs "example1">}}
+{{< tabs "check-if-file-is-encrypted">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -40,7 +41,7 @@ using GroupDocs.Viewer.Results;
 using (Viewer viewer = new Viewer("protected.pdf"))
 {
     // Get file information.
-    FileInfo fileInfo = viewer.GetFileInfo();
+    var fileInfo = viewer.GetFileInfo();
 
     // Display the file type and flag if the file is encrypted.
     Console.WriteLine("File type is: " + fileInfo.FileType);
@@ -59,7 +60,7 @@ Module Program
     Sub Main(args As String())
         Using viewer As Viewer = New Viewer("protected.pdf")
             ' Get file information.
-            Dim fileInfo As FileInfo = viewer.GetFileInfo()
+            Dim fileInfo = viewer.GetFileInfo()
         
             ' Display the file type and flag if the file is encrypted.
             Console.WriteLine("File type is: " & fileInfo.FileType.ToString())
@@ -68,6 +69,18 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "protected.pdf" >}}
+{{< tab-text >}}
+`protected.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/retrieving-document-information/how-to-check-if-file-is-encrypted/protected.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "check-if-file-is-encrypted.txt" >}}  
+```text
+File type is: Portable Document Format File (.pdf)
+File encrypted: True
+```
+[Download full output](/viewer/net/_output_files/developer-guide/retrieving-document-information/how-to-check-if-file-is-encrypted/CheckIfFileIsEncrypted/check-if-file-is-encrypted.txt)
 {{< /tab >}}
 {{< /tabs >}}
 

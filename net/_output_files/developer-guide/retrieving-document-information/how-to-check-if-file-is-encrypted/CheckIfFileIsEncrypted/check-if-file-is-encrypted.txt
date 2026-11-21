@@ -1,0 +1,2 @@
+File type is: Portable Document Format File (.pdf)
+File encrypted: True

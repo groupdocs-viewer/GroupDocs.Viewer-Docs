@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" width="900" height="430" role="img" aria-labelledby="t d" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <title id="t">How GroupDocs.Viewer renders a document</title>
+  <desc id="d">A three-page DOCX document goes into GroupDocs.Viewer. HtmlViewOptions gives one HTML file per page, PngViewOptions one PNG image per page, JpgViewOptions one JPEG image per page, and PdfViewOptions one PDF file that holds all three pages.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <!-- a small page: 36 x 46, its type in a badge -->
+    <g id="page">
+      <rect x="0" y="0" width="36" height="46" rx="4" fill="#ffffff" stroke="#cbd5e1" filter="url(#shadow)"/>
+      <rect x="6" y="8" width="24" height="3" rx="1.5" fill="#cbd5e1"/>
+      <rect x="6" y="14" width="20" height="3" rx="1.5" fill="#e2e8f0"/>
+      <rect x="6" y="20" width="24" height="3" rx="1.5" fill="#e2e8f0"/>
+    </g>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="899" height="429" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+
+  <!-- column headings -->
+  <g font-size="11" font-weight="600" fill="#64748b" letter-spacing="1.2">
+    <text x="130" y="30" text-anchor="middle">SOURCE DOCUMENT</text>
+    <text x="400" y="30" text-anchor="middle">RENDERING</text>
+    <text x="560" y="30">OUTPUT FILES</text>
+  </g>
+
+  <!-- the source document: three pages -->
+  <g>
+    <rect x="86" y="128" width="120" height="156" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="78" y="136" width="120" height="156" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <g filter="url(#shadow)">
+      <rect x="70" y="144" width="120" height="156" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+    </g>
+    <rect x="82" y="158" width="58" height="7" rx="3.5" fill="#1f3a5f"/>
+    <rect x="82" y="174" width="96" height="4" rx="2" fill="#cbd5e1"/>
+    <rect x="82" y="184" width="88" height="4" rx="2" fill="#cbd5e1"/>
+    <rect x="82" y="194" width="92" height="4" rx="2" fill="#cbd5e1"/>
+    <rect x="82" y="208" width="44" height="34" rx="3" fill="#dbeafe"/>
+    <rect x="132" y="208" width="46" height="4" rx="2" fill="#e2e8f0"/>
+    <rect x="132" y="218" width="40" height="4" rx="2" fill="#e2e8f0"/>
+    <rect x="132" y="228" width="44" height="4" rx="2" fill="#e2e8f0"/>
+    <rect x="82" y="250" width="92" height="4" rx="2" fill="#e2e8f0"/>
+    <rect x="82" y="260" width="80" height="4" rx="2" fill="#e2e8f0"/>
+    <rect x="148" y="278" width="34" height="14" rx="3" fill="#2b579a"/>
+    <text x="165" y="288.5" font-size="8.5" font-weight="700" fill="#ffffff" text-anchor="middle">DOCX</text>
+  </g>
+  <text x="130" y="322" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">sample.docx</text>
+  <text x="130" y="340" font-size="12" fill="#64748b" text-anchor="middle">3 pages</text>
+  <text x="130" y="372" font-size="11" fill="#64748b" text-anchor="middle">or XLSX, PPTX, PDF, CAD, email,</text>
+  <text x="130" y="387" font-size="11" fill="#64748b" text-anchor="middle">archives: 190+ formats</text>
+
+  <!-- document -> viewer -->
+  <path d="M206 222 L292 222" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- GroupDocs.Viewer -->
+  <g filter="url(#shadow)">
+    <rect x="300" y="172" width="200" height="100" rx="14" fill="#1d4ed8"/>
+  </g>
+  <text x="400" y="212" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">GroupDocs.Viewer</text>
+  <text x="400" y="240" font-size="12.5" fill="#dbeafe" text-anchor="middle" font-family="'Roboto Mono', Consolas, monospace">viewer.View(options)</text>
+
+  <!-- viewer -> outputs -->
+  <g stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M500 200 C530 200 520 87 550 87"/>
+    <path d="M500 214 C530 214 520 179 550 179"/>
+    <path d="M500 230 C530 230 520 271 550 271"/>
+    <path d="M500 244 C530 244 520 363 550 363"/>
+  </g>
+
+  <!-- HTML: one file per page -->
+  <text x="560" y="58" font-size="12" font-weight="600" fill="#1d4ed8" font-family="'Roboto Mono', Consolas, monospace">HtmlViewOptions</text>
+  <g font-size="10" fill="#475569" text-anchor="middle">
+    <use href="#page" x="560" y="66"/><rect x="566" y="96" width="24" height="10" rx="2" fill="#e44d26"/><text x="578" y="104" font-size="7" font-weight="700" fill="#ffffff">HTML</text>
+    <use href="#page" x="624" y="66"/><rect x="630" y="96" width="24" height="10" rx="2" fill="#e44d26"/><text x="642" y="104" font-size="7" font-weight="700" fill="#ffffff">HTML</text>
+    <use href="#page" x="688" y="66"/><rect x="694" y="96" width="24" height="10" rx="2" fill="#e44d26"/><text x="706" y="104" font-size="7" font-weight="700" fill="#ffffff">HTML</text>
+    <text x="578" y="125">page_1.html</text><text x="642" y="125">page_2.html</text><text x="706" y="125">page_3.html</text>
+  </g>
+  <text x="752" y="85" font-size="12.5" fill="#0f172a">One file per page</text>
+  <text x="752" y="102" font-size="11" fill="#64748b">resources inside</text>
+  <text x="752" y="116" font-size="11" fill="#64748b">or next to it</text>
+
+  <!-- PNG: one image per page -->
+  <text x="560" y="150" font-size="12" font-weight="600" fill="#1d4ed8" font-family="'Roboto Mono', Consolas, monospace">PngViewOptions</text>
+  <g font-size="10" fill="#475569" text-anchor="middle">
+    <use href="#page" x="560" y="158"/><rect x="566" y="188" width="24" height="10" rx="2" fill="#0e9f6e"/><text x="578" y="196" font-size="7" font-weight="700" fill="#ffffff">PNG</text>
+    <use href="#page" x="624" y="158"/><rect x="630" y="188" width="24" height="10" rx="2" fill="#0e9f6e"/><text x="642" y="196" font-size="7" font-weight="700" fill="#ffffff">PNG</text>
+    <use href="#page" x="688" y="158"/><rect x="694" y="188" width="24" height="10" rx="2" fill="#0e9f6e"/><text x="706" y="196" font-size="7" font-weight="700" fill="#ffffff">PNG</text>
+    <text x="578" y="217">page_1.png</text><text x="642" y="217">page_2.png</text><text x="706" y="217">page_3.png</text>
+  </g>
+  <text x="752" y="177" font-size="12.5" fill="#0f172a">One image per page</text>
+  <text x="752" y="194" font-size="11" fill="#64748b">lossless</text>
+
+  <!-- JPEG: one image per page -->
+  <text x="560" y="242" font-size="12" font-weight="600" fill="#1d4ed8" font-family="'Roboto Mono', Consolas, monospace">JpgViewOptions</text>
+  <g font-size="10" fill="#475569" text-anchor="middle">
+    <use href="#page" x="560" y="250"/><rect x="566" y="280" width="24" height="10" rx="2" fill="#7e3af2"/><text x="578" y="288" font-size="7" font-weight="700" fill="#ffffff">JPG</text>
+    <use href="#page" x="624" y="250"/><rect x="630" y="280" width="24" height="10" rx="2" fill="#7e3af2"/><text x="642" y="288" font-size="7" font-weight="700" fill="#ffffff">JPG</text>
+    <use href="#page" x="688" y="250"/><rect x="694" y="280" width="24" height="10" rx="2" fill="#7e3af2"/><text x="706" y="288" font-size="7" font-weight="700" fill="#ffffff">JPG</text>
+    <text x="578" y="309">page_1.jpg</text><text x="642" y="309">page_2.jpg</text><text x="706" y="309">page_3.jpg</text>
+  </g>
+  <text x="752" y="269" font-size="12.5" fill="#0f172a">One image per page</text>
+  <text x="752" y="286" font-size="11" fill="#64748b">smaller files</text>
+
+  <!-- PDF: one file with every page -->
+  <text x="560" y="334" font-size="12" font-weight="600" fill="#1d4ed8" font-family="'Roboto Mono', Consolas, monospace">PdfViewOptions</text>
+  <g font-size="10" fill="#475569" text-anchor="middle">
+    <rect x="568" y="342" width="36" height="46" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="564" y="346" width="36" height="46" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+    <use href="#page" x="560" y="350"/><rect x="566" y="380" width="24" height="10" rx="2" fill="#e02424"/><text x="578" y="388" font-size="7" font-weight="700" fill="#ffffff">PDF</text>
+    <text x="580" y="411">output.pdf</text>
+  </g>
+  <text x="752" y="361" font-size="12.5" fill="#0f172a">One file</text>
+  <text x="752" y="378" font-size="11" fill="#64748b">all 3 pages inside</text>
+</svg>

@@ -1,0 +1,114 @@
+.p1-30c00ff0000-_1_ sup {
+	vertical-align: baseline;
+	position: relative;
+	top: -0.4em;
+}
+.p1-30c00ff0000-_1_ sub {
+	vertical-align: baseline;
+	position: relative;
+	top: 0.4em;
+}
+.p1-30c00ff0000-_1_ a:link {text-decoration:none;}
+@media print{.p1-30c00ff0000-_1_view {font-size:1em; transform:scale(1);}}
+.grlink { position:relative;width:100%;height:100%;z-index:1000000; }
+.p1-30c00ff0000-_1_01 {
+	position: absolute;
+	white-space: nowrap;
+}
+.p1-30c00ff0000-_1_02 {
+	font-size: 1em;
+	line-height: 0.0em;
+	width: 3371.00pt;
+	height: 498.00pt;
+	border-style: none;
+	display: block;
+	margin: 0em;
+}
+
+@supports(-ms-ime-align:auto) { .p1-30c00ff0000-_1_02 {overflow: hidden;}}
+.p1-30c00ff0000-_1_03 {
+	position: relative;
+}
+.p1-30c00ff0000-_1_04 {
+	position: absolute;
+	left: 0.00pt;
+	top: 0.00pt;
+}
+.p1-30c00ff0000-_1_05 {
+	position: relative;
+	width: 3371.00pt;
+}
+.p1-30c00ff0000-_1_06 {
+	height: 498.00pt;
+}
+@font-face {
+	font-family:"Calibri";
+	font-weight: normal;
+	src: calibri.ttf;
+}
+@font-face {
+	font-family:"Calibri";
+	font-weight: normal;
+	src: url('page_1/resource_1_f.ttf') format("truetype");
+}
+.p1-30c00ff0000-_1_07 {
+	font-size: 10.00pt;
+	font-family: "Calibri";
+	color: #000000;
+}
+.p1-30c00ff0000-_1_08 {
+	line-height: 12.21pt;
+}
+.p1-30c00ff0000-_1_09 {
+	letter-spacing: 0.00pt;
+}
+
+.p1-30c00ff0000-_1_ie .p1-30c00ff0000-_1_09 {
+	letter-spacing: 0px;
+}
+@font-face {
+	font-family:"Arial";
+	font-weight: normal;
+	src: arial.ttf;
+}
+@font-face {
+	font-family:"Arial";
+	font-weight: normal;
+	src: url('page_1/resource_1_f1.ttf') format("truetype");
+}
+.p1-30c00ff0000-_1_10 {
+	font-size: 8.00pt;
+	font-family: "Arial";
+	color: #000000;
+}
+.p1-30c00ff0000-_1_11 {
+	line-height: 8.94pt;
+}
+@font-face {
+	font-family:"Calibri";
+	font-weight: normal;
+	src: calibrib.ttf;
+}
+@font-face {
+	font-family:"Calibri";
+	font-weight: bold;
+	src: url('page_1/resource_1_f2.ttf') format("truetype");
+}
+.p1-30c00ff0000-_1_12 {
+	font-size: 11.00pt;
+	font-family: "Calibri";
+	color: #000000;
+}
+.p1-30c00ff0000-_1_13 {
+	line-height: 13.43pt;
+}
+@font-face {
+	font-family:"Arial";
+	font-weight: normal;
+	src: arialbd.ttf;
+}
+@font-face {
+	font-family:"Arial";
+	font-weight: bold;
+	src: url('page_1/resource_1_f3.ttf') format("truetype");
+}

@@ -61,18 +61,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-ebook-to-html-outputs.zip" >}}  
 ```text
-render_ebook_to_html/pdf_page_1.html (35 KB)
-render_ebook_to_html/pdf_page_2.html (36 KB)
-render_ebook_to_html/pdf_page_3.html (36 KB)
-render_ebook_to_html/pdf_page_4.html (35 KB)
+render_ebook_to_html/pdf_page_1.html (48 KB)
+render_ebook_to_html/pdf_page_2.html (507 KB)
+render_ebook_to_html/pdf_page_3.html (312 KB)
+render_ebook_to_html/pdf_page_4.html (424 KB)
+render_ebook_to_html/pdf_page_5.html (479 KB)
+render_ebook_to_html/pdf_page_6.html (357 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ebooks/render_ebook_to_html/render-ebook-to-html-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an EBook to HTML](/viewer/python-net/images/rendering-basics/render-ebooks/render-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -94,7 +92,8 @@ def render_ebook_to_html_external():
         # Create an HTML file for each document page.
         # Specify the HTML file names and location of external resources.
         # {0} and {1} are replaced with the current page number and resource name, respectively.
-        viewOptions = HtmlViewOptions.for_external_resources("render_ebook_to_html_external/pdf_page_{0}.html", "render_ebook_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_ebook_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        # The resource URL is relative to the HTML file.
+        viewOptions = HtmlViewOptions.for_external_resources("render_ebook_to_html_external/pdf_page_{0}.html", "render_ebook_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -108,25 +107,23 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-ebook-to-html-external-outputs.zip" >}}  
 ```text
-render_ebook_to_html_external/pdf_page_1.html (1 KB)
-render_ebook_to_html_external/pdf_page_1/resource_1_f.woff (9 KB)
-render_ebook_to_html_external/pdf_page_1/resource_1_f1.woff (12 KB)
+render_ebook_to_html_external/pdf_page_1.html (2 KB)
+render_ebook_to_html_external/pdf_page_1/resource_1_f.woff (11 KB)
+render_ebook_to_html_external/pdf_page_1/resource_1_f1.woff (18 KB)
 render_ebook_to_html_external/pdf_page_1/resource_1_i.png (3 KB)
-render_ebook_to_html_external/pdf_page_1/resource_1_s.css (2 KB)
-render_ebook_to_html_external/pdf_page_2.html (1 KB)
-render_ebook_to_html_external/pdf_page_2/resource_2_f.woff (9 KB)
-render_ebook_to_html_external/pdf_page_2/resource_2_f1.woff (12 KB)
-render_ebook_to_html_external/pdf_page_2/resource_2_i.png (3 KB)
-render_ebook_to_html_external/pdf_page_2/resource_2_s.css (2 KB)
-[TRUNCATED] (20 files total)
+render_ebook_to_html_external/pdf_page_1/resource_1_s.css (3 KB)
+render_ebook_to_html_external/pdf_page_2.html (4 KB)
+render_ebook_to_html_external/pdf_page_2/resource_2_f.woff (13 KB)
+render_ebook_to_html_external/pdf_page_2/resource_2_f1.woff (20 KB)
+render_ebook_to_html_external/pdf_page_2/resource_2_i.png (342 KB)
+render_ebook_to_html_external/pdf_page_2/resource_2_s.css (3 KB)
+[TRUNCATED] (30 files total)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ebooks/render_ebook_to_html_external/render-ebook-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/python-net/images/rendering-basics/render-ebooks/render-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ## Render EBooks as PDF
 
@@ -157,15 +154,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "ebook.pdf" >}}  
 ```text
-Binary file (PDF, 28 KB)
+Binary file (PDF, 340 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ebooks/render_ebook_to_pdf/ebook.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an EBook to PDF](/viewer/python-net/images/rendering-basics/render-ebooks/render-to-pdf.png)
 
 ## Render EBooks as PNG
 
@@ -199,17 +192,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-ebook-to-png-outputs.zip" >}}  
 ```text
-render_ebook_to_png/ebook_page_0_1.png (9 KB)
-render_ebook_to_png/ebook_page_0_2.png (9 KB)
-render_ebook_to_png/ebook_page_0_3.png (9 KB)
-render_ebook_to_png/ebook_page_0_4.png (9 KB)
+render_ebook_to_png/ebook_page_0_1.png (40 KB)
+render_ebook_to_png/ebook_page_0_2.png (372 KB)
+render_ebook_to_png/ebook_page_0_3.png (226 KB)
+render_ebook_to_png/ebook_page_0_4.png (305 KB)
+render_ebook_to_png/ebook_page_0_5.png (360 KB)
+render_ebook_to_png/ebook_page_0_6.png (288 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ebooks/render_ebook_to_png/render-ebook-to-png-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-The following image demonstrates the result:
-
-![Render an EBook to PNG](/viewer/python-net/images/rendering-basics/render-ebooks/render-to-png-image.png)
 
 ## Render EBooks as JPEG
 
@@ -243,10 +235,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-ebook-to-jpg-outputs.zip" >}}  
 ```text
-render_ebook_to_jpg/ebook_to_jpg_1.jpg (14 KB)
-render_ebook_to_jpg/ebook_to_jpg_2.jpg (14 KB)
-render_ebook_to_jpg/ebook_to_jpg_3.jpg (14 KB)
-render_ebook_to_jpg/ebook_to_jpg_4.jpg (14 KB)
+render_ebook_to_jpg/ebook_to_jpg_1.jpg (31 KB)
+render_ebook_to_jpg/ebook_to_jpg_2.jpg (75 KB)
+render_ebook_to_jpg/ebook_to_jpg_3.jpg (47 KB)
+render_ebook_to_jpg/ebook_to_jpg_4.jpg (60 KB)
+render_ebook_to_jpg/ebook_to_jpg_5.jpg (66 KB)
+render_ebook_to_jpg/ebook_to_jpg_6.jpg (73 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ebooks/render_ebook_to_jpg/render-ebook-to-jpg-outputs.zip)
 {{< /tab >}}

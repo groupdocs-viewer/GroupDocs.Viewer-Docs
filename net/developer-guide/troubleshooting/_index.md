@@ -7,6 +7,7 @@ description: "This section contains issues that you may face and solutions for t
 keywords: 
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
+toc: True
 ---
 This section describes issues that you may face processing files with GroupDocs.Viewer and solutions for them. The `Known issues` subsection describes the limitations known.
 

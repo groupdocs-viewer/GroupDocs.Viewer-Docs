@@ -1,0 +1,51 @@
+{
+  "file": "viewer/net/_preview/ccb0fdd86e7de3e9.epub",
+  "fileName": "sample.epub",
+  "fileType": "epub",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 595,
+      "height": 842,
+      "pageUrl": "/viewer/net/_preview/ccb0fdd86e7de3e9.epub/page-1.png",
+      "thumbUrl": "/viewer/net/_preview/ccb0fdd86e7de3e9.epub/page-1.png"
+    },
+    {
+      "number": 2,
+      "width": 595,
+      "height": 842,
+      "pageUrl": "/viewer/net/_preview/ccb0fdd86e7de3e9.epub/page-2.jpg",
+      "thumbUrl": "/viewer/net/_preview/ccb0fdd86e7de3e9.epub/page-2.jpg"
+    },
+    {
+      "number": 3,
+      "width": 595,
+      "height": 842,
+      "pageUrl": "/viewer/net/_preview/ccb0fdd86e7de3e9.epub/page-3.jpg",
+      "thumbUrl": "/viewer/net/_preview/ccb0fdd86e7de3e9.epub/page-3.jpg"
+    },
+    {
+      "number": 4,
+      "width": 595,
+      "height": 842,
+      "pageUrl": "/viewer/net/_preview/ccb0fdd86e7de3e9.epub/page-4.jpg",
+      "thumbUrl": "/viewer/net/_preview/ccb0fdd86e7de3e9.epub/page-4.jpg"
+    },
+    {
+      "number": 5,
+      "width": 595,
+      "height": 842,
+      "pageUrl": "/viewer/net/_preview/ccb0fdd86e7de3e9.epub/page-5.jpg",
+      "thumbUrl": "/viewer/net/_preview/ccb0fdd86e7de3e9.epub/page-5.jpg"
+    },
+    {
+      "number": 6,
+      "width": 595,
+      "height": 842,
+      "pageUrl": "/viewer/net/_preview/ccb0fdd86e7de3e9.epub/page-6.jpg",
+      "thumbUrl": "/viewer/net/_preview/ccb0fdd86e7de3e9.epub/page-6.jpg"
+    }
+  ]
+}

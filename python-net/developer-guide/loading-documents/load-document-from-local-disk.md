@@ -39,9 +39,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "load-document-from-local-disk-outputs.zip" >}}  
 ```text
-load_document_from_local_disk/document_from_local_disk_1.html (317 KB)
-load_document_from_local_disk/document_from_local_disk_2.html (149 KB)
-load_document_from_local_disk/document_from_local_disk_3.html (113 KB)
+load_document_from_local_disk/document_from_local_disk_1.html (253 KB)
+load_document_from_local_disk/document_from_local_disk_2.html (110 KB)
+load_document_from_local_disk/document_from_local_disk_3.html (148 KB)
+load_document_from_local_disk/document_from_local_disk_4.html (1001 KB)
+load_document_from_local_disk/document_from_local_disk_5.html (86 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/loading-documents/load-document-from-local-disk/load_document_from_local_disk/load-document-from-local-disk-outputs.zip)
 {{< /tab >}}

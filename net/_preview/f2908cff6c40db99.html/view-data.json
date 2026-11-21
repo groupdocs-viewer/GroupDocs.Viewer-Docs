@@ -1,0 +1,30 @@
+{
+  "file": "viewer/net/_preview/f2908cff6c40db99.html",
+  "fileName": "render-visio-to-html-external.zip",
+  "fileType": "html",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/net/_preview/f2908cff6c40db99.html/page-1.html",
+      "thumbUrl": "/viewer/net/_preview/f2908cff6c40db99.html/page-1.html"
+    },
+    {
+      "number": 2,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/net/_preview/f2908cff6c40db99.html/page-2.html",
+      "thumbUrl": "/viewer/net/_preview/f2908cff6c40db99.html/page-2.html"
+    },
+    {
+      "number": 3,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/net/_preview/f2908cff6c40db99.html/page-3.html",
+      "thumbUrl": "/viewer/net/_preview/f2908cff6c40db99.html/page-3.html"
+    }
+  ]
+}

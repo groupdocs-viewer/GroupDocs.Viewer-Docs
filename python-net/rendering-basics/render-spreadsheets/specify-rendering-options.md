@@ -55,20 +55,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "invoice.xlsx" >}}
 {{< tab-text >}}
-`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "headings.pdf" >}}  
 ```text
-Binary file (PDF, 521 KB)
+Binary file (PDF, 85 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/render_headings/headings.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Excel file with row and column headings to PDF](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-row-and-column-headings-to-pdf.png)
 
 ## Render worksheet gridlines
 
@@ -97,20 +93,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "invoice.xlsx" >}}
 {{< tab-text >}}
-`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "grid_lines.pdf" >}}  
 ```text
-Binary file (PDF, 479 KB)
+Binary file (PDF, 81 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/render_grid_lines/grid_lines.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Excel file with gridlines to PDF](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-excel-gridlines-to-pdf.png)
 
 ## Control cell text overflow
 
@@ -159,12 +151,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "invoice.xlsx" >}}
 {{< tab-text >}}
-`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "text_overflow_mode.pdf" >}}  
 ```text
-Binary file (PDF, 467 KB)
+Binary file (PDF, 80 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/set_text_overflow_mode/text_overflow_mode.pdf)
 {{< /tab >}}
@@ -200,20 +192,18 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "invoice.xlsx" >}}
 {{< tab-text >}}
-`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "hidden_rows_and_columns.pdf" >}}  
 ```text
-Binary file (PDF, 461 KB)
+Binary file (PDF, 81 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/render_hidden_rows_and_columns/hidden_rows_and_columns.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. Hidden rows and columns appear in the generated PDF file.
-
-![Hidden rows and columns in a worksheet](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-excel-with-hidden-columns-and-rows-to-pdf.png)
+Hidden rows and columns appear in the generated PDF file.
 
 ## Render hidden worksheets
 
@@ -242,12 +232,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "invoice.xlsx" >}}
 {{< tab-text >}}
-`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "hidden_pages.pdf" >}}  
 ```text
-Binary file (PDF, 461 KB)
+Binary file (PDF, 83 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/render_hidden_pages/hidden_pages.pdf)
 {{< /tab >}}
@@ -279,24 +269,20 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "invoice.xlsx" >}}
 {{< tab-text >}}
-`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "skip_empty_rows_and_columns.pdf" >}}  
 ```text
-Binary file (PDF, 451 KB)
+Binary file (PDF, 80 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/skip_empty_rows_and_columns/skip_empty_rows_and_columns.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates the result:
-
-![Skip empty columns and rows](/viewer/python-net/images/rendering-basics/render-spreadsheets/excel-skip-empty-columns-and-rows.png)
-
 ## Render cell comments
 
-Use the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option to display cell comments in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
+Cell comments are rendered by default: the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) property is `True` unless you change it. The example below sets it explicitly; set it to `False` to hide the comments when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
 
 {{< tabs "example7">}}
 {{< tab "Python" >}}
@@ -306,7 +292,7 @@ from groupdocs.viewer.options import PngViewOptions
 
 def render_comments():
     # Load spreadsheet
-    with Viewer("invoice.xlsx") as viewer:
+    with Viewer("with_comments.xlsx") as viewer:
         # Convert the spreadsheet to PNG.
         # {0} is replaced with the current page number in the file names.
         viewOptions = PngViewOptions("render_comments/comments_{0}.png")
@@ -318,36 +304,24 @@ if __name__ == "__main__":
     render_comments()
 ```
 {{< /tab >}}
-{{< tab "invoice.xlsx" >}}
+{{< tab "with_comments.xlsx" >}}
 {{< tab-text >}}
-`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
+`with_comments.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/with_comments.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "render-comments-outputs.zip" >}}  
 ```text
-render_comments/comments_1.png (100 KB)
-render_comments/comments_10.png (80 KB)
-render_comments/comments_11.png (74 KB)
-render_comments/comments_12.png (73 KB)
-render_comments/comments_13.png (78 KB)
-render_comments/comments_14.png (33 KB)
-render_comments/comments_15.png (101 KB)
-render_comments/comments_16.png (101 KB)
-render_comments/comments_17.png (107 KB)
-render_comments/comments_18.png (110 KB)
-[TRUNCATED] (42 files total)
+render_comments/comments_1.png (25 KB)
+render_comments/comments_2.png (101 KB)
+render_comments/comments_3.png (30 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/render_comments/render-comments-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The following image demonstrates the result:
-
-![Render cell comments](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-excel-comments-to-png.png)
-
 ## Set worksheet margins in the output pdf pages
 
-Use the [SpreadsheetOptions.render_grid_lines](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/properties/rendergridlines) properties to set margins for worksheets in the output pdf. If margins are set to value less than 0 or not set then default value will be used.
+Use the [SpreadsheetOptions.left_margin, right_margin, top_margin and bottom_margin](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/#properties) properties to set margins for worksheets in the output pdf. If margins are set to value less than 0 or not set then default value will be used.
 
 The following code example demonstrates how to convert an Excel workbook to PDF and set optional margins for worksheets in the output PDF file:
 
@@ -376,17 +350,13 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "invoice.xlsx" >}}
 {{< tab-text >}}
-`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "worksheet_margins.pdf" >}}  
 ```text
-Binary file (PDF, 461 KB)
+Binary file (PDF, 81 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/set_worksheet_margins/worksheet_margins.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Excel file with worksheet margins on page to PDF](/viewer/python-net/images/rendering-basics/render-spreadsheets/set-worksheet-margins-in-the-output-pdf-pages.png)

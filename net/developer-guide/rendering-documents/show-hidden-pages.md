@@ -18,7 +18,7 @@ This feature is supported for the following format families:
 
 The following code snippet shows how to enable rendering of hidden items:
 
-{{< tabs "example1">}}
+{{< tabs "show-hidden-pages">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -55,5 +55,23 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/show-hidden-pages/sample.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "show-hidden-pages.zip" >}}  
+```text
+p_1.html (467 KB)
+p_2.html (329 KB)
+p_3.html (344 KB)
+p_4.html (343 KB)
+p_5.html (347 KB)
+p_6.html (333 KB)
+p_7.html (327 KB)
+p_8.html (330 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/show-hidden-pages/ShowHiddenPages/show-hidden-pages.zip)
 {{< /tab >}}
 {{< /tabs >}}

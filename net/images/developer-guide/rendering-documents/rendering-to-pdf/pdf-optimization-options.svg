@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 418" width="900" height="418" role="img" aria-labelledby="t d" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <title id="t">What the PDF optimization options change</title>
+  <desc id="d">Set through viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions { ... };. Open faster in a browser: Lineriaze the first pages show before the whole file downloads. Smaller images: CompressImages + ImageQuality re-compress them at a JPEG quality; ResizeImages + MaxResolution lower their resolution, with CompressImages; ConvertToGrayScale RGB to grayscale, for faster printing. Lighter fonts: SubsetFonts remove unused instructions from embedded fonts. Less content: RemoveAnnotations drop the annotations; RemoveFormFields flatten the form fields. No unused data: RemoveUnusedObjects objects nothing refers to any more; RemoveUnusedStreams resources that no page uses. Spreadsheets: OptimizeSpreadsheets border lines, and Arial and Times New Roman characters 32–127.</desc>
+  <rect x="0.5" y="0.5" width="899" height="417" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="40" y="33" font-size="11" font-weight="600" fill="#64748b" letter-spacing="1.2" text-anchor="start">WHAT EACH OPTION CHANGES IN THE OUTPUT PDF</text>
+  <text x="40" y="56" font-size="12" fill="#0f172a" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">viewOptions.PdfOptimizationOptions = new PdfOptimizationOptions { ... };</text>
+  <rect x="24" y="74" width="274" height="156" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <circle cx="52" cy="102" r="15" fill="#1d4ed8"/>
+  <g transform="translate(52 102)"><circle cx="0" cy="0" r="7.5" fill="none" stroke="#ffffff" stroke-width="1.6"/><ellipse cx="0" cy="0" rx="3.2" ry="7.5" fill="none" stroke="#ffffff" stroke-width="1.4"/><line x1="-7.5" y1="0" x2="7.5" y2="0" stroke="#ffffff" stroke-width="1.4"/></g>
+  <text x="76" y="107" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="start">Open faster in a browser</text>
+  <text x="42" y="136" font-size="11" font-weight="600" fill="#1d4ed8" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">Lineriaze</text>
+  <text x="42" y="151" font-size="11" fill="#475569" text-anchor="start">the first pages show before the whole file</text>
+  <text x="42" y="166" font-size="11" fill="#475569" text-anchor="start">downloads</text>
+  <rect x="313" y="74" width="274" height="156" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <circle cx="341" cy="102" r="15" fill="#0e9f6e"/>
+  <g transform="translate(341 102)"><rect x="-8" y="-6" width="16" height="12" rx="2" fill="none" stroke="#ffffff" stroke-width="1.6"/><path d="M-6 4 L-2 -1 L1 2 L3 0 L6 4 Z" fill="#ffffff"/><circle cx="3" cy="-3" r="1.4" fill="#ffffff"/></g>
+  <text x="365" y="107" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="start">Smaller images</text>
+  <text x="331" y="136" font-size="11" font-weight="600" fill="#1d4ed8" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">CompressImages + ImageQuality</text>
+  <text x="331" y="151" font-size="11" fill="#475569" text-anchor="start">re-compress them at a JPEG quality</text>
+  <text x="331" y="170" font-size="11" font-weight="600" fill="#1d4ed8" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">ResizeImages + MaxResolution</text>
+  <text x="331" y="185" font-size="11" fill="#475569" text-anchor="start">lower their resolution, with CompressImages</text>
+  <text x="331" y="204" font-size="11" font-weight="600" fill="#1d4ed8" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">ConvertToGrayScale</text>
+  <text x="331" y="219" font-size="11" fill="#475569" text-anchor="start">RGB to grayscale, for faster printing</text>
+  <rect x="602" y="74" width="274" height="156" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <circle cx="630" cy="102" r="15" fill="#7c3aed"/>
+  <g transform="translate(630 102)"><text x="0" y="4.5" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Aa</text></g>
+  <text x="654" y="107" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="start">Lighter fonts</text>
+  <text x="620" y="136" font-size="11" font-weight="600" fill="#1d4ed8" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">SubsetFonts</text>
+  <text x="620" y="151" font-size="11" fill="#475569" text-anchor="start">remove unused instructions from embedded fonts</text>
+  <rect x="24" y="244" width="274" height="156" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <circle cx="52" cy="272" r="15" fill="#d97706"/>
+  <g transform="translate(52 272)"><path d="M-6 -8 H3 L7 -4 V8 H-6 Z" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round"/><line x1="-3" y1="-1" x2="4" y2="-1" stroke="#ffffff" stroke-width="1.4"/><line x1="-3" y1="3" x2="4" y2="3" stroke="#ffffff" stroke-width="1.4"/></g>
+  <text x="76" y="277" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="start">Less content</text>
+  <text x="42" y="306" font-size="11" font-weight="600" fill="#1d4ed8" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">RemoveAnnotations</text>
+  <text x="42" y="321" font-size="11" fill="#475569" text-anchor="start">drop the annotations</text>
+  <text x="42" y="340" font-size="11" font-weight="600" fill="#1d4ed8" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">RemoveFormFields</text>
+  <text x="42" y="355" font-size="11" fill="#475569" text-anchor="start">flatten the form fields</text>
+  <rect x="313" y="244" width="274" height="156" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <circle cx="341" cy="272" r="15" fill="#64748b"/>
+  <g transform="translate(341 272)"><path d="M-6 -4 H6 L5 8 H-5 Z" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round"/><line x1="-8" y1="-5" x2="8" y2="-5" stroke="#ffffff" stroke-width="1.6"/><line x1="-2" y1="-8" x2="2" y2="-8" stroke="#ffffff" stroke-width="1.6"/></g>
+  <text x="365" y="277" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="start">No unused data</text>
+  <text x="331" y="306" font-size="11" font-weight="600" fill="#1d4ed8" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">RemoveUnusedObjects</text>
+  <text x="331" y="321" font-size="11" fill="#475569" text-anchor="start">objects nothing refers to any more</text>
+  <text x="331" y="340" font-size="11" font-weight="600" fill="#1d4ed8" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">RemoveUnusedStreams</text>
+  <text x="331" y="355" font-size="11" fill="#475569" text-anchor="start">resources that no page uses</text>
+  <rect x="602" y="244" width="274" height="156" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <circle cx="630" cy="272" r="15" fill="#0891b2"/>
+  <g transform="translate(630 272)"><rect x="-7" y="-6" width="14" height="12" fill="none" stroke="#ffffff" stroke-width="1.5"/><line x1="-7" y1="-2" x2="7" y2="-2" stroke="#ffffff" stroke-width="1.2"/><line x1="-7" y1="2" x2="7" y2="2" stroke="#ffffff" stroke-width="1.2"/><line x1="-2" y1="-6" x2="-2" y2="6" stroke="#ffffff" stroke-width="1.2"/><line x1="3" y1="-6" x2="3" y2="6" stroke="#ffffff" stroke-width="1.2"/></g>
+  <text x="654" y="277" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="start">Spreadsheets</text>
+  <text x="620" y="306" font-size="11" font-weight="600" fill="#1d4ed8" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">OptimizeSpreadsheets</text>
+  <text x="620" y="321" font-size="11" fill="#475569" text-anchor="start">border lines, and Arial and Times New Roman</text>
+  <text x="620" y="336" font-size="11" fill="#475569" text-anchor="start">characters 32–127</text>
+</svg>

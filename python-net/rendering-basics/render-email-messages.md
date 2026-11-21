@@ -65,16 +65,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "pdf_page_1.html" >}}  
 ```text
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta name="generator" content="Aspose.Words for .NET 26.4.0" /><title></title><style type="text/css">@font-face { font-family:Arial; font-weight:bold; src:url('data:application/x-font-ttf;base64,AAEAAAANAIAAAwBQT1MvMhV1XrAAAADcAAAAYGNtYXACmgLeAAABPAAAAJRjdnQg/8OtRwAAAdAAAAdgZnBnbbonEaYAAAkwAAAGPmdseWaZhXVuAAAPcAAAD/ZoZWFko/AZVwAAH2gAAAA2aGhlYRJ+CNgAAB+gAAAA
-[TRUNCATED]
+HTML file (244 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_to_html/pdf_page_1.html)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an email message to HTML](/viewer/python-net/images/rendering-basics/render-email-messages/render-email-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -95,7 +90,8 @@ def render_email_to_html_external():
     with Viewer("sample.eml") as viewer:
         # Specify the HTML file name and location of external resources.
         # {0} is replaced with the resource name in the output file name.
-        viewOptions = HtmlViewOptions.for_external_resources("render_email_to_html_external/pdf_page_{0}.html", "render_email_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_email_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        # The resource URL is relative to the HTML file.
+        viewOptions = HtmlViewOptions.for_external_resources("render_email_to_html_external/pdf_page_{0}.html", "render_email_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -109,20 +105,19 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-email-to-html-external-outputs.zip" >}}  
 ```text
-render_email_to_html_external/pdf_page_1.html (4 KB)
-render_email_to_html_external/pdf_page_1/resource_1_f.ttf (25 KB)
-render_email_to_html_external/pdf_page_1/resource_1_f1.ttf (41 KB)
-render_email_to_html_external/pdf_page_1/resource_1_f2.ttf (30 KB)
-render_email_to_html_external/pdf_page_1/resource_1_f3.ttf (41 KB)
+render_email_to_html_external/pdf_page_1.html (15 KB)
+render_email_to_html_external/pdf_page_1/resource_1_f.ttf (54 KB)
+render_email_to_html_external/pdf_page_1/resource_1_f1.ttf (36 KB)
+render_email_to_html_external/pdf_page_1/resource_1_f2.ttf (45 KB)
+render_email_to_html_external/pdf_page_1/resource_1_f3.ttf (32 KB)
+render_email_to_html_external/pdf_page_1/resource_1_i.png (3 KB)
 render_email_to_html_external/pdf_page_1/resource_1_s.css (3 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_to_html_external/render-email-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The result is shown below. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/python-net/images/rendering-basics/render-email-messages/render-email-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ## Render email messages as PDF
 
@@ -152,15 +147,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "email_message.pdf" >}}  
 ```text
-Binary file (PDF, 73 KB)
+Binary file (PDF, 112 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_to_pdf/email_message.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an email message to PDF](/viewer/python-net/images/rendering-basics/render-email-messages/render-email-to-pdf.png)
 
 ## Render email messages as PNG
 
@@ -175,8 +166,9 @@ from groupdocs.viewer.options import PngViewOptions
 def render_email_to_png():
     # Load email message
     with Viewer("sample.eml") as viewer:
-        # Create a PNG file.
-        viewOptions = PngViewOptions("render_email_to_png/email_page_0.png")
+        # Create a PNG file for each page.
+        # {0} is replaced with the current page number in the file name.
+        viewOptions = PngViewOptions("render_email_to_png/email_page_{0}.png")
         # Set width and height.
         viewOptions.width = 800
         viewOptions.height = 1000
@@ -191,17 +183,14 @@ if __name__ == "__main__":
 `sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "email_page_0.png" >}}  
+{{< tab "render-email-to-png-outputs.zip" >}}  
 ```text
-Binary file (PNG, 15 KB)
+render_email_to_png/email_page_1.png (159 KB)
+render_email_to_png/email_page_2.png (42 KB)
 ```
-[Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_to_png/email_page_0.png)
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_to_png/render-email-to-png-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an email message to PNG](/viewer/python-net/images/rendering-basics/render-email-messages/render-email-to-png.png)
 
 ## Render email messages as JPEG
 
@@ -216,8 +205,9 @@ from groupdocs.viewer.options import JpgViewOptions
 def render_email_to_jpg():
     # Load email message
     with Viewer("sample.eml") as viewer:
-        # Create a JPG file.
-        viewOptions = JpgViewOptions("render_email_to_jpg/email_to_jpg.jpg")
+        # Create a JPG file for each page.
+        # {0} is replaced with the current page number in the file name.
+        viewOptions = JpgViewOptions("render_email_to_jpg/email_to_jpg_{0}.jpg")
         # Set width and height.
         viewOptions.width = 800
         viewOptions.height = 1000
@@ -232,11 +222,12 @@ if __name__ == "__main__":
 `sample.eml` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "email_to_jpg.jpg" >}}  
+{{< tab "render-email-to-jpg-outputs.zip" >}}  
 ```text
-Binary file (JPG, 19 KB)
+render_email_to_jpg/email_to_jpg_1.jpg (114 KB)
+render_email_to_jpg/email_to_jpg_2.jpg (36 KB)
 ```
-[Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_to_jpg/email_to_jpg.jpg)
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_to_jpg/render-email-to-jpg-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -267,7 +258,7 @@ def render_email_with_page_size():
         # Create a PDF file.
         viewOptions = PdfViewOptions("render_email_with_page_size/email_with_page_size.pdf")
         # Specify the page size.
-        viewOptions.email_options.page_size = PageSize.LETTER
+        viewOptions.email_options.page_size = PageSize.A4
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -281,7 +272,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "email_with_page_size.pdf" >}}  
 ```text
-Binary file (PDF, 73 KB)
+Binary file (PDF, 112 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_with_page_size/email_with_page_size.pdf)
 {{< /tab >}}
@@ -326,13 +317,8 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "email_with_datetime_format.html" >}}  
 ```text
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta name="generator" content="Aspose.Words for .NET 26.4.0" /><title></title><style type="text/css">@font-face { font-family:Arial; font-weight:bold; src:url('data:application/x-font-ttf;base64,AAEAAAANAIAAAwBQT1MvMhV1XrAAAADcAAAAYGNtYXACmgLeAAABPAAAAJRjdnQg/8OtRwAAAdAAAAdgZnBnbbonEaYAAAkwAAAGPmdseWaZhXVuAAAPcAAAD/ZoZWFko/AZVwAAH2gAAAA2aGhlYRJ+CNgAAB+gAAAA
-[TRUNCATED]
+HTML file (244 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-email-messages/render_email_with_datetime_format/email_with_datetime_format.html)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Custom date-time format](/viewer/python-net/images/rendering-basics/render-email-messages/custom-date-time-format.png)

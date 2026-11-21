@@ -27,7 +27,7 @@ You can cancel tasks using one of the following methods:
 
 The following code snippet shows how to cancel a task:
 
-{{< tabs "example1">}}
+{{< tabs "cancel-rendering">}}
 {{< tab "C#" >}}
 ```csharp
 using System.Diagnostics;
@@ -99,6 +99,11 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/cancel-rendering/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 

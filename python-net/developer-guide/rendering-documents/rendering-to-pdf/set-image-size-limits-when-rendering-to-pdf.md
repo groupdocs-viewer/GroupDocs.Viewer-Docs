@@ -61,7 +61,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "image_with_size_limits.pdf" >}}  
 ```text
-Binary file (PDF, 24 KB)
+Binary file (PDF, 590 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/set-image-size-limits-when-rendering-to-pdf/set_image_size_limits/image_with_size_limits.pdf)
 {{< /tab >}}

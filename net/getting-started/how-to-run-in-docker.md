@@ -22,7 +22,7 @@ In this documentation article, we're going to use an [Official .NET Docker image
 
 **Docker:** Docker must be installed on your system. Refer to the official Docker documentation for detailed installation instructions check [Get Docker](https://docs.docker.com/get-docker/).
 
-**.NET Application:** In this topic we'll run a sample .NET 8 application. You can download it from [here](/viewer/net/sample-files/how-to-run-groupdocs-viewer-in-docker/DemoApp.zip). Alternatively, you can use your own application based on the code snippets provided below.
+**.NET Application:** In this topic we'll run a sample .NET 8 application. You can download it from [here](/viewer/net/_sample_files/getting-started/how-to-run-in-docker/DemoApp.zip). Alternatively, you can use your own application based on the code snippets provided below.
 
 {{< tabs "demo-app">}}
 {{< tab "DemoApp.csproj" >}}  
@@ -39,7 +39,7 @@ In this documentation article, we're going to use an [Official .NET Docker image
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="formatting.docx">
+    <None Update="sample.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -60,7 +60,7 @@ namespace DemoApp
         static void Main(string[] args)
         {
             // Instantiate Viewer and pass file name
-            using (Viewer viewer = new Viewer("formatting.docx"))
+            using (Viewer viewer = new Viewer("sample.docx"))
             {
                 // Configure view options
                 HtmlViewOptions viewOptions =
@@ -74,9 +74,9 @@ namespace DemoApp
 }
 ```
 {{< /tab >}}
-{{< tab "formatting.docx" >}}  
+{{< tab "sample.docx" >}}
 {{< tab-text >}}
-`formatting.docx` is sample DOCX file that we're going to use in this example. Click [here](/viewer/net/sample-files/how-to-run-groupdocs-viewer-in-docker/formatting.docx) to download it.
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/getting-started/how-to-run-in-docker/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
@@ -87,7 +87,7 @@ Your folder tree should look similar to the following directory structure:
 📂 DemoApp
  ├──DemoApp.csproj
  ├──Program.cs
- └──formatting.docx
+ └──sample.docx
 ```
 
 {{< alert style="info" >}}
@@ -142,7 +142,7 @@ At this point folder tree should look similar to the following directory structu
 📂 DemoApp
  ├──DemoApp.csproj
  ├──Program.cs
- ├──formatting.docx
+ ├──sample.docx
  ├──Dockerfile
  └──.dockerignore
 ```

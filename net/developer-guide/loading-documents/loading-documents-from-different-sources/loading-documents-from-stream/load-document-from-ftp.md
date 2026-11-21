@@ -9,7 +9,7 @@ hideChildren: False
 ---
 The following code snippet shows how to load a document from FTP:
 
-{{< tabs "example1">}}
+{{< tabs "load-document-from-ftp">}}
 {{< tab "C#" >}}
 ```csharp
 using System;

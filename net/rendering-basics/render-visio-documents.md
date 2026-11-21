@@ -49,14 +49,14 @@ Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-visio-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("flowchart.vsdx"))
+using (var viewer = new Viewer("sample.vsdx"))
 {
     // Create an HTML file for each drawing page.
     // {0} is replaced with the current page number in the file name.
@@ -73,7 +73,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("flowchart.vsdx")
+        Using viewer = New Viewer("sample.vsdx")
             ' Create an HTML file for each drawing page.
             ' {0} is replaced with the current page number in the file name.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
@@ -83,11 +83,20 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.vsdx" >}}
+{{< tab-text >}}
+`sample.vsdx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-visio-to-html.zip" >}}  
+```text
+page_1.html (6 KB)
+page_2.html (11 KB)
+page_3.html (9 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-visio-documents/RenderVisioToHtml/render-visio-to-html.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Visio file to HTML](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -97,14 +106,14 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-visio-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("flowchart.vsdx"))
+using (var viewer = new Viewer("sample.vsdx"))
 {
     // Create an HTML file for each drawing page.
     // Specify the HTML file names and location of external resources.
@@ -123,7 +132,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("flowchart.vsdx")
+        Using viewer = New Viewer("sample.vsdx")
             ' Create an HTML file for each drawing page.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
@@ -134,24 +143,38 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.vsdx" >}}
+{{< tab-text >}}
+`sample.vsdx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-visio-to-html-external.zip" >}}  
+```text
+page_1.html (275 bytes)
+page_1/resource_1_g.svg (6 KB)
+page_2.html (275 bytes)
+page_2/resource_2_g.svg (11 KB)
+page_3.html (275 bytes)
+page_3/resource_3_g.svg (9 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-visio-documents/RenderVisioToHtmlExternal/render-visio-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ## Render Visio files as PDF
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Visio file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-visio-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("flowchart.vsdx"))
+using (var viewer = new Viewer("sample.vsdx"))
 {
     // Create a PDF file for the document.
     // Specify the PDF file name.
@@ -168,7 +191,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("flowchart.vsdx")
+        Using viewer = New Viewer("sample.vsdx")
             ' Create a PDF file for the document.
             ' Specify the PDF file name.
             Dim viewOptions = New PdfViewOptions("output.pdf")
@@ -178,24 +201,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.vsdx" >}}
+{{< tab-text >}}
+`sample.vsdx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 85 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-visio-documents/RenderVisioToPdf/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Visio file to PDF](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-pdf.png)
 
 ## Render Visio files as PNG
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Visio file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-visio-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("flowchart.vsdx"))
+using (var viewer = new Viewer("sample.vsdx"))
 {
     // Create a PNG image for each drawing page.
     // {0} is replaced with the current page number in the image name.
@@ -215,7 +245,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("flowchart.vsdx")
+        Using viewer = New Viewer("sample.vsdx")
             ' Create a PNG image for each drawing page.
             ' {0} is replaced with the current page number in the image name.
             Dim viewOptions = New PngViewOptions("output_{0}.png")
@@ -228,23 +258,33 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.vsdx" >}}
+{{< tab-text >}}
+`sample.vsdx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-visio-to-png.zip" >}}  
+```text
+output_1.png (45 KB)
+output_2.png (60 KB)
+output_3.png (57 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-visio-documents/RenderVisioToPng/render-visio-to-png.zip)
+{{< /tab >}}
 {{< /tabs >}}
-The following image demonstrates the result:
-
-![Render a Visio file to PNG](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-to-png-image.png)
 
 ## Render Visio files as JPEG
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Visio file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-visio-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("flowchart.vsdx"))
+using (var viewer = new Viewer("sample.vsdx"))
 {
     // Create a JPEG image for each drawing page.
     // {0} is replaced with the current page number in the image name.
@@ -264,7 +304,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("flowchart.vsdx")
+        Using viewer = New Viewer("sample.vsdx")
             ' Create a JPEG image for each drawing page.
             ' {0} is replaced with the current page number in the image name.
             Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
@@ -276,6 +316,19 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.vsdx" >}}
+{{< tab-text >}}
+`sample.vsdx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-visio-to-jpg.zip" >}}  
+```text
+output_1.jpg (34 KB)
+output_2.jpg (44 KB)
+output_3.jpg (42 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-visio-documents/RenderVisioToJpg/render-visio-to-jpg.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -294,7 +347,7 @@ To render only master shapes contained in Visio file, enable the [VisioRendering
 
 The [VisioRenderingOptions.FigureWidth](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/visiorenderingoptions/properties/figurewidth) property allows you to specify the shape width in pixels. The height is calculated automatically based on the aspect ratio of each shape.
 
-{{< tabs "example6">}}
+{{< tabs "render-visio-shapes-only">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -334,11 +387,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "map.vsdx" >}}
+{{< tab-text >}}
+`map.vsdx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-visio-documents/map.vsdx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 27 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-visio-documents/RenderVisioShapesOnly/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The image below demonstrates the result.
-
-![Render master shapes only](/viewer/net/images/rendering-basics/render-visio-documents/render-visio-shapes.png)
 
 ## Visio files rendering demo
 

@@ -15,7 +15,7 @@ GroupDocs.Viewer applies the aspect ratio automatically applied when you set the
 
 The following code snippet shows how to set the image width or height.
 
-{{< tabs "example1">}}
+{{< tabs "adjust-image-size">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -56,5 +56,20 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/image-viewer-adjust-image-size/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "adjust-image-size.zip" >}}  
+```text
+p_1.jpg (54 KB)
+p_2.jpg (62 KB)
+p_3.jpg (65 KB)
+p_4.jpg (65 KB)
+p_5.jpg (44 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/image-viewer-adjust-image-size/AdjustImageSize/adjust-image-size.zip)
 {{< /tab >}}
 {{< /tabs >}}

@@ -17,7 +17,7 @@ To add a watermark to the HTML/JPG/PNG/PDF output, follow these steps:
 
 The following code snippet shows how to apply the watermark to the output pages.
 
-{{< tabs "example1">}}
+{{< tabs "add-text-watermark">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -52,5 +52,20 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/add-text-watermark/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "add-text-watermark.zip" >}}  
+```text
+p_1.html (229 KB)
+p_2.html (111 KB)
+p_3.html (143 KB)
+p_4.html (886 KB)
+p_5.html (88 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/add-text-watermark/AddTextWatermark/add-text-watermark.zip)
 {{< /tab >}}
 {{< /tabs >}}

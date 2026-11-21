@@ -1,0 +1,23 @@
+{
+  "file": "viewer/net/_preview/53ddc351332552e5.png",
+  "fileName": "render-email-to-png.zip",
+  "fileType": "png",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 800,
+      "height": 1000,
+      "pageUrl": "/viewer/net/_preview/53ddc351332552e5.png/page-1.png",
+      "thumbUrl": "/viewer/net/_preview/53ddc351332552e5.png/page-1.png"
+    },
+    {
+      "number": 2,
+      "width": 800,
+      "height": 1000,
+      "pageUrl": "/viewer/net/_preview/53ddc351332552e5.png/page-2.png",
+      "thumbUrl": "/viewer/net/_preview/53ddc351332552e5.png/page-2.png"
+    }
+  ]
+}

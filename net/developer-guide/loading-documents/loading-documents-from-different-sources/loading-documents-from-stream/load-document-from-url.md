@@ -9,7 +9,7 @@ hideChildren: False
 ---
 The following code snippet shows how to load a document from a URL:
 
-{{< tabs "example1">}}
+{{< tabs "load-document-from-url">}}
 {{< tab "C#" >}}
 ```csharp
 using System.IO;
@@ -83,5 +83,13 @@ Module Program
     End Function
 End Module
 ```
+{{< /tab >}}
+{{< tab "load-document-from-url.zip" >}}  
+```text
+p_1.html (317 KB)
+p_2.html (149 KB)
+p_3.html (1238 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/loading-documents/loading-documents-from-different-sources/loading-documents-from-stream/load-document-from-url/LoadDocumentFromUrl/load-document-from-url.zip)
 {{< /tab >}}
 {{< /tabs >}}

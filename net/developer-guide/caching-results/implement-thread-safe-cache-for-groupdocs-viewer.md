@@ -9,8 +9,9 @@ productName: GroupDocs.Viewer for .NET
 hideChildren: False
 aliases:
     - viewer/net/how-to-make-cache-thread-safe-in-your-net-csharp-application
+toc: True
 ---
-This page describes how to develop a thread-sage cache using the [C# lock](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/lock-statement) statement and the [ConcurrentDictionary<,>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentdictionary-2) class.
+This page describes how to develop a thread-safe cache using the [C# lock](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/lock-statement) statement and the [ConcurrentDictionary<,>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentdictionary-2) class.
 
 ## Introduction
 
@@ -27,7 +28,11 @@ In GroupDocs.Viewer, you can use caching to improve the performance if the same 
 
 The FileCache class uses a local disk to read and write output files. You need to implement thread safe reading and writing to disk. To do this, use the list to store the key or the file ID and associated object you need to lock. The simplest way is to use the [ConcurrentDictionary<,> class](https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentdictionary-2) of the [.NET Framework 4.0](https://docs.microsoft.com/en-us/dotnet/standard/collections/thread-safe/). The ConcurrentDictionary is a thread safe implementation of a dictionary of key-value pairs. Implement the ThreadSafeCache class that wraps around not thread safe class that implements the ICache interface.
 
-{{< tabs "example1">}}
+The following diagram shows how the locks work when three requests use the cache at the same time:
+
+![User A writes page 1 and holds the lock of page 1's key; user B, who reads page 1, waits for that lock; user C reads page 2 under another lock and does not wait. KeyLockerMap holds one lock per key and is shared by every Viewer in the process](/viewer/net/images/developer-guide/caching-results/thread-safe-cache.svg)
+
+{{< tabs "thread-safe-cache-class">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer.Caching;
@@ -110,7 +115,7 @@ End Class
 
 All the ThreadSafeCache class methods use locks to make calls thread safe. The ConcurrentDictionaryKeyLockerStore class uses ConcurrentDictionary to create the locker object or to retrieve it if it already exists. It also creates a unique key that identifies a cached file.
 
-{{< tabs "example2">}}
+{{< tabs "thread-safe-cache-key-locker">}}
 {{< tab "C#" >}}
 ```csharp
 using System.Collections.Concurrent;
@@ -179,7 +184,7 @@ End Class
 
 ## Result
 
-{{< tabs "example3">}}
+{{< tabs "render-with-thread-safe-cache">}}
 {{< tab "C#" >}}
 ```csharp
 using System.IO;
@@ -190,7 +195,7 @@ using GroupDocs.Viewer.Caching;
 using GroupDocs.Viewer.Interfaces;
 using GroupDocs.Viewer.Options;
 
-namespace ThreadSaveCacheExample
+namespace ThreadSafeCacheExample
 {
     static class Program
     {
@@ -322,7 +327,7 @@ Module Program
     Private ReadOnly KeyLockerMap As ConcurrentDictionary(Of String, Object) = New ConcurrentDictionary(Of String, Object)()
 
     Public Sub Main()
-        Dim fileName As String = "resume.pdf"
+        Dim fileName As String = "sample.pdf"
         Dim cacheFolder As String = fileName.Replace("."c, "_"c)
         Dim cachePath As String = Path.Combine("cache", cacheFolder)
         Dim uniqueKeyPrefix As String = cachePath
@@ -416,5 +421,10 @@ Class MemoryPageStreamFactory
     End Function
 End Class
 ```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/caching-results/implement-thread-safe-cache-for-groupdocs-viewer/sample.pdf) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

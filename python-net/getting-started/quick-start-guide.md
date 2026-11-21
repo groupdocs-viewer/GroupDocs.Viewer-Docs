@@ -136,9 +136,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-docx-to-html-outputs.zip" >}}  
 ```text
-render_docx_to_html/page_1.html (317 KB)
-render_docx_to_html/page_2.html (149 KB)
-render_docx_to_html/page_3.html (113 KB)
+render_docx_to_html/page_1.html (253 KB)
+render_docx_to_html/page_2.html (110 KB)
+render_docx_to_html/page_3.html (148 KB)
+render_docx_to_html/page_4.html (1001 KB)
+render_docx_to_html/page_5.html (86 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/getting-started/quick-start-guide/render_docx_to_html/render-docx-to-html-outputs.zip)
 {{< /tab >}}
@@ -219,7 +221,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 234 KB)
+Binary file (PDF, 719 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/getting-started/quick-start-guide/render_docx_to_pdf/output.pdf)
 {{< /tab >}}
@@ -300,9 +302,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-docx-to-png-outputs.zip" >}}  
 ```text
-render_docx_to_png/output_1.png (89 KB)
-render_docx_to_png/output_2.png (77 KB)
-render_docx_to_png/output_3.png (50 KB)
+render_docx_to_png/output_1.png (287 KB)
+render_docx_to_png/output_2.png (33 KB)
+render_docx_to_png/output_3.png (33 KB)
+render_docx_to_png/output_4.png (430 KB)
+render_docx_to_png/output_5.png (21 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/getting-started/quick-start-guide/render_docx_to_png/render-docx-to-png-outputs.zip)
 {{< /tab >}}

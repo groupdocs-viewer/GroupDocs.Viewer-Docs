@@ -20,6 +20,10 @@ Size (dimensions) of a worksheet may be big, and even huge. For example, the now
 
 On the other hand, the principle of the GroupDocs.Viewer is to render (convert) input document formats (including the Spreadsheet documents) to the pages, where the page may be defined as a rectangular area of relatively small size, comparable to the area of display, or A4 paper. And here a potentially huge worksheet size has a conflict with relatively small page size. How to display a worksheet with 1 million rows on a single page? Maybe split it on several pages, but if yes, then how? This question has no single direct answer, there are different ways to solve that, and this article explains all the ways available using the GroupDocs.Viewer.
 
+GroupDocs.Viewer can split a worksheet into pages in five ways, each covered below:
+
+![Five SpreadsheetOptions factory methods: ForOnePagePerSheet puts the whole worksheet on one page, ForRenderingByPageBreaks splits it at Excel's page breaks, ForRenderingPrintArea renders only the print area, ForRenderingPrintAreaAndPageBreaks splits the print area at the page breaks, and ForSplitSheetIntoPages takes a fixed number of rows and columns per page](/viewer/net/images/rendering-basics/render-spreadsheets/split-worksheet-into-pages.svg)
+
 ## Render a worksheet on one page
 
 The most simple way — render the content of the whole worksheet on a single page, where page size will be adjusted to fit the whole amount of rows and columns. This is a good choice when it is already known that the worksheet has a small size. However, if a worksheet is really big, this approach may lead to awful results. In particular, when rendering to the HTML format, the resultant HTML document may be huge, tens or even hundreds of [MiB](https://en.wikipedia.org/wiki/Byte#Multiple-byte_units), which may cause troubles while viewing such big files in the web-browsers. When rendering to the JPEG format, things may be even worse if the width or height will overcome the max limit of 65535 pixels. So use this mode deliberately.
@@ -28,7 +32,7 @@ For displaying a whole worksheet in one page call the [`SpreadsheetOptions.ForOn
 
 The following example takes a spreadsheet on input, and converts it to the resultant PDF file, where every worksheet from input XLSX is rendered to one page in output PDF.
 
-{{< tabs "RenderAWorksheetOnOnePage">}}
+{{< tabs "render-worksheet-on-one-page">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -42,7 +46,7 @@ PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForOnePagePerSheet();
 
 // Create a Viewer instance and specify the input XLSX
-using (Viewer viewer = new Viewer("Products.xlsx"))
+using (Viewer viewer = new Viewer("products.xlsx"))
 {
     // Render the XLSX to PDF
     viewer.View(viewOptions);
@@ -62,17 +66,26 @@ Dim viewOptions As New PdfViewOptions("output.pdf")
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForOnePagePerSheet()
 
 ' Create a Viewer instance and specify the input XLSX
-Using viewer As New Viewer("Products.xlsx")
+Using viewer As New Viewer("products.xlsx")
     ' Render the XLSX to PDF
     viewer.View(viewOptions)
 End Using
 ```
 {{< /tab >}}
+{{< tab "products.xlsx" >}}
+{{< tab-text >}}
+`products.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/products.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 73 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/RenderWorksheetOnOnePage/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
-The screenshot below illustrates the result. The output PDF file contains one page (because input XLSX has one worksheet) that displays all worksheet data.
-
-![Fit sheet on one page](/viewer/net/images/rendering-basics/render-spreadsheets/render-on-one-page.png)
+The output PDF file contains one page (because input XLSX has one worksheet) that displays all worksheet data.
 
 ## Split worksheet by page breaks
 
@@ -84,7 +97,7 @@ In the image below, the vertical page break is inserted after the column “**E*
 
 For achieving the same behavior with GroupDocs.Viewer call the [`SpreadsheetOptions.ForRenderingByPageBreaks`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forrenderingbypagebreaks/) static method, and then assign its value to the [`ViewOptions.SpreadsheetOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property, as in the first example. The following code example shows this:
 
-{{< tabs "SplitWorksheetByPageBreaks">}}
+{{< tabs "split-worksheet-by-page-breaks">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -98,7 +111,7 @@ PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingByPageBreaks();
 
 // Create a Viewer instance and specify the input XLSX
-using (Viewer viewer = new Viewer("Products.xlsx"))
+using (Viewer viewer = new Viewer("products.xlsx"))
 {
     // Render the XLSX to PDF
     viewer.View(viewOptions);
@@ -118,17 +131,26 @@ Dim viewOptions As New PdfViewOptions("output.pdf")
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingByPageBreaks()
 
 ' Create a Viewer instance and specify the input XLSX
-Using viewer As New Viewer("Products.xlsx")
+Using viewer As New Viewer("products.xlsx")
     ' Render the XLSX to PDF
     viewer.View(viewOptions)
 End Using
 ```
 {{< /tab >}}
+{{< tab "products.xlsx" >}}
+{{< tab-text >}}
+`products.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/products.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 75 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/SplitWorksheetByPageBreaks/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
-The image below illustrates the result — you can compare it with a screenshot above and note that worksheet content is splitted exactly as Microsoft Excel suggests.
-
-![Render a worksheet to PDF based on page breaks](/viewer/net/images/rendering-basics/render-spreadsheets/render-by-page-breaks.png)
+Compare the output with the screenshot above: the worksheet content is split exactly as Microsoft Excel suggests.
 
 ## Render only print area
 
@@ -138,7 +160,7 @@ Along with the page breaks, the Microsoft Excel has a “Print Area” concept. 
 
 GroupDocs.Viewer also supports this option — in that case each cell range within the print area will be placed on a separate page. For achieving this call the [`SpreadsheetOptions.ForRenderingPrintArea`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/methods/forrenderingprintarea) static method and assign the returned [`SpreadsheetOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/) instance to the [`ViewOptions.SpreadsheetOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/spreadsheetoptions) property. The following example shows how to do this.
 
-{{< tabs "RenderOnlyPrintArea">}}
+{{< tabs "render-only-print-area">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -152,7 +174,7 @@ PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingPrintArea();
 
 // Create a Viewer instance and specify the input XLSX
-using (Viewer viewer = new Viewer("Invoice.xlsx"))
+using (Viewer viewer = new Viewer("invoice.xlsx"))
 {
     // Render the XLSX to PDF
     viewer.View(viewOptions);
@@ -172,17 +194,24 @@ Dim viewOptions As New PdfViewOptions("output.pdf")
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingPrintArea()
 
 ' Create a Viewer instance and specify the input XLSX
-Using viewer As New Viewer("Invoice.xlsx")
+Using viewer As New Viewer("invoice.xlsx")
     ' Render the XLSX to PDF
     viewer.View(viewOptions)
 End Using
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 54 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/RenderOnlyPrintArea/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The image below illustrates the result.
-
-![Render the print area to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-print-area.png)
 
 ## Render print area and split by page breaks
 
@@ -196,7 +225,7 @@ In the following screenshot the red line shows the print area, and the blue line
 
 The following example renders the Microsoft Excel spreadsheet using page breaks and print areas displayed in the screenshot above to PDF:
 
-{{< tabs "RenderPrintAreaAndSplitByPageBreaks">}}
+{{< tabs "render-print-area-by-page-breaks">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -210,7 +239,7 @@ PdfViewOptions viewOptions = new PdfViewOptions("Financial Sample.pdf");
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingPrintAreaAndPageBreaks();
 
 // Create a Viewer instance and specify the input XLSX
-using (Viewer viewer = new Viewer("Products.xlsx"))
+using (Viewer viewer = new Viewer("products.xlsx"))
 {
     // Render the XLSX to PDF
     viewer.View(viewOptions);
@@ -230,29 +259,36 @@ Dim viewOptions As New PdfViewOptions("Financial Sample.pdf")
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingPrintAreaAndPageBreaks()
 
 ' Create a Viewer instance and specify the input XLSX
-Using viewer As New Viewer("Products.xlsx")
+Using viewer As New Viewer("products.xlsx")
     ' Render the XLSX to PDF
     viewer.View(viewOptions)
 End Using
 ```
 {{< /tab >}}
+{{< tab "products.xlsx" >}}
+{{< tab-text >}}
+`products.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/products.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Financial Sample.pdf" >}}  
+```text
+Binary file (PDF, 59 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/RenderPrintAreaByPageBreaks/Financial%20Sample.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The screenshot below illustrates the result:
-
-![Render page breaks and a print area to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/pdf-result.png)
 
 ## Split worksheet into pages manually by rows and columns
 
 Sometimes none of the splitting methods, described above, is acceptable, or the spreadsheet has a format that does not support page breaks and Print Areas, for example, the text-based CSV. For such cases GroupDocs.Viewer allows to manually specify the number of rows and/or number of columns that should be present on every page. In short, the difference between splitting by rows only vs. splitting by rows and columns is illustrated on screenshot below.
 
-![Split by rows only vs. split by rows and columns](/viewer/net/sample-files/split-worksheets-into-pages/split-by-rows-and-split-by-rows-and-columns.png)
+![Split by rows only vs. split by rows and columns](/viewer/net/images/rendering-basics/render-spreadsheets/split-worksheet-into-pages/split-by-rows-and-split-by-rows-and-columns.png)
 
 ### Split worksheet into pages only by rows
 
-When a worksheet is tall, but narrow, i.e. it has some moderate amount of columns, but huge amount of rows, it is ideal to split such a worksheet horizontally, by rows. In this case the user should specify a number of rows per single page in the [`SpreadsheetOptions.ForSplitSheetIntoPages(int countRowsPerPage)`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forsplitsheetintopages/#forsplitsheetintopages) static method, and then all as usual. The number of rows per page must be strictly greater than zero. The code sample is below, it specifies 15 rows per one page. This code sample uses a file "`two-pages.xlsx`", that can be downloaded [here](/viewer/net/sample-files/split-worksheets-into-pages/two-pages.xlsx).
+When a worksheet is tall, but narrow, i.e. it has some moderate amount of columns, but huge amount of rows, it is ideal to split such a worksheet horizontally, by rows. In this case the user should specify a number of rows per single page in the [`SpreadsheetOptions.ForSplitSheetIntoPages(int countRowsPerPage)`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forsplitsheetintopages/#forsplitsheetintopages) static method, and then all as usual. The number of rows per page must be strictly greater than zero. The code sample is below, it specifies 15 rows per one page. This code sample uses a file "`two-pages.xlsx`", that can be downloaded [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/two-pages.xlsx).
 
-{{< tabs "SplitWorksheetIntoPagesOnlyByRows">}}
+{{< tabs "split-worksheet-by-rows">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -298,6 +334,17 @@ Using viewer As New Viewer("two-pages.xlsx")
 End Using
 ```
 {{< /tab >}}
+{{< tab "two-pages.xlsx" >}}
+{{< tab-text >}}
+`two-pages.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/two-pages.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 41 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/SplitWorksheetByRows/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 The screenshot below demonstrates the original XLSX spreadsheet, conditionally divided onto chucks with 15 rows in each, and output PDF file, produced by the GroupDocs.Viewer.
@@ -306,9 +353,9 @@ The screenshot below demonstrates the original XLSX spreadsheet, conditionally d
 
 ### Split worksheet into pages by rows and columns
 
-When a worksheet is tall and wide, i.e. it has a big amount of columns and rows, then need to split such a worksheet horizontally and vertically simultaneously. The previously mentioned [`ForSplitSheetIntoPages`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forsplitsheetintopages/#forsplitsheetintopages) static method has an overload, that obtained two arguments — number of rows and number of columns: [`ForSplitSheetIntoPages(int countRowsPerPage, int countColumnsPerPage)`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forsplitsheetintopages/#forsplitsheetintopages_1). The number of rows and columns per page must be strictly greater than zero. The following sample demonstrates splitting the worksheets into pages with 15 rows and 7 columns per each. This code sample uses a file "`four-pages.xlsx`", that can be downloaded [here](/viewer/net/sample-files/split-worksheets-into-pages/four-pages.xlsx).
+When a worksheet is tall and wide, i.e. it has a big amount of columns and rows, then need to split such a worksheet horizontally and vertically simultaneously. The previously mentioned [`ForSplitSheetIntoPages`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forsplitsheetintopages/#forsplitsheetintopages) static method has an overload, that obtained two arguments — number of rows and number of columns: [`ForSplitSheetIntoPages(int countRowsPerPage, int countColumnsPerPage)`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/forsplitsheetintopages/#forsplitsheetintopages_1). The number of rows and columns per page must be strictly greater than zero. The following sample demonstrates splitting the worksheets into pages with 15 rows and 7 columns per each. This code sample uses a file "`four-pages.xlsx`", that can be downloaded [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/four-pages.xlsx).
 
-{{< tabs "SplitWorksheetIntoPagesByRowsAndColumns">}}
+{{< tabs "split-worksheet-by-rows-and-columns">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -355,6 +402,17 @@ Using viewer As New Viewer("four-pages.xlsx")
     viewer.View(viewOptions)
 End Using
 ```
+{{< /tab >}}
+{{< tab "four-pages.xlsx" >}}
+{{< tab-text >}}
+`four-pages.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/four-pages.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 53 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/SplitWorksheetByRowsAndColumns/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

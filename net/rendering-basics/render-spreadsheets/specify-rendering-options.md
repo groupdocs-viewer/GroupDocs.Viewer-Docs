@@ -34,7 +34,7 @@ Enable the [SpreadsheetOptions.RenderHeadings](https://reference.groupdocs.com/v
 
 The following example demonstrates how to convert an Excel workbook to PDF and display row and column headings in the output PDF file:
 
-{{< tabs "example1">}}
+{{< tabs "render-headings">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -70,11 +70,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 85 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderHeadings/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Excel file with row and column headings to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-row-and-column-headings-to-pdf.png)
 
 ## Render worksheet gridlines
 
@@ -82,7 +89,7 @@ Use the [SpreadsheetOptions.RenderGridLines](https://reference.groupdocs.com/net
 
 The following code example demonstrates how to convert an Excel workbook to PDF and display gridlines in the output PDF file:
 
-{{< tabs "example2">}}
+{{< tabs "render-grid-lines">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -118,11 +125,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 81 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderGridLines/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Excel file with gridlines to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-gridlines-to-pdf.png)
 
 ## Control cell text overflow
 
@@ -150,7 +164,7 @@ You can set the [TextOverflowMode](https://reference.groupdocs.com/viewer/net/gr
 
 The following example demonstrates how to set this option in code:
 
-{{< tabs "example3">}}
+{{< tabs "set-text-overflow-mode">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -186,6 +200,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 80 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/SetTextOverflowMode/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render hidden rows and columns
@@ -196,7 +221,7 @@ The example below demonstrates how to set this option in code. The rows **20** a
 
 ![Hidden rows and columns in a worksheet](/viewer/net/images/rendering-basics/render-spreadsheets/excel-hidden-columns-and-rows.png)
 
-{{< tabs "example4">}}
+{{< tabs "render-hidden-rows-and-columns">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -234,11 +259,20 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 81 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderHiddenRowsAndColumns/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. Hidden rows and columns appear in the generated PDF file.
-
-![Hidden rows and columns in a worksheet](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-with-hidden-columns-and-rows-to-pdf.png)
+Hidden rows and columns appear in the generated PDF file.
 
 ## Render hidden worksheets
 
@@ -246,7 +280,7 @@ If your spreadsheet file contains hidden worksheets, enable the [ViewOptions.Ren
 
 The following example demonstrates how to set this option in code:
 
-{{< tabs "example5">}}
+{{< tabs "render-hidden-pages">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -282,13 +316,24 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 83 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderHiddenPages/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Skip empty rows and columns
 
 GroupDocs.Viewer supports the [SpreadsheetOptions.SkipEmptyRows](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/skipemptyrows) and [SpreadsheetOptions.SkipEmptyColumns](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/properties/skipemptycolumns) properties that allow you to skip blank rows and columns when you convert your spreadsheet file to HTML, PDF, or image format.
 
-{{< tabs "example6">}}
+{{< tabs "skip-empty-rows-and-columns">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -326,24 +371,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 80 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/SkipEmptyRowsAndColumns/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Skip empty columns and rows](/viewer/net/images/rendering-basics/render-spreadsheets/excel-skip-empty-columns-and-rows.png)
 
 ## Render cell comments
 
-Use the [ViewOptions.RenderComments](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option to display cell comments in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
+Cell comments are rendered by default: the [ViewOptions.RenderComments](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) property is `true` unless you change it. The example below sets it explicitly; set it to `false` to hide the comments when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
 
-{{< tabs "example7">}}
+{{< tabs "render-comments">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("invoice.xlsx"))
+using (var viewer = new Viewer("with_comments.xlsx"))
 {
     // Convert the spreadsheet to PNG.
     // {0} is replaced with the current page number in the file names.
@@ -362,7 +414,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("invoice.xlsx")
+        Using viewer = New Viewer("with_comments.xlsx")
             ' Convert the spreadsheet to PNG.
             ' {0} is replaced with the current page number in the file names.
             Dim viewOptions = New PngViewOptions("output_{0}.png")
@@ -374,21 +426,30 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "with_comments.xlsx" >}}
+{{< tab-text >}}
+`with_comments.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/with_comments.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-comments.zip" >}}  
+```text
+output_1.png (25 KB)
+output_2.png (101 KB)
+output_3.png (30 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderComments/render-comments.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render cell comments](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-comments-to-png.png)
 
 ## Set worksheet margins in the output pdf pages
 
-Use the [SpreadsheetOptions.RenderGridLines](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/spreadsheetoptions/properties/rendergridlines) properties to set margins for worksheets in the output pdf. If margins are set to value less than 0 or not set then default value will be used.
+Use the [SpreadsheetOptions.LeftMargin, RightMargin, TopMargin and BottomMargin](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/spreadsheetoptions/) properties to set margins for worksheets in the output pdf. If margins are set to value less than 0 or not set then default value will be used.
 
 The following code example demonstrates how to convert an Excel workbook to PDF and set optional margins for worksheets in the output PDF file:
 
-{{< tabs "example8">}}
+{{< tabs "set-worksheet-margins">}}
 {{< tab "C#" >}}
-```cs
+```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
@@ -430,8 +491,15 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 81 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/SetWorksheetMargins/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Excel file with worksheet margins on page to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/set-worksheet-margins-in-the-output-pdf-pages.png)

@@ -102,25 +102,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "pdf_page_1.html" >}}  
 ```text
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta charset="utf-8" />
-    <title>Page-1</title>
-</head>
-<body>
-    <div id="main_image">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="594" height="840"><g transform="matrix(1.3333334 0 0 1.3333334 0 0)"><path d="M0 0L445.5 0L445.5 630L0 630z" stroke="none" fill="#FFFFFF" fill-rule="evenodd" /><g transform="matrix(0.75 
-[TRUNCATED]
+HTML file (1.3 MB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-images/render_image_to_html/pdf_page_1.html)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an image to HTML](/viewer/python-net/images/rendering-basics/render-images/render-image-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -141,7 +127,8 @@ def render_image_to_html_external():
     with Viewer("vector-image.svg") as viewer:
         # Specify the HTML file name and location of external resources.
         # {0} is replaced with the resource name in the output file name.
-        viewOptions = HtmlViewOptions.for_external_resources("render_image_to_html_external/pdf_page_{0}.html", "render_image_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_image_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        # The resource URL is relative to the HTML file.
+        viewOptions = HtmlViewOptions.for_external_resources("render_image_to_html_external/pdf_page_{0}.html", "render_image_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -155,16 +142,15 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-image-to-html-external-outputs.zip" >}}  
 ```text
-render_image_to_html_external/pdf_page_1.html (309 bytes)
-render_image_to_html_external/pdf_page_1/resource_1_g.svg (129 KB)
+render_image_to_html_external/pdf_page_1.html (279 bytes)
+render_image_to_html_external/pdf_page_1/resource_1_f.ttf (967 KB)
+render_image_to_html_external/pdf_page_1/resource_1_g.svg (5 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-images/render_image_to_html_external/render-image-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The result is shown below. The image is placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/python-net/images/rendering-basics/render-images/render-image-to-html-external-resources.png)
+The image is placed in a separate folder.
 
 ## Render images as PDF
 
@@ -194,15 +180,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "pdf_document.pdf" >}}  
 ```text
-Binary file (PDF, 45 KB)
+Binary file (PDF, 38 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-images/render_image_to_pdf/pdf_document.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an image to PDF](/viewer/python-net/images/rendering-basics/render-images/render-image-to-pdf.png)
 
 ## Convert images to PNG
 
@@ -235,15 +217,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "image.png" >}}  
 ```text
-Binary file (PNG, 179 KB)
+Binary file (PNG, 113 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-images/render_image_to_png/image.png)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an image to PNG](/viewer/python-net/images/rendering-basics/render-images/render-image-to-png.png)
 
 ## Convert images to JPEG
 
@@ -276,7 +254,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "image_to_jpg.jpg" >}}  
 ```text
-Binary file (JPG, 93 KB)
+Binary file (JPG, 73 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-images/render_image_to_jpg/image_to_jpg.jpg)
 {{< /tab >}}
@@ -337,7 +315,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "psd_with_custom_fonts.jpg" >}}  
 ```text
-Binary file (JPG, 25 KB)
+Binary file (JPG, 159 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-images/render_psd_with_custom_fonts/psd_with_custom_fonts.jpg)
 {{< /tab >}}

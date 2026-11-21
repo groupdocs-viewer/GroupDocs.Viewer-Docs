@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.333333in" height="7.5in" class="slides-canvas" pointer-events="none" viewBox="0 0 960 540">
+  <defs>
+    <symbol id="page0-pic1" viewBox="0 0 600 180" preserveAspectRatio="none">
+      <image width="600" height="180" preserveAspectRatio="none" xlink:href="resource_1_i.png" />
+    </symbol>
+    <symbol id="page0-pic2" viewBox="0 0 1200 750" preserveAspectRatio="none">
+      <image width="1200" height="750" preserveAspectRatio="none" xlink:href="resource_1_i.jpg" />
+    </symbol>
+  </defs>
+  <g text-rendering="geometricPrecision" pointer-events="painted" transform="scale(1, 1)">
+    <rect x="0" y="0" width="960" height="540" fill="#F8F4EC" />
+    <path fill="#1F3A5F" d="M0 0L130 0 130 540 0 540z" />
+    <path fill="#E07A5F" d="M0 180L130 180 130 250 0 250z" />
+    <path stroke-width="2" stroke="#E9D8B4" fill="none" d="M45 420C45 408.95 53.95 400 65 400L65 400C76.05 400 85 408.95 85 420 85 420 85 420 85 420L85 420C85 431.05 76.05 440 65 440L65 440C53.95 440 45 431.05 45 420z" />
+    <path stroke-width="2" stroke="#E9D8B4" fill="none" d="M34 420C34 402.88 47.88 389 65 389L65 389C82.12 389 96 402.88 96 420 96 420 96 420 96 420L96 420C96 437.12 82.12 451 65 451L65 451C47.88 451 34 437.12 34 420z" />
+    <path stroke-width="2" stroke="#E9D8B4" fill="none" d="M23 420C23 396.8 41.8 378 65 378L65 378C88.2 378 107 396.8 107 420 107 420 107 420 107 420L107 420C107 443.2 88.2 462 65 462L65 462C41.8 462 23 443.2 23 420z" />
+    <path stroke-width="2" stroke="#E9D8B4" fill="none" d="M12 420C12 390.73 35.73 367 65 367L65 367C94.27 367 118 390.73 118 420 118 420 118 420 118 420L118 420C118 449.27 94.27 473 65 473L65 473C35.73 473 12 449.27 12 420z" />
+    <path stroke-width="2" stroke="#E9D8B4" fill="none" d="M1 420C1 384.65 29.65 356 65 356L65 356C100.35 356 129 384.65 129 420 129 420 129 420 129 420L129 420C129 455.35 100.35 484 65 484L65 484C29.65 484 1 455.35 1 420z" />
+    <path fill="#2E8B7A" d="M35 90C35 73.43 48.43 60 65 60L65 60C81.57 60 95 73.43 95 90 95 90 95 90 95 90L95 90C95 106.57 81.57 120 65 120L65 120C48.43 120 35 106.57 35 90z" />
+    <use x="160" y="40" width="200" height="60" preserveAspectRatio="none" href="#page0-pic1" xlink:href="#page0-pic1" />
+    <g transform="matrix(1, 0, 0, 1, 160, 133.6)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" Style="font-variant-ligatures : none" font-size="27pt" fill="#1F3A5F" x="0" y="79.93359" style="font-variant-ligatures : none"><tspan x="0" y="35.005596" font-weight="bold">Q3 2026</tspan><tspan x="0" y="79.93359" font-weight="bold">Business Review</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 160, 248.6)"><text font-family="Arial" font-style="normal" font-weight="normal" font-stretch="normal" Style="font-variant-ligatures : none" font-size="12pt" fill="#23303D" x="0" y="34.75804" style="font-variant-ligatures : none"><tspan x="0" y="15.558042">Results, the North Pier distribution centre and our</tspan><tspan xml:space="preserve" x="350.5" y="15.558042"> </tspan><tspan x="0" y="34.75804">priorities for the fourth quarter</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 160, 333.6)"><text font-family="Arial" font-style="normal" font-weight="normal" font-stretch="normal" Style="font-variant-ligatures : none" font-size="9.75pt" fill="#5E6B78" x="0" y="28.86491" style="font-variant-ligatures : none"><tspan x="0" y="12.640909">Grace Holloway, Managing Director</tspan><tspan x="0" y="28.86491">14 October 2026</tspan></text></g>
+    <use x="600" y="120" width="320" height="200" preserveAspectRatio="none" href="#page0-pic2" xlink:href="#page0-pic2" />
+    <g transform="matrix(1, 0, 0, 1, 600, 329.6)"><text font-family="Arial" font-style="normal" font-weight="normal" font-stretch="normal" Style="font-variant-ligatures : none" font-size="7.5pt" fill="#5E6B78" x="0" y="9.723776" style="font-variant-ligatures : none"><tspan x="0" y="9.723776">The Quayside warehouse at dawn</tspan></text></g>
+  </g>
+</svg>

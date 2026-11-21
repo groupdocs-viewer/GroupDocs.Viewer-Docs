@@ -10,14 +10,14 @@ keywords: groupdocs, pdf optimization, image quality, jpg compression, pdf viewe
 ---
 Decreasing the JPG images quality reduces the size of the output file.
 
-To adjust images quality, set the [image_quality](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptimizationoptions/#properties) property of the [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptimizationoptions/) class. The value must be between 1 (minimum quality) and 100. The default value is 90.
+To adjust images quality, enable the [compress_images](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptimizationoptions/#properties) property and set the [image_quality](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptimizationoptions/#properties) property of the [PdfOptimizationOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptimizationoptions/) class. The value must be between 1 (minimum quality) and 100. The default value is 90. Without `compress_images`, the quality has no effect.
 
 To set the image quality, follow these steps:
 
 1. Instantiate the [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer) class. Specify the source document path as a constructor parameter.
 1. Instantiate the [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions) object.
 2. Set the [PdfViewOptions.pdf_optimization_options](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions/#properties) value as instantiated [PdfOptimizationOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptimizationoptions/) object.
-3. Set the [PdfViewOptions.pdf_optimization_options.image_quality](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptimizationoptions/#properties) value.
+3. Set the [PdfViewOptions.pdf_optimization_options.compress_images](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptimizationoptions/#properties) value to `True` and the [PdfViewOptions.pdf_optimization_options.image_quality](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptimizationoptions/#properties) value.
 4. Call the [view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method of the [Viewer](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer) object. Specify the [PdfViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfviewoptions) object as the parameter.
 
 The following code snippet shows how to adjust JPG image quality in the output PDF document:
@@ -36,6 +36,7 @@ def adjust_jpeg_quality():
 
         # Specify the JPG image quality.
         pdf_optimization_options = PdfOptimizationOptions()
+        pdf_optimization_options.compress_images = True
         pdf_optimization_options.image_quality = 50
         # Specify pdf_optimization_options object
         viewOptions.pdf_optimization_options = pdf_optimization_options
@@ -53,7 +54,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "optimized_jpeg_quality.pdf" >}}  
 ```text
-Binary file (PDF, 233 KB)
+Binary file (PDF, 483 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/adjust-jpeg-images-quality/adjust_jpeg_quality/optimized_jpeg_quality.pdf)
 {{< /tab >}}

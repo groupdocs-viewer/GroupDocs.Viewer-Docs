@@ -60,14 +60,14 @@ The 1st stage of document processing using the GroupDocs.Viewer is loading the d
 
 Code sample below shows loading of two archive files into two Viewer instances: 1st file is specified by path, while 2nd — by a stream and with load options with password.
 
-{{< tabs "Loading">}}
+{{< tabs "load-archive">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-string inputArchivePath = "Archive.zip";
+string inputArchivePath = "documents.zip";
 using (Viewer viewer1 = new Viewer(inputArchivePath))
 {
     // view it
@@ -90,7 +90,7 @@ Imports GroupDocs.Viewer
 Imports GroupDocs.Viewer.Options
 ' ...
 
-Dim inputArchivePath As String = "Archive.zip"
+Dim inputArchivePath As String = "documents.zip"
 Using viewer1 As New Viewer(inputArchivePath)
     'view it
 End Using
@@ -104,6 +104,11 @@ Using viewer2 As New Viewer(inputArchiveStream, loadOptions)
     'view it
 End Using
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-archives/documents.zip) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -123,7 +128,7 @@ GroupDocs.Viewer by default produces paged HTML results — input documents are 
 
 Code example below shows rendering of the same input archive file to the two similar HTML documents: 1st with embedded resources, while 2nd — with external.
 
-{{< tabs "RenderToHTML">}}
+{{< tabs "render-archive-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -133,7 +138,7 @@ using GroupDocs.Viewer.Options;
 HtmlViewOptions htmlEmbeddedOptions = HtmlViewOptions.ForEmbeddedResources("Embedded.html");
 HtmlViewOptions htmlExternalOptions = HtmlViewOptions.ForExternalResources("External.html", "External_files/resource-{1}", "External_files/resource-{1}");
 
-using (Viewer viewer = new Viewer("Archive.zip"))
+using (Viewer viewer = new Viewer("documents.zip"))
 {
     viewer.View(htmlEmbeddedOptions);
     viewer.View(htmlExternalOptions);
@@ -149,11 +154,32 @@ Imports GroupDocs.Viewer.Options
 Dim htmlEmbeddedOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("Embedded.html")
 Dim htmlExternalOptions As HtmlViewOptions = HtmlViewOptions.ForExternalResources("External.html",
                         "External_files/resource-{1}", "External_files/resource-{1}")
-Using viewer As New Viewer("Archive.zip")
+Using viewer As New Viewer("documents.zip")
     viewer.View(htmlEmbeddedOptions)
     viewer.View(htmlExternalOptions)
 End Using
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-archives/documents.zip) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-archive-to-html.zip" >}}  
+```text
+Embedded.html (73 KB)
+External.html (11 KB)
+External_files/resource-g.svg (3 KB)
+External_files/resource-g1.svg (533 bytes)
+External_files/resource-g10.svg (907 bytes)
+External_files/resource-g11.svg (2 KB)
+External_files/resource-g2.svg (246 bytes)
+External_files/resource-g3.svg (131 bytes)
+External_files/resource-g4.svg (251 bytes)
+External_files/resource-g5.svg (1 KB)
+[TRUNCATED] (14 files total)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-archives/_index/RenderArchiveToHtml/render-archive-to-html.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -173,7 +199,7 @@ PDF format by its nature has pages, so the list of files and folders from the ar
 
 Code example below shows how to display the list of content of a specified archive file in PDF format.
 
-{{< tabs "RenderToPDF">}}
+{{< tabs "render-archive-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -182,7 +208,7 @@ using GroupDocs.Viewer.Options;
 
 PdfViewOptions pdfOptions = new PdfViewOptions("Output.pdf");
 
-using (Viewer viewer = new Viewer("Archive.zip"))
+using (Viewer viewer = new Viewer("documents.zip"))
 {
     viewer.View(pdfOptions);
 }
@@ -195,10 +221,21 @@ Imports GroupDocs.Viewer.Options
 ' ...
 
 Dim pdfOptions As PdfViewOptions = New PdfViewOptions("Output.pdf")
-Using viewer As New Viewer("Archive.zip")
+Using viewer As New Viewer("documents.zip")
     viewer.View(pdfOptions)
 End Using
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-archives/documents.zip) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Output.pdf" >}}  
+```text
+Binary file (PDF, 81 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-archives/_index/RenderArchiveToPdf/Output.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -216,7 +253,7 @@ Because one PNG or JPEG image may contain only the one “page”, for the archi
 
 Code example below shows rendering of the same input archive file to the two folders with images: one folder with “PNG” name contains page images in PNG format, while another with “JPEG” name — in JPEG format. For both formats the same amount of “page-images” will be generated.
 
-{{< tabs "RenderToPNGJPEG">}}
+{{< tabs "render-archive-to-images">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -229,7 +266,7 @@ string jpegFolderPath = Directory.CreateDirectory("JPEG").FullName;
 PngViewOptions pngOptions = new PngViewOptions(Path.Combine(pngFolderPath, "page-{0}.png"));
 JpgViewOptions jpegOptions = new JpgViewOptions(Path.Combine(jpegFolderPath, "page-{0}.jpeg"));
 
-using (Viewer viewer = new Viewer("Archive.zip"))
+using (Viewer viewer = new Viewer("documents.zip"))
 {
     viewer.View(pngOptions);
     viewer.View(jpegOptions);
@@ -248,11 +285,23 @@ Dim jpegFolderPath As String = Directory.CreateDirectory("JPEG").FullName
 Dim pngOptions As PngViewOptions = New PngViewOptions(Path.Combine(pngFolderPath, "page-{0}.png"))
 Dim jpegOptions As PngViewOptions = New PngViewOptions(Path.Combine(jpegFolderPath, "page-{0}.jpeg"))
 
-Using viewer As New Viewer("Archive.zip")
+Using viewer As New Viewer("documents.zip")
     viewer.View(pngOptions)
     viewer.View(jpegOptions)
 End Using
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-archives/documents.zip) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-archive-to-images.zip" >}}  
+```text
+JPEG/page-1.jpeg (465 KB)
+PNG/page-1.png (284 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-archives/_index/RenderArchiveToImages/render-archive-to-images.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -276,7 +325,7 @@ With the [`FileName`](https://reference.groupdocs.com/viewer/net/groupdocs.viewe
 
 Code sample below shows using the [`Folder`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/archiveoptions/folder/) property and [`FileName`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/archiveoptions/filename/) property simultaneously for the same loaded archive file. Rendering is performed to the HTML format with embedded resources. It is assumed that a valid license is set.
 
-{{< tabs "RenderToHTMLWithOptions">}}
+{{< tabs "render-archive-with-options">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -284,10 +333,10 @@ using GroupDocs.Viewer.Options;
 // ...
 
 HtmlViewOptions htmlEmbeddedOptions = HtmlViewOptions.ForEmbeddedResources("FolderAndFileName.html");
-htmlEmbeddedOptions.ArchiveOptions.Folder = "Markdown/Html";
-htmlEmbeddedOptions.ArchiveOptions.FileName = new FileName("The '/Markdown/Html/' subfolder with all its content is displayed");
+htmlEmbeddedOptions.ArchiveOptions.Folder = "Invoices";
+htmlEmbeddedOptions.ArchiveOptions.FileName = new FileName("The Invoices folder of documents.zip");
 
-using (Viewer viewer = new Viewer("Archive.zip"))
+using (Viewer viewer = new Viewer("documents.zip"))
 {
     viewer.View(htmlEmbeddedOptions);
 }
@@ -300,14 +349,25 @@ Imports GroupDocs.Viewer.Options
 ' ...
 
 Dim htmlEmbeddedOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("FolderAndFileName.html")
-htmlEmbeddedOptions.ArchiveOptions.Folder = "Markdown/Html"
+htmlEmbeddedOptions.ArchiveOptions.Folder = "Invoices"
 htmlEmbeddedOptions.ArchiveOptions.FileName =
-    New FileName("The '/Markdown/Html/' subfolder with all its content is displayed")
+    New FileName("The Invoices folder of documents.zip")
 
-Using viewer As New Viewer("Archive.zip")
+Using viewer As New Viewer("documents.zip")
     viewer.View(htmlEmbeddedOptions)
 End Using
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-archives/documents.zip) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "FolderAndFileName.html" >}}  
+```text
+HTML file (13 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-archives/_index/RenderArchiveWithOptions/FolderAndFileName.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -336,7 +396,7 @@ Also technically step #2 is not necessary — if you know the exact full name (t
 
 Code example below shows all the described operations with the attachments.
 
-{{< tabs "ExtractingFiles">}}
+{{< tabs "extract-files-from-archive">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -344,7 +404,7 @@ using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
 // ...
 
-using (Viewer viewer = new Viewer("Archive.zip"))
+using (Viewer viewer = new Viewer("documents.zip"))
 {
     IList<Attachment> allAttachments = viewer.GetAttachments();
     
@@ -357,8 +417,8 @@ using (Viewer viewer = new Viewer("Archive.zip"))
     }
 
     //Create one Attachment manually and save it
-    Attachment oneAttachment = new Attachment("/Images/PNG/Watermark.png", "/Images/PNG/Watermark.png");
-    using (FileStream extractedFile = File.Create("Watermark.png"))
+    Attachment oneAttachment = new Attachment("/Invoices/INV-26401-quayside-deli--cafe.pdf", "/Invoices/INV-26401-quayside-deli--cafe.pdf");
+    using (FileStream extractedFile = File.Create("INV-26401-quayside-deli--cafe.pdf"))
     {
         viewer.SaveAttachment(oneAttachment, extractedFile);
     }
@@ -372,7 +432,7 @@ Imports GroupDocs.Viewer.Options
 Imports GroupDocs.Viewer.Results
 ' ...
 
-Using viewer As New Viewer("Archive.zip")
+Using viewer As New Viewer("documents.zip")
     Dim allAttachments As IList(Of Attachment) = viewer.GetAttachments()
 
     'Iterate over all attachments and save them
@@ -383,12 +443,23 @@ Using viewer As New Viewer("Archive.zip")
     Next attachment
 
     'Create one Attachment manually and save it
-    Dim oneAttachment As Attachment = New Attachment("/Images/PNG/Watermark.png", "/Images/PNG/Watermark.png")
-    Using extractedFile As FileStream = File.Create("Watermark.png")
+    Dim oneAttachment As Attachment = New Attachment("/Invoices/INV-26401-quayside-deli--cafe.pdf", "/Invoices/INV-26401-quayside-deli--cafe.pdf")
+    Using extractedFile As FileStream = File.Create("INV-26401-quayside-deli--cafe.pdf")
         viewer.SaveAttachment(oneAttachment, extractedFile)
     End Using
 End Using
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-archives/documents.zip) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "INV-26401-quayside-deli--cafe.pdf" >}}  
+```text
+Binary file (PDF, 193 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-archives/_index/ExtractFilesFromArchive/INV-26401-quayside-deli--cafe.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -404,7 +475,7 @@ Concluding: to get the [`ArchiveViewInfo`](https://reference.groupdocs.com/viewe
 
 Code sample below demonstrates all the described information.
 
-{{< tabs "GetViewInfo">}}
+{{< tabs "get-archive-info">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -414,7 +485,7 @@ using GroupDocs.Viewer.Results;
 
 ViewInfoOptions viewInfoOptions = ViewInfoOptions.ForPdfView();
 
-using (Viewer viewer = new Viewer("Archive.zip"))
+using (Viewer viewer = new Viewer("documents.zip"))
 {
     GroupDocs.Viewer.Results.FileInfo fileInfo = viewer.GetFileInfo();
     Console.WriteLine("Encrypted: {0}", fileInfo.Encrypted ? "yes" : "no");
@@ -447,7 +518,7 @@ Imports GroupDocs.Viewer.Results
 
 Dim viewInfoOptions As ViewInfoOptions = ViewInfoOptions.ForPdfView()
 
-Using viewer As New Viewer("Archive.zip")
+Using viewer As New Viewer("documents.zip")
     Dim fileInfo As GroupDocs.Viewer.Results.FileInfo = viewer.GetFileInfo()
     Console.WriteLine("Encrypted: {0}", If(fileInfo.Encrypted, "yes", "no"))
 
@@ -467,6 +538,24 @@ Using viewer As New Viewer("Archive.zip")
     Next folder
 End Using
 ```
+{{< /tab >}}
+{{< tab "documents.zip" >}}
+{{< tab-text >}}
+`documents.zip` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-archives/documents.zip) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-archive-info.txt" >}}  
+```text
+Encrypted: no
+Archive format: Zipped File (.zip)
+Number of pages when saving to PDF: 1
+List of all pages with their metadata, when rendering to PDF:
+ - Page #1 - 2480x3507px
+List of folders in the archive document:
+ - /Invoices/
+ - /Invoices/2025/
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-archives/_index/GetArchiveInfo/get-archive-info.txt)
 {{< /tab >}}
 {{< /tabs >}}
 

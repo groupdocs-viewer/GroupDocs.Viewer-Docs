@@ -1,0 +1,37 @@
+{
+  "file": "viewer/net/_preview/5f80c281fd2eeca3.png",
+  "fileName": "render-xml-to-images.zip",
+  "fileType": "png",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/net/_preview/5f80c281fd2eeca3.png/page-1.jpg",
+      "thumbUrl": "/viewer/net/_preview/5f80c281fd2eeca3.png/page-1.jpg"
+    },
+    {
+      "number": 2,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/net/_preview/5f80c281fd2eeca3.png/page-2.png",
+      "thumbUrl": "/viewer/net/_preview/5f80c281fd2eeca3.png/page-2.png"
+    },
+    {
+      "number": 3,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/net/_preview/5f80c281fd2eeca3.png/page-3.jpg",
+      "thumbUrl": "/viewer/net/_preview/5f80c281fd2eeca3.png/page-3.jpg"
+    },
+    {
+      "number": 4,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/net/_preview/5f80c281fd2eeca3.png/page-4.png",
+      "thumbUrl": "/viewer/net/_preview/5f80c281fd2eeca3.png/page-4.png"
+    }
+  ]
+}

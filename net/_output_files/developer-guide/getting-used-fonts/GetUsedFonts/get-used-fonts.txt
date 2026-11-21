@@ -1,0 +1,7 @@
+6 fonts found in the 'sample.docx' document
+Font 'Arial' of Regular style has 1045956 bytes and is of TrueType format
+Font 'Georgia' of Bold style has 207476 bytes and is of TrueType format
+Font 'Georgia' of Regular style has 219712 bytes and is of TrueType format
+Font 'Georgia' of Italic style has 208444 bytes and is of TrueType format
+Font 'Arial' of Bold style has 990008 bytes and is of TrueType format
+Font 'Georgia' of BoldItalic style has 211780 bytes and is of TrueType format

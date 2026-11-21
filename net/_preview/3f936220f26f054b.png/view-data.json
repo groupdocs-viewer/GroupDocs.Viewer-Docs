@@ -1,0 +1,30 @@
+{
+  "file": "viewer/net/_preview/3f936220f26f054b.png",
+  "fileName": "render-excel-to-png.zip",
+  "fileType": "png",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 800,
+      "height": 900,
+      "pageUrl": "/viewer/net/_preview/3f936220f26f054b.png/page-1.png",
+      "thumbUrl": "/viewer/net/_preview/3f936220f26f054b.png/page-1.png"
+    },
+    {
+      "number": 2,
+      "width": 800,
+      "height": 900,
+      "pageUrl": "/viewer/net/_preview/3f936220f26f054b.png/page-2.jpg",
+      "thumbUrl": "/viewer/net/_preview/3f936220f26f054b.png/page-2.jpg"
+    },
+    {
+      "number": 3,
+      "width": 800,
+      "height": 900,
+      "pageUrl": "/viewer/net/_preview/3f936220f26f054b.png/page-3.png",
+      "thumbUrl": "/viewer/net/_preview/3f936220f26f054b.png/page-3.png"
+    }
+  ]
+}

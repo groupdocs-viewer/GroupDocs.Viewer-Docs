@@ -42,9 +42,9 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "load-document-from-url-outputs.zip" >}}  
 ```text
-load_document_from_url/page_1.html (317 KB)
+load_document_from_url/page_1.html (319 KB)
 load_document_from_url/page_2.html (149 KB)
-load_document_from_url/page_3.html (113 KB)
+load_document_from_url/page_3.html (1238 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/loading-documents/load-document-from-url/load_document_from_url/load-document-from-url-outputs.zip)
 {{< /tab >}}

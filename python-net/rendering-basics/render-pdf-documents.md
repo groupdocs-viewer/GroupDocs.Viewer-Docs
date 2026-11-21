@@ -60,16 +60,14 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-to-html-outputs.zip" >}}  
 ```text
-render_pdf_to_html/pdf_page_1.html (832 KB)
-render_pdf_to_html/pdf_page_2.html (80 KB)
+render_pdf_to_html/pdf_page_1.html (636 KB)
+render_pdf_to_html/pdf_page_2.html (264 KB)
+render_pdf_to_html/pdf_page_3.html (299 KB)
+render_pdf_to_html/pdf_page_4.html (76 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_to_html/render-pdf-to-html-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a PDF file to HTML](/viewer/python-net/images/rendering-basics/render-pdf-documents/render-pdf-to-html.png)
 
 ### Create an HTML file with external resources
 
@@ -91,7 +89,8 @@ def render_pdf_to_html_external():
         # Create an HTML file for each PDF page.
         # Specify the HTML file names and location of external resources.
         # {0} and {1} are replaced with the current page number and resource name, respectively.
-        viewOptions = HtmlViewOptions.for_external_resources("render_pdf_to_html_external/pdf_page_{0}.html", "render_pdf_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_pdf_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        # The resource URL is relative to the HTML file.
+        viewOptions = HtmlViewOptions.for_external_resources("render_pdf_to_html_external/pdf_page_{0}.html", "render_pdf_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -105,25 +104,23 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-to-html-external-outputs.zip" >}}  
 ```text
-render_pdf_to_html_external/pdf_page_1.html (8 KB)
-render_pdf_to_html_external/pdf_page_1/resource_1_f.woff (5 KB)
-render_pdf_to_html_external/pdf_page_1/resource_1_f1.woff (7 KB)
-render_pdf_to_html_external/pdf_page_1/resource_1_f2.woff (9 KB)
-render_pdf_to_html_external/pdf_page_1/resource_1_f3.woff (10 KB)
-render_pdf_to_html_external/pdf_page_1/resource_1_f4.woff (7 KB)
-render_pdf_to_html_external/pdf_page_1/resource_1_f5.woff (3 KB)
-render_pdf_to_html_external/pdf_page_1/resource_1_f6.woff (1 KB)
-render_pdf_to_html_external/pdf_page_1/resource_1_i.png (570 KB)
-render_pdf_to_html_external/pdf_page_1/resource_1_i1.png (109 bytes)
-[TRUNCATED] (17 files total)
+render_pdf_to_html_external/pdf_page_1.html (3 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_f.woff (10 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_f1.woff (22 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_i.png (441 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_s.css (2 KB)
+render_pdf_to_html_external/pdf_page_2.html (9 KB)
+render_pdf_to_html_external/pdf_page_2/resource_2_f.woff (13 KB)
+render_pdf_to_html_external/pdf_page_2/resource_2_f1.woff (23 KB)
+render_pdf_to_html_external/pdf_page_2/resource_2_i.png (153 KB)
+render_pdf_to_html_external/pdf_page_2/resource_2_s.css (3 KB)
+[TRUNCATED] (21 files total)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_to_html_external/render-pdf-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/python-net/images/rendering-basics/render-pdf-documents/render-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ### Create HTML with fixed layout
 
@@ -132,7 +129,6 @@ By default, PDF and EPUB documents are rendered to HTML with fixed layout to ens
 The following image demonstrates PDF document rendered HTML with fixed layout:
 
 ![Create HTML with fixed layout](/viewer/python-net/images/rendering-basics/render-pdf-documents/render-pdf-to-html-with-fixed-layout.png)
-
 
 ### Adjust image quality in the output HTML file
 
@@ -171,8 +167,10 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-with-image-quality-outputs.zip" >}}  
 ```text
-render_pdf_with_image_quality/pdf_with_image_quality_1.html (5534 KB)
-render_pdf_with_image_quality/pdf_with_image_quality_2.html (222 KB)
+render_pdf_with_image_quality/pdf_with_image_quality_1.html (2779 KB)
+render_pdf_with_image_quality/pdf_with_image_quality_2.html (884 KB)
+render_pdf_with_image_quality/pdf_with_image_quality_3.html (848 KB)
+render_pdf_with_image_quality/pdf_with_image_quality_4.html (102 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_with_image_quality/render-pdf-with-image-quality-outputs.zip)
 {{< /tab >}}
@@ -212,16 +210,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-text-as-image-outputs.zip" >}}  
 ```text
-render_pdf_text_as_image/text-as-image_1.html (5463 KB)
-render_pdf_text_as_image/text-as-image_2.html (224 KB)
+render_pdf_text_as_image/text-as-image_1.html (2732 KB)
+render_pdf_text_as_image/text-as-image_2.html (941 KB)
+render_pdf_text_as_image/text-as-image_3.html (898 KB)
+render_pdf_text_as_image/text-as-image_4.html (120 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_text_as_image/render-pdf-text-as-image-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below illustrates the result. PDF content is exported to HTML as an image, so users cannot select or copy document text.  
-
-![Render PDF content as an image in the output HTML file](/viewer/python-net/images/rendering-basics/render-pdf-documents/render-pdf-to-html-as-image.png)
+PDF content is exported to HTML as an image, so users cannot select or copy document text.
 
 ### Enable multi-layer rendering
 
@@ -256,8 +254,10 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-with-layered-rendering-outputs.zip" >}}  
 ```text
-render_pdf_with_layered_rendering/pdf_with_layered_rendering_1.html (849 KB)
-render_pdf_with_layered_rendering/pdf_with_layered_rendering_2.html (85 KB)
+render_pdf_with_layered_rendering/pdf_with_layered_rendering_1.html (641 KB)
+render_pdf_with_layered_rendering/pdf_with_layered_rendering_2.html (279 KB)
+render_pdf_with_layered_rendering/pdf_with_layered_rendering_3.html (341 KB)
+render_pdf_with_layered_rendering/pdf_with_layered_rendering_4.html (91 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_with_layered_rendering/render-pdf-with-layered-rendering-outputs.zip)
 {{< /tab >}}
@@ -297,16 +297,14 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-to-png-outputs.zip" >}}  
 ```text
-render_pdf_to_png/pdf_page_1.png (430 KB)
-render_pdf_to_png/pdf_page_2.png (42 KB)
+render_pdf_to_png/pdf_page_1.png (354 KB)
+render_pdf_to_png/pdf_page_2.png (181 KB)
+render_pdf_to_png/pdf_page_3.png (205 KB)
+render_pdf_to_png/pdf_page_4.png (59 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_to_png/render-pdf-to-png-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a PDF file to PNG](/viewer/python-net/images/rendering-basics/render-pdf-documents/render-pdf-to-png.png)
 
 ### Convert PDF files to JPEG
 
@@ -340,8 +338,10 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-to-jpg-outputs.zip" >}}  
 ```text
-render_pdf_to_jpg/pdf_to_jpg_1.jpg (112 KB)
-render_pdf_to_jpg/pdf_to_jpg_2.jpg (33 KB)
+render_pdf_to_jpg/pdf_to_jpg_1.jpg (92 KB)
+render_pdf_to_jpg/pdf_to_jpg_2.jpg (74 KB)
+render_pdf_to_jpg/pdf_to_jpg_3.jpg (83 KB)
+render_pdf_to_jpg/pdf_to_jpg_4.jpg (49 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_to_jpg/render-pdf-to-jpg-outputs.zip)
 {{< /tab >}}
@@ -378,8 +378,10 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-preserve-page-size-outputs.zip" >}}  
 ```text
-render_pdf_preserve_page_size/pdf_preserve_page_size_1.png (364 KB)
-render_pdf_preserve_page_size/pdf_preserve_page_size_2.png (30 KB)
+render_pdf_preserve_page_size/pdf_preserve_page_size_1.png (283 KB)
+render_pdf_preserve_page_size/pdf_preserve_page_size_2.png (112 KB)
+render_pdf_preserve_page_size/pdf_preserve_page_size_3.png (133 KB)
+render_pdf_preserve_page_size/pdf_preserve_page_size_4.png (24 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_preserve_page_size/render-pdf-preserve-page-size-outputs.zip)
 {{< /tab >}}
@@ -416,8 +418,10 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-with-font-hinting-outputs.zip" >}}  
 ```text
-render_pdf_with_font_hinting/pdf_with_font_hinting_1.png (1309 KB)
-render_pdf_with_font_hinting/pdf_with_font_hinting_2.png (100 KB)
+render_pdf_with_font_hinting/pdf_with_font_hinting_1.png (976 KB)
+render_pdf_with_font_hinting/pdf_with_font_hinting_2.png (406 KB)
+render_pdf_with_font_hinting/pdf_with_font_hinting_3.png (427 KB)
+render_pdf_with_font_hinting/pdf_with_font_hinting_4.png (64 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_with_font_hinting/render-pdf-with-font-hinting-outputs.zip)
 {{< /tab >}}
@@ -427,20 +431,20 @@ Refer to the following article for more information on font hinting: [Font hinti
 
 ## Disable character grouping
 
-When you render PDF files in other formats, GroupDocs.Viewer groups individual characters into words to improve rendering performance. If your document contains hieroglyphic or special symbols, you may need to disable character grouping to generate a more precise layout. To do this, use the [PdfOptions.disable_chars_grouping]((https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptions/#properties) method, as shown below:
+When you render PDF files in other formats, GroupDocs.Viewer groups individual characters into words to improve rendering performance. If your document contains hieroglyphic or special symbols, you may need to disable character grouping to generate a more precise layout. To do this, use the [PdfOptions.disable_chars_grouping](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pdfoptions/#properties) property when you render to HTML, as shown below:
 
 {{< tabs "example11">}}
 {{< tab "Python" >}}
 ```python
 from groupdocs.viewer import Viewer
-from groupdocs.viewer.options import PngViewOptions
+from groupdocs.viewer.options import HtmlViewOptions
 
 def render_pdf_disable_char_grouping():
     # Load PDF document
     with Viewer("sample.pdf") as viewer:
-        # Create a PNG image for each PDF page.
-        # {0} is replaced with the current page number in the image name.
-        viewOptions = PngViewOptions("render_pdf_disable_char_grouping/pdf_disable_char_grouping_{0}.png")
+        # Create an HTML file for each PDF page.
+        # {0} is replaced with the current page number in the file name.
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_pdf_disable_char_grouping/pdf_disable_char_grouping_{0}.html")
         # Disable character grouping.
         viewOptions.pdf_options.disable_chars_grouping = True
         viewer.view(viewOptions)
@@ -456,8 +460,10 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-disable-char-grouping-outputs.zip" >}}  
 ```text
-render_pdf_disable_char_grouping/pdf_disable_char_grouping_1.png (1309 KB)
-render_pdf_disable_char_grouping/pdf_disable_char_grouping_2.png (100 KB)
+render_pdf_disable_char_grouping/pdf_disable_char_grouping_1.html (690 KB)
+render_pdf_disable_char_grouping/pdf_disable_char_grouping_2.html (374 KB)
+render_pdf_disable_char_grouping/pdf_disable_char_grouping_3.html (435 KB)
+render_pdf_disable_char_grouping/pdf_disable_char_grouping_4.html (144 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_disable_char_grouping/render-pdf-disable-char-grouping-outputs.zip)
 {{< /tab >}}
@@ -465,7 +471,7 @@ render_pdf_disable_char_grouping/pdf_disable_char_grouping_2.png (100 KB)
 
 ## Render text comments
 
-Use the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewoptions/#properties) method for a target view to display textual annotations (such as text comments, sticky notes, text boxes and callouts) in the output HTML, PNG, or JPEG files.
+Textual annotations (such as text comments, sticky notes, text boxes and callouts) are rendered by default: the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewoptions/#properties) property is `True` unless you change it. The example below sets it explicitly; set it to `False` to hide the annotations in the output HTML, PNG, or JPEG files.
 
 The code example below renders a PDF file with text comments as an image.
 
@@ -496,16 +502,14 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-with-comments-outputs.zip" >}}  
 ```text
-render_pdf_with_comments/pdf_with_comments_1.png (1309 KB)
-render_pdf_with_comments/pdf_with_comments_2.png (100 KB)
+render_pdf_with_comments/pdf_with_comments_1.png (976 KB)
+render_pdf_with_comments/pdf_with_comments_2.png (406 KB)
+render_pdf_with_comments/pdf_with_comments_3.png (427 KB)
+render_pdf_with_comments/pdf_with_comments_4.png (64 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_with_comments/render-pdf-with-comments-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Render PDF comments to PNG](/viewer/python-net/images/rendering-basics/render-pdf-documents/render-pdf-comments.png)
 
 ## Get information about a PDF file
 
@@ -542,15 +546,11 @@ if __name__ == "__main__":
 {{< tab "get-pdf-information.txt" >}}  
 ```text
 File type: Portable Document Format File (.pdf)
-The number of pages: 2
+The number of pages: 4
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/get_pdf_information/get-pdf-information.txt)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![Get information about a PDF file](/viewer/python-net/images/rendering-basics/render-pdf-documents/retrieve-pdf-file-information.png)
 
 ### Extract text from a PDF file
 
@@ -608,18 +608,13 @@ if __name__ == "__main__":
 ```text
 Page: 1
 Text lines/words/characters:
-Line 'How to fold origami candy boxes' X=141.14 Y=76.4052 313.12501x22.044px with 6 word(s).	Words: ['How', 'to', 'fold', 'origami', 'candy', 'boxes']
-		Characters for 'How': ['H', 'o', 'w']
-		Characters for 'to': ['t', 'o']
-		Characters for 'fold': ['f', 'o', 'l', 'd']
-		Characters for 'origami': ['o', 'r', 'i', 'g', 'a', 'm', 'i']
-		Characters for 'candy': ['c', 'a', 'n', 'd', 'y']
-		Characters for 'boxes': ['b', 'o', 'x', 'e', 's']
-Line 'How about folding 
+Line 'Autumn Harvest 2026' X=40 Y=393.36999 347.68652x37.4px with 3 word(s).	Words: ['Autumn', 'Harvest', '2026']
+		Characters for 'Autumn': ['A', 'u', 't', 'u', 'm', 'n']
+		Characters for 'Harvest': ['H', 'a', 'r', 'v', 'e', 's', 't']
+		Characters for '2026': ['2', '0', '2', '6']
+Line 'The wholesale catalog for cafes, grocers and restaurants' X=40 Y=445.27001 352.52246x15.4px with 8 word(s).	Words: ['The', 'wholesale', 'catalog', 'for', 'cafes,', 'grocers', 
 [TRUNCATED]
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/extract_pdf_text/extract-pdf-text.txt)
 {{< /tab >}}
 {{< /tabs >}}
-
-![Extract and display PDF text](/viewer/python-net/images/rendering-basics/render-pdf-documents/extract-pdf-text.png)

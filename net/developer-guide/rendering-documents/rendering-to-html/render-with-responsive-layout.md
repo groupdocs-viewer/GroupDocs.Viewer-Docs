@@ -12,7 +12,7 @@ Responsive design aims to make web pages render well on a variety of devices. Gr
 
 The following code snippet shows how to render a .docx document to HTML with responsive layout:
 
-{{< tabs "example1">}}
+{{< tabs "render-responsive-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -49,5 +49,20 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-html/render-with-responsive-layout/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-responsive-html.zip" >}}  
+```text
+p_1.html (177 KB)
+p_2.html (10 KB)
+p_3.html (44 KB)
+p_4.html (843 KB)
+p_5.html (15 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/render-with-responsive-layout/RenderResponsiveHtml/render-responsive-html.zip)
 {{< /tab >}}
 {{< /tabs >}}

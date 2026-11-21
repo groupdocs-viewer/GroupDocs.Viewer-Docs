@@ -1,0 +1,44 @@
+{
+  "file": "viewer/net/_preview/71ca6ed856d4b3e6.xlsx",
+  "fileName": "invoice.xlsx",
+  "fileType": "xlsx",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/net/_preview/71ca6ed856d4b3e6.xlsx/page-1.jpg",
+      "thumbUrl": "/viewer/net/_preview/71ca6ed856d4b3e6.xlsx/page-1.jpg"
+    },
+    {
+      "number": 2,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/net/_preview/71ca6ed856d4b3e6.xlsx/page-2.png",
+      "thumbUrl": "/viewer/net/_preview/71ca6ed856d4b3e6.xlsx/page-2.png"
+    },
+    {
+      "number": 3,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/net/_preview/71ca6ed856d4b3e6.xlsx/page-3.jpg",
+      "thumbUrl": "/viewer/net/_preview/71ca6ed856d4b3e6.xlsx/page-3.jpg"
+    },
+    {
+      "number": 4,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/net/_preview/71ca6ed856d4b3e6.xlsx/page-4.png",
+      "thumbUrl": "/viewer/net/_preview/71ca6ed856d4b3e6.xlsx/page-4.png"
+    },
+    {
+      "number": 5,
+      "width": 816,
+      "height": 1056,
+      "pageUrl": "/viewer/net/_preview/71ca6ed856d4b3e6.xlsx/page-5.png",
+      "thumbUrl": "/viewer/net/_preview/71ca6ed856d4b3e6.xlsx/page-5.png"
+    }
+  ]
+}

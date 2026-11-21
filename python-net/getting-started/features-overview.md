@@ -17,7 +17,7 @@ aliases:
 
 The term *rendering* in GroupDocs.Viewer describes the process of converting a document into a file format that preserves page boundaries. For example, when a three-page DOCX file is rendered to HTML, the result is three HTML files — one per page. See the [Developer Guide]({{< ref "viewer/python-net/developer-guide/rendering-documents/_index.md" >}}) for runnable examples.
 
-![Rendering diagram](/viewer/python-net/images/getting-started/features-overview/rendering.png)
+![A three-page DOCX rendered by GroupDocs.Viewer: three HTML files, three PNG images or three JPEG images, one per page, or one PDF file with all three pages](/viewer/python-net/images/developer-guide/rendering-documents/rendering-overview.svg)
 
 ### Rendering to HTML
 

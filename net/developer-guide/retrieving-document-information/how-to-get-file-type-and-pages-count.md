@@ -7,6 +7,7 @@ description: "This article explains how to get the format family and the additio
 keywords: 
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
+toc: True
 ---
 A format family is a group of several file types for which an application provides additional information. For example, archive files (.7z, .rar, .zip, etc.) or Outlook files (.ost, .pst) are format families.
 
@@ -24,7 +25,7 @@ GroupDocs.Viewer provides additional information for the following format famili
 
 The following code snippet shows how to get the file type and the pages count from a file:
 
-{{< tabs "example1">}}
+{{< tabs "get-file-type-and-pages-count">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -68,17 +69,25 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/retrieving-document-information/how-to-get-file-type-and-pages-count/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-file-type-and-pages-count.txt" >}}  
+```text
+Document type is: Portable Document Format File (.pdf)
+Pages count: 4
+```
+[Download full output](/viewer/net/_output_files/developer-guide/retrieving-document-information/how-to-get-file-type-and-pages-count/GetFileTypeAndPagesCount/get-file-type-and-pages-count.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![](/viewer/net/images/how-to-get-file-type-and-pages-count.png)
 
 ## Get the file type and the pages count from a stream
 
 The following code snippet shows how to get the file type and the pages count from a stream:
 
-{{< tabs "example2">}}
+{{< tabs "get-file-type-and-pages-count-from-stream">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -120,8 +129,16 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/retrieving-document-information/how-to-get-file-type-and-pages-count/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-file-type-and-pages-count-from-stream.txt" >}}  
+```text
+Document type is: Portable Document Format File (.pdf)
+Pages count: 4
+```
+[Download full output](/viewer/net/_output_files/developer-guide/retrieving-document-information/how-to-get-file-type-and-pages-count/GetFileTypeAndPagesCountFromStream/get-file-type-and-pages-count-from-stream.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![](/viewer/net/images/how-to-get-file-type-and-pages-count.png)

@@ -17,7 +17,7 @@ To reorder pages, follow these steps:
 
 The following code snippet shows how to reorder pages:
 
-{{< tabs "example1">}}
+{{< tabs "reorder-pages">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer.Options;
@@ -52,5 +52,16 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/reorder-pages/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 199 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/reorder-pages/ReorderPages/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}

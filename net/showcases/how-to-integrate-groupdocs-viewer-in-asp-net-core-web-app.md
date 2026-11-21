@@ -3,41 +3,45 @@ id: how-to-integrate-groupdocs-viewer-in-asp-net-core-web-app
 url: viewer/net/how-to-integrate-groupdocs-viewer-in-asp-net-core-web-app
 title: How to integrate GroupDocs.Viewer in ASP.NET Core Web application
 weight: 1
-description: "This guide steps through integration process of GroupDocs.Viewer.UI in ASP.NET Core Web application"
-keywords: integration process, ASP.NET Core Web application
+description: "Add GroupDocs.Viewer.UI to an ASP.NET Core web application: install four packages, map the /viewer and /viewer-api endpoints, and view documents in the browser."
+keywords: GroupDocs.Viewer.UI, ASP.NET Core, document viewer, web application, integration
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 toc: True
 ---
-This page describes how to develop a simple ASP.NET Core Web application that uses GroupDocs.Viewer for .NET as a rendering engine. The page describes how to create an application and to add required packages using the terminal, but you can do the same with Visual Studio. The following image shows the simplified application diagram:
+This guide builds a small ASP.NET Core web application that shows documents in the browser. The viewer itself is [GroupDocs.Viewer.UI](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI), and GroupDocs.Viewer for .NET renders the documents for it. The steps use the .NET CLI; in Visual Studio they are the same.
 
-![Simplified diagram of the web application that we're going to build](/viewer/net/images/showcases/how-to-integrate-groupdocs-viewer-ui-in-asp-net-core-web-app/simplified-app-diagram.png)
+![The browser loads the viewer app from /viewer, then asks /viewer-api for the pages. The API renders them with GroupDocs.Viewer for .NET, reads documents from ./Files and keeps rendered pages in ./Cache](/viewer/net/images/showcases/how-to-integrate-groupdocs-viewer-ui-in-asp-net-core-web-app/viewer-ui-app-diagram.svg)
 
-You can also find this sample application in the [demo projects repository](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET/tree/master/Demos/ASP.NET%20Core) at GitHub.
+The application has two endpoints:
+
+1. `/viewer` serves the viewer, an Angular app that runs in the browser.
+2. `/viewer-api` renders the documents for it. It reads the documents from the `Files` folder and stores the rendered pages in the `Cache` folder, so each page is rendered only once.
+
+The finished application is also available as [a sample in the GroupDocs.Viewer.UI repository](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI/tree/master/samples/GroupDocs.Viewer.UI.Sample).
 
 ## Prerequisites
 
-To build the application from scratch, download .NET or .NET Core 3.1 SDK at <https://dotnet.microsoft.com/download> and then install it.
+Install the [.NET SDK](https://dotnet.microsoft.com/download), version 8 or later. The packages also support .NET 6.
 
-## Create an application
+## Create the application
 
-Create a web application by executing the [.NET CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/) command in the directory named `my-viewer-app`:
+Create an empty web application in the `my-viewer-app` folder:
 
-{{< tabs "example1">}}
+{{< tabs "aspnet-core-create-app">}}
 {{< tab "Shell" >}}
 ```sh
-dotnet new web
+dotnet new web -o my-viewer-app
+cd my-viewer-app
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
-Check that project and configuration files has been created.
+## Install the packages
 
-## Install packages
+Add the viewer packages from NuGet:
 
-Add required packages using the .NET CLI tool. To do this, execute the following commands in the `my-viewer-app` directory:
-
-{{< tabs "example2">}}
+{{< tabs "aspnet-core-install-packages">}}
 {{< tab "Shell" >}}
 ```sh
 dotnet add package GroupDocs.Viewer.UI
@@ -47,149 +51,107 @@ dotnet add package GroupDocs.Viewer.UI.Api.Local.Cache
 ```
 {{< /tab >}}
 {{< /tabs >}}
-These commands add the following packages to the application:
 
-* GroupDocs.Viewer.UI contains a middleware that serves the client application at the /viewer endpoint that you configure in the next step.
-* GroupDocs.Viewer.UI.SelfHost.Api contains a middleware with a rendering engine based on GroupDocs.Viewer for .NET. You configure it at the /viewer-api endpoint.
-* GroupDocs.Viewer.UI.Api.Local.Storage contains an implementation for the storage using a local disk to read and write files uploaded using UI.
-* GroupDocs.Viewer.UI.Api.Local.Cache contains implementation for the cache storage. The cache stores output files produced by the rendering engine, such as the rendered HTML pages.
+| Package | What it adds |
+|---|---|
+| GroupDocs.Viewer.UI | The viewer app and the middleware that serves it at `/viewer` |
+| GroupDocs.Viewer.UI.SelfHost.Api | The API at `/viewer-api`, which renders documents with GroupDocs.Viewer for .NET. It runs on Windows, Linux and macOS; the former `GroupDocs.Viewer.UI.SelfHost.Api.CrossPlatform` package is deprecated |
+| GroupDocs.Viewer.UI.Api.Local.Storage | A file storage on the local disk: the API reads documents from it and saves the files users upload |
+| GroupDocs.Viewer.UI.Api.Local.Cache | A cache on the local disk for the rendered pages, thumbnails and PDF files |
 
-## Configure middleware
+## Configure the application
 
-Open the `Startup.cs` file and add the following lines to `ConfigureServices` method:
+Replace the contents of `Program.cs` with the following code:
 
-{{< tabs "example3">}}
-{{< tab "C#" >}}
-```csharp
-services
-    .AddGroupDocsViewerUI();
-
-services
-    .AddControllers()
-    .AddGroupDocsViewerSelfHostApi()
-    .AddLocalStorage("./Files")
-    .AddLocalCache("./Cache");
-```
-{{< /tab >}}
-{{< /tabs >}}
-
-Add the following lines to the `Configure` method to register UI and API endpoints:
-
-{{< tabs "example4">}}
-{{< tab "C#" >}}
-```csharp
-app
-    .UseRouting()
-    .UseEndpoints(endpoints =>
-    {
-        endpoints.MapGroupDocsViewerUI(options =>
-        {
-            options.UIPath = "/viewer";
-            options.APIEndpoint = "/viewer-api";
-        });
-        endpoints.MapGroupDocsViewerApi(options =>
-        {
-            options.ApiPath = "/viewer-api";
-        });
-    });
-```
-{{< /tab >}}
-{{< /tabs >}}
-
-This code registers `/viewer` middleware that serves client application files and `/viewer-api` middleware that renders content for the client application.
-
-The `Startup.cs` file is as follows:
-
-{{< tabs "example5">}}
-{{< tab "C#" >}}
-```csharp
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace my_viewer_app
-{
-    public class Startup
-    {
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services
-                .AddGroupDocsViewerUI();
-
-            services
-                .AddControllers()
-                .AddGroupDocsViewerSelfHostApi()
-                .AddLocalStorage("./Files")
-                .AddLocalCache("./Cache");
-        }
-
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            app
-                .UseRouting()
-                .UseEndpoints(endpoints =>
-                {
-                    endpoints.MapGroupDocsViewerUI(options =>
-                    {
-                        options.UIPath = "/viewer";
-                        options.APIEndpoint = "/viewer-api";
-                    });
-
-                    endpoints.MapGroupDocsViewerApi(options =>
-                    {
-                        options.ApiPath = "/viewer-api";
-                    });
-                });
-        }
-    }
-}
-```
-{{< /tab >}}
-{{< /tabs >}}
-
-If you use the [new program style](https://docs.microsoft.com/en-us/dotnet/core/tutorials/top-level-templates) with top-level statements, global using directives, and implicit using directives, the `Startup.cs` is as follows:
-
-{{< tabs "example6">}}
+{{< tabs "aspnet-core-program">}}
 {{< tab "C#" >}}
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
-        .AddGroupDocsViewerUI();
+    .AddGroupDocsViewerUI();
 
 builder.Services
-        .AddControllers()
-        .AddGroupDocsViewerSelfHostApi()
-        .AddLocalStorage("./Files")
-        .AddLocalCache("./Cache");
+    .AddControllers()
+    .AddGroupDocsViewerSelfHostApi()
+    .AddLocalStorage("./Files")
+    .AddLocalCache("./Cache");
 
 var app = builder.Build();
 
-app
-    .UseRouting()
-    .UseEndpoints(endpoints =>
-    {
-        endpoints.MapGroupDocsViewerUI(options =>
-        {
-            options.UIPath = "/viewer";
-            options.APIEndpoint = "/viewer-api";
-        });
-        endpoints.MapGroupDocsViewerApi(options =>
-        {
-            options.ApiPath = "/viewer-api";
-        });
-    });
+app.UseRouting();
+
+app.MapGroupDocsViewerUI(options =>
+{
+    options.UIPath = "/viewer";
+    options.ApiEndpoint = "/viewer-api";
+});
+
+app.MapGroupDocsViewerApi(options =>
+{
+    options.ApiPath = "/viewer-api";
+});
 
 app.Run();
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
-## Create folders for files and cache
+This code does the following:
 
-On a local disk, create folders for files and cache by executing the following commands:
+* `AddGroupDocsViewerUI` registers the viewer app, and `MapGroupDocsViewerUI` serves it at `/viewer`. `ApiEndpoint` tells the app where the API is.
+* `AddGroupDocsViewerSelfHostApi` registers the API with its rendering engine, and `MapGroupDocsViewerApi` maps it at `/viewer-api`.
+* `AddLocalStorage("./Files")` and `AddLocalCache("./Cache")` set the folders for the documents and the rendered pages.
 
-{{< tabs "example7">}}
+### Set the license
+
+Without a license, GroupDocs.Viewer works in evaluation mode, with the [evaluation limitations]({{< ref "viewer/net/getting-started/licensing-and-subscription.md" >}}). To apply a license, set the `GROUPDOCS_LIC_PATH` environment variable to the path of the license file, or set the path in code:
+
+{{< tabs "aspnet-core-license">}}
+{{< tab "C#" >}}
+```csharp
+builder.Services
+    .AddControllers()
+    .AddGroupDocsViewerSelfHostApi(config =>
+    {
+        config.SetLicensePath("GroupDocs.Viewer.lic");
+    })
+    .AddLocalStorage("./Files")
+    .AddLocalCache("./Cache");
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+### Restrict access
+
+The viewer does not authenticate users. To let only signed-in users open documents, apply your authorization policy to both endpoints. Applying it to `/viewer` alone leaves the API, and with it every document, open to anyone:
+
+{{< tabs "aspnet-core-authorization">}}
+{{< tab "C#" >}}
+```csharp
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapGroupDocsViewerUI(options =>
+{
+    options.UIPath = "/viewer";
+    options.ApiEndpoint = "/viewer-api";
+}).RequireAuthorization();
+
+app.MapGroupDocsViewerApi(options =>
+{
+    options.ApiPath = "/viewer-api";
+}).RequireAuthorization();
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+## Create the folders
+
+Create the folders for the documents and the cache, then copy a few documents into `Files`:
+
+{{< tabs "aspnet-core-create-folders">}}
 {{< tab "Shell" >}}
 ```sh
 mkdir Files
@@ -200,12 +162,10 @@ mkdir Cache
 
 ## Run the application
 
-To run the application, execute the `dotnet run` command in the `my-viewer-app` directory. The output should be as follows:  
+Run the application with the `dotnet run` command in the `my-viewer-app` folder. The output looks like this:
 
-```verilog
+```text
 Building...
-info: Microsoft.Hosting.Lifetime[14]
-      Now listening on: https://localhost:7153
 info: Microsoft.Hosting.Lifetime[14]
       Now listening on: http://localhost:5081
 info: Microsoft.Hosting.Lifetime[0]
@@ -216,14 +176,35 @@ info: Microsoft.Hosting.Lifetime[0]
       Content root path: C:\my-viewer-app
 ```
 
-In the browser, open one of the endpoints listed in the output above and add the `/viewer` path to see the viewer application in action:
+In the browser, open the address from the output with the `/viewer` path, for example `http://localhost:5081/viewer`:
 
-![GroupDocs.Viewer.Ui in ASP.NET Core Web application](/viewer/net/images/showcases/how-to-integrate-groupdocs-viewer-ui-in-asp-net-core-web-app/groupdocs-viewer-ui-asp-net-core-web-app.png)
+![GroupDocs.Viewer.UI in the ASP.NET Core application: an annual report with page thumbnails and the zoom, rotate, page, search, print, present, Download PDF and Open File buttons](/viewer/net/images/showcases/how-to-integrate-groupdocs-viewer-ui-in-asp-net-core-web-app/groupdocs-viewer-ui-26-10-asp-net-core.jpg)
 
-To upload files, click the folder icon or copy your files to the `Files` directory. You can also specify the path to the directory in the `AddLocalStorage` extension method.
+* Click **Open File** to choose a document from the `Files` folder or to upload one.
+* To open a document directly, add its name to the address: `http://localhost:5081/viewer?file=annual-report.docx`.
+* The first time you open a document, its pages are rendered, so it takes longer. After that, the viewer reads them from the `Cache` folder.
+
+## Customize the viewer
+
+Options of `AddGroupDocsViewerUI` set how the viewer renders documents (HTML or images), which file it opens first, its zoom, its theme, and the buttons it shows. For example, the following code hides the rotate buttons and the button that switches between the light and dark themes:
+
+{{< tabs "aspnet-core-ui-options">}}
+{{< tab "C#" >}}
+```csharp
+builder.Services
+    .AddGroupDocsViewerUI(config =>
+    {
+        config.EnableRotate = false;
+        config.EnableThemeSwitcher = false;
+    });
+```
+{{< /tab >}}
+{{< /tabs >}}
+
+For all the options, see [Customize UI behavior](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI#customize-ui-behavior) and [Show or hide UI controls](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI#show-or-hide-ui-controls) in the GroupDocs.Viewer.UI repository.
 
 ## Resources
 
-* [GroupDocs.Viewer.UI package repository](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI)
-* [GroupDocs.Viewer for .NET Demos and Examples](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET)
-* [GroupDocs.Viewer Online App](https://products.groupdocs.app/viewer/total)
+* [GroupDocs.Viewer.UI repository](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET-UI): documentation, storage and cache providers, Docker, and samples
+* [GroupDocs.Viewer for .NET examples](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-.NET)
+* [GroupDocs.Viewer online app](https://products.groupdocs.app/viewer/total), built with the same viewer

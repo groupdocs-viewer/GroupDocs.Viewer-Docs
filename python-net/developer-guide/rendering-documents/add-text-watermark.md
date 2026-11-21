@@ -26,8 +26,9 @@ from groupdocs.viewer.options import HtmlViewOptions, Watermark
 def add_text_watermark():
     # Load document
     with Viewer("sample.docx") as viewer:
-        # Create an HTML file.
-        viewOptions = HtmlViewOptions.for_embedded_resources("add_text_watermark/output-watermark.html")
+        # Create an HTML file for each document page.
+        # {0} is replaced with the current page number in the file name.
+        viewOptions = HtmlViewOptions.for_embedded_resources("add_text_watermark/output-watermark_{0}.html")
         # Add watermark.
         viewOptions.watermark = Watermark("This is a watermark")
         viewer.view(viewOptions)
@@ -41,11 +42,14 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/add-text-watermark/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output-watermark.html" >}}  
+{{< tab "add-text-watermark-outputs.zip" >}}  
 ```text
-<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="generator" content="Aspose.Words for .NET 26.4.0" /><title>Sample Document ver.1</title><style type="text/css">@font-face { font-family:'Calibri'; font-style:normal; font-weight:normal; src:local('☺'), url('data:application/x-font-woff;base64,d09GRgABAAAAAGlIAA0AAAAA09gAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABMAAAAGAAAABgncM96GNtYXAAAAGQAAACswAABrCp8yKHY3Z0IAAABEQAAAKEAAAFvLlw2DVmcGdtAAAGy
-[TRUNCATED]
+add_text_watermark/output-watermark_1.html (254 KB)
+add_text_watermark/output-watermark_2.html (111 KB)
+add_text_watermark/output-watermark_3.html (149 KB)
+add_text_watermark/output-watermark_4.html (1003 KB)
+add_text_watermark/output-watermark_5.html (88 KB)
 ```
-[Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/add-text-watermark/add_text_watermark/output-watermark.html)
+[Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/add-text-watermark/add_text_watermark/add-text-watermark-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}

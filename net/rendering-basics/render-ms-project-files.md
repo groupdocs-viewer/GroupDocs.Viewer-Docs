@@ -41,14 +41,14 @@ Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-project-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
+using (var viewer = new Viewer("sample.mpp"))
 {
     // Render the project's active view as HTML.
     // {0} is replaced with the current page number in the output file names.
@@ -65,7 +65,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+        Using viewer = New Viewer("sample.mpp")
             ' Render the project's active view as HTML.
             ' {0} is replaced with the current page number in the output file names.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
@@ -75,11 +75,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "page_1.html" >}}  
+```text
+HTML file (7.0 MB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectToHtml/page_1.html)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Project file to HTML](/viewer/net/images/rendering-basics/render-ms-project-files/render-project-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -89,14 +96,14 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-project-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
+using (var viewer = new Viewer("sample.mpp"))
 {
     // Render the project's active view as HTML.
     // Specify the HTML file names and location of external resources.
@@ -114,7 +121,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+        Using viewer = New Viewer("sample.mpp")
             ' Render the project's active view as HTML.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the page number and resource name, respectively.
@@ -125,24 +132,43 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-project-to-html-external.zip" >}}  
+```text
+page_1.html (81 KB)
+page_1/resource_1_f.ttf (1612 KB)
+page_1/resource_1_f1.ttf (1021 KB)
+page_1/resource_1_f2.ttf (1578 KB)
+page_1/resource_1_f3.ttf (967 KB)
+page_1/resource_1_g.svg (127 KB)
+page_1/resource_1_i.png (345 bytes)
+page_1/resource_1_i1.png (968 bytes)
+page_1/resource_1_i2.png (946 bytes)
+page_1/resource_1_i3.png (353 bytes)
+[TRUNCATED] (11 files total)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectToHtmlExternal/render-project-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-ms-project-files/render-project-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ## Render Project files as PDF
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Project file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-project-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
+using (var viewer = new Viewer("sample.mpp"))
 {
     // Create a PDF file for the project's active view.
     var viewOptions = new PdfViewOptions("output.pdf");
@@ -158,7 +184,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+        Using viewer = New Viewer("sample.mpp")
             ' Create a PDF file for the project's active view.
             Dim viewOptions = New PdfViewOptions("output.pdf")
             viewer.View(viewOptions)
@@ -167,24 +193,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 125 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectToPdf/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Project file to PDF](/viewer/net/images/rendering-basics/render-ms-project-files/render-project-to-pdf.png)
 
 ## Render Project files as PNG
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Project file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-project-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
+using (var viewer = new Viewer("sample.mpp"))
 {
     // Render the project's active view as PNG.
     // {0} is replaced with the current page number in the output file names.
@@ -204,7 +237,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+        Using viewer = New Viewer("sample.mpp")
             ' Render the project's active view as PNG.
             ' {0} is replaced with the current page number in the output file names.
             Dim viewOptions = New PngViewOptions("output_{0}.png")
@@ -217,24 +250,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output_1.png" >}}  
+```text
+Binary file (PNG, 259 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectToPng/output_1.png)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Project file to PNG](/viewer/net/images/rendering-basics/render-ms-project-files/render-project-to-png-image.png)
 
 ## Render Project files as JPEG
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Project file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-project-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
+using (var viewer = new Viewer("sample.mpp"))
 {
     // Render the project's active view as JPEG.
     // {0} is replaced with the current page number in the output file names.
@@ -254,7 +294,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+        Using viewer = New Viewer("sample.mpp")
             ' Render the project's active view as JPEG.
             ' {0} is replaced with the current page number in the output file names.
             Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
@@ -267,6 +307,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output_1.jpg" >}}  
+```text
+Binary file (JPG, 184 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectToJpg/output_1.jpg)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Get information about a Project file
@@ -277,7 +328,7 @@ Follow the steps below to obtain information about a Project file (the file form
 2. Call the [Viewer.GetViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method, pass the `ViewInfoOptions` instance to this method as a parameter, and cast the returned object to the [ProjectManagementViewInfo](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/projectmanagementviewinfo) type.
 3. Use the `ProjectManagementViewInfo` class properties to retrieve information about the Project file.
 
-{{< tabs "example6">}}
+{{< tabs "get-project-info">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -285,7 +336,7 @@ using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Results;
 // ...
 
-using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
+using (var viewer = new Viewer("sample.mpp"))
 {
     var viewInfoOptions = ViewInfoOptions.ForHtmlView();
     var viewInfo = viewer.GetViewInfo(viewInfoOptions) as ProjectManagementViewInfo;
@@ -310,7 +361,7 @@ Imports GroupDocs.Viewer.Results
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+        Using viewer = New Viewer("sample.mpp")
             Dim viewInfoOptions = ViewInfoOptions.ForHtmlView()
             Dim viewInfo = TryCast(viewer.GetViewInfo(viewInfoOptions), ProjectManagementViewInfo)
         
@@ -326,11 +377,21 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-project-info.txt" >}}  
+```text
+File type: Microsoft Project File (.mpp)
+The number of pages: 1
+Project start date: 9/7/2026 12:00:00 AM
+Project end date: 1/20/2027 12:00:00 AM
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/GetProjectInfo/get-project-info.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![Get information about a Project file](/viewer/net/images/rendering-basics/render-ms-project-files/retrieve-project-file-information.png)
 
 ## Specify the output page size
 
@@ -343,14 +404,14 @@ GroupDocs.Viewer allows you to specify page size for the output file when you co
 
 The following example specifies page size for the output PDF file:
 
-{{< tabs "example7">}}
+{{< tabs "render-project-with-page-size">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
+using (var viewer = new Viewer("sample.mpp"))
 {
     // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
@@ -368,7 +429,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+        Using viewer = New Viewer("sample.mpp")
             ' Convert the document to PDF.
             Dim viewOptions = New PdfViewOptions("output.pdf")
             ' Specify the page size.
@@ -379,8 +440,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 119 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectWithPageSize/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
 
 ## Adjust the time unit
 
@@ -393,14 +464,14 @@ When rendering a Project file, GroupDocs.Viewer selects the smallest time unit o
 
 The following code sample demonstrates how to specify the timescale unit when rendering a Project file to HTML:
 
-{{< tabs "example8">}}
+{{< tabs "render-project-with-time-unit">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
+using (var viewer = new Viewer("sample.mpp"))
 {
     // Convert the document to HTML.
     // {0} is replaced with the current page number in the file name.
@@ -419,7 +490,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+        Using viewer = New Viewer("sample.mpp")
             ' Convert the document to HTML.
             ' {0} is replaced with the current page number in the file name.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output_{0}.html")
@@ -431,11 +502,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output_1.html" >}}  
+```text
+HTML file (6.9 MB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectWithTimeUnit/output_1.html)
+{{< /tab >}}
 {{< /tabs >}}
-
-The image below illustrates the result.
-
-![Render a Project with the timescale unit set to thirds of months](/viewer/net/images/rendering-basics/render-ms-project-files/render-project-with-custom-time-unit.png)
 
 ## Render specific dates
 
@@ -443,7 +521,7 @@ With GroupDocs.Viewer, you can render only a portion of the project's timeline w
 
 The example below demonstrates how to convert a Project file to PDF and set the timeline date range.
 
-{{< tabs "example9">}}
+{{< tabs "render-project-specific-dates">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -451,13 +529,13 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
+using (var viewer = new Viewer("sample.mpp"))
 {
     // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
     // Specify the date range.
-    viewOptions.ProjectManagementOptions.StartDate = new DateTime(2022, 08, 01);
-    viewOptions.ProjectManagementOptions.EndDate = new DateTime(2022, 09, 01);
+    viewOptions.ProjectManagementOptions.StartDate = new DateTime(2026, 10, 01);
+    viewOptions.ProjectManagementOptions.EndDate = new DateTime(2026, 12, 01);
     viewer.View(viewOptions);
 }
 ```
@@ -471,23 +549,30 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+        Using viewer = New Viewer("sample.mpp")
             ' Convert the document to PDF.
             Dim viewOptions = New PdfViewOptions("output.pdf")
             ' Specify the date range.
-            viewOptions.ProjectManagementOptions.StartDate = New DateTime(2022, 08, 01)
-            viewOptions.ProjectManagementOptions.EndDate = New DateTime(2022, 09, 01)
+            viewOptions.ProjectManagementOptions.StartDate = New DateTime(2026, 10, 01)
+            viewOptions.ProjectManagementOptions.EndDate = New DateTime(2026, 12, 01)
             viewer.View(viewOptions)
         End Using
     End Sub
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 120 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectSpecificDates/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Render tasks for a specific date range](/viewer/net/images/rendering-basics/render-ms-project-files/render-tasks-between-two-dates.png)
 
 ## Render notes
 
@@ -499,14 +584,14 @@ If you need to display these notes in the output HTML, PDF, or image files, enab
 
 The following code sample converts a Project file with task notes to PDF:
 
-{{< tabs "example10">}}
+{{< tabs "render-project-with-notes">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("SoftwareDevelopmentPlan.mpp"))
+using (var viewer = new Viewer("sample.mpp"))
 {
     // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
@@ -524,7 +609,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("SoftwareDevelopmentPlan.mpp")
+        Using viewer = New Viewer("sample.mpp")
             ' Convert the document to PDF.
             Dim viewOptions = New PdfViewOptions("output.pdf")
             ' Enable notes rendering.
@@ -535,8 +620,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.mpp" >}}
+{{< tab-text >}}
+`sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 149 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectWithNotes/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. Notes are rendered on a separate page.
-
-![Render a Project file with task notes](/viewer/net/images/rendering-basics/render-ms-project-files/render-task-notes-to-pdf.png)
+Notes are rendered on a separate page.

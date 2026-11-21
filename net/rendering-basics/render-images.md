@@ -82,7 +82,7 @@ Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs
 
 To embed an image in an HTML page, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-image-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -114,11 +114,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.html" >}}  
+```text
+HTML file (1.3 MB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-images/RenderImageToHtml/output.html)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an image to HTML](/viewer/net/images/rendering-basics/render-images/render-image-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -128,7 +135,7 @@ To save an image to a separate folder, call the [HtmlViewOptions.ForExternalReso
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-image-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -162,17 +169,27 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-image-to-html-external.zip" >}}  
+```text
+output.html (269 bytes)
+output/resource_1 (5 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-images/RenderImageToHtmlExternal/render-image-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-The result is shown below. The image is placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-images/render-image-to-html-external-resources.png)
+The image is placed in a separate folder.
 
 ## Render images as PDF
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an image to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-image-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -204,17 +221,24 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 38 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-images/RenderImageToPdf/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an image to PDF](/viewer/net/images/rendering-basics/render-images/render-image-to-pdf.png)
 
 ## Convert images to PNG
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an image to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-image-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -252,17 +276,24 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.png" >}}  
+```text
+Binary file (PNG, 247 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-images/RenderImageToPng/output.png)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an image to PNG](/viewer/net/images/rendering-basics/render-images/render-image-to-png.png)
 
 ## Convert images to JPEG
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert an image to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-image-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -300,6 +331,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "vector-image.svg" >}}
+{{< tab-text >}}
+`vector-image.svg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.jpg" >}}  
+```text
+Binary file (JPG, 141 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-images/RenderImageToJpg/output.jpg)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render a PSD file with custom fonts
@@ -314,7 +356,7 @@ When you render a PSD file with custom fonts, you can specify a folder that cont
 
 You can also set the [ViewOptions.DefaultFontName](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/defaultfontname) property to specify the default font that should be used when a particular font is not found.
 
-{{< tabs "example6">}}
+{{< tabs "render-psd-with-custom-fonts">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -323,7 +365,9 @@ using GroupDocs.Viewer.Options;
 // ...
 
 // Specify a folder that stores custom fonts used in a PSD file.
-var fontSource = new FolderFontSource(@"C:\custom_fonts_folder", SearchOption.AllFolders);
+System.IO.Directory.CreateDirectory("custom_fonts_folder");
+// SearchOption is named in full: System.IO, which .NET 6+ projects import by default, has one too.
+var fontSource = new FolderFontSource("custom_fonts_folder", GroupDocs.Viewer.Fonts.SearchOption.AllFolders);
 FontSettings.SetFontSources(fontSource);
 
 using (var viewer = new Viewer("sample.psd"))
@@ -346,7 +390,8 @@ Imports GroupDocs.Viewer.Options
 Module Program
     Sub Main(args As String())
         ' Specify a folder that stores custom fonts used in a PSD file.
-        Dim fontSource = New FolderFontSource("C:\custom_fonts_folder", SearchOption.AllFolders)
+        System.IO.Directory.CreateDirectory("custom_fonts_folder")
+        Dim fontSource = New FolderFontSource("custom_fonts_folder", SearchOption.AllFolders)
         FontSettings.SetFontSources(fontSource)
     
         Using viewer = New Viewer("sample.psd")
@@ -359,6 +404,17 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.psd" >}}
+{{< tab-text >}}
+`sample.psd` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-images/sample.psd) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.png" >}}  
+```text
+Binary file (PNG, 623 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-images/RenderPsdWithCustomFonts/output.png)
 {{< /tab >}}
 {{< /tabs >}}
 

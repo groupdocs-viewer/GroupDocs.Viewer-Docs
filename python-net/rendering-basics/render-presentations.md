@@ -70,27 +70,18 @@ if __name__ == "__main__":
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "pdf_page_1.html" >}}  
+{{< tab "render-presentation-to-html-outputs.zip" >}}  
 ```text
-﻿<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="X-UA-Compatible" content="IE=9" charset="utf-8" />
-</head>
-<body><style>
-font-variant-ligatures: none;
-@font-face {
-font-family: 'Calibri';
-font-style: 'normal';
-[TRUNCATED]
+render_presentation_to_html/pdf_page_1.html (467 KB)
+render_presentation_to_html/pdf_page_2.html (329 KB)
+render_presentation_to_html/pdf_page_3.html (344 KB)
+render_presentation_to_html/pdf_page_4.html (343 KB)
+render_presentation_to_html/pdf_page_5.html (333 KB)
+render_presentation_to_html/pdf_page_6.html (330 KB)
 ```
-[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_html/pdf_page_1.html)
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_html/render-presentation-to-html-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a presentation file to HTML](/viewer/python-net/images/rendering-basics/render-presentations/render-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -112,7 +103,8 @@ def render_presentation_to_html_external():
         # Create an HTML file for each slide.
         # Specify the HTML file names and location of external resources.
         # {0} and {1} are replaced with the current page number and resource name, respectively.
-        viewOptions = HtmlViewOptions.for_external_resources("render_presentation_to_html_external/pdf_page_{0}.html", "render_presentation_to_html_external/pdf_page_{0}/resource_{0}_{1}", "render_presentation_to_html_external/pdf_page_{0}/resource_{0}_{1}")
+        # The resource URL is relative to the HTML file.
+        viewOptions = HtmlViewOptions.for_external_resources("render_presentation_to_html_external/pdf_page_{0}.html", "render_presentation_to_html_external/pdf_page_{0}/resource_{0}_{1}", "pdf_page_{0}/resource_{0}_{1}")
         viewer.view(viewOptions)
 
 if __name__ == "__main__":
@@ -126,17 +118,23 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-presentation-to-html-external-outputs.zip" >}}  
 ```text
-render_presentation_to_html_external/pdf_page_1.html (296 bytes)
-render_presentation_to_html_external/pdf_page_1/resource_1_g.svg (1 KB)
-render_presentation_to_html_external/pdf_page_1/resource_1_i.jpg (63 KB)
+render_presentation_to_html_external/pdf_page_1.html (259 bytes)
+render_presentation_to_html_external/pdf_page_1/resource_1_g.svg (4 KB)
+render_presentation_to_html_external/pdf_page_1/resource_1_i.jpg (100 KB)
+render_presentation_to_html_external/pdf_page_1/resource_1_i.png (5 KB)
+render_presentation_to_html_external/pdf_page_2.html (259 bytes)
+render_presentation_to_html_external/pdf_page_2/resource_2_g.svg (6 KB)
+render_presentation_to_html_external/pdf_page_3.html (259 bytes)
+render_presentation_to_html_external/pdf_page_3/resource_3_g.svg (20 KB)
+render_presentation_to_html_external/pdf_page_4.html (259 bytes)
+render_presentation_to_html_external/pdf_page_4/resource_4_g.svg (19 KB)
+[TRUNCATED] (14 files total)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_html_external/render-presentation-to-html-external-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/python-net/images/rendering-basics/render-presentations/render-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ## Render presentations as PDF
 
@@ -165,15 +163,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "presentation.pdf" >}}  
 ```text
-Binary file (PDF, 174 KB)
+Binary file (PDF, 375 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_pdf/presentation.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a presentation file to PDF](/viewer/python-net/images/rendering-basics/render-presentations/render-to-pdf.png)
 
 ## Render presentations as PNG
 
@@ -202,22 +196,22 @@ if __name__ == "__main__":
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "presentation_page_0_1.png" >}}  
+{{< tab "render-presentation-to-png-outputs.zip" >}}  
 ```text
-Binary file (PNG, 1.0 MB)
+render_presentation_to_png/presentation_page_0_1.png (324 KB)
+render_presentation_to_png/presentation_page_0_2.png (67 KB)
+render_presentation_to_png/presentation_page_0_3.png (87 KB)
+render_presentation_to_png/presentation_page_0_4.png (83 KB)
+render_presentation_to_png/presentation_page_0_5.png (96 KB)
+render_presentation_to_png/presentation_page_0_6.png (80 KB)
 ```
-[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_png/presentation_page_0_1.png)
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_png/render-presentation-to-png-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a presentation file to PNG](/viewer/python-net/images/rendering-basics/render-presentations/render-to-png-image.png)
 
 ## Render presentations as JPEG
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/pngviewoptions/) class instance and pass it to the [Viewer.view](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer/viewer/#methods) method to convert a presentation file to JPEG. Use the [JpgViewOptions.height](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) and [JpgViewOptions.width](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/jpgviewoptions/#properties) methods to specify the output image size in pixels.
-
 
 {{< tabs "example5">}}
 {{< tab "Python" >}}
@@ -244,11 +238,16 @@ if __name__ == "__main__":
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "presentation_to_jpg_1.jpg" >}}  
+{{< tab "render-presentation-to-jpg-outputs.zip" >}}  
 ```text
-Binary file (JPG, 53 KB)
+render_presentation_to_jpg/presentation_to_jpg_1.jpg (60 KB)
+render_presentation_to_jpg/presentation_to_jpg_2.jpg (40 KB)
+render_presentation_to_jpg/presentation_to_jpg_3.jpg (54 KB)
+render_presentation_to_jpg/presentation_to_jpg_4.jpg (54 KB)
+render_presentation_to_jpg/presentation_to_jpg_5.jpg (65 KB)
+render_presentation_to_jpg/presentation_to_jpg_6.jpg (51 KB)
 ```
-[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_jpg/presentation_to_jpg_1.jpg)
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_to_jpg/render-presentation-to-jpg-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -282,7 +281,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "presentation_with_hidden_slides.pdf" >}}  
 ```text
-Binary file (PDF, 174 KB)
+Binary file (PDF, 382 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_with_hidden_slides/presentation_with_hidden_slides.pdf)
 {{< /tab >}}
@@ -290,7 +289,7 @@ Binary file (PDF, 174 KB)
 
 ## Render comments
 
-Use the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewoptions/#properties) method for a target view to display comments in the output file when you convert your presentation to HTML, PDF, PNG, or JPEG format.
+Comments are rendered by default: the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/viewoptions/#properties) property is `True` unless you change it. The example below sets it explicitly; set it to `False` to hide the comments when you convert your presentation to HTML, PDF, PNG, or JPEG format.
 
 {{< tabs "example8">}}
 {{< tab "Python" >}}
@@ -300,7 +299,7 @@ from groupdocs.viewer.options import PdfViewOptions
 
 def render_presentation_with_comments():
     # Load presentation
-    with Viewer("sample.pptx") as viewer:
+    with Viewer("with_comments.pptx") as viewer:
         viewOptions = PdfViewOptions("render_presentation_with_comments/presentation_with_comments.pdf")
         viewOptions.render_comments = True
         viewer.view(viewOptions)
@@ -309,22 +308,18 @@ if __name__ == "__main__":
     render_presentation_with_comments()
 ```
 {{< /tab >}}
-{{< tab "sample.pptx" >}}
+{{< tab "with_comments.pptx" >}}
 {{< tab-text >}}
-`sample.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+`with_comments.pptx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-presentations/with_comments.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "presentation_with_comments.pdf" >}}  
 ```text
-Binary file (PDF, 174 KB)
+Binary file (PDF, 380 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_with_comments/presentation_with_comments.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a presentation with comments](/viewer/python-net/images/rendering-basics/render-presentations/render-presentation-comments-to-pdf.png)
 
 ## Render speaker notes
 
@@ -360,12 +355,8 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "presentation_with_notes.pdf" >}}  
 ```text
-Binary file (PDF, 174 KB)
+Binary file (PDF, 377 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-presentations/render_presentation_with_notes/presentation_with_notes.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The image below demonstrates the result.
-
-![Render a presentation with notes](/viewer/python-net/images/rendering-basics/render-presentations/render-presentation-notes-to-pdf.png)

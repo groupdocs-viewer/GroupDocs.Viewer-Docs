@@ -1,0 +1,23 @@
+{
+  "file": "viewer/net/_preview/dd9813fd79359f40.html",
+  "fileName": "view-specific-pages.zip",
+  "fileType": "html",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 794,
+      "height": 1123,
+      "pageUrl": "/viewer/net/_preview/dd9813fd79359f40.html/page-1.html",
+      "thumbUrl": "/viewer/net/_preview/dd9813fd79359f40.html/page-1.html"
+    },
+    {
+      "number": 2,
+      "width": 794,
+      "height": 1123,
+      "pageUrl": "/viewer/net/_preview/dd9813fd79359f40.html/page-2.html",
+      "thumbUrl": "/viewer/net/_preview/dd9813fd79359f40.html/page-2.html"
+    }
+  ]
+}

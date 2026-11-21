@@ -1,0 +1,9 @@
+# Sample inputs, outputs and their previews are stored byte for byte: GroupDocs.Viewer-SampleFiles hashes the
+# inputs, the previews are named by the hash of their file, and a checkout must not change the line endings of the
+# text inputs (CSV, TXT, XML, EML, MHTML), the outputs or the preview pages and JSON.
+net/_sample_files/** -text
+net/_output_files/** -text
+net/_preview/** -text
+python-net/_sample_files/** -text
+python-net/_output_files/** -text
+python-net/_preview/** -text

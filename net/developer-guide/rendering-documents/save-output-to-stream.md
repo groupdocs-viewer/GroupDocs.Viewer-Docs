@@ -23,7 +23,7 @@ Use these interface as follows:
 
 The following code snippet shows how to render to HTML with embedded resources and to provide the output result as a stream. To do this, it implements the [IPageStreamFactory](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.interfaces/ipagestreamfactory) interface only.
 
-{{< tabs "example1">}}
+{{< tabs "save-output-to-stream">}}
 {{< tab "C#" >}}
 ```csharp
 using System.IO;
@@ -108,5 +108,10 @@ Module Program
     End Class
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/save-output-to-stream/sample.docx) to download it.
+{{< /tab-text >}}
 {{< /tab >}}
 {{< /tabs >}}

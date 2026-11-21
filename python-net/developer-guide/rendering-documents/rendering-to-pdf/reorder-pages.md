@@ -44,7 +44,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "reordered_pages.pdf" >}}  
 ```text
-Binary file (PDF, 176 KB)
+Binary file (PDF, 199 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/reorder-pages/reorder_pages/reordered_pages.pdf)
 {{< /tab >}}

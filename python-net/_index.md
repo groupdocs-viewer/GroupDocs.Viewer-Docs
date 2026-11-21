@@ -27,6 +27,8 @@ structuredData:
 
 ## Quick example
 
+{{< tabs "quick-example">}}
+{{< tab "Python" >}}
 ```python
 from groupdocs.viewer import Viewer
 from groupdocs.viewer.options import HtmlViewOptions
@@ -35,6 +37,23 @@ from groupdocs.viewer.options import HtmlViewOptions
 with Viewer("sample.docx") as viewer:
     viewer.view(HtmlViewOptions.for_embedded_resources("page_{0}.html"))
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "quick-outputs.zip" >}}  
+```text
+page_1.html (253 KB)
+page_2.html (110 KB)
+page_3.html (148 KB)
+page_4.html (1001 KB)
+page_5.html (86 KB)
+```
+[Download full output](/viewer/python-net/_output_files/_index/quick-example/quick-outputs.zip)
+{{< /tab >}}
+{{< /tabs >}}
 
 ## Features
 

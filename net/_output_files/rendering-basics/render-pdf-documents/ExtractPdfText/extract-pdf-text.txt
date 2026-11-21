@@ -1,0 +1,65 @@
+Extracted document text:
+Autumn Harvest 2026
+The wholesale catalog for cafes, grocers and restaurants
+Our seasonal range is back, bigger than ever: a spiced roast from Northwind Coffee Roasters, apple
+butter and cranberry relish from Orchard Row, a squash soup from Sunfield Kitchens and a fruit loaf
+baked on the Quayside. Order by 15 October for delivery from the first week of November.
+Harbor Lane Provisions | 18 Quayside Road, Port Ellery | +1 555 0142 300
+Coffee & Tea
+Roasted for us by Northwind Coffee Roasters
+Harbor Lane Provisions | harborlane.example
+Harbor Blend is our best-selling coffee: a medium roast
+with notes of cocoa and dried fruit. The Autumn Harvest
+spiced roast returns for the season, and Lighthouse
+Espresso now comes in a 1 kg bag.
+SKU Product Unit Price
+HLP-CF-101 Harbor Blend whole bean coffee 1 kg bag $26.68
+HLP-CF-102 Dockside Decaf whole bean coffee 1 kg bag $27.70
+HLP-CF-103 Lighthouse Espresso beans 1 kg bag $31.54
+HLP-CF-104 Cold brew concentrate 1 L bottle $13.92
+HLP-CF-105 Autumn Harvest spiced roast 500 g bag $16.24
+HLP-TE-801 Harbor breakfast tea 100 bags $9.28
+HLP-TE-802 Chamomile and apple tea 50 bags $6.09
+HLP-TE-803 Smoked lapsang tea 100 g tin $10.30
+All coffee is roasted to order and delivered within five working days of roasting.
+Pantry & Preserves
+From producers within a day's drive of the harbour
+Harbor Lane Provisions | harborlane.example
+New this autumn: aged balsamic and pumpkin seed oil
+NEW
+SKU Product Unit Price
+HLP-OL-201 Cold-pressed olive oil 750 ml tin $18.70
+HLP-OL-202 Pumpkin seed oil 250 ml bottle $12.69
+HLP-OL-203 Apple cider vinegar 500 ml bottle $6.24
+HLP-OL-204 Aged balsamic vinegar 250 ml bottle $21.17
+HLP-HN-301 Chestnut honey 350 g jar $11.31
+HLP-HN-302 Wildflower honey 500 g jar $11.89
+HLP-HN-303 Cranberry relish 300 g jar $7.18
+HLP-HN-304 Fig and walnut preserve 300 g jar $7.83
+HLP-HN-305 Autumn Harvest apple butter 300 g jar $6.67
+Terms. Prices are per unit, delivered, excluding sales tax, and hold until 31 December 2026. Orders placed by 2 pm ship the next
+working day from Quayside, or from North Pier once it opens. Chilled goods travel in temperature-controlled vans and must be
+received by a member of staff. Report damaged or missing items within 48 hours of delivery for a credit or a replacement.
+Harbor Lane Provisions is a trading name of Harbor Lane Provisions Company Ltd., 18 Quayside Road, Port Ellery.
+For our export customers
+Product names as they appear on export labels
+Harbor Lane Provisions | harborlane.example
+English Japanese Arabic
+Harbor Blend whole bean coffee
+???????? ?????
+???? ????? ??
+Chestnut honey
+??????
+???????? ???
+Cold-pressed olive oil
+??????? ???????
+??????? ????? ????? ???
+Smoked sea salt
+?????
+???? ???? ???
+Aged harbour cheddar
+?????????
+???? ???? ???
+Export orders ship from the North Pier distribution centre from December 2026. Ask your account manager for
+export labels in your language.
+www.harborlane.example/export

@@ -56,14 +56,13 @@ In some cases it is required to embed the GroupDocs.Viewer into the other web-ap
 
 It was a problem in the GroupDocs.Viewer before the version 24.3. Starting from [version 24.3](https://releases.groupdocs.com/viewer/net/release-notes/2024/groupdocs-viewer-for-net-24-3-release-notes/), when rendering spreadsheet documents, the GroupDocs.Viewer adds the unique ID value to every HTML element and CSS selector in order to eliminate any interference with styles of the parent application. So now all the type-selectors are replaced to be the combined id-type descendant selectors like `#gdt-id-1 td`, `#gdt-id-2 tr`, and so on. This excludes any style conflicts once and for all.
 
-
 ### Create an HTML file with embedded resources
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
 #### Convert an Excel workbook to HTML
 
-{{< tabs "example1">}}
+{{< tabs "render-excel-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -97,22 +96,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-excel-to-html.zip" >}}  
+```text
+page_1.html (77 KB)
+page_2.html (104 KB)
+page_3.html (74 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderExcelToHtml/render-excel-to-html.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Excel file to HTML](/viewer/net/images/rendering-basics/render-spreadsheets/convert-excel-to-html.png)
 
 #### Convert an Apple Numbers spreadsheet to HTML
 
-{{< tabs "example2">}}
+{{< tabs "render-numbers-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Products.numbers"))
+using (var viewer = new Viewer("sample.numbers"))
 {
     // Convert the spreadsheet to HTML.
     // {0} is replaced with the current page number in the file names.
@@ -129,7 +137,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Products.numbers")
+        Using viewer = New Viewer("sample.numbers")
             ' Convert the spreadsheet to HTML.
             ' {0} is replaced with the current page number in the file names.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
@@ -139,11 +147,19 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.numbers" >}}
+{{< tab-text >}}
+`sample.numbers` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.numbers) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-numbers-to-html.zip" >}}  
+```text
+page_1.html (72 KB)
+page_2.html (40 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderNumbersToHtml/render-numbers-to-html.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Apple Numbers spreadsheet to HTML](/viewer/net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-html.png)
 
 ### Create an HTML file with external resources
 
@@ -155,7 +171,7 @@ If you want to store an HTML file and additional resource files (such as fonts, 
 
 #### Convert an Excel workbook to HTML
 
-{{< tabs "example3">}}
+{{< tabs "render-excel-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -191,18 +207,34 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-excel-to-html-external.zip" >}}  
+```text
+page_1.html (8 KB)
+page_1/resource_1_s.css (8 KB)
+page_2.html (32 KB)
+page_2/resource_2_s.css (8 KB)
+page_3.html (9 KB)
+page_3/resource_3_s.css (8 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderExcelToHtmlExternal/render-excel-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 #### Convert an Apple Numbers spreadsheet to HTML
 
-{{< tabs "example4">}}
+{{< tabs "render-numbers-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Products.numbers"))
+using (var viewer = new Viewer("sample.numbers"))
 {
     // Convert the spreadsheet to HTML.
     // Specify the HTML file names and location of external resources.
@@ -220,7 +252,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Products.numbers")
+        Using viewer = New Viewer("sample.numbers")
             ' Convert the spreadsheet to HTML.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
@@ -231,25 +263,36 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.numbers" >}}
+{{< tab-text >}}
+`sample.numbers` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.numbers) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-numbers-to-html-external.zip" >}}  
+```text
+page_1.html (12 KB)
+page_1/resource_1_s.css (2 KB)
+page_2.html (4 KB)
+page_2/resource_2_s.css (2 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderNumbersToHtmlExternal/render-numbers-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-html-external-resources.png)
-
+External resources are placed in a separate folder.
 
 ### Convert all Excel worksheets to one HTML file
 
 To convert all worksheets to one HTML file, set the [HtmlViewOptions.RenderToSinglePage](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/rendertosinglepage/) property to `true`. This feature is supported in both cases - when converting to HTML with embedded and external resources.
 
-{{< tabs "example5">}}
+{{< tabs "render-excel-to-single-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Personal_net_worth_calculator.xlsx"))
+using (var viewer = new Viewer("invoice.xlsx"))
 {
     // Convert all Excel worksheets to one HTML file.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources("page.html");
@@ -267,7 +310,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Personal_net_worth_calculator.xlsx")
+        Using viewer = New Viewer("invoice.xlsx")
             ' Convert all Excel worksheets to one HTML file.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page.html")
             ' Enable converting all worksheets to one file.
@@ -278,12 +321,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "page.html" >}}  
+```text
+HTML file (72 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderExcelToSingleHtml/page.html)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Convert all Excel worksheets to one HTML file](/viewer/net/images/rendering-basics/render-spreadsheets/convert-all-excel-worksheets-to-html.png)
-
 
 ## Render spreadsheets as PDF
 
@@ -291,7 +340,7 @@ Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 ### Convert an Excel workbook to PDF
 
-{{< tabs "example6">}}
+{{< tabs "render-excel-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -323,22 +372,29 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 80 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderExcelToPdf/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Excel file to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-pdf.png)
 
 ### Convert an Apple Numbers spreadsheet to PDF
 
-{{< tabs "example7">}}
+{{< tabs "render-numbers-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Products.numbers"))
+using (var viewer = new Viewer("sample.numbers"))
 {
     // Convert the spreadsheet to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
@@ -354,7 +410,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Products.numbers")
+        Using viewer = New Viewer("sample.numbers")
             ' Convert the spreadsheet to PDF.
             Dim viewOptions = New PdfViewOptions("output.pdf")
             viewer.View(viewOptions)
@@ -363,11 +419,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.numbers" >}}
+{{< tab-text >}}
+`sample.numbers` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.numbers) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 22 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderNumbersToPdf/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Apple Numbers spreadsheet to PDF](/viewer/net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-pdf.png)
 
 ## Render spreadsheets as PNG
 
@@ -375,7 +438,7 @@ Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 ### Convert an Excel workbook to PNG
 
-{{< tabs "example8">}}
+{{< tabs "render-excel-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -415,21 +478,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-excel-to-png.zip" >}}  
+```text
+output_1.png (89 KB)
+output_2.png (540 KB)
+output_3.png (130 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderExcelToPng/render-excel-to-png.zip)
+{{< /tab >}}
 {{< /tabs >}}
-The following image demonstrates the result:
-
-![Render an Excel file to PNG](/viewer/net/images/rendering-basics/render-spreadsheets/render-excel-to-png.png)
 
 ### Convert an Apple Numbers spreadsheet to PNG
 
-{{< tabs "example9">}}
+{{< tabs "render-numbers-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Products.numbers"))
+using (var viewer = new Viewer("sample.numbers"))
 {
     // Convert the spreadsheet to PNG.
     // {0} is replaced with the current page number in the file names.
@@ -449,7 +522,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Products.numbers")
+        Using viewer = New Viewer("sample.numbers")
             ' Convert the spreadsheet to PNG.
             ' {0} is replaced with the current page number in the file names.
             Dim viewOptions = New PngViewOptions("output_{0}.png")
@@ -462,11 +535,19 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.numbers" >}}
+{{< tab-text >}}
+`sample.numbers` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.numbers) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-numbers-to-png.zip" >}}  
+```text
+output_1.png (149 KB)
+output_2.png (25 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderNumbersToPng/render-numbers-to-png.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render an Apple Numbers spreadsheet to PNG](/viewer/net/images/rendering-basics/render-spreadsheets/render-apple-numbers-to-png.png)
 
 ## Render spreadsheets as JPEG
 
@@ -474,7 +555,7 @@ Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.v
 
 ### Convert an Excel workbook to JPEG
 
-{{< tabs "example10">}}
+{{< tabs "render-excel-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -514,18 +595,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-excel-to-jpg.zip" >}}  
+```text
+output_1.jpg (44 KB)
+output_2.jpg (196 KB)
+output_3.jpg (62 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderExcelToJpg/render-excel-to-jpg.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Convert an Apple Numbers spreadsheet to JPEG
 
-{{< tabs "example11">}}
+{{< tabs "render-numbers-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("Products.numbers"))
+using (var viewer = new Viewer("sample.numbers"))
 {
     // Convert the spreadsheet to JPEG.
     // {0} is replaced with the current page number in the file names.
@@ -545,7 +639,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("Products.numbers")
+        Using viewer = New Viewer("sample.numbers")
             ' Convert the spreadsheet to JPEG.
             ' {0} is replaced with the current page number in the file names.
             Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
@@ -557,6 +651,18 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.numbers" >}}
+{{< tab-text >}}
+`sample.numbers` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.numbers) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-numbers-to-jpg.zip" >}}  
+```text
+output_1.jpg (127 KB)
+output_2.jpg (27 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderNumbersToJpg/render-numbers-to-jpg.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -569,7 +675,7 @@ GroupDocs.Viewer can detect the following separators:
 * A comma (the default separator)
 * A semicolon
 
-{{< tabs "example12">}}
+{{< tabs "render-csv-with-separator-detection">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -607,6 +713,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.csv" >}}
+{{< tab-text >}}
+`sample.csv` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.csv) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "page_1.html" >}}  
+```text
+HTML file (52 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderCsvWithSeparatorDetection/page_1.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Get worksheet names
@@ -617,7 +734,7 @@ GroupDocs.Viewer allows you to obtain information about the source spreadsheet f
 2. Call the [Viewer.GetViewInfo](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer/methods/getviewinfo) method and pass the `ViewInfoOptions` instance to this method as a parameter.
 3. Use the [Pages](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo/properties/pages) property of the returned [ViewInfo](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.results/viewinfo) object to iterate through the list of worksheets and retrieve the worksheet names.
 
-{{< tabs "example13">}}
+{{< tabs "get-worksheet-names">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -668,11 +785,21 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.xlsx" >}}
+{{< tab-text >}}
+`sample.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/sample.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-worksheet-names.txt" >}}  
+```text
+The document contains the following worksheets:
+ - Worksheet 1: 'Summary'
+ - Worksheet 2: 'Orders'
+ - Worksheet 3: 'Customers'
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/GetWorksheetNames/get-worksheet-names.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![Retrieve worksheet names](/viewer/net/images/rendering-basics/render-spreadsheets/retrieve-worksheet-names.png)
 
 ## Excel files rendering demo
 

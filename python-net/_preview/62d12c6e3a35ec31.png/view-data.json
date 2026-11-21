@@ -1,0 +1,30 @@
+{
+  "file": "viewer/python-net/_preview/62d12c6e3a35ec31.png",
+  "fileName": "render-excel-to-png-outputs.zip",
+  "fileType": "png",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 800,
+      "height": 900,
+      "pageUrl": "/viewer/python-net/_preview/62d12c6e3a35ec31.png/page-1.png",
+      "thumbUrl": "/viewer/python-net/_preview/62d12c6e3a35ec31.png/page-1.png"
+    },
+    {
+      "number": 2,
+      "width": 800,
+      "height": 900,
+      "pageUrl": "/viewer/python-net/_preview/62d12c6e3a35ec31.png/page-2.jpg",
+      "thumbUrl": "/viewer/python-net/_preview/62d12c6e3a35ec31.png/page-2.jpg"
+    },
+    {
+      "number": 3,
+      "width": 800,
+      "height": 900,
+      "pageUrl": "/viewer/python-net/_preview/62d12c6e3a35ec31.png/page-3.png",
+      "thumbUrl": "/viewer/python-net/_preview/62d12c6e3a35ec31.png/page-3.png"
+    }
+  ]
+}

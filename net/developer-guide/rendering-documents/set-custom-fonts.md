@@ -7,20 +7,25 @@ description: "This article explains how to set custom fonts when rendering docum
 keywords: Setting custom fonts with GroupDocs.Viewer for .NET API
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
+toc: True
 ---
-Many document formats are tightly bounded with fonts. For example, when user adds some text to the DOCX document, this text always have some defined font. Some document formats usually store the font data embedded in the document file itself, like PDF. But other, like Office family formats, usually rely on the fonts, installed in the operating system.
+Every text in a document has a font. A PDF usually carries its fonts inside the file, while Office documents rely on the fonts installed on the machine that opens them. When a document uses a font that the machine rendering it does not have, GroupDocs.Viewer substitutes another font. If you have the font file, you can give it to GroupDocs.Viewer instead.
 
-The situation, when some document was created on the _author’s machine_ and uses some font "AAA", and then is processed using the GroupDocs.Viewer on some _client’s machine_, where font "AAA" is missing, is typical. In such case GroupDocs.Viewer tries to **substitute this font** using some complex font substitution rules: it analyzes the metadata of the document, alternative names of the missing font, settings of the document, settings of the OS, list of all available fonts, installed in the OS and so on. Finally, when by some reason the OS is “clean”, when it has no installed fonts at all, then GroupDocs.Viewer will substitute the missing font with the one, that is embedded inside the GroupDocs.Viewer assembly (DLL); this font will serve as a "last resort" in case when no other fonts are available. For example, for the WordProcessing family formats, the GroupDocs.Viewer internally stores the "Fanwood" free font.
+![GroupDocs.Viewer looks for a document's font in this order: embedded in the document; installed on the machine or in a font source added with FontSettings.SetFontSources; otherwise it substitutes another font](/viewer/net/images/developer-guide/rendering-documents/font-lookup.svg)
 
-At this moment the GroupDocs.Viewer does the **font substitution** operation “silently” **during rendering** of the document (when the [`Viewer.View()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/view/#view) method is invoked) — there are no any messages or events when the font substitution mechanism is activated and which font is missing and onto which is replaced/substituted, and for which exact document. Such feature is hard to implement because it is too unclear, vague, and ambiguous what kind of notification should be emitted, in which form and how they can be utilizing on the client’s side.
+## How GroupDocs.Viewer substitutes a missing font
 
-However, users can control this process **before** the document is actually rendered. When the user initially _knows_ that some document uses font "AAA", _and_ also _knows_ that this font "AAA" is not installed on the target machine, where document should be rendered, _and_ user has the binary content of this font "AAA", he can specify it **before** calling the [`Viewer.View()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/view/#view) method.
+A document is often created on one machine and rendered on another, where some of its fonts are missing. GroupDocs.Viewer then picks a substitute by its font substitution rules: it looks at the document's metadata, the alternative names of the missing font, the settings of the document and the operating system, and the fonts that are installed. On a machine with no fonts at all, it falls back to a font embedded in the GroupDocs.Viewer assembly, for example the free Fanwood font for Word documents.
 
-In order to specify one or many custom fonts, which are not installed in the target operating system, user should _add custom font source(s)_. **Font source** is actually a folder, where one or many fonts are located. It is represented by a [`FolderFontSource`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/folderfontsource/) class. And the [`FontSettings`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/fontsettings/) class has a method [`SetFontSources()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/fontsettings/setfontsources/) for adding the **font sources** to the GroupDocs.Viewer.
+The substitution happens silently while the document is rendered (when [`Viewer.View()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/view/#view) runs): no message or event tells which font was missing or what replaced it.
 
-The following code snippet demonstrates this. Let's assume that the "sample.docx" document uses some rare font "AAA.ttf", that is not installed on the target operating system. Then the user puts the file "AAA.ttf" to the `"C:\custom_fonts"` folder and then creates an instance of the [`FolderFontSource`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/folderfontsource/) class that points to this folder. Then this instance is passed to the [`FontSettings`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/fontsettings/) static class, and then the "sample.docx" file is rendered to HTML format. As a result, the "AAA" font will be used in the output HTML document.
+## Add a font source
 
-{{< tabs "example1">}}
+If you know that a document uses a font that is not installed on the target machine, and you have the font file, add a **font source** before you call [`Viewer.View()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/view/#view). A font source is a folder with one or more fonts, represented by the [`FolderFontSource`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/folderfontsource/) class. The [`FontSettings.SetFontSources()`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/fontsettings/setfontsources/) method adds font sources to GroupDocs.Viewer.
+
+The following code snippet demonstrates this. The presentation `harvest-launch.pptx` sets its text in Lobster, a font that most machines do not have and that the file does not embed. The font file, `Lobster-Regular.ttf`, is in the `custom_fonts` folder next to the code. An instance of the [`FolderFontSource`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/folderfontsource/) class points to this folder and is passed to the [`FontSettings`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.fonts/fontsettings/) static class, and then the presentation is rendered to HTML. As a result, the output HTML uses Lobster; without the font source, GroupDocs.Viewer would substitute another font.
+
+{{< tabs "set-custom-fonts">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -28,12 +33,13 @@ using GroupDocs.Viewer.Options;
 using GroupDocs.Viewer.Fonts;
 // ...
 
-// Specify the font source.
-FolderFontSource fontSource = 
-    new FolderFontSource(@"C:\custom_fonts", SearchOption.TopFolderOnly);
+// Specify the font source: the custom_fonts folder holds Lobster-Regular.ttf.
+// SearchOption is named in full: System.IO, which .NET 6+ projects import by default, has one too.
+FolderFontSource fontSource =
+    new FolderFontSource("custom_fonts", GroupDocs.Viewer.Fonts.SearchOption.TopFolderOnly);
 FontSettings.SetFontSources(fontSource);
 
-using (Viewer viewer = new Viewer("sample.docx"))
+using (Viewer viewer = new Viewer("harvest-launch.pptx"))
 {
     // Create an HTML file.
     HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
@@ -50,11 +56,11 @@ Imports GroupDocs.Viewer.Fonts
 
 Module Program
     Sub Main(args As String())
-        ' Specify the font source.
-        Dim fontSource As FolderFontSource = New FolderFontSource("C:\custom_fonts", SearchOption.TopFolderOnly)
+        ' Specify the font source: the custom_fonts folder holds Lobster-Regular.ttf.
+        Dim fontSource As FolderFontSource = New FolderFontSource("custom_fonts", GroupDocs.Viewer.Fonts.SearchOption.TopFolderOnly)
         FontSettings.SetFontSources(fontSource)
     
-        Using viewer As Viewer = New Viewer("sample.docx")
+        Using viewer As Viewer = New Viewer("harvest-launch.pptx")
             ' Create an HTML file.
             Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
             viewer.View(viewOptions)
@@ -63,6 +69,26 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "harvest-launch.pptx" >}}
+{{< tab-text >}}
+`harvest-launch.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/set-custom-fonts/harvest-launch.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "Lobster-Regular.ttf" >}}
+{{< tab-text >}}
+`Lobster-Regular.ttf` is the font the example loads from the `custom_fonts` folder. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/set-custom-fonts/custom_fonts/Lobster-Regular.ttf) to download it. Lobster is by The Lobster Project Authors and is licensed under the [SIL Open Font License 1.1](/viewer/net/_sample_files/developer-guide/rendering-documents/set-custom-fonts/custom_fonts/OFL.txt).
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "set-custom-fonts.zip" >}}  
+```text
+p_1.html (91 KB)
+p_2.html (93 KB)
+p_3.html (94 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/set-custom-fonts/SetCustomFonts/set-custom-fonts.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-However, in case when user has no access to the binary content of the font, that is used in the document and is not installed on the target operating system, user may **replace** the missing font onto some alternative. **Font replacement** here serves as a some sort of a user-defined **font substitution**, that is programmed **before** rendering of a document. More on this in a [separate article]({{< ref "viewer/net/developer-guide/rendering-documents/replace-missing-font.md" >}}).
+## When you don't have the font file
+
+Without the font file, you can still choose the font that replaces the missing one, instead of leaving the choice to the substitution rules. See [Replace missing font]({{< ref "viewer/net/developer-guide/rendering-documents/replace-missing-font.md" >}}).

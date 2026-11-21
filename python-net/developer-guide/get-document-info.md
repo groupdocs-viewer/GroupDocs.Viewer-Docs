@@ -101,7 +101,7 @@ if __name__ == "__main__":
 ```text
 File type: Portable Document Format File (.pdf)
 Pages count: 2
-Printing allowed: True
+Printing allowed: False
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/get-document-info/get_pdf_info/get-pdf-info.txt)
 {{< /tab >}}
@@ -144,8 +144,8 @@ if __name__ == "__main__":
 File type: Zipped File (.zip)
 Pages count: 1
 Folders:
-  /first_folder/
-  /second_folder/
+  /Invoices/
+  /Invoices/2025/
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/get-document-info/get_archive_info/get-archive-info.txt)
 {{< /tab >}}
@@ -192,11 +192,13 @@ File type: AutoCAD Drawing Database File (.dwg)
 Pages count: 1
 Layers:
   0 (visible=True)
-  CIRCLE (visible=True)
-  TRIANGLE (visible=True)
-  QUADRANT (visible=True)
-Layouts:
-  Model (26x23)
+  WALLS (visible=True)
+  OFFICE (visible=True)
+  TEXT (visible=True)
+  COLD (visible=True)
+  RACKS (visible=True)
+  DOCKS (visible=True)
+[TRUNCATED]
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/get-document-info/get_cad_info/get-cad-info.txt)
 {{< /tab >}}
@@ -241,12 +243,9 @@ Pages count: 1
 Folders:
   Inbox
   Deleted Items
-  Outbox
   Sent Items
-  Calendar
-  Contacts
-  Drafts
-[TRUNCATED]
+  Orders
+  Suppliers
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/get-document-info/get_outlook_info/get-outlook-info.txt)
 {{< /tab >}}
@@ -287,8 +286,8 @@ if __name__ == "__main__":
 ```text
 File type: Microsoft Project File (.mpp)
 Pages count: 1
-Start date: 2008-06-01 00:00:00+00:00
-End date: 2008-09-03 00:00:00+00:00
+Start date: 2026-09-07 00:00:00+00:00
+End date: 2027-01-20 00:00:00+00:00
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/get-document-info/get_project_info/get-project-info.txt)
 {{< /tab >}}

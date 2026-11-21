@@ -16,7 +16,7 @@ To subset fonts in a PDF file, set the [SubsetFonts](https://reference.groupdocs
 
 The following code snippet shows how to subset fonts in a PDF file:
 
-{{< tabs "Example1">}}
+{{< tabs "subset-fonts">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -54,6 +54,17 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-fonts/optimization-pdf-subset-fonts/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 771 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-fonts/optimization-pdf-subset-fonts/SubsetFonts/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

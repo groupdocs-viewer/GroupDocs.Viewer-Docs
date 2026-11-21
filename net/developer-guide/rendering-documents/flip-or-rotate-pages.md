@@ -8,8 +8,6 @@ keywords: rotate pdf, rotate pages
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
 ---
-![Flip or rotate pages](/viewer/net/images/flip-or-rotate-pages.png)
-
 To rotate a page when rendering document, use the [RotatePage](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewoptions/methods/rotatepage) method of the [ViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/viewoptions) class. This method has the following two parameters:
 
 1. page number
@@ -21,9 +19,11 @@ The rotation angle is one of the following:
 * [Rotation.On180Degree](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/rotation) rotate page on 180-degree clockwise
 * [Rotation.On270Degree](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/rotation) rotate page on 270-degree clockwise
 
+![GroupDocs.Viewer renders a three-page DOCX to PDF with RotatePage(1, Rotation.On90Degree): page 1 is turned 90 degrees clockwise, pages 2 and 3 are unchanged. Below, the original page and what On90Degree, On180Degree and On270Degree do to it](/viewer/net/images/developer-guide/rendering-documents/rotate-pages.svg)
+
 The following code snippet shows how to rotate output pages when rendering a document as PDF:
 
-{{< tabs "example1">}}
+{{< tabs "flip-or-rotate-pages">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -58,6 +58,17 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/flip-or-rotate-pages/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 719 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/flip-or-rotate-pages/FlipOrRotatePages/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

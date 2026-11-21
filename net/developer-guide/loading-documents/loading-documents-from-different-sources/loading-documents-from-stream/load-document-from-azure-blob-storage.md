@@ -16,7 +16,7 @@ Runnig this code requires installing [Azure.Storage.Blobs](https://nuget.org/pac
 
 {{< /alert >}}
 
-{{< tabs "example1">}}
+{{< tabs "load-document-from-azure-blob">}}
 {{< tab "C#" >}}
 ```csharp
 using System.IO;

@@ -1,0 +1,13 @@
+File type: AutoCAD Drawing Database File (.dwg)
+The number of pages: 1
+The drawing contains the following layout(s):
+Model
+The drawing contains the following layer(s):
+0 (visible)
+WALLS (visible)
+OFFICE (visible)
+TEXT (visible)
+COLD (visible)
+RACKS (visible)
+DOCKS (visible)
+DIMENSIONS (visible)

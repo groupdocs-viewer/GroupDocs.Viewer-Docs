@@ -44,14 +44,14 @@ Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-word-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.docx"))
+using (var viewer = new Viewer("sample.docx"))
 {
     // Create an HTML file for each document page.
     // {0} is replaced with the current page number in the file name.
@@ -68,7 +68,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.docx")
+        Using viewer = New Viewer("sample.docx")
             ' Create an HTML file for each document page.
             ' {0} is replaced with the current page number in the file name.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
@@ -78,11 +78,22 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-word-to-html.zip" >}}  
+```text
+page_1.html (228 KB)
+page_2.html (110 KB)
+page_3.html (142 KB)
+page_4.html (885 KB)
+page_5.html (86 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordToHtml/render-word-to-html.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Word file to HTML](/viewer/net/images/rendering-basics/render-word-documents/render-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -92,14 +103,14 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-word-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.docx"))
+using (var viewer = new Viewer("sample.docx"))
 {
     // Create an HTML file for each document page.
     // Specify the HTML file names and location of external resources.
@@ -117,7 +128,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.docx")
+        Using viewer = New Viewer("sample.docx")
             ' Create an HTML file for each document page.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
@@ -128,24 +139,43 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-word-to-html-external.zip" >}}  
+```text
+page_1.html (2 KB)
+page_1/resource_1_f.woff (20 KB)
+page_1/resource_1_f1.woff (9 KB)
+page_1/resource_1_f2.woff (10 KB)
+page_1/resource_1_i.jpeg (126 KB)
+page_1/resource_1_i.png (4 KB)
+page_1/resource_1_s.css (1 KB)
+page_2.html (9 KB)
+page_2/resource_2_f.woff (15 KB)
+page_2/resource_2_f1.woff (29 KB)
+[TRUNCATED] (35 files total)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordToHtmlExternal/render-word-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-word-documents/render-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ## Render Word documents as PDF
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Word file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-word-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.docx"))
+using (var viewer = new Viewer("sample.docx"))
 {
     // Create a PDF file for the document.
     // Specify the PDF file name.
@@ -162,7 +192,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.docx")
+        Using viewer = New Viewer("sample.docx")
             ' Create a PDF file for the document.
             ' Specify the PDF file name.
             Dim viewOptions = New PdfViewOptions("output.pdf")
@@ -172,24 +202,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 719 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordToPdf/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a Word file to PDF](/viewer/net/images/rendering-basics/render-word-documents/render-to-pdf.png)
 
 ## Render Word documents as PNG
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Word file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-word-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.docx"))
+using (var viewer = new Viewer("sample.docx"))
 {
     // Create a PNG image for each document page.
     // {0} is replaced with the current page number in the image name.
@@ -209,7 +246,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.docx")
+        Using viewer = New Viewer("sample.docx")
             ' Create a PNG image for each document page.
             ' {0} is replaced with the current page number in the image name.
             Dim viewOptions = New PngViewOptions("output_{0}.png")
@@ -222,23 +259,35 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-word-to-png.zip" >}}  
+```text
+output_1.png (276 KB)
+output_2.png (145 KB)
+output_3.png (105 KB)
+output_4.png (425 KB)
+output_5.png (88 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordToPng/render-word-to-png.zip)
+{{< /tab >}}
 {{< /tabs >}}
-The following image demonstrates the result:
-
-![Render a Word file to PNG](/viewer/net/images/rendering-basics/render-word-documents/render-to-png-image.png)
 
 ## Render Word documents as JPEG
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Word file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example5">}}
+{{< tabs "render-word-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.docx"))
+using (var viewer = new Viewer("sample.docx"))
 {
     // Create a JPEG image for each document page.
     // {0} is replaced with the current page number in the image name.
@@ -258,7 +307,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.docx")
+        Using viewer = New Viewer("sample.docx")
             ' Create a JPEG image for each document page.
             ' {0} is replaced with the current page number in the image name.
             Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
@@ -270,6 +319,21 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-word-to-jpg.zip" >}}  
+```text
+output_1.jpg (75 KB)
+output_2.jpg (91 KB)
+output_3.jpg (86 KB)
+output_4.jpg (91 KB)
+output_5.jpg (62 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordToJpg/render-word-to-jpg.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -291,14 +355,14 @@ You can access these properties for the following classes:
 
 The example below converts a Word document to HTML and specifies page margins for the output file. 
 
-{{< tabs "example6">}}
+{{< tabs "render-word-with-margins">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.docx"))
+using (var viewer = new Viewer("sample.docx"))
 {
     // Create an HTML file for each document page.
     // {0} is replaced with the current page number in the file name.
@@ -320,7 +384,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.docx")
+        Using viewer = New Viewer("sample.docx")
             ' Create an HTML file for each document page.
             ' {0} is replaced with the current page number in the file name.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
@@ -335,6 +399,21 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-word-with-margins.zip" >}}  
+```text
+page_1.html (228 KB)
+page_2.html (110 KB)
+page_3.html (142 KB)
+page_4.html (885 KB)
+page_5.html (86 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordWithMargins/render-word-with-margins.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render tracked changes
@@ -348,14 +427,14 @@ GroupDocs.Viewer does not render tracked changes (revisions made to a Word docum
 
 The following code example demonstrates how to render a Word document with tracked changes:
 
-{{< tabs "example7">}}
+{{< tabs "render-word-with-tracked-changes">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("TrackChanges.docx"))
+using (var viewer = new Viewer("with_tracked_changes.docx"))
 {
     // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
@@ -373,7 +452,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("TrackChanges.docx")
+        Using viewer = New Viewer("with_tracked_changes.docx")
             ' Convert the document to PDF.
             Dim viewOptions = New PdfViewOptions("output.pdf")
             ' Enable tracked changes rendering.
@@ -384,26 +463,33 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "with_tracked_changes.docx" >}}
+{{< tab-text >}}
+`with_tracked_changes.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/with_tracked_changes.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 64 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordWithTrackedChanges/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Render tracked changes to PDF](/viewer/net/images/rendering-basics/render-word-documents/render-track-changes-to-pdf.png)
 
 ## Render comments
 
-Enable the [ViewOptions.RenderComments](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option for a target view to display comments in the output file when you convert your document to HTML, PDF, PNG, or JPEG format.
+Comments are rendered by default: the [ViewOptions.RenderComments](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) property is `true` unless you change it. The example below sets it explicitly; set it to `false` to hide the comments when you convert your document to HTML, PDF, PNG, or JPEG format.
 
 The code example below renders a Word document with comments to PDF.
 
-{{< tabs "example8">}}
+{{< tabs "render-word-with-comments">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.docx"))
+using (var viewer = new Viewer("with_comment.docx"))
 {
     // Convert the document to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
@@ -421,7 +507,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.docx")
+        Using viewer = New Viewer("with_comment.docx")
             ' Convert the document to PDF.
             Dim viewOptions = New PdfViewOptions("output.pdf")
             ' Enable comments rendering.
@@ -432,11 +518,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "with_comment.docx" >}}
+{{< tab-text >}}
+`with_comment.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/with_comment.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 68 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordWithComments/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Render comments to PDF](/viewer/net/images/rendering-basics/render-word-documents/render-comments-to-pdf.png)
 
 ## Unlink table of contents
 
@@ -444,14 +537,14 @@ When rendering to HTML or PDF, you can set [WordProcessingOptions.UnlinkTableOfC
 
 The code example below renders a Word document with table of contents as a plain text without links.
 
-{{< tabs "example9">}}
+{{< tabs "render-word-unlink-toc">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("resume.docx"))
+using (var viewer = new Viewer("handbook.docx"))
 {
     // Convert the document to HTML.
     var viewOptions = HtmlViewOptions.ForEmbeddedResources();
@@ -469,7 +562,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("resume.docx")
+        Using viewer = New Viewer("handbook.docx")
             ' Convert the document to HTML.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
             ' Unlink table of contents.
@@ -480,11 +573,21 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "handbook.docx" >}}
+{{< tab-text >}}
+`handbook.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/handbook.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-word-unlink-toc.zip" >}}  
+```text
+p_1.html (67 KB)
+p_2.html (79 KB)
+p_3.html (76 KB)
+p_4.html (85 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordUnlinkToc/render-word-unlink-toc.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image illustrates the result:
-
-![Unlink table of contens in Word files](/viewer/net/images/rendering-basics/render-word-documents/unlink-table-of-contents.png)
 
 ## Disable updating fields when saving
 
@@ -492,7 +595,7 @@ The most of formats inside the WordProcessing family of formats, like DOC, DOCX,
 
 Starting from the version [24.12](https://releases.groupdocs.com/viewer/net/release-notes/2024/groupdocs-viewer-for-net-24-12-release-notes/) the GroupDocs.Viewer for .NET has obtained an ability to disable updating fields while saving the documents. The new public property [`UpdateFields`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/updatefields/) of the [`System.Boolean`](https://learn.microsoft.com/dotnet/api/system.boolean) type was added to the [`Options.WordProcessingOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/wordprocessingoptions/) class. By default the value of this property is set to `true`, so fields are updated, as before. In order to turn fields updating off, please set this property to `false`. Code sample below shows opening a sample DOCX document and saving to the HTML with embedded resources and PDF formats without updating fields during saving.
 
-{{< tabs "example-UpdateFields">}}
+{{< tabs "render-word-without-updating-fields">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -505,7 +608,7 @@ htmlViewOptions.WordProcessingOptions.UpdateFields = false;
 PdfViewOptions pdfViewOptions = new PdfViewOptions("output.pdf");
 pdfViewOptions.WordProcessingOptions.UpdateFields = false;
 
-using (var viewer = new Viewer("resume.docx"))
+using (var viewer = new Viewer("handbook.docx"))
 {    
     viewer.View(htmlViewOptions);
 	viewer.View(pdfViewOptions);
@@ -524,11 +627,26 @@ htmlViewOptions.WordProcessingOptions.UpdateFields = False
 Dim pdfViewOptions = New PdfViewOptions("output.pdf")
 pdfViewOptions.WordProcessingOptions.UpdateFields = False
 
-Using viewer = New Viewer("resume.docx")	
+Using viewer = New Viewer("handbook.docx")	
 	viewer.View(htmlViewOptions)
 	viewer.View(pdfViewOptions)
 End Using
 ```
+{{< /tab >}}
+{{< tab "handbook.docx" >}}
+{{< tab-text >}}
+`handbook.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/handbook.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-word-without-updating-fields.zip" >}}  
+```text
+output.pdf (80 KB)
+p_1.html (68 KB)
+p_2.html (79 KB)
+p_3.html (76 KB)
+p_4.html (85 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordWithoutUpdatingFields/render-word-without-updating-fields.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -536,7 +654,7 @@ End Using
 
 Most of WordProcessing formats like DOC, DOCX, ODT and so on are able to store the scripts, usually written on VBA. When the output format is PDF, PNG, or JPEG, there is no problem at all. But when the output format is HTML, this may lead to the situations when malicious or harmful VBA script(s) from input DOCX, for example, will be translated to the resultant HTML document. Before the [version 25.1](https://releases.groupdocs.com/viewer/net/release-notes/2025/groupdocs-viewer-for-net-25-1-release-notes/) the was no possibility for the GroupDocs.Viewer to disable scripts preserving and translation — all the VBA scripts were translated to the JavaScript in HTML. Starting from the version 25.1, for the security purposes script translation is disabled by default — all the links containing JavaScript are replaced with the harmless `"javascript:void(0)"` string in the resultant HTML markup. But it is possible to enable script translation, as it was present in the GroupDocs.Viewer before, by using a new public property `RemoveJavaScript` of the [`System.Boolean`](https://learn.microsoft.com/dotnet/api/system.boolean) type in the [`Options.HtmlViewOptions`](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/) class. By default this property has a `true` value — JavaScript will be removed from the resultant HTML document. For preserving the JavaScript, as it was in the previous versions of the GroupDocs.Viewer, the `false` value should be assigned to this property. Code sample below shows opening a sample DOCX document and rendering it to the HTML with embedded resources with and without JavaScript.
 
-{{< tabs "example-RemoveJavaScript">}}
+{{< tabs "render-word-html-without-javascript">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -548,7 +666,7 @@ HtmlViewOptions htmlViewOptionsWithoutJavaScript = HtmlViewOptions.ForEmbeddedRe
 HtmlViewOptions htmlViewOptionsWithJavaScript = HtmlViewOptions.ForEmbeddedResources("with-js-page{0}.html");
 htmlViewOptionsWithJavaScript.RemoveJavaScript = false;
 
-using (var viewer = new Viewer("Doc-with-VBA.docx"))
+using (var viewer = new Viewer("with_script.docx"))
 {
     viewer.View(htmlViewOptionsWithoutJavaScript);
     viewer.View(htmlViewOptionsWithJavaScript);
@@ -566,11 +684,23 @@ Dim htmlViewOptionsWithoutJavaScript = HtmlViewOptions.ForEmbeddedResources("wit
 Dim htmlViewOptionsWithJavaScript = HtmlViewOptions.ForEmbeddedResources("with-js-page{0}.html")
 htmlViewOptionsWithJavaScript.RemoveJavaScript = false;
 
-Using viewer = New Viewer("Doc-with-VBA.docx")	
+Using viewer = New Viewer("with_script.docx")	
 	viewer.View(htmlViewOptionsWithoutJavaScript)
 	viewer.View(htmlViewOptionsWithJavaScript)
 End Using
 ```
+{{< /tab >}}
+{{< tab "with_script.docx" >}}
+{{< tab-text >}}
+`with_script.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/with_script.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-word-html-without-javascript.zip" >}}  
+```text
+with-js-page1.html (81 KB)
+without-js-page1.html (81 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordHtmlWithoutJavascript/render-word-html-without-javascript.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -584,7 +714,7 @@ Need to additionally emphasize that these two properties are valid only when ren
 
 Source code below demonstrated rendering the loaded “sample.docs” to the PNG format with adjusted horizontal and vertical resolutions, which are both set to 192 DPI, and to the JPEG format, where horizontal resolution is intact and default (96 DPI), while only the vertical is adjusted — 120 DPI.
 
-{{< tabs "example-SpecifyCustomResolution">}}
+{{< tabs "render-word-with-dpi">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -622,6 +752,26 @@ Using viewer As New Viewer("sample.docx")
 End Using
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-word-with-dpi.zip" >}}  
+```text
+p_1.jpg (99 KB)
+p_1.png (596 KB)
+p_2.jpg (126 KB)
+p_2.png (164 KB)
+p_3.jpg (102 KB)
+p_3.png (129 KB)
+p_4.jpg (127 KB)
+p_4.png (937 KB)
+p_5.jpg (76 KB)
+p_5.png (100 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordWithDpi/render-word-with-dpi.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Add page numbers during rendering
@@ -636,7 +786,7 @@ The `WordsPageNumberLocation` enum actually has 2 functions: it forcibly applies
 
 Page numbers with different locations can be applied to different output formats for the same input WordProcessing document. The code sample above shows applying page numbers in the top left corner to the output PDF and page numbers in the bottom center side to the output HTML.
 
-{{< tabs "example-AddingPageNumbers">}}
+{{< tabs "render-word-with-page-numbers">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -674,11 +824,23 @@ Using viewer As New Viewer("sample.docx")
 End Using
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-word-documents/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-word-with-page-numbers.zip" >}}  
+```text
+output.pdf (719 KB)
+p_1.html (226 KB)
+p_2.html (108 KB)
+p_3.html (141 KB)
+p_4.html (884 KB)
+p_5.html (86 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-word-documents/RenderWordWithPageNumbers/render-word-with-page-numbers.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following collage illustrates the result of adding page numbers to the loaded DOCX file during rendering it to HTML:
-
-![Add page numbers during DOCX to HTML rendering](/viewer/net/images/rendering-basics/render-word-documents/Add-page-numbers.png)
 
 ## Word files rendering demo
 

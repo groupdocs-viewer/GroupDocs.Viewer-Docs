@@ -41,6 +41,12 @@ if __name__ == "__main__":
 `sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "output-to-pdf.pdf" >}}  
+```text
+Binary file (PDF, 719 KB)
+```
+[Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/_index/render_to_pdf/output-to-pdf.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 For details, please refer to the following pages:

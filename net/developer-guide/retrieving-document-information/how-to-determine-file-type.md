@@ -22,7 +22,7 @@ To determine the file type from the file extension, use the [FromExtension()](ht
 
 The following code snippet shows how to determine a file type using the file extension:
 
-{{< tabs "example1">}}
+{{< tabs "get-file-type-from-extension">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -55,11 +55,13 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "get-file-type-from-extension.txt" >}}  
+```text
+Extension .docx; File type: Microsoft Word Open XML Document (.docx).
+```
+[Download full output](/viewer/net/_output_files/developer-guide/retrieving-document-information/how-to-determine-file-type/GetFileTypeFromExtension/get-file-type-from-extension.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![](/viewer/net/images/how-to-determine-file-type.png)
 
 ## Determine file type by media type
 
@@ -67,7 +69,7 @@ If you receive a file via the Internet, you can check its media type header usin
 
 The following code snippet shows how to determine a file type using the media header:
 
-{{< tabs "example2">}}
+{{< tabs "get-file-type-from-media-type">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -94,11 +96,13 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "get-file-type-from-media-type.txt" >}}  
+```text
+Media-type application/pdf; File type: Portable Document Format File (.pdf).
+```
+[Download full output](/viewer/net/_output_files/developer-guide/retrieving-document-information/how-to-determine-file-type/GetFileTypeFromMediaType/get-file-type-from-media-type.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![](/viewer/net/images/how-to-determine-file-type_1.png)
 
 ## Determine file type by the stream
 
@@ -106,7 +110,7 @@ When you do not know a file extension or media type header, you can try determin
 
 The following code snippet shows how to determine a file type using the file signature:
 
-{{< tabs "example3">}}
+{{< tabs "get-file-type-from-stream">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -138,8 +142,15 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/retrieving-document-information/how-to-determine-file-type/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-file-type-from-stream.txt" >}}  
+```text
+File type: Microsoft Word Open XML Document (.docx).
+```
+[Download full output](/viewer/net/_output_files/developer-guide/retrieving-document-information/how-to-determine-file-type/GetFileTypeFromStream/get-file-type-from-stream.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![](/viewer/net/images/how-to-determine-file-type_2.png)

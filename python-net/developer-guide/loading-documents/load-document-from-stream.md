@@ -48,9 +48,11 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "load-document-from-stream-outputs.zip" >}}  
 ```text
-page_1.html (317 KB)
-page_2.html (149 KB)
-page_3.html (113 KB)
+page_1.html (253 KB)
+page_2.html (110 KB)
+page_3.html (148 KB)
+page_4.html (1001 KB)
+page_5.html (86 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/loading-documents/load-document-from-stream/load_document_from_stream/load-document-from-stream-outputs.zip)
 {{< /tab >}}

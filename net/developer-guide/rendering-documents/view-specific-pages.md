@@ -7,6 +7,7 @@ description: "This article explains how to view specific pages when processing d
 keywords: specific pages, view specific pages
 productName: GroupDocs.Viewer for .NET
 hideChildren: False
+toc: True
 ---
 You can render part of the document pages only. You can specify a list of the document pages in the following ways:
 * [Specify a list of pages as parameters of the View method](#specify-pages-as-parameters)
@@ -22,7 +23,7 @@ To specify pages as the [View](https://reference.groupdocs.com/net/viewer/groupd
 
 The following code snippet shows how to render the first and third pages of a document:
 
-{{< tabs "example1">}}
+{{< tabs "view-specific-pages">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -58,6 +59,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/view-specific-pages/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "view-specific-pages.zip" >}}  
+```text
+p_1.html (228 KB)
+p_3.html (142 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/view-specific-pages/ViewSpecificPages/view-specific-pages.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Specify pages by using an array
@@ -70,7 +83,7 @@ To specify pages by using an array, follow these steps:
 
 The following code snippet shows how to render the 1st, 2nd, and 4th pages of a document:
 
-{{< tabs "example2">}}
+{{< tabs "view-pages-from-array">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -111,5 +124,18 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/view-specific-pages/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "view-pages-from-array.zip" >}}  
+```text
+p_1.html (228 KB)
+p_2.html (110 KB)
+p_4.html (885 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/view-specific-pages/ViewPagesFromArray/view-pages-from-array.zip)
 {{< /tab >}}
 {{< /tabs >}}

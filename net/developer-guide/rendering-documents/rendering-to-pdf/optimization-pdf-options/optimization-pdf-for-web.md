@@ -13,7 +13,7 @@ toc: True
 This optimization allows a browser to display the first pages of a PDF file when you open the document, instead of waiting for the entire file to download.
 
 The following code snippet shows how to optimize a PDF file for browser:
-{{< tabs "Example1">}}
+{{< tabs "optimize-pdf-for-web">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -51,5 +51,16 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-for-web/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 719 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-for-web/OptimizePdfForWeb/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}

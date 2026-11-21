@@ -46,12 +46,8 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "reduced_quality.pdf" >}}  
 ```text
-Binary file (PDF, 233 KB)
+Binary file (PDF, 483 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-reduce-image-quality/reduce_image_quality/reduced_quality.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Reduce image quality](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-reduce-image-quality.png)

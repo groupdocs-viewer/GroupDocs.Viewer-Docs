@@ -36,7 +36,7 @@ GroupDocs.Viewer can detect the document format automatically by analyzing file 
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a web file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example1">}}
+{{< tabs "render-web-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -70,17 +70,24 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "groupdocs-documentation.mhtml" >}}
+{{< tab-text >}}
+`groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 46 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebToPdf/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a web file to PDF](/viewer/net/images/rendering-basics/render-web-documents/render-web-to-pdf.png)
 
 ## Render web documents as PNG
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a web file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example2">}}
+{{< tabs "render-web-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -114,17 +121,25 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "groupdocs-documentation.mhtml" >}}
+{{< tab-text >}}
+`groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-web-to-png.zip" >}}  
+```text
+output_1.png (27 KB)
+output_2.png (25 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebToPng/render-web-to-png.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a web file to PNG](/viewer/net/images/rendering-basics/render-web-documents/render-web-to-png.png)
 
 ## Render web documents as JPEG
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a web file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example3">}}
+{{< tabs "render-web-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -158,6 +173,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "groupdocs-documentation.mhtml" >}}
+{{< tab-text >}}
+`groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-web-to-jpg.zip" >}}  
+```text
+output_1.jpg (43 KB)
+output_2.jpg (36 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebToJpg/render-web-to-jpg.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Convert CHM files to HTML
@@ -168,7 +195,7 @@ End Module
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
-{{< tabs "example4">}}
+{{< tabs "render-chm-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -206,11 +233,28 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.chm" >}}
+{{< tab-text >}}
+`sample.chm` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-web-documents/sample.chm) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-chm-to-html.zip" >}}  
+```text
+chm_result_1.html (86 KB)
+chm_result_10.html (84 KB)
+chm_result_100.html (99 KB)
+chm_result_101.html (89 KB)
+chm_result_102.html (101 KB)
+chm_result_103.html (98 KB)
+chm_result_104.html (120 KB)
+chm_result_105.html (114 KB)
+chm_result_106.html (81 KB)
+chm_result_107.html (75 KB)
+[TRUNCATED] (123 files total)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderChmToHtml/render-chm-to-html.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a web file to HTML](/viewer/net/images/rendering-basics/render-web-documents/render-chm-to-html.png)
 
 ### Create an HTML file with external resources
 
@@ -220,7 +264,7 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example5">}}
+{{< tabs "render-chm-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -256,8 +300,28 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.chm" >}}
+{{< tab-text >}}
+`sample.chm` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-web-documents/sample.chm) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-chm-to-html-external.zip" >}}  
+```text
+page_1.html (30 KB)
+page_10.html (17 KB)
+page_100.html (16 KB)
+page_100/resource_100_f.woff (12 KB)
+page_100/resource_100_f1.woff (16 KB)
+page_100/resource_100_f2.woff (12 KB)
+page_100/resource_100_f3.woff (7 KB)
+page_100/resource_100_f4.woff (15 KB)
+page_100/resource_100_s.css (2 KB)
+page_101.html (17 KB)
+[TRUNCATED] (713 files total)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderChmToHtmlExternal/render-chm-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
 
 ## Specify rendering options
 
@@ -279,7 +343,7 @@ Use the following properties to specify the size of page margins in the output f
 
 The example below converts a web document to PDF and specifies page margins for the output file. 
 
-{{< tabs "example6">}}
+{{< tabs "render-web-with-margins">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -321,6 +385,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "groupdocs-documentation.mhtml" >}}
+{{< tab-text >}}
+`groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 46 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebWithMargins/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ### Set the output page size
@@ -329,7 +404,7 @@ GroupDocs.Viewer allows you to specify page size for the output file when you co
 
 The following example specifies page size for the output PDF file:
 
-{{< tabs "example7">}}
+{{< tabs "render-web-with-page-size">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -364,6 +439,17 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "groupdocs-documentation.mhtml" >}}
+{{< tab-text >}}
+`groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 45 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebWithPageSize/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

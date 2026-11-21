@@ -48,8 +48,8 @@ Common use cases:
 
 ## Quick Example
 
-{{< tabs "quick-example">}}
-{{< tab "QuickExample.cs" >}}
+{{< tabs "quick-example-html">}}
+{{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -62,7 +62,27 @@ using (Viewer viewer = new Viewer("./sample.docx"))
 }
 ```
 {{< /tab >}}
-{{< tab "RenderWithOptions.cs" >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/product-overview/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "quick-example-html.zip" >}}  
+```text
+page_1.html (228 KB)
+page_2.html (110 KB)
+page_3.html (142 KB)
+page_4.html (885 KB)
+page_5.html (86 KB)
+```
+[Download full output](/viewer/net/_output_files/product-overview/QuickExampleHtml/quick-example-html.zip)
+{{< /tab >}}
+{{< /tabs >}}
+
+The next example opens a password-protected document and renders it to PDF with a watermark:
+
+{{< tabs "quick-example-protected-pdf">}}
+{{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
@@ -79,13 +99,16 @@ using (Viewer viewer = new Viewer("./protected.docx", loadOptions))
 }
 ```
 {{< /tab >}}
-{{< tab "quick-outputs.zip" >}}  
+{{< tab "protected.docx" >}}
+{{< tab-text >}}
+`protected.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/product-overview/protected.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "protected.pdf" >}}  
 ```text
-page_1.html (317 KB)
-page_2.html (149 KB)
-page_3.html (113 KB)
+Binary file (PDF, 77 KB)
 ```
-[Download full output](/viewer/net/_output_files/product-overview/quick_example/quick-outputs.zip)
+[Download full output](/viewer/net/_output_files/product-overview/QuickExampleProtectedPdf/protected.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

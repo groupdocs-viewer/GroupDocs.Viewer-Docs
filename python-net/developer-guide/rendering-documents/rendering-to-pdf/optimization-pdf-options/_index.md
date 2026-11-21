@@ -16,6 +16,10 @@ Optimization for a web allows a browser to display the first pages of a PDF file
 
 Resource optimization allows you to reduce the size of the output PDF file. While optimizing, GroupDocs.Viewer may reduce the image size or quality, remove notes or form fields, remove objects, fonts, or personal information from a document, and so on.
 
+The options are grouped the same way as the pages below:
+
+![What each pdf_optimization_options option changes in the output PDF: faster opening in a browser, smaller images, lighter fonts, less content, no unused data, and smaller spreadsheets](/viewer/python-net/images/developer-guide/rendering-documents/rendering-to-pdf/pdf-optimization-options.svg)
+
 You can also optimize an existing PDF file. To do this, open it, specify the optimization parameters, and save the output file.
 
 

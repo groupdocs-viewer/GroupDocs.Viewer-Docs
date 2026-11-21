@@ -16,6 +16,8 @@ GroupDocs.Viewer for .NET provides two options to manage CSS, fonts, images, and
 1. HTML with external resources stores page resources as separate files. This allows reusing common resources and results in reducing page size and loading speed.
 2. HTML with embedded resources integrates page resources into HTML. This makes each document page self-sufficient but results in increasing page size and loading speed.
 
+![A three-page DOCX rendered to HTML: with embedded resources each page is one self-contained HTML file; with external resources each page is an HTML file plus a folder of fonts, pictures and styles it links to](/viewer/net/images/developer-guide/rendering-documents/rendering-to-html/html-resources.svg)
+
 To render files to HTML, follow these steps:
 
 1. Create an instance of the [Viewer](https://reference.groupdocs.com/net/viewer/groupdocs.viewer/viewer) class. Specify the source document path as a constructor parameter.
@@ -26,7 +28,7 @@ To render files to HTML, follow these steps:
 
 The following code snippet shows how to render a .docx document to HTML with external resources: 
 
-{{< tabs "example1">}}
+{{< tabs "render-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -58,13 +60,34 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-html/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-to-html-external.zip" >}}  
+```text
+p_1.html (2 KB)
+p_1_f.woff (20 KB)
+p_1_f1.woff (9 KB)
+p_1_f2.woff (10 KB)
+p_1_i.jpeg (126 KB)
+p_1_i.png (4 KB)
+p_1_s.css (1 KB)
+p_2.html (9 KB)
+p_2_f.woff (15 KB)
+p_2_f1.woff (29 KB)
+[TRUNCATED] (35 files total)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/_index/RenderToHtmlExternal/render-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Rendering to HTML with embedded resources
 
 The following code snippet shows how to render a .docx document to HTML with embedded resources:
 
-{{< tabs "example2">}}
+{{< tabs "render-to-html-embedded">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -96,6 +119,21 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-html/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-to-html-embedded.zip" >}}  
+```text
+p_1.html (228 KB)
+p_2.html (110 KB)
+p_3.html (142 KB)
+p_4.html (885 KB)
+p_5.html (86 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/_index/RenderToHtmlEmbedded/render-to-html-embedded.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Preserving or disabling JavaScript when rendering to HTML
@@ -110,7 +148,7 @@ Code sample below shows opening a sample XLSX document and rendering it twice:
 1. to the HTML with embedded resources with disabled JavaScript;
 2. to the HTML with external resources with enabled JavaScript;
 
-{{< tabs "example-RemoveJavaScript">}}
+{{< tabs "render-html-with-and-without-javascript">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -122,7 +160,7 @@ HtmlViewOptions withoutJavaScriptEmbedded = HtmlViewOptions.ForEmbeddedResources
 HtmlViewOptions withJavaScriptExternal = HtmlViewOptions.ForExternalResources("with-js-page{0}.html", "with-js-page{0}/resource-{1}", "with-js-page{0}/resource-{1}");
 withJavaScriptExternal.RemoveJavaScript = false;
 
-using (var viewer = new Viewer("Spreadsheet-with-script.xlsx"))
+using (var viewer = new Viewer("with_script.xlsx"))
 {
     viewer.View(withoutJavaScriptEmbedded);
     viewer.View(withJavaScriptExternal);
@@ -140,11 +178,24 @@ Dim withoutJavaScriptEmbedded = HtmlViewOptions.ForEmbeddedResources("without-js
 Dim withJavaScriptExternal = HtmlViewOptions.ForExternalResources("with-js-page{0}.html", "with-js-page{0}/resource-{1}", "with-js-page{0}/resource-{1}")
 withJavaScriptExternal.RemoveJavaScript = false;
 
-Using viewer = New Viewer("Spreadsheet-with-script.xlsx")	
+Using viewer = New Viewer("with_script.xlsx")	
 	viewer.View(withoutJavaScriptEmbedded)
 	viewer.View(withJavaScriptExternal)
 End Using
 ```
+{{< /tab >}}
+{{< tab "with_script.xlsx" >}}
+{{< tab-text >}}
+`with_script.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-html/with_script.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-html-with-and-without-javascript.zip" >}}  
+```text
+with-js-page1.html (8 KB)
+with-js-page1/resource-s.css (4 KB)
+without-js-page1.html (67 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/_index/RenderHtmlWithAndWithoutJavascript/render-html-with-and-without-javascript.zip)
 {{< /tab >}}
 {{< /tabs >}}
 

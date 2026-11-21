@@ -15,7 +15,7 @@ You can specify the file type using [LoadOptions](https://reference.groupdocs.co
 
 The following code snippet shows how to specify the file type when loading a document:
 
-{{< tabs "example1">}}
+{{< tabs "specify-file-type-when-loading">}}
 {{< tab "C#" >}}
 ```csharp
 using System.IO;
@@ -23,7 +23,7 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-Stream stream = GetFileStream("sample.docx"); //TODO: implement your method
+Stream stream = File.OpenRead("sample.docx");
 
 // Specify the file type.
 LoadOptions loadOptions = new LoadOptions(FileType.DOCX);
@@ -45,7 +45,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Dim stream As Stream = GetFileStream("sample.docx") 'TODO: implement your method
+        Dim stream As Stream = File.OpenRead("sample.docx")
     
         ' Specify the file type.
         Dim loadOptions As LoadOptions = New LoadOptions(FileType.DOCX)
@@ -58,5 +58,20 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/loading-documents/specify-file-type-when-loading-a-document/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "specify-file-type-when-loading.zip" >}}  
+```text
+p_1.html (228 KB)
+p_2.html (110 KB)
+p_3.html (142 KB)
+p_4.html (885 KB)
+p_5.html (86 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/loading-documents/specify-file-type-when-loading-a-document/SpecifyFileTypeWhenLoading/specify-file-type-when-loading.zip)
 {{< /tab >}}
 {{< /tabs >}}

@@ -17,7 +17,7 @@ The default value is `false`.
 
 The following code snippet shows how to optimize spreadsheets in a PDF file:
 
-{{< tabs "Example1">}}
+{{< tabs "optimize-spreadsheets">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -55,5 +55,16 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "invoice.xlsx" >}}
+{{< tab-text >}}
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-spreadsheets/invoice.xlsx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 17 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-spreadsheets/OptimizeSpreadsheets/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}

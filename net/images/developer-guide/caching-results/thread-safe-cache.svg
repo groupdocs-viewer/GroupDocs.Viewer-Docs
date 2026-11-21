@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 356" width="900" height="356" role="img" aria-labelledby="t d" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <title id="t">How ThreadSafeCache keeps cache reads and writes apart</title>
+  <desc id="d">Three requests render sample.pdf at the same time, each on its own thread, with a Viewer whose cache is a ThreadSafeCache over FileCache("cache/sample_pdf"). ThreadSafeCache runs every Set and TryGetValue inside lock(GetLockerFor(key)), and KeyLockerMap, a static ConcurrentDictionary, holds one lock object per cache key. User A writes page 1 and holds the lock of page 1's key; user B, who reads page 1, waits for that lock and then reads the complete file; user C reads page 2, whose key has another lock, so C does not wait.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/>
+    </marker>
+    <marker id="amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d97706"/>
+    </marker>
+    <marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0e9f6e"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <g id="lock">
+      <path d="M-4.5 -2 V-5 A4.5 4.5 0 0 1 4.5 -5 V-2" fill="none" stroke="#475569" stroke-width="1.8"/>
+      <rect x="-6.5" y="-2.5" width="13" height="10" rx="2" fill="#475569"/>
+    </g>
+    <g id="file">
+      <path d="M0 0 H18 L24 6 V30 H0 Z" fill="#ffffff" stroke="#f59e0b" stroke-linejoin="round"/>
+      <rect x="4" y="12" width="14" height="2.4" rx="1.2" fill="#fcd34d"/>
+      <rect x="4" y="18" width="12" height="2.4" rx="1.2" fill="#fde68a"/>
+    </g>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="899" height="355" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+
+  <g font-size="11" font-weight="600" fill="#64748b" letter-spacing="1.2">
+    <text x="40" y="31" text-anchor="start">REQUESTS, ONE THREAD EACH</text>
+    <text x="306" y="31" text-anchor="start">THREADSAFECACHE</text>
+    <text x="676" y="31" text-anchor="start">FILECACHE ON DISK</text>
+  </g>
+
+  <!-- the requests -->
+  <rect x="24" y="56" width="226" height="50" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#shadow)"/>
+  <text x="40" y="77" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="start">User A writes page 1</text>
+  <text x="40" y="95" font-size="11" fill="#1d4ed8" text-anchor="start">holds the lock of page 1</text>
+  <rect x="24" y="126" width="226" height="50" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#shadow)"/>
+  <text x="40" y="147" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="start">User B reads page 1</text>
+  <text x="40" y="165" font-size="11" fill="#b45309" text-anchor="start">waits for that lock, then reads</text>
+  <rect x="24" y="196" width="226" height="50" rx="10" fill="#ffffff" stroke="#cbd5e1" filter="url(#shadow)"/>
+  <text x="40" y="217" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="start">User C reads page 2</text>
+  <text x="40" y="235" font-size="11" fill="#0e9f6e" text-anchor="start">another key, another lock: no wait</text>
+
+  <!-- ThreadSafeCache -->
+  <rect x="290" y="48" width="340" height="214" rx="14" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="306" y="72" font-size="12.5" font-weight="700" fill="#1d4ed8" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">lock (GetLockerFor(key))</text>
+  <text x="306" y="91" font-size="11" fill="#475569" text-anchor="start">around every Set and TryGetValue</text>
+  <text x="306" y="124" font-size="10.5" font-weight="600" fill="#64748b" letter-spacing="1" text-anchor="start">KEYLOCKERMAP: ONE LOCK PER KEY</text>
+  <rect x="306" y="140" width="308" height="42" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+  <g transform="translate(326 161)"><use href="#lock"/></g>
+  <text x="344" y="158" font-size="11" fill="#0f172a" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">cache/sample_pdf_ + page 1 key</text>
+  <text x="344" y="174" font-size="10.5" fill="#64748b" text-anchor="start">lock 1</text>
+  <rect x="306" y="196" width="308" height="42" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <g transform="translate(326 217)"><use href="#lock"/></g>
+  <text x="344" y="214" font-size="11" fill="#0f172a" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">cache/sample_pdf_ + page 2 key</text>
+  <text x="344" y="230" font-size="10.5" fill="#64748b" text-anchor="start">lock 2</text>
+
+  <g fill="none" stroke-width="1.8">
+    <path d="M250 81 C272 81 266 152 286 152 L302 152" stroke="#1d4ed8" marker-end="url(#blue)"/>
+    <path d="M250 151 C266 151 268 170 286 170 L302 170" stroke="#d97706" stroke-dasharray="5 4" marker-end="url(#amber)"/>
+    <path d="M250 221 C266 221 268 217 286 217 L302 217" stroke="#0e9f6e" marker-end="url(#green)"/>
+  </g>
+
+  <!-- FileCache -->
+  <rect x="660" y="48" width="216" height="214" rx="14" fill="#fffbeb" stroke="#fcd34d"/>
+  <text x="676" y="72" font-size="12" font-weight="700" fill="#92400e" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">FileCache(</text>
+  <text x="676" y="90" font-size="12" font-weight="700" fill="#92400e" text-anchor="start" font-family="'Roboto Mono', Consolas, monospace">  "cache/sample_pdf")</text>
+  <use href="#file" x="690" y="146"/>
+  <text x="724" y="165" font-size="11.5" fill="#334155" text-anchor="start">page 1</text>
+  <use href="#file" x="690" y="202"/>
+  <text x="724" y="221" font-size="11.5" fill="#334155" text-anchor="start">page 2</text>
+  <g stroke="#94a3b8" stroke-width="1.6" fill="none">
+    <path d="M614 161 L684 161" marker-end="url(#arrow)"/>
+    <path d="M614 217 L684 217" marker-end="url(#arrow)"/>
+  </g>
+
+  <g font-size="12" fill="#334155">
+    <text x="40" y="296" text-anchor="start">A and B use the same cache entry, so B waits until A's write is done and never reads a half-written file.</text>
+    <text x="40" y="316" text-anchor="start">C uses another entry and goes ahead. The locks cover cache reads and writes, not the rendering itself.</text>
+    <text x="40" y="336" text-anchor="start"><tspan font-family="'Roboto Mono', Consolas, monospace" fill="#1d4ed8">KeyLockerMap</tspan> is static, so every Viewer in the process shares the same locks.</text>
+  </g>
+</svg>

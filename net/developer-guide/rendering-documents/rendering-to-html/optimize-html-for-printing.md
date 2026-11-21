@@ -21,7 +21,7 @@ This option is supported for the following format families:
 
 The following code snippet shows how to render a .docx document to HTML optimized for printing:
 
-{{< tabs "example1">}}
+{{< tabs "optimize-html-for-printing">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -58,5 +58,20 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-html/optimize-html-for-printing/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "optimize-html-for-printing.zip" >}}  
+```text
+p_1.html (228 KB)
+p_2.html (110 KB)
+p_3.html (142 KB)
+p_4.html (885 KB)
+p_5.html (86 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/optimize-html-for-printing/OptimizeHtmlForPrinting/optimize-html-for-printing.zip)
 {{< /tab >}}
 {{< /tabs >}}

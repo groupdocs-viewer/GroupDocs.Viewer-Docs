@@ -1,0 +1,23 @@
+{
+  "file": "viewer/net/_preview/b75bd8bb716404df.eml",
+  "fileName": "sample.eml",
+  "fileType": "eml",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 612,
+      "height": 792,
+      "pageUrl": "/viewer/net/_preview/b75bd8bb716404df.eml/page-1.png",
+      "thumbUrl": "/viewer/net/_preview/b75bd8bb716404df.eml/page-1.png"
+    },
+    {
+      "number": 2,
+      "width": 612,
+      "height": 792,
+      "pageUrl": "/viewer/net/_preview/b75bd8bb716404df.eml/page-2.png",
+      "thumbUrl": "/viewer/net/_preview/b75bd8bb716404df.eml/page-2.png"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 464" width="900" height="464" role="img" aria-labelledby="t d" font-family="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <title id="t">How GroupDocs.Viewer rotates pages</title>
+  <desc id="d">A three-page DOCX goes into GroupDocs.Viewer with RotatePage(1, Rotation.On90Degree): in the output PDF page 1 is turned 90 degrees clockwise and pages 2 and 3 are unchanged. Below, the original page and the three rotation values: On90Degree turns a page 90 degrees clockwise, On180Degree turns it upside down, On270Degree turns it 270 degrees clockwise, that is 90 degrees counterclockwise.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="turn" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1d4ed8"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <!-- a portrait page, 60 x 78, centred on the origin: the dark title bar at the top left shows which way is up -->
+    <g id="mini">
+      <rect x="-30" y="-39" width="60" height="78" rx="4" fill="#ffffff" stroke="#94a3b8" filter="url(#shadow)"/>
+      <rect x="-22" y="-31" width="30" height="6" rx="3" fill="#1f3a5f"/>
+      <rect x="-22" y="-20" width="44" height="3" rx="1.5" fill="#cbd5e1"/>
+      <rect x="-22" y="-14" width="38" height="3" rx="1.5" fill="#cbd5e1"/>
+      <rect x="-22" y="-6" width="20" height="16" rx="2" fill="#dbeafe"/>
+      <rect x="2" y="-6" width="20" height="3" rx="1.5" fill="#e2e8f0"/>
+      <rect x="2" y="0" width="16" height="3" rx="1.5" fill="#e2e8f0"/>
+      <rect x="2" y="6" width="18" height="3" rx="1.5" fill="#e2e8f0"/>
+      <rect x="-22" y="16" width="44" height="3" rx="1.5" fill="#e2e8f0"/>
+      <rect x="10" y="27" width="12" height="5" rx="2" fill="#e07a5f"/>
+    </g>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="899" height="463" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+
+  <!-- 1. the example: page 1 of three is rotated -->
+  <g font-size="11" font-weight="600" fill="#64748b" letter-spacing="1.2" text-anchor="middle">
+    <text text-anchor="middle" x="130" y="30">SOURCE DOCUMENT</text>
+    <text text-anchor="middle" x="400" y="30">RENDERING</text>
+    <text text-anchor="middle" x="690" y="30">OUTPUT FILE</text>
+  </g>
+
+  <g transform="translate(0 -84)">
+    <rect x="86" y="128" width="120" height="156" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="78" y="136" width="120" height="156" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+    <g filter="url(#shadow)">
+      <rect x="70" y="144" width="120" height="156" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+    </g>
+    <rect x="82" y="158" width="58" height="7" rx="3.5" fill="#1f3a5f"/>
+    <rect x="82" y="174" width="96" height="4" rx="2" fill="#cbd5e1"/>
+    <rect x="82" y="184" width="88" height="4" rx="2" fill="#cbd5e1"/>
+    <rect x="82" y="194" width="92" height="4" rx="2" fill="#cbd5e1"/>
+    <rect x="82" y="208" width="44" height="34" rx="3" fill="#dbeafe"/>
+    <rect x="132" y="208" width="46" height="4" rx="2" fill="#e2e8f0"/>
+    <rect x="132" y="218" width="40" height="4" rx="2" fill="#e2e8f0"/>
+    <rect x="132" y="228" width="44" height="4" rx="2" fill="#e2e8f0"/>
+    <rect x="82" y="250" width="92" height="4" rx="2" fill="#e2e8f0"/>
+    <rect x="82" y="260" width="80" height="4" rx="2" fill="#e2e8f0"/>
+    <rect x="148" y="278" width="34" height="14" rx="3" fill="#2b579a"/>
+    <text x="165" y="288.5" font-size="8.5" font-weight="700" fill="#ffffff" text-anchor="middle">DOCX</text>
+  </g>
+  <text x="130" y="240" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">sample.docx</text>
+  <text x="130" y="257" font-size="12" fill="#64748b" text-anchor="middle">3 pages</text>
+
+  <path d="M206 141 L292 141" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="300" y="91" width="200" height="100" rx="14" fill="#1d4ed8"/>
+  </g>
+  <text x="400" y="124" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">GroupDocs.Viewer</text>
+  <g font-size="11.5" fill="#dbeafe" text-anchor="middle" font-family="'Roboto Mono', Consolas, monospace">
+    <text text-anchor="middle" x="400" y="151">RotatePage(1,</text>
+    <text text-anchor="middle" x="400" y="168">Rotation.On90Degree)</text>
+  </g>
+
+  <path d="M500 141 L566 141" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- output.pdf: page 1 turned, pages 2 and 3 as they were -->
+  <use href="#mini" transform="translate(617 141) rotate(90)"/>
+  <path d="M617 87 A 9 9 0 0 1 626 96" stroke="#1d4ed8" stroke-width="1.6" fill="none" marker-end="url(#turn)"/>
+  <use href="#mini" transform="translate(692 141)"/>
+  <use href="#mini" transform="translate(764 141)"/>
+  <g font-size="10" fill="#475569" text-anchor="middle">
+    <text text-anchor="middle" x="617" y="198">page 1</text><text text-anchor="middle" x="692" y="198">page 2</text><text text-anchor="middle" x="764" y="198">page 3</text>
+  </g>
+  <rect x="801" y="166" width="24" height="10" rx="2" fill="#e02424"/>
+  <text x="813" y="174" font-size="7" font-weight="700" fill="#ffffff" text-anchor="middle">PDF</text>
+  <text x="690" y="230" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">output.pdf</text>
+  <text x="690" y="247" font-size="12" fill="#64748b" text-anchor="middle">page 1 turned 90° clockwise, the others unchanged</text>
+
+  <line x1="32" y1="274" x2="868" y2="274" stroke="#e2e8f0"/>
+
+  <!-- 2. the rotation values -->
+  <text x="450" y="302" font-size="11" font-weight="600" fill="#64748b" letter-spacing="1.2" text-anchor="middle">ROTATION VALUES</text>
+
+  <use href="#mini" transform="translate(150 362)"/>
+  <use href="#mini" transform="translate(350 362) rotate(90)"/>
+  <use href="#mini" transform="translate(550 362) rotate(180)"/>
+  <use href="#mini" transform="translate(750 362) rotate(270)"/>
+
+  <!-- arcs as long as the turn, clockwise from the top -->
+  <g stroke="#1d4ed8" stroke-width="1.6" fill="none" marker-end="url(#turn)">
+    <path d="M402 323 A 9 9 0 0 1 411 332"/>
+    <path d="M602 314 A 9 9 0 0 1 602 332"/>
+    <path d="M802 323 A 9 9 0 1 1 793 332"/>
+  </g>
+
+  <text x="150" y="428" font-size="12.5" fill="#0f172a" text-anchor="middle">Original page</text>
+  <g font-size="12" font-weight="600" fill="#1d4ed8" text-anchor="middle" font-family="'Roboto Mono', Consolas, monospace">
+    <text text-anchor="middle" x="350" y="428">Rotation.On90Degree</text>
+    <text text-anchor="middle" x="550" y="428">Rotation.On180Degree</text>
+    <text text-anchor="middle" x="750" y="428">Rotation.On270Degree</text>
+  </g>
+  <g font-size="11" fill="#64748b" text-anchor="middle">
+    <text text-anchor="middle" x="150" y="446">no RotatePage call</text>
+    <text text-anchor="middle" x="350" y="446">90° clockwise</text>
+    <text text-anchor="middle" x="550" y="446">upside down</text>
+    <text text-anchor="middle" x="750" y="446">90° counterclockwise</text>
+  </g>
+</svg>

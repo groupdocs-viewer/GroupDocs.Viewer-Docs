@@ -1,0 +1,2 @@
+Time taken on first call to View method 9303 (ms).
+Time taken on second call to View method 65 (ms).

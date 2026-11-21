@@ -17,7 +17,7 @@ To list or print out all the supported file formats within your application, fol
 
 The following code snippet shows how to list supported file formats in the console:
 
-{{< tabs "example1">}}
+{{< tabs "list-supported-file-types">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -55,8 +55,20 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "list-supported-file-types.txt" >}}  
+```text
+Zipped File (.zip)
+Rar Compressed File (.rar)
+Consolidated Unix File Archive (.tar)
+Bzip2 Compressed File (.bz2)
+Gnu Zipped File (.gz)
+Gnu Zipped File (.gzip)
+Drawing Exchange Format File (.dxf)
+AutoCAD Drawing Database File (.dwg)
+Stereolithography File (.stl)
+Industry Foundation Classes File (.ifc)
+[TRUNCATED]
+```
+[Download full output](/viewer/net/_output_files/developer-guide/retrieving-document-information/how-to-list-and-print-all-supported-file-types/ListSupportedFileTypes/list-supported-file-types.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![](/viewer/net/images/how-to-list-and-print-all-supported-file-types.png)

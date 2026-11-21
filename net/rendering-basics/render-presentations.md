@@ -49,7 +49,7 @@ Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
-{{< tabs "example1">}}
+{{< tabs "render-presentation-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -83,11 +83,23 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-presentation-to-html.zip" >}}  
+```text
+page_1.html (467 KB)
+page_2.html (329 KB)
+page_3.html (344 KB)
+page_4.html (343 KB)
+page_5.html (333 KB)
+page_6.html (330 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationToHtml/render-presentation-to-html.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a presentation file to HTML](/viewer/net/images/rendering-basics/render-presentations/render-to-html-embedded-resources.png)
 
 ### Create an HTML file with external resources
 
@@ -97,7 +109,7 @@ If you want to store an HTML file and additional resource files (such as fonts, 
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example2">}}
+{{< tabs "render-presentation-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -134,12 +146,30 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-presentation-to-html-external.zip" >}}  
+```text
+page_1.html (255 bytes)
+page_1/resource_1_g.svg (4 KB)
+page_1/resource_1_i.jpg (100 KB)
+page_1/resource_1_i.png (5 KB)
+page_2.html (255 bytes)
+page_2/resource_2_g.svg (6 KB)
+page_3.html (255 bytes)
+page_3/resource_3_g.svg (20 KB)
+page_4.html (255 bytes)
+page_4/resource_4_g.svg (19 KB)
+[TRUNCATED] (14 files total)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationToHtmlExternal/render-presentation-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-presentations/render-to-html-external-resources.png)
-
+External resources are placed in a separate folder.
 
 ### Generate pure HTML/CSS markup
 
@@ -153,13 +183,13 @@ By default this mode is disabled, and the existing SVG-based mode is activated. 
 
 Code example below shows converting the same presentation file to the pure HTML/CSS markup in two variations — with embedded and external resources:
 
-{{< tabs "example_pure">}}
+{{< tabs "render-presentation-pure-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
-string inputPresentationPath = "SamplePresentation.pptx";
+string inputPresentationPath = "sample.pptx";
 
 //preparing HTML options for embedded and external resources
 HtmlViewOptions embeddedOptions = HtmlViewOptions.ForEmbeddedResources("slide_{0}_embedded.html");
@@ -182,7 +212,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Dim inputPresentationPath As String = "SamplePresentation.pptx"
+        Dim inputPresentationPath As String = "sample.pptx"
         'preparing HTML options for embedded and external resources
         Dim embeddedOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("slide_{0}_embedded.html")
         Dim externalOptions As HtmlViewOptions = HtmlViewOptions.ForExternalResources("slide_{0}.html", "slide_{0}_{1}", "slide_{0}_{1}")
@@ -196,6 +226,27 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-presentation-pure-html.zip" >}}  
+```text
+slide_1.html (21 KB)
+slide_1_embedded.html (158 KB)
+slide_1_i.jpeg (98 KB)
+slide_1_i.png (5 KB)
+slide_2.html (25 KB)
+slide_2_embedded.html (25 KB)
+slide_3.html (43 KB)
+slide_3_embedded.html (43 KB)
+slide_4.html (39 KB)
+slide_4_embedded.html (39 KB)
+[TRUNCATED] (14 files total)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationPureHtml/render-presentation-pure-html.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -213,7 +264,7 @@ We plan to add support for most of these missing features in the near future by 
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a presentation file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example3">}}
+{{< tabs "render-presentation-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -247,17 +298,24 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 375 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationToPdf/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a presentation file to PDF](/viewer/net/images/rendering-basics/render-presentations/render-to-pdf.png)
 
 ## Render presentations as PNG
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a presentation file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example4">}}
+{{< tabs "render-presentation-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -297,18 +355,29 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-presentation-to-png.zip" >}}  
+```text
+output_1.png (178 KB)
+output_2.png (72 KB)
+output_3.png (81 KB)
+output_4.png (83 KB)
+output_5.png (104 KB)
+output_6.png (92 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationToPng/render-presentation-to-png.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a presentation file to PNG](/viewer/net/images/rendering-basics/render-presentations/render-to-png-image.png)
 
 ## Render presentations as JPEG
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a presentation file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-
-{{< tabs "example5">}}
+{{< tabs "render-presentation-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -348,6 +417,22 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-presentation-to-jpg.zip" >}}  
+```text
+output_1.jpg (60 KB)
+output_2.jpg (40 KB)
+output_3.jpg (54 KB)
+output_4.jpg (54 KB)
+output_5.jpg (65 KB)
+output_6.jpg (51 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationToJpg/render-presentation-to-jpg.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Specify image resolution
@@ -367,7 +452,7 @@ You can set the [PresentationOptions.Resolution](https://reference.groupdocs.com
 
 The following example shows how to specify image resolution in code: 
 
-{{< tabs "example6">}}
+{{< tabs "render-presentation-with-resolution">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -403,6 +488,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 375 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationWithResolution/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render hidden slides
@@ -411,7 +507,7 @@ If your presentation contains hidden slides, enable the [ViewOptions.RenderHidde
 
 The following code example uses this option to display hidden slides in the generated PDF file:
 
-{{< tabs "example7">}}
+{{< tabs "render-presentation-with-hidden-slides">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -447,20 +543,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 382 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationWithHiddenSlides/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render comments
 
-Enable the [ViewOptions.RenderComments](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) option for a target view to display comments in the output file when you convert your presentation to HTML, PDF, PNG, or JPEG format.
+Comments are rendered by default: the [ViewOptions.RenderComments](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) property is `true` unless you change it. The example below sets it explicitly; set it to `false` to hide the comments when you convert your presentation to HTML, PDF, PNG, or JPEG format.
 
-{{< tabs "example8">}}
+{{< tabs "render-presentation-with-comments">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("sample.pptx"))
+using (var viewer = new Viewer("with_comments.pptx"))
 {
     // Convert the presentation to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
@@ -478,7 +585,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("sample.pptx")
+        Using viewer = New Viewer("with_comments.pptx")
             ' Convert the presentation to PDF.
             Dim viewOptions = New PdfViewOptions("output.pdf")
             ' Enable comments rendering.
@@ -489,11 +596,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "with_comments.pptx" >}}
+{{< tab-text >}}
+`with_comments.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/with_comments.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 380 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationWithComments/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a presentation with comments](/viewer/net/images/rendering-basics/render-presentations/render-presentation-comments-to-pdf.png)
 
 ## Render speaker notes
 
@@ -505,7 +619,7 @@ Enable the [ViewOptions.RenderNotes](https://reference.groupdocs.com/viewer/net/
 
 The following code sample renders a presentation with speaker notes to PDF:
 
-{{< tabs "example9">}}
+{{< tabs "render-presentation-with-notes">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -541,11 +655,18 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pptx" >}}
+{{< tab-text >}}
+`sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 377 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationWithNotes/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The image below demonstrates the result.
-
-![Render a presentation with notes](/viewer/net/images/rendering-basics/render-presentations/render-presentation-notes-to-pdf.png)
 
 ## PowerPoint files rendering demo
 

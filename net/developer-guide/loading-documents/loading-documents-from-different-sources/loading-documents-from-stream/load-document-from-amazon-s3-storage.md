@@ -15,7 +15,7 @@ Runnig this code requires installing [AWSSDK.S3](https://nuget.org/packages/AWSS
 
 {{< /alert >}}
 
-{{< tabs "example1">}}
+{{< tabs "load-document-from-amazon-s3">}}
 {{< tab "C#" >}}
 ```csharp
 using System.IO;

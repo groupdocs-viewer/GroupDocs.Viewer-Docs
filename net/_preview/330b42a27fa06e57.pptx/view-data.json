@@ -1,0 +1,30 @@
+{
+  "file": "viewer/net/_preview/330b42a27fa06e57.pptx",
+  "fileName": "harvest-launch.pptx",
+  "fileType": "pptx",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 1920,
+      "height": 1080,
+      "pageUrl": "/viewer/net/_preview/330b42a27fa06e57.pptx/page-1.png",
+      "thumbUrl": "/viewer/net/_preview/330b42a27fa06e57.pptx/page-1.png"
+    },
+    {
+      "number": 2,
+      "width": 1920,
+      "height": 1080,
+      "pageUrl": "/viewer/net/_preview/330b42a27fa06e57.pptx/page-2.png",
+      "thumbUrl": "/viewer/net/_preview/330b42a27fa06e57.pptx/page-2.png"
+    },
+    {
+      "number": 3,
+      "width": 1920,
+      "height": 1080,
+      "pageUrl": "/viewer/net/_preview/330b42a27fa06e57.pptx/page-3.png",
+      "thumbUrl": "/viewer/net/_preview/330b42a27fa06e57.pptx/page-3.png"
+    }
+  ]
+}

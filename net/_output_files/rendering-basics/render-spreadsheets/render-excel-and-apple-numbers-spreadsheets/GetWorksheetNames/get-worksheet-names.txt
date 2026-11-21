@@ -1,0 +1,4 @@
+The document contains the following worksheets:
+ - Worksheet 1: 'Summary'
+ - Worksheet 2: 'Orders'
+ - Worksheet 3: 'Customers'

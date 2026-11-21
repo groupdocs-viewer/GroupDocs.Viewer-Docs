@@ -1,0 +1,30 @@
+{
+  "file": "viewer/net/_preview/bdb52598b565eac1.html",
+  "fileName": "set-custom-fonts.zip",
+  "fileType": "html",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 1280,
+      "height": 720,
+      "pageUrl": "/viewer/net/_preview/bdb52598b565eac1.html/page-1.html",
+      "thumbUrl": "/viewer/net/_preview/bdb52598b565eac1.html/page-1.html"
+    },
+    {
+      "number": 2,
+      "width": 1280,
+      "height": 720,
+      "pageUrl": "/viewer/net/_preview/bdb52598b565eac1.html/page-2.html",
+      "thumbUrl": "/viewer/net/_preview/bdb52598b565eac1.html/page-2.html"
+    },
+    {
+      "number": 3,
+      "width": 1280,
+      "height": 720,
+      "pageUrl": "/viewer/net/_preview/bdb52598b565eac1.html/page-3.html",
+      "thumbUrl": "/viewer/net/_preview/bdb52598b565eac1.html/page-3.html"
+    }
+  ]
+}

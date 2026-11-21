@@ -14,6 +14,12 @@ aliases:
     - /viewer/python-net/render-print-areas/
 ---
 
+GroupDocs.Viewer can split a worksheet into pages in five ways, each covered below:
+
+![Five SpreadsheetOptions factory methods: for_one_page_per_sheet puts the whole worksheet on one page, for_rendering_by_page_breaks splits it at Excel's page breaks, for_rendering_print_area renders only the print area, for_rendering_print_area_and_page_breaks splits the print area at the page breaks, and for_split_sheet_into_pages takes a fixed number of rows and columns per page](/viewer/python-net/images/rendering-basics/render-spreadsheets/split-worksheet-into-pages.svg)
+
+## Split a worksheet by page breaks
+
 GroupDocs.Viewer uses page breaks to split a worksheet into separate pages. Microsoft Excel adds automatic page breaks based on paper size and page settings, but you can also insert manual horizontal and vertical page breaks. Switch to **Page Break Preview** in Microsoft Excel to see where page breaks appear on a worksheet.
 
 In the image below, the vertical page break is inserted after the column **E**, and the horizontal page break is located under the row **30**.
@@ -45,20 +51,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "products.xlsx" >}}
 {{< tab-text >}}
-`products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/products.xlsx) to download it.
+`products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/products.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "by_page_breaks.pdf" >}}  
 ```text
-Binary file (PDF, 461 KB)
+Binary file (PDF, 75 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/split_by_page_breaks/by_page_breaks.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The image below illustrates the result.
-
-![Render a worksheet to PDF based on page breaks](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-by-page-breaks.png)
 
 ## Split a worksheet into pages by rows
 
@@ -87,20 +89,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "two-pages.xlsx" >}}
 {{< tab-text >}}
-`two-pages.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/two-pages.xlsx) to download it.
+`two-pages.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/two-pages.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "by_rows.pdf" >}}  
 ```text
-Binary file (PDF, 11 KB)
+Binary file (PDF, 41 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/split_by_rows/by_rows.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The image below demonstrates the output PDF file.
-
-![Break a worksheet into two pages](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-two-pages.png)
 
 ## Split a worksheet into pages by rows and columns
 
@@ -130,20 +128,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "four-pages.xlsx" >}}
 {{< tab-text >}}
-`four-pages.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/four-pages.xlsx) to download it.
+`four-pages.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/four-pages.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "by_rows_and_columns.pdf" >}}  
 ```text
-Binary file (PDF, 14 KB)
+Binary file (PDF, 53 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/split_by_rows_and_columns/by_rows_and_columns.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The image below demonstrates the output PDF file.
-
-![Break a worksheet into four pages](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-four-pages.png)
 
 ## Render a print area
 
@@ -176,14 +170,16 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "invoice.xlsx" >}}
 {{< tab-text >}}
-`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/invoice.xlsx) to download it.
+`invoice.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
+{{< tab "print_area.pdf" >}}  
+```text
+Binary file (PDF, 54 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/render_print_area/print_area.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The image below illustrates the result.
-
-![Render the print area to PDF](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-print-area.png)
 
 ## Render a worksheet on one page
 
@@ -212,20 +208,18 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "products.xlsx" >}}
 {{< tab-text >}}
-`products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/products.xlsx) to download it.
+`products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/products.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "one_page_per_sheet.pdf" >}}  
 ```text
-Binary file (PDF, 420 KB)
+Binary file (PDF, 73 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/render_one_page_per_sheet/one_page_per_sheet.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
-The image below illustrates the result. The output PDF file contains one page that displays all worksheet data.
-
-![Fit sheet on one page](/viewer/python-net/images/rendering-basics/render-spreadsheets/render-on-one-page.png)
+The output PDF file contains one page that displays all worksheet data.
 
 ## Render worksheet by page breaks and print area
 
@@ -261,18 +255,14 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "products.xlsx" >}}
 {{< tab-text >}}
-`products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/products.xlsx) to download it.
+`products.xlsx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/products.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "print_area_and_page_breaks.pdf" >}}  
 ```text
-Binary file (PDF, 461 KB)
+Binary file (PDF, 59 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/render_print_area_and_page_breaks/print_area_and_page_breaks.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The image below illustrates the result:
-
-![Render page breaks and a print area to PDF](/viewer/python-net/images/rendering-basics/render-spreadsheets/pdf-result.png)
 

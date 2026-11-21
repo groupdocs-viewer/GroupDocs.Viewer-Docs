@@ -57,7 +57,7 @@ After the installation completes, your project file contains a package reference
 
 The following example renders a Microsoft Word document to HTML with embedded resources.
 
-You can download the complete example project [here](/viewer/net/sample-files/getting-started/quick-start-guide/render_docx_to_html.zip).
+You can download the complete example project [here](/viewer/net/_sample_files/getting-started/quick-start-guide/render_docx_to_html.zip).
 
 {{< tabs "demo_app_render_docx_to_html">}}
 {{< tab "Program.cs" >}}
@@ -90,14 +90,16 @@ using (Viewer viewer = new Viewer("./sample.docx"))
 {{< /tab >}}
 {{< tab "Source file" >}}
 {{< tab-text >}}
-`sample.docx` is the source document used in this example. Click [here](/viewer/net/sample-files/getting-started/quick-start-guide/sample.docx) to download it.
+`sample.docx` is the source document used in this example. Click [here](/viewer/net/_sample_files/getting-started/quick-start-guide/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "Output files" >}}
 ```text
-render_docx_to_html/page_1.html (317 KB)
-render_docx_to_html/page_2.html (149 KB)
-render_docx_to_html/page_3.html (113 KB)
+render_docx_to_html/page_1.html (228 KB)
+render_docx_to_html/page_2.html (110 KB)
+render_docx_to_html/page_3.html (142 KB)
+render_docx_to_html/page_4.html (885 KB)
+render_docx_to_html/page_5.html (86 KB)
 ```
 [Download the complete output](/viewer/net/_output_files/getting-started/quick-start-guide/render_docx_to_html/render-docx-to-html-outputs.zip)
 {{< /tab >}}
@@ -129,7 +131,7 @@ dotnet run
 
 The following example renders the same DOCX document to a single PDF file.
 
-You can download the complete example project [here](/viewer/net/sample-files/getting-started/quick-start-guide/render_docx_to_pdf.zip).
+You can download the complete example project [here](/viewer/net/_sample_files/getting-started/quick-start-guide/render_docx_to_pdf.zip).
 
 {{< tabs "demo_app_render_docx_to_pdf">}}
 {{< tab "Program.cs" >}}
@@ -162,12 +164,12 @@ using (Viewer viewer = new Viewer("./sample.docx"))
 {{< /tab >}}
 {{< tab "Source file" >}}
 {{< tab-text >}}
-`sample.docx` is the source document used in this example. Click [here](/viewer/net/sample-files/getting-started/quick-start-guide/sample.docx) to download it.
+`sample.docx` is the source document used in this example. Click [here](/viewer/net/_sample_files/getting-started/quick-start-guide/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "Output file" >}}
 ```text
-Binary file (PDF, 234 KB)
+Binary file (PDF, 719 KB)
 ```
 [Download full output](/viewer/net/_output_files/getting-started/quick-start-guide/render_docx_to_pdf/output.pdf)
 {{< /tab >}}
@@ -199,7 +201,7 @@ dotnet run
 
 The following example renders each page of a DOCX document as a separate PNG image.
 
-You can download the complete example project [here](/viewer/net/sample-files/getting-started/quick-start-guide/render_docx_to_png.zip).
+You can download the complete example project [here](/viewer/net/_sample_files/getting-started/quick-start-guide/render_docx_to_png.zip).
 
 {{< tabs "demo_app_render_docx_to_png">}}
 {{< tab "Program.cs" >}}
@@ -232,14 +234,16 @@ using (Viewer viewer = new Viewer("./sample.docx"))
 {{< /tab >}}
 {{< tab "Source file" >}}
 {{< tab-text >}}
-`sample.docx` is the source document used in this example. Click [here](/viewer/net/sample-files/getting-started/quick-start-guide/sample.docx) to download it.
+`sample.docx` is the source document used in this example. Click [here](/viewer/net/_sample_files/getting-started/quick-start-guide/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "Output files" >}}
 ```text
-render_docx_to_png/output_1.png (89 KB)
-render_docx_to_png/output_2.png (77 KB)
-render_docx_to_png/output_3.png (50 KB)
+render_docx_to_png/output_1.png (206 KB)
+render_docx_to_png/output_2.png (59 KB)
+render_docx_to_png/output_3.png (44 KB)
+render_docx_to_png/output_4.png (309 KB)
+render_docx_to_png/output_5.png (35 KB)
 ```
 [Download the complete output](/viewer/net/_output_files/getting-started/quick-start-guide/render_docx_to_png/render-docx-to-png-outputs.zip)
 {{< /tab >}}

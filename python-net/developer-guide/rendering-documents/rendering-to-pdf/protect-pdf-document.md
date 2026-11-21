@@ -60,7 +60,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "protected_document.pdf" >}}  
 ```text
-Binary file (PDF, 238 KB)
+Binary file (PDF, 722 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/protect-pdf-document/protect_pdf_document/protected_document.pdf)
 {{< /tab >}}

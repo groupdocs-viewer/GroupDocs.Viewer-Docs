@@ -70,7 +70,7 @@ After obtaining the license, set it. This section explains how to do this. When 
 
 The following code snippet shows how to set a license from file:
 
-{{< tabs "example1">}}
+{{< tabs "apply-license-from-file">}}
 {{< tab "C#" >}}
 
 ```csharp
@@ -103,7 +103,7 @@ End Module
 
 The following code snippet shows how to set a license from a stream:
 
-{{< tabs "example2">}}
+{{< tabs "apply-license-from-stream">}}
 {{< tab "C#" >}}
 
 ```csharp
@@ -146,7 +146,7 @@ You can set the [Metered](https://reference.groupdocs.com/net/viewer/groupdocs.v
 
 The following code snippet shows how to use the metered license:
 
-{{< tabs "example3">}}
+{{< tabs "apply-metered-license">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -205,7 +205,7 @@ To use the embedded license, add it to your project and set the **Build Action**
 
 The following code snippet shows how to use the embedded license:
 
-{{< tabs "example4">}}
+{{< tabs "apply-license-from-embedded-resource">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;

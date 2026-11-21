@@ -1,0 +1,37 @@
+{
+  "file": "viewer/net/_preview/03fa330b71d121af.png",
+  "fileName": "render-pdf-with-font-hinting.zip",
+  "fileType": "png",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 1239,
+      "height": 1754,
+      "pageUrl": "/viewer/net/_preview/03fa330b71d121af.png/page-1.jpg",
+      "thumbUrl": "/viewer/net/_preview/03fa330b71d121af.png/page-1.jpg"
+    },
+    {
+      "number": 2,
+      "width": 1239,
+      "height": 1754,
+      "pageUrl": "/viewer/net/_preview/03fa330b71d121af.png/page-2.jpg",
+      "thumbUrl": "/viewer/net/_preview/03fa330b71d121af.png/page-2.jpg"
+    },
+    {
+      "number": 3,
+      "width": 1239,
+      "height": 1754,
+      "pageUrl": "/viewer/net/_preview/03fa330b71d121af.png/page-3.jpg",
+      "thumbUrl": "/viewer/net/_preview/03fa330b71d121af.png/page-3.jpg"
+    },
+    {
+      "number": 4,
+      "width": 1239,
+      "height": 1754,
+      "pageUrl": "/viewer/net/_preview/03fa330b71d121af.png/page-4.png",
+      "thumbUrl": "/viewer/net/_preview/03fa330b71d121af.png/page-4.png"
+    }
+  ]
+}

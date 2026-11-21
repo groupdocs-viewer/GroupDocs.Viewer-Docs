@@ -1,14 +1,3232 @@
 {
-  "product-overview#quick-example": {
+  "cache-rendering-results": {
+    "type": "text",
+    "file": "cache-rendering-results.txt",
+    "path": "developer-guide/caching-results/_index/CacheRenderingResults/cache-rendering-results.txt",
+    "preview": "Time taken on first call to View method 9303 (ms).\nTime taken on second call to View method 65 (ms).",
+    "function": "CacheRenderingResults"
+  },
+  "get-used-fonts": {
+    "type": "text",
+    "file": "get-used-fonts.txt",
+    "path": "developer-guide/getting-used-fonts/GetUsedFonts/get-used-fonts.txt",
+    "preview": "6 fonts found in the 'sample.docx' document\nFont 'Arial' of Regular style has 1045956 bytes and is of TrueType format\nFont 'Georgia' of Bold style has 207476 bytes and is of TrueType format\nFont 'Georgia' of Regular style has 219712 bytes and is of TrueType format\nFont 'Georgia' of Italic style has 208444 bytes and is of TrueType format\nFont 'Arial' of Bold style has 990008 bytes and is of TrueType format\nFont 'Georgia' of BoldItalic style has 211780 bytes and is of TrueType format",
+    "function": "GetUsedFonts"
+  },
+  "load-password-protected-document": {
     "type": "zip",
-    "file": "quick-outputs.zip",
-    "path": "product-overview/quick_example/quick-outputs.zip",
+    "file": "load-password-protected-document.zip",
+    "path": "developer-guide/loading-documents/load-password-protected-document/LoadPasswordProtectedDocument/load-password-protected-document.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html"
+    ],
+    "preview": "p_1.html (117 KB)\np_2.html (90 KB)",
+    "function": "LoadPasswordProtectedDocument"
+  },
+  "load-document-from-local-disk": {
+    "type": "zip",
+    "file": "load-document-from-local-disk.zip",
+    "path": "developer-guide/loading-documents/loading-documents-from-different-sources/load-document-from-local-disk/LoadDocumentFromLocalDisk/load-document-from-local-disk.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html"
+    ],
+    "preview": "p_1.html (228 KB)\np_2.html (110 KB)\np_3.html (142 KB)\np_4.html (885 KB)\np_5.html (86 KB)",
+    "function": "LoadDocumentFromLocalDisk"
+  },
+  "load-document-from-stream": {
+    "type": "zip",
+    "file": "load-document-from-stream.zip",
+    "path": "developer-guide/loading-documents/loading-documents-from-different-sources/loading-documents-from-stream/_index/LoadDocumentFromStream/load-document-from-stream.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html"
+    ],
+    "preview": "p_1.html (228 KB)\np_2.html (110 KB)\np_3.html (142 KB)\np_4.html (885 KB)\np_5.html (86 KB)",
+    "function": "LoadDocumentFromStream"
+  },
+  "load-document-from-url": {
+    "type": "zip",
+    "file": "load-document-from-url.zip",
+    "path": "developer-guide/loading-documents/loading-documents-from-different-sources/loading-documents-from-stream/load-document-from-url/LoadDocumentFromUrl/load-document-from-url.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html"
+    ],
+    "preview": "p_1.html (317 KB)\np_2.html (149 KB)\np_3.html (1238 KB)",
+    "function": "LoadDocumentFromUrl"
+  },
+  "skip-loading-external-resources": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "developer-guide/loading-documents/loading-external-resources/SkipLoadingExternalResources/p_1.html",
+    "preview": "﻿<!DOCTYPE html><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta name=\"generator\" content=\"Aspose.Words for .NET 26.9.0\" /><title>The Harbor Lane order portal</title><style type=\"text/css\">@font-face { font-family:'Arial'; font-style:italic; font-weight:bold; src:local('☺'), url('data:...;base64,[elided]') format('woff'); } @font-face { font-family:'Arial'; font-style:normal; font-weight:bold; src:local('☺'), url('data:...;base64,[elided]') format('woff'); }\n[TRUNCATED]",
+    "function": "SkipLoadingExternalResources"
+  },
+  "load-external-resources-from-safelist": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "developer-guide/loading-documents/loading-external-resources/LoadExternalResourcesFromSafelist/p_1.html",
+    "preview": "﻿<!DOCTYPE html><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta name=\"generator\" content=\"Aspose.Words for .NET 26.9.0\" /><title>The Harbor Lane order portal</title><style type=\"text/css\">@font-face { font-family:'Arial'; font-style:italic; font-weight:bold; src:local('☺'), url('data:...;base64,[elided]') format('woff'); } @font-face { font-family:'Arial'; font-style:normal; font-weight:bold; src:local('☺'), url('data:...;base64,[elided]') format('woff'); }\n[TRUNCATED]",
+    "function": "LoadExternalResourcesFromSafelist"
+  },
+  "set-external-resources-timeout": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "developer-guide/loading-documents/loading-external-resources/SetExternalResourcesTimeout/p_1.html",
+    "preview": "﻿<!DOCTYPE html><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta name=\"generator\" content=\"Aspose.Words for .NET 26.9.0\" /><title>The Harbor Lane order portal</title><style type=\"text/css\">@font-face { font-family:'Arial'; font-style:italic; font-weight:bold; src:local('☺'), url('data:...;base64,[elided]') format('woff'); } @font-face { font-family:'Arial'; font-style:normal; font-weight:bold; src:local('☺'), url('data:...;base64,[elided]') format('woff'); }\n[TRUNCATED]",
+    "function": "SetExternalResourcesTimeout"
+  },
+  "specify-file-type-when-loading": {
+    "type": "zip",
+    "file": "specify-file-type-when-loading.zip",
+    "path": "developer-guide/loading-documents/specify-file-type-when-loading-a-document/SpecifyFileTypeWhenLoading/specify-file-type-when-loading.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html"
+    ],
+    "preview": "p_1.html (228 KB)\np_2.html (110 KB)\np_3.html (142 KB)\np_4.html (885 KB)\np_5.html (86 KB)",
+    "function": "SpecifyFileTypeWhenLoading"
+  },
+  "write-logs-to-file": {
+    "type": "file",
+    "file": "output.log",
+    "path": "developer-guide/logging/WriteLogsToFile/output.log",
+    "preview": "[TRACE] Rendering into HTML with embedded resources.\n[TRACE] Detecting file type by extension.\n[TRACE] File type detected successfully: Microsoft Word Open XML Document.\n[TRACE] Opening document.\n[TRACE] Document is loaded.\n[TRACE] Applying options.\n[TRACE] Converting page 1.\n[TRACE] Page 1 conversion completed.\n[TRACE] Converting page 2.\n[TRACE] Page 2 conversion completed.\n[TRUNCATED]",
+    "function": "WriteLogsToFile"
+  },
+  "write-logs-to-console": {
+    "type": "text",
+    "file": "write-logs-to-console.txt",
+    "path": "developer-guide/logging/WriteLogsToConsole/write-logs-to-console.txt",
+    "preview": "[TRACE] Rendering into HTML with embedded resources.\n[TRACE] Detecting file type by extension.\n[TRACE] File type detected successfully: Microsoft Word Open XML Document.\n[TRACE] Opening document.\n[TRACE] Document is loaded.\n[TRACE] Applying options.\n[TRACE] Converting page 1.\n[TRACE] Page 1 conversion completed.\n[TRACE] Converting page 2.\n[TRACE] Page 2 conversion completed.\n[TRUNCATED]",
+    "function": "WriteLogsToConsole"
+  },
+  "write-logs-with-custom-logger": {
+    "type": "file",
+    "file": "output.log",
+    "path": "developer-guide/logging/WriteLogsWithCustomLogger/output.log",
+    "preview": "[TRACE] Rendering into HTML with embedded resources.\n[TRACE] Detecting file type by extension.\n[TRACE] File type detected successfully: Microsoft Word Open XML Document.\n[TRACE] Opening document.\n[TRACE] Document is loaded.\n[TRACE] Applying options.\n[TRACE] Converting page 1.\n[TRACE] Page 1 conversion completed.\n[TRACE] Converting page 2.\n[TRACE] Page 2 conversion completed.\n[TRUNCATED]",
+    "function": "WriteLogsWithCustomLogger"
+  },
+  "convert-and-view-attachments": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "developer-guide/processing-attachments/how-to-convert-and-view-attachments/ConvertAndViewAttachments/p_1.html",
+    "preview": "﻿<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns:v=\"urn:schemas-microsoft-com:vml\"\nxmlns:o=\"urn:schemas-microsoft-com:office:office\"\nxmlns:x=\"urn:schemas-microsoft-com:office:excel\"\nxmlns=\"http://www.w3.org/TR/REC-html40\">\n\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n<meta name=\"ProgId\" content=\"Excel.Sheet\"/>\n<meta name=\"Generator\" content=\"Aspose.Cells 26.9\"/>\n[TRUNCATED]",
+    "function": "ConvertAndViewAttachments"
+  },
+  "list-attachments": {
+    "type": "text",
+    "file": "list-attachments.txt",
+    "path": "developer-guide/processing-attachments/how-to-list-attachments/ListAttachments/list-attachments.txt",
+    "preview": "Attachments:\ninvoice-NWR-2026-0912.pdf - Portable Document Format File (.pdf); ID: beef1f0b-cf7a-5f11-9a96-c45164d87592; Path: invoice-NWR-2026-0912.pdf; Size: 198531B\ndelivery-note-0912.xlsx - Microsoft Excel Open XML Spreadsheet (.xlsx); ID: 27d8bb8f-7c88-592f-8967-72831e28e818; Path: delivery-note-0912.xlsx; Size: 7643B",
+    "function": "ListAttachments"
+  },
+  "render-document-to-png": {
+    "type": "zip",
+    "file": "render-document-to-png.zip",
+    "path": "developer-guide/rendering-documents/_index/RenderDocumentToPng/render-document-to-png.zip",
+    "contents": [
+      "page_1.png",
+      "page_2.png",
+      "page_3.png",
+      "page_4.png",
+      "page_5.png"
+    ],
+    "preview": "page_1.png (206 KB)\npage_2.png (59 KB)\npage_3.png (44 KB)\npage_4.png (309 KB)\npage_5.png (35 KB)",
+    "function": "RenderDocumentToPng"
+  },
+  "render-specific-pages": {
+    "type": "zip",
+    "file": "render-specific-pages.zip",
+    "path": "developer-guide/rendering-documents/_index/RenderSpecificPages/render-specific-pages.zip",
+    "contents": [
+      "page_1.png",
+      "page_3.png"
+    ],
+    "preview": "page_1.png (206 KB)\npage_3.png (44 KB)",
+    "function": "RenderSpecificPages"
+  },
+  "add-text-watermark": {
+    "type": "zip",
+    "file": "add-text-watermark.zip",
+    "path": "developer-guide/rendering-documents/add-text-watermark/AddTextWatermark/add-text-watermark.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html"
+    ],
+    "preview": "p_1.html (229 KB)\np_2.html (111 KB)\np_3.html (143 KB)\np_4.html (886 KB)\np_5.html (88 KB)",
+    "function": "AddTextWatermark"
+  },
+  "flip-or-rotate-pages": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/flip-or-rotate-pages/FlipOrRotatePages/output.pdf",
+    "preview": "Binary file (PDF, 719 KB)",
+    "function": "FlipOrRotatePages"
+  },
+  "render-to-html-external": {
+    "type": "zip",
+    "file": "render-to-html-external.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-html/_index/RenderToHtmlExternal/render-to-html-external.zip",
+    "contents": [
+      "p_1.html",
+      "p_1_f.woff",
+      "p_1_f1.woff",
+      "p_1_f2.woff",
+      "p_1_i.jpeg",
+      "p_1_i.png",
+      "p_1_s.css",
+      "p_2.html",
+      "p_2_f.woff",
+      "p_2_f1.woff",
+      "p_2_f2.woff",
+      "p_2_f3.woff",
+      "p_2_f4.woff",
+      "p_2_s.css",
+      "p_3.html",
+      "p_3_f.woff",
+      "p_3_f1.woff",
+      "p_3_f2.woff",
+      "p_3_f3.woff",
+      "p_3_i.jpeg",
+      "p_3_s.css",
+      "p_4.html",
+      "p_4_f.woff",
+      "p_4_f1.woff",
+      "p_4_i.jpeg",
+      "p_4_i1.jpeg",
+      "p_4_i2.jpeg",
+      "p_4_i3.jpeg",
+      "p_4_s.css",
+      "p_5.html",
+      "p_5_f.woff",
+      "p_5_f1.woff",
+      "p_5_f2.woff",
+      "p_5_f3.woff",
+      "p_5_s.css"
+    ],
+    "preview": "p_1.html (2 KB)\np_1_f.woff (20 KB)\np_1_f1.woff (9 KB)\np_1_f2.woff (10 KB)\np_1_i.jpeg (126 KB)\np_1_i.png (4 KB)\np_1_s.css (1 KB)\np_2.html (9 KB)\np_2_f.woff (15 KB)\np_2_f1.woff (29 KB)\n[TRUNCATED] (35 files total)",
+    "function": "RenderToHtmlExternal"
+  },
+  "render-to-html-embedded": {
+    "type": "zip",
+    "file": "render-to-html-embedded.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-html/_index/RenderToHtmlEmbedded/render-to-html-embedded.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html"
+    ],
+    "preview": "p_1.html (228 KB)\np_2.html (110 KB)\np_3.html (142 KB)\np_4.html (885 KB)\np_5.html (86 KB)",
+    "function": "RenderToHtmlEmbedded"
+  },
+  "render-html-with-and-without-javascript": {
+    "type": "zip",
+    "file": "render-html-with-and-without-javascript.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-html/_index/RenderHtmlWithAndWithoutJavascript/render-html-with-and-without-javascript.zip",
+    "contents": [
+      "with-js-page1.html",
+      "with-js-page1/resource-s.css",
+      "without-js-page1.html"
+    ],
+    "preview": "with-js-page1.html (8 KB)\nwith-js-page1/resource-s.css (4 KB)\nwithout-js-page1.html (67 KB)",
+    "function": "RenderHtmlWithAndWithoutJavascript"
+  },
+  "exclude-all-fonts": {
+    "type": "zip",
+    "file": "exclude-all-fonts.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-html/exclude-fonts/ExcludeAllFonts/exclude-all-fonts.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html"
+    ],
+    "preview": "p_1.html (176 KB)\np_2.html (10 KB)\np_3.html (61 KB)\np_4.html (842 KB)\np_5.html (15 KB)",
+    "function": "ExcludeAllFonts"
+  },
+  "exclude-specific-fonts": {
+    "type": "zip",
+    "file": "exclude-specific-fonts.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-html/exclude-fonts/ExcludeSpecificFonts/exclude-specific-fonts.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html",
+      "p_6.html"
+    ],
+    "preview": "p_1.html (57 KB)\np_2.html (5 KB)\np_3.html (18 KB)\np_4.html (17 KB)\np_5.html (8 KB)\np_6.html (6 KB)",
+    "function": "ExcludeSpecificFonts"
+  },
+  "minify-html": {
+    "type": "zip",
+    "file": "minify-html.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-html/minify-html/MinifyHtml/minify-html.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html"
+    ],
+    "preview": "p_1.html (228 KB)\np_2.html (109 KB)\np_3.html (141 KB)\np_4.html (884 KB)\np_5.html (86 KB)",
+    "function": "MinifyHtml"
+  },
+  "optimize-html-for-printing": {
+    "type": "zip",
+    "file": "optimize-html-for-printing.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-html/optimize-html-for-printing/OptimizeHtmlForPrinting/optimize-html-for-printing.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html"
+    ],
+    "preview": "p_1.html (228 KB)\np_2.html (110 KB)\np_3.html (142 KB)\np_4.html (885 KB)\np_5.html (86 KB)",
+    "function": "OptimizeHtmlForPrinting"
+  },
+  "render-responsive-html": {
+    "type": "zip",
+    "file": "render-responsive-html.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-html/render-with-responsive-layout/RenderResponsiveHtml/render-responsive-html.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html"
+    ],
+    "preview": "p_1.html (177 KB)\np_2.html (10 KB)\np_3.html (44 KB)\np_4.html (843 KB)\np_5.html (15 KB)",
+    "function": "RenderResponsiveHtml"
+  },
+  "limit-image-size-in-html": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "developer-guide/rendering-documents/rendering-to-html/set-image-size-limits-when-rendering-to-html/LimitImageSizeInHtml/p_1.html",
+    "preview": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n    <meta charset=\"utf-8\" />\n    <title>Page-1</title>\n    <style type=\"text/css\">\n#main_image {\n    display: block;\n    max-width: 100%;\n[TRUNCATED]",
+    "function": "LimitImageSizeInHtml"
+  },
+  "render-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/_index/RenderToPdf/output.pdf",
+    "preview": "Binary file (PDF, 719 KB)",
+    "function": "RenderToPdf"
+  },
+  "adjust-jpeg-quality": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/adjust-jpeg-images-quality/AdjustJpegQuality/output.pdf",
+    "preview": "Binary file (PDF, 483 KB)",
+    "function": "AdjustJpegQuality"
+  },
+  "optimize-pdf-for-web": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-for-web/OptimizePdfForWeb/output.pdf",
+    "preview": "Binary file (PDF, 719 KB)",
+    "function": "OptimizePdfForWeb"
+  },
+  "optimize-pdf-resources": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-resources/OptimizePdfResources/output.pdf",
+    "preview": "Binary file (PDF, 719 KB)",
+    "function": "OptimizePdfResources"
+  },
+  "optimize-spreadsheets": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-spreadsheets/OptimizeSpreadsheets/output.pdf",
+    "preview": "Binary file (PDF, 17 KB)",
+    "function": "OptimizeSpreadsheets"
+  },
+  "remove-annotations": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-annotations/RemoveAnnotations/output.pdf",
+    "preview": "Binary file (PDF, 207 KB)",
+    "function": "RemoveAnnotations"
+  },
+  "remove-form-fields": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-fields/RemoveFormFields/output.pdf",
+    "preview": "Binary file (PDF, 207 KB)",
+    "function": "RemoveFormFields"
+  },
+  "subset-fonts": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-fonts/optimization-pdf-subset-fonts/SubsetFonts/output.pdf",
+    "preview": "Binary file (PDF, 771 KB)",
+    "function": "SubsetFonts"
+  },
+  "convert-to-grayscale": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-convert-grayscale/ConvertToGrayscale/output.pdf",
+    "preview": "Binary file (PDF, 1.3 MB)",
+    "function": "ConvertToGrayscale"
+  },
+  "reduce-image-quality": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-reduce-image-quality/ReduceImageQuality/output.pdf",
+    "preview": "Binary file (PDF, 483 KB)",
+    "function": "ReduceImageQuality"
+  },
+  "set-max-resolution": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-set-max-resolution/SetMaxResolution/output.pdf",
+    "preview": "Binary file (PDF, 189 KB)",
+    "function": "SetMaxResolution"
+  },
+  "remove-unused-resources": {
+    "type": "zip",
+    "file": "remove-unused-resources.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/pdf-remove-unused-resources/RemoveUnusedResources/remove-unused-resources.zip",
+    "contents": [
+      "output1.pdf",
+      "output2.pdf"
+    ],
+    "preview": "output1.pdf (890 KB)\noutput2.pdf (542 KB)",
+    "function": "RemoveUnusedResources"
+  },
+  "protect-pdf-document": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/protect-pdf-document/ProtectPdfDocument/output.pdf",
+    "preview": "Binary file (PDF, 722 KB)",
+    "function": "ProtectPdfDocument"
+  },
+  "reorder-pages": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/reorder-pages/ReorderPages/output.pdf",
+    "preview": "Binary file (PDF, 199 KB)",
+    "function": "ReorderPages"
+  },
+  "set-image-size-limits": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "developer-guide/rendering-documents/rendering-to-pdf/set-image-size-limits-when-rendering-to-pdf/SetImageSizeLimits/output.pdf",
+    "preview": "Binary file (PDF, 590 KB)",
+    "function": "SetImageSizeLimits"
+  },
+  "render-to-png-images": {
+    "type": "zip",
+    "file": "render-to-png-images.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-png-or-jpeg/_index/RenderToPngImages/render-to-png-images.zip",
+    "contents": [
+      "p_1.png",
+      "p_2.png",
+      "p_3.png",
+      "p_4.png",
+      "p_5.png"
+    ],
+    "preview": "p_1.png (206 KB)\np_2.png (59 KB)\np_3.png (44 KB)\np_4.png (309 KB)\np_5.png (35 KB)",
+    "function": "RenderToPngImages"
+  },
+  "render-to-jpeg-images": {
+    "type": "zip",
+    "file": "render-to-jpeg-images.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-png-or-jpeg/_index/RenderToJpegImages/render-to-jpeg-images.zip",
+    "contents": [
+      "p_1.jpg",
+      "p_2.jpg",
+      "p_3.jpg",
+      "p_4.jpg",
+      "p_5.jpg"
+    ],
+    "preview": "p_1.jpg (83 KB)\np_2.jpg (105 KB)\np_3.jpg (89 KB)\np_4.jpg (111 KB)\np_5.jpg (66 KB)",
+    "function": "RenderToJpegImages"
+  },
+  "adjust-image-size": {
+    "type": "zip",
+    "file": "adjust-image-size.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-png-or-jpeg/image-viewer-adjust-image-size/AdjustImageSize/adjust-image-size.zip",
+    "contents": [
+      "p_1.jpg",
+      "p_2.jpg",
+      "p_3.jpg",
+      "p_4.jpg",
+      "p_5.jpg"
+    ],
+    "preview": "p_1.jpg (54 KB)\np_2.jpg (62 KB)\np_3.jpg (65 KB)\np_4.jpg (65 KB)\np_5.jpg (44 KB)",
+    "function": "AdjustImageSize"
+  },
+  "adjust-jpg-quality": {
+    "type": "zip",
+    "file": "adjust-jpg-quality.zip",
+    "path": "developer-guide/rendering-documents/rendering-to-png-or-jpeg/image-viewer-adjust-quality-for-jpg/AdjustJpgQuality/adjust-jpg-quality.zip",
+    "contents": [
+      "p_1.jpg",
+      "p_2.jpg",
+      "p_3.jpg",
+      "p_4.jpg",
+      "p_5.jpg"
+    ],
+    "preview": "p_1.jpg (41 KB)\np_2.jpg (56 KB)\np_3.jpg (49 KB)\np_4.jpg (54 KB)\np_5.jpg (36 KB)",
+    "function": "AdjustJpgQuality"
+  },
+  "get-text-coordinates": {
+    "type": "text",
+    "file": "get-text-coordinates.txt",
+    "path": "developer-guide/rendering-documents/rendering-to-png-or-jpeg/image-viewer-get-text-coordinates/GetTextCoordinates/get-text-coordinates.txt",
+    "preview": "Page: 1\nText lines/words/characters:\nLine 'Harbor Lane Provisions - Annual Report 2025 | Page 1' X=341.103 Y=803.10099 198.2x8.8px with 10 word(s).\n\tWord 'Harbor' X=341.103 Y=803.10099 24.456x8.8px with 6 character(s).\n\t\tCharacter 'H' X=341.103 Y=803.101 5.776x8.8px.\n\t\tCharacter 'a' X=346.879 Y=803.101 4.448x8.8px.\n\t\tCharacter 'r' X=351.327 Y=803.101 2.664x8.8px.\n\t\tCharacter 'b' X=353.991 Y=803.101 4.448x8.8px.\n\t\tCharacter 'o' X=358.439 Y=803.101 4.448x8.8px.\n\t\tCharacter 'r' X=362.895 Y=803.101 \n[TRUNCATED]",
+    "function": "GetTextCoordinates"
+  },
+  "limit-image-size-in-png-and-jpg": {
+    "type": "file",
+    "file": "result_1.jpg",
+    "path": "developer-guide/rendering-documents/rendering-to-png-or-jpeg/set-image-size-limits-when-rendering-to-png-jpg/LimitImageSizeInPngAndJpg/result_1.jpg",
+    "preview": "Binary file (JPG, 87 KB)",
+    "function": "LimitImageSizeInPngAndJpg"
+  },
+  "replace-missing-font": {
+    "type": "zip",
+    "file": "replace-missing-font.zip",
+    "path": "developer-guide/rendering-documents/replace-missing-font/ReplaceMissingFont/replace-missing-font.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html"
+    ],
+    "preview": "p_1.html (224 KB)\np_2.html (226 KB)\np_3.html (227 KB)",
+    "function": "ReplaceMissingFont"
+  },
+  "show-hidden-pages": {
+    "type": "zip",
+    "file": "show-hidden-pages.zip",
+    "path": "developer-guide/rendering-documents/show-hidden-pages/ShowHiddenPages/show-hidden-pages.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html",
+      "p_6.html",
+      "p_7.html",
+      "p_8.html"
+    ],
+    "preview": "p_1.html (467 KB)\np_2.html (329 KB)\np_3.html (344 KB)\np_4.html (343 KB)\np_5.html (347 KB)\np_6.html (333 KB)\np_7.html (327 KB)\np_8.html (330 KB)",
+    "function": "ShowHiddenPages"
+  },
+  "view-specific-pages": {
+    "type": "zip",
+    "file": "view-specific-pages.zip",
+    "path": "developer-guide/rendering-documents/view-specific-pages/ViewSpecificPages/view-specific-pages.zip",
+    "contents": [
+      "p_1.html",
+      "p_3.html"
+    ],
+    "preview": "p_1.html (228 KB)\np_3.html (142 KB)",
+    "function": "ViewSpecificPages"
+  },
+  "view-pages-from-array": {
+    "type": "zip",
+    "file": "view-pages-from-array.zip",
+    "path": "developer-guide/rendering-documents/view-specific-pages/ViewPagesFromArray/view-pages-from-array.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_4.html"
+    ],
+    "preview": "p_1.html (228 KB)\np_2.html (110 KB)\np_4.html (885 KB)",
+    "function": "ViewPagesFromArray"
+  },
+  "get-pdf-output-info": {
+    "type": "text",
+    "file": "get-pdf-output-info.txt",
+    "path": "developer-guide/retrieving-document-information/get-pdf-output-file-info/GetPdfOutputInfo/get-pdf-output-info.txt",
+    "preview": "Pages count: 4\nPage: 1; Width: 595, pixels\nPage: 1; Height: 842, pixels\nPage: 2; Width: 595, pixels\nPage: 2; Height: 842, pixels\nPage: 3; Width: 595, pixels\nPage: 3; Height: 842, pixels\nPage: 4; Width: 595, pixels\nPage: 4; Height: 842, pixels",
+    "function": "GetPdfOutputInfo"
+  },
+  "check-if-file-is-encrypted": {
+    "type": "text",
+    "file": "check-if-file-is-encrypted.txt",
+    "path": "developer-guide/retrieving-document-information/how-to-check-if-file-is-encrypted/CheckIfFileIsEncrypted/check-if-file-is-encrypted.txt",
+    "preview": "File type is: Portable Document Format File (.pdf)\nFile encrypted: True",
+    "function": "CheckIfFileIsEncrypted"
+  },
+  "get-file-type-from-extension": {
+    "type": "text",
+    "file": "get-file-type-from-extension.txt",
+    "path": "developer-guide/retrieving-document-information/how-to-determine-file-type/GetFileTypeFromExtension/get-file-type-from-extension.txt",
+    "preview": "Extension .docx; File type: Microsoft Word Open XML Document (.docx).",
+    "function": "GetFileTypeFromExtension"
+  },
+  "get-file-type-from-media-type": {
+    "type": "text",
+    "file": "get-file-type-from-media-type.txt",
+    "path": "developer-guide/retrieving-document-information/how-to-determine-file-type/GetFileTypeFromMediaType/get-file-type-from-media-type.txt",
+    "preview": "Media-type application/pdf; File type: Portable Document Format File (.pdf).",
+    "function": "GetFileTypeFromMediaType"
+  },
+  "get-file-type-from-stream": {
+    "type": "text",
+    "file": "get-file-type-from-stream.txt",
+    "path": "developer-guide/retrieving-document-information/how-to-determine-file-type/GetFileTypeFromStream/get-file-type-from-stream.txt",
+    "preview": "File type: Microsoft Word Open XML Document (.docx).",
+    "function": "GetFileTypeFromStream"
+  },
+  "get-file-type-and-pages-count": {
+    "type": "text",
+    "file": "get-file-type-and-pages-count.txt",
+    "path": "developer-guide/retrieving-document-information/how-to-get-file-type-and-pages-count/GetFileTypeAndPagesCount/get-file-type-and-pages-count.txt",
+    "preview": "Document type is: Portable Document Format File (.pdf)\nPages count: 4",
+    "function": "GetFileTypeAndPagesCount"
+  },
+  "get-file-type-and-pages-count-from-stream": {
+    "type": "text",
+    "file": "get-file-type-and-pages-count-from-stream.txt",
+    "path": "developer-guide/retrieving-document-information/how-to-get-file-type-and-pages-count/GetFileTypeAndPagesCountFromStream/get-file-type-and-pages-count-from-stream.txt",
+    "preview": "Document type is: Portable Document Format File (.pdf)\nPages count: 4",
+    "function": "GetFileTypeAndPagesCountFromStream"
+  },
+  "get-page-width-and-height": {
+    "type": "text",
+    "file": "get-page-width-and-height.txt",
+    "path": "developer-guide/retrieving-document-information/how-to-get-page-width-and-height/GetPageWidthAndHeight/get-page-width-and-height.txt",
+    "preview": "Page: 1; Width: 595, pixels\nPage: 1; Height: 842, pixels\nPage: 2; Width: 595, pixels\nPage: 2; Height: 842, pixels\nPage: 3; Width: 595, pixels\nPage: 3; Height: 842, pixels\nPage: 4; Width: 595, pixels\nPage: 4; Height: 842, pixels",
+    "function": "GetPageWidthAndHeight"
+  },
+  "list-supported-file-types": {
+    "type": "text",
+    "file": "list-supported-file-types.txt",
+    "path": "developer-guide/retrieving-document-information/how-to-list-and-print-all-supported-file-types/ListSupportedFileTypes/list-supported-file-types.txt",
+    "preview": "Zipped File (.zip)\nRar Compressed File (.rar)\nConsolidated Unix File Archive (.tar)\nBzip2 Compressed File (.bz2)\nGnu Zipped File (.gz)\nGnu Zipped File (.gzip)\nDrawing Exchange Format File (.dxf)\nAutoCAD Drawing Database File (.dwg)\nStereolithography File (.stl)\nIndustry Foundation Classes File (.ifc)\n[TRUNCATED]",
+    "function": "ListSupportedFileTypes"
+  },
+  "migrate-new-api": {
+    "type": "zip",
+    "file": "migrate-new-api.zip",
+    "path": "developer-guide/troubleshooting/how-to-migrate-to-groupdocs.viewer-19.8-or-higher/MigrateNewApi/migrate-new-api.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html"
+    ],
+    "preview": "p_1.html (228 KB)\np_2.html (110 KB)\np_3.html (142 KB)\np_4.html (885 KB)\np_5.html (86 KB)",
+    "function": "MigrateNewApi"
+  },
+  "quick-example-html": {
+    "type": "zip",
+    "file": "quick-example-html.zip",
+    "path": "product-overview/QuickExampleHtml/quick-example-html.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html",
+      "page_5.html"
+    ],
+    "preview": "page_1.html (228 KB)\npage_2.html (110 KB)\npage_3.html (142 KB)\npage_4.html (885 KB)\npage_5.html (86 KB)",
+    "function": "QuickExampleHtml"
+  },
+  "quick-example-protected-pdf": {
+    "type": "file",
+    "file": "protected.pdf",
+    "path": "product-overview/QuickExampleProtectedPdf/protected.pdf",
+    "preview": "Binary file (PDF, 77 KB)",
+    "function": "QuickExampleProtectedPdf"
+  },
+  "render-archive-to-html": {
+    "type": "zip",
+    "file": "render-archive-to-html.zip",
+    "path": "rendering-basics/render-archives/_index/RenderArchiveToHtml/render-archive-to-html.zip",
+    "contents": [
+      "Embedded.html",
+      "External.html",
+      "External_files/resource-g.svg",
+      "External_files/resource-g1.svg",
+      "External_files/resource-g10.svg",
+      "External_files/resource-g11.svg",
+      "External_files/resource-g2.svg",
+      "External_files/resource-g3.svg",
+      "External_files/resource-g4.svg",
+      "External_files/resource-g5.svg",
+      "External_files/resource-g6.svg",
+      "External_files/resource-g7.svg",
+      "External_files/resource-g8.svg",
+      "External_files/resource-g9.svg"
+    ],
+    "preview": "Embedded.html (73 KB)\nExternal.html (11 KB)\nExternal_files/resource-g.svg (3 KB)\nExternal_files/resource-g1.svg (533 bytes)\nExternal_files/resource-g10.svg (907 bytes)\nExternal_files/resource-g11.svg (2 KB)\nExternal_files/resource-g2.svg (246 bytes)\nExternal_files/resource-g3.svg (131 bytes)\nExternal_files/resource-g4.svg (251 bytes)\nExternal_files/resource-g5.svg (1 KB)\n[TRUNCATED] (14 files total)",
+    "function": "RenderArchiveToHtml"
+  },
+  "render-archive-to-pdf": {
+    "type": "file",
+    "file": "Output.pdf",
+    "path": "rendering-basics/render-archives/_index/RenderArchiveToPdf/Output.pdf",
+    "preview": "Binary file (PDF, 81 KB)",
+    "function": "RenderArchiveToPdf"
+  },
+  "render-archive-to-images": {
+    "type": "zip",
+    "file": "render-archive-to-images.zip",
+    "path": "rendering-basics/render-archives/_index/RenderArchiveToImages/render-archive-to-images.zip",
+    "contents": [
+      "JPEG/page-1.jpeg",
+      "PNG/page-1.png"
+    ],
+    "preview": "JPEG/page-1.jpeg (465 KB)\nPNG/page-1.png (284 KB)",
+    "function": "RenderArchiveToImages"
+  },
+  "render-archive-with-options": {
+    "type": "file",
+    "file": "FolderAndFileName.html",
+    "path": "rendering-basics/render-archives/_index/RenderArchiveWithOptions/FolderAndFileName.html",
+    "preview": "﻿<HTML><HEAD><META charset=\"utf-8\" /><META name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /><TITLE>The Invoices folder of documents.zip</TITLE><STYLE type=\"text/css\">section.files-tree { \n\tdisplay: flex; \n\tflex-direction: column; \n\tpadding: 2rem 2rem 2rem 3rem; \n}\nnav.folder-item>div.folder-title, div.file-item>div.file-title { \n\tdisplay: flex; \n\tflex-direction: row; \n\talign-items: center; \n\tgap: 0.3rem; \n[TRUNCATED]",
+    "function": "RenderArchiveWithOptions"
+  },
+  "get-archive-info": {
+    "type": "text",
+    "file": "get-archive-info.txt",
+    "path": "rendering-basics/render-archives/_index/GetArchiveInfo/get-archive-info.txt",
+    "preview": "Encrypted: no\nArchive format: Zipped File (.zip)\nNumber of pages when saving to PDF: 1\nList of all pages with their metadata, when rendering to PDF:\n - Page #1 - 2480x3507px\nList of folders in the archive document:\n - /Invoices/\n - /Invoices/2025/",
+    "function": "GetArchiveInfo"
+  },
+  "render-cad-to-html": {
+    "type": "file",
+    "file": "output.html",
+    "path": "rendering-basics/render-cad-documents/render-cad-documents/RenderCadToHtml/output.html",
+    "preview": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n    <meta charset=\"utf-8\" />\n    <title>Page-1</title>\n</head>\n<body>\n    <div id=\"main_image\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" id=\"body_-325020661_456777\" width=\"2000\" height=\"1195.8804931640625\"><g transform=\"matrix(0.4016969951738068 0 0 -0.4016969951738068 0.0072034453332773746 1195.8804931640625)\"><g><path d=\"M16.3720849123408\n[TRUNCATED]",
+    "function": "RenderCadToHtml"
+  },
+  "render-cad-to-html-external": {
+    "type": "zip",
+    "file": "render-cad-to-html-external.zip",
+    "path": "rendering-basics/render-cad-documents/render-cad-documents/RenderCadToHtmlExternal/render-cad-to-html-external.zip",
+    "contents": [
+      "output.html",
+      "output/resource_1"
+    ],
+    "preview": "output.html (334 bytes)\noutput/resource_1 (446 KB)",
+    "function": "RenderCadToHtmlExternal"
+  },
+  "render-cad-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-cad-documents/render-cad-documents/RenderCadToPdf/output.pdf",
+    "preview": "Binary file (PDF, 97 KB)",
+    "function": "RenderCadToPdf"
+  },
+  "render-cad-to-png": {
+    "type": "file",
+    "file": "output.png",
+    "path": "rendering-basics/render-cad-documents/render-cad-documents/RenderCadToPng/output.png",
+    "preview": "Binary file (PNG, 99 KB)",
+    "function": "RenderCadToPng"
+  },
+  "render-cad-to-jpg": {
+    "type": "file",
+    "file": "output.jpg",
+    "path": "rendering-basics/render-cad-documents/render-cad-documents/RenderCadToJpg/output.jpg",
+    "preview": "Binary file (JPG, 123 KB)",
+    "function": "RenderCadToJpg"
+  },
+  "get-cad-info": {
+    "type": "text",
+    "file": "get-cad-info.txt",
+    "path": "rendering-basics/render-cad-documents/render-cad-documents/GetCadInfo/get-cad-info.txt",
+    "preview": "File type: AutoCAD Drawing Database File (.dwg)\nThe number of pages: 1\nThe drawing contains the following layout(s):\nModel\nThe drawing contains the following layer(s):\n0 (visible)\nWALLS (visible)\nOFFICE (visible)\nTEXT (visible)\nCOLD (visible)\n[TRUNCATED]",
+    "function": "GetCadInfo"
+  },
+  "render-all-layouts": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-cad-documents/render-cad-documents/RenderAllLayouts/output.pdf",
+    "preview": "Binary file (PDF, 330 KB)",
+    "function": "RenderAllLayouts"
+  },
+  "render-specific-layout": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-cad-documents/render-cad-documents/RenderSpecificLayout/output.pdf",
+    "preview": "Binary file (PDF, 100 KB)",
+    "function": "RenderSpecificLayout"
+  },
+  "render-specific-layers": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-cad-documents/render-cad-documents/RenderSpecificLayers/output.pdf",
+    "preview": "Binary file (PDF, 3 KB)",
+    "function": "RenderSpecificLayers"
+  },
+  "set-background-color": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-cad-documents/specify-rendering-options/SetBackgroundColor/output.pdf",
+    "preview": "Binary file (PDF, 97 KB)",
+    "function": "SetBackgroundColor"
+  },
+  "set-image-size": {
+    "type": "file",
+    "file": "output.png",
+    "path": "rendering-basics/render-cad-documents/specify-rendering-options/SetImageSize/output.png",
+    "preview": "Binary file (PNG, 19 KB)",
+    "function": "SetImageSize"
+  },
+  "apply-pc3-file": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-cad-documents/specify-rendering-options/ApplyPc3File/output.pdf",
+    "preview": "Binary file (PDF, 97 KB)",
+    "function": "ApplyPc3File"
+  },
+  "split-drawing-into-tiles": {
+    "type": "zip",
+    "file": "split-drawing-into-tiles.zip",
+    "path": "rendering-basics/render-cad-documents/specify-rendering-options/SplitDrawingIntoTiles/split-drawing-into-tiles.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html"
+    ],
+    "preview": "page_1.html (104 KB)\npage_2.html (113 KB)\npage_3.html (61 KB)\npage_4.html (171 KB)",
+    "function": "SplitDrawingIntoTiles"
+  },
+  "enable-performance-mode": {
+    "type": "file",
+    "file": "Output-Page#1.html",
+    "path": "rendering-basics/render-cad-documents/specify-rendering-options/EnablePerformanceMode/Output-Page#1.html",
+    "preview": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n    <meta charset=\"utf-8\" />\n    <title>Page-1</title>\n</head>\n<body>\n    <div id=\"main_image\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" id=\"body_-2031395107_233403\" width=\"1000\" height=\"597.94\"><g transform=\"matrix(0.201 0 0 -0.201 0.004 597.94)\"><g><path d=\"M16.372 414.081L4716.217 414.081L4716.217 2764.004L16.372 2764.004L16.372 414.081\"\n[TRUNCATED]",
+    "function": "EnablePerformanceMode"
+  },
+  "render-ebook-to-html": {
+    "type": "zip",
+    "file": "render-ebook-to-html.zip",
+    "path": "rendering-basics/render-ebooks/RenderEbookToHtml/render-ebook-to-html.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html",
+      "page_5.html",
+      "page_6.html"
+    ],
+    "preview": "page_1.html (53 KB)\npage_2.html (735 KB)\npage_3.html (388 KB)\npage_4.html (732 KB)\npage_5.html (736 KB)\npage_6.html (395 KB)",
+    "function": "RenderEbookToHtml"
+  },
+  "render-ebook-to-html-external": {
+    "type": "zip",
+    "file": "render-ebook-to-html-external.zip",
+    "path": "rendering-basics/render-ebooks/RenderEbookToHtmlExternal/render-ebook-to-html-external.zip",
+    "contents": [
+      "page_1.html",
+      "page_1/resource_1_f.woff",
+      "page_1/resource_1_f1.woff",
+      "page_1/resource_1_i.png",
+      "page_1/resource_1_s.css",
+      "page_2.html",
+      "page_2/resource_2_f.woff",
+      "page_2/resource_2_f1.woff",
+      "page_2/resource_2_i.png",
+      "page_2/resource_2_s.css",
+      "page_3.html",
+      "page_3/resource_3_f.woff",
+      "page_3/resource_3_f1.woff",
+      "page_3/resource_3_i.png",
+      "page_3/resource_3_s.css",
+      "page_4.html",
+      "page_4/resource_4_f.woff",
+      "page_4/resource_4_f1.woff",
+      "page_4/resource_4_i.png",
+      "page_4/resource_4_s.css",
+      "page_5.html",
+      "page_5/resource_5_f.woff",
+      "page_5/resource_5_f1.woff",
+      "page_5/resource_5_i.png",
+      "page_5/resource_5_s.css",
+      "page_6.html",
+      "page_6/resource_6_f.woff",
+      "page_6/resource_6_f1.woff",
+      "page_6/resource_6_i.png",
+      "page_6/resource_6_s.css"
+    ],
+    "preview": "page_1.html (2 KB)\npage_1/resource_1_f.woff (11 KB)\npage_1/resource_1_f1.woff (18 KB)\npage_1/resource_1_i.png (7 KB)\npage_1/resource_1_s.css (3 KB)\npage_2.html (4 KB)\npage_2/resource_2_f.woff (13 KB)\npage_2/resource_2_f1.woff (20 KB)\npage_2/resource_2_i.png (513 KB)\npage_2/resource_2_s.css (3 KB)\n[TRUNCATED] (30 files total)",
+    "function": "RenderEbookToHtmlExternal"
+  },
+  "render-ebook-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-ebooks/RenderEbookToPdf/output.pdf",
+    "preview": "Binary file (PDF, 341 KB)",
+    "function": "RenderEbookToPdf"
+  },
+  "render-ebook-to-png": {
+    "type": "zip",
+    "file": "render-ebook-to-png.zip",
+    "path": "rendering-basics/render-ebooks/RenderEbookToPng/render-ebook-to-png.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png",
+      "output_3.png",
+      "output_4.png",
+      "output_5.png",
+      "output_6.png"
+    ],
+    "preview": "output_1.png (40 KB)\noutput_2.png (372 KB)\noutput_3.png (226 KB)\noutput_4.png (305 KB)\noutput_5.png (360 KB)\noutput_6.png (288 KB)",
+    "function": "RenderEbookToPng"
+  },
+  "render-ebook-to-jpg": {
+    "type": "zip",
+    "file": "render-ebook-to-jpg.zip",
+    "path": "rendering-basics/render-ebooks/RenderEbookToJpg/render-ebook-to-jpg.zip",
+    "contents": [
+      "output_1.jpg",
+      "output_2.jpg",
+      "output_3.jpg",
+      "output_4.jpg",
+      "output_5.jpg",
+      "output_6.jpg"
+    ],
+    "preview": "output_1.jpg (31 KB)\noutput_2.jpg (75 KB)\noutput_3.jpg (47 KB)\noutput_4.jpg (60 KB)\noutput_5.jpg (66 KB)\noutput_6.jpg (73 KB)",
+    "function": "RenderEbookToJpg"
+  },
+  "render-email-to-html": {
+    "type": "file",
+    "file": "output.html",
+    "path": "rendering-basics/render-email-messages/RenderEmailToHtml/output.html",
+    "preview": "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta http-equiv=\"Content-Style-Type\" content=\"text/css\" /><meta name=\"generator\" content=\"Aspose.Words for .NET 26.9.0\" /><title></title><style type=\"text/css\">@font-face { font-family:Arial; src:url('data:...;base64,[elided]') }@font-face { font-family:Arial; font-weight:bold; src:url('data:...;base64,[elided]') }@font-face { font-family:Calibri; src:url('data:...;base64,[elided]') }@font-face { font-family:Calibr\n[TRUNCATED]",
+    "function": "RenderEmailToHtml"
+  },
+  "render-email-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-email-messages/RenderEmailToPdf/output.pdf",
+    "preview": "Binary file (PDF, 102 KB)",
+    "function": "RenderEmailToPdf"
+  },
+  "render-email-to-png": {
+    "type": "zip",
+    "file": "render-email-to-png.zip",
+    "path": "rendering-basics/render-email-messages/RenderEmailToPng/render-email-to-png.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png"
+    ],
+    "preview": "output_1.png (171 KB)\noutput_2.png (47 KB)",
+    "function": "RenderEmailToPng"
+  },
+  "render-email-to-jpg": {
+    "type": "zip",
+    "file": "render-email-to-jpg.zip",
+    "path": "rendering-basics/render-email-messages/RenderEmailToJpg/render-email-to-jpg.zip",
+    "contents": [
+      "output_1.jpg",
+      "output_2.jpg"
+    ],
+    "preview": "output_1.jpg (113 KB)\noutput_2.jpg (35 KB)",
+    "function": "RenderEmailToJpg"
+  },
+  "render-email-with-page-size": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-email-messages/RenderEmailWithPageSize/output.pdf",
+    "preview": "Binary file (PDF, 102 KB)",
+    "function": "RenderEmailWithPageSize"
+  },
+  "render-email-with-renamed-fields": {
+    "type": "file",
+    "file": "output.html",
+    "path": "rendering-basics/render-email-messages/RenderEmailWithRenamedFields/output.html",
+    "preview": "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta http-equiv=\"Content-Style-Type\" content=\"text/css\" /><meta name=\"generator\" content=\"Aspose.Words for .NET 26.9.0\" /><title></title><style type=\"text/css\">@font-face { font-family:Arial; src:url('data:...;base64,[elided]') }@font-face { font-family:Arial; font-weight:bold; src:url('data:...;base64,[elided]') }@font-face { font-family:Calibri; src:url('data:...;base64,[elided]') }@font-face { font-family:Calibr\n[TRUNCATED]",
+    "function": "RenderEmailWithRenamedFields"
+  },
+  "render-email-with-datetime-format": {
+    "type": "file",
+    "file": "output.html",
+    "path": "rendering-basics/render-email-messages/RenderEmailWithDatetimeFormat/output.html",
+    "preview": "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta http-equiv=\"Content-Style-Type\" content=\"text/css\" /><meta name=\"generator\" content=\"Aspose.Words for .NET 26.9.0\" /><title></title><style type=\"text/css\">@font-face { font-family:Arial; src:url('data:...;base64,[elided]') }@font-face { font-family:Arial; font-weight:bold; src:url('data:...;base64,[elided]') }@font-face { font-family:Calibri; src:url('data:...;base64,[elided]') }@font-face { font-family:Calibr\n[TRUNCATED]",
+    "function": "RenderEmailWithDatetimeFormat"
+  },
+  "get-email-info": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "rendering-basics/render-email-messages/GetEmailInfo/p_1.html",
+    "preview": "<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta http-equiv=\"Content-Style-Type\" content=\"text/css\" /><meta name=\"generator\" content=\"Aspose.Words for .NET 26.9.0\" /><title></title><style type=\"text/css\">@font-face { font-family:Arial; src:url('data:...;base64,[elided]') }@font-face { font-family:Arial; font-weight:bold; src:url('data:...;base64,[elided]') }@font-face { font-family:Calibri; src:url('data:...;base64,[elided]') }@font-face { font-family:Calibr\n[TRUNCATED]",
+    "function": "GetEmailInfo"
+  },
+  "render-image-to-html": {
+    "type": "file",
+    "file": "output.html",
+    "path": "rendering-basics/render-images/RenderImageToHtml/output.html",
+    "preview": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n    <meta charset=\"utf-8\" />\n    <title>Page-1</title>\n</head>\n<body>\n    <div id=\"main_image\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" id=\"body_1\" width=\"600\" height=\"360\"><style>\n[TRUNCATED]",
+    "function": "RenderImageToHtml"
+  },
+  "render-image-to-html-external": {
+    "type": "zip",
+    "file": "render-image-to-html-external.zip",
+    "path": "rendering-basics/render-images/RenderImageToHtmlExternal/render-image-to-html-external.zip",
+    "contents": [
+      "output.html",
+      "output/resource_1"
+    ],
+    "preview": "output.html (269 bytes)\noutput/resource_1 (5 KB)",
+    "function": "RenderImageToHtmlExternal"
+  },
+  "render-image-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-images/RenderImageToPdf/output.pdf",
+    "preview": "Binary file (PDF, 38 KB)",
+    "function": "RenderImageToPdf"
+  },
+  "render-image-to-png": {
+    "type": "file",
+    "file": "output.png",
+    "path": "rendering-basics/render-images/RenderImageToPng/output.png",
+    "preview": "Binary file (PNG, 247 KB)",
+    "function": "RenderImageToPng"
+  },
+  "render-image-to-jpg": {
+    "type": "file",
+    "file": "output.jpg",
+    "path": "rendering-basics/render-images/RenderImageToJpg/output.jpg",
+    "preview": "Binary file (JPG, 141 KB)",
+    "function": "RenderImageToJpg"
+  },
+  "render-nsf-to-html": {
+    "type": "file",
+    "file": "output.html",
+    "path": "rendering-basics/render-lotus-notes-files/RenderNsfToHtml/output.html",
+    "preview": "<!doctype html><html class='gdv-mail-storage-html' lang='en'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title></title><style>section {display:none; background-color:white; position: fixed; top: 0px; left: 26%; height: 100%; width: 74%; overflow-y: scroll;} \n.gdv-body::-webkit-scrollbar{display:none;}\n.gdv-mail-storage-empty-folder {text-align: center;}\n.gdv-mail-storage-folder:hover {background-color: #E4E5E6;}\ndiv.gdv-mai\n[TRUNCATED]",
+    "function": "RenderNsfToHtml"
+  },
+  "render-nsf-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-lotus-notes-files/RenderNsfToPdf/output.pdf",
+    "preview": "Binary file (PDF, 398 KB)",
+    "function": "RenderNsfToPdf"
+  },
+  "render-nsf-to-png": {
+    "type": "zip",
+    "file": "render-nsf-to-png.zip",
+    "path": "rendering-basics/render-lotus-notes-files/RenderNsfToPng/render-nsf-to-png.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png"
+    ],
+    "preview": "output_1.png (44 KB)\noutput_2.png (110 KB)",
+    "function": "RenderNsfToPng"
+  },
+  "render-nsf-to-jpg": {
+    "type": "zip",
+    "file": "render-nsf-to-jpg.zip",
+    "path": "rendering-basics/render-lotus-notes-files/RenderNsfToJpg/render-nsf-to-jpg.zip",
+    "contents": [
+      "output_1.jpg",
+      "output_2.jpg"
+    ],
+    "preview": "output_1.jpg (39 KB)\noutput_2.jpg (83 KB)",
+    "function": "RenderNsfToJpg"
+  },
+  "render-nsf-with-max-items": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "rendering-basics/render-lotus-notes-files/RenderNsfWithMaxItems/p_1.html",
+    "preview": "<!doctype html><html class='gdv-mail-storage-html' lang='en'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title></title><style>section {display:none; background-color:white; position: fixed; top: 0px; left: 26%; height: 100%; width: 74%; overflow-y: scroll;} \n.gdv-body::-webkit-scrollbar{display:none;}\n.gdv-mail-storage-empty-folder {text-align: center;}\n.gdv-mail-storage-folder:hover {background-color: #E4E5E6;}\ndiv.gdv-mai\n[TRUNCATED]",
+    "function": "RenderNsfWithMaxItems"
+  },
+  "render-nsf-with-filters": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "rendering-basics/render-lotus-notes-files/RenderNsfWithFilters/p_1.html",
+    "preview": "<!doctype html><html class='gdv-mail-storage-html' lang='en'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title></title><style>section {display:none; background-color:white; position: fixed; top: 0px; left: 26%; height: 100%; width: 74%; overflow-y: scroll;} \n.gdv-body::-webkit-scrollbar{display:none;}\n.gdv-mail-storage-empty-folder {text-align: center;}\n.gdv-mail-storage-folder:hover {background-color: #E4E5E6;}\ndiv.gdv-mai\n[TRUNCATED]",
+    "function": "RenderNsfWithFilters"
+  },
+  "render-project-to-html": {
+    "type": "file",
+    "file": "page_1.html",
+    "path": "rendering-basics/render-ms-project-files/RenderProjectToHtml/page_1.html",
+    "preview": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE html[]>\n<!--[if IE]>  <html class=\"p1-30c00ff0000-_1_ie\"> <![endif]-->\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>Page 1</title>\n    <style type=\"text/css\">.p1-30c00ff0000-_1_ sup {\n\tvertical-align: baseline;\n\tposition: relative;\n[TRUNCATED]",
+    "function": "RenderProjectToHtml"
+  },
+  "render-project-to-html-external": {
+    "type": "zip",
+    "file": "render-project-to-html-external.zip",
+    "path": "rendering-basics/render-ms-project-files/RenderProjectToHtmlExternal/render-project-to-html-external.zip",
+    "contents": [
+      "page_1.html",
+      "page_1/resource_1_f.ttf",
+      "page_1/resource_1_f1.ttf",
+      "page_1/resource_1_f2.ttf",
+      "page_1/resource_1_f3.ttf",
+      "page_1/resource_1_g.svg",
+      "page_1/resource_1_i.png",
+      "page_1/resource_1_i1.png",
+      "page_1/resource_1_i2.png",
+      "page_1/resource_1_i3.png",
+      "page_1/resource_1_s.css"
+    ],
+    "preview": "page_1.html (81 KB)\npage_1/resource_1_f.ttf (1612 KB)\npage_1/resource_1_f1.ttf (1021 KB)\npage_1/resource_1_f2.ttf (1578 KB)\npage_1/resource_1_f3.ttf (967 KB)\npage_1/resource_1_g.svg (127 KB)\npage_1/resource_1_i.png (345 bytes)\npage_1/resource_1_i1.png (968 bytes)\npage_1/resource_1_i2.png (946 bytes)\npage_1/resource_1_i3.png (353 bytes)\n[TRUNCATED] (11 files total)",
+    "function": "RenderProjectToHtmlExternal"
+  },
+  "render-project-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-ms-project-files/RenderProjectToPdf/output.pdf",
+    "preview": "Binary file (PDF, 125 KB)",
+    "function": "RenderProjectToPdf"
+  },
+  "render-project-to-png": {
+    "type": "file",
+    "file": "output_1.png",
+    "path": "rendering-basics/render-ms-project-files/RenderProjectToPng/output_1.png",
+    "preview": "Binary file (PNG, 259 KB)",
+    "function": "RenderProjectToPng"
+  },
+  "render-project-to-jpg": {
+    "type": "file",
+    "file": "output_1.jpg",
+    "path": "rendering-basics/render-ms-project-files/RenderProjectToJpg/output_1.jpg",
+    "preview": "Binary file (JPG, 184 KB)",
+    "function": "RenderProjectToJpg"
+  },
+  "get-project-info": {
+    "type": "text",
+    "file": "get-project-info.txt",
+    "path": "rendering-basics/render-ms-project-files/GetProjectInfo/get-project-info.txt",
+    "preview": "File type: Microsoft Project File (.mpp)\nThe number of pages: 1\nProject start date: 9/7/2026 12:00:00 AM\nProject end date: 1/20/2027 12:00:00 AM",
+    "function": "GetProjectInfo"
+  },
+  "render-project-with-page-size": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-ms-project-files/RenderProjectWithPageSize/output.pdf",
+    "preview": "Binary file (PDF, 119 KB)",
+    "function": "RenderProjectWithPageSize"
+  },
+  "render-project-with-time-unit": {
+    "type": "file",
+    "file": "output_1.html",
+    "path": "rendering-basics/render-ms-project-files/RenderProjectWithTimeUnit/output_1.html",
+    "preview": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE html[]>\n<!--[if IE]>  <html class=\"p1-30c00ff0000-_1_ie\"> <![endif]-->\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>Page 1</title>\n    <style type=\"text/css\">.p1-30c00ff0000-_1_ sup {\n\tvertical-align: baseline;\n\tposition: relative;\n[TRUNCATED]",
+    "function": "RenderProjectWithTimeUnit"
+  },
+  "render-project-with-notes": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-ms-project-files/RenderProjectWithNotes/output.pdf",
+    "preview": "Binary file (PDF, 149 KB)",
+    "function": "RenderProjectWithNotes"
+  },
+  "render-outlook-to-html": {
+    "type": "file",
+    "file": "output.html",
+    "path": "rendering-basics/render-outlook-data-files/RenderOutlookToHtml/output.html",
+    "preview": "<!doctype html><html lang='en'  class='gdv-html'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title></title><style>section.gdv-messages-content { border-left: solid #adadad 1px; padding-left:10px; display:none; background-color:white; position: fixed; top: 0px; left: 36%; height: 100%; width: 63%; overflow: auto;} .gdv-empty-folder {text-align: center; margin-top:32px;}.gdv-folder:hover {background-color: #E4E5E6;}div.gdv-ar\n[TRUNCATED]",
+    "function": "RenderOutlookToHtml"
+  },
+  "render-outlook-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-outlook-data-files/RenderOutlookToPdf/output.pdf",
+    "preview": "Binary file (PDF, 710 KB)",
+    "function": "RenderOutlookToPdf"
+  },
+  "render-outlook-to-png": {
+    "type": "zip",
+    "file": "render-outlook-to-png.zip",
+    "path": "rendering-basics/render-outlook-data-files/RenderOutlookToPng/render-outlook-to-png.zip",
+    "contents": [
+      "output_1.png",
+      "output_10.png",
+      "output_11.png",
+      "output_12.png",
+      "output_13.png",
+      "output_2.png",
+      "output_3.png",
+      "output_4.png",
+      "output_5.png",
+      "output_6.png",
+      "output_7.png",
+      "output_8.png",
+      "output_9.png"
+    ],
+    "preview": "output_1.png (53 KB)\noutput_10.png (58 KB)\noutput_11.png (39 KB)\noutput_12.png (55 KB)\noutput_13.png (19 KB)\noutput_2.png (48 KB)\noutput_3.png (52 KB)\noutput_4.png (49 KB)\noutput_5.png (52 KB)\noutput_6.png (48 KB)\n[TRUNCATED] (13 files total)",
+    "function": "RenderOutlookToPng"
+  },
+  "render-outlook-to-jpg": {
+    "type": "zip",
+    "file": "render-outlook-to-jpg.zip",
+    "path": "rendering-basics/render-outlook-data-files/RenderOutlookToJpg/render-outlook-to-jpg.zip",
+    "contents": [
+      "output_1.jpg",
+      "output_10.jpg",
+      "output_11.jpg",
+      "output_12.jpg",
+      "output_13.jpg",
+      "output_2.jpg",
+      "output_3.jpg",
+      "output_4.jpg",
+      "output_5.jpg",
+      "output_6.jpg",
+      "output_7.jpg",
+      "output_8.jpg",
+      "output_9.jpg"
+    ],
+    "preview": "output_1.jpg (43 KB)\noutput_10.jpg (47 KB)\noutput_11.jpg (34 KB)\noutput_12.jpg (45 KB)\noutput_13.jpg (21 KB)\noutput_2.jpg (39 KB)\noutput_3.jpg (43 KB)\noutput_4.jpg (40 KB)\noutput_5.jpg (43 KB)\noutput_6.jpg (39 KB)\n[TRUNCATED] (13 files total)",
+    "function": "RenderOutlookToJpg"
+  },
+  "get-outlook-folders-info": {
+    "type": "text",
+    "file": "get-outlook-folders-info.txt",
+    "path": "rendering-basics/render-outlook-data-files/GetOutlookFoldersInfo/get-outlook-folders-info.txt",
+    "preview": "File type: Outlook Personal Information Store File (.pst)\nThe number of pages: 1\nThe file contains the following folders:\nInbox\nDeleted Items\nSent Items\nOrders\nSuppliers",
+    "function": "GetOutlookFoldersInfo"
+  },
+  "render-outlook-specific-folder": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "rendering-basics/render-outlook-data-files/RenderOutlookSpecificFolder/p_1.html",
+    "preview": "<!doctype html><html lang='en' class='gdv-html'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title></title><style>section.gdv-messages-content { border-left: solid #adadad 1px; padding-left:10px; display:none; background-color:white; position: fixed; top: 0px; left: 36%; height: 100%; width: 63%; overflow: auto;} .gdv-empty-folder {text-align: center; margin-top:32px;}.gdv-folder:hover {background-color: #E4E5E6;}div.gdv-arr\n[TRUNCATED]",
+    "function": "RenderOutlookSpecificFolder"
+  },
+  "render-outlook-with-max-items": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "rendering-basics/render-outlook-data-files/RenderOutlookWithMaxItems/p_1.html",
+    "preview": "<!doctype html><html lang='en'  class='gdv-html'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title></title><style>section.gdv-messages-content { border-left: solid #adadad 1px; padding-left:10px; display:none; background-color:white; position: fixed; top: 0px; left: 36%; height: 100%; width: 63%; overflow: auto;} .gdv-empty-folder {text-align: center; margin-top:32px;}.gdv-folder:hover {background-color: #E4E5E6;}div.gdv-ar\n[TRUNCATED]",
+    "function": "RenderOutlookWithMaxItems"
+  },
+  "render-outlook-with-filters": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "rendering-basics/render-outlook-data-files/RenderOutlookWithFilters/p_1.html",
+    "preview": "<!doctype html><html lang='en'  class='gdv-html'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title></title><style>section.gdv-messages-content { border-left: solid #adadad 1px; padding-left:10px; display:none; background-color:white; position: fixed; top: 0px; left: 36%; height: 100%; width: 63%; overflow: auto;} .gdv-empty-folder {text-align: center; margin-top:32px;}.gdv-folder:hover {background-color: #E4E5E6;}div.gdv-ar\n[TRUNCATED]",
+    "function": "RenderOutlookWithFilters"
+  },
+  "render-pdf-to-html": {
+    "type": "zip",
+    "file": "render-pdf-to-html.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfToHtml/render-pdf-to-html.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html"
+    ],
+    "preview": "page_1.html (732 KB)\npage_2.html (402 KB)\npage_3.html (408 KB)\npage_4.html (85 KB)",
+    "function": "RenderPdfToHtml"
+  },
+  "render-pdf-to-html-external": {
+    "type": "zip",
+    "file": "render-pdf-to-html-external.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfToHtmlExternal/render-pdf-to-html-external.zip",
+    "contents": [
+      "page_1.html",
+      "page_1/resource_1_f.woff",
+      "page_1/resource_1_f1.woff",
+      "page_1/resource_1_i.png",
+      "page_1/resource_1_s.css",
+      "page_2.html",
+      "page_2/resource_2_f.woff",
+      "page_2/resource_2_f1.woff",
+      "page_2/resource_2_i.png",
+      "page_2/resource_2_s.css",
+      "page_3.html",
+      "page_3/resource_3_f.woff",
+      "page_3/resource_3_f1.woff",
+      "page_3/resource_3_i.png",
+      "page_3/resource_3_s.css",
+      "page_4.html",
+      "page_4/resource_4_f.woff",
+      "page_4/resource_4_f1.woff",
+      "page_4/resource_4_f2.woff",
+      "page_4/resource_4_i.png",
+      "page_4/resource_4_s.css"
+    ],
+    "preview": "page_1.html (3 KB)\npage_1/resource_1_f.woff (10 KB)\npage_1/resource_1_f1.woff (22 KB)\npage_1/resource_1_i.png (513 KB)\npage_1/resource_1_s.css (2 KB)\npage_2.html (9 KB)\npage_2/resource_2_f.woff (13 KB)\npage_2/resource_2_f1.woff (23 KB)\npage_2/resource_2_i.png (256 KB)\npage_2/resource_2_s.css (3 KB)\n[TRUNCATED] (21 files total)",
+    "function": "RenderPdfToHtmlExternal"
+  },
+  "render-pdf-fluid-layout": {
+    "type": "zip",
+    "file": "render-pdf-fluid-layout.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfFluidLayout/render-pdf-fluid-layout.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html"
+    ],
+    "preview": "page_1.html (45 KB)\npage_2.html (52 KB)\npage_3.html (57 KB)\npage_4.html (63 KB)",
+    "function": "RenderPdfFluidLayout"
+  },
+  "render-pdf-with-image-quality": {
+    "type": "zip",
+    "file": "render-pdf-with-image-quality.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfWithImageQuality/render-pdf-with-image-quality.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html"
+    ],
+    "preview": "page_1.html (2784 KB)\npage_2.html (1428 KB)\npage_3.html (1433 KB)\npage_4.html (138 KB)",
+    "function": "RenderPdfWithImageQuality"
+  },
+  "render-pdf-text-as-image": {
+    "type": "zip",
+    "file": "render-pdf-text-as-image.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfTextAsImage/render-pdf-text-as-image.zip",
+    "contents": [
+      "text-as-image_1.html",
+      "text-as-image_2.html",
+      "text-as-image_3.html",
+      "text-as-image_4.html"
+    ],
+    "preview": "text-as-image_1.html (686 KB)\ntext-as-image_2.html (344 KB)\ntext-as-image_3.html (344 KB)\ntext-as-image_4.html (88 KB)",
+    "function": "RenderPdfTextAsImage"
+  },
+  "render-pdf-with-layered-rendering": {
+    "type": "zip",
+    "file": "render-pdf-with-layered-rendering.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfWithLayeredRendering/render-pdf-with-layered-rendering.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html"
+    ],
+    "preview": "page_1.html (769 KB)\npage_2.html (493 KB)\npage_3.html (496 KB)\npage_4.html (114 KB)",
+    "function": "RenderPdfWithLayeredRendering"
+  },
+  "render-pdf-to-png": {
+    "type": "zip",
+    "file": "render-pdf-to-png.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfToPng/render-pdf-to-png.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png",
+      "output_3.png",
+      "output_4.png"
+    ],
+    "preview": "output_1.png (450 KB)\noutput_2.png (237 KB)\noutput_3.png (253 KB)\noutput_4.png (73 KB)",
+    "function": "RenderPdfToPng"
+  },
+  "render-pdf-to-jpg": {
+    "type": "zip",
+    "file": "render-pdf-to-jpg.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfToJpg/render-pdf-to-jpg.zip",
+    "contents": [
+      "output_1.jpg",
+      "output_2.jpg",
+      "output_3.jpg",
+      "output_4.jpg"
+    ],
+    "preview": "output_1.jpg (115 KB)\noutput_2.jpg (90 KB)\noutput_3.jpg (96 KB)\noutput_4.jpg (58 KB)",
+    "function": "RenderPdfToJpg"
+  },
+  "render-pdf-preserve-page-size": {
+    "type": "zip",
+    "file": "render-pdf-preserve-page-size.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfPreservePageSize/render-pdf-preserve-page-size.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png",
+      "output_3.png",
+      "output_4.png"
+    ],
+    "preview": "output_1.png (278 KB)\noutput_2.png (110 KB)\noutput_3.png (132 KB)\noutput_4.png (24 KB)",
+    "function": "RenderPdfPreservePageSize"
+  },
+  "render-pdf-with-font-hinting": {
+    "type": "zip",
+    "file": "render-pdf-with-font-hinting.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfWithFontHinting/render-pdf-with-font-hinting.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png",
+      "output_3.png",
+      "output_4.png"
+    ],
+    "preview": "output_1.png (961 KB)\noutput_2.png (401 KB)\noutput_3.png (425 KB)\noutput_4.png (63 KB)",
+    "function": "RenderPdfWithFontHinting"
+  },
+  "render-pdf-disable-char-grouping": {
+    "type": "zip",
+    "file": "render-pdf-disable-char-grouping.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfDisableCharGrouping/render-pdf-disable-char-grouping.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html"
+    ],
+    "preview": "page_1.html (786 KB)\npage_2.html (513 KB)\npage_3.html (543 KB)\npage_4.html (153 KB)",
+    "function": "RenderPdfDisableCharGrouping"
+  },
+  "render-pdf-with-comments": {
+    "type": "zip",
+    "file": "render-pdf-with-comments.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfWithComments/render-pdf-with-comments.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png",
+      "output_3.png",
+      "output_4.png"
+    ],
+    "preview": "output_1.png (961 KB)\noutput_2.png (401 KB)\noutput_3.png (425 KB)\noutput_4.png (63 KB)",
+    "function": "RenderPdfWithComments"
+  },
+  "get-pdf-information": {
+    "type": "text",
+    "file": "get-pdf-information.txt",
+    "path": "rendering-basics/render-pdf-documents/GetPdfInformation/get-pdf-information.txt",
+    "preview": "File type: Portable Document Format File (.pdf)\nThe number of pages: 4\nIs printing allowed: True\nPage information:\nPage 1 (visible) 595x842px with 0 line(s).\nPage 2 (visible) 595x842px with 0 line(s).\nPage 3 (visible) 595x842px with 0 line(s).\nPage 4 (visible) 595x842px with 0 line(s).",
+    "function": "GetPdfInformation"
+  },
+  "extract-pdf-text": {
+    "type": "text",
+    "file": "extract-pdf-text.txt",
+    "path": "rendering-basics/render-pdf-documents/ExtractPdfText/extract-pdf-text.txt",
+    "preview": "Extracted document text:\nAutumn Harvest 2026\nThe wholesale catalog for cafes, grocers and restaurants\nOur seasonal range is back, bigger than ever: a spiced roast from Northwind Coffee Roasters, apple\nbutter and cranberry relish from Orchard Row, a squash soup from Sunfield Kitchens and a fruit loaf\nbaked on the Quayside. Order by 15 October for delivery from the first week of November.\nHarbor Lane Provisions | 18 Quayside Road, Port Ellery | +1 555 0142 300\nCoffee & Tea\nRoasted for us by Northw\n[TRUNCATED]",
+    "function": "ExtractPdfText"
+  },
+  "render-xps-skip-font-license-check": {
+    "type": "zip",
+    "file": "render-xps-skip-font-license-check.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderXpsSkipFontLicenseCheck/render-xps-skip-font-license-check.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html"
+    ],
+    "preview": "p_1.html (734 KB)\np_2.html (114 KB)\np_3.html (143 KB)\np_4.html (727 KB)\np_5.html (88 KB)",
+    "function": "RenderXpsSkipFontLicenseCheck"
+  },
+  "render-pdf-images-in-svg": {
+    "type": "zip",
+    "file": "render-pdf-images-in-svg.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfImagesInSvg/render-pdf-images-in-svg.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html"
+    ],
+    "preview": "p_1.html (1429 KB)\np_2.html (1432 KB)\np_3.html (751 KB)\np_4.html (67 KB)",
+    "function": "RenderPdfImagesInSvg"
+  },
+  "render-pdf-disable-copy-protection": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfDisableCopyProtection/p_1.html",
+    "preview": "<!DOCTYPE html><!--[if IE]>  <html class=\"p1-3176764502f-ie\"> <![endif]-->\n<html>\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<title>Page 1</title>\n\t\t\n\t<STYLE>\n.p1-3176764502f- sup {\n\tvertical-align: baseline;\n\tposition: relative;\n[TRUNCATED]",
+    "function": "RenderPdfDisableCopyProtection"
+  },
+  "repair-corrupted-pdf": {
+    "type": "zip",
+    "file": "repair-corrupted-pdf.zip",
+    "path": "rendering-basics/render-pdf-documents/RepairCorruptedPdf/repair-corrupted-pdf.zip",
+    "contents": [
+      "p_1.png",
+      "p_2.png",
+      "p_3.png"
+    ],
+    "preview": "p_1.png (130 KB)\np_2.png (129 KB)\np_3.png (130 KB)",
+    "function": "RepairCorruptedPdf"
+  },
+  "render-pdf-popup-annotations": {
+    "type": "zip",
+    "file": "render-pdf-popup-annotations.zip",
+    "path": "rendering-basics/render-pdf-documents/RenderPdfPopupAnnotations/render-pdf-popup-annotations.zip",
+    "contents": [
+      "p_1.html",
+      "p_1.jpg",
+      "p_1.png",
+      "p_2.html",
+      "p_2.jpg",
+      "p_2.png",
+      "p_3.html",
+      "p_3.jpg",
+      "p_3.png",
+      "p_4.html",
+      "p_4.jpg",
+      "p_4.png"
+    ],
+    "preview": "p_1.html (769 KB)\np_1.jpg (279 KB)\np_1.png (961 KB)\np_2.html (597 KB)\np_2.jpg (250 KB)\np_2.png (420 KB)\np_3.html (496 KB)\np_3.jpg (223 KB)\np_3.png (425 KB)\np_4.html (114 KB)\n[TRUNCATED] (12 files total)",
+    "function": "RenderPdfPopupAnnotations"
+  },
+  "render-presentation-to-html": {
+    "type": "zip",
+    "file": "render-presentation-to-html.zip",
+    "path": "rendering-basics/render-presentations/RenderPresentationToHtml/render-presentation-to-html.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html",
+      "page_5.html",
+      "page_6.html"
+    ],
+    "preview": "page_1.html (467 KB)\npage_2.html (329 KB)\npage_3.html (344 KB)\npage_4.html (343 KB)\npage_5.html (333 KB)\npage_6.html (330 KB)",
+    "function": "RenderPresentationToHtml"
+  },
+  "render-presentation-to-html-external": {
+    "type": "zip",
+    "file": "render-presentation-to-html-external.zip",
+    "path": "rendering-basics/render-presentations/RenderPresentationToHtmlExternal/render-presentation-to-html-external.zip",
+    "contents": [
+      "page_1.html",
+      "page_1/resource_1_g.svg",
+      "page_1/resource_1_i.jpg",
+      "page_1/resource_1_i.png",
+      "page_2.html",
+      "page_2/resource_2_g.svg",
+      "page_3.html",
+      "page_3/resource_3_g.svg",
+      "page_4.html",
+      "page_4/resource_4_g.svg",
+      "page_5.html",
+      "page_5/resource_5_g.svg",
+      "page_6.html",
+      "page_6/resource_6_g.svg"
+    ],
+    "preview": "page_1.html (255 bytes)\npage_1/resource_1_g.svg (4 KB)\npage_1/resource_1_i.jpg (100 KB)\npage_1/resource_1_i.png (5 KB)\npage_2.html (255 bytes)\npage_2/resource_2_g.svg (6 KB)\npage_3.html (255 bytes)\npage_3/resource_3_g.svg (20 KB)\npage_4.html (255 bytes)\npage_4/resource_4_g.svg (19 KB)\n[TRUNCATED] (14 files total)",
+    "function": "RenderPresentationToHtmlExternal"
+  },
+  "render-presentation-pure-html": {
+    "type": "zip",
+    "file": "render-presentation-pure-html.zip",
+    "path": "rendering-basics/render-presentations/RenderPresentationPureHtml/render-presentation-pure-html.zip",
+    "contents": [
+      "slide_1.html",
+      "slide_1_embedded.html",
+      "slide_1_i.jpeg",
+      "slide_1_i.png",
+      "slide_2.html",
+      "slide_2_embedded.html",
+      "slide_3.html",
+      "slide_3_embedded.html",
+      "slide_4.html",
+      "slide_4_embedded.html",
+      "slide_5.html",
+      "slide_5_embedded.html",
+      "slide_6.html",
+      "slide_6_embedded.html"
+    ],
+    "preview": "slide_1.html (21 KB)\nslide_1_embedded.html (158 KB)\nslide_1_i.jpeg (98 KB)\nslide_1_i.png (5 KB)\nslide_2.html (25 KB)\nslide_2_embedded.html (25 KB)\nslide_3.html (43 KB)\nslide_3_embedded.html (43 KB)\nslide_4.html (39 KB)\nslide_4_embedded.html (39 KB)\n[TRUNCATED] (14 files total)",
+    "function": "RenderPresentationPureHtml"
+  },
+  "render-presentation-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-presentations/RenderPresentationToPdf/output.pdf",
+    "preview": "Binary file (PDF, 375 KB)",
+    "function": "RenderPresentationToPdf"
+  },
+  "render-presentation-to-png": {
+    "type": "zip",
+    "file": "render-presentation-to-png.zip",
+    "path": "rendering-basics/render-presentations/RenderPresentationToPng/render-presentation-to-png.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png",
+      "output_3.png",
+      "output_4.png",
+      "output_5.png",
+      "output_6.png"
+    ],
+    "preview": "output_1.png (178 KB)\noutput_2.png (72 KB)\noutput_3.png (81 KB)\noutput_4.png (83 KB)\noutput_5.png (104 KB)\noutput_6.png (92 KB)",
+    "function": "RenderPresentationToPng"
+  },
+  "render-presentation-to-jpg": {
+    "type": "zip",
+    "file": "render-presentation-to-jpg.zip",
+    "path": "rendering-basics/render-presentations/RenderPresentationToJpg/render-presentation-to-jpg.zip",
+    "contents": [
+      "output_1.jpg",
+      "output_2.jpg",
+      "output_3.jpg",
+      "output_4.jpg",
+      "output_5.jpg",
+      "output_6.jpg"
+    ],
+    "preview": "output_1.jpg (60 KB)\noutput_2.jpg (40 KB)\noutput_3.jpg (54 KB)\noutput_4.jpg (54 KB)\noutput_5.jpg (65 KB)\noutput_6.jpg (51 KB)",
+    "function": "RenderPresentationToJpg"
+  },
+  "render-presentation-with-resolution": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-presentations/RenderPresentationWithResolution/output.pdf",
+    "preview": "Binary file (PDF, 375 KB)",
+    "function": "RenderPresentationWithResolution"
+  },
+  "render-presentation-with-hidden-slides": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-presentations/RenderPresentationWithHiddenSlides/output.pdf",
+    "preview": "Binary file (PDF, 382 KB)",
+    "function": "RenderPresentationWithHiddenSlides"
+  },
+  "render-presentation-with-comments": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-presentations/RenderPresentationWithComments/output.pdf",
+    "preview": "Binary file (PDF, 380 KB)",
+    "function": "RenderPresentationWithComments"
+  },
+  "render-presentation-with-notes": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-presentations/RenderPresentationWithNotes/output.pdf",
+    "preview": "Binary file (PDF, 377 KB)",
+    "function": "RenderPresentationWithNotes"
+  },
+  "render-excel-to-html": {
+    "type": "zip",
+    "file": "render-excel-to-html.zip",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderExcelToHtml/render-excel-to-html.zip",
     "contents": [
       "page_1.html",
       "page_2.html",
       "page_3.html"
     ],
-    "preview": "page_1.html (317 KB)\npage_2.html (149 KB)\npage_3.html (113 KB)",
-    "function": "quick_example"
+    "preview": "page_1.html (77 KB)\npage_2.html (104 KB)\npage_3.html (74 KB)",
+    "function": "RenderExcelToHtml"
+  },
+  "render-numbers-to-html": {
+    "type": "zip",
+    "file": "render-numbers-to-html.zip",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderNumbersToHtml/render-numbers-to-html.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html"
+    ],
+    "preview": "page_1.html (72 KB)\npage_2.html (40 KB)",
+    "function": "RenderNumbersToHtml"
+  },
+  "render-excel-to-html-external": {
+    "type": "zip",
+    "file": "render-excel-to-html-external.zip",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderExcelToHtmlExternal/render-excel-to-html-external.zip",
+    "contents": [
+      "page_1.html",
+      "page_1/resource_1_s.css",
+      "page_2.html",
+      "page_2/resource_2_s.css",
+      "page_3.html",
+      "page_3/resource_3_s.css"
+    ],
+    "preview": "page_1.html (8 KB)\npage_1/resource_1_s.css (8 KB)\npage_2.html (32 KB)\npage_2/resource_2_s.css (8 KB)\npage_3.html (9 KB)\npage_3/resource_3_s.css (8 KB)",
+    "function": "RenderExcelToHtmlExternal"
+  },
+  "render-numbers-to-html-external": {
+    "type": "zip",
+    "file": "render-numbers-to-html-external.zip",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderNumbersToHtmlExternal/render-numbers-to-html-external.zip",
+    "contents": [
+      "page_1.html",
+      "page_1/resource_1_s.css",
+      "page_2.html",
+      "page_2/resource_2_s.css"
+    ],
+    "preview": "page_1.html (12 KB)\npage_1/resource_1_s.css (2 KB)\npage_2.html (4 KB)\npage_2/resource_2_s.css (2 KB)",
+    "function": "RenderNumbersToHtmlExternal"
+  },
+  "render-excel-to-single-html": {
+    "type": "file",
+    "file": "page.html",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderExcelToSingleHtml/page.html",
+    "preview": "﻿<!DOCTYPE html><html style=\"width:100%;height:100%;padding:0;margin:0\"><head><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><style> .__gdv_ws_container { height: calc(100vh - 35px) } .__gdv_ws_content { display: none; } .__gdv_ws_content_active { display: flex !important; } .__gdv_ws_content>iframe { flex: 1; height: calc(100vh - 35px); border: none; } .__gdv_ws_link_container { display: flex; width: 100%; background-color: #e6e6e6; position: absolute; bottom: 0; } .__gdv_ws\n[TRUNCATED]",
+    "function": "RenderExcelToSingleHtml"
+  },
+  "render-excel-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderExcelToPdf/output.pdf",
+    "preview": "Binary file (PDF, 80 KB)",
+    "function": "RenderExcelToPdf"
+  },
+  "render-numbers-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderNumbersToPdf/output.pdf",
+    "preview": "Binary file (PDF, 22 KB)",
+    "function": "RenderNumbersToPdf"
+  },
+  "render-excel-to-png": {
+    "type": "zip",
+    "file": "render-excel-to-png.zip",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderExcelToPng/render-excel-to-png.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png",
+      "output_3.png"
+    ],
+    "preview": "output_1.png (89 KB)\noutput_2.png (540 KB)\noutput_3.png (130 KB)",
+    "function": "RenderExcelToPng"
+  },
+  "render-numbers-to-png": {
+    "type": "zip",
+    "file": "render-numbers-to-png.zip",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderNumbersToPng/render-numbers-to-png.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png"
+    ],
+    "preview": "output_1.png (149 KB)\noutput_2.png (25 KB)",
+    "function": "RenderNumbersToPng"
+  },
+  "render-excel-to-jpg": {
+    "type": "zip",
+    "file": "render-excel-to-jpg.zip",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderExcelToJpg/render-excel-to-jpg.zip",
+    "contents": [
+      "output_1.jpg",
+      "output_2.jpg",
+      "output_3.jpg"
+    ],
+    "preview": "output_1.jpg (44 KB)\noutput_2.jpg (196 KB)\noutput_3.jpg (62 KB)",
+    "function": "RenderExcelToJpg"
+  },
+  "render-numbers-to-jpg": {
+    "type": "zip",
+    "file": "render-numbers-to-jpg.zip",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderNumbersToJpg/render-numbers-to-jpg.zip",
+    "contents": [
+      "output_1.jpg",
+      "output_2.jpg"
+    ],
+    "preview": "output_1.jpg (127 KB)\noutput_2.jpg (27 KB)",
+    "function": "RenderNumbersToJpg"
+  },
+  "render-csv-with-separator-detection": {
+    "type": "file",
+    "file": "page_1.html",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/RenderCsvWithSeparatorDetection/page_1.html",
+    "preview": "﻿<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns:v=\"urn:schemas-microsoft-com:vml\"\nxmlns:o=\"urn:schemas-microsoft-com:office:office\"\nxmlns:x=\"urn:schemas-microsoft-com:office:excel\"\nxmlns=\"http://www.w3.org/TR/REC-html40\">\n\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>\n<meta name=\"ProgId\" content=\"Excel.Sheet\"/>\n<meta name=\"Generator\" content=\"Aspose.Cells 26.9\"/>\n[TRUNCATED]",
+    "function": "RenderCsvWithSeparatorDetection"
+  },
+  "get-worksheet-names": {
+    "type": "text",
+    "file": "get-worksheet-names.txt",
+    "path": "rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/GetWorksheetNames/get-worksheet-names.txt",
+    "preview": "The document contains the following worksheets:\n - Worksheet 1: 'Summary'\n - Worksheet 2: 'Orders'\n - Worksheet 3: 'Customers'",
+    "function": "GetWorksheetNames"
+  },
+  "render-headings": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/specify-rendering-options/RenderHeadings/output.pdf",
+    "preview": "Binary file (PDF, 85 KB)",
+    "function": "RenderHeadings"
+  },
+  "render-grid-lines": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/specify-rendering-options/RenderGridLines/output.pdf",
+    "preview": "Binary file (PDF, 81 KB)",
+    "function": "RenderGridLines"
+  },
+  "set-text-overflow-mode": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/specify-rendering-options/SetTextOverflowMode/output.pdf",
+    "preview": "Binary file (PDF, 80 KB)",
+    "function": "SetTextOverflowMode"
+  },
+  "render-hidden-rows-and-columns": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/specify-rendering-options/RenderHiddenRowsAndColumns/output.pdf",
+    "preview": "Binary file (PDF, 81 KB)",
+    "function": "RenderHiddenRowsAndColumns"
+  },
+  "render-hidden-pages": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/specify-rendering-options/RenderHiddenPages/output.pdf",
+    "preview": "Binary file (PDF, 83 KB)",
+    "function": "RenderHiddenPages"
+  },
+  "skip-empty-rows-and-columns": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/specify-rendering-options/SkipEmptyRowsAndColumns/output.pdf",
+    "preview": "Binary file (PDF, 80 KB)",
+    "function": "SkipEmptyRowsAndColumns"
+  },
+  "render-comments": {
+    "type": "zip",
+    "file": "render-comments.zip",
+    "path": "rendering-basics/render-spreadsheets/specify-rendering-options/RenderComments/render-comments.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png",
+      "output_3.png"
+    ],
+    "preview": "output_1.png (25 KB)\noutput_2.png (101 KB)\noutput_3.png (30 KB)",
+    "function": "RenderComments"
+  },
+  "render-worksheet-on-one-page": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/split-worksheet-into-pages/RenderWorksheetOnOnePage/output.pdf",
+    "preview": "Binary file (PDF, 73 KB)",
+    "function": "RenderWorksheetOnOnePage"
+  },
+  "split-worksheet-by-page-breaks": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/split-worksheet-into-pages/SplitWorksheetByPageBreaks/output.pdf",
+    "preview": "Binary file (PDF, 75 KB)",
+    "function": "SplitWorksheetByPageBreaks"
+  },
+  "render-only-print-area": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/split-worksheet-into-pages/RenderOnlyPrintArea/output.pdf",
+    "preview": "Binary file (PDF, 54 KB)",
+    "function": "RenderOnlyPrintArea"
+  },
+  "render-print-area-by-page-breaks": {
+    "type": "file",
+    "file": "Financial Sample.pdf",
+    "path": "rendering-basics/render-spreadsheets/split-worksheet-into-pages/RenderPrintAreaByPageBreaks/Financial Sample.pdf",
+    "preview": "Binary file (PDF, 59 KB)",
+    "function": "RenderPrintAreaByPageBreaks"
+  },
+  "split-worksheet-by-rows": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/split-worksheet-into-pages/SplitWorksheetByRows/output.pdf",
+    "preview": "Binary file (PDF, 41 KB)",
+    "function": "SplitWorksheetByRows"
+  },
+  "split-worksheet-by-rows-and-columns": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/split-worksheet-into-pages/SplitWorksheetByRowsAndColumns/output.pdf",
+    "preview": "Binary file (PDF, 53 KB)",
+    "function": "SplitWorksheetByRowsAndColumns"
+  },
+  "render-text-with-load-options": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-text-files/RenderTextWithLoadOptions/output.pdf",
+    "preview": "Binary file (PDF, 85 KB)",
+    "function": "RenderTextWithLoadOptions"
+  },
+  "render-text-to-html": {
+    "type": "zip",
+    "file": "render-text-to-html.zip",
+    "path": "rendering-basics/render-text-files/RenderTextToHtml/render-text-to-html.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html"
+    ],
+    "preview": "page_1.html (2 KB)\npage_2.html (3 KB)\npage_3.html (2 KB)\npage_4.html (1 KB)",
+    "function": "RenderTextToHtml"
+  },
+  "render-text-to-html-external": {
+    "type": "zip",
+    "file": "render-text-to-html-external.zip",
+    "path": "rendering-basics/render-text-files/RenderTextToHtmlExternal/render-text-to-html-external.zip",
+    "contents": [
+      "page_1.html",
+      "page_1/resource_1_s.css",
+      "page_2.html",
+      "page_2/resource_2_s.css",
+      "page_3.html",
+      "page_3/resource_3_s.css",
+      "page_4.html",
+      "page_4/resource_4_s.css"
+    ],
+    "preview": "page_1.html (2 KB)\npage_1/resource_1_s.css (109 bytes)\npage_2.html (2 KB)\npage_2/resource_2_s.css (109 bytes)\npage_3.html (2 KB)\npage_3/resource_3_s.css (109 bytes)\npage_4.html (1 KB)\npage_4/resource_4_s.css (109 bytes)",
+    "function": "RenderTextToHtmlExternal"
+  },
+  "render-text-to-single-html": {
+    "type": "file",
+    "file": "output.html",
+    "path": "rendering-basics/render-text-files/RenderTextToSingleHtml/output.html",
+    "preview": "<!doctype html><html lang='en'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title>terms_of_service.txt</title></head> <style type='text/css'>.gdv-container pre { width:588px; white-space:normal; } .gdv-container { margin-top:60px; margin-left:60px; }</style><body><div style=\"font-size:10pt;font-family:Times New Roman;\" class='gdv-container'><pre># Harbor Lane Provisions - wholesale terms of service<br><br>Effective 1 October\n[TRUNCATED]",
+    "function": "RenderTextToSingleHtml"
+  },
+  "render-text-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-text-files/RenderTextToPdf/output.pdf",
+    "preview": "Binary file (PDF, 109 KB)",
+    "function": "RenderTextToPdf"
+  },
+  "render-text-to-png": {
+    "type": "zip",
+    "file": "render-text-to-png.zip",
+    "path": "rendering-basics/render-text-files/RenderTextToPng/render-text-to-png.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png",
+      "output_3.png",
+      "output_4.png"
+    ],
+    "preview": "output_1.png (125 KB)\noutput_2.png (138 KB)\noutput_3.png (122 KB)\noutput_4.png (65 KB)",
+    "function": "RenderTextToPng"
+  },
+  "render-text-to-jpg": {
+    "type": "zip",
+    "file": "render-text-to-jpg.zip",
+    "path": "rendering-basics/render-text-files/RenderTextToJpg/render-text-to-jpg.zip",
+    "contents": [
+      "output_1.jpg",
+      "output_2.jpg",
+      "output_3.jpg",
+      "output_4.jpg"
+    ],
+    "preview": "output_1.jpg (116 KB)\noutput_2.jpg (135 KB)\noutput_3.jpg (114 KB)\noutput_4.jpg (66 KB)",
+    "function": "RenderTextToJpg"
+  },
+  "render-text-with-options": {
+    "type": "zip",
+    "file": "render-text-with-options.zip",
+    "path": "rendering-basics/render-text-files/RenderTextWithOptions/render-text-with-options.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html",
+      "page_5.html",
+      "page_6.html",
+      "page_7.html"
+    ],
+    "preview": "page_1.html (1 KB)\npage_2.html (1 KB)\npage_3.html (2 KB)\npage_4.html (2 KB)\npage_5.html (1 KB)\npage_6.html (1 KB)\npage_7.html (1 KB)",
+    "function": "RenderTextWithOptions"
+  },
+  "render-visio-to-html": {
+    "type": "zip",
+    "file": "render-visio-to-html.zip",
+    "path": "rendering-basics/render-visio-documents/RenderVisioToHtml/render-visio-to-html.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html"
+    ],
+    "preview": "page_1.html (6 KB)\npage_2.html (11 KB)\npage_3.html (9 KB)",
+    "function": "RenderVisioToHtml"
+  },
+  "render-visio-to-html-external": {
+    "type": "zip",
+    "file": "render-visio-to-html-external.zip",
+    "path": "rendering-basics/render-visio-documents/RenderVisioToHtmlExternal/render-visio-to-html-external.zip",
+    "contents": [
+      "page_1.html",
+      "page_1/resource_1_g.svg",
+      "page_2.html",
+      "page_2/resource_2_g.svg",
+      "page_3.html",
+      "page_3/resource_3_g.svg"
+    ],
+    "preview": "page_1.html (275 bytes)\npage_1/resource_1_g.svg (6 KB)\npage_2.html (275 bytes)\npage_2/resource_2_g.svg (11 KB)\npage_3.html (275 bytes)\npage_3/resource_3_g.svg (9 KB)",
+    "function": "RenderVisioToHtmlExternal"
+  },
+  "render-visio-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-visio-documents/RenderVisioToPdf/output.pdf",
+    "preview": "Binary file (PDF, 85 KB)",
+    "function": "RenderVisioToPdf"
+  },
+  "render-visio-to-png": {
+    "type": "zip",
+    "file": "render-visio-to-png.zip",
+    "path": "rendering-basics/render-visio-documents/RenderVisioToPng/render-visio-to-png.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png",
+      "output_3.png"
+    ],
+    "preview": "output_1.png (45 KB)\noutput_2.png (60 KB)\noutput_3.png (57 KB)",
+    "function": "RenderVisioToPng"
+  },
+  "render-visio-to-jpg": {
+    "type": "zip",
+    "file": "render-visio-to-jpg.zip",
+    "path": "rendering-basics/render-visio-documents/RenderVisioToJpg/render-visio-to-jpg.zip",
+    "contents": [
+      "output_1.jpg",
+      "output_2.jpg",
+      "output_3.jpg"
+    ],
+    "preview": "output_1.jpg (34 KB)\noutput_2.jpg (44 KB)\noutput_3.jpg (42 KB)",
+    "function": "RenderVisioToJpg"
+  },
+  "render-visio-shapes-only": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-visio-documents/RenderVisioShapesOnly/output.pdf",
+    "preview": "Binary file (PDF, 27 KB)",
+    "function": "RenderVisioShapesOnly"
+  },
+  "render-web-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-web-documents/RenderWebToPdf/output.pdf",
+    "preview": "Binary file (PDF, 46 KB)",
+    "function": "RenderWebToPdf"
+  },
+  "render-web-to-png": {
+    "type": "zip",
+    "file": "render-web-to-png.zip",
+    "path": "rendering-basics/render-web-documents/RenderWebToPng/render-web-to-png.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png"
+    ],
+    "preview": "output_1.png (27 KB)\noutput_2.png (25 KB)",
+    "function": "RenderWebToPng"
+  },
+  "render-web-to-jpg": {
+    "type": "zip",
+    "file": "render-web-to-jpg.zip",
+    "path": "rendering-basics/render-web-documents/RenderWebToJpg/render-web-to-jpg.zip",
+    "contents": [
+      "output_1.jpg",
+      "output_2.jpg"
+    ],
+    "preview": "output_1.jpg (43 KB)\noutput_2.jpg (36 KB)",
+    "function": "RenderWebToJpg"
+  },
+  "render-chm-to-html": {
+    "type": "zip",
+    "file": "render-chm-to-html.zip",
+    "path": "rendering-basics/render-web-documents/RenderChmToHtml/render-chm-to-html.zip",
+    "contents": [
+      "chm_result_1.html",
+      "chm_result_10.html",
+      "chm_result_100.html",
+      "chm_result_101.html",
+      "chm_result_102.html",
+      "chm_result_103.html",
+      "chm_result_104.html",
+      "chm_result_105.html",
+      "chm_result_106.html",
+      "chm_result_107.html",
+      "chm_result_108.html",
+      "chm_result_109.html",
+      "chm_result_11.html",
+      "chm_result_110.html",
+      "chm_result_111.html",
+      "chm_result_112.html",
+      "chm_result_113.html",
+      "chm_result_114.html",
+      "chm_result_115.html",
+      "chm_result_116.html",
+      "chm_result_117.html",
+      "chm_result_118.html",
+      "chm_result_119.html",
+      "chm_result_12.html",
+      "chm_result_120.html",
+      "chm_result_121.html",
+      "chm_result_122.html",
+      "chm_result_123.html",
+      "chm_result_13.html",
+      "chm_result_14.html",
+      "chm_result_15.html",
+      "chm_result_16.html",
+      "chm_result_17.html",
+      "chm_result_18.html",
+      "chm_result_19.html",
+      "chm_result_2.html",
+      "chm_result_20.html",
+      "chm_result_21.html",
+      "chm_result_22.html",
+      "chm_result_23.html",
+      "chm_result_24.html",
+      "chm_result_25.html",
+      "chm_result_26.html",
+      "chm_result_27.html",
+      "chm_result_28.html",
+      "chm_result_29.html",
+      "chm_result_3.html",
+      "chm_result_30.html",
+      "chm_result_31.html",
+      "chm_result_32.html",
+      "chm_result_33.html",
+      "chm_result_34.html",
+      "chm_result_35.html",
+      "chm_result_36.html",
+      "chm_result_37.html",
+      "chm_result_38.html",
+      "chm_result_39.html",
+      "chm_result_4.html",
+      "chm_result_40.html",
+      "chm_result_41.html",
+      "chm_result_42.html",
+      "chm_result_43.html",
+      "chm_result_44.html",
+      "chm_result_45.html",
+      "chm_result_46.html",
+      "chm_result_47.html",
+      "chm_result_48.html",
+      "chm_result_49.html",
+      "chm_result_5.html",
+      "chm_result_50.html",
+      "chm_result_51.html",
+      "chm_result_52.html",
+      "chm_result_53.html",
+      "chm_result_54.html",
+      "chm_result_55.html",
+      "chm_result_56.html",
+      "chm_result_57.html",
+      "chm_result_58.html",
+      "chm_result_59.html",
+      "chm_result_6.html",
+      "chm_result_60.html",
+      "chm_result_61.html",
+      "chm_result_62.html",
+      "chm_result_63.html",
+      "chm_result_64.html",
+      "chm_result_65.html",
+      "chm_result_66.html",
+      "chm_result_67.html",
+      "chm_result_68.html",
+      "chm_result_69.html",
+      "chm_result_7.html",
+      "chm_result_70.html",
+      "chm_result_71.html",
+      "chm_result_72.html",
+      "chm_result_73.html",
+      "chm_result_74.html",
+      "chm_result_75.html",
+      "chm_result_76.html",
+      "chm_result_77.html",
+      "chm_result_78.html",
+      "chm_result_79.html",
+      "chm_result_8.html",
+      "chm_result_80.html",
+      "chm_result_81.html",
+      "chm_result_82.html",
+      "chm_result_83.html",
+      "chm_result_84.html",
+      "chm_result_85.html",
+      "chm_result_86.html",
+      "chm_result_87.html",
+      "chm_result_88.html",
+      "chm_result_89.html",
+      "chm_result_9.html",
+      "chm_result_90.html",
+      "chm_result_91.html",
+      "chm_result_92.html",
+      "chm_result_93.html",
+      "chm_result_94.html",
+      "chm_result_95.html",
+      "chm_result_96.html",
+      "chm_result_97.html",
+      "chm_result_98.html",
+      "chm_result_99.html"
+    ],
+    "preview": "chm_result_1.html (86 KB)\nchm_result_10.html (84 KB)\nchm_result_100.html (99 KB)\nchm_result_101.html (89 KB)\nchm_result_102.html (101 KB)\nchm_result_103.html (98 KB)\nchm_result_104.html (120 KB)\nchm_result_105.html (114 KB)\nchm_result_106.html (81 KB)\nchm_result_107.html (75 KB)\n[TRUNCATED] (123 files total)",
+    "function": "RenderChmToHtml"
+  },
+  "render-chm-to-html-external": {
+    "type": "zip",
+    "file": "render-chm-to-html-external.zip",
+    "path": "rendering-basics/render-web-documents/RenderChmToHtmlExternal/render-chm-to-html-external.zip",
+    "contents": [
+      "page_1.html",
+      "page_10.html",
+      "page_100.html",
+      "page_100/resource_100_f.woff",
+      "page_100/resource_100_f1.woff",
+      "page_100/resource_100_f2.woff",
+      "page_100/resource_100_f3.woff",
+      "page_100/resource_100_f4.woff",
+      "page_100/resource_100_s.css",
+      "page_101.html",
+      "page_101/resource_101_f.woff",
+      "page_101/resource_101_f1.woff",
+      "page_101/resource_101_f2.woff",
+      "page_101/resource_101_f3.woff",
+      "page_101/resource_101_s.css",
+      "page_102.html",
+      "page_102/resource_102_f.woff",
+      "page_102/resource_102_f1.woff",
+      "page_102/resource_102_f2.woff",
+      "page_102/resource_102_f3.woff",
+      "page_102/resource_102_f4.woff",
+      "page_102/resource_102_s.css",
+      "page_103.html",
+      "page_103/resource_103_f.woff",
+      "page_103/resource_103_f1.woff",
+      "page_103/resource_103_f2.woff",
+      "page_103/resource_103_f3.woff",
+      "page_103/resource_103_f4.woff",
+      "page_103/resource_103_s.css",
+      "page_104.html",
+      "page_104/resource_104_f.woff",
+      "page_104/resource_104_f1.woff",
+      "page_104/resource_104_f2.woff",
+      "page_104/resource_104_f3.woff",
+      "page_104/resource_104_f4.woff",
+      "page_104/resource_104_f5.woff",
+      "page_104/resource_104_s.css",
+      "page_105.html",
+      "page_105/resource_105_f.woff",
+      "page_105/resource_105_f1.woff",
+      "page_105/resource_105_f2.woff",
+      "page_105/resource_105_f3.woff",
+      "page_105/resource_105_f4.woff",
+      "page_105/resource_105_s.css",
+      "page_106.html",
+      "page_106/resource_106_f.woff",
+      "page_106/resource_106_f1.woff",
+      "page_106/resource_106_f2.woff",
+      "page_106/resource_106_f3.woff",
+      "page_106/resource_106_s.css",
+      "page_107.html",
+      "page_107/resource_107_f.woff",
+      "page_107/resource_107_f1.woff",
+      "page_107/resource_107_f2.woff",
+      "page_107/resource_107_f3.woff",
+      "page_107/resource_107_s.css",
+      "page_108.html",
+      "page_108/resource_108_f.woff",
+      "page_108/resource_108_f1.woff",
+      "page_108/resource_108_f2.woff",
+      "page_108/resource_108_f3.woff",
+      "page_108/resource_108_s.css",
+      "page_109.html",
+      "page_109/resource_109_f.woff",
+      "page_109/resource_109_f1.woff",
+      "page_109/resource_109_f2.woff",
+      "page_109/resource_109_s.css",
+      "page_10/resource_10_f.woff",
+      "page_10/resource_10_f1.woff",
+      "page_10/resource_10_f2.woff",
+      "page_10/resource_10_f3.woff",
+      "page_10/resource_10_s.css",
+      "page_11.html",
+      "page_110.html",
+      "page_110/resource_110_f.woff",
+      "page_110/resource_110_f1.woff",
+      "page_110/resource_110_f2.woff",
+      "page_110/resource_110_f3.woff",
+      "page_110/resource_110_f4.woff",
+      "page_110/resource_110_s.css",
+      "page_111.html",
+      "page_111/resource_111_f.woff",
+      "page_111/resource_111_f1.woff",
+      "page_111/resource_111_f2.woff",
+      "page_111/resource_111_f3.woff",
+      "page_111/resource_111_f4.woff",
+      "page_111/resource_111_s.css",
+      "page_112.html",
+      "page_112/resource_112_f.woff",
+      "page_112/resource_112_f1.woff",
+      "page_112/resource_112_f2.woff",
+      "page_112/resource_112_f3.woff",
+      "page_112/resource_112_s.css",
+      "page_113.html",
+      "page_113/resource_113_f.woff",
+      "page_113/resource_113_f1.woff",
+      "page_113/resource_113_f2.woff",
+      "page_113/resource_113_f3.woff",
+      "page_113/resource_113_s.css",
+      "page_114.html",
+      "page_114/resource_114_f.woff",
+      "page_114/resource_114_f1.woff",
+      "page_114/resource_114_f2.woff",
+      "page_114/resource_114_f3.woff",
+      "page_114/resource_114_s.css",
+      "page_115.html",
+      "page_115/resource_115_f.woff",
+      "page_115/resource_115_f1.woff",
+      "page_115/resource_115_f2.woff",
+      "page_115/resource_115_f3.woff",
+      "page_115/resource_115_s.css",
+      "page_116.html",
+      "page_116/resource_116_f.woff",
+      "page_116/resource_116_f1.woff",
+      "page_116/resource_116_f2.woff",
+      "page_116/resource_116_f3.woff",
+      "page_116/resource_116_s.css",
+      "page_117.html",
+      "page_117/resource_117_f.woff",
+      "page_117/resource_117_f1.woff",
+      "page_117/resource_117_f2.woff",
+      "page_117/resource_117_f3.woff",
+      "page_117/resource_117_s.css",
+      "page_118.html",
+      "page_118/resource_118_f.woff",
+      "page_118/resource_118_f1.woff",
+      "page_118/resource_118_f2.woff",
+      "page_118/resource_118_f3.woff",
+      "page_118/resource_118_s.css",
+      "page_119.html",
+      "page_119/resource_119_f.woff",
+      "page_119/resource_119_f1.woff",
+      "page_119/resource_119_f2.woff",
+      "page_119/resource_119_f3.woff",
+      "page_119/resource_119_f4.woff",
+      "page_119/resource_119_s.css",
+      "page_11/resource_11_f.woff",
+      "page_11/resource_11_f1.woff",
+      "page_11/resource_11_f2.woff",
+      "page_11/resource_11_f3.woff",
+      "page_11/resource_11_s.css",
+      "page_12.html",
+      "page_120.html",
+      "page_120/resource_120_f.woff",
+      "page_120/resource_120_f1.woff",
+      "page_120/resource_120_f2.woff",
+      "page_120/resource_120_f3.woff",
+      "page_120/resource_120_s.css",
+      "page_121.html",
+      "page_121/resource_121_f.woff",
+      "page_121/resource_121_f1.woff",
+      "page_121/resource_121_f2.woff",
+      "page_121/resource_121_f3.woff",
+      "page_121/resource_121_s.css",
+      "page_122.html",
+      "page_122/resource_122_f.woff",
+      "page_122/resource_122_f1.woff",
+      "page_122/resource_122_f2.woff",
+      "page_122/resource_122_f3.woff",
+      "page_122/resource_122_s.css",
+      "page_123.html",
+      "page_123/resource_123_f.woff",
+      "page_123/resource_123_f1.woff",
+      "page_123/resource_123_f2.woff",
+      "page_123/resource_123_s.css",
+      "page_12/resource_12_f.woff",
+      "page_12/resource_12_f1.woff",
+      "page_12/resource_12_f2.woff",
+      "page_12/resource_12_s.css",
+      "page_13.html",
+      "page_13/resource_13_f.woff",
+      "page_13/resource_13_f1.woff",
+      "page_13/resource_13_f2.woff",
+      "page_13/resource_13_f3.woff",
+      "page_13/resource_13_s.css",
+      "page_14.html",
+      "page_14/resource_14_f.woff",
+      "page_14/resource_14_f1.woff",
+      "page_14/resource_14_f2.woff",
+      "page_14/resource_14_f3.woff",
+      "page_14/resource_14_s.css",
+      "page_15.html",
+      "page_15/resource_15_f.woff",
+      "page_15/resource_15_f1.woff",
+      "page_15/resource_15_f2.woff",
+      "page_15/resource_15_f3.woff",
+      "page_15/resource_15_f4.woff",
+      "page_15/resource_15_s.css",
+      "page_16.html",
+      "page_16/resource_16_f.woff",
+      "page_16/resource_16_f1.woff",
+      "page_16/resource_16_f2.woff",
+      "page_16/resource_16_f3.woff",
+      "page_16/resource_16_s.css",
+      "page_17.html",
+      "page_17/resource_17_f.woff",
+      "page_17/resource_17_f1.woff",
+      "page_17/resource_17_f2.woff",
+      "page_17/resource_17_f3.woff",
+      "page_17/resource_17_s.css",
+      "page_18.html",
+      "page_18/resource_18_f.woff",
+      "page_18/resource_18_f1.woff",
+      "page_18/resource_18_f2.woff",
+      "page_18/resource_18_f3.woff",
+      "page_18/resource_18_s.css",
+      "page_19.html",
+      "page_19/resource_19_f.woff",
+      "page_19/resource_19_f1.woff",
+      "page_19/resource_19_s.css",
+      "page_1/resource_1_f.woff",
+      "page_1/resource_1_f1.woff",
+      "page_1/resource_1_f2.woff",
+      "page_1/resource_1_f3.woff",
+      "page_1/resource_1_s.css",
+      "page_2.html",
+      "page_20.html",
+      "page_20/resource_20_f.woff",
+      "page_20/resource_20_f1.woff",
+      "page_20/resource_20_s.css",
+      "page_21.html",
+      "page_21/resource_21_f.woff",
+      "page_21/resource_21_f1.woff",
+      "page_21/resource_21_f2.woff",
+      "page_21/resource_21_s.css",
+      "page_22.html",
+      "page_22/resource_22_f.woff",
+      "page_22/resource_22_f1.woff",
+      "page_22/resource_22_f2.woff",
+      "page_22/resource_22_f3.woff",
+      "page_22/resource_22_s.css",
+      "page_23.html",
+      "page_23/resource_23_f.woff",
+      "page_23/resource_23_f1.woff",
+      "page_23/resource_23_f2.woff",
+      "page_23/resource_23_f3.woff",
+      "page_23/resource_23_s.css",
+      "page_24.html",
+      "page_24/resource_24_f.woff",
+      "page_24/resource_24_f1.woff",
+      "page_24/resource_24_f2.woff",
+      "page_24/resource_24_s.css",
+      "page_25.html",
+      "page_25/resource_25_f.woff",
+      "page_25/resource_25_f1.woff",
+      "page_25/resource_25_f2.woff",
+      "page_25/resource_25_f3.woff",
+      "page_25/resource_25_s.css",
+      "page_26.html",
+      "page_26/resource_26_f.woff",
+      "page_26/resource_26_f1.woff",
+      "page_26/resource_26_f2.woff",
+      "page_26/resource_26_f3.woff",
+      "page_26/resource_26_s.css",
+      "page_27.html",
+      "page_27/resource_27_f.woff",
+      "page_27/resource_27_f1.woff",
+      "page_27/resource_27_f2.woff",
+      "page_27/resource_27_f3.woff",
+      "page_27/resource_27_s.css",
+      "page_28.html",
+      "page_28/resource_28_f.woff",
+      "page_28/resource_28_f1.woff",
+      "page_28/resource_28_f2.woff",
+      "page_28/resource_28_f3.woff",
+      "page_28/resource_28_s.css",
+      "page_29.html",
+      "page_29/resource_29_f.woff",
+      "page_29/resource_29_f1.woff",
+      "page_29/resource_29_f2.woff",
+      "page_29/resource_29_s.css",
+      "page_2/resource_2_f.woff",
+      "page_2/resource_2_f1.woff",
+      "page_2/resource_2_f2.woff",
+      "page_2/resource_2_s.css",
+      "page_3.html",
+      "page_30.html",
+      "page_30/resource_30_f.woff",
+      "page_30/resource_30_f1.woff",
+      "page_30/resource_30_f2.woff",
+      "page_30/resource_30_f3.woff",
+      "page_30/resource_30_s.css",
+      "page_31.html",
+      "page_31/resource_31_f.woff",
+      "page_31/resource_31_f1.woff",
+      "page_31/resource_31_f2.woff",
+      "page_31/resource_31_f3.woff",
+      "page_31/resource_31_s.css",
+      "page_32.html",
+      "page_32/resource_32_f.woff",
+      "page_32/resource_32_f1.woff",
+      "page_32/resource_32_s.css",
+      "page_33.html",
+      "page_33/resource_33_f.woff",
+      "page_33/resource_33_f1.woff",
+      "page_33/resource_33_f2.woff",
+      "page_33/resource_33_s.css",
+      "page_34.html",
+      "page_34/resource_34_f.woff",
+      "page_34/resource_34_f1.woff",
+      "page_34/resource_34_f2.woff",
+      "page_34/resource_34_f3.woff",
+      "page_34/resource_34_s.css",
+      "page_35.html",
+      "page_35/resource_35_f.woff",
+      "page_35/resource_35_f1.woff",
+      "page_35/resource_35_f2.woff",
+      "page_35/resource_35_s.css",
+      "page_36.html",
+      "page_36/resource_36_f.woff",
+      "page_36/resource_36_f1.woff",
+      "page_36/resource_36_f2.woff",
+      "page_36/resource_36_f3.woff",
+      "page_36/resource_36_s.css",
+      "page_37.html",
+      "page_37/resource_37_f.woff",
+      "page_37/resource_37_f1.woff",
+      "page_37/resource_37_f2.woff",
+      "page_37/resource_37_f3.woff",
+      "page_37/resource_37_s.css",
+      "page_38.html",
+      "page_38/resource_38_f.woff",
+      "page_38/resource_38_f1.woff",
+      "page_38/resource_38_f2.woff",
+      "page_38/resource_38_f3.woff",
+      "page_38/resource_38_f4.woff",
+      "page_38/resource_38_s.css",
+      "page_39.html",
+      "page_39/resource_39_f.woff",
+      "page_39/resource_39_f1.woff",
+      "page_39/resource_39_f2.woff",
+      "page_39/resource_39_s.css",
+      "page_3/resource_3_f.woff",
+      "page_3/resource_3_f1.woff",
+      "page_3/resource_3_f2.woff",
+      "page_3/resource_3_f3.woff",
+      "page_3/resource_3_s.css",
+      "page_4.html",
+      "page_40.html",
+      "page_40/resource_40_f.woff",
+      "page_40/resource_40_f1.woff",
+      "page_40/resource_40_f2.woff",
+      "page_40/resource_40_s.css",
+      "page_41.html",
+      "page_41/resource_41_f.woff",
+      "page_41/resource_41_f1.woff",
+      "page_41/resource_41_f2.woff",
+      "page_41/resource_41_f3.woff",
+      "page_41/resource_41_s.css",
+      "page_42.html",
+      "page_42/resource_42_f.woff",
+      "page_42/resource_42_f1.woff",
+      "page_42/resource_42_f2.woff",
+      "page_42/resource_42_f3.woff",
+      "page_42/resource_42_s.css",
+      "page_43.html",
+      "page_43/resource_43_f.woff",
+      "page_43/resource_43_f1.woff",
+      "page_43/resource_43_f2.woff",
+      "page_43/resource_43_s.css",
+      "page_44.html",
+      "page_44/resource_44_f.woff",
+      "page_44/resource_44_f1.woff",
+      "page_44/resource_44_f2.woff",
+      "page_44/resource_44_f3.woff",
+      "page_44/resource_44_s.css",
+      "page_45.html",
+      "page_45/resource_45_f.woff",
+      "page_45/resource_45_f1.woff",
+      "page_45/resource_45_f2.woff",
+      "page_45/resource_45_f3.woff",
+      "page_45/resource_45_s.css",
+      "page_46.html",
+      "page_46/resource_46_f.woff",
+      "page_46/resource_46_f1.woff",
+      "page_46/resource_46_f2.woff",
+      "page_46/resource_46_f3.woff",
+      "page_46/resource_46_s.css",
+      "page_47.html",
+      "page_47/resource_47_f.woff",
+      "page_47/resource_47_f1.woff",
+      "page_47/resource_47_f2.woff",
+      "page_47/resource_47_s.css",
+      "page_48.html",
+      "page_48/resource_48_f.woff",
+      "page_48/resource_48_f1.woff",
+      "page_48/resource_48_f2.woff",
+      "page_48/resource_48_s.css",
+      "page_49.html",
+      "page_49/resource_49_f.woff",
+      "page_49/resource_49_f1.woff",
+      "page_49/resource_49_f2.woff",
+      "page_49/resource_49_f3.woff",
+      "page_49/resource_49_s.css",
+      "page_4/resource_4_f.woff",
+      "page_4/resource_4_f1.woff",
+      "page_4/resource_4_f2.woff",
+      "page_4/resource_4_s.css",
+      "page_5.html",
+      "page_50.html",
+      "page_50/resource_50_f.woff",
+      "page_50/resource_50_f1.woff",
+      "page_50/resource_50_f2.woff",
+      "page_50/resource_50_s.css",
+      "page_51.html",
+      "page_51/resource_51_f.woff",
+      "page_51/resource_51_f1.woff",
+      "page_51/resource_51_f2.woff",
+      "page_51/resource_51_f3.woff",
+      "page_51/resource_51_s.css",
+      "page_52.html",
+      "page_52/resource_52_f.woff",
+      "page_52/resource_52_f1.woff",
+      "page_52/resource_52_f2.woff",
+      "page_52/resource_52_s.css",
+      "page_53.html",
+      "page_53/resource_53_f.woff",
+      "page_53/resource_53_f1.woff",
+      "page_53/resource_53_f2.woff",
+      "page_53/resource_53_f3.woff",
+      "page_53/resource_53_s.css",
+      "page_54.html",
+      "page_54/resource_54_f.woff",
+      "page_54/resource_54_f1.woff",
+      "page_54/resource_54_f2.woff",
+      "page_54/resource_54_s.css",
+      "page_55.html",
+      "page_55/resource_55_f.woff",
+      "page_55/resource_55_f1.woff",
+      "page_55/resource_55_f2.woff",
+      "page_55/resource_55_f3.woff",
+      "page_55/resource_55_s.css",
+      "page_56.html",
+      "page_56/resource_56_f.woff",
+      "page_56/resource_56_f1.woff",
+      "page_56/resource_56_f2.woff",
+      "page_56/resource_56_f3.woff",
+      "page_56/resource_56_s.css",
+      "page_57.html",
+      "page_57/resource_57_f.woff",
+      "page_57/resource_57_f1.woff",
+      "page_57/resource_57_f2.woff",
+      "page_57/resource_57_f3.woff",
+      "page_57/resource_57_f4.woff",
+      "page_57/resource_57_s.css",
+      "page_58.html",
+      "page_58/resource_58_f.woff",
+      "page_58/resource_58_f1.woff",
+      "page_58/resource_58_f2.woff",
+      "page_58/resource_58_s.css",
+      "page_59.html",
+      "page_59/resource_59_f.woff",
+      "page_59/resource_59_f1.woff",
+      "page_59/resource_59_f2.woff",
+      "page_59/resource_59_s.css",
+      "page_5/resource_5_f.woff",
+      "page_5/resource_5_f1.woff",
+      "page_5/resource_5_f2.woff",
+      "page_5/resource_5_f3.woff",
+      "page_5/resource_5_s.css",
+      "page_6.html",
+      "page_60.html",
+      "page_60/resource_60_f.woff",
+      "page_60/resource_60_f1.woff",
+      "page_60/resource_60_f2.woff",
+      "page_60/resource_60_s.css",
+      "page_61.html",
+      "page_61/resource_61_f.woff",
+      "page_61/resource_61_f1.woff",
+      "page_61/resource_61_f2.woff",
+      "page_61/resource_61_s.css",
+      "page_62.html",
+      "page_62/resource_62_f.woff",
+      "page_62/resource_62_f1.woff",
+      "page_62/resource_62_f2.woff",
+      "page_62/resource_62_f3.woff",
+      "page_62/resource_62_f4.woff",
+      "page_62/resource_62_s.css",
+      "page_63.html",
+      "page_63/resource_63_f.woff",
+      "page_63/resource_63_f1.woff",
+      "page_63/resource_63_f2.woff",
+      "page_63/resource_63_f3.woff",
+      "page_63/resource_63_f4.woff",
+      "page_63/resource_63_s.css",
+      "page_64.html",
+      "page_64/resource_64_f.woff",
+      "page_64/resource_64_f1.woff",
+      "page_64/resource_64_f2.woff",
+      "page_64/resource_64_f3.woff",
+      "page_64/resource_64_s.css",
+      "page_65.html",
+      "page_65/resource_65_f.woff",
+      "page_65/resource_65_f1.woff",
+      "page_65/resource_65_f2.woff",
+      "page_65/resource_65_s.css",
+      "page_66.html",
+      "page_66/resource_66_f.woff",
+      "page_66/resource_66_f1.woff",
+      "page_66/resource_66_f2.woff",
+      "page_66/resource_66_f3.woff",
+      "page_66/resource_66_s.css",
+      "page_67.html",
+      "page_67/resource_67_f.woff",
+      "page_67/resource_67_f1.woff",
+      "page_67/resource_67_f2.woff",
+      "page_67/resource_67_f3.woff",
+      "page_67/resource_67_s.css",
+      "page_68.html",
+      "page_68/resource_68_f.woff",
+      "page_68/resource_68_f1.woff",
+      "page_68/resource_68_f2.woff",
+      "page_68/resource_68_f3.woff",
+      "page_68/resource_68_f4.woff",
+      "page_68/resource_68_s.css",
+      "page_69.html",
+      "page_69/resource_69_f.woff",
+      "page_69/resource_69_f1.woff",
+      "page_69/resource_69_f2.woff",
+      "page_69/resource_69_f3.woff",
+      "page_69/resource_69_f4.woff",
+      "page_69/resource_69_s.css",
+      "page_6/resource_6_f.woff",
+      "page_6/resource_6_f1.woff",
+      "page_6/resource_6_f2.woff",
+      "page_6/resource_6_f3.woff",
+      "page_6/resource_6_s.css",
+      "page_7.html",
+      "page_70.html",
+      "page_70/resource_70_f.woff",
+      "page_70/resource_70_f1.woff",
+      "page_70/resource_70_f2.woff",
+      "page_70/resource_70_f3.woff",
+      "page_70/resource_70_s.css",
+      "page_71.html",
+      "page_71/resource_71_f.woff",
+      "page_71/resource_71_f1.woff",
+      "page_71/resource_71_f2.woff",
+      "page_71/resource_71_f3.woff",
+      "page_71/resource_71_f4.woff",
+      "page_71/resource_71_s.css",
+      "page_72.html",
+      "page_72/resource_72_f.woff",
+      "page_72/resource_72_f1.woff",
+      "page_72/resource_72_f2.woff",
+      "page_72/resource_72_f3.woff",
+      "page_72/resource_72_s.css",
+      "page_73.html",
+      "page_73/resource_73_f.woff",
+      "page_73/resource_73_f1.woff",
+      "page_73/resource_73_f2.woff",
+      "page_73/resource_73_s.css",
+      "page_74.html",
+      "page_74/resource_74_f.woff",
+      "page_74/resource_74_f1.woff",
+      "page_74/resource_74_f2.woff",
+      "page_74/resource_74_s.css",
+      "page_75.html",
+      "page_75/resource_75_f.woff",
+      "page_75/resource_75_f1.woff",
+      "page_75/resource_75_f2.woff",
+      "page_75/resource_75_f3.woff",
+      "page_75/resource_75_s.css",
+      "page_76.html",
+      "page_76/resource_76_f.woff",
+      "page_76/resource_76_f1.woff",
+      "page_76/resource_76_f2.woff",
+      "page_76/resource_76_f3.woff",
+      "page_76/resource_76_s.css",
+      "page_77.html",
+      "page_77/resource_77_f.woff",
+      "page_77/resource_77_f1.woff",
+      "page_77/resource_77_f2.woff",
+      "page_77/resource_77_f3.woff",
+      "page_77/resource_77_s.css",
+      "page_78.html",
+      "page_78/resource_78_f.woff",
+      "page_78/resource_78_f1.woff",
+      "page_78/resource_78_f2.woff",
+      "page_78/resource_78_s.css",
+      "page_79.html",
+      "page_79/resource_79_f.woff",
+      "page_79/resource_79_f1.woff",
+      "page_79/resource_79_f2.woff",
+      "page_79/resource_79_f3.woff",
+      "page_79/resource_79_s.css",
+      "page_7/resource_7_f.woff",
+      "page_7/resource_7_f1.woff",
+      "page_7/resource_7_f2.woff",
+      "page_7/resource_7_s.css",
+      "page_8.html",
+      "page_80.html",
+      "page_80/resource_80_f.woff",
+      "page_80/resource_80_f1.woff",
+      "page_80/resource_80_f2.woff",
+      "page_80/resource_80_f3.woff",
+      "page_80/resource_80_s.css",
+      "page_81.html",
+      "page_81/resource_81_f.woff",
+      "page_81/resource_81_f1.woff",
+      "page_81/resource_81_f2.woff",
+      "page_81/resource_81_s.css",
+      "page_82.html",
+      "page_82/resource_82_f.woff",
+      "page_82/resource_82_f1.woff",
+      "page_82/resource_82_f2.woff",
+      "page_82/resource_82_f3.woff",
+      "page_82/resource_82_s.css",
+      "page_83.html",
+      "page_83/resource_83_f.woff",
+      "page_83/resource_83_f1.woff",
+      "page_83/resource_83_f2.woff",
+      "page_83/resource_83_f3.woff",
+      "page_83/resource_83_s.css",
+      "page_84.html",
+      "page_84/resource_84_f.woff",
+      "page_84/resource_84_f1.woff",
+      "page_84/resource_84_f2.woff",
+      "page_84/resource_84_s.css",
+      "page_85.html",
+      "page_85/resource_85_f.woff",
+      "page_85/resource_85_f1.woff",
+      "page_85/resource_85_f2.woff",
+      "page_85/resource_85_f3.woff",
+      "page_85/resource_85_s.css",
+      "page_86.html",
+      "page_86/resource_86_f.woff",
+      "page_86/resource_86_f1.woff",
+      "page_86/resource_86_f2.woff",
+      "page_86/resource_86_s.css",
+      "page_87.html",
+      "page_87/resource_87_f.woff",
+      "page_87/resource_87_f1.woff",
+      "page_87/resource_87_f2.woff",
+      "page_87/resource_87_f3.woff",
+      "page_87/resource_87_s.css",
+      "page_88.html",
+      "page_88/resource_88_f.woff",
+      "page_88/resource_88_f1.woff",
+      "page_88/resource_88_f2.woff",
+      "page_88/resource_88_f3.woff",
+      "page_88/resource_88_s.css",
+      "page_89.html",
+      "page_89/resource_89_f.woff",
+      "page_89/resource_89_f1.woff",
+      "page_89/resource_89_f2.woff",
+      "page_89/resource_89_f3.woff",
+      "page_89/resource_89_s.css",
+      "page_8/resource_8_f.woff",
+      "page_8/resource_8_f1.woff",
+      "page_8/resource_8_s.css",
+      "page_9.html",
+      "page_90.html",
+      "page_90/resource_90_f.woff",
+      "page_90/resource_90_f1.woff",
+      "page_90/resource_90_f2.woff",
+      "page_90/resource_90_s.css",
+      "page_91.html",
+      "page_91/resource_91_f.woff",
+      "page_91/resource_91_f1.woff",
+      "page_91/resource_91_f2.woff",
+      "page_91/resource_91_f3.woff",
+      "page_91/resource_91_s.css",
+      "page_92.html",
+      "page_92/resource_92_f.woff",
+      "page_92/resource_92_f1.woff",
+      "page_92/resource_92_f2.woff",
+      "page_92/resource_92_f3.woff",
+      "page_92/resource_92_f4.woff",
+      "page_92/resource_92_s.css",
+      "page_93.html",
+      "page_93/resource_93_f.woff",
+      "page_93/resource_93_f1.woff",
+      "page_93/resource_93_f2.woff",
+      "page_93/resource_93_f3.woff",
+      "page_93/resource_93_s.css",
+      "page_94.html",
+      "page_94/resource_94_f.woff",
+      "page_94/resource_94_f1.woff",
+      "page_94/resource_94_f2.woff",
+      "page_94/resource_94_f3.woff",
+      "page_94/resource_94_s.css",
+      "page_95.html",
+      "page_95/resource_95_f.woff",
+      "page_95/resource_95_f1.woff",
+      "page_95/resource_95_f2.woff",
+      "page_95/resource_95_f3.woff",
+      "page_95/resource_95_s.css",
+      "page_96.html",
+      "page_96/resource_96_f.woff",
+      "page_96/resource_96_f1.woff",
+      "page_96/resource_96_f2.woff",
+      "page_96/resource_96_s.css",
+      "page_97.html",
+      "page_97/resource_97_f.woff",
+      "page_97/resource_97_f1.woff",
+      "page_97/resource_97_f2.woff",
+      "page_97/resource_97_f3.woff",
+      "page_97/resource_97_s.css",
+      "page_98.html",
+      "page_98/resource_98_f.woff",
+      "page_98/resource_98_f1.woff",
+      "page_98/resource_98_f2.woff",
+      "page_98/resource_98_f3.woff",
+      "page_98/resource_98_s.css",
+      "page_99.html",
+      "page_99/resource_99_f.woff",
+      "page_99/resource_99_f1.woff",
+      "page_99/resource_99_f2.woff",
+      "page_99/resource_99_s.css",
+      "page_9/resource_9_f.woff",
+      "page_9/resource_9_f1.woff",
+      "page_9/resource_9_s.css"
+    ],
+    "preview": "page_1.html (30 KB)\npage_10.html (17 KB)\npage_100.html (16 KB)\npage_100/resource_100_f.woff (12 KB)\npage_100/resource_100_f1.woff (16 KB)\npage_100/resource_100_f2.woff (12 KB)\npage_100/resource_100_f3.woff (7 KB)\npage_100/resource_100_f4.woff (15 KB)\npage_100/resource_100_s.css (2 KB)\npage_101.html (17 KB)\n[TRUNCATED] (713 files total)",
+    "function": "RenderChmToHtmlExternal"
+  },
+  "render-web-with-margins": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-web-documents/RenderWebWithMargins/output.pdf",
+    "preview": "Binary file (PDF, 46 KB)",
+    "function": "RenderWebWithMargins"
+  },
+  "render-web-with-page-size": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-web-documents/RenderWebWithPageSize/output.pdf",
+    "preview": "Binary file (PDF, 45 KB)",
+    "function": "RenderWebWithPageSize"
+  },
+  "render-word-to-html": {
+    "type": "zip",
+    "file": "render-word-to-html.zip",
+    "path": "rendering-basics/render-word-documents/RenderWordToHtml/render-word-to-html.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html",
+      "page_5.html"
+    ],
+    "preview": "page_1.html (228 KB)\npage_2.html (110 KB)\npage_3.html (142 KB)\npage_4.html (885 KB)\npage_5.html (86 KB)",
+    "function": "RenderWordToHtml"
+  },
+  "render-word-to-html-external": {
+    "type": "zip",
+    "file": "render-word-to-html-external.zip",
+    "path": "rendering-basics/render-word-documents/RenderWordToHtmlExternal/render-word-to-html-external.zip",
+    "contents": [
+      "page_1.html",
+      "page_1/resource_1_f.woff",
+      "page_1/resource_1_f1.woff",
+      "page_1/resource_1_f2.woff",
+      "page_1/resource_1_i.jpeg",
+      "page_1/resource_1_i.png",
+      "page_1/resource_1_s.css",
+      "page_2.html",
+      "page_2/resource_2_f.woff",
+      "page_2/resource_2_f1.woff",
+      "page_2/resource_2_f2.woff",
+      "page_2/resource_2_f3.woff",
+      "page_2/resource_2_f4.woff",
+      "page_2/resource_2_s.css",
+      "page_3.html",
+      "page_3/resource_3_f.woff",
+      "page_3/resource_3_f1.woff",
+      "page_3/resource_3_f2.woff",
+      "page_3/resource_3_f3.woff",
+      "page_3/resource_3_i.jpeg",
+      "page_3/resource_3_s.css",
+      "page_4.html",
+      "page_4/resource_4_f.woff",
+      "page_4/resource_4_f1.woff",
+      "page_4/resource_4_i.jpeg",
+      "page_4/resource_4_i1.jpeg",
+      "page_4/resource_4_i2.jpeg",
+      "page_4/resource_4_i3.jpeg",
+      "page_4/resource_4_s.css",
+      "page_5.html",
+      "page_5/resource_5_f.woff",
+      "page_5/resource_5_f1.woff",
+      "page_5/resource_5_f2.woff",
+      "page_5/resource_5_f3.woff",
+      "page_5/resource_5_s.css"
+    ],
+    "preview": "page_1.html (2 KB)\npage_1/resource_1_f.woff (20 KB)\npage_1/resource_1_f1.woff (9 KB)\npage_1/resource_1_f2.woff (10 KB)\npage_1/resource_1_i.jpeg (126 KB)\npage_1/resource_1_i.png (4 KB)\npage_1/resource_1_s.css (1 KB)\npage_2.html (9 KB)\npage_2/resource_2_f.woff (15 KB)\npage_2/resource_2_f1.woff (29 KB)\n[TRUNCATED] (35 files total)",
+    "function": "RenderWordToHtmlExternal"
+  },
+  "render-word-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-word-documents/RenderWordToPdf/output.pdf",
+    "preview": "Binary file (PDF, 719 KB)",
+    "function": "RenderWordToPdf"
+  },
+  "render-word-to-png": {
+    "type": "zip",
+    "file": "render-word-to-png.zip",
+    "path": "rendering-basics/render-word-documents/RenderWordToPng/render-word-to-png.zip",
+    "contents": [
+      "output_1.png",
+      "output_2.png",
+      "output_3.png",
+      "output_4.png",
+      "output_5.png"
+    ],
+    "preview": "output_1.png (276 KB)\noutput_2.png (145 KB)\noutput_3.png (105 KB)\noutput_4.png (425 KB)\noutput_5.png (88 KB)",
+    "function": "RenderWordToPng"
+  },
+  "render-word-to-jpg": {
+    "type": "zip",
+    "file": "render-word-to-jpg.zip",
+    "path": "rendering-basics/render-word-documents/RenderWordToJpg/render-word-to-jpg.zip",
+    "contents": [
+      "output_1.jpg",
+      "output_2.jpg",
+      "output_3.jpg",
+      "output_4.jpg",
+      "output_5.jpg"
+    ],
+    "preview": "output_1.jpg (75 KB)\noutput_2.jpg (91 KB)\noutput_3.jpg (86 KB)\noutput_4.jpg (91 KB)\noutput_5.jpg (62 KB)",
+    "function": "RenderWordToJpg"
+  },
+  "render-word-with-margins": {
+    "type": "zip",
+    "file": "render-word-with-margins.zip",
+    "path": "rendering-basics/render-word-documents/RenderWordWithMargins/render-word-with-margins.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html",
+      "page_5.html"
+    ],
+    "preview": "page_1.html (228 KB)\npage_2.html (110 KB)\npage_3.html (142 KB)\npage_4.html (885 KB)\npage_5.html (86 KB)",
+    "function": "RenderWordWithMargins"
+  },
+  "render-word-with-tracked-changes": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-word-documents/RenderWordWithTrackedChanges/output.pdf",
+    "preview": "Binary file (PDF, 64 KB)",
+    "function": "RenderWordWithTrackedChanges"
+  },
+  "render-word-with-comments": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-word-documents/RenderWordWithComments/output.pdf",
+    "preview": "Binary file (PDF, 68 KB)",
+    "function": "RenderWordWithComments"
+  },
+  "render-word-unlink-toc": {
+    "type": "zip",
+    "file": "render-word-unlink-toc.zip",
+    "path": "rendering-basics/render-word-documents/RenderWordUnlinkToc/render-word-unlink-toc.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html"
+    ],
+    "preview": "p_1.html (67 KB)\np_2.html (79 KB)\np_3.html (76 KB)\np_4.html (85 KB)",
+    "function": "RenderWordUnlinkToc"
+  },
+  "render-word-without-updating-fields": {
+    "type": "zip",
+    "file": "render-word-without-updating-fields.zip",
+    "path": "rendering-basics/render-word-documents/RenderWordWithoutUpdatingFields/render-word-without-updating-fields.zip",
+    "contents": [
+      "output.pdf",
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html"
+    ],
+    "preview": "output.pdf (80 KB)\np_1.html (68 KB)\np_2.html (79 KB)\np_3.html (76 KB)\np_4.html (85 KB)",
+    "function": "RenderWordWithoutUpdatingFields"
+  },
+  "render-word-html-without-javascript": {
+    "type": "zip",
+    "file": "render-word-html-without-javascript.zip",
+    "path": "rendering-basics/render-word-documents/RenderWordHtmlWithoutJavascript/render-word-html-without-javascript.zip",
+    "contents": [
+      "with-js-page1.html",
+      "without-js-page1.html"
+    ],
+    "preview": "with-js-page1.html (81 KB)\nwithout-js-page1.html (81 KB)",
+    "function": "RenderWordHtmlWithoutJavascript"
+  },
+  "render-word-with-dpi": {
+    "type": "zip",
+    "file": "render-word-with-dpi.zip",
+    "path": "rendering-basics/render-word-documents/RenderWordWithDpi/render-word-with-dpi.zip",
+    "contents": [
+      "p_1.jpg",
+      "p_1.png",
+      "p_2.jpg",
+      "p_2.png",
+      "p_3.jpg",
+      "p_3.png",
+      "p_4.jpg",
+      "p_4.png",
+      "p_5.jpg",
+      "p_5.png"
+    ],
+    "preview": "p_1.jpg (99 KB)\np_1.png (596 KB)\np_2.jpg (126 KB)\np_2.png (164 KB)\np_3.jpg (102 KB)\np_3.png (129 KB)\np_4.jpg (127 KB)\np_4.png (937 KB)\np_5.jpg (76 KB)\np_5.png (100 KB)",
+    "function": "RenderWordWithDpi"
+  },
+  "render-word-with-page-numbers": {
+    "type": "zip",
+    "file": "render-word-with-page-numbers.zip",
+    "path": "rendering-basics/render-word-documents/RenderWordWithPageNumbers/render-word-with-page-numbers.zip",
+    "contents": [
+      "output.pdf",
+      "p_1.html",
+      "p_2.html",
+      "p_3.html",
+      "p_4.html",
+      "p_5.html"
+    ],
+    "preview": "output.pdf (719 KB)\np_1.html (226 KB)\np_2.html (108 KB)\np_3.html (141 KB)\np_4.html (884 KB)\np_5.html (86 KB)",
+    "function": "RenderWordWithPageNumbers"
+  },
+  "render-xml-to-html": {
+    "type": "zip",
+    "file": "render-xml-to-html.zip",
+    "path": "rendering-basics/render-xml-documents/RenderXmlToHtml/render-xml-to-html.zip",
+    "contents": [
+      "page-1.html",
+      "page-2.html",
+      "single-page.html"
+    ],
+    "preview": "page-1.html (130 KB)\npage-2.html (40 KB)\nsingle-page.html (14 KB)",
+    "function": "RenderXmlToHtml"
+  },
+  "render-xml-to-pdf": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-xml-documents/RenderXmlToPdf/output.pdf",
+    "preview": "Binary file (PDF, 83 KB)",
+    "function": "RenderXmlToPdf"
+  },
+  "render-xml-to-images": {
+    "type": "zip",
+    "file": "render-xml-to-images.zip",
+    "path": "rendering-basics/render-xml-documents/RenderXmlToImages/render-xml-to-images.zip",
+    "contents": [
+      "page-1.jpeg",
+      "page-1.png",
+      "page-2.jpeg",
+      "page-2.png"
+    ],
+    "preview": "page-1.jpeg (130 KB)\npage-1.png (84 KB)\npage-2.jpeg (15 KB)\npage-2.png (12 KB)",
+    "function": "RenderXmlToImages"
+  },
+  "get-xml-view-info": {
+    "type": "text",
+    "file": "get-xml-view-info.txt",
+    "path": "rendering-basics/render-xml-documents/GetXmlViewInfo/get-xml-view-info.txt",
+    "preview": "HTML (single page): 1 page(s)\nPDF: 2 page(s)\nPNG: 2 page(s)",
+    "function": "GetXmlViewInfo"
+  },
+  "extract-and-save-attachments": {
+    "type": "zip",
+    "file": "extract-and-save-attachments.zip",
+    "path": "developer-guide/processing-attachments/how-to-extract-and-save-attachments/ExtractAndSaveAttachments/extract-and-save-attachments.zip",
+    "contents": [
+      "output/delivery-note-0912.xlsx",
+      "output/invoice-NWR-2026-0912.pdf"
+    ],
+    "preview": "output/delivery-note-0912.xlsx (7 KB)\noutput/invoice-NWR-2026-0912.pdf (194 KB)",
+    "function": "ExtractAndSaveAttachments"
+  },
+  "extract-files-from-archive": {
+    "type": "file",
+    "file": "INV-26401-quayside-deli--cafe.pdf",
+    "path": "rendering-basics/render-archives/_index/ExtractFilesFromArchive/INV-26401-quayside-deli--cafe.pdf",
+    "preview": "Binary file (PDF, 193 KB)",
+    "function": "ExtractFilesFromArchive"
+  },
+  "render-email-to-html-external": {
+    "type": "zip",
+    "file": "render-email-to-html-external.zip",
+    "path": "rendering-basics/render-email-messages/RenderEmailToHtmlExternal/render-email-to-html-external.zip",
+    "contents": [
+      "page_1.html",
+      "page_1/resource_1_f.ttf",
+      "page_1/resource_1_f1.ttf",
+      "page_1/resource_1_f2.ttf",
+      "page_1/resource_1_f3.ttf",
+      "page_1/resource_1_i.png",
+      "page_1/resource_1_s.css"
+    ],
+    "preview": "page_1.html (15 KB)\npage_1/resource_1_f.ttf (54 KB)\npage_1/resource_1_f1.ttf (36 KB)\npage_1/resource_1_f2.ttf (45 KB)\npage_1/resource_1_f3.ttf (32 KB)\npage_1/resource_1_i.png (9 KB)\npage_1/resource_1_s.css (3 KB)",
+    "function": "RenderEmailToHtmlExternal"
+  },
+  "render-project-specific-dates": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-ms-project-files/RenderProjectSpecificDates/output.pdf",
+    "preview": "Binary file (PDF, 120 KB)",
+    "function": "RenderProjectSpecificDates"
+  },
+  "render-psd-with-custom-fonts": {
+    "type": "file",
+    "file": "output.png",
+    "path": "rendering-basics/render-images/RenderPsdWithCustomFonts/output.png",
+    "preview": "Binary file (PNG, 623 KB)",
+    "function": "RenderPsdWithCustomFonts"
+  },
+  "set-worksheet-margins": {
+    "type": "file",
+    "file": "output.pdf",
+    "path": "rendering-basics/render-spreadsheets/specify-rendering-options/SetWorksheetMargins/output.pdf",
+    "preview": "Binary file (PDF, 81 KB)",
+    "function": "SetWorksheetMargins"
+  },
+  "specify-encoding-when-loading": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "developer-guide/loading-documents/specify-encoding-when-loading-documents/SpecifyEncodingWhenLoading/p_1.html",
+    "preview": "<!doctype html><html lang='en'><head><meta charset = 'utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title>sample-shift-jis.txt</title></head> <style type='text/css'>.gdv-container pre { width:588px; white-space:normal; } .gdv-container { margin-top:60px; margin-left:60px; }</style><body><div style=\"font-size:10pt;font-family:Times New Roman;\" class='gdv-container'><pre>納品に関するご案内<br>2026年11月3日<br><br>株式会社 灯台茶園 御中<br>ハーバーレーン・プロビジョンズ 調達部<br><br>いつも大変お\n[TRUNCATED]",
+    "function": "SpecifyEncodingWhenLoading"
+  },
+  "render-docx-to-html": {
+    "type": "zip",
+    "file": "render-docx-to-html.zip",
+    "path": "_index/RenderDocxToHtml/render-docx-to-html.zip",
+    "contents": [
+      "page_1.html",
+      "page_2.html",
+      "page_3.html",
+      "page_4.html",
+      "page_5.html"
+    ],
+    "preview": "page_1.html (228 KB)\npage_2.html (110 KB)\npage_3.html (142 KB)\npage_4.html (885 KB)\npage_5.html (86 KB)",
+    "function": "RenderDocxToHtml"
+  },
+  "set-custom-fonts": {
+    "type": "zip",
+    "file": "set-custom-fonts.zip",
+    "path": "developer-guide/rendering-documents/set-custom-fonts/SetCustomFonts/set-custom-fonts.zip",
+    "contents": [
+      "p_1.html",
+      "p_2.html",
+      "p_3.html"
+    ],
+    "preview": "p_1.html (91 KB)\np_2.html (93 KB)\np_3.html (94 KB)",
+    "function": "SetCustomFonts"
+  },
+  "highlight-regex-matches-in-pdf": {
+    "type": "zip",
+    "file": "highlight-regex-matches-in-pdf.zip",
+    "path": "developer-guide/search-highlight-text/HighlightRegexMatchesInPdf/highlight-regex-matches-in-pdf.zip",
+    "contents": [
+      "p_1.png",
+      "p_2.png",
+      "p_3.png",
+      "p_4.png"
+    ],
+    "preview": "p_1.png (961 KB)\np_2.png (402 KB)\np_3.png (425 KB)\np_4.png (63 KB)",
+    "function": "HighlightRegexMatchesInPdf"
+  },
+  "highlight-word-in-word-document": {
+    "type": "file",
+    "file": "p_1.html",
+    "path": "developer-guide/search-highlight-text/HighlightWordInWordDocument/p_1.html",
+    "preview": "﻿<!DOCTYPE html><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><meta name=\"generator\" content=\"Aspose.Words for .NET 26.9.0\" /><title>Supply agreement - draft for review</title><style type=\"text/css\">@font-face { font-family:'Arial'; font-style:italic; font-weight:bold; src:local('☺'), url('data:...;base64,[elided]') format('woff'); } @font-face { font-family:'Arial'; font-style:normal; font-weight:bold; src:local('☺'), url('data:...;base64,[elided]') format('wo\n[TRUNCATED]",
+    "function": "HighlightWordInWordDocument"
   }
 }

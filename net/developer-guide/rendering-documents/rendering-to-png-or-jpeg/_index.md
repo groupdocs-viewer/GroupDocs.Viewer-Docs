@@ -20,7 +20,7 @@ To render files to PNG/JPG, follow these steps:
 
 The following code snippet shows how to render a .docx document to PNG image:
 
-{{< tabs "example1">}}
+{{< tabs "render-to-png-images">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -52,13 +52,28 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-to-png-images.zip" >}}  
+```text
+p_1.png (206 KB)
+p_2.png (59 KB)
+p_3.png (44 KB)
+p_4.png (309 KB)
+p_5.png (35 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/_index/RenderToPngImages/render-to-png-images.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Rendering to JPEG
 
 The following code snippet shows how to render a .docx document to JPG image:
 
-{{< tabs "example2">}}
+{{< tabs "render-to-jpeg-images">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -89,6 +104,21 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-to-jpeg-images.zip" >}}  
+```text
+p_1.jpg (83 KB)
+p_2.jpg (105 KB)
+p_3.jpg (89 KB)
+p_4.jpg (111 KB)
+p_5.jpg (66 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/_index/RenderToJpegImages/render-to-jpeg-images.zip)
 {{< /tab >}}
 {{< /tabs >}}
 

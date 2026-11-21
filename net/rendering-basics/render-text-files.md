@@ -70,7 +70,7 @@ GroupDocs.Viewer supports the following text and programming file formats:
 
 When you load a text document from a file or [FileStream](https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream), GroupDocs.Viewer detects the document's format based on the filename extension. If you use other stream types to load your document (such as [MemoryStream](https://learn.microsoft.com/en-us/dotnet/api/system.io.memorystream) or [NetworkStream](https://learn.microsoft.com/en-us/dotnet/api/system.net.sockets.networkstream)), GroupDocs.Viewer can determine the file format only for the following document types: TXT, CS, and VB. For other file types, you should explicitly specify their format. To do this, create a [LoadOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/loadoptions) class instance with the [FileType](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/filetype) parameter and pass this instance to the [Viewer](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer) class constructor.
 
-{{< tabs "example1">}}
+{{< tabs "render-text-with-load-options">}}
 {{< tab "C#" >}}
 ```csharp
 using System.IO;
@@ -78,7 +78,7 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-Stream stream = GetFileStream("markdown-file.md"); //TODO: implement this method
+Stream stream = File.OpenRead("terms_of_service.md");
 
 // Specify the file encoding. 
 LoadOptions loadOptions = new LoadOptions(FileType.MD);
@@ -100,7 +100,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-            Dim stream As Stream = GetFileStream("markdown-file.md") 'TODO: implement this method
+            Dim stream As Stream = File.OpenRead("terms_of_service.md")
         
             ' Specify the file encoding. 
             Dim loadOptions As LoadOptions = New LoadOptions(FileType.MD)
@@ -114,6 +114,17 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "terms_of_service.md" >}}
+{{< tab-text >}}
+`terms_of_service.md` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-text-files/terms_of_service.md) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 85 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextWithLoadOptions/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render text files as HTML
@@ -124,14 +135,14 @@ Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs
 
 To save all elements of an HTML page (including text, graphics, and stylesheets) into a single file, call the [HtmlViewOptions.ForEmbeddedResources](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/methods/forembeddedresources/index) method and specify the output file name.
 
-{{< tabs "example3">}}
+{{< tabs "render-text-to-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("TermsOfService.txt"))
+using (var viewer = new Viewer("terms_of_service.txt"))
 {
     // Convert the text file to HTML.
     // {0} is replaced with the current page number in the output file names.
@@ -148,7 +159,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("TermsOfService.txt")
+        Using viewer = New Viewer("terms_of_service.txt")
             ' Convert the text file to HTML.
             ' {0} is replaced with the current page number in the output file names.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
@@ -158,11 +169,21 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-text-to-html.zip" >}}  
+```text
+page_1.html (2 KB)
+page_2.html (3 KB)
+page_3.html (2 KB)
+page_4.html (1 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextToHtml/render-text-to-html.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a text file to HTML](/viewer/net/images/rendering-basics/render-text-files/render-to-html-embedded-resources.png)
 
 ### Create HTML files with external resources
 
@@ -172,14 +193,14 @@ If you want to store output HTML files and additional resource files (such as fo
   * The path format for the folder with external resources
   * The resource URL format
 
-{{< tabs "example4">}}
+{{< tabs "render-text-to-html-external">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("TermsOfService.txt"))
+using (var viewer = new Viewer("terms_of_service.txt"))
 {
     // Convert the text file to HTML.
     // Specify the output file names and location of external resources.
@@ -197,7 +218,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("TermsOfService.txt")
+        Using viewer = New Viewer("terms_of_service.txt")
             ' Convert the text file to HTML.
             ' Specify the output file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
@@ -208,24 +229,40 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-text-to-html-external.zip" >}}  
+```text
+page_1.html (2 KB)
+page_1/resource_1_s.css (109 bytes)
+page_2.html (2 KB)
+page_2/resource_2_s.css (109 bytes)
+page_3.html (2 KB)
+page_3/resource_3_s.css (109 bytes)
+page_4.html (1 KB)
+page_4/resource_4_s.css (109 bytes)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextToHtmlExternal/render-text-to-html-external.zip)
+{{< /tab >}}
 {{< /tabs >}}
 
-The image below demonstrates the result. External resources are placed in a separate folder.
-
-![Place HTML resources in a separate folder](/viewer/net/images/rendering-basics/render-text-files/render-to-html-external-resources.png)
+External resources are placed in a separate folder.
 
 ### Create a single HTML page
 
 If you need to display the entire document content on a single HTML page, enable the [HtmlViewOptions.RenderToSinglePage](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions/properties/rendertosinglepage) option, as shown below:
 
-{{< tabs "example5">}}
+{{< tabs "render-text-to-single-html">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("TermsOfService.txt"))
+using (var viewer = new Viewer("terms_of_service.txt"))
 {
     // Convert the text file to HTML.
     // Specify the output file name.
@@ -244,7 +281,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("TermsOfService.txt")
+        Using viewer = New Viewer("terms_of_service.txt")
             ' Convert the text file to HTML.
             ' Specify the output file name.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
@@ -256,20 +293,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.html" >}}  
+```text
+HTML file (7 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextToSingleHtml/output.html)
+{{< /tab >}}
 {{< /tabs >}}
 
 ## Render text files as PDF
 
 Create a [PdfViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pdfviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a text file to PDF. The `PdfViewOptions` class properties allow you to control the conversion process. For instance, you can protect the output PDF file, reorder its pages, and specify the quality of document images. Refer to the following documentation section for details: [Rendering to PDF]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-pdf/_index.md" >}}).
 
-{{< tabs "example6">}}
+{{< tabs "render-text-to-pdf">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("TermsOfService.txt"))
+using (var viewer = new Viewer("terms_of_service.txt"))
 {
     // Convert the text file to PDF.
     var viewOptions = new PdfViewOptions("output.pdf");
@@ -285,7 +333,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("TermsOfService.txt")
+        Using viewer = New Viewer("terms_of_service.txt")
             ' Convert the text file to PDF.
             Dim viewOptions = New PdfViewOptions("output.pdf")
             viewer.View(viewOptions)
@@ -294,24 +342,31 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 109 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextToPdf/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a text file to PDF](/viewer/net/images/rendering-basics/render-text-files/render-to-pdf.png)
 
 ## Render text files as PNG
 
 Create a [PngViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a text file to PNG. Use the [PngViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/height) and [PngViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/pngviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example7">}}
+{{< tabs "render-text-to-png">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("TermsOfService.txt"))
+using (var viewer = new Viewer("terms_of_service.txt"))
 {
     // Convert the text file to PNG.
     // {0} is replaced with the current page number in the output image names.
@@ -331,7 +386,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("TermsOfService.txt")
+        Using viewer = New Viewer("terms_of_service.txt")
             ' Convert the text file to PNG.
             ' {0} is replaced with the current page number in the output image names.
             Dim viewOptions = New PngViewOptions("output_{0}.png")
@@ -344,24 +399,34 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-text-to-png.zip" >}}  
+```text
+output_1.png (125 KB)
+output_2.png (138 KB)
+output_3.png (122 KB)
+output_4.png (65 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextToPng/render-text-to-png.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Render a text file to PNG](/viewer/net/images/rendering-basics/render-text-files/render-to-png-image.png)
 
 ## Render text files as JPEG
 
 Create a [JpgViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a text file to JPEG. Use the [JpgViewOptions.Height](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/height) and [JpgViewOptions.Width](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/jpgviewoptions/properties/width) properties to specify the output image size in pixels.
 
-{{< tabs "example8">}}
+{{< tabs "render-text-to-jpg">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("TermsOfService.txt"))
+using (var viewer = new Viewer("terms_of_service.txt"))
 {
     // Convert the text file to JPEG.
     // {0} is replaced with the current page number in the output image names.
@@ -381,7 +446,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("TermsOfService.txt")
+        Using viewer = New Viewer("terms_of_service.txt")
             ' Convert the text file to JPEG.
             ' {0} is replaced with the current page number in the output image names.
             Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
@@ -393,6 +458,20 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-text-to-jpg.zip" >}}  
+```text
+output_1.jpg (116 KB)
+output_2.jpg (135 KB)
+output_3.jpg (114 KB)
+output_4.jpg (66 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextToJpg/render-text-to-jpg.zip)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -413,14 +492,14 @@ The `TextOptions` class contains the following properties:
 
 The following example demonstrates how to change the number of rows displayed on each HTML page:
 
-{{< tabs "example9">}}
+{{< tabs "render-text-with-options">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-using (var viewer = new Viewer("TermsOfService.txt"))
+using (var viewer = new Viewer("terms_of_service.txt"))
 {
     // Convert the text file to HTML.
     // {0} is replaced with the current page number in the output file names.
@@ -439,7 +518,7 @@ Imports GroupDocs.Viewer.Options
 
 Module Program
     Sub Main(args As String())
-        Using viewer = New Viewer("TermsOfService.txt")
+        Using viewer = New Viewer("terms_of_service.txt")
             ' Convert the text file to HTML.
             ' {0} is replaced with the current page number in the output file names.
             Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
@@ -451,9 +530,21 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "terms_of_service.txt" >}}
+{{< tab-text >}}
+`terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-text-with-options.zip" >}}  
+```text
+page_1.html (1 KB)
+page_2.html (1 KB)
+page_3.html (2 KB)
+page_4.html (2 KB)
+page_5.html (1 KB)
+page_6.html (1 KB)
+page_7.html (1 KB)
+```
+[Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextWithOptions/render-text-with-options.zip)
+{{< /tab >}}
 {{< /tabs >}}
-
-The image below illustrates the result:
-
-![Specify the number of rows per page](/viewer/net/images/rendering-basics/render-text-files/set-max-rows-per-page.png)
- 

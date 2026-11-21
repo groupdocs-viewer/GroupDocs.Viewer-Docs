@@ -24,7 +24,7 @@ from groupdocs.viewer.options import PdfViewOptions, PdfOptimizationOptions
 
 def remove_form_fields():
     # Load document
-    with Viewer("sample.docx") as viewer:
+    with Viewer("order_form.pdf") as viewer:
         viewOptions = PdfViewOptions("remove_form_fields/without_form_fields.pdf")
         viewOptions.pdf_optimization_options = PdfOptimizationOptions()
         viewOptions.pdf_optimization_options.remove_form_fields = True
@@ -35,19 +35,15 @@ if __name__ == "__main__":
     remove_form_fields()
 ```
 {{< /tab >}}
-{{< tab "sample.docx" >}}
+{{< tab "order_form.pdf" >}}
 {{< tab-text >}}
-`sample.docx` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-fields/sample.docx) to download it.
+`order_form.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-fields/order_form.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
 {{< tab "without_form_fields.pdf" >}}  
 ```text
-Binary file (PDF, 233 KB)
+Binary file (PDF, 207 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-content/optimization-pdf-remove-fields/remove_form_fields/without_form_fields.pdf)
 {{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Remove fields](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-remove-fields.png)

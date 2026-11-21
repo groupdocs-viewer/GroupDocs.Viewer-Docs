@@ -19,7 +19,7 @@ The [ImageQuality](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.o
 
 The following code snippet shows how to compress images in the file:
 
-{{< tabs "Example1">}}
+{{< tabs "reduce-image-quality">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -60,8 +60,15 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-reduce-image-quality/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 483 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-reduce-image-quality/ReduceImageQuality/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Reduce image quality](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-reduce-image-quality.png)

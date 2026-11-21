@@ -22,7 +22,7 @@ If the password is not specified, GroupDocs.Viewer throws [PasswordRequiredExcep
 
 The following code snippet shows how to load and render an encrypted document:
 
-{{< tabs "example1">}}
+{{< tabs "load-password-protected-document">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -59,6 +59,18 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "encrypted.docx" >}}
+{{< tab-text >}}
+`encrypted.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/loading-documents/load-password-protected-document/encrypted.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "load-password-protected-document.zip" >}}  
+```text
+p_1.html (117 KB)
+p_2.html (90 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/loading-documents/load-password-protected-document/LoadPasswordProtectedDocument/load-password-protected-document.zip)
 {{< /tab >}}
 {{< /tabs >}}
 

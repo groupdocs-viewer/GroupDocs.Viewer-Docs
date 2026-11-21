@@ -11,7 +11,7 @@ You can load a document from a local disk using a path to a file. GroupDocs.View
 
 The following code snippet shows how to load a document using the local path string:
 
-{{< tabs "example1">}}
+{{< tabs "load-document-from-local-disk">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -48,5 +48,20 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/loading-documents/loading-documents-from-different-sources/load-document-from-local-disk/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "load-document-from-local-disk.zip" >}}  
+```text
+p_1.html (228 KB)
+p_2.html (110 KB)
+p_3.html (142 KB)
+p_4.html (885 KB)
+p_5.html (86 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/loading-documents/loading-documents-from-different-sources/load-document-from-local-disk/LoadDocumentFromLocalDisk/load-document-from-local-disk.zip)
 {{< /tab >}}
 {{< /tabs >}}

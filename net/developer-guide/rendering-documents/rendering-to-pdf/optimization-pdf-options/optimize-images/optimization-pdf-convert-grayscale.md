@@ -16,7 +16,7 @@ To convert a PDF file to grayscale, set the [ConvertToGrayScale](https://referen
 
 The following code snippet shows how to convert a PDF file to grayscale:
 
-{{< tabs "Example1">}}
+{{< tabs "convert-to-grayscale">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer;
@@ -55,8 +55,15 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.docx" >}}
+{{< tab-text >}}
+`sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-convert-grayscale/sample.docx) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 1.3 MB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimize-images/optimization-pdf-convert-grayscale/ConvertToGrayscale/output.pdf)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image demonstrates the result:
-
-![Convert to grayscale](/viewer/net/images/developer-guide/pdf-rendering/optimization/optimization-pdf-convert-grayscale.png)

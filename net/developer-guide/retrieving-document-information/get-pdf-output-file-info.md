@@ -13,7 +13,7 @@ You can get the information about the PDF output file using the [GetViewInfo](ht
 
 The following code snippet shows how to get the page count and the width and height of each document page:
 
-{{< tabs "example1">}}
+{{< tabs "get-pdf-output-info">}}
 {{< tab "C#" >}}
 ```csharp
 using System;
@@ -68,8 +68,23 @@ Module Program
 End Module
 ```
 {{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/retrieving-document-information/get-pdf-output-file-info/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "get-pdf-output-info.txt" >}}  
+```text
+Pages count: 4
+Page: 1; Width: 595, pixels
+Page: 1; Height: 842, pixels
+Page: 2; Width: 595, pixels
+Page: 2; Height: 842, pixels
+Page: 3; Width: 595, pixels
+Page: 3; Height: 842, pixels
+Page: 4; Width: 595, pixels
+Page: 4; Height: 842, pixels
+```
+[Download full output](/viewer/net/_output_files/developer-guide/retrieving-document-information/get-pdf-output-file-info/GetPdfOutputInfo/get-pdf-output-info.txt)
+{{< /tab >}}
 {{< /tabs >}}
-
-The following image shows a sample console output:
-
-![](/viewer/net/images/get_pdf_output_file_info.png)

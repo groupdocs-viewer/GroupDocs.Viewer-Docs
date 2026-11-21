@@ -9,7 +9,7 @@ hideChildren: False
 ---
 The [PdfViewOptions](https://reference.groupdocs.com/net/viewer/groupdocs.viewer.options/pdfviewoptions) class has the following properties to set the image width or/and height:
 
-{{< tabs "example2">}}
+{{< tabs "pdf-image-size-properties">}}
 {{< tab "C#" >}}
 ```csharp
 /// <summary>
@@ -78,7 +78,7 @@ To set the ImageMaxWidth/ImageMaxHeight options, follow these steps:
 
 The following code snippet shows how to set the output image size limits:
 
-{{< tabs "example1">}}
+{{< tabs "set-image-size-limits">}}
 {{< tab "C#" >}}
 ```csharp
 using GroupDocs.Viewer.Options;
@@ -117,5 +117,16 @@ Module Program
     End Sub
 End Module
 ```
+{{< /tab >}}
+{{< tab "sample.jpg" >}}
+{{< tab-text >}}
+`sample.jpg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/rendering-documents/rendering-to-pdf/set-image-size-limits-when-rendering-to-pdf/sample.jpg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "output.pdf" >}}  
+```text
+Binary file (PDF, 590 KB)
+```
+[Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/set-image-size-limits-when-rendering-to-pdf/SetImageSizeLimits/output.pdf)
 {{< /tab >}}
 {{< /tabs >}}
