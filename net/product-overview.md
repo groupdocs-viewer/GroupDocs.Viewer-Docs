@@ -16,8 +16,6 @@ GroupDocs.Viewer for .NET is a **.NET document viewer and rendering API for C#**
 
 GroupDocs.Viewer can render documents to **HTML, PDF, PNG, or JPG**, making it suitable for document previews, web-based viewers, PDF generation, thumbnails, and server-side document processing. The library runs on-premises on supported Windows, Linux, and macOS environments.
 
-Starting with [version 26.8](https://releases.groupdocs.com/viewer/net/release-notes/2026/groupdocs-viewer-for-net-26-8-release-notes/), GroupDocs.Viewer for .NET is distributed as a NuGet metapackage. Install the GroupDocs.Viewer package, and NuGet automatically restores the runtime package that matches your project's target framework. [Version 26.10](https://releases.groupdocs.com/viewer/net/release-notes/2026/groupdocs-viewer-for-net-26-10-release-notes/) adds runtime packages for .NET 8 and .NET 10 to those for .NET Framework 4.6.2 and .NET 6. See [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}) for details.
-
 Common use cases:
 
 - **Document viewing and preview** - render DOCX, PDF, XLSX, PPTX, CAD, email, and other files as HTML, PDF, or images and display them directly in web or desktop applications.
