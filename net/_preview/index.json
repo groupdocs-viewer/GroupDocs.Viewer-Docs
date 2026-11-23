@@ -1417,6 +1417,15 @@
       "width": 595,
       "height": 841
     },
+    "_sample_files/getting-started/how-to-run-in-docker/DemoApp.zip": {
+      "id": "59293f4fc2c02a35.html",
+      "pages": 1,
+      "total": 1,
+      "first": "page-1.html",
+      "width": 640,
+      "height": 168,
+      "files": 5
+    },
     "_sample_files/getting-started/how-to-run-in-docker/sample.docx": {
       "id": "e78a0a801c9fa012.docx",
       "pages": 5,
@@ -1424,6 +1433,33 @@
       "first": "page-1.jpg",
       "width": 595,
       "height": 841
+    },
+    "_sample_files/getting-started/quick-start-guide/render_docx_to_html.zip": {
+      "id": "4c9dd7b616565b27.html",
+      "pages": 1,
+      "total": 1,
+      "first": "page-1.html",
+      "width": 640,
+      "height": 150,
+      "files": 4
+    },
+    "_sample_files/getting-started/quick-start-guide/render_docx_to_pdf.zip": {
+      "id": "c2732aa930138220.html",
+      "pages": 1,
+      "total": 1,
+      "first": "page-1.html",
+      "width": 640,
+      "height": 150,
+      "files": 4
+    },
+    "_sample_files/getting-started/quick-start-guide/render_docx_to_png.zip": {
+      "id": "98ea3a9f48e2dcf3.html",
+      "pages": 1,
+      "total": 1,
+      "first": "page-1.html",
+      "width": 640,
+      "height": 150,
+      "files": 4
     },
     "_sample_files/getting-started/quick-start-guide/sample.docx": {
       "id": "e78a0a801c9fa012.docx",
@@ -1444,6 +1480,15 @@
       "first": "page-1.jpg",
       "width": 595,
       "height": 841
+    },
+    "_sample_files/rendering-basics/render-archives/documents.zip": {
+      "id": "f6122f3ae4b885c6.html",
+      "pages": 1,
+      "total": 1,
+      "first": "page-1.html",
+      "width": 640,
+      "height": 477,
+      "files": 21
     },
     "_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg": {
       "id": "9dffd93ca81ce0c0.dwg",
