@@ -50,7 +50,7 @@ dotnet add package GroupDocs.Viewer
 After the installation completes, your project file contains a package reference similar to the following:
 
 ```xml
-<PackageReference Include="GroupDocs.Viewer" Version="26.8.0" />
+<PackageReference Include="GroupDocs.Viewer" Version="26.10.0" />
 ```
 
 ## Example 1: Render a DOCX Document to HTML

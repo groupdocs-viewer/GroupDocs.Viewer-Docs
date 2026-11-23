@@ -14,15 +14,25 @@ This topic describes how to add the **GroupDocs.Viewer** library to your .NET pr
 
 ## Select GroupDocs.Viewer package and version
 
-Starting with [version 26.8](https://releases.groupdocs.com/viewer/net/release-notes/2026/groupdocs-viewer-for-net-26-8-release-notes/), GroupDocs.Viewer is a NuGet [metapackage](https://www.nuget.org/packages/GroupDocs.Viewer) that uses TFM-split packaging. You install one package name; NuGet restores the runtime package that matches your project's target framework:
+Starting with [version 26.8](https://releases.groupdocs.com/viewer/net/release-notes/2026/groupdocs-viewer-for-net-26-8-release-notes/), GroupDocs.Viewer is a NuGet [metapackage](https://www.nuget.org/packages/GroupDocs.Viewer) that uses TFM-split packaging. You install one package name; NuGet restores the runtime package that matches your project's target framework. [Version 26.10](https://releases.groupdocs.com/viewer/net/release-notes/2026/groupdocs-viewer-for-net-26-10-release-notes/) adds runtime packages for .NET 8 and .NET 10:
 
 | Your target framework | Runtime package restored | Runs on |
 | --- | --- | --- |
-| `.NET Framework 4.6.2` and later | [GroupDocs.Viewer.Net462](https://www.nuget.org/packages/GroupDocs.Viewer.Net462) | Windows |
-| `.NET 6.0` or later | [GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60) | Windows x64/x86, Linux x64/ARM64, macOS x64/ARM64 |
-| `.NET 6.0-windows` or later | [GroupDocs.Viewer.Net60.Windows](https://www.nuget.org/packages/GroupDocs.Viewer.Net60.Windows) | Windows, including ARM64 |
+| .NET Framework 4.6.2 and later (`net462` to `net481`) | [GroupDocs.Viewer.Net462](https://www.nuget.org/packages/GroupDocs.Viewer.Net462) | Windows |
+| `net6.0`, `net7.0` | [GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60) | Windows x64/x86, Linux x64/ARM64, macOS x64/ARM64 |
+| `net6.0-windows`, `net7.0-windows` | [GroupDocs.Viewer.Net60.Windows](https://www.nuget.org/packages/GroupDocs.Viewer.Net60.Windows) | Windows, including ARM64 |
+| `net8.0`, `net9.0` | [GroupDocs.Viewer.Net80](https://www.nuget.org/packages/GroupDocs.Viewer.Net80) | Windows x64/x86, Linux x64/ARM64, macOS x64/ARM64 |
+| `net8.0-windows`, `net9.0-windows` | [GroupDocs.Viewer.Net80.Windows](https://www.nuget.org/packages/GroupDocs.Viewer.Net80.Windows) | Windows, including ARM64 |
+| `net10.0` and later | [GroupDocs.Viewer.Net100](https://www.nuget.org/packages/GroupDocs.Viewer.Net100) | Windows x64/x86, Linux x64/ARM64, macOS x64/ARM64 |
+| `net10.0-windows` and later | [GroupDocs.Viewer.Net100.Windows](https://www.nuget.org/packages/GroupDocs.Viewer.Net100.Windows) | Windows, including ARM64 |
 
 Do not reference the runtime packages directly. Add **GroupDocs.Viewer** to your project, and NuGet selects the correct runtime.
+
+Versions 26.8 and 26.9 have no .NET 8 or .NET 10 runtime packages: a project that targets .NET 8 or later restores GroupDocs.Viewer.Net60 or GroupDocs.Viewer.Net60.Windows. When you update such a project to 26.10 or later, NuGet restores the .NET 8 or .NET 10 runtime package instead. No code changes are required.
+
+{{< alert style="info" >}}
+Photoshop and Illustrator files (PSD, PSB, AI) and OneNote files (ONE) render only with GroupDocs.Viewer.Net462 and the `.Windows` runtime packages. To view these formats, target .NET Framework or a `-windows` target framework, such as `net10.0-windows`.
+{{< /alert >}}
 
 {{< alert style="info" >}}
 If you previously used **GroupDocs.Viewer.CrossPlatform**, replace that package reference with **GroupDocs.Viewer**. The assembly name, namespaces, and public API are unchanged, so no code changes are required. As of [26.8](https://www.nuget.org/packages/GroupDocs.Viewer) the CrossPlatform package is deprecated and only forwards to GroupDocs.Viewer.
@@ -32,16 +42,18 @@ You can also use **GroupDocs.Viewer** with **.NET Framework 2.0** (Visual Studio
 
 | Package version | Target frameworks |
 | --- | --- |
+| [26.10.0](https://www.nuget.org/packages/GroupDocs.Viewer/26.10.0) | .NET Framework 4.6.2, .NET 6.0, .NET 6.0-windows, .NET 8.0, .NET 8.0-windows, .NET 10.0, .NET 10.0-windows (TFM-split) |
+| [26.9.0](https://www.nuget.org/packages/GroupDocs.Viewer/26.9.0) | .NET Framework 4.6.2, .NET 6.0, .NET 6.0-windows (TFM-split) |
 | [26.8.0](https://www.nuget.org/packages/GroupDocs.Viewer/26.8.0) | .NET Framework 4.6.2, .NET 6.0, .NET 6.0-windows (TFM-split) |
 | [26.4.0](https://www.nuget.org/packages/GroupDocs.Viewer/26.4.0) | .NET Framework 4.6.2, .NET 6.0 |
 | [25.12.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.12.0) | .NET Framework 4.6.2, .NET 6.0 |
-| [25.11.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.11.0) | .NET Framework 4.6.2, .NET 6.0 |
-| [25.9.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.9.0)   | .NET Framework 4.6.2, .NET 6.0 |
 <details>
 <summary>See previous versions</summary>
 
 | Package version | Target frameworks |
 | --- | --- |
+| [25.11.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.11.0) | .NET Framework 4.6.2, .NET 6.0 |
+| [25.9.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.9.0)   | .NET Framework 4.6.2, .NET 6.0 |
 | [25.8.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.8.0)   | .NET Framework 4.6.2, .NET 6.0 |
 | [25.7.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.7.0)   | .NET Framework 4.6.2, .NET 6.0 |
 | [25.6.0](https://www.nuget.org/packages/GroupDocs.Viewer/25.6.0)   | .NET Framework 4.6.2, .NET 6.0 |
@@ -192,7 +204,7 @@ dotnet add package GroupDocs.Viewer
 
 ## Download GroupDocs.Viewer from the official website
 
-Visit [https://releases.groupdocs.com/viewer/net/](https://releases.groupdocs.com/viewer/net/) and download the **GroupDocs.Viewer** assemblies as a ZIP archive or MSI installer. To reference the downloaded assembly files in your project, do the following:
+Visit [https://releases.groupdocs.com/viewer/net/](https://releases.groupdocs.com/viewer/net/) and download the **GroupDocs.Viewer** assemblies as a ZIP archive or MSI installer. Both contain the same assemblies as the NuGet runtime packages, one set for each target framework in the table above; the ZIP archive arranges them by target framework in the `lib` folder. To reference the downloaded assembly files in your project, do the following:
 
 1. Extract files from the ZIP archive or run the MSI installer to install **GroupDocs.Viewer** to a specific location on your computer.
 2. Open your solution or project in Visual Studio.
@@ -207,5 +219,5 @@ Visit [https://releases.groupdocs.com/viewer/net/](https://releases.groupdocs.co
 5. Click **OK** to add a reference to the **GroupDocs.Viewer** library to your project.
 
 {{< alert style="warning" >}}
-If you reference GroupDocs.Viewer from a ZIP or MSI download instead of NuGet, ensure that your project has all the required dependencies for the target framework. Refer to the following page for details: [GroupDocs.Viewer dependencies](https://www.nuget.org/packages/groupdocs.viewer#dependencies-body-tab).
+If you reference GroupDocs.Viewer from a ZIP or MSI download instead of NuGet, add the package dependencies that your target framework requires. The `readme.txt` file bundled with the download lists the dependencies of each target framework; in the ZIP archive, it also lists the assembly binding redirects that .NET Framework projects must add to `app.config` or `web.config`. The same dependencies are listed on the NuGet page of the matching runtime package, for example [GroupDocs.Viewer.Net100](https://www.nuget.org/packages/GroupDocs.Viewer.Net100#dependencies-body-tab).
 {{< /alert >}}

@@ -39,8 +39,6 @@ GroupDocs.Viewer supports the following Visio file formats:
 
 GroupDocs.Viewer can detect the document format automatically based on information in the file header.
 
-{{< alert style="info" >}}Family of Visio file formats currently are not supported by the `net6.0` runtime ([GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60)). They are supported on Windows with `net462` and `net6.0-windows`.{{< /alert >}}
-
 ## Render Visio files as HTML
 
 Create an [HtmlViewOptions](https://reference.groupdocs.com/viewer/net/groupdocs.viewer.options/htmlviewoptions) class instance and pass it to the [Viewer.View](https://reference.groupdocs.com/viewer/net/groupdocs.viewer/viewer/methods/view/index) method to convert a Visio file to HTML. The `HtmlViewOptions` class properties allow you to control the conversion process. For instance, you can embed all external resources in the generated HTML file, minify the output file, and optimize it for printing. Refer to the following documentation section for details: [Rendering to HTML]({{< ref "viewer/net/developer-guide/rendering-documents/rendering-to-html/_index.md" >}}). 

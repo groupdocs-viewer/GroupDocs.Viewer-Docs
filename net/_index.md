@@ -59,15 +59,13 @@ page_5.html (86 KB)
 {{< /tab >}}
 {{< /tabs >}}
 
-Starting with [version 26.8](https://releases.groupdocs.com/viewer/net/release-notes/2026/groupdocs-viewer-for-net-26-8-release-notes/), **GroupDocs.Viewer** is distributed as a NuGet metapackage. Install the **GroupDocs.Viewer** package and NuGet automatically restores the runtime package that matches your project's target framework, such as `net462`, `net6.0`, or `net6.0-windows`. See [Installation]({{< ref "viewer/net/getting-started/installation.md" >}}) for details.
-
 ## Features
 
 - **190+ Supported File Formats**: Render Microsoft Office, PDF, HTML, CAD, email, archives, images, and more.
 - **Multiple Rendering Formats**: Render documents to HTML, PDF, PNG, and JPG.
 - **Embedded or External Resources**: Produce self-contained HTML pages or HTML with separate CSS, fonts, and images.
 - **Document Format Detection**: Automatically detects the format of input files.
-- **Windows, Linux, and macOS**: One package covers .NET Framework 4.6.2+, .NET 6, and .NET 6 Windows.
+- **Windows, Linux, and macOS**: One NuGet package for .NET Framework 4.6.2 and later and .NET 6 and later.
 
 ## Supported File Formats
 

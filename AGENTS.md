@@ -18,7 +18,7 @@ GroupDocs.Viewer is an on-premise SDK that renders documents in 170+ formats, am
 
 ## .NET target frameworks (canon)
 
-When documenting .NET install/runtime requirements, quote [net/getting-started/system-requirements.md](net/getting-started/system-requirements.md) and do not invent other TFMs. Since 26.8 the GroupDocs.Viewer NuGet package is a metapackage over `net462`, `net6.0` and `net6.0-windows` builds. AI, PSB and PSD files render only with `net462` and `net6.0-windows`.
+When documenting .NET install/runtime requirements, quote [net/getting-started/system-requirements.md](net/getting-started/system-requirements.md) and do not invent other TFMs. Since 26.8 the GroupDocs.Viewer NuGet package is a metapackage; 26.10 added .NET 8 and .NET 10 builds, so it now covers `net462`, `net6.0`, `net6.0-windows`, `net8.0`, `net8.0-windows`, `net10.0` and `net10.0-windows` (runtime packages `GroupDocs.Viewer.Net462`, `.Net60`, `.Net60.Windows`, `.Net80`, `.Net80.Windows`, `.Net100`, `.Net100.Windows`). `net7.0` resolves to the `net6.0` builds, `net9.0` to the `net8.0` builds, and later TFMs to the `net10.0` builds. PSD, PSB, AI and ONE files render only with `net462` and the `-windows` builds. MS Project (MPP, MPT, MPX) and Visio render on every build since 26.8; MS Project on Linux needs the Microsoft TrueType core fonts. (The 26.10 NuGet package readme lists MPP/MPT/MPX as Windows-only: that is wrong, do not copy it.) The cross-platform builds need glibc 2.23+ on Linux x64 and glibc 2.39+ on Linux ARM64 (no Alpine/musl).
 
 The Python package (`groupdocs-viewer-net`) embeds its own .NET runtime, so Python readers install no .NET at all. Its requirements are on the python-net system requirements page.
 

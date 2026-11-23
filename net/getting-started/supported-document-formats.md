@@ -133,13 +133,13 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 | [WMF](https://docs.fileformat.com/image/wmf/) | Windows Metafile | ![(tick)](/viewer/net/images/check-blue.png) | |
 | [WMZ](https://docs.fileformat.com/image/wmz/) | Compressed Windows Metafile | ![(tick)](/viewer/net/images/check-blue.png) | |
 
-{{< alert style="info" >}}AI, PSB, and PSD formats, marked by asterisk (\*), currently are not supported by the `net6.0` runtime ([GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60)). They are supported on Windows with `net462` and `net6.0-windows`.{{< /alert >}}
+{{< alert style="info" >}}AI, PSB, and PSD formats, marked by asterisk (\*), are not supported by the cross-platform runtime packages ([GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60), [GroupDocs.Viewer.Net80](https://www.nuget.org/packages/GroupDocs.Viewer.Net80), and [GroupDocs.Viewer.Net100](https://www.nuget.org/packages/GroupDocs.Viewer.Net100)). They are supported on Windows: target .NET Framework or a `-windows` target framework, such as `net10.0-windows`. See [System requirements]({{< ref "viewer/net/getting-started/system-requirements.md" >}}).{{< /alert >}}
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view image files: [Render images as HTML, PDF, PNG, and JPEG files](/viewer/net/render-images/).
 
 ## Note-taking file formats
 
-{{< alert style="info" >}}The Note file formats family currently is not supported by the `net6.0` runtime ([GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60)). It is supported on Windows with `net462` and `net6.0-windows`.{{< /alert >}}
+{{< alert style="info" >}}The Note file formats family is not supported by the cross-platform runtime packages ([GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60), [GroupDocs.Viewer.Net80](https://www.nuget.org/packages/GroupDocs.Viewer.Net80), and [GroupDocs.Viewer.Net100](https://www.nuget.org/packages/GroupDocs.Viewer.Net100)). It is supported on Windows: target .NET Framework or a `-windows` target framework, such as `net10.0-windows`. See [System requirements]({{< ref "viewer/net/getting-started/system-requirements.md" >}}).{{< /alert >}}
 
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |
@@ -187,7 +187,7 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 
 ## Project Management file formats
 
-{{< alert style="info" >}}The Project Management file formats family currently is not supported by the `net6.0` runtime ([GroupDocs.Viewer.Net60](https://www.nuget.org/packages/GroupDocs.Viewer.Net60)). These formats are supported on Windows with `net462` and `net6.0-windows`.{{< /alert >}}
+{{< alert style="info" >}}On Linux, rendering the Project Management file formats requires the Microsoft TrueType core fonts (the `ttf-mscorefonts-installer` package). Without them, rendering fails with `Cannot find fallback font 'Generic Sans Serif'`. See [System requirements]({{< ref "viewer/net/getting-started/system-requirements.md" >}}).{{< /alert >}}
 
 | Format | Description | Automatic format detection |
 | --- | --- | :---: |
