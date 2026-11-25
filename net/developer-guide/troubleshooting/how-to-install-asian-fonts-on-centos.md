@@ -23,13 +23,9 @@ To install a group of packages that includes fonts for Asian languages on Centos
 
 2. Execute the following command to install the group of packages:
 
-{{< tabs "example1">}}
-{{< tab "Shell" >}}
 ```sh
 yum group install -y Fonts
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
 
 ![](/viewer/net/images/how-to-install-asian-fonts-on-centos_1.png)
@@ -48,13 +44,9 @@ To install a group of packages that includes fonts for Asian languages on Centos
 
 2. The font packages are separated into groups. Execute the following command to list them:
 
-{{< tabs "example2">}}
-{{< tab "Shell" >}}
 ```sh
 yum grouplist
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
 ![](/viewer/net/images/how-to-install-asian-fonts-on-centos_4.png)
 
@@ -64,13 +56,9 @@ yum grouplist
 
 4. If needed, install the Chinese language support. To do this, execute the following command:
 
-{{< tabs "example3">}}
-{{< tab "Shell" >}}
 ```sh
 yum groupinstall -y "Chinese Support"
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
 ![](/viewer/net/images/how-to-install-asian-fonts-on-centos_6.png)
 
@@ -80,13 +68,9 @@ yum groupinstall -y "Chinese Support"
 
 To install other Asian languages, use the following commands:
 
-{{< tabs "example4">}}
-{{< tab "Shell" >}}
 ```sh
 yum groupinstall -y "Japanese Support"
 yum groupinstall -y "Korean Support"
 yum groupinstall -y "Hindi Support"
 yum groupinstall -y "Kannada Support"
 ```
-{{< /tab >}}
-{{< /tabs >}}

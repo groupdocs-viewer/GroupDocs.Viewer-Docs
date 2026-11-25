@@ -95,7 +95,7 @@ In Visual Studio, right-click the required project and select **Set as Startup P
 
 If you have a GroupDocs.Viewer license file, specify its path in `Examples/GroupDocs.Viewer.Examples.CSharp/Utils.cs`:
 
-```csharp
+```
 public const string LicensePath = @"C:\licenses\GroupDocs.Viewer.lic";
 ```
 
@@ -135,7 +135,8 @@ To run only a specific example, open `RunExamples.cs` in the selected startup pr
 
 For example, the following configuration runs only the `HelloWorld` example:
 
-```csharp
+
+```
 #region Quick Start
 
 // SetLicenseFromFile.Run();

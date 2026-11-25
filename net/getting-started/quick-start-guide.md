@@ -59,7 +59,7 @@ The following example renders a Microsoft Word document to HTML with embedded re
 
 You can download the complete example project [here](/viewer/net/_sample_files/getting-started/quick-start-guide/render_docx_to_html.zip).
 
-{{< tabs "demo_app_render_docx_to_html">}}
+{{< tabs "demo-app-render-docx-to-html">}}
 {{< tab "Program.cs" >}}
 ```csharp
 using System.IO;
@@ -133,7 +133,7 @@ The following example renders the same DOCX document to a single PDF file.
 
 You can download the complete example project [here](/viewer/net/_sample_files/getting-started/quick-start-guide/render_docx_to_pdf.zip).
 
-{{< tabs "demo_app_render_docx_to_pdf">}}
+{{< tabs "demo-app-render-docx-to-pdf">}}
 {{< tab "Program.cs" >}}
 ```csharp
 using System.IO;
@@ -203,7 +203,7 @@ The following example renders each page of a DOCX document as a separate PNG ima
 
 You can download the complete example project [here](/viewer/net/_sample_files/getting-started/quick-start-guide/render_docx_to_png.zip).
 
-{{< tabs "demo_app_render_docx_to_png">}}
+{{< tabs "demo-app-render-docx-to-png">}}
 {{< tab "Program.cs" >}}
 ```csharp
 using System.IO;

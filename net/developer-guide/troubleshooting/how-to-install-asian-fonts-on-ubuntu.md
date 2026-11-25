@@ -26,25 +26,17 @@ To install Asian Fonts on Ubuntu, follow these steps:
 
 5. Execute the following command to update the packages list with updates and new packages:
 
-{{< tabs "example1">}}
-{{< tab "Shell" >}}
 ```sh
 apt-get update
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
 ![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_2.png)
 
 6. Excecute the following command to install the Japanese language support:
 
-{{< tabs "example2">}}
-{{< tab "Shell" >}}
 ```sh
 apt-get install -y language-pack-ja
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
 ![](/viewer/net/images/how-to-install-asian-fonts-on-ubuntu_3.png)
 
@@ -54,11 +46,7 @@ apt-get install -y language-pack-ja
 
 To install other Asian languages, use the following commands:
 
-{{< tabs "example3">}}
-{{< tab "Shell" >}}
 ```sh
 apt-get install -y language-pack-zh*
 apt-get install -y language-pack-ko
 ```
-{{< /tab >}}
-{{< /tabs >}}
