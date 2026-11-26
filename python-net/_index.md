@@ -21,7 +21,7 @@ structuredData:
 {{< button style="primary" link="https://pypi.org/project/groupdocs-viewer-net/" >}} {{< icon "gdoc_download" >}} Download from PyPI {{< /button >}}
 {{< button style="primary" link="https://products.groupdocs.app/viewer/family" >}} <svg class="gdoc-icon gdoc-product-doc__btn-icon"><use xlink:href="/img/groupdocs-stack.svg#app"></use></svg> Online app {{< /button >}}
 
-[GroupDocs.Viewer for Python via .NET](https://products.groupdocs.com/viewer/python-net/) is a high-performance document rendering library that lets you view 190+ file formats — including DOCX, XLSX, PPTX, PDF, CAD drawings, emails, archives, and images — by rendering them to HTML, PDF, PNG, or JPG. No third-party software required.
+[GroupDocs.Viewer for Python via .NET](https://products.groupdocs.com/viewer/python-net/) is a high-performance document rendering library that lets you view 190+ file formats — including DOCX, XLSX, PPTX, PDF, CAD drawings, emails, archives, and images — by rendering them to HTML, PDF, PNG, or JPG, to files or to memory. No third-party software required, and the `groupdocs-viewer` command opens documents in your browser.
 
 <div style="clear:left"></div>
 
@@ -60,6 +60,9 @@ page_5.html (86 KB)
 - **190+ File Formats**: Render Microsoft Office, PDF, HTML, CAD, email, archives, images, and more.
 - **Multiple Output Formats**: Render documents to HTML, PDF, PNG, and JPG.
 - **Embedded or External Resources**: Produce self-contained HTML pages or HTML with separate CSS, fonts, and images.
+- **Rendering to Memory**: Write pages and resources to `BytesIO` objects or your own streams instead of files.
+- **Cancellation**: Stop a long render from another thread or after a time limit.
+- **Browser Viewer**: The `groupdocs-viewer` command opens a document, or a whole folder, in the GroupDocs.Viewer UI on your machine.
 - **Format Detection**: Automatically detects the format of input files.
 - **Cross-Platform**: Works on Windows, Linux, and macOS.
 
@@ -80,11 +83,15 @@ GroupDocs.Viewer supports a wide range of file formats. For a complete list, see
 
 ## Getting Started
 
-To get started, refer to the [System Requirements]({{< ref "viewer/python-net/getting-started/system-requirements.md" >}}), [Supported File Formats]({{< ref "viewer/python-net/getting-started/supported-document-formats.md" >}}), [Installation]({{< ref "viewer/python-net/getting-started/installation" >}}), and [Quick Start Guide]({{< ref "viewer/python-net/getting-started/quick-start-guide" >}}) sections for setup instructions.
+To get started, refer to the [System Requirements]({{< ref "viewer/python-net/getting-started/system-requirements.md" >}}), [Supported File Formats]({{< ref "viewer/python-net/getting-started/supported-document-formats.md" >}}), [Installation]({{< ref "viewer/python-net/getting-started/installation.md" >}}), and [Hello, World!]({{< ref "viewer/python-net/getting-started/hello-world.md" >}}) sections for setup instructions and your first rendering, and to [View documents in the browser]({{< ref "viewer/python-net/getting-started/view-documents-in-the-browser.md" >}}) to open files without writing code.
 
 ## Developer Guide
 
 For practical code examples and explanations of basic and advanced rendering functions, see the [Developer Guide]({{< ref "viewer/python-net/developer-guide" >}}) section. This guide includes instructions on loading documents, retrieving document metadata, and performing document rendering.
+
+## AI Agents & LLM Integration
+
+Using an AI coding assistant? The [AI Agents & LLM Integration]({{< ref "viewer/python-net/agents-and-llm-integration.md" >}}) page covers the bundled `AGENTS.md` reference, the GroupDocs MCP servers, and machine-readable documentation. [SDK, Cloud or MCP?]({{< ref "viewer/python-net/sdk-cloud-mcp.md" >}}) compares the ways to render documents from Python.
 
 ## Technical Support
 

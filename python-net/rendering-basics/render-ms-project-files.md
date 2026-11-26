@@ -191,7 +191,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "project_page_0_1.png" >}}  
 ```text
-Binary file (PNG, 259 KB)
+Binary file (PNG, 225 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_to_png/project_page_0_1.png)
 {{< /tab >}}
@@ -229,7 +229,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "project_to_jpg_1.jpg" >}}  
 ```text
-Binary file (JPG, 184 KB)
+Binary file (JPG, 185 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ms-project-files/render_project_to_jpg/project_to_jpg_1.jpg)
 {{< /tab >}}

@@ -61,12 +61,12 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-ebook-to-html-outputs.zip" >}}  
 ```text
-render_ebook_to_html/pdf_page_1.html (48 KB)
-render_ebook_to_html/pdf_page_2.html (507 KB)
-render_ebook_to_html/pdf_page_3.html (312 KB)
-render_ebook_to_html/pdf_page_4.html (424 KB)
-render_ebook_to_html/pdf_page_5.html (479 KB)
-render_ebook_to_html/pdf_page_6.html (357 KB)
+render_ebook_to_html/pdf_page_1.html (53 KB)
+render_ebook_to_html/pdf_page_2.html (735 KB)
+render_ebook_to_html/pdf_page_3.html (388 KB)
+render_ebook_to_html/pdf_page_4.html (732 KB)
+render_ebook_to_html/pdf_page_5.html (736 KB)
+render_ebook_to_html/pdf_page_6.html (395 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ebooks/render_ebook_to_html/render-ebook-to-html-outputs.zip)
 {{< /tab >}}
@@ -110,12 +110,12 @@ if __name__ == "__main__":
 render_ebook_to_html_external/pdf_page_1.html (2 KB)
 render_ebook_to_html_external/pdf_page_1/resource_1_f.woff (11 KB)
 render_ebook_to_html_external/pdf_page_1/resource_1_f1.woff (18 KB)
-render_ebook_to_html_external/pdf_page_1/resource_1_i.png (3 KB)
+render_ebook_to_html_external/pdf_page_1/resource_1_i.png (7 KB)
 render_ebook_to_html_external/pdf_page_1/resource_1_s.css (3 KB)
 render_ebook_to_html_external/pdf_page_2.html (4 KB)
 render_ebook_to_html_external/pdf_page_2/resource_2_f.woff (13 KB)
 render_ebook_to_html_external/pdf_page_2/resource_2_f1.woff (20 KB)
-render_ebook_to_html_external/pdf_page_2/resource_2_i.png (342 KB)
+render_ebook_to_html_external/pdf_page_2/resource_2_i.png (513 KB)
 render_ebook_to_html_external/pdf_page_2/resource_2_s.css (3 KB)
 [TRUNCATED] (30 files total)
 ```
@@ -154,7 +154,7 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "ebook.pdf" >}}  
 ```text
-Binary file (PDF, 340 KB)
+Binary file (PDF, 341 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-ebooks/render_ebook_to_pdf/ebook.pdf)
 {{< /tab >}}

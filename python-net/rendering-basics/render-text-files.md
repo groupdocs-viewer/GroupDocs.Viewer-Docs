@@ -40,7 +40,7 @@ GroupDocs.Viewer supports the following text and programming file formats:
 * [.H (C/C++/Objective-C Header File)](https://docs.fileformat.com/programming/h/)
 * [.HAML (Haml Source Code File)](https://docs.fileformat.com/programming/haml/)
 * [.HH (C++ Header File)](https://docs.fileformat.com/programming/hh/)
-* [.JAVA (Java Source Code File)](https://docs.fileformat.com/programming/python-net/)
+* [.JAVA (Java Source Code File)](https://docs.fileformat.com/programming/java/)
 * [.JS (JavaScript File)](https://docs.fileformat.com/web/js/)
 * [.JSON (JavaScript Object Notation File)](https://docs.fileformat.com/web/json/)
 * [.LESS (LESS Style Sheet)](https://docs.fileformat.com/web/less/)

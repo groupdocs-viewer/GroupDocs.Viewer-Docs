@@ -14,7 +14,7 @@
   "zips": true,
   "files": {
     "_output_files/_index/quick-example/quick-outputs.zip": {
-      "id": "eefb8447da09656e.html",
+      "id": "d33aa9d323602c86.html",
       "pages": 5,
       "total": 5,
       "first": "page-1.html",
@@ -22,7 +22,7 @@
       "height": 1123
     },
     "_output_files/developer-guide/loading-documents/load-document-from-local-disk/load_document_from_local_disk/load-document-from-local-disk-outputs.zip": {
-      "id": "035267020928ee39.html",
+      "id": "4446926fce389394.html",
       "pages": 5,
       "total": 5,
       "first": "page-1.html",
@@ -30,7 +30,7 @@
       "height": 1123
     },
     "_output_files/developer-guide/loading-documents/load-document-from-stream/load_document_from_stream/load-document-from-stream-outputs.zip": {
-      "id": "6396081812b0b607.html",
+      "id": "f385fa436b0d9716.html",
       "pages": 5,
       "total": 5,
       "first": "page-1.html",
@@ -38,7 +38,7 @@
       "height": 1123
     },
     "_output_files/developer-guide/loading-documents/load-document-from-url/load_document_from_url/load-document-from-url-outputs.zip": {
-      "id": "fd84b5dfc816a6af.html",
+      "id": "b99448a2b5ce9951.html",
       "pages": 3,
       "total": 3,
       "first": "page-1.html",
@@ -46,11 +46,11 @@
       "height": 1123
     },
     "_output_files/developer-guide/processing-attachments/how-to-extract-and-save-attachments/extract_and_save_attachments/extract-and-save-attachments-outputs.zip": {
-      "id": "dfff184b81ba0d3f.zip",
+      "id": "942c6b0db1d017eb.zip",
       "skip": "not pages"
     },
     "_output_files/developer-guide/rendering-documents/_index/render_document_to_png/render-document-to-png-outputs.zip": {
-      "id": "f59b6fdcc9202850.png",
+      "id": "bc891d9b578083ef.png",
       "pages": 5,
       "total": 5,
       "first": "page-1.jpg",
@@ -58,7 +58,7 @@
       "height": 1123
     },
     "_output_files/developer-guide/rendering-documents/_index/render_specific_pages/render-specific-pages-outputs.zip": {
-      "id": "9921e2276a310047.png",
+      "id": "ddf1ec631d73ee09.png",
       "pages": 2,
       "total": 2,
       "first": "page-1.jpg",
@@ -66,7 +66,15 @@
       "height": 1123
     },
     "_output_files/developer-guide/rendering-documents/add-text-watermark/add_text_watermark/add-text-watermark-outputs.zip": {
-      "id": "b00f71bb66d6349e.html",
+      "id": "0a6df240db8f9796.html",
+      "pages": 5,
+      "total": 5,
+      "first": "page-1.html",
+      "width": 794,
+      "height": 1123
+    },
+    "_output_files/developer-guide/rendering-documents/cancel-rendering/cancel_after_time_limit/cancel-after-time-limit-outputs.zip": {
+      "id": "c20c450036571062.html",
       "pages": 5,
       "total": 5,
       "first": "page-1.html",
@@ -74,7 +82,7 @@
       "height": 1123
     },
     "_output_files/developer-guide/rendering-documents/rendering-to-html/_index/render_to_html_embedded/render-to-html-embedded-outputs.zip": {
-      "id": "ce4275f0da2b6fdf.html",
+      "id": "50d6d50b556b5f43.html",
       "pages": 5,
       "total": 5,
       "first": "page-1.html",
@@ -82,7 +90,7 @@
       "height": 1123
     },
     "_output_files/developer-guide/rendering-documents/rendering-to-html/_index/render_to_html_external/render-to-html-external-outputs.zip": {
-      "id": "25fdbf704d0e3e5f.html",
+      "id": "5cca6c5c3e4f806e.html",
       "pages": 5,
       "total": 5,
       "first": "page-1.html",
@@ -90,11 +98,19 @@
       "height": 1123
     },
     "_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/pdf-remove-unused-resources/remove_unused_resources/remove-unused-resources-outputs.zip": {
-      "id": "88312f4ad9f39ed0.zip",
+      "id": "0ddc08cb96bb4e33.zip",
+      "skip": "not pages"
+    },
+    "_output_files/developer-guide/threads-and-processes/render_in_processes/render-in-processes-outputs.zip": {
+      "id": "0832fbd576d1dba3.zip",
+      "skip": "not pages"
+    },
+    "_output_files/developer-guide/threads-and-processes/render_in_threads/render-in-threads-outputs.zip": {
+      "id": "dd9ea52b6d6c7aed.zip",
       "skip": "not pages"
     },
     "_output_files/getting-started/quick-start-guide/render_docx_to_html/render-docx-to-html-outputs.zip": {
-      "id": "76e92004b34d253d.html",
+      "id": "890cc4077fa98193.html",
       "pages": 5,
       "total": 5,
       "first": "page-1.html",
@@ -102,7 +118,7 @@
       "height": 1123
     },
     "_output_files/getting-started/quick-start-guide/render_docx_to_png/render-docx-to-png-outputs.zip": {
-      "id": "9548d351c725f7d0.png",
+      "id": "0ebbba27765620b6.png",
       "pages": 5,
       "total": 5,
       "first": "page-1.jpg",
@@ -110,7 +126,7 @@
       "height": 1123
     },
     "_output_files/product-overview/quick_example/quick-outputs.zip": {
-      "id": "ae8fc24c7752244d.html",
+      "id": "d658fc616e4f1d65.html",
       "pages": 5,
       "total": 5,
       "first": "page-1.html",
@@ -118,7 +134,7 @@
       "height": 1123
     },
     "_output_files/rendering-basics/render-archive-files/render_archive_to_html/pdf_page_1.html": {
-      "id": "9f55e82553117692.html",
+      "id": "45d1102cce4292a9.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -126,7 +142,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-archive-files/render_archive_to_single_html/archive_to_single_html.html": {
-      "id": "9f55e82553117692.html",
+      "id": "45d1102cce4292a9.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -134,7 +150,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-archive-files/render_archive_with_custom_filename/archive_with_custom_filename_1.html": {
-      "id": "5f0930b6e3c2d5b9.html",
+      "id": "2ca42d976482a97f.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -158,12 +174,20 @@
       "height": 1196
     },
     "_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_cad_to_html_external/render-cad-to-html-external-outputs.zip": {
-      "id": "f76847651ef95f70.html",
+      "id": "9fd4adeeead57010.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
       "width": 816,
       "height": 1056
+    },
+    "_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_layers_to_html/page_1.html": {
+      "id": "fb671cfbdce401fa.html",
+      "pages": 1,
+      "total": 1,
+      "first": "page-1.html",
+      "width": 2000,
+      "height": 1196
     },
     "_output_files/rendering-basics/render-cad-documents/specify-rendering-options/enable_performance_mode/Output-Page#1.html": {
       "id": "15c72766449a037d.html",
@@ -174,7 +198,7 @@
       "height": 598
     },
     "_output_files/rendering-basics/render-cad-documents/specify-rendering-options/split_drawing_into_tiles/split-drawing-into-tiles-outputs.zip": {
-      "id": "6e6f85b1d985ee1b.html",
+      "id": "156a2e5ab680c587.html",
       "pages": 4,
       "total": 4,
       "first": "page-1.html",
@@ -182,7 +206,7 @@
       "height": 1194
     },
     "_output_files/rendering-basics/render-ebooks/render_ebook_to_html/render-ebook-to-html-outputs.zip": {
-      "id": "c7d7ba15d59710da.html",
+      "id": "bda0ec9e341f9f4b.html",
       "pages": 6,
       "total": 6,
       "first": "page-1.html",
@@ -190,7 +214,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-ebooks/render_ebook_to_html_external/render-ebook-to-html-external-outputs.zip": {
-      "id": "a1f70dc1d117e4f6.html",
+      "id": "df6f37885b7eae6d.html",
       "pages": 6,
       "total": 6,
       "first": "page-1.html",
@@ -198,7 +222,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-ebooks/render_ebook_to_jpg/render-ebook-to-jpg-outputs.zip": {
-      "id": "ace4a0aee57f4579.png",
+      "id": "748327e769a5bb7e.png",
       "pages": 6,
       "total": 6,
       "first": "page-1.jpg",
@@ -206,7 +230,7 @@
       "height": 900
     },
     "_output_files/rendering-basics/render-ebooks/render_ebook_to_png/render-ebook-to-png-outputs.zip": {
-      "id": "f3a3e583a24b05ed.png",
+      "id": "4f91dd9a743ab1fe.png",
       "pages": 6,
       "total": 6,
       "first": "page-1.png",
@@ -214,7 +238,7 @@
       "height": 900
     },
     "_output_files/rendering-basics/render-email-messages/render_email_to_html/pdf_page_1.html": {
-      "id": "70715a171b2ffd76.html",
+      "id": "4785a4740de15894.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -222,7 +246,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-email-messages/render_email_to_html_external/render-email-to-html-external-outputs.zip": {
-      "id": "fbe282aac70d694f.html",
+      "id": "b326c1036c7d57d9.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -230,7 +254,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-email-messages/render_email_to_jpg/render-email-to-jpg-outputs.zip": {
-      "id": "d002ad72ef573d03.png",
+      "id": "b87a0e81de5a75a6.png",
       "pages": 2,
       "total": 2,
       "first": "page-1.jpg",
@@ -238,7 +262,7 @@
       "height": 1000
     },
     "_output_files/rendering-basics/render-email-messages/render_email_to_png/render-email-to-png-outputs.zip": {
-      "id": "1e4b9efea8f5016a.png",
+      "id": "09de3a40467e2247.png",
       "pages": 2,
       "total": 2,
       "first": "page-1.png",
@@ -246,7 +270,7 @@
       "height": 1000
     },
     "_output_files/rendering-basics/render-email-messages/render_email_with_datetime_format/email_with_datetime_format.html": {
-      "id": "4fe0773795faf972.html",
+      "id": "f6a61b3ac45654f1.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -262,7 +286,7 @@
       "height": 360
     },
     "_output_files/rendering-basics/render-images/render_image_to_html_external/render-image-to-html-external-outputs.zip": {
-      "id": "d65f3d42e54fa468.html",
+      "id": "ad3a9e0af127adde.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -278,7 +302,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-lotus-notes-files/render_nsf_to_jpg/render-nsf-to-jpg-outputs.zip": {
-      "id": "29614fd3de706f38.png",
+      "id": "0c6cb49a086bff00.png",
       "pages": 2,
       "total": 2,
       "first": "page-1.jpg",
@@ -286,7 +310,7 @@
       "height": 1000
     },
     "_output_files/rendering-basics/render-lotus-notes-files/render_nsf_to_png/render-nsf-to-png-outputs.zip": {
-      "id": "dc3b837bf62263c0.png",
+      "id": "4d11e07fbe24180f.png",
       "pages": 2,
       "total": 2,
       "first": "page-1.png",
@@ -310,7 +334,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-ms-project-files/render_project_to_html/pdf_page_1.html": {
-      "id": "bcf60aecdf59bd07.html",
+      "id": "2af6f70caae78bb4.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -318,7 +342,7 @@
       "height": 664
     },
     "_output_files/rendering-basics/render-ms-project-files/render_project_to_html_external/render-project-to-html-external-outputs.zip": {
-      "id": "dbedba3db5cdf05a.html",
+      "id": "e90ecdad1747f7c8.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -326,7 +350,7 @@
       "height": 664
     },
     "_output_files/rendering-basics/render-ms-project-files/render_project_with_time_unit/output_1.html": {
-      "id": "158524e8c348b4cd.html",
+      "id": "1424be69e47cd4f7.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -342,7 +366,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-outlook-data-files/render_outlook_to_html/pdf_page_1.html": {
-      "id": "d6b03006013aee92.html",
+      "id": "418b64a514456426.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -350,7 +374,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-outlook-data-files/render_outlook_to_jpg/render-outlook-to-jpg-outputs.zip": {
-      "id": "974d105ad0e871b0.png",
+      "id": "dfe7a563d5152ffd.png",
       "pages": 10,
       "total": 13,
       "first": "page-1.jpg",
@@ -358,7 +382,7 @@
       "height": 900
     },
     "_output_files/rendering-basics/render-outlook-data-files/render_outlook_to_png/render-outlook-to-png-outputs.zip": {
-      "id": "43e86b369f80f0d1.png",
+      "id": "98d5917c2bfb6e0d.png",
       "pages": 10,
       "total": 13,
       "first": "page-1.png",
@@ -366,7 +390,7 @@
       "height": 900
     },
     "_output_files/rendering-basics/render-outlook-data-files/render_outlook_with_filters/outlook_with_filters.html": {
-      "id": "fd2d2845dcdc5e12.html",
+      "id": "97ddf561c40ecd93.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -374,7 +398,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-outlook-data-files/render_outlook_with_max_items/outlook_with_max_items.html": {
-      "id": "735047c8f0014e46.html",
+      "id": "73b39b2314736607.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -382,7 +406,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-pdf-documents/render_pdf_disable_char_grouping/render-pdf-disable-char-grouping-outputs.zip": {
-      "id": "c5a67aee36852a4b.html",
+      "id": "8877ac0b3e0d4f3e.html",
       "pages": 4,
       "total": 4,
       "first": "page-1.html",
@@ -390,7 +414,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-pdf-documents/render_pdf_preserve_page_size/render-pdf-preserve-page-size-outputs.zip": {
-      "id": "ce7d2bb615c3f2b8.png",
+      "id": "9fb5f2939c71283c.png",
       "pages": 4,
       "total": 4,
       "first": "page-1.jpg",
@@ -398,7 +422,7 @@
       "height": 842
     },
     "_output_files/rendering-basics/render-pdf-documents/render_pdf_text_as_image/render-pdf-text-as-image-outputs.zip": {
-      "id": "6f5bb3831c961ba0.html",
+      "id": "ceef623e35566fba.html",
       "pages": 4,
       "total": 4,
       "first": "page-1.html",
@@ -406,7 +430,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-pdf-documents/render_pdf_to_html/render-pdf-to-html-outputs.zip": {
-      "id": "a9c2652eeceea5f4.html",
+      "id": "7ff14e5a9070d938.html",
       "pages": 4,
       "total": 4,
       "first": "page-1.html",
@@ -414,7 +438,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-pdf-documents/render_pdf_to_html_external/render-pdf-to-html-external-outputs.zip": {
-      "id": "b03aa5cf08e772ad.html",
+      "id": "a1180f9c4976fc83.html",
       "pages": 4,
       "total": 4,
       "first": "page-1.html",
@@ -422,7 +446,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-pdf-documents/render_pdf_to_jpg/render-pdf-to-jpg-outputs.zip": {
-      "id": "7f027ec0b41cb050.png",
+      "id": "f1bc985967178413.png",
       "pages": 4,
       "total": 4,
       "first": "page-1.jpg",
@@ -430,7 +454,7 @@
       "height": 550
     },
     "_output_files/rendering-basics/render-pdf-documents/render_pdf_to_png/render-pdf-to-png-outputs.zip": {
-      "id": "b4a71480e990f668.png",
+      "id": "ca2d694d3b7b04a5.png",
       "pages": 4,
       "total": 4,
       "first": "page-1.jpg",
@@ -438,7 +462,7 @@
       "height": 550
     },
     "_output_files/rendering-basics/render-pdf-documents/render_pdf_with_comments/render-pdf-with-comments-outputs.zip": {
-      "id": "0b2900c740ceb75e.png",
+      "id": "f6530721e2c77364.png",
       "pages": 4,
       "total": 4,
       "first": "page-1.jpg",
@@ -446,7 +470,7 @@
       "height": 1754
     },
     "_output_files/rendering-basics/render-pdf-documents/render_pdf_with_font_hinting/render-pdf-with-font-hinting-outputs.zip": {
-      "id": "3d487318580b4575.png",
+      "id": "fc708cf742e1b0e0.png",
       "pages": 4,
       "total": 4,
       "first": "page-1.jpg",
@@ -454,7 +478,7 @@
       "height": 1754
     },
     "_output_files/rendering-basics/render-pdf-documents/render_pdf_with_image_quality/render-pdf-with-image-quality-outputs.zip": {
-      "id": "4d97af9dc6d752c3.html",
+      "id": "872888deb4cbe0e2.html",
       "pages": 4,
       "total": 4,
       "first": "page-1.html",
@@ -462,7 +486,15 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-pdf-documents/render_pdf_with_layered_rendering/render-pdf-with-layered-rendering-outputs.zip": {
-      "id": "4a5ca23cd8a83383.html",
+      "id": "4a9b6d75afe31454.html",
+      "pages": 4,
+      "total": 4,
+      "first": "page-1.html",
+      "width": 816,
+      "height": 1056
+    },
+    "_output_files/rendering-basics/render-pdf-documents/render_pdf_with_thai_marks_fixed/render-pdf-with-thai-marks-fixed-outputs.zip": {
+      "id": "0a61bcd8ea974845.html",
       "pages": 4,
       "total": 4,
       "first": "page-1.html",
@@ -470,7 +502,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-presentations/render_presentation_to_html/render-presentation-to-html-outputs.zip": {
-      "id": "4ecd6bdc6098f154.html",
+      "id": "e343555366935716.html",
       "pages": 6,
       "total": 6,
       "first": "page-1.html",
@@ -478,7 +510,7 @@
       "height": 720
     },
     "_output_files/rendering-basics/render-presentations/render_presentation_to_html_external/render-presentation-to-html-external-outputs.zip": {
-      "id": "0347a9d387ea2ca3.html",
+      "id": "551c8b256b92eaf8.html",
       "pages": 6,
       "total": 6,
       "first": "page-1.html",
@@ -486,7 +518,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-presentations/render_presentation_to_jpg/render-presentation-to-jpg-outputs.zip": {
-      "id": "de80a189d71ceaf7.png",
+      "id": "3a2bb2d4bfa87073.png",
       "pages": 6,
       "total": 6,
       "first": "page-1.jpg",
@@ -494,7 +526,7 @@
       "height": 550
     },
     "_output_files/rendering-basics/render-presentations/render_presentation_to_png/render-presentation-to-png-outputs.zip": {
-      "id": "e6e152fc8bb94161.png",
+      "id": "4c303da0ce5e190c.png",
       "pages": 6,
       "total": 6,
       "first": "page-1.jpg",
@@ -502,7 +534,7 @@
       "height": 1080
     },
     "_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_csv_with_separator_detection/csv_with_separator_detection_1.html": {
-      "id": "aef82c7b767026fa.html",
+      "id": "088dda98d28358fb.html",
       "pages": 1,
       "total": 1,
       "first": "page-1.html",
@@ -510,7 +542,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_html/render-excel-to-html-outputs.zip": {
-      "id": "1e5f99889e499ffd.html",
+      "id": "7c5967f64e9fe89e.html",
       "pages": 3,
       "total": 3,
       "first": "page-1.html",
@@ -518,7 +550,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_html_external/render-excel-to-html-external-outputs.zip": {
-      "id": "d479a46828863a97.html",
+      "id": "c0542d19c6a9cbb7.html",
       "pages": 3,
       "total": 3,
       "first": "page-1.html",
@@ -526,7 +558,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_jpg/render-excel-to-jpg-outputs.zip": {
-      "id": "11187edfef5f2299.png",
+      "id": "479aadef3ee4c4fe.png",
       "pages": 3,
       "total": 3,
       "first": "page-1.jpg",
@@ -534,7 +566,7 @@
       "height": 900
     },
     "_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_png/render-excel-to-png-outputs.zip": {
-      "id": "62d12c6e3a35ec31.png",
+      "id": "cd6a3aeccd1a8671.png",
       "pages": 3,
       "total": 3,
       "first": "page-1.png",
@@ -542,7 +574,7 @@
       "height": 900
     },
     "_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_single_html/page.html": {
-      "id": "632d1b42d232f501.html",
+      "id": "25b4f53aabac35bf.html",
       "pages": 3,
       "total": 3,
       "first": "page-1.html",
@@ -550,7 +582,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_numbers_to_html/render-numbers-to-html-outputs.zip": {
-      "id": "1f6f2a58f7553b36.html",
+      "id": "fe4558b5a64de3fb.html",
       "pages": 2,
       "total": 2,
       "first": "page-1.html",
@@ -558,7 +590,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_numbers_to_html_external/render-numbers-to-html-external-outputs.zip": {
-      "id": "41eef6428b43c0ee.html",
+      "id": "3f250c9e9681a857.html",
       "pages": 2,
       "total": 2,
       "first": "page-1.html",
@@ -566,7 +598,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_numbers_to_jpg/render-numbers-to-jpg-outputs.zip": {
-      "id": "127d60d5cadce263.png",
+      "id": "7397dc16f955a172.png",
       "pages": 2,
       "total": 2,
       "first": "page-1.jpg",
@@ -574,7 +606,7 @@
       "height": 900
     },
     "_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_numbers_to_png/render-numbers-to-png-outputs.zip": {
-      "id": "59901438b3d1a29f.png",
+      "id": "daab400bc81cfcdf.png",
       "pages": 2,
       "total": 2,
       "first": "page-1.png",
@@ -582,7 +614,7 @@
       "height": 900
     },
     "_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/render_comments/render-comments-outputs.zip": {
-      "id": "c56251fd62a7377d.png",
+      "id": "877bfbe953f59af3.png",
       "pages": 3,
       "total": 3,
       "first": "page-1.png",
@@ -590,7 +622,7 @@
       "height": 816
     },
     "_output_files/rendering-basics/render-text-files/render_text_to_html/render-text-to-html-outputs.zip": {
-      "id": "70f61152819d0397.html",
+      "id": "92a2e9c61beec216.html",
       "pages": 4,
       "total": 4,
       "first": "page-1.html",
@@ -598,7 +630,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-text-files/render_text_to_html_external/render-text-to-html-external-outputs.zip": {
-      "id": "d617baf74146bb2f.html",
+      "id": "810bdbfe78a7c62c.html",
       "pages": 4,
       "total": 4,
       "first": "page-1.html",
@@ -606,7 +638,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-text-files/render_text_to_jpg/render-text-to-jpg-outputs.zip": {
-      "id": "e636ccba519d5c6b.png",
+      "id": "cc304c8382d8bc52.png",
       "pages": 4,
       "total": 4,
       "first": "page-1.jpg",
@@ -614,7 +646,7 @@
       "height": 550
     },
     "_output_files/rendering-basics/render-text-files/render_text_to_png/render-text-to-png-outputs.zip": {
-      "id": "63ee20159fd08b84.png",
+      "id": "6dbacd127a2d99a6.png",
       "pages": 4,
       "total": 4,
       "first": "page-1.png",
@@ -630,7 +662,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-visio-documents/render_visio_to_html/render-visio-to-html-outputs.zip": {
-      "id": "5bbd796bb07ec8d6.html",
+      "id": "7b41bc1d87d30844.html",
       "pages": 3,
       "total": 3,
       "first": "page-1.html",
@@ -638,7 +670,7 @@
       "height": 816
     },
     "_output_files/rendering-basics/render-visio-documents/render_visio_to_html_external/render-visio-to-html-external-outputs.zip": {
-      "id": "e83822e5475d5b9d.html",
+      "id": "c74e462af3c6eb8f.html",
       "pages": 3,
       "total": 3,
       "first": "page-1.html",
@@ -646,7 +678,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-visio-documents/render_visio_to_jpg/render-visio-to-jpg-outputs.zip": {
-      "id": "458da095a61143e7.png",
+      "id": "40552915d0422782.png",
       "pages": 3,
       "total": 3,
       "first": "page-1.jpg",
@@ -654,7 +686,7 @@
       "height": 800
     },
     "_output_files/rendering-basics/render-visio-documents/render_visio_to_png/render-visio-to-png-outputs.zip": {
-      "id": "496120897f7bf11c.png",
+      "id": "da0ea72a19db740c.png",
       "pages": 3,
       "total": 3,
       "first": "page-1.png",
@@ -662,7 +694,7 @@
       "height": 800
     },
     "_output_files/rendering-basics/render-web-documents/render_chm_to_html/render-chm-to-html-outputs.zip": {
-      "id": "a9ea917e8dac92c9.html",
+      "id": "3df94e7c0c7f931d.html",
       "pages": 10,
       "total": 123,
       "first": "page-1.html",
@@ -670,7 +702,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-web-documents/render_chm_to_html_external/render-chm-to-html-external-outputs.zip": {
-      "id": "e526ce53539e8651.html",
+      "id": "185ece11027c4097.html",
       "pages": 10,
       "total": 123,
       "first": "page-1.html",
@@ -678,7 +710,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-web-documents/render_web_to_jpg/render-web-to-jpg-outputs.zip": {
-      "id": "49e155ca80fa90f1.png",
+      "id": "5af318c5cb9b68b7.png",
       "pages": 2,
       "total": 2,
       "first": "page-1.jpg",
@@ -686,7 +718,7 @@
       "height": 650
     },
     "_output_files/rendering-basics/render-web-documents/render_web_to_png/render-web-to-png-outputs.zip": {
-      "id": "533adad77d7aa5e6.png",
+      "id": "078a90197645635f.png",
       "pages": 2,
       "total": 2,
       "first": "page-1.png",
@@ -694,7 +726,7 @@
       "height": 800
     },
     "_output_files/rendering-basics/render-word-documents/render_word_to_html/render-word-to-html-outputs.zip": {
-      "id": "24285d3893f39b01.html",
+      "id": "2bf7e1ee76a5220d.html",
       "pages": 5,
       "total": 5,
       "first": "page-1.html",
@@ -702,7 +734,7 @@
       "height": 1123
     },
     "_output_files/rendering-basics/render-word-documents/render_word_to_html_external/render-word-to-html-external-outputs.zip": {
-      "id": "3460278c34c71194.html",
+      "id": "6233cd01d7890745.html",
       "pages": 5,
       "total": 5,
       "first": "page-1.html",
@@ -710,7 +742,7 @@
       "height": 1123
     },
     "_output_files/rendering-basics/render-word-documents/render_word_to_jpg/render-word-to-jpg-outputs.zip": {
-      "id": "1263a6579612566e.png",
+      "id": "396725662c2f3065.png",
       "pages": 5,
       "total": 5,
       "first": "page-1.jpg",
@@ -718,7 +750,7 @@
       "height": 1123
     },
     "_output_files/rendering-basics/render-word-documents/render_word_to_png/render-word-to-png-outputs.zip": {
-      "id": "5482022b2cf40dac.png",
+      "id": "7a8167cbf5526331.png",
       "pages": 5,
       "total": 5,
       "first": "page-1.jpg",
@@ -726,7 +758,7 @@
       "height": 1123
     },
     "_output_files/rendering-basics/render-word-documents/render_word_with_margins/render-word-with-margins-outputs.zip": {
-      "id": "ad816a9d6e52440e.html",
+      "id": "fbbcaaa6c3578006.html",
       "pages": 5,
       "total": 5,
       "first": "page-1.html",
@@ -734,7 +766,7 @@
       "height": 1123
     },
     "_output_files/rendering-basics/render-xml-documents/render_xml_to_html/render-xml-to-html-outputs.zip": {
-      "id": "fc43055915358ea3.html",
+      "id": "5091a5c73dfb0d98.html",
       "pages": 3,
       "total": 3,
       "first": "page-1.html",
@@ -742,7 +774,7 @@
       "height": 1056
     },
     "_output_files/rendering-basics/render-xml-documents/render_xml_to_images/render-xml-to-images-outputs.zip": {
-      "id": "6e71135515d91c8f.png",
+      "id": "50e0b6858d7cc057.png",
       "pages": 4,
       "total": 4,
       "first": "page-1.jpg",
@@ -807,6 +839,14 @@
       "height": 792
     },
     "_sample_files/developer-guide/rendering-documents/add-text-watermark/sample.docx": {
+      "id": "e78a0a801c9fa012.docx",
+      "pages": 5,
+      "total": 5,
+      "first": "page-1.jpg",
+      "width": 595,
+      "height": 841
+    },
+    "_sample_files/developer-guide/rendering-documents/cancel-rendering/sample.docx": {
       "id": "e78a0a801c9fa012.docx",
       "pages": 5,
       "total": 5,
@@ -911,6 +951,30 @@
       "height": 841
     },
     "_sample_files/developer-guide/rendering-documents/sample.docx": {
+      "id": "e78a0a801c9fa012.docx",
+      "pages": 5,
+      "total": 5,
+      "first": "page-1.jpg",
+      "width": 595,
+      "height": 841
+    },
+    "_sample_files/developer-guide/rendering-documents/save-output-to-stream/sample.docx": {
+      "id": "e78a0a801c9fa012.docx",
+      "pages": 5,
+      "total": 5,
+      "first": "page-1.jpg",
+      "width": 595,
+      "height": 841
+    },
+    "_sample_files/developer-guide/threads-and-processes/sample.docx": {
+      "id": "e78a0a801c9fa012.docx",
+      "pages": 5,
+      "total": 5,
+      "first": "page-1.jpg",
+      "width": 595,
+      "height": 841
+    },
+    "_sample_files/getting-started/hello-world/sample.docx": {
       "id": "e78a0a801c9fa012.docx",
       "pages": 5,
       "total": 5,

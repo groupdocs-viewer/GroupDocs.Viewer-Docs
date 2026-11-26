@@ -196,9 +196,9 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-visio-to-png-outputs.zip" >}}  
 ```text
-render_visio_to_png/visio_page_0_1.png (45 KB)
-render_visio_to_png/visio_page_0_2.png (60 KB)
-render_visio_to_png/visio_page_0_3.png (57 KB)
+render_visio_to_png/visio_page_0_1.png (35 KB)
+render_visio_to_png/visio_page_0_2.png (47 KB)
+render_visio_to_png/visio_page_0_3.png (45 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_to_png/render-visio-to-png-outputs.zip)
 {{< /tab >}}
@@ -238,7 +238,7 @@ if __name__ == "__main__":
 ```text
 render_visio_to_jpg/visio_to_jpg_1.jpg (34 KB)
 render_visio_to_jpg/visio_to_jpg_2.jpg (44 KB)
-render_visio_to_jpg/visio_to_jpg_3.jpg (42 KB)
+render_visio_to_jpg/visio_to_jpg_3.jpg (43 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-visio-documents/render_visio_to_jpg/render-visio-to-jpg-outputs.zip)
 {{< /tab >}}

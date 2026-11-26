@@ -1,17 +1,17 @@
 ---
 id: quick-start-guide
-url: viewer/python-net/getting-started/quick-start-guide
+url: viewer/python-net/quick-start-guide
 title: Quick Start Guide
 linkTitle: Quick Start Guide
 second_title: A simple example of how to use GroupDocs.Viewer for Python via .NET
-weight: 5
+weight: 4
 keywords: quick start, hello world, get started, first rendering, DOCX to HTML, DOCX to PDF, DOCX to PNG, pip install, venv, virtual environment, GroupDocs.Viewer, python
 description: "Set up a virtual environment, install groupdocs-viewer-net, and run three minimal examples — DOCX → HTML, DOCX → PDF, and DOCX → per-page PNG — in under five minutes."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 aliases:
-    - /viewer/python-net/hello-world/
+    - /viewer/python-net/getting-started/quick-start-guide/
 ---
 
 This guide provides a quick overview of how to set up and start using GroupDocs.Viewer for Python via .NET. This library enables developers to render documents to HTML, PDF, PNG, and JPG formats with minimal configuration.
@@ -91,10 +91,10 @@ python3 -m pip install groupdocs-viewer-net
 {{< /tab >}}
 {{< /tabs >}}
 
-Ensure the package is installed successfully. You should see the message 
+Ensure the package is installed successfully. pip also installs `groupdocs-shared-net`, the small package of modules every GroupDocs Python package shares. You should see the message
 
 ```bash
-Successfully installed groupdocs-viewer-net-*
+Successfully installed groupdocs-shared-net-26.11.0 groupdocs-viewer-net-26.11.0
 ```
 
 ## Example 1: Render document to HTML
@@ -352,5 +352,6 @@ After running the app you can deactivate virtual environment by executing `deact
 
 After completing the basics, explore additional resources to enhance your usage:
 - [Supported File Formats]({{< ref "/viewer/python-net/getting-started/supported-document-formats.md" >}}): Review the full list of supported file types.
+- [View documents in the browser]({{< ref "/viewer/python-net/getting-started/view-documents-in-the-browser.md" >}}): Open a document or a folder with the `groupdocs-viewer` command, without writing code.
 - [Licensing]({{< ref "/viewer/python-net/getting-started/licensing-and-subscription.md" >}}): Check details on licensing and evaluation.
 - [Technical Support]({{< ref "viewer/python-net/technical-support" >}}): Contact support for assistance if you encounter issues.

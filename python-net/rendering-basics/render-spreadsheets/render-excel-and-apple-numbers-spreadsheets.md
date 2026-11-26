@@ -346,9 +346,9 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-excel-to-png-outputs.zip" >}}  
 ```text
-render_excel_to_png/spreadsheet_page_0_1.png (89 KB)
-render_excel_to_png/spreadsheet_page_0_2.png (540 KB)
-render_excel_to_png/spreadsheet_page_0_3.png (130 KB)
+render_excel_to_png/spreadsheet_page_0_1.png (64 KB)
+render_excel_to_png/spreadsheet_page_0_2.png (360 KB)
+render_excel_to_png/spreadsheet_page_0_3.png (91 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_png/render-excel-to-png-outputs.zip)
 {{< /tab >}}
@@ -425,9 +425,9 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-excel-to-jpg-outputs.zip" >}}  
 ```text
-render_excel_to_jpg/excel_to_jpg_1.jpg (44 KB)
+render_excel_to_jpg/excel_to_jpg_1.jpg (43 KB)
 render_excel_to_jpg/excel_to_jpg_2.jpg (196 KB)
-render_excel_to_jpg/excel_to_jpg_3.jpg (62 KB)
+render_excel_to_jpg/excel_to_jpg_3.jpg (61 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/render-excel-and-apple-numbers-spreadsheets/render_excel_to_jpg/render-excel-to-jpg-outputs.zip)
 {{< /tab >}}

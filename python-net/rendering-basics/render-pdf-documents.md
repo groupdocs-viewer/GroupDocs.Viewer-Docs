@@ -26,6 +26,7 @@ GroupDocs.Viewer supports the following PDF and Page Layout file formats:
 * [Microsoft XML Paper Specification](https://docs.fileformat.com/page-description-language/xps/) (.XPS)
 * [Open XML Paper Specification](https://docs.fileformat.com/page-description-language/oxps/) (.OXPS)
 * [LaTeX Source Document](https://docs.fileformat.com/page-description-language/tex/) (.TEX)
+* [Open Fixed-layout Document](https://www.zhihuilib.com/en/article/detail/2/12) (.OFD): needs the SimSun font, see [Render OFD documents](#render-ofd-documents)
 
 ## Render PDF files as HTML
 
@@ -60,10 +61,10 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-to-html-outputs.zip" >}}  
 ```text
-render_pdf_to_html/pdf_page_1.html (636 KB)
-render_pdf_to_html/pdf_page_2.html (264 KB)
-render_pdf_to_html/pdf_page_3.html (299 KB)
-render_pdf_to_html/pdf_page_4.html (76 KB)
+render_pdf_to_html/pdf_page_1.html (732 KB)
+render_pdf_to_html/pdf_page_2.html (402 KB)
+render_pdf_to_html/pdf_page_3.html (408 KB)
+render_pdf_to_html/pdf_page_4.html (85 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_to_html/render-pdf-to-html-outputs.zip)
 {{< /tab >}}
@@ -107,12 +108,12 @@ if __name__ == "__main__":
 render_pdf_to_html_external/pdf_page_1.html (3 KB)
 render_pdf_to_html_external/pdf_page_1/resource_1_f.woff (10 KB)
 render_pdf_to_html_external/pdf_page_1/resource_1_f1.woff (22 KB)
-render_pdf_to_html_external/pdf_page_1/resource_1_i.png (441 KB)
+render_pdf_to_html_external/pdf_page_1/resource_1_i.png (513 KB)
 render_pdf_to_html_external/pdf_page_1/resource_1_s.css (2 KB)
 render_pdf_to_html_external/pdf_page_2.html (9 KB)
 render_pdf_to_html_external/pdf_page_2/resource_2_f.woff (13 KB)
 render_pdf_to_html_external/pdf_page_2/resource_2_f1.woff (23 KB)
-render_pdf_to_html_external/pdf_page_2/resource_2_i.png (153 KB)
+render_pdf_to_html_external/pdf_page_2/resource_2_i.png (256 KB)
 render_pdf_to_html_external/pdf_page_2/resource_2_s.css (3 KB)
 [TRUNCATED] (21 files total)
 ```
@@ -167,10 +168,10 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-with-image-quality-outputs.zip" >}}  
 ```text
-render_pdf_with_image_quality/pdf_with_image_quality_1.html (2779 KB)
-render_pdf_with_image_quality/pdf_with_image_quality_2.html (884 KB)
-render_pdf_with_image_quality/pdf_with_image_quality_3.html (848 KB)
-render_pdf_with_image_quality/pdf_with_image_quality_4.html (102 KB)
+render_pdf_with_image_quality/pdf_with_image_quality_1.html (2784 KB)
+render_pdf_with_image_quality/pdf_with_image_quality_2.html (1428 KB)
+render_pdf_with_image_quality/pdf_with_image_quality_3.html (1433 KB)
+render_pdf_with_image_quality/pdf_with_image_quality_4.html (139 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_with_image_quality/render-pdf-with-image-quality-outputs.zip)
 {{< /tab >}}
@@ -210,10 +211,10 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-text-as-image-outputs.zip" >}}  
 ```text
-render_pdf_text_as_image/text-as-image_1.html (2732 KB)
-render_pdf_text_as_image/text-as-image_2.html (941 KB)
-render_pdf_text_as_image/text-as-image_3.html (898 KB)
-render_pdf_text_as_image/text-as-image_4.html (120 KB)
+render_pdf_text_as_image/text-as-image_1.html (2737 KB)
+render_pdf_text_as_image/text-as-image_2.html (1370 KB)
+render_pdf_text_as_image/text-as-image_3.html (1370 KB)
+render_pdf_text_as_image/text-as-image_4.html (173 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_text_as_image/render-pdf-text-as-image-outputs.zip)
 {{< /tab >}}
@@ -254,14 +255,54 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-with-layered-rendering-outputs.zip" >}}  
 ```text
-render_pdf_with_layered_rendering/pdf_with_layered_rendering_1.html (641 KB)
-render_pdf_with_layered_rendering/pdf_with_layered_rendering_2.html (279 KB)
-render_pdf_with_layered_rendering/pdf_with_layered_rendering_3.html (341 KB)
-render_pdf_with_layered_rendering/pdf_with_layered_rendering_4.html (91 KB)
+render_pdf_with_layered_rendering/pdf_with_layered_rendering_1.html (769 KB)
+render_pdf_with_layered_rendering/pdf_with_layered_rendering_2.html (494 KB)
+render_pdf_with_layered_rendering/pdf_with_layered_rendering_3.html (496 KB)
+render_pdf_with_layered_rendering/pdf_with_layered_rendering_4.html (114 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_with_layered_rendering/render-pdf-with-layered-rendering-outputs.zip)
 {{< /tab >}}
 {{< /tabs >}}
+
+### Fix Thai marks
+
+Safari and the browsers of iOS can display the vowel and tone marks of Thai text apart from their letters when a PDF is rendered to HTML with embedded resources. Since version 26.11, `pdf_options.fix_thai_marks` places them right. It can slow rendering down considerably, so it is off by default: set it for PDF files with Thai text.
+
+{{< tabs "render-pdf-with-thai-marks-fixed">}}
+{{< tab "render_pdf_with_thai_marks_fixed.py" >}}
+```python
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_pdf_with_thai_marks_fixed():
+    # Load PDF document
+    with Viewer("sample.pdf") as viewer:
+        viewOptions = HtmlViewOptions.for_embedded_resources("render_pdf_with_thai_marks_fixed/page_{0}.html")
+        # Place Thai vowel and tone marks with their letters
+        viewOptions.pdf_options.fix_thai_marks = True
+        viewer.view(viewOptions)
+
+if __name__ == "__main__":
+    render_pdf_with_thai_marks_fixed()
+```
+{{< /tab >}}
+{{< tab "sample.pdf" >}}
+{{< tab-text >}}
+`sample.pdf` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-pdf-documents/sample.pdf) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "render-pdf-with-thai-marks-fixed-outputs.zip" >}}  
+```text
+render_pdf_with_thai_marks_fixed/page_1.html (732 KB)
+render_pdf_with_thai_marks_fixed/page_2.html (402 KB)
+render_pdf_with_thai_marks_fixed/page_3.html (408 KB)
+render_pdf_with_thai_marks_fixed/page_4.html (85 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_with_thai_marks_fixed/render-pdf-with-thai-marks-fixed-outputs.zip)
+{{< /tab >}}
+{{< /tabs >}}
+
+The sample catalog has no Thai text, so its pages look the same either way.
 
 ## Render PDF files as images
 
@@ -460,10 +501,10 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-pdf-disable-char-grouping-outputs.zip" >}}  
 ```text
-render_pdf_disable_char_grouping/pdf_disable_char_grouping_1.html (690 KB)
-render_pdf_disable_char_grouping/pdf_disable_char_grouping_2.html (374 KB)
-render_pdf_disable_char_grouping/pdf_disable_char_grouping_3.html (435 KB)
-render_pdf_disable_char_grouping/pdf_disable_char_grouping_4.html (144 KB)
+render_pdf_disable_char_grouping/pdf_disable_char_grouping_1.html (786 KB)
+render_pdf_disable_char_grouping/pdf_disable_char_grouping_2.html (513 KB)
+render_pdf_disable_char_grouping/pdf_disable_char_grouping_3.html (543 KB)
+render_pdf_disable_char_grouping/pdf_disable_char_grouping_4.html (153 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/render_pdf_disable_char_grouping/render-pdf-disable-char-grouping-outputs.zip)
 {{< /tab >}}
@@ -618,3 +659,21 @@ Line 'The wholesale catalog for cafes, grocers and restaurants' X=40 Y=445.27001
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-pdf-documents/extract_pdf_text/extract-pdf-text.txt)
 {{< /tab >}}
 {{< /tabs >}}
+
+## Render OFD documents
+
+GroupDocs.Viewer renders OFD (Open Fixed-layout Document, GB/T 33190-2016), the format that Chinese public institutions use in place of PDF. Every OFD document needs the **SimSun** font. Windows has it; Linux and macOS usually do not, and rendering there fails with `GroupDocsViewerException: Could not load file. File is corrupted or damaged. - Font SimSun was not found`.
+
+On Linux and macOS, install the font for the whole system (copy `simsun.ttc` or `SimSun.ttf` into `/usr/share/fonts` and run `fc-cache -f`), or point GroupDocs.Viewer at the folder that holds it before you create the `Viewer`:
+
+```python
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.fonts import FolderFontSource, FontSettings, SearchOption
+from groupdocs.viewer.options import HtmlViewOptions
+
+# The folder that holds SimSun (simsun.ttc or SimSun.ttf)
+FontSettings.set_font_sources(FolderFontSource("/path/to/fonts", SearchOption.TOP_FOLDER_ONLY))
+
+with Viewer("/path/to/document.ofd") as viewer:
+    viewer.view(HtmlViewOptions.for_embedded_resources("render_ofd_document/page_{0}.html"))
+```

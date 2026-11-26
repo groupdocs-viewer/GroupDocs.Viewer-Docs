@@ -105,4 +105,4 @@ When you render to PDF, the order of the numbers is the order of the pages in th
 
 ## More about rendering
 
-Each format has options of its own, such as the hidden slides of a presentation, the layers of a CAD drawing or the folders of an archive. See [Document rendering basics]({{< ref "viewer/python-net/rendering-basics" >}}). The pages of this section cover the outputs:
+Each format has options of its own, such as the hidden slides of a presentation, the layers of a CAD drawing or the folders of an archive. See [Document rendering basics]({{< ref "viewer/python-net/rendering-basics" >}}). The pages of this section cover the outputs, rendering to memory instead of files, and cancelling a render:

@@ -1,0 +1,39 @@
+# GroupDocs.Viewer documentation
+
+> On-premise SDK docs for rendering Microsoft Office, PDF, CAD, email, archive, image and 190+ other formats to HTML, PDF, PNG and JPEG, and reading document information without rendering.
+> Platforms: net | java | python-net | nodejs-java | mcp
+> .NET TFMs: net462, net6.0, net6.0-windows, net8.0, net8.0-windows, net10.0, net10.0-windows
+
+## Hubs
+
+- https://docs.groupdocs.com/viewer/net/
+- https://docs.groupdocs.com/viewer/java/
+- https://docs.groupdocs.com/viewer/python-net/
+- https://docs.groupdocs.com/viewer/nodejs-java/
+- https://docs.groupdocs.com/viewer/mcp/
+
+## Formats (authoritative tables; the lists differ per platform)
+
+- https://docs.groupdocs.com/viewer/net/supported-document-formats/
+- https://docs.groupdocs.com/viewer/java/supported-document-formats/
+- https://docs.groupdocs.com/viewer/python-net/supported-document-formats/
+- https://docs.groupdocs.com/viewer/nodejs-java/supported-document-formats/
+- https://docs.groupdocs.com/viewer/mcp/supported-formats/
+
+## Related surfaces
+
+- Products: https://products.groupdocs.com/viewer/
+- Releases: https://releases.groupdocs.com/viewer/
+- API reference: https://reference.groupdocs.com/viewer/
+- Python package: groupdocs-viewer-net (PyPI); pip also installs groupdocs-shared-net
+- Python agent guide: https://docs.groupdocs.com/viewer/python-net/agents-and-llm-integration/
+- MCP (link only): https://docs.groupdocs.com/mcp
+- Agent guide in-repo: AGENTS.md
+
+## Per-platform page index and full text
+
+- https://docs.groupdocs.com/viewer/net/llms.txt and https://docs.groupdocs.com/viewer/net/llms-full.txt
+- https://docs.groupdocs.com/viewer/java/llms.txt and https://docs.groupdocs.com/viewer/java/llms-full.txt
+- https://docs.groupdocs.com/viewer/python-net/llms.txt and https://docs.groupdocs.com/viewer/python-net/llms-full.txt
+- https://docs.groupdocs.com/viewer/nodejs-java/llms.txt and https://docs.groupdocs.com/viewer/nodejs-java/llms-full.txt
+- https://docs.groupdocs.com/viewer/mcp/llms.txt and https://docs.groupdocs.com/viewer/mcp/llms-full.txt

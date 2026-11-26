@@ -1,16 +1,16 @@
 ---
 id: supported-document-formats
-url: viewer/python-net/getting-started/supported-document-formats
+url: viewer/python-net/supported-document-formats
 title: Supported File Formats
 linkTitle: Supported File Formats
-weight: 2
+weight: 4
 keywords: file formats, document viewer, GroupDocs.Viewer, Microsoft Office, HTML viewer, PDF viewer, image viewer, CAD, email, archive
 description: "Complete list of the 190+ file formats GroupDocs.Viewer for Python via .NET can render — Microsoft Office, PDF, CAD, email, archives, images, eBooks, and more."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 aliases:
-    - /viewer/python-net/supported-document-formats/
+    - /viewer/python-net/getting-started/supported-document-formats/
 ---
 
 {{< alert style="tip" >}}
@@ -49,6 +49,8 @@ On **Linux and macOS** the package does **not** render **Photoshop** (PSD, PSB),
 | [ZIP](https://docs.fileformat.com/compression/zip) | Zipped File | ![(tick)](/viewer/python-net/images/check-blue.png) |
 | [Zstandard](https://docs.fileformat.com/compression/zst) | Zstandard Archive | ![(tick)](/viewer/python-net/images/check-blue.png) |
 | [ISO](https://docs.fileformat.com/compression/iso) | Optical Disk Image | ![(tick)](/viewer/python-net/images/check-blue.png) |
+| [LHA / LZH](https://docs.fileformat.com/compression/lzh/) | Lha/Lzh Archive | ![(tick)](/viewer/python-net/images/check-blue.png) |
+| [CAB](https://en.wikipedia.org/wiki/Cabinet_(file_format)) | Cabinet | ![(tick)](/viewer/python-net/images/check-blue.png) |
 
 Refer to the following help topic for details on how to use GroupDocs.Viewer to load and view archive files: [Render archives as HTML, PDF, and image files](/viewer/python-net/render-archive-files).
 
@@ -163,8 +165,9 @@ Refer to the following help topic for details on how to use GroupDocs.Viewer to 
 
 ## PDF and Page Layout file formats
 
-| Format | Description | Automatic format detection |
-| --- | --- | :---: |
+| Format | Description | Automatic format detection | Remarks |
+| --- | --- | :---: | --- |
+| [OFD](https://www.zhihuilib.com/en/article/detail/2/12) | Open Fixed-layout Document |  | The SimSun font (SimSun.ttf) must be installed on the system: Windows has it, Linux and macOS usually do not. Learn more [here](/viewer/python-net/render-pdf-documents/#render-ofd-documents). |
 | [OXPS](https://docs.fileformat.com/page-description-language/oxps/) | OpenXPS (Open XML Paper Specification) File | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [PDF](https://docs.fileformat.com/pdf/) | Adobe Portable Document Format | ![(tick)](/viewer/python-net/images/check-blue.png) | |
 | [TEX](https://docs.fileformat.com/page-description-language/tex/) | LaTeX Source Document | ![(tick)](/viewer/python-net/images/check-blue.png) | |

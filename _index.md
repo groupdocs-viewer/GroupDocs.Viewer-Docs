@@ -2,7 +2,7 @@
 id: viewer
 url: viewer
 title: GroupDocs.Viewer Product Family
-description: Excellent file viewer component that empowers your C#, Java, Node.js, and Python applications with document viewing features across 170+ supported file formats.
+description: Excellent file viewer component that empowers your C#, Java, Node.js, and Python applications with document viewing features across 190+ supported file formats.
 geekdocSkip: true
 geekdocNav: false
 geekdocAlign: center
@@ -212,6 +212,6 @@ family:
       url: https://hub.docker.com/r/groupdocs/viewer
     - kind: app
       title: GroupDocs.Viewer Free App
-      description: View 170+ file and document types online for free
+      description: View 190+ file and document types online for free
       url: https://products.groupdocs.app/viewer/total
 ---

@@ -1,0 +1,23 @@
+{
+  "file": "viewer/python-net/_preview/5af318c5cb9b68b7.png",
+  "fileName": "render-web-to-jpg-outputs.zip",
+  "fileType": "png",
+  "canPrint": false,
+  "searchTerm": null,
+  "pages": [
+    {
+      "number": 1,
+      "width": 1600,
+      "height": 650,
+      "pageUrl": "/viewer/python-net/_preview/5af318c5cb9b68b7.png/page-1.jpg",
+      "thumbUrl": "/viewer/python-net/_preview/5af318c5cb9b68b7.png/page-1.jpg"
+    },
+    {
+      "number": 2,
+      "width": 1600,
+      "height": 650,
+      "pageUrl": "/viewer/python-net/_preview/5af318c5cb9b68b7.png/page-2.jpg",
+      "thumbUrl": "/viewer/python-net/_preview/5af318c5cb9b68b7.png/page-2.jpg"
+    }
+  ]
+}

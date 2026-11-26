@@ -3,8 +3,8 @@ id: agents-and-llm-integration
 url: viewer/python-net/agents-and-llm-integration
 title: Agents and LLM Integration
 linkTitle: Agents and LLMs
-description: "GroupDocs.Viewer for Python via .NET is AI agent and LLM friendly — machine-readable documentation, an MCP server, AGENTS.md shipped inside the pip package, and runnable code examples for AI-driven document pipelines."
-weight: 9
+description: "GroupDocs.Viewer for Python via .NET is AI agent and LLM friendly — machine-readable documentation, MCP servers, AGENTS.md shipped inside the pip package, and runnable code examples for AI-driven document pipelines."
+weight: 6
 keywords: AI, LLM, agent, RAG, MCP, machine-readable, documentation, Claude, GPT, Copilot, AGENTS.md, document rendering, viewer
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
@@ -87,6 +87,16 @@ To connect your AI tool to the MCP server, add the GroupDocs endpoint to your MC
 
 See [https://docs.groupdocs.com/mcp](https://docs.groupdocs.com/mcp) for full setup instructions and the list of available tools.
 
+### GroupDocs.Viewer MCP server
+
+The documentation server helps an agent write code. The [GroupDocs.Viewer MCP server](https://docs.groupdocs.com/viewer/mcp/) is a separate tool for the opposite case: the agent itself needs to see a document. It renders any page of a PDF, Word, Excel, PowerPoint, email or CAD file as a PNG image on your machine and hands it to the agent, so a vision-capable model can read a chart, check a layout or describe a scan, with nothing uploaded. Run it with Docker, or with `dnx GroupDocs.Viewer.Mcp --yes` when the .NET 10 SDK is installed:
+
+```bash
+docker run --rm -i -v $(pwd)/documents:/data ghcr.io/groupdocs-viewer/viewer-net-mcp:latest
+```
+
+Use the documentation server when an agent writes Python code against this library, and the Viewer MCP server when the agent reads documents. [SDK, Cloud or MCP?]({{< ref "viewer/python-net/sdk-cloud-mcp.md" >}}) compares the options.
+
 ## AGENTS.md — built into the package
 
 The `groupdocs-viewer-net` pip package includes an `AGENTS.md` file at `groupdocs/viewer/AGENTS.md`. AI coding assistants that scan installed packages (such as Claude Code, Cursor, GitHub Copilot) can automatically discover the API surface, usage patterns, and troubleshooting tips.
@@ -106,7 +116,7 @@ Every documentation page is available as a plain Markdown file that AI tools can
 | Full documentation (single file) | `https://docs.groupdocs.com/viewer/python-net/llms-full.txt` |
 | Full documentation (all products) | `https://docs.groupdocs.com/llms-full.txt` |
 | Individual page (any page) | Append `.md` to the page URL, e.g. `https://docs.groupdocs.com/viewer/python-net.md` |
-| Quick start guide | `https://docs.groupdocs.com/viewer/python-net/getting-started/quick-start-guide.md` |
+| Quick start guide | `https://docs.groupdocs.com/viewer/python-net/quick-start-guide.md` |
 
 ### How to use with AI tools
 
@@ -120,7 +130,7 @@ as a reference for GroupDocs.Viewer for Python via .NET API.
 Or reference individual pages for focused tasks:
 
 ```
-Read https://docs.groupdocs.com/viewer/python-net/getting-started/quick-start-guide.md
+Read https://docs.groupdocs.com/viewer/python-net/quick-start-guide.md
 and help me render a DOCX to HTML in Python.
 ```
 
@@ -143,8 +153,9 @@ from groupdocs.viewer.options import (
 
 # Step 1: Inspect — let the agent decide what to do based on metadata
 with Viewer("inbox/incoming.docx") as v:
-    info = v.get_view_info(ViewInfoOptions.for_html_view())
-    print(f"format={info.file_type} pages={info.pages_count}")
+    file_info = v.get_file_info()
+    view_info = v.get_view_info(ViewInfoOptions.for_html_view())
+    print(f"format={file_info.file_type.file_format} pages={len(view_info.pages)}")
 
 # Step 2: Render to a model-friendly format
 with Viewer("inbox/incoming.docx") as v:
@@ -178,7 +189,7 @@ The content below is the same `AGENTS.md` file that ships inside the `groupdocs-
 
 > Instructions for AI agents working with this package.
 
-Render documents to HTML, PNG, JPG, or PDF -- 190+ file formats supported.
+Render documents to HTML, PNG, JPG, or PDF -- 190+ file formats supported -- to files or to memory, and open them in the browser with the `groupdocs-viewer` command.
 
 ## Install
 
@@ -187,6 +198,8 @@ pip install groupdocs-viewer-net
 ```
 
 **Python**: 3.5 - 3.14 (pip 20.3+) | **Platforms**: Windows x64, Linux x64 (glibc 2.27+), macOS 12+ (x64, ARM64)
+
+pip also installs `groupdocs-shared-net`, which holds the modules every GroupDocs Python package shares. For an offline install, download both wheels and install them together: `pip install --no-index --find-links <folder> groupdocs-viewer-net`.
 
 ## Resources
 
@@ -216,6 +229,8 @@ If your environment has MCP configured, you can connect your AI tool to the Grou
 ```
 
 Works with Claude Code (`~/.claude/settings.json`), Cursor (`.cursor/mcp.json`), VS Code Copilot (`.vscode/mcp.json`), and any MCP-compatible client. If MCP is unavailable, fall back to the LLM-optimized docs URL above and this file -- both are shipped inside the wheel.
+
+**GroupDocs.Viewer MCP server.** A separate server lets an agent see document pages: it renders any page as a PNG image on the user's machine and hands it to the agent, with nothing uploaded. Run it with `docker run --rm -i -v $(pwd)/documents:/data ghcr.io/groupdocs-viewer/viewer-net-mcp:latest`, or `dnx GroupDocs.Viewer.Mcp --yes` with the .NET 10 SDK. Setup for each AI client: https://docs.groupdocs.com/viewer/mcp/
 
 ## Imports
 
@@ -295,6 +310,9 @@ with Viewer("spreadsheet.xlsx") as viewer:
 ## Render selected pages / reorder pages
 
 ```python
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions, PdfViewOptions
+
 # Render only pages 1 and 3
 with Viewer("document.docx") as viewer:
     viewer.view(HtmlViewOptions.for_embedded_resources("page_{0}.html"),
@@ -326,9 +344,9 @@ from groupdocs.viewer.options import ViewInfoOptions
 
 with Viewer("document.pdf") as viewer:
     info = viewer.get_view_info(ViewInfoOptions.for_html_view())
-    print(f"Pages: {len(info.pages)}")
+    print("Pages:", len(info.pages))
     for page in info.pages:
-        print(f"  Page {page.number}: {page.width}x{page.height}")
+        print("  Page %d: %dx%d" % (page.number, page.width, page.height))
 ```
 
 **Viewer constructor.** `Viewer(source, load_options=None, settings=None, leave_open=None)` accepts all four positional **or** as kwargs. Prefer kwargs when you only need `settings`:
@@ -336,6 +354,7 @@ with Viewer("document.pdf") as viewer:
 ```python
 from groupdocs.viewer import Viewer, ViewerSettings
 from groupdocs.viewer.logging import ConsoleLogger
+from groupdocs.viewer.options import HtmlViewOptions
 
 settings = ViewerSettings(logger=ConsoleLogger())
 
@@ -345,7 +364,19 @@ with Viewer("input.docx", settings=settings) as viewer:   # no None placeholder
 
 ## Render to custom streams
 
-Unlike most GroupDocs products, Viewer **does** support Python callables that return streams. Pass a function to the `HtmlViewOptions` / `PngViewOptions` / `JpgViewOptions` / `PdfViewOptions` constructors that accept `CreatePageStream` / `CreateResourceStream` / `CreateFileStream` factories — the bridge auto-wraps your Python callable as a .NET stream factory.
+Viewer accepts Python callables that return streams. Pass a function to the `HtmlViewOptions` / `PngViewOptions` / `JpgViewOptions` / `PdfViewOptions` constructors that take the `CreatePageStream` / `CreateResourceStream` / `CreateResourceUrl` / `CreateFileStream` delegates, and the bridge wraps it as the .NET delegate. This lets a web service return the output without touching the disk.
+
+```python
+# The whole document as one PDF in memory, e.g. for an HTTP response
+import io
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+pdf = io.BytesIO()
+with Viewer("input.docx") as viewer:
+    viewer.view(PdfViewOptions(lambda: pdf))
+pdf_bytes = pdf.getvalue()
+```
 
 ```python
 # Write each page to an in-memory buffer
@@ -373,20 +404,30 @@ from groupdocs.viewer.options import HtmlViewOptions
 
 def create_page(page_number):
     os.makedirs("out", exist_ok=True)
-    return open(f"out/page_{page_number}.html", "wb")
+    return open("out/page_%d.html" % page_number, "wb")
 
 def create_resource(page_number, resource_name):
-    return open(f"out/res_{page_number}_{resource_name}", "wb")
+    return open("out/res_%d_%s" % (page_number, resource_name), "wb")
 
 def resource_url(page_number, resource_name):
-    return f"res_{page_number}_{resource_name}"
+    return "res_%d_%s" % (page_number, resource_name)
 
 with Viewer("input.docx") as viewer:
     viewer.view(HtmlViewOptions.for_external_resources(
         create_page, create_resource, resource_url))
 ```
 
-The three factory interfaces (`IPageStreamFactory`, `IResourceStreamFactory`, `IFileStreamFactory`) all accept Python callables — no bridge imports needed. The callable returns any file-like object (`open(...)` or `io.BytesIO()`); the bridge reads from it after `view()` returns.
+What a create function returns, and when its output is ready:
+- **Return** a writable file (`open(..., "wb")`) or an empty `io.BytesIO()`.
+- **When it is filled:** a `BytesIO` is filled as soon as Viewer finishes that page or file, so every buffer holds its output by the time `view()` returns, and stays open. A file is written through its own .NET handle and is complete when Viewer releases it. The file object you returned is closed for you once .NET has opened the file.
+- **Resources:** `resource_name` is the resource's file name, e.g. `s1.css`.
+
+Optional release functions:
+- **Signatures:** `release_page_stream(page_number, stream)`, `release_file_stream(stream)`, `release_resource_stream(page_number, resource_name, stream)`.
+- **How to pass them:** after the create functions: `PngViewOptions(create_page_stream, release_page_stream)`, `PdfViewOptions(create_file_stream, release_file_stream)`, `HtmlViewOptions.for_external_resources(create_page_stream, create_resource_stream, create_resource_url, release_page_stream, release_resource_stream)`.
+- **What they get:** the object your create function returned, already complete.
+
+The factory interfaces (`IPageStreamFactory`, `IFileStreamFactory`, `IResourceStreamFactory`) take an object with `create_page_stream` / `create_file_stream` / `create_resource_stream` (plus `create_resource_url` and the `release_*` methods), or a single create function. Concurrent renders in separate threads each get their own buffers.
 
 ## Save attachments
 
@@ -397,7 +438,7 @@ with Viewer("with_attachments.msg") as viewer:
     for attachment in viewer.get_attachments():
         # Pass a filesystem path — the wrapper opens the file, writes,
         # and closes it. Parent directories are created as needed.
-        viewer.save_attachment(attachment, f"./out/{attachment.file_name}")
+        viewer.save_attachment(attachment, "./out/" + attachment.file_name)
 
         # Equivalent stream form (explicit control over the sink):
         # import io
@@ -407,7 +448,7 @@ with Viewer("with_attachments.msg") as viewer:
 ```
 
 **Note**: the .NET engine's native `SaveAttachment` only exposes the
-`(Attachment, Stream)` overload (still true in 26.8). The path-accepting form is a Python-
+`(Attachment, Stream)` overload (still true in 26.10). The path-accepting form is a Python-
 side convenience layered on top — it wraps the open/close for you.
 
 ## Font sources
@@ -416,10 +457,14 @@ side convenience layered on top — it wraps the open/close for you.
 `params IFontSource[]` method and accepts any of these call shapes:
 
 ```python
+import os
 from groupdocs.viewer.fonts import FontSettings, FolderFontSource, SearchOption
 
-src1 = FolderFontSource("C:/fonts/primary", SearchOption.ALL_FOLDERS)
-src2 = FolderFontSource("C:/fonts/backup", SearchOption.TOP_FOLDER_ONLY)
+for folder in ("fonts/primary", "fonts/backup", "fonts/extra"):
+    os.makedirs(folder, exist_ok=True)   # a font folder must exist
+src1 = FolderFontSource("fonts/primary", SearchOption.ALL_FOLDERS)
+src2 = FolderFontSource("fonts/backup", SearchOption.TOP_FOLDER_ONLY)
+src3 = FolderFontSource("fonts/extra", SearchOption.TOP_FOLDER_ONLY)
 
 FontSettings.set_font_sources(src1, src2)          # varargs
 FontSettings.set_font_sources([src1, src2])        # single list
@@ -432,6 +477,41 @@ FontSettings.reset_font_sources()   # clear
 All four shapes normalize to the same flat list before crossing the
 bridge. Strings are never flattened (a string path is passed through
 as-is, not exploded into characters).
+
+## View documents in the browser (`groupdocs-viewer`)
+
+The package installs a console command that serves a file or a folder to the
+GroupDocs.Viewer web UI on this machine, using only the standard library:
+
+```bash
+groupdocs-viewer                      # the current folder
+groupdocs-viewer path/to/folder -v    # log each request
+groupdocs-viewer report.docx -t png   # one file, rendered as PNG pages
+python -m groupdocs.viewer --version
+```
+
+Options: `path` (default: the current folder), `-p/--port` (default 8080, a free
+port when it is busy, `0` for any), `-b/--bind` (default `127.0.0.1`),
+`--allow-host NAME` (repeatable), `--no-open`, `-l/--license-path` (file or URL;
+default `GROUPDOCS_LIC_PATH`), `-t/--viewer-type html|png|jpg` (default `html`),
+`--cache-dir`, `-v/--verbose`.
+
+What to know when you suggest it:
+- It is for a person at this machine. The address it prints and opens carries a
+  session token (`/?token=...`); the page turns it into a cookie, and the API
+  answers only with that cookie. After a restart, or in another browser, open the
+  new printed address. It binds to `127.0.0.1`, answers only `localhost` names and
+  refuses cross-site requests; with `-b 0.0.0.0` other machines can connect, and
+  only the token keeps them out.
+- Given a file, only that file is served. Given a folder, its subfolders are
+  browsable; hidden files (on Windows also files with the hidden or system
+  attribute) and links leading out of it are not. There is no upload.
+- Rendered pages are cached per user and rendered again when a file changes.
+- A licence that cannot be applied stops the command at startup (exit 1). With no
+  licence, pages render in evaluation mode.
+- To embed the viewer in a FastAPI, Flask or Django application, with cloud
+  storage, a shared cache or authentication, use the `groupdocs-viewer-net-ui`
+  package instead.
 
 ## Licensing
 
@@ -446,9 +526,22 @@ with open("license.lic", "rb") as f:
     License().set_license(f)
 ```
 
-Or auto-apply: `export GROUPDOCS_LIC_PATH="path/to/license.lic"`
+Or auto-apply: `export GROUPDOCS_LIC_PATH="path/to/license.lic"`. It is applied at the first Viewer call, not at import. If it cannot be applied (an expired subscription, a licence for another product, a missing file), every Viewer call raises `LicenseError` naming the variable and the engine's reason, until a licence is applied:
 
-**Evaluation vs licensed.** Without a license the library still runs, but PDF output carries an evaluation watermark stamp and non-PDF targets show an equivalent evaluation mark; there is also a page/document count cap. Set `GROUPDOCS_LIC_PATH` (or call `License().set_license(...)`) and re-run to clear both. A 30-day full license is free: https://purchase.groupdocs.com/temporary-license
+```python
+from groupdocs.viewer import License, LicenseError, Viewer
+
+try:
+    viewer = Viewer("document.docx")
+except LicenseError as e:
+    print(e)                                   # GROUPDOCS_LIC_PATH=... could not be applied: <reason>
+    License().set_license("path/to/other.lic")  # ends the refusal
+    viewer = Viewer("document.docx")
+```
+
+`GROUPDOCS_LIC_STRICT=0` turns the failure into one `LicenseWarning` and evaluation mode instead.
+
+**Evaluation vs licensed.** Without a license the library still runs, but every rendered page carries an evaluation notice, and only the first two pages of a document are rendered: `get_view_info` reports at most two pages too (a 5-page DOCX or a 6-slide PPTX gives 2). Set `GROUPDOCS_LIC_PATH` (or call `License().set_license(...)`) and re-run to clear both. A 30-day full license is free: https://purchase.groupdocs.com/temporary-license
 
 ## API Reference
 
@@ -457,10 +550,10 @@ Or auto-apply: `export GROUPDOCS_LIC_PATH="path/to/license.lic"`
 | Method | Returns | Description |
 |---|---|---|
 | `__init__(source, load_options=None, settings=None, leave_open=None)` | | `source` is a path, bytes, or stream |
-| `view(options, cancellation_token=None, page_numbers=None)` | `None` | Render with `HtmlViewOptions` / `PngViewOptions` / `JpgViewOptions` / `PdfViewOptions` |
+| `view(options, cancellation_token=None, page_numbers=None)` | `None` | Render with `HtmlViewOptions` / `PngViewOptions` / `JpgViewOptions` / `PdfViewOptions`. `view(options, [1, 3])` renders pages 1 and 3; `cancellation_token`: see "Cancelling a long render" |
 | `get_view_info(options)` | `ViewInfo` | Page count, size, layout info (use `ViewInfoOptions.for_html_view()` etc.) |
 | `get_file_info()` | `FileInfo` | Format, name, encrypted flag without viewing |
-| `get_attachments(cancellation_token=None)` | `list[Attachment]` | Embedded attachments (emails, PDFs) |
+| `get_attachments()` | `list[Attachment]` | Embedded attachments (emails, PDFs) |
 | `save_attachment(attachment, destination)` | `None` | Extract one attachment. `destination` can be a filesystem path (`str` / `os.PathLike`) or a writable stream (`BytesIO` / `open(..., "wb")`). Paths: the wrapper opens the file, writes through, and closes it — parent dirs are auto-created. Streams: passed straight to the bridge; caller owns the lifetime. |
 | `get_all_fonts()` | `list` | Fonts embedded in the document |
 | `search(options)` | `None` | Search with `SearchHighlightOptions` |
@@ -486,6 +579,10 @@ Accepts the factory methods `for_embedded_resources(...)` and `for_external_reso
 | `render_notes` | `bool` | yes (inherited from `BaseViewOptions`) |
 | `default_font_name` | `str` | yes (inherited from `BaseViewOptions`) |
 | `*_options` (`archive_options`, `cad_options`, `email_options`, `outlook_options`, `pdf_options`, `presentation_options`, `project_management_options`, `spreadsheet_options`, `text_options`, `visio_rendering_options`, `web_document_options`, `word_processing_options`, `mail_storage_options`) | format-specific tweaks | yes |
+
+Two HTML options are new in 26.11 (engine 26.10):
+- `options.cad_options.enable_layered_rendering = True` groups each CAD layer's objects under an element whose `id` is the layer name, so a page can show and hide layers without rendering again.
+- `options.pdf_options.fix_thai_marks = True` fixes stranded Thai marks when a PDF is rendered to HTML with embedded resources (`for_embedded_resources`). It can slow rendering down considerably.
 
 ### PngViewOptions / JpgViewOptions
 
@@ -553,7 +650,7 @@ Construct with `Watermark(text)` then tweak appearance.
 
 ## FileType enum
 
-Viewer exposes 190+ file formats on a single flat `FileType` class — access via `FileType.DOCX`, `FileType.PDF`, etc. (case-insensitive). Members grouped by family:
+Viewer exposes every file type it knows on a single flat `FileType` class — access via `FileType.DOCX`, `FileType.PDF`, etc. (case-insensitive). Members grouped by family:
 
 <!-- begin:filetypes -->
 | Family | Members |
@@ -572,10 +669,10 @@ Viewer exposes 190+ file formats on a single flat `FileType` class — access vi
 | Web / Markup | `HTML, HTM, MHT, MHTML, XML, JSON, CSS` |
 | 3D | `Usd, Usdz, Obj, Ply, Gltf, Glb, ThreeDS, ThreeMF` |
 | Fonts | `TTF, EOT, OTF, CFF, WOFF, WOFF2, Type1` |
-| Source code / Text | `MD, LOG, AS, AS3, ASM, BAT, C, CC, CMAKE, CPP, CS, CXX, DIFF, ...` (190+ total — use `FileType.get_supported_file_types()` to enumerate at runtime) |
+| Source code / Text | `MD, LOG, AS, AS3, ASM, BAT, C, CC, CMAKE, CPP, CS, CXX, DIFF, ...` (the full list: `FileType.get_supported_file_types()` at runtime) |
 <!-- end:filetypes -->
 
-Use `FileType.from_extension("docx")` when you don't know which family owns a format — it returns the correct `FileType` instance. `FileType.from_stream(stream)` sniffs file headers. `FileType.get_supported_file_types()` returns what the running engine can render — on Linux/macOS it omits PSD, PSB, AI and ONE (193 extensions there, 197 on Windows) — so it is the reliable platform gate.
+Use `FileType.from_extension("docx")` when you don't know which family owns a format — it returns the correct `FileType` instance. `FileType.from_stream(stream)` sniffs file headers. `FileType.get_supported_file_types()` returns what the running engine can render — on Linux/macOS it omits PSD, PSB, AI and ONE (194 file types there, 198 on Windows, in 26.11) — so it is the reliable platform gate.
 
 **Platform note:** Linux/macOS wheels run the cross-platform engine, which does **not** render **Photoshop** (`PSD, PSB`), **Adobe Illustrator** (`AI`) or **OneNote** (`ONE`) — those render only on Windows. Every other family works on every platform, including Visio and, since 26.9, Microsoft Project (`MPP, MPT, MPX`). The Python API is the same in every wheel, so `FileType.PSD`, `FileType.PSB`, `FileType.AI` and `FileType.ONE` exist everywhere — but on Linux/macOS touching one raises `GroupDocsViewerException: Member 'GroupDocs.Viewer.FileType.PSD' not found.` Gate on `FileType.get_supported_file_types()` instead.
 
@@ -583,7 +680,7 @@ Use `FileType.from_extension("docx")` when you don't know which family owns a fo
 
 - **Properties**: use `snake_case` -- auto-mapped to .NET `PascalCase`
 - **Context managers**: `with Viewer(...) as x:` ensures resources are released
-- **Streams**: pass `open("file", "rb")` or `io.BytesIO(data)` where .NET expects Stream
+- **Streams**: pass `open("file", "rb")` or `io.BytesIO(data)` where .NET expects Stream. A file object stays open and is read from its current position. A file opened for update (`"r+b"`) is not truncated, and `"ab"` appends.
 - **Stream write-back**: `BytesIO` objects are updated after .NET writes to them
 - **Enums**: case-insensitive, lazy-loaded (e.g., `FileType.DOCX`)
 - **Collections**: every property whose declared return type is
@@ -610,6 +707,9 @@ Use `FileType.from_extension("docx")` when you don't know which family owns a fo
   | `for v in coll` | `GetEnumerator` |
 
   ```python
+  from groupdocs.viewer.options import HtmlViewOptions, Tile
+
+  view_options = HtmlViewOptions.for_embedded_resources("page_{0}.html")
   # view_options.cad_options.tiles is a List<Tile>.
   tiles = view_options.cad_options.tiles
   tiles.append(Tile(0, 0, 500, 500))
@@ -625,8 +725,53 @@ Use `FileType.from_extension("docx")` when you don't know which family owns a fo
 
   Slice assignment (``coll[a:b] = [...]``) is not yet supported —
   use explicit ``del`` + ``insert`` for now.
-- **Callbacks**: Python functions work for handler interfaces including the three stream factories (`CreatePageStream`, `CreateResourceStream`, `CreateFileStream`). See [Render to custom streams](#render-to-custom-streams) above — the bridge auto-wraps Python callables that return file-like objects as .NET `Stream` factories.
+- **Callbacks**:
+  - **Delegates:** Python functions work for the stream delegates `CreatePageStream`, `CreateResourceStream`, `CreateResourceUrl`, `CreateFileStream` and their `Release*` counterparts.
+  - **Factory interfaces:** they take Python objects.
+  - See [Render to custom streams](#render-to-custom-streams) above.
 - **Factory methods**: `HtmlViewOptions.for_embedded_resources("path/page_{0}.html")` and `.for_external_resources(page_fmt, resource_fmt, url_fmt)` accept either string path templates OR callback factories. The dispatcher Python-side type-checks before calling into .NET, so positional strings route to the string overload without a bridge round-trip.
+
+## Multiprocessing and web servers
+
+The engine runs in your Python process on an embedded .NET runtime, and .NET does not survive `fork()`. Once a process has made its first GroupDocs call, a process forked from it cannot use GroupDocs.
+
+**Safe:**
+- threads, with one `Viewer` per thread;
+- `uvicorn --workers N`, and `gunicorn` without `--preload`: each worker imports the app itself;
+- `multiprocessing.get_context("spawn")` or `"forkserver"` (the Linux default from Python 3.14), e.g. `ProcessPoolExecutor(mp_context=multiprocessing.get_context("spawn"))`;
+- forking before the first GroupDocs call.
+
+**Not safe**, once the parent has made a GroupDocs call:
+- the `fork` start method (the Linux default before Python 3.14);
+- `gunicorn --preload` with an app that calls GroupDocs while loading;
+- Celery's prefork pool.
+
+Such a child gets `RuntimeError: The .NET runtime cannot be used in a process forked after it started ...` at its first GroupDocs call, and the parent keeps working. Wheels up to 26.9.0 instead crashed the **parent** with a segmentation fault.
+
+## Cancelling a long render
+
+Pass a `CancellationTokenSource`'s `token` to `view()`, and cancel it from any thread, or after a delay. The call then raises `OperationCanceledError`:
+
+```python
+from groupdocs.viewer import CancellationTokenSource, OperationCanceledError, Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+source = CancellationTokenSource()
+source.cancel_after(30)           # seconds; or source.cancel() from another thread
+try:
+    with Viewer("large.xlsx") as viewer:
+        viewer.view(HtmlViewOptions.for_embedded_resources("page_{0}.html"),
+                    cancellation_token=source.token)
+except OperationCanceledError:
+    pass                          # the pages written so far stay; the next render works
+```
+
+- **Call shapes:** `view(options, cancellation_token=token)` or `view(options, token)` renders every page. With a page list, the token comes first, as in .NET: `view(options, token, [1, 2])`, or `view(options, page_numbers=[1, 2], cancellation_token=token)`. `cancellation_token=None` is the same as no token.
+- **What the engine checks** (GroupDocs.Viewer for .NET 26.10, which this package wraps; measured from Python, and on 26.8 from C# too):
+  - **before rendering starts:** a cancel during a long load takes effect when the load ends;
+  - **between pages of an all-pages render to HTML, PNG or JPG:** it stops within 0.03 s;
+  - **nothing else:** a PDF render, and a render of an explicit page list (`view(options, token, [1, 2])`), run to the end once rendering has started.
+- **To stop a long PDF render**, run it in a worker process and terminate the process on timeout. Use `multiprocessing.get_context("spawn")`; see "Multiprocessing and web servers" above.
 
 ## Platform Requirements
 
@@ -647,7 +792,7 @@ The wheel tags state these floors (`manylinux_2_27_x86_64`, `macosx_12_0_x86_64`
 | OneNote (ONE) | Yes | No |
 | All other formats (Office, PDF, Visio, Project, CAD, images, email, archives, eBooks, web, …) | Yes | Yes |
 
-Linux/macOS wheels run the cross-platform build of the engine (`GroupDocs.Viewer.Net60`), which renders every format except Photoshop (PSD, PSB), Adobe Illustrator (AI) and OneNote — those are Windows-only. Everything else works on every platform, including Visio and, since 26.9, Microsoft Project (MPP, MPT, MPX).
+Linux/macOS wheels run the cross-platform build of the engine (`GroupDocs.Viewer.Net100`), and Windows wheels its Windows build (`GroupDocs.Viewer.Net100.Windows`). The cross-platform build renders every format except Photoshop (PSD, PSB), Adobe Illustrator (AI) and OneNote — those are Windows-only. Everything else works on every platform, including Visio and Microsoft Project (MPP, MPT, MPX).
 
 ## Troubleshooting
 
@@ -665,9 +810,17 @@ Linux/macOS wheels run the cross-platform build of the engine (`GroupDocs.Viewer
 
 **`DllNotFoundException: libSkiaSharp`** -- stale system copy conflicts with bundled version. Rename it: `sudo mv /usr/local/lib/libSkiaSharp.dylib /usr/local/lib/libSkiaSharp.dylib.bak`
 
-**`DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` errors** -- do NOT set this. Install ICU: `sudo apt install libicu-dev`
+**The process exits with code 134 and `Couldn't find a valid ICU package`**, with no Python exception (Linux) -- ICU is missing. Install it: `sudo apt install libicu-dev`. Do NOT set `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` instead.
+
+**`RuntimeError: The .NET runtime cannot be used in a process forked after it started`**, or the parent process dying with a segmentation fault (up to 26.9.0) -- a worker was forked after the parent's first GroupDocs call. Use the `spawn` start method, start the workers before the first call, or drop `gunicorn --preload`. See [Multiprocessing and web servers](#multiprocessing-and-web-servers).
 
 **`is not a supported wheel on this platform` / `No matching distribution found for groupdocs-viewer-net` / pip installs a version older than 26.9** -- the OS is older than glibc 2.27 / macOS 12, or pip is older than 20.3 (`python -m pip install --upgrade pip`). Versions up to 26.5 were tagged for older systems, so an unpinned install falls back to them, and they fail at first use there. On an Intel Mac, a Python built against an old SDK reports macOS 10.16: use pip 24.1+ or `SYSTEM_VERSION_COMPAT=0 pip install groupdocs-viewer-net`.
+
+**Page images (PNG, JPG) of a spreadsheet lose the spaces between words and clip digits at cell edges** (Linux) -- a known issue of engine 26.10. Render spreadsheets to PDF or HTML on Linux.
+
+**A workbook rendered twice with the same `Viewer` has more pages the second time** -- a known engine issue. Create a new `Viewer` for each render.
+
+**The process dies while rendering a presentation whose fonts are not installed** (Linux) -- it happens when Debian's `fonts-noto-extra` is installed. Set `default_font_name` on the view options to an installed font, or remove `fonts-noto-extra`.
 
 **`TypeLoadException`** -- reinstall: `pip install --force-reinstall groupdocs-viewer-net`
 
@@ -677,6 +830,7 @@ Linux/macOS wheels run the cross-platform build of the engine (`GroupDocs.Viewer
 ## See also
 
 - [Quick Start Guide]({{< ref "viewer/python-net/getting-started/quick-start-guide" >}}) — your first rendering in five minutes
+- [SDK, Cloud or MCP?]({{< ref "viewer/python-net/sdk-cloud-mcp.md" >}}) — which GroupDocs.Viewer product line fits your project
 - [Developer Guide]({{< ref "viewer/python-net/developer-guide" >}}) — runnable examples for every API surface
 - [Rendering Basics]({{< ref "viewer/python-net/rendering-basics" >}}) — per-format rendering guides
 - [API Reference](https://reference.groupdocs.com/viewer/python-net) — full class and method documentation

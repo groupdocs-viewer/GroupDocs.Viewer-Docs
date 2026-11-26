@@ -37,6 +37,9 @@ Typical uses include:
 | **Attachments** | [Extract attachments]({{< ref "viewer/python-net/developer-guide/processing-attachments/how-to-extract-and-save-attachments" >}}) from emails, archives, and PDFs. |
 | **Document inspection** | [Read file type, page count, and attachment list]({{< ref "viewer/python-net/developer-guide/get-document-info" >}}) without rendering. |
 | **Streams** | Load input from file-like objects — handy for cloud blobs and HTTP bodies. |
+| **Rendering to memory** | [Write pages and resources to `BytesIO` objects]({{< ref "viewer/python-net/developer-guide/rendering-documents/save-output-to-stream.md" >}}) or your own streams instead of files. |
+| **Cancellation** | [Stop a long render]({{< ref "viewer/python-net/developer-guide/rendering-documents/cancel-rendering.md" >}}) from another thread or after a time limit. |
+| **Browser viewer** | The `groupdocs-viewer` command [opens a document or a folder in the browser]({{< ref "viewer/python-net/getting-started/view-documents-in-the-browser.md" >}}), with nothing to install beyond the package. |
 | **Logging and diagnostics** | Wire `ConsoleLogger` through `ViewerSettings` for production traces. |
 | **On-premise** | No cloud calls, no Microsoft Office install, no network traffic. |
 
@@ -97,8 +100,9 @@ page_5.html (86 KB)
 ## Where to next
 
 1. **Install the package** — [Installation]({{< ref "viewer/python-net/getting-started/installation" >}}) walks through PyPI and offline wheel installation for Windows, Linux, and macOS.
-2. **Run your first rendering** — [Quick Start Guide]({{< ref "viewer/python-net/getting-started/quick-start-guide" >}}) renders a DOCX to HTML, PDF, and PNG in five minutes.
-3. **Explore the examples** — [Running Examples]({{< ref "viewer/python-net/getting-started/how-to-run-examples" >}}) clones the runnable repository and runs every documented scenario locally or in Docker.
-4. **Use it in depth** — the [Developer Guide]({{< ref "viewer/python-net/developer-guide" >}}) covers loading, rendering, inspecting, page selection, watermarks, and attachments.
-5. **Render per format** — the [Rendering Basics]({{< ref "viewer/python-net/rendering-basics" >}}) section has per-format guides for PDF, Word, Excel, presentations, CAD, email, and more.
-6. **Plug it into AI pipelines** — [Agents and LLM Integration]({{< ref "viewer/python-net/agents-and-llm-integration" >}}) explains the MCP server, `AGENTS.md`, and how to chain GroupDocs.Viewer with GroupDocs.Conversion for exotic inputs.
+2. **Run your first rendering** — [Hello, World!]({{< ref "viewer/python-net/getting-started/hello-world.md" >}}) renders a DOCX to PDF, and the [Quick Start Guide]({{< ref "viewer/python-net/getting-started/quick-start-guide" >}}) renders it to HTML, PDF, and PNG in five minutes.
+3. **Open files without code** -- [View documents in the browser]({{< ref "viewer/python-net/getting-started/view-documents-in-the-browser.md" >}}) with the `groupdocs-viewer` command.
+4. **Explore the examples** — [Running Examples]({{< ref "viewer/python-net/getting-started/how-to-run-examples" >}}) clones the runnable repository and runs every documented scenario locally or in Docker.
+5. **Use it in depth** — the [Developer Guide]({{< ref "viewer/python-net/developer-guide" >}}) covers loading, rendering, inspecting, page selection, watermarks, and attachments.
+6. **Render per format** — the [Rendering Basics]({{< ref "viewer/python-net/rendering-basics" >}}) section has per-format guides for PDF, Word, Excel, presentations, CAD, email, and more.
+7. **Plug it into AI pipelines** — [Agents and LLM Integration]({{< ref "viewer/python-net/agents-and-llm-integration" >}}) explains the MCP server, `AGENTS.md`, and how to chain GroupDocs.Viewer with GroupDocs.Conversion for exotic inputs.

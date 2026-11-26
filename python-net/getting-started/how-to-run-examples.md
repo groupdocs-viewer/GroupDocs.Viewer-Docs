@@ -1,6 +1,6 @@
 ---
 id: how-to-run-examples
-url: viewer/python-net/getting-started/how-to-run-examples
+url: viewer/python-net/how-to-run-examples
 title: How to Run Examples
 linkTitle: How to Run Examples
 weight: 7
@@ -10,195 +10,117 @@ productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 aliases:
-    - /viewer/python-net/how-to-run-examples/
+    - /viewer/python-net/getting-started/how-to-run-examples/
 ---
 
-This page explains how to set up and run the code examples for **GroupDocs.Viewer for Python via .NET**. The examples demonstrate common usage scenarios such as rendering documents to **HTML, PDF, PNG, and JPEG**, working with documents inside archives, extracting attachments, and retrieving document information.
+The complete project [GroupDocs.Viewer for Python via .NET](https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET) with code examples and sample files is hosted on GitHub. Every example of this documentation is there as a script, next to the documents it renders.
 
 ## Prerequisites
 
-Before running the examples, ensure that you have:
+- [Python 3.6-3.14](https://www.python.org/downloads/), 64-bit. The package itself supports Python 3.5-3.14; the examples use f-strings.
+- On Linux, ICU, fontconfig and fonts (`libicu-dev libfontconfig1 ttf-mscorefonts-installer`; on Debian, enable the `contrib` component first). See [System Requirements]({{< ref "/viewer/python-net/getting-started/system-requirements.md" >}}) for what each one is needed for. Windows and macOS need nothing extra.
 
-1. A **configured environment** that meets the requirements described in the [System Requirements]({{< ref "/viewer/python-net/getting-started/system-requirements.md" >}}) topic.
-2. The **examples repository**, cloned or downloaded from GitHub:  
-   <https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET>
+## Get the code
 
-## Project Structure
-
-The examples repository mirrors the structure of this documentation — every page in the Developer Guide and Rendering Basics sections has a matching folder under `Examples/`:
-
-```text
-📂 GroupDocs.Viewer-for-Python-via-.NET
-├── Demos
-│   ├── hello-world-docker
-│   │   ├── Dockerfile
-│   │   ├── README.md
-│   │   ├── render_docx_to_html.py
-│   │   ├── requirements.txt
-│   │   └── sample.docx
-│   └── hello-world-macos
-│       ├── README.md
-│       ├── render_docx_to_html.py
-│       ├── requirements.txt
-│       └── sample.docx
-├── Examples
-│   ├── getting-started
-│   │   └── quick-start-guide
-│   │       ├── render_docx_to_html.py
-│   │       ├── render_docx_to_pdf.py
-│   │       ├── render_docx_to_png.py
-│   │       └── sample.docx
-│   ├── developer-guide
-│   │   ├── get-document-info
-│   │   ├── loading-documents
-│   │   ├── logging-and-diagnostics
-│   │   ├── processing-attachments
-│   │   └── rendering-documents
-│   ├── rendering-basics
-│   │   ├── render-archive-files
-│   │   ├── render-cad-documents
-│   │   ├── render-email-messages
-│   │   ├── render-images
-│   │   ├── render-pdf-documents
-│   │   ├── render-presentations
-│   │   ├── render-spreadsheets
-│   │   ├── render-text-files
-│   │   ├── render-visio-documents
-│   │   ├── render-web-documents
-│   │   └── render-word-documents
-│   ├── licensing
-│   │   ├── set_license_from_file.py
-│   │   ├── set_license_from_stream.py
-│   │   └── set_metered_license.py
-│   ├── requirements.txt
-│   └── run_all_examples.py
-├── Dockerfile
-├── LICENSE
-└── README.md
+```bash
+git clone https://github.com/groupdocs-viewer/GroupDocs.Viewer-for-Python-via-.NET.git
+cd ./GroupDocs.Viewer-for-Python-via-.NET/Examples
 ```
 
-## Setup Instructions
+## Project structure
 
-### 1. Create and Activate a Virtual Environment
+```
+Examples/
+├── run_all_examples.py     # Runs every example, each in its own process, and prints a pass/fail summary
+├── requirements.txt
+├── _index/                 # The quick example of the documentation home page
+├── product-overview/       # The quick example of the product overview
+├── licensing/              # Set a license from a file, a stream, or a metered key
+├── getting-started/
+│   ├── hello-world/        # Render a Word document to PDF
+│   └── quick-start-guide/  # A Word document to HTML, PDF and PNG
+├── developer-guide/        # Loading, document info, attachments, logging, threads and processes, and rendering:
+│                           #   HTML, PDF, memory, cancellation, watermarks
+└── rendering-basics/       # A folder per format family: archives, CAD, eBooks, email, images, Lotus Notes,
+                            #   MS Project, Outlook, PDF, presentations, spreadsheets, text, Visio, web, Word, XML
+Demos/
+├── hello-world-docker/     # Render a DOCX to HTML in a Linux container
+└── hello-world-macos/      # The same on macOS
+```
 
-Navigate to the `Examples` directory and create a virtual environment.
+The folders follow this documentation: each page's examples are in the folder of that page, with the documents they read.
 
-**Create a virtual environment:**
+## Set up
 
-{{< tabs "example1">}}
+```bash
+pip install -r requirements.txt
+```
+
+`requirements.txt` installs `groupdocs-viewer-net`, which brings `groupdocs-shared-net`, and `requests` for the example that loads a document from a URL.
+
+To run the examples with the full feature set, apply a license. The simplest way is the `GROUPDOCS_LIC_PATH` environment variable, which the package applies at the first call into the engine:
+
+{{< tabs "set-license" >}}
 {{< tab "Windows" >}}
-```ps
-py -m venv .venv
+```batch
+set GROUPDOCS_LIC_PATH=C:\path\to\GroupDocs.Viewer.lic
 ```
 {{< /tab >}}
-{{< tab "Linux" >}}
+{{< tab "Linux / macOS" >}}
 ```bash
-python3 -m venv .venv
-```
-{{< /tab >}}
-{{< tab "macOS" >}}
-```bash
-python3 -m venv .venv
+export GROUPDOCS_LIC_PATH=/path/to/GroupDocs.Viewer.lic
 ```
 {{< /tab >}}
 {{< /tabs >}}
 
-**Activate the virtual environment:**
+Without a license the suite still runs, in evaluation mode: only the first two pages of each document are rendered, each with an evaluation notice (see [Licensing and Evaluation]({{< ref "/viewer/python-net/getting-started/licensing-and-subscription.md" >}})).
 
-{{< tabs "example2">}}
-{{< tab "Windows" >}}
-```ps
-.venv\Scripts\activate
-```
-{{< /tab >}}
-{{< tab "Linux" >}}
+## Run the examples
+
+Run the full suite, which prints a pass/fail summary at the end:
+
 ```bash
-source .venv/bin/activate
+python run_all_examples.py
 ```
-{{< /tab >}}
-{{< tab "macOS" >}}
+
+You can also run any single example by navigating to its folder and running the script directly. Each example reads its documents from its own folder, and writes its output next to the script:
+
 ```bash
-source .venv/bin/activate
+cd getting-started/hello-world
+python hello_world.py
 ```
-{{< /tab >}}
-{{< /tabs >}}
 
-### 2. Install Dependencies
+## Run with Docker
 
-After activating the virtual environment, install the required dependencies:
+The repository ships a `Dockerfile` that builds a Linux image with Python 3.13, the system packages the examples need on Linux (ICU, fontconfig and the Microsoft core fonts), and the package preinstalled from PyPI.
 
-{{< tabs "example3">}}
-{{< tab "Windows" >}}
-```ps
-py -m pip install -r requirements.txt
-```
-{{< /tab >}}
-{{< tab "Linux" >}}
 ```bash
-python3 -m pip install -r requirements.txt
+# Build the image
+docker build -t viewer-examples .
+
+# Run unlicensed (evaluation mode)
+docker run --rm viewer-examples
+
+# Run with a license mounted from the host
+docker run --rm \
+    -v /path/to/license:/lic:ro \
+    -e GROUPDOCS_LIC_PATH=/lic/your-license.lic \
+    viewer-examples
 ```
-{{< /tab >}}
-{{< tab "macOS" >}}
-```bash
-python3 -m pip install -r requirements.txt
-```
-{{< /tab >}}
-{{< /tabs >}}
 
-### 3. Configure License (Optional)
+## Continuous integration
 
-If you have a license file, you can configure it in the `run_all_examples.py` script. By default, **GroupDocs.Viewer for Python via .NET** searches for:
-
-- The `GROUPDOCS_LIC_PATH` environment variable, then
-- Any file with the `.lic` extension in the current working directory.
-
-{{< alert style="info" >}}
-For more details about licensing, evaluation limitations, and obtaining a temporary license, see the [Licensing and Subscription]({{< ref "/viewer/python-net/getting-started/licensing-and-subscription.md" >}}) page.
-{{< /alert >}}
-
-## Running Examples
-
-### 1. Run All Examples
-
-To execute all available examples, run the `run_all_examples.py` script:
-
-{{< tabs "example4">}}
-{{< tab "Windows" >}}
-```ps
-py run_all_examples.py
-```
-{{< /tab >}}
-{{< tab "Linux" >}}
-```bash
-python3 run_all_examples.py
-```
-{{< /tab >}}
-{{< tab "macOS" >}}
-```bash
-python3 run_all_examples.py
-```
-{{< /tab >}}
-{{< /tabs >}}
-
-This script runs each example sequentially and demonstrates:
-
-- Rendering documents to HTML, PDF, PNG, and JPEG.
-- Processing documents stored in archives.
-- Retrieving document information.
-- Applying various rendering options.
-
-### 2. Run a Specific Example
-
-To run a single example, navigate to the directory containing the desired script and execute it directly with Python.
-
-### 3. Output Files
-
-Most examples generate one or more output files. These files are typically saved in the same directory as the example script.
+The `.github/workflows/` directory contains a workflow that runs the full example suite, without a license, on every push and pull request, on `ubuntu-latest` with Python 3.13. The same run is reproducible locally via the `Dockerfile` above.
 
 ## Troubleshooting
 
-If you experience issues while running the examples:
+- **"Couldn't find a valid ICU package"**, with the Python process ending abruptly (Linux) - install ICU (`libicu-dev` on Debian and Ubuntu). Do not set `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT`.
+- **`Cannot find fallback font 'Generic Sans Serif'`** in the MS Project examples (Linux) - install the Microsoft core fonts (`ttf-mscorefonts-installer`).
+- **Two pages and an evaluation notice** - the evaluation mode. Apply a license (see above); a free 30-day [temporary license](https://purchase.groupdocs.com/temporary-license) is available.
+- **`LicenseError` at the first call** - `GROUPDOCS_LIC_PATH` names a file that is missing, expired or for another product. The message gives the engine's reason.
+- **The output differs from the output tab** - the tabs come from a licensed run on Windows, and pages are drawn with the fonts installed where they render. The Photoshop, Illustrator and OneNote examples run on Windows only.
+- For anything else, see the [Technical Support]({{< ref "viewer/python-net/technical-support" >}}) page.
 
-- Verify that all dependencies are installed correctly.
-- Ensure your environment meets the [System Requirements]({{< ref "/viewer/python-net/getting-started/system-requirements.md" >}}).
-- Visit the [Technical Support]({{< ref "viewer/python-net/technical-support" >}}) page for additional help.
+## Contribute
+
+If you would like to add or improve an example, we encourage you to contribute to the project. All examples in this repository are open source and can be freely used in your own applications. Fork the repository, edit the source code, and open a pull request.

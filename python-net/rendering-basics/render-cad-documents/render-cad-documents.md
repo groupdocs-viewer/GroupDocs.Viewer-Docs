@@ -438,3 +438,40 @@ Binary file (PDF, 3 KB)
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_specific_layers/specific_layers.pdf)
 {{< /tab >}}
 {{< /tabs >}}
+
+## Show and hide layers in HTML
+
+When `cad_options.enable_layered_rendering` is set (since version 26.11), a drawing rendered to HTML keeps each layer apart: the objects of a layer are grouped under an SVG element whose `id` is the layer name. A page can then show and hide layers without rendering again, for example with `document.getElementById("RACKS").style.display = "none"`.
+
+{{< tabs "render-layers-to-html">}}
+{{< tab "render_layers_to_html.py" >}}
+```python
+from groupdocs.viewer import Viewer
+from groupdocs.viewer.options import HtmlViewOptions
+
+def render_layers_to_html():
+    # Load the CAD drawing
+    with Viewer("sample.dwg") as viewer:
+        options = HtmlViewOptions.for_embedded_resources("render_layers_to_html/page_{0}.html")
+        # Put the objects of each layer under an element whose id is the layer name
+        options.cad_options.enable_layered_rendering = True
+        viewer.view(options)
+
+if __name__ == "__main__":
+    render_layers_to_html()
+```
+{{< /tab >}}
+{{< tab "sample.dwg" >}}
+{{< tab-text >}}
+`sample.dwg` is the sample file used in this example. Click [here](/viewer/python-net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
+{{< /tab-text >}}
+{{< /tab >}}
+{{< tab "page_1.html" >}}  
+```text
+HTML file (450 KB)
+```
+[Download full output](/viewer/python-net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/render_layers_to_html/page_1.html)
+{{< /tab >}}
+{{< /tabs >}}
+
+The warehouse plan's page has one group for each of its layers: `WALLS`, `RACKS`, `COLD`, `OFFICE`, `DOCKS`, `TEXT`, `DIMENSIONS` and `0`.

@@ -5,7 +5,7 @@ title: Technical Support
 linkTitle: Technical Support
 description: "Report issues, ask questions, and request features for GroupDocs.Viewer for Python via .NET through the free support forum, paid helpdesk, or the GitHub examples repository."
 keywords: technical support, free support, paid support, helpdesk, forum, GitHub issues, GroupDocs.Viewer, python
-weight: 10
+weight: 7
 productName: GroupDocs.Viewer for Python via .NET
 toc: true
 ---
@@ -20,7 +20,7 @@ Please note that GroupDocs does not offer technical support by phone. Phone supp
 
 If you need assistance with GroupDocs.Viewer, please consider the following:
 
-1. Ensure you are using the latest version of GroupDocs.Viewer before reporting an issue. Check the [releases page](https://releases.groupdocs.com/viewer/python-net/) for the latest version.
+1. Ensure you are using the latest version of GroupDocs.Viewer before reporting an issue: `pip install --upgrade groupdocs-viewer-net` installs it, and [PyPI](https://pypi.org/project/groupdocs-viewer-net/) and the [releases page](https://releases.groupdocs.com/viewer/python-net/) list it.
 2. Review the forums and this documentation to see if your question has already been answered.
 3. Post your question in the [GroupDocs.Viewer Free Support Forum](https://forum.groupdocs.com/c/viewer). Our development team will assist you directly.
 4. Please allow for time zone differences when waiting for a reply on the forums.
@@ -36,5 +36,5 @@ Paid support requests are given higher priority than free support requests.
 To ensure your issue, question, or feature request is resolved efficiently, please follow these steps:
 
 1. Attach the original document and any relevant code snippet that reproduces the issue. If you need to attach multiple files, compress them into a single archive. It’s safe to attach documents on the GroupDocs Forum, as only you and GroupDocs developers will have access.
-2. Include details about the environment where the issue occurs.
+2. Include details about the environment where the issue occurs: the operating system, `python --version`, and the output of `pip show groupdocs-viewer-net`.
 3. Report one issue per thread. If you have additional questions, issues, or feature requests, please create separate threads for each.

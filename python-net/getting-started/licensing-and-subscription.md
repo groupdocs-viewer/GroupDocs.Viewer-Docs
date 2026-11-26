@@ -1,17 +1,17 @@
 ---
-id: licensing-and-subscription
-url: viewer/python-net/getting-started/licensing-and-subscription
-title: Licensing and Subscription
-linkTitle: Licensing and Subscription
-weight: 6
-keywords: GroupDocs.Viewer, licensing, trial, evaluation, temporary license, metered licensing, set_license, python
+id: licensing-and-evaluation
+url: viewer/python-net/licensing-and-evaluation
+title: Licensing and Evaluation
+linkTitle: Licensing and Evaluation
+weight: 5
+keywords: GroupDocs.Viewer, licensing, trial, evaluation, evaluation limitations, temporary license, metered licensing, set_license, GROUPDOCS_LIC_PATH, LicenseError, python
 description: "Apply a license to GroupDocs.Viewer for Python via .NET — from file, from stream, via environment variable, or with a metered key."
 productName: GroupDocs.Viewer for Python via .NET
 hideChildren: False
 toc: True
 aliases:
-    - /viewer/python-net/licensing-and-evaluation/
     - /viewer/python-net/licensing-and-subscription/
+    - /viewer/python-net/getting-started/licensing-and-subscription/
 ---
 
 GroupDocs.Viewer offers a Free Trial and a 30-day Temporary License for evaluation, along with several purchase plans. If you want to dive straight into the code, the Free Trial is fully functional (see the limitations below) and does not require any setup.
@@ -29,9 +29,8 @@ You can try GroupDocs.Viewer without purchasing a license.
 The evaluation version is identical to the full version — it simply becomes fully licensed when you apply a license. Instructions for setting a license are provided in the following sections.
 
 The evaluation version has the following limitations:
-* Only the first three pages are processed.
-* Documents with more than three pages are not supported.
-* A trial watermark is placed at the top of each page.
+* Only the first two pages of a document are rendered, and `get_view_info` reports at most two pages.
+* An evaluation notice is placed on each rendered page.
 
 ### Temporary License
 
@@ -59,8 +58,8 @@ You can set the `GROUPDOCS_LIC_PATH` environment variable to the absolute path o
 
 {{< tabs "set-license-env-var">}}
 {{< tab "Windows (Command Prompt)" >}}
-```ps
-set GROUPDOCS_LIC_PATH "C:\path\to\your\license\file.lic"
+```bat
+set GROUPDOCS_LIC_PATH=C:\path\to\your\license\file.lic
 ```
 {{< /tab >}}
 {{< tab "Windows (Powershell)" >}}
@@ -80,19 +79,21 @@ export GROUPDOCS_LIC_PATH="/path/to/your/license/file.lic"
 {{< /tab >}}
 {{< /tabs >}}
 
-### Copy License into Project Root Folder
+The license is applied at the first Viewer call, not when the package is imported, so a variable set after the import still counts. `GROUPDOCS_LIC_PATH` can also hold the URL of a license file.
 
-GroupDocs.Viewer can also read a license from the project's root directory. Consider a simple Python app structure:
+A license that cannot be applied (a missing file, an expired subscription, a license for another product) raises `LicenseError` from the first Viewer call on, instead of letting the process run in evaluation mode unnoticed. The message names the variable, the source and the engine's reason. Applying a license with `License().set_license(...)` ends the refusal. Set `GROUPDOCS_LIC_STRICT=0` to get one `LicenseWarning` and evaluation mode instead. When `GROUPDOCS_LIC_PATH` is not set, `ASPOSE_LIC_PATH` is read instead.
 
-```Directory
-📂 my-app
- ├──app.py
- ├──source.docx
- ├──groupdocs_viewer_net-*.whl
- └──GroupDocs.Viewer.lic
+```python
+from groupdocs.viewer import LicenseError, Viewer
+from groupdocs.viewer.options import PdfViewOptions
+
+try:
+    with Viewer("sample.docx") as viewer:
+        viewer.view(PdfViewOptions("output.pdf"))
+except LicenseError as error:
+    # GROUPDOCS_LIC_PATH=... could not be applied: <the engine's reason>
+    print(error)
 ```
-
-When you run the application from the `my-app` folder, GroupDocs.Viewer will check for files with a `.lic` extension in this folder. It will read the `GroupDocs.Viewer.lic` file to apply the license.
 
 ### Set License from a File
 

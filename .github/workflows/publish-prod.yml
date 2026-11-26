@@ -57,7 +57,7 @@ jobs:
       - name: Deploy documentation
         uses: burnett01/rsync-deployments@7.0.1
         with:
-          switches: -vzr --delete
+          switches: -vzr --delete --chmod=D755,F644
           path: common/public/${{ env.PRODUCT }}
           remote_path: ${{ secrets.DOCS_SSH_DIR }}
           remote_host: ${{ secrets.DOCS_SSH_HOST }}

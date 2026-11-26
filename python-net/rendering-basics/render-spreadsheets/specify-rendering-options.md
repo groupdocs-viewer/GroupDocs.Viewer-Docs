@@ -30,7 +30,7 @@ Rows and columns in a worksheet have unique names displayed on the worksheet's l
 
 ![Row and column headings in a worksheet](/viewer/python-net/images/rendering-basics/render-spreadsheets/excel-row-and-column-headings.png)
 
-Enable the [SpreadsheetOptions.render_headings](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/properties/renderheadings) property to display row and column headings in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
+Enable the [SpreadsheetOptions.render_headings](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/render_headings/) property to display row and column headings in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
 
 The following example demonstrates how to convert an Excel workbook to PDF and display row and column headings in the output PDF file:
 
@@ -68,7 +68,7 @@ Binary file (PDF, 85 KB)
 
 ## Render worksheet gridlines
 
-Use the [SpreadsheetOptions.render_grid_lines](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/properties/rendergridlines) property to display gridlines (lines that separate worksheet rows and columns) in the output file.
+Use the [SpreadsheetOptions.render_grid_lines](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/render_grid_lines/) property to display gridlines (lines that separate worksheet rows and columns) in the output file.
 
 The following code example demonstrates how to convert an Excel workbook to PDF and display gridlines in the output PDF file:
 
@@ -106,7 +106,7 @@ Binary file (PDF, 81 KB)
 
 ## Control cell text overflow
 
-The [SpreadsheetOptions.text_overflow_mode](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/properties/textoverflowmode) option allows you to prevent text overflow in worksheet cells (see the image below) when you convert your spreadsheet file to HTML, PDF, or image format.
+The [SpreadsheetOptions.text_overflow_mode](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/text_overflow_mode/) option allows you to prevent text overflow in worksheet cells (see the image below) when you convert your spreadsheet file to HTML, PDF, or image format.
 
 ![Text overflow in a cell](/viewer/python-net/images/rendering-basics/render-spreadsheets/excel-text-overflow.png)
 
@@ -164,7 +164,7 @@ Binary file (PDF, 80 KB)
 
 ## Render hidden rows and columns
 
-Use the [ViewOptions.SpreadsheetOptions.render_hidden_rows](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/properties/renderhiddenrows) and [ViewOptions.SpreadsheetOptions.render_hidden_columns](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/properties/renderhiddencolumns) properties to display hidden rows and columns in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
+Use the [ViewOptions.SpreadsheetOptions.render_hidden_rows](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/render_hidden_rows/) and [ViewOptions.SpreadsheetOptions.render_hidden_columns](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/render_hidden_columns/) properties to display hidden rows and columns in the output file when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
 
 The example below demonstrates how to set this option in code. The rows **20** and **21** and the column **E** are hidden in the source Excel workbook. 
 
@@ -207,7 +207,7 @@ Hidden rows and columns appear in the generated PDF file.
 
 ## Render hidden worksheets
 
-If your spreadsheet file contains hidden worksheets, enable the [ViewOptions.render_hidden_pages](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/properties/renderhiddenpages) property to display data from hidden worksheets in the output HTML, PDF, or image files.
+If your spreadsheet file contains hidden worksheets, enable the [ViewOptions.render_hidden_pages](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/render_hidden_pages/) property to display data from hidden worksheets in the output HTML, PDF, or image files.
 
 The following example demonstrates how to set this option in code:
 
@@ -245,7 +245,7 @@ Binary file (PDF, 83 KB)
 
 ## Skip empty rows and columns
 
-GroupDocs.Viewer supports the [SpreadsheetOptions.skip_empty_rows](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/properties/skipemptyrows) and [SpreadsheetOptions.skip_empty_columns](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/properties/skipemptycolumns) properties that allow you to skip blank rows and columns when you convert your spreadsheet file to HTML, PDF, or image format.
+GroupDocs.Viewer supports the [SpreadsheetOptions.skip_empty_rows](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/skip_empty_rows/) and [SpreadsheetOptions.skip_empty_columns](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/spreadsheetoptions/skip_empty_columns/) properties that allow you to skip blank rows and columns when you convert your spreadsheet file to HTML, PDF, or image format.
 
 {{< tabs "example6">}}
 {{< tab "Python" >}}
@@ -282,7 +282,7 @@ Binary file (PDF, 80 KB)
 
 ## Render cell comments
 
-Cell comments are rendered by default: the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/properties/rendercomments) property is `True` unless you change it. The example below sets it explicitly; set it to `False` to hide the comments when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
+Cell comments are rendered by default: the [ViewOptions.render_comments](https://reference.groupdocs.com/viewer/python-net/groupdocs.viewer.options/baseviewoptions/render_comments/) property is `True` unless you change it. The example below sets it explicitly; set it to `False` to hide the comments when you render your spreadsheet in HTML, PDF, PNG, or JPEG format.
 
 {{< tabs "example7">}}
 {{< tab "Python" >}}
@@ -311,9 +311,9 @@ if __name__ == "__main__":
 {{< /tab >}}
 {{< tab "render-comments-outputs.zip" >}}  
 ```text
-render_comments/comments_1.png (25 KB)
-render_comments/comments_2.png (101 KB)
-render_comments/comments_3.png (30 KB)
+render_comments/comments_1.png (17 KB)
+render_comments/comments_2.png (65 KB)
+render_comments/comments_3.png (21 KB)
 ```
 [Download full output](/viewer/python-net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/render_comments/render-comments-outputs.zip)
 {{< /tab >}}
