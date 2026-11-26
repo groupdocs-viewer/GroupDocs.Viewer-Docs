@@ -51,7 +51,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.eml"))
 {
    // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-email-to-html.html");
     viewer.View(viewOptions);
 }
 ```
@@ -66,7 +66,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.eml")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-email-to-html.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -163,7 +163,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.eml"))
 {
     // Create a PDF file.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-email-to-pdf.pdf");
     viewer.View(viewOptions);
 }
 ```
@@ -178,7 +178,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.eml")
             ' Create a PDF file.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-email-to-pdf.pdf")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -335,7 +335,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.eml"))
 {
     // Create a PDF file.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-email-with-page-size.pdf");
     // Specify the page size.
     viewOptions.EmailOptions.PageSize = PageSize.A4;
     viewer.View(viewOptions);
@@ -352,7 +352,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.eml")
             ' Create a PDF file.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-email-with-page-size.pdf")
             ' Specify the page size.
             viewOptions.EmailOptions.PageSize = PageSize.A4
             viewer.View(viewOptions)
@@ -392,7 +392,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.eml"))
 {
     // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-email-with-renamed-fields.html");
     // Specify custom field labels.
     viewOptions.EmailOptions.FieldTextMap[Field.From] = "Sender";
     viewOptions.EmailOptions.FieldTextMap[Field.To] = "Recipient";
@@ -412,7 +412,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.eml")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-email-with-renamed-fields.html")
             ' Specify custom field labels.
             viewOptions.EmailOptions.FieldTextMap(Field.From) = "Sender"
             viewOptions.EmailOptions.FieldTextMap(Field.[To]) = "Recipient"
@@ -457,7 +457,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.eml"))
 {
     // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-email-with-datetime-format.html");
     // Apply a custom format to the date in the email message header.
     viewOptions.EmailOptions.DateTimeFormat = "MMMM dd, yyyy H:mm:ss zzz";
     // Specify the time zone offset. 
@@ -477,7 +477,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.eml")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-email-with-datetime-format.html")
             ' Apply a custom format to the date in the email message header.
             viewOptions.EmailOptions.DateTimeFormat = "MMMM dd, yyyy H:mm:ss zzz"
             ' Specify the time zone offset. 

@@ -55,7 +55,7 @@ using (var viewer = new Viewer("sample.docx"))
 {
     // Create an HTML file for each document page.
     // {0} is replaced with the current page number in the file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-word-to-html_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -71,7 +71,7 @@ Module Program
         Using viewer = New Viewer("sample.docx")
             ' Create an HTML file for each document page.
             ' {0} is replaced with the current page number in the file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-word-to-html_{0}.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -115,7 +115,7 @@ using (var viewer = new Viewer("sample.docx"))
     // Create an HTML file for each document page.
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("render-word-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -132,7 +132,7 @@ Module Program
             ' Create an HTML file for each document page.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
-            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("render-word-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -179,7 +179,7 @@ using (var viewer = new Viewer("sample.docx"))
 {
     // Create a PDF file for the document.
     // Specify the PDF file name.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-word-to-pdf.pdf");
     viewer.View(viewOptions);
 }
 ```
@@ -195,7 +195,7 @@ Module Program
         Using viewer = New Viewer("sample.docx")
             ' Create a PDF file for the document.
             ' Specify the PDF file name.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-word-to-pdf.pdf")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -366,7 +366,7 @@ using (var viewer = new Viewer("sample.docx"))
 {
     // Create an HTML file for each document page.
     // {0} is replaced with the current page number in the file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-word-with-margins_{0}.html");
     // Specify the size of page margins in points.
     viewOptions.WordProcessingOptions.TopMargin = 72;
     viewOptions.WordProcessingOptions.BottomMargin = 72;
@@ -387,7 +387,7 @@ Module Program
         Using viewer = New Viewer("sample.docx")
             ' Create an HTML file for each document page.
             ' {0} is replaced with the current page number in the file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-word-with-margins_{0}.html")
             ' Specify the size of page margins in points.
             viewOptions.WordProcessingOptions.TopMargin = 72
             viewOptions.WordProcessingOptions.BottomMargin = 72
@@ -437,7 +437,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("with_tracked_changes.docx"))
 {
     // Convert the document to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-word-with-tracked-changes.pdf");
     // Enable tracked changes rendering.
     viewOptions.WordProcessingOptions.RenderTrackedChanges = true;
     viewer.View(viewOptions);
@@ -454,7 +454,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("with_tracked_changes.docx")
             ' Convert the document to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-word-with-tracked-changes.pdf")
             ' Enable tracked changes rendering.
             viewOptions.WordProcessingOptions.RenderTrackedChanges = True
             viewer.View(viewOptions)
@@ -492,7 +492,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("with_comment.docx"))
 {
     // Convert the document to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-word-with-comments.pdf");
     // Enable comments rendering.
     viewOptions.RenderComments = true;
     viewer.View(viewOptions);
@@ -509,7 +509,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("with_comment.docx")
             ' Convert the document to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-word-with-comments.pdf")
             ' Enable comments rendering.
             viewOptions.RenderComments = True
             viewer.View(viewOptions)
@@ -547,7 +547,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("handbook.docx"))
 {
     // Convert the document to HTML.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-word-unlink-toc_{0}.html");
     // Unlink table of contents.
     viewOptions.WordProcessingOptions.UnlinkTableOfContents = true;
     viewer.View(viewOptions);
@@ -564,7 +564,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("handbook.docx")
             ' Convert the document to HTML.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-word-unlink-toc_{0}.html")
             ' Unlink table of contents.
             viewOptions.WordProcessingOptions.UnlinkTableOfContents = True
             viewer.View(viewOptions)
@@ -602,10 +602,10 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-HtmlViewOptions htmlViewOptions = HtmlViewOptions.ForEmbeddedResources();
+HtmlViewOptions htmlViewOptions = HtmlViewOptions.ForEmbeddedResources("render-word-without-updating-fields_{0}.html");
 htmlViewOptions.WordProcessingOptions.UpdateFields = false;
 
-PdfViewOptions pdfViewOptions = new PdfViewOptions("output.pdf");
+PdfViewOptions pdfViewOptions = new PdfViewOptions("render-word-without-updating-fields.pdf");
 pdfViewOptions.WordProcessingOptions.UpdateFields = false;
 
 using (var viewer = new Viewer("handbook.docx"))
@@ -621,10 +621,10 @@ Imports GroupDocs.Viewer
 Imports GroupDocs.Viewer.Options
 ' ...
 
-Dim htmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+Dim htmlViewOptions = HtmlViewOptions.ForEmbeddedResources("render-word-without-updating-fields_{0}.html")
 htmlViewOptions.WordProcessingOptions.UpdateFields = False
 
-Dim pdfViewOptions = New PdfViewOptions("output.pdf")
+Dim pdfViewOptions = New PdfViewOptions("render-word-without-updating-fields.pdf")
 pdfViewOptions.WordProcessingOptions.UpdateFields = False
 
 Using viewer = New Viewer("handbook.docx")	
@@ -793,10 +793,10 @@ using GroupDocs.Viewer;
 using GroupDocs.Viewer.Options;
 // ...
 
-PdfViewOptions pdfOpt = new PdfViewOptions();
+PdfViewOptions pdfOpt = new PdfViewOptions("render-word-with-page-numbers.pdf");
 pdfOpt.WordProcessingOptions.PageNumberLocation = WordsPageNumberLocation.TopLeft;
 
-HtmlViewOptions htmlEmbeddedOpt = HtmlViewOptions.ForEmbeddedResources();
+HtmlViewOptions htmlEmbeddedOpt = HtmlViewOptions.ForEmbeddedResources("render-word-with-page-numbers_{0}.html");
 htmlEmbeddedOpt.WordProcessingOptions.PageNumberLocation = WordsPageNumberLocation.BottomCenter;
 
 using (Viewer viewer = new Viewer("sample.docx"))
@@ -812,10 +812,10 @@ Imports GroupDocs.Viewer
 Imports GroupDocs.Viewer.Options
 ' ...
 
-Dim pdfOpt As New PdfViewOptions()
+Dim pdfOpt As New PdfViewOptions("render-word-with-page-numbers.pdf")
 pdfOpt.WordProcessingOptions.PageNumberLocation = WordsPageNumberLocation.TopLeft
 
-Dim htmlEmbeddedOpt As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+Dim htmlEmbeddedOpt As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("render-word-with-page-numbers_{0}.html")
 htmlEmbeddedOpt.WordProcessingOptions.PageNumberLocation = WordsPageNumberLocation.BottomCenter
 
 Using viewer As New Viewer("sample.docx")

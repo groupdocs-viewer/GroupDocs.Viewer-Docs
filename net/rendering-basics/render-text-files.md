@@ -86,7 +86,7 @@ LoadOptions loadOptions = new LoadOptions(FileType.MD);
 // Convert the document to PDF.
 using (var viewer = new Viewer(stream, loadOptions))
 {
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-text-with-load-options.pdf");
     viewer.View(viewOptions);
 }
 ```
@@ -107,7 +107,7 @@ Module Program
         
             ' Convert the document to PDF.
             Using viewer = New Viewer(stream, loadOptions)
-                Dim viewOptions = New PdfViewOptions("output.pdf")
+                Dim viewOptions = New PdfViewOptions("render-text-with-load-options.pdf")
                 viewer.View(viewOptions)
             End Using
     End Sub
@@ -146,7 +146,7 @@ using (var viewer = new Viewer("terms_of_service.txt"))
 {
     // Convert the text file to HTML.
     // {0} is replaced with the current page number in the output file names.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-text-to-html_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -162,7 +162,7 @@ Module Program
         Using viewer = New Viewer("terms_of_service.txt")
             ' Convert the text file to HTML.
             ' {0} is replaced with the current page number in the output file names.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-text-to-html_{0}.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -205,7 +205,7 @@ using (var viewer = new Viewer("terms_of_service.txt"))
     // Convert the text file to HTML.
     // Specify the output file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("render-text-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -222,7 +222,7 @@ Module Program
             ' Convert the text file to HTML.
             ' Specify the output file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
-            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("render-text-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -320,7 +320,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("terms_of_service.txt"))
 {
     // Convert the text file to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-text-to-pdf.pdf");
     viewer.View(viewOptions);
 }
 ```
@@ -335,7 +335,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("terms_of_service.txt")
             ' Convert the text file to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-text-to-pdf.pdf")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -503,7 +503,7 @@ using (var viewer = new Viewer("terms_of_service.txt"))
 {
     // Convert the text file to HTML.
     // {0} is replaced with the current page number in the output file names.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-text-with-options_{0}.html");
     // Set the maximum number of rows per page.
     viewOptions.TextOptions.MaxRowsPerPage = 30;
     viewer.View(viewOptions);
@@ -521,7 +521,7 @@ Module Program
         Using viewer = New Viewer("terms_of_service.txt")
             ' Convert the text file to HTML.
             ' {0} is replaced with the current page number in the output file names.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-text-with-options_{0}.html")
             ' Set the maximum number of rows per page.
             viewOptions.TextOptions.MaxRowsPerPage = 30
             viewer.View(viewOptions)

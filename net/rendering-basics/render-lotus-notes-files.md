@@ -259,7 +259,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.nsf"))
 {
     // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-nsf-with-max-items_{0}.html");
     // Specify the maximum items to render.
     viewOptions.MailStorageOptions.MaxItems = 20;
     viewer.View(viewOptions);
@@ -276,7 +276,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.nsf")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-nsf-with-max-items_{0}.html")
             ' Specify the maximum items to render.
             viewOptions.MailStorageOptions.MaxItems = 20
             viewer.View(viewOptions)
@@ -321,7 +321,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.nsf"))
 {
     // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-nsf-with-filters_{0}.html");
     // Set filters.
     viewOptions.MailStorageOptions.TextFilter = "Viewer";
     viewOptions.MailStorageOptions.AddressFilter = "groupdocs@mail.com";
@@ -339,7 +339,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.nsf")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-nsf-with-filters_{0}.html")
             ' Set filters.
             viewOptions.MailStorageOptions.TextFilter = "Viewer"
             viewOptions.MailStorageOptions.AddressFilter = "groupdocs@mail.com"

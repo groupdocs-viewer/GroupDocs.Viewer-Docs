@@ -47,7 +47,7 @@ using (var viewer = new Viewer("sample.epub"))
 {
     // Create an HTML file for each document page.
     // {0} is replaced with the current page number in the file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-ebook-to-html_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -63,7 +63,7 @@ Module Program
         Using viewer = New Viewer("sample.epub")
             ' Create an HTML file for each document page.
             ' {0} is replaced with the current page number in the file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-ebook-to-html_{0}.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -108,7 +108,7 @@ using (var viewer = new Viewer("sample.epub"))
     // Create an HTML file for each document page.
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("render-ebook-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -125,7 +125,7 @@ Module Program
             ' Create an HTML file for each document page.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
-            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_ {1}", "page_{0}/resource_{0}_{1}")
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("render-ebook-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
             viewer.View(viewOptions)
         End Using
     End Sub

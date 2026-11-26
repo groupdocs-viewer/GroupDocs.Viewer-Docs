@@ -373,7 +373,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.pst"))
 {
     // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-outlook-specific-folder_{0}.html");
     // Render messages from the "Inbox" folder and its subfolders.
     viewOptions.OutlookOptions.Folder = "Inbox";
     // Render messages from a specific subfolder in the "Inbox" folder.
@@ -392,7 +392,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.pst")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-outlook-specific-folder_{0}.html")
             ' Render messages from the "Inbox" folder and its subfolders.
             viewOptions.OutlookOptions.Folder = "Inbox"
             ' Render messages from a specific subfolder in the "Inbox" folder.
@@ -432,7 +432,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.pst"))
 {
     // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-outlook-with-max-items_{0}.html");
     // Specify the maximum number of folder items.
     viewOptions.OutlookOptions.MaxItemsInFolder = 30;
     viewer.View(viewOptions);
@@ -449,7 +449,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.pst")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-outlook-with-max-items_{0}.html")
             ' Specify the maximum number of folder items.
             viewOptions.OutlookOptions.MaxItemsInFolder = 30
             viewer.View(viewOptions)
@@ -494,7 +494,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.pst"))
 {
     // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-outlook-with-filters_{0}.html");
     // Set filters.
     viewOptions.OutlookOptions.TextFilter = "invoice";
     viewOptions.OutlookOptions.AddressFilter = "northwindroasters.example";
@@ -512,7 +512,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.pst")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-outlook-with-filters_{0}.html")
             ' Set filters.
             viewOptions.OutlookOptions.TextFilter = "invoice"
             viewOptions.OutlookOptions.AddressFilter = "northwindroasters.example"

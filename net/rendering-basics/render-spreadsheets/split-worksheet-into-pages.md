@@ -40,7 +40,7 @@ using GroupDocs.Viewer.Options;
 // ...
 
 // Create PDF view options for rendering to PDF
-PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
+PdfViewOptions viewOptions = new PdfViewOptions("render-worksheet-on-one-page.pdf");
 
 // Create spreadsheet options to render each worksheet to one page
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForOnePagePerSheet();
@@ -60,7 +60,7 @@ Imports GroupDocs.Viewer.Options
 ' ...
 
 ' Create PDF view options for rendering to PDF
-Dim viewOptions As New PdfViewOptions("output.pdf")
+Dim viewOptions As New PdfViewOptions("render-worksheet-on-one-page.pdf")
 
 ' Create spreadsheet options to render each worksheet to one page
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForOnePagePerSheet()
@@ -105,7 +105,7 @@ using GroupDocs.Viewer.Options;
 // ...
 
 // Create PDF view options for rendering to PDF
-PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
+PdfViewOptions viewOptions = new PdfViewOptions("split-worksheet-by-page-breaks.pdf");
 
 // Create spreadsheet options to split worksheet onto pages by page breaks
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingByPageBreaks();
@@ -125,7 +125,7 @@ Imports GroupDocs.Viewer.Options
 ' ...
 
 ' Create PDF view options for rendering to PDF
-Dim viewOptions As New PdfViewOptions("output.pdf")
+Dim viewOptions As New PdfViewOptions("split-worksheet-by-page-breaks.pdf")
 
 ' Create spreadsheet options to split worksheet onto pages by page breaks
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingByPageBreaks()
@@ -168,7 +168,7 @@ using GroupDocs.Viewer.Options;
 // ...
 
 // Create PDF view options for rendering to PDF
-PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
+PdfViewOptions viewOptions = new PdfViewOptions("render-only-print-area.pdf");
 
 // Create spreadsheet options to render a Print Area only
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingPrintArea();
@@ -188,7 +188,7 @@ Imports GroupDocs.Viewer.Options
 ' ...
 
 ' Create PDF view options for rendering to PDF
-Dim viewOptions As New PdfViewOptions("output.pdf")
+Dim viewOptions As New PdfViewOptions("render-only-print-area.pdf")
 
 ' Create spreadsheet options to render a Print Area only
 viewOptions.SpreadsheetOptions = SpreadsheetOptions.ForRenderingPrintArea()
@@ -296,7 +296,7 @@ using GroupDocs.Viewer.Options;
 // ...
 
 // Create PDF view options for rendering to PDF
-PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
+PdfViewOptions viewOptions = new PdfViewOptions("split-worksheet-by-rows.pdf");
 
 // Specify number of rows for every page
 int rowsPerPage = 15;
@@ -319,7 +319,7 @@ Imports GroupDocs.Viewer.Options
 ' ...
 
 ' Create PDF view options for rendering to PDF
-Dim viewOptions As New PdfViewOptions("output.pdf")
+Dim viewOptions As New PdfViewOptions("split-worksheet-by-rows.pdf")
 
 ' Specify number of rows for every page
 Dim rowsPerPage As Int32 = 15
@@ -363,7 +363,7 @@ using GroupDocs.Viewer.Options;
 // ...
 
 // Create PDF view options for rendering to PDF
-PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
+PdfViewOptions viewOptions = new PdfViewOptions("split-worksheet-by-rows-and-columns.pdf");
 
 // Specify number of rows and columns for every page
 int rowsPerPage = 15;
@@ -387,7 +387,7 @@ Imports GroupDocs.Viewer.Options
 ' ...
 
 ' Create PDF view options for rendering to PDF
-Dim viewOptions As New PdfViewOptions("output.pdf")
+Dim viewOptions As New PdfViewOptions("split-worksheet-by-rows-and-columns.pdf")
 
 ' Specify number of rows and columns for every page
 Dim rowsPerPage As Int32 = 15

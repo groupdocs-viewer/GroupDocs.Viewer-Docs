@@ -38,7 +38,7 @@ using GroupDocs.Viewer.Options;
 using (Viewer viewer = new Viewer("sample.docx"))
 {
     // Create view options.
-    var viewOptions = HtmlViewOptions.ForExternalResources();
+    var viewOptions = HtmlViewOptions.ForExternalResources("render-to-html-external_{0}.html", "render-to-html-external_{0}_{1}", "render-to-html-external_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -53,7 +53,7 @@ Module Program
     Sub Main(args As String())
         Using viewer As Viewer = New Viewer("sample.docx")
             ' Create view options.
-            Dim viewOptions = HtmlViewOptions.ForExternalResources()
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("render-to-html-external_{0}.html", "render-to-html-external_{0}_{1}", "render-to-html-external_{0}_{1}")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -97,7 +97,7 @@ using GroupDocs.Viewer.Options;
 using (Viewer viewer = new Viewer("sample.docx"))
 {
     // Create view options.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-to-html-embedded_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -112,7 +112,7 @@ Module Program
     Sub Main(args As String())
         Using viewer As Viewer = New Viewer("sample.docx")
             ' Create view options.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-to-html-embedded_{0}.html")
             viewer.View(viewOptions)
         End Using
     End Sub

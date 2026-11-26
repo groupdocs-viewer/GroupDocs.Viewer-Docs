@@ -51,7 +51,7 @@ using GroupDocs.Viewer.Options;
 using (Viewer viewer = new Viewer("sample.docx"))
 {
     // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();    
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("exclude-all-fonts_{0}.html");    
     viewOptions.ExcludeFonts = true;
     viewer.View(viewOptions);
 }
@@ -67,7 +67,7 @@ Module Program
     Sub Main(args As String())
         Using viewer As Viewer = New Viewer("sample.docx")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()            
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("exclude-all-fonts_{0}.html")            
             viewOptions.ExcludeFonts = True
             viewer.View(viewOptions)
         End Using
@@ -106,7 +106,7 @@ using GroupDocs.Viewer.Options;
 using (Viewer viewer = new Viewer("sample.pptx"))
 {
     // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources();    
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("exclude-specific-fonts_{0}.html");    
     viewOptions.FontsToExclude.Add("Times New Roman");// Exclude the Times New Roman font.
     viewOptions.FontsToExclude.Add("Arial");// Exclude the Arial font.
     viewer.View(viewOptions);
@@ -123,7 +123,7 @@ Module Program
     Sub Main(args As String())
         Using viewer As Viewer = New Viewer("sample.pptx")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()            
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("exclude-specific-fonts_{0}.html")            
             viewOptions.FontsToExclude.Add("Times New Roman")' Exclude the Times New Roman font.
             viewOptions.FontsToExclude.Add("Arial")' Exclude the Arial font.
             viewer.View(viewOptions)

@@ -40,7 +40,7 @@ loadOptions.SkipExternalResources = true; // Skip loading of external resources
 using (Viewer viewer = new Viewer("business-flyer.docx", loadOptions))
 {
     HtmlViewOptions viewOptions = 
-        HtmlViewOptions.ForEmbeddedResources();
+        HtmlViewOptions.ForEmbeddedResources("skip-loading-external-resources_{0}.html");
 
     viewer.View(viewOptions);
 }
@@ -58,7 +58,7 @@ Module Program
         loadOptions.SkipExternalResources = True ' Skip loading of external resources
     
         Using viewer As Viewer = New Viewer("business-flyer.docx", loadOptions)
-            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("skip-loading-external-resources_{0}.html")
     
             viewer.View(viewOptions)
         End Using
@@ -103,7 +103,7 @@ loadOptions.WhitelistedResources.Add("blog.groupdocs.com"); // Load the resource
 using (Viewer viewer = new Viewer("business-flyer.docx", loadOptions))
 {
     HtmlViewOptions viewOptions = 
-        HtmlViewOptions.ForEmbeddedResources();
+        HtmlViewOptions.ForEmbeddedResources("load-external-resources-from-safelist_{0}.html");
 
     viewer.View(viewOptions);
 }
@@ -122,7 +122,7 @@ Module Program
         loadOptions.WhitelistedResources.Add("blog.groupdocs.com") ' Load the resources whose URL contains "blog.groupdocs.com"
     
         Using viewer As Viewer = New Viewer("business-flyer.docx", loadOptions)
-            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("load-external-resources-from-safelist_{0}.html")
     
             viewer.View(viewOptions)
         End Using
@@ -163,7 +163,7 @@ loadOptions.ResourceLoadingTimeout = TimeSpan.FromSeconds(5);
 // Render a file.
 using (Viewer viewer = new Viewer("business-flyer.docx", loadOptions))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("set-external-resources-timeout_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -182,7 +182,7 @@ Module Program
         loadOptions.ResourceLoadingTimeout = TimeSpan.FromSeconds(5)
         ' Render a file.
         Using viewer As Viewer = New Viewer("business-flyer.docx", loadOptions)
-            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("set-external-resources-timeout_{0}.html")
             viewer.View(viewOptions)
         End Using
     End Sub

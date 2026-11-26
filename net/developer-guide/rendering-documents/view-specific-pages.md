@@ -33,7 +33,7 @@ using GroupDocs.Viewer.Options;
 using (Viewer viewer = new Viewer("sample.docx"))
 {
     // Create view options.
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("view-specific-pages_{0}.html");
 
     // Specify the page numbers.
     viewer.View(viewOptions, 1, 3);
@@ -50,7 +50,7 @@ Module Program
     Sub Main(args As String())
     Using viewer As Viewer = New Viewer("sample.docx")
         ' Create view options.
-        Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+        Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("view-specific-pages_{0}.html")
     
         ' Specify the page numbers.
         viewer.View(viewOptions, 1, 3)
@@ -96,7 +96,7 @@ int[] pageNumbers = new int[] { 1, 2, 4 };
 using (Viewer viewer = new Viewer("sample.docx"))
 {
    // Create view options.
-   var viewOptions = HtmlViewOptions.ForEmbeddedResources();
+   var viewOptions = HtmlViewOptions.ForEmbeddedResources("view-pages-from-array_{0}.html");
 
    // Use array to render specific pages.
    viewer.View(viewOptions, pageNumbers);
@@ -116,7 +116,7 @@ Module Program
     
         Using viewer As Viewer = New Viewer("sample.docx")
             ' Create view options.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("view-pages-from-array_{0}.html")
     
             ' Use array to render specific pages.
             viewer.View(viewOptions, pageNumbers)

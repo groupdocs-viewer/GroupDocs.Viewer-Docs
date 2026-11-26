@@ -49,7 +49,7 @@ using (var viewer = new Viewer("sample.pdf"))
 {
     // Create an HTML file for each PDF page.
     // {0} is replaced with the current page number in the file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-to-html_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -65,7 +65,7 @@ Module Program
         Using viewer = New Viewer("sample.pdf")
             ' Create an HTML file for each PDF page.
             ' {0} is replaced with the current page number in the file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-to-html_{0}.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -108,7 +108,7 @@ using (var viewer = new Viewer("sample.pdf"))
     // Create an HTML file for each PDF page.
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("render-pdf-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -125,7 +125,7 @@ Module Program
             ' Create an HTML file for each PDF page.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
-            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("render-pdf-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -180,7 +180,7 @@ using (var viewer = new Viewer("sample.pdf"))
 {
     // Create an HTML file for each PDF page.
     // {0} is replaced with the current page number in the file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-fluid-layout_{0}.html");
     // Disable fixed layout.
     viewOptions.PdfOptions.FixedLayout = false;
     viewer.View(viewOptions);
@@ -198,7 +198,7 @@ Module Program
         Using viewer = New Viewer("sample.pdf")
             ' Create an HTML file for each PDF page.
             ' {0} is replaced with the current page number in the file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-fluid-layout_{0}.html")
             ' Disable fixed layout.
             viewOptions.PdfOptions.FixedLayout = False
             viewer.View(viewOptions)
@@ -254,7 +254,7 @@ using (var viewer = new Viewer("sample.pdf"))
 {
     // Create an HTML file for each document page.
     // {0} is replaced with the current page number in the file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-with-image-quality_{0}.html");
     // Set image quality to medium.
     viewOptions.PdfOptions.ImageQuality = ImageQuality.Medium;
     viewer.View(viewOptions);
@@ -272,7 +272,7 @@ Module Program
         Using viewer = New Viewer("sample.pdf")
             ' Create an HTML file for each document page.
             ' {0} is replaced with the current page number in the file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-with-image-quality_{0}.html")
             ' Set image quality to medium.
             viewOptions.PdfOptions.ImageQuality = ImageQuality.Medium
             viewer.View(viewOptions)
@@ -376,7 +376,7 @@ using (var viewer = new Viewer("sample.pdf"))
 {
     // Create an HTML file for each document page.
     // {0} is replaced with the current page number in the file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-with-layered-rendering_{0}.html");
     // Enable the multi-layer rendering.
     viewOptions.PdfOptions.EnableLayeredRendering = true;
     viewer.View(viewOptions);
@@ -394,7 +394,7 @@ Module Program
         Using viewer = New Viewer("sample.pdf")
             ' Create an HTML file for each document page.
             ' {0} is replaced with the current page number in the file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-with-layered-rendering_{0}.html")
             ' Enable the multi-layer rendering.
             viewOptions.PdfOptions.EnableLayeredRendering = True
             viewer.View(viewOptions)
@@ -436,7 +436,7 @@ using (var viewer = new Viewer("sample.pdf"))
 {
     // Create a PNG image for each PDF page.
     // {0} is replaced with the current page number in the image name.
-    var viewOptions = new PngViewOptions("output_{0}.png");
+    var viewOptions = new PngViewOptions("render-pdf-to-png_{0}.png");
     // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
@@ -455,7 +455,7 @@ Module Program
         Using viewer = New Viewer("sample.pdf")
             ' Create a PNG image for each PDF page.
             ' {0} is replaced with the current page number in the image name.
-            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            Dim viewOptions = New PngViewOptions("render-pdf-to-png_{0}.png")
             ' Set width and height.
             viewOptions.Width = 800
             viewOptions.Height = 900
@@ -556,7 +556,7 @@ using (var viewer = new Viewer("sample.pdf"))
 {
     // Create a PNG image for each PDF page.
     // {0} is replaced with the current page number in the image name.
-    var viewOptions = new PngViewOptions("output_{0}.png");
+    var viewOptions = new PngViewOptions("render-pdf-preserve-page-size_{0}.png");
     // Preserve the size of document pages.
     viewOptions.PdfOptions.RenderOriginalPageSize = true;
     viewer.View(viewOptions);
@@ -574,7 +574,7 @@ Module Program
         Using viewer = New Viewer("sample.pdf")
             ' Create a PNG image for each PDF page.
             ' {0} is replaced with the current page number in the image name.
-            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            Dim viewOptions = New PngViewOptions("render-pdf-preserve-page-size_{0}.png")
             ' Preserve the size of document pages.
             viewOptions.PdfOptions.RenderOriginalPageSize = True
             viewer.View(viewOptions)
@@ -614,7 +614,7 @@ using (var viewer = new Viewer("sample.pdf"))
 {
     // Create a PNG image for each PDF page.
     // {0} is replaced with the current page number in the image name.
-    var viewOptions = new PngViewOptions("output_{0}.png");
+    var viewOptions = new PngViewOptions("render-pdf-with-font-hinting_{0}.png");
     //Enable font hinting
     viewOptions.PdfOptions.EnableFontHinting = true;
     viewer.View(viewOptions);
@@ -632,7 +632,7 @@ Module Program
         Using viewer = New Viewer("sample.pdf")
             ' Create a PNG image for each PDF page.
             ' {0} is replaced with the current page number in the image name.
-            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            Dim viewOptions = New PngViewOptions("render-pdf-with-font-hinting_{0}.png")
             'Enable font hinting
             viewOptions.PdfOptions.EnableFontHinting = True
             viewer.View(viewOptions)
@@ -674,7 +674,7 @@ using (var viewer = new Viewer("sample.pdf"))
 {
     // Create an HTML file for each document page.
     // {0} is replaced with the current page number in the file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-disable-char-grouping_{0}.html");
     // Disable character grouping
     viewOptions.PdfOptions.DisableCharsGrouping = true;
     viewer.View(viewOptions);
@@ -692,7 +692,7 @@ Module Program
         Using viewer = New Viewer("sample.pdf")
             ' Create an HTML file for each document page.
             ' {0} is replaced with the current page number in the file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-disable-char-grouping_{0}.html")
             ' Disable character grouping
             viewOptions.PdfOptions.DisableCharsGrouping = True
             viewer.View(viewOptions)
@@ -734,7 +734,7 @@ using (var viewer = new Viewer("sample.pdf"))
 {
     // Create a PNG image for each PDF page.
     // {0} is replaced with the current page number in the image name.
-    var viewOptions = new PngViewOptions("output_{0}.png");
+    var viewOptions = new PngViewOptions("render-pdf-with-comments_{0}.png");
     // Enable comments rendering.
     viewOptions.RenderComments = true;
     viewer.View(viewOptions);
@@ -752,7 +752,7 @@ Module Program
         Using viewer = New Viewer("sample.pdf")
             ' Create a PNG image for each PDF page.
             ' {0} is replaced with the current page number in the image name.
-            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            Dim viewOptions = New PngViewOptions("render-pdf-with-comments_{0}.png")
             ' Enable comments rendering.
             viewOptions.RenderComments = True
             viewer.View(viewOptions)
@@ -953,7 +953,7 @@ using GroupDocs.Viewer.Options;
 
 using (Viewer viewer = new Viewer("sample.oxps"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("render-xps-skip-font-license-check_{0}.html");
     viewOptions.PdfOptions.DisableFontLicenseVerifications = true;
     viewer.View(viewOptions);
 }
@@ -968,7 +968,7 @@ Imports GroupDocs.Viewer.Options
 Module Program
     Sub Main(args As String())
         Using viewer As Viewer = New Viewer("sample.oxps")
-            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("render-xps-skip-font-license-check_{0}.html")
             viewOptions.PdfOptions.DisableFontLicenseVerifications = True
             viewer.View(viewOptions)
         End Using
@@ -1010,7 +1010,7 @@ using GroupDocs.Viewer.Options;
 
 using (Viewer viewer = new Viewer("sample.pdf"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-images-in-svg_{0}.html");
     viewOptions.PdfOptions.WrapImagesInSvg = true;
 
     viewer.View(viewOptions);
@@ -1026,7 +1026,7 @@ Imports GroupDocs.Viewer.Options
 Module Program
     Sub Main(args As String())
         Using viewer As Viewer = New Viewer("sample.pdf")
-            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-images-in-svg_{0}.html")
             viewOptions.PdfOptions.WrapImagesInSvg = True
         
             viewer.View(viewOptions)
@@ -1078,7 +1078,7 @@ using GroupDocs.Viewer.Options;
 
 using (Viewer viewer = new Viewer("copy_protected.pdf"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-disable-copy-protection_{0}.html");
     viewOptions.PdfOptions.DisableCopyProtection = true;
 
     viewer.View(viewOptions);
@@ -1094,7 +1094,7 @@ Imports GroupDocs.Viewer.Options
 Module Program
     Sub Main(args As String())
         Using viewer As Viewer = New Viewer("copy_protected.pdf")
-            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-disable-copy-protection_{0}.html")
             viewOptions.PdfOptions.DisableCopyProtection = True
         
             viewer.View(viewOptions)
@@ -1142,7 +1142,7 @@ using GroupDocs.Viewer.Options;
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.TryRepair = true;
 
-PngViewOptions viewOptions = new PngViewOptions();
+PngViewOptions viewOptions = new PngViewOptions("repair-corrupted-pdf_{0}.png");
 
 using (Viewer viewer = new Viewer("corrupted.pdf", loadOptions))
 {    
@@ -1161,7 +1161,7 @@ Module Program
         Dim loadOptions As New LoadOptions()
         loadOptions.TryRepair = True
 
-        Dim viewOptions As New PngViewOptions()
+        Dim viewOptions As New PngViewOptions("repair-corrupted-pdf_{0}.png")
 
         Using viewer As New Viewer("corrupted.pdf", loadOptions)
             viewer.View(viewOptions)
@@ -1206,7 +1206,7 @@ FontSettings.SetFontSources(fontSource);
 
 using (Viewer viewer = new Viewer("input.ofd"))
 {
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources();
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("render-ofd-document_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -1224,7 +1224,7 @@ Dim fontSource As FolderFontSource = New FolderFontSource(SimSunFolderPath, Sear
 FontSettings.SetFontSources(fontSource)
 
 Using viewer As Viewer = New Viewer("input.ofd")
-	Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+	Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("render-ofd-document_{0}.html")
 	viewer.View(viewOptions)
 End Using
 ```
@@ -1247,9 +1247,9 @@ using GroupDocs.Viewer.Options;
 // ...
 
 // Preparing output options
-PngViewOptions pngOpt = new PngViewOptions();
+PngViewOptions pngOpt = new PngViewOptions("render-pdf-popup-annotations_{0}.png");
 JpgViewOptions jpegOpt = new JpgViewOptions();
-HtmlViewOptions htmlEmbeddedOpt = HtmlViewOptions.ForEmbeddedResources();
+HtmlViewOptions htmlEmbeddedOpt = HtmlViewOptions.ForEmbeddedResources("render-pdf-popup-annotations_{0}.html");
 
 // Enabling "RenderNotes" for all options
 pngOpt.RenderNotes = jpegOpt.RenderNotes = htmlEmbeddedOpt.RenderNotes = true;
@@ -1271,9 +1271,9 @@ Imports GroupDocs.Viewer.Options
 ' ...
 
 ' Preparing output options
-Dim pngOpt As PngViewOptions = New PngViewOptions()
+Dim pngOpt As PngViewOptions = New PngViewOptions("render-pdf-popup-annotations_{0}.png")
 Dim jpegOpt As JpgViewOptions = New JpgViewOptions()
-Dim htmlEmbeddedOpt As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources()
+Dim htmlEmbeddedOpt As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("render-pdf-popup-annotations_{0}.html")
 
 ' Enabling "RenderNotes" for all options
 pngOpt.RenderNotes = jpegOpt.RenderNotes = htmlEmbeddedOpt.RenderNotes = True

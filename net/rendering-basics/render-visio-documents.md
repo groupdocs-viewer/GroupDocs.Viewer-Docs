@@ -58,7 +58,7 @@ using (var viewer = new Viewer("sample.vsdx"))
 {
     // Create an HTML file for each drawing page.
     // {0} is replaced with the current page number in the file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-visio-to-html_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -74,7 +74,7 @@ Module Program
         Using viewer = New Viewer("sample.vsdx")
             ' Create an HTML file for each drawing page.
             ' {0} is replaced with the current page number in the file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-visio-to-html_{0}.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -117,7 +117,7 @@ using (var viewer = new Viewer("sample.vsdx"))
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
     var viewOptions = HtmlViewOptions.ForExternalResources(
-        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+        "render-visio-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -134,7 +134,7 @@ Module Program
             ' Create an HTML file for each drawing page.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
-            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("render-visio-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -176,7 +176,7 @@ using (var viewer = new Viewer("sample.vsdx"))
 {
     // Create a PDF file for the document.
     // Specify the PDF file name.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-visio-to-pdf.pdf");
     viewer.View(viewOptions);
 }
 ```
@@ -192,7 +192,7 @@ Module Program
         Using viewer = New Viewer("sample.vsdx")
             ' Create a PDF file for the document.
             ' Specify the PDF file name.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-visio-to-pdf.pdf")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -355,7 +355,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("map.vsdx"))
 {
     // Convert the Visio file to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-visio-shapes-only.pdf");
     // Render the master shapes only.
     viewOptions.VisioRenderingOptions.RenderFiguresOnly = true;
     // Specify shape width in pixels.
@@ -374,7 +374,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("map.vsdx")
             ' Convert the Visio file to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-visio-shapes-only.pdf")
             ' Render the master shapes only.
             viewOptions.VisioRenderingOptions.RenderFiguresOnly = True
             ' Specify shape width in pixels.

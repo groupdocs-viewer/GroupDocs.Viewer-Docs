@@ -47,7 +47,7 @@ using (var viewer = new Viewer("groupdocs-documentation.mhtml"))
 {
     // Create a PDF file for the document.
     // Specify the PDF file name.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-web-to-pdf.pdf");
     viewer.View(viewOptions);
 }
 ```
@@ -63,7 +63,7 @@ Module Program
         Using viewer = New Viewer("groupdocs-documentation.mhtml")
             ' Create a PDF file for the document.
             ' Specify the PDF file name.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-web-to-pdf.pdf")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -353,7 +353,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("groupdocs-documentation.mhtml"))
 {
     // Convert the document to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-web-with-margins.pdf");
     // Specify the size of page margins in points.
     viewOptions.WebDocumentOptions.LeftMargin = 40;
     viewOptions.WebDocumentOptions.RightMargin = 40;
@@ -373,7 +373,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("groupdocs-documentation.mhtml")
             ' Convert the document to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-web-with-margins.pdf")
             ' Specify the size of page margins in points.
             viewOptions.WebDocumentOptions.LeftMargin = 40
             viewOptions.WebDocumentOptions.RightMargin = 40
@@ -414,7 +414,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("groupdocs-documentation.mhtml"))
 {
     // Convert the document to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-web-with-page-size.pdf");
     // Specify the page size.
     viewOptions.WebDocumentOptions.PageSize = PageSize.A3;
     viewer.View(viewOptions);
@@ -431,7 +431,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("groupdocs-documentation.mhtml")
             ' Convert the document to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-web-with-page-size.pdf")
             ' Specify the page size.
             viewOptions.WebDocumentOptions.PageSize = PageSize.A3
             viewer.View(viewOptions)

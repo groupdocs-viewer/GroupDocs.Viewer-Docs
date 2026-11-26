@@ -60,7 +60,7 @@ using (var viewer = new Viewer("sample.pptx"))
 {
     // Create an HTML file for each slide.
     // {0} is replaced with the current page number in the file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-presentation-to-html_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -76,7 +76,7 @@ Module Program
         Using viewer = New Viewer("sample.pptx")
             ' Create an HTML file for each slide.
             ' {0} is replaced with the current page number in the file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-presentation-to-html_{0}.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -122,7 +122,7 @@ using (var viewer = new Viewer("sample.pptx"))
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
     var viewOptions = HtmlViewOptions.ForExternalResources(
-        "page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+        "render-presentation-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -139,7 +139,7 @@ Module Program
             ' Create an HTML file for each slide.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
-            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("render-presentation-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -275,7 +275,7 @@ using (var viewer = new Viewer("sample.pptx"))
 {
     // Create a PDF file for the presentation.
     // Specify the PDF file name.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-presentation-to-pdf.pdf");
     viewer.View(viewOptions);
 }
 ```
@@ -291,7 +291,7 @@ Module Program
         Using viewer = New Viewer("sample.pptx")
             ' Create a PDF file for the presentation.
             ' Specify the PDF file name.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-presentation-to-pdf.pdf")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -462,7 +462,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.pptx"))
 {
     // Convert the presentation to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-presentation-with-resolution.pdf");
     // Specify resolution.
     viewOptions.PresentationOptions.Resolution = Resolution.Dpi150;
     viewer.View(viewOptions);
@@ -479,7 +479,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.pptx")
             ' Convert the presentation to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-presentation-with-resolution.pdf")
             ' Specify resolution.
             viewOptions.PresentationOptions.Resolution = Resolution.Dpi150
             viewer.View(viewOptions)
@@ -517,7 +517,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.pptx"))
 {
     // Convert the presentation to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-presentation-with-hidden-slides.pdf");
     // Enable hidden slides rendering.
     viewOptions.RenderHiddenPages = true;
     viewer.View(viewOptions);
@@ -534,7 +534,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.pptx")
             ' Convert the presentation to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-presentation-with-hidden-slides.pdf")
             ' Enable hidden slides rendering.
             viewOptions.RenderHiddenPages = True
             viewer.View(viewOptions)
@@ -570,7 +570,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("with_comments.pptx"))
 {
     // Convert the presentation to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-presentation-with-comments.pdf");
     // Enable comments rendering.
     viewOptions.RenderComments = true;
     viewer.View(viewOptions);
@@ -587,7 +587,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("with_comments.pptx")
             ' Convert the presentation to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-presentation-with-comments.pdf")
             ' Enable comments rendering.
             viewOptions.RenderComments = True
             viewer.View(viewOptions)
@@ -629,7 +629,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.pptx"))
 {
     // Convert the presentation to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-presentation-with-notes.pdf");
     // Enable speaker notes rendering.
     viewOptions.RenderNotes = true;
     viewer.View(viewOptions);
@@ -646,7 +646,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.pptx")
             ' Convert the presentation to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-presentation-with-notes.pdf")
             ' Enable speaker notes rendering.
             viewOptions.RenderNotes = True
             viewer.View(viewOptions)

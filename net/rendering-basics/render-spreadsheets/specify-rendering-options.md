@@ -44,7 +44,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("invoice.xlsx"))
 {
     // Convert the spreadsheet to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-headings.pdf");
     // Render row and column headings.
     viewOptions.SpreadsheetOptions.RenderHeadings = true;
     viewer.View(viewOptions);
@@ -61,7 +61,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("invoice.xlsx")
             ' Convert the spreadsheet to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-headings.pdf")
             ' Render row and column headings.
             viewOptions.SpreadsheetOptions.RenderHeadings = True
             viewer.View(viewOptions)
@@ -99,7 +99,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("invoice.xlsx"))
 {
     // Convert the spreadsheet to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-grid-lines.pdf");
     // Render grid lines.
     viewOptions.SpreadsheetOptions.RenderGridLines = true;
     viewer.View(viewOptions);
@@ -116,7 +116,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("invoice.xlsx")
             ' Convert the spreadsheet to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-grid-lines.pdf")
             ' Render grid lines.
             viewOptions.SpreadsheetOptions.RenderGridLines = True
             viewer.View(viewOptions)
@@ -174,7 +174,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("invoice.xlsx"))
 {
     // Convert the spreadsheet to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("set-text-overflow-mode.pdf");
     // Specify the AutoFitColumn mode.
     viewOptions.SpreadsheetOptions.TextOverflowMode = TextOverflowMode.AutoFitColumn;
     viewer.View(viewOptions);
@@ -191,7 +191,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("invoice.xlsx")
             ' Convert the spreadsheet to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("set-text-overflow-mode.pdf")
             ' Specify the AutoFitColumn mode.
             viewOptions.SpreadsheetOptions.TextOverflowMode = TextOverflowMode.AutoFitColumn
             viewer.View(viewOptions)
@@ -231,7 +231,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("invoice.xlsx"))
 {
     // Convert the spreadsheet to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-hidden-rows-and-columns.pdf");
     // Enable rendering hidden rows and columns.
     viewOptions.SpreadsheetOptions.RenderHiddenRows = true;
     viewOptions.SpreadsheetOptions.RenderHiddenColumns = true;
@@ -249,7 +249,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("invoice.xlsx")
             ' Convert the spreadsheet to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-hidden-rows-and-columns.pdf")
             ' Enable rendering hidden rows and columns.
             viewOptions.SpreadsheetOptions.RenderHiddenRows = True
             viewOptions.SpreadsheetOptions.RenderHiddenColumns = True
@@ -290,7 +290,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("invoice.xlsx"))
 {
     // Convert the spreadsheet to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-hidden-pages.pdf");
     // Enable rendering hidden pages.
     viewOptions.RenderHiddenPages = true;
     viewer.View(viewOptions);
@@ -307,7 +307,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("invoice.xlsx")
             ' Convert the spreadsheet to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-hidden-pages.pdf")
             ' Enable rendering hidden pages.
             viewOptions.RenderHiddenPages = True
             viewer.View(viewOptions)
@@ -343,7 +343,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("invoice.xlsx"))
 {
     // Convert the spreadsheet to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("skip-empty-rows-and-columns.pdf");
     // Enable skipping blank rows and columns.
     viewOptions.SpreadsheetOptions.SkipEmptyRows = true;
     viewOptions.SpreadsheetOptions.SkipEmptyColumns = true;
@@ -361,7 +361,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("invoice.xlsx")
             ' Convert the spreadsheet to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("skip-empty-rows-and-columns.pdf")
             ' Enable skipping blank rows and columns.
             viewOptions.SpreadsheetOptions.SkipEmptyRows = True
             viewOptions.SpreadsheetOptions.SkipEmptyColumns = True
@@ -456,7 +456,7 @@ using GroupDocs.Viewer.Options;
 
 using (var viewer = new Viewer("invoice.xlsx"))
 {
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("set-worksheet-margins.pdf");
 	
     // Set margins for worksheets in the output pdf pages
     viewOptions.SpreadsheetOptions.LeftMargin = 0;
@@ -477,7 +477,7 @@ Imports GroupDocs.Viewer.Options
 Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("invoice.xlsx")
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("set-worksheet-margins.pdf")
         
             ' Set margins for worksheets in the output pdf pages
             viewOptions.SpreadsheetOptions.LeftMargin = 0

@@ -40,7 +40,7 @@ using (Viewer viewer = new Viewer("sample.docx"))
 {
     // Create a PNG image for each page.
     // {0} is replaced with the current page number in the file name.
-    PngViewOptions viewOptions = new PngViewOptions("page_{0}.png");
+    PngViewOptions viewOptions = new PngViewOptions("render-document-to-png_{0}.png");
     viewer.View(viewOptions);
 }
 ```
@@ -57,7 +57,7 @@ Module Program
         Using viewer As Viewer = New Viewer("sample.docx")
             ' Create a PNG image for each page.
             ' {0} is replaced with the current page number in the file name.
-            Dim viewOptions As PngViewOptions = New PngViewOptions("page_{0}.png")
+            Dim viewOptions As PngViewOptions = New PngViewOptions("render-document-to-png_{0}.png")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -98,7 +98,7 @@ using GroupDocs.Viewer.Options;
 using (Viewer viewer = new Viewer("sample.docx"))
 {
     // {0} is replaced with the current page number in the file name.
-    PngViewOptions viewOptions = new PngViewOptions("page_{0}.png");
+    PngViewOptions viewOptions = new PngViewOptions("render-specific-pages_{0}.png");
     // Render pages 1 and 3 only.
     viewer.View(viewOptions, 1, 3);
 }
@@ -115,7 +115,7 @@ Module Program
         ' Load the document
         Using viewer As Viewer = New Viewer("sample.docx")
             ' {0} is replaced with the current page number in the file name.
-            Dim viewOptions As PngViewOptions = New PngViewOptions("page_{0}.png")
+            Dim viewOptions As PngViewOptions = New PngViewOptions("render-specific-pages_{0}.png")
             ' Render pages 1 and 3 only.
             viewer.View(viewOptions, 1, 3)
         End Using

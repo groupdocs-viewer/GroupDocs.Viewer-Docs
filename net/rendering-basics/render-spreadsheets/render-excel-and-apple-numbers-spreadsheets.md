@@ -73,7 +73,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 {
     // Convert the spreadsheet to HTML.
     // {0} is replaced with the current page number in the file names.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-excel-to-html_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -89,7 +89,7 @@ Module Program
         Using viewer = New Viewer("invoice.xlsx")
             ' Convert the spreadsheet to HTML.
             ' {0} is replaced with the current page number in the file names.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-excel-to-html_{0}.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -124,7 +124,7 @@ using (var viewer = new Viewer("sample.numbers"))
 {
     // Convert the spreadsheet to HTML.
     // {0} is replaced with the current page number in the file names.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-numbers-to-html_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -140,7 +140,7 @@ Module Program
         Using viewer = New Viewer("sample.numbers")
             ' Convert the spreadsheet to HTML.
             ' {0} is replaced with the current page number in the file names.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-numbers-to-html_{0}.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -183,7 +183,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
     // Convert the spreadsheet to HTML.
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("render-excel-to-html-external_{0}.html", "render-excel-to-html-external_{0}/resource_{0}_{1}", "render-excel-to-html-external_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -200,7 +200,7 @@ Module Program
             ' Convert the spreadsheet to HTML.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
-            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("render-excel-to-html-external_{0}.html", "render-excel-to-html-external_{0}/resource_{0}_{1}", "render-excel-to-html-external_{0}/resource_{0}_{1}")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -239,7 +239,7 @@ using (var viewer = new Viewer("sample.numbers"))
     // Convert the spreadsheet to HTML.
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the current page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("render-numbers-to-html-external_{0}.html", "render-numbers-to-html-external_{0}/resource_{0}_{1}", "render-numbers-to-html-external_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -256,7 +256,7 @@ Module Program
             ' Convert the spreadsheet to HTML.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the current page number and resource name, respectively.
-            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("render-numbers-to-html-external_{0}.html", "render-numbers-to-html-external_{0}/resource_{0}_{1}", "render-numbers-to-html-external_{0}/resource_{0}_{1}")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -350,7 +350,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("invoice.xlsx"))
 {
     // Convert the spreadsheet to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-excel-to-pdf.pdf");
     viewer.View(viewOptions);
 }
 ```
@@ -365,7 +365,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("invoice.xlsx")
             ' Convert the spreadsheet to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-excel-to-pdf.pdf")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -397,7 +397,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.numbers"))
 {
     // Convert the spreadsheet to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-numbers-to-pdf.pdf");
     viewer.View(viewOptions);
 }
 ```
@@ -412,7 +412,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.numbers")
             ' Convert the spreadsheet to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-numbers-to-pdf.pdf")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -449,7 +449,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 {
     // Convert the spreadsheet to PNG.
     // {0} is replaced with the current page number in the file names.
-    var viewOptions = new PngViewOptions("output_{0}.png");
+    var viewOptions = new PngViewOptions("render-excel-to-png_{0}.png");
     // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
@@ -468,7 +468,7 @@ Module Program
         Using viewer = New Viewer("invoice.xlsx")
             ' Convert the spreadsheet to PNG.
             ' {0} is replaced with the current page number in the file names.
-            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            Dim viewOptions = New PngViewOptions("render-excel-to-png_{0}.png")
             ' Set width and height.
             viewOptions.Width = 800
             viewOptions.Height = 900
@@ -506,7 +506,7 @@ using (var viewer = new Viewer("sample.numbers"))
 {
     // Convert the spreadsheet to PNG.
     // {0} is replaced with the current page number in the file names.
-    var viewOptions = new PngViewOptions("output_{0}.png");
+    var viewOptions = new PngViewOptions("render-numbers-to-png_{0}.png");
     // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
@@ -525,7 +525,7 @@ Module Program
         Using viewer = New Viewer("sample.numbers")
             ' Convert the spreadsheet to PNG.
             ' {0} is replaced with the current page number in the file names.
-            Dim viewOptions = New PngViewOptions("output_{0}.png")
+            Dim viewOptions = New PngViewOptions("render-numbers-to-png_{0}.png")
             ' Set width and height.
             viewOptions.Width = 800
             viewOptions.Height = 900
@@ -566,7 +566,7 @@ using (var viewer = new Viewer("invoice.xlsx"))
 {
     // Convert the spreadsheet to JPEG.
     // {0} is replaced with the current page number in the file names.
-    var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    var viewOptions = new JpgViewOptions("render-excel-to-jpg_{0}.jpg");
     // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
@@ -585,7 +585,7 @@ Module Program
         Using viewer = New Viewer("invoice.xlsx")
             ' Convert the spreadsheet to JPEG.
             ' {0} is replaced with the current page number in the file names.
-            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            Dim viewOptions = New JpgViewOptions("render-excel-to-jpg_{0}.jpg")
             ' Set width and height.
             viewOptions.Width = 800
             viewOptions.Height = 900
@@ -623,7 +623,7 @@ using (var viewer = new Viewer("sample.numbers"))
 {
     // Convert the spreadsheet to JPEG.
     // {0} is replaced with the current page number in the file names.
-    var viewOptions = new JpgViewOptions("output_{0}.jpg");
+    var viewOptions = new JpgViewOptions("render-numbers-to-jpg_{0}.jpg");
     // Set width and height.
     viewOptions.Width = 800;
     viewOptions.Height = 900;
@@ -642,7 +642,7 @@ Module Program
         Using viewer = New Viewer("sample.numbers")
             ' Convert the spreadsheet to JPEG.
             ' {0} is replaced with the current page number in the file names.
-            Dim viewOptions = New JpgViewOptions("output_{0}.jpg")
+            Dim viewOptions = New JpgViewOptions("render-numbers-to-jpg_{0}.jpg")
             ' Set width and height.
             viewOptions.Width = 800
             viewOptions.Height = 900
@@ -686,7 +686,7 @@ using (var viewer = new Viewer("sample.csv"))
 {
     // Convert the spreadsheet to HTML.
     // {0} is replaced with the current page number in the file names.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-csv-with-separator-detection_{0}.html");
     // Detect a CSV/TSV separator.
     viewOptions.SpreadsheetOptions.DetectSeparator = true;
     viewer.View(viewOptions);
@@ -704,7 +704,7 @@ Module Program
         Using viewer = New Viewer("sample.csv")
             ' Convert the spreadsheet to HTML.
             ' {0} is replaced with the current page number in the file names.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-csv-with-separator-detection_{0}.html")
             ' Detect a CSV/TSV separator.
             viewOptions.SpreadsheetOptions.DetectSeparator = True
             viewer.View(viewOptions)

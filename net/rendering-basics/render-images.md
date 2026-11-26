@@ -92,7 +92,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("vector-image.svg"))
 {
     // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-image-to-html.html");
     viewer.View(viewOptions);
 }
 ```
@@ -107,7 +107,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("vector-image.svg")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-image-to-html.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -146,7 +146,7 @@ using (var viewer = new Viewer("vector-image.svg"))
 {
     // Specify the HTML file name and location of external resources.
     // {0} is replaced with the resource name in the output file name.
-    var viewOptions = HtmlViewOptions.ForExternalResources("output.html", "output/resource_{0}", "output/resource_{0}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("render-image-to-html-external.html", "output/resource_{0}", "output/resource_{0}");
     viewer.View(viewOptions);
 }
 ```
@@ -162,7 +162,7 @@ Module Program
         Using viewer = New Viewer("vector-image.svg")
             ' Specify the HTML file name and location of external resources.
             ' {0} is replaced with the resource name in the output file name.
-            Dim viewOptions = HtmlViewOptions.ForExternalResources("output.html", "output/resource_{0}",    "output/resource_{0}")
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("render-image-to-html-external.html", "output/resource_{0}",    "output/resource_{0}")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -248,7 +248,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("vector-image.svg"))
 {
     // Create a PNG image.
-    var viewOptions = new PngViewOptions("output.png");
+    var viewOptions = new PngViewOptions("render-image-to-png.png");
     // Set width and height.
     viewOptions.Width = 1600;
     viewOptions.Height = 900;
@@ -266,7 +266,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("vector-image.svg")
             ' Create a PNG image.
-            Dim viewOptions = New PngViewOptions("output.png")
+            Dim viewOptions = New PngViewOptions("render-image-to-png.png")
             ' Set width and height.
             viewOptions.Width = 1600
             viewOptions.Height = 900
@@ -373,7 +373,7 @@ FontSettings.SetFontSources(fontSource);
 using (var viewer = new Viewer("sample.psd"))
 {
     // Convert a PSD file to PNG.
-    var viewOptions = new PngViewOptions("output.png");
+    var viewOptions = new PngViewOptions("render-psd-with-custom-fonts.png");
     // Specify the default font that should be used to replace missing fonts.
     viewOptions.DefaultFontName = "Arial";
     viewer.View(viewOptions);
@@ -396,7 +396,7 @@ Module Program
     
         Using viewer = New Viewer("sample.psd")
             ' Convert a PSD file to PNG.
-            Dim viewOptions = New PngViewOptions("output.png")
+            Dim viewOptions = New PngViewOptions("render-psd-with-custom-fonts.png")
             ' Specify the default font that should be used to replace missing fonts.
             viewOptions.DefaultFontName = "Arial"
             viewer.View(viewOptions)

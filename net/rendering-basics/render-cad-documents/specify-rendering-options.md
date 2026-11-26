@@ -39,7 +39,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.dwg"))
 {
     // Convert the document to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("set-background-color.pdf");
 
     // Specify the background color.
     viewOptions.CadOptions.BackgroundColor = Argb32Color.Transparent;
@@ -58,7 +58,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.dwg")
             ' Convert the document to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("set-background-color.pdf")
         
             ' Specify the background color.
             viewOptions.CadOptions.BackgroundColor = Argb32Color.Transparent
@@ -157,7 +157,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.dwg"))
 {
     // Convert the diagram to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("apply-pc3-file.pdf");
     // Specify a path to the PC3 file.
     viewOptions.CadOptions.Pc3File = "small_page.pc3";
     viewer.View(viewOptions);
@@ -174,7 +174,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.dwg")
             ' Convert the diagram to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("apply-pc3-file.pdf")
             ' Specify a path to the PC3 file.
             viewOptions.CadOptions.Pc3File = "small_page.pc3"
             viewer.View(viewOptions)

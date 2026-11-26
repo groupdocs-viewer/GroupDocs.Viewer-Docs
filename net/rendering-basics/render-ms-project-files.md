@@ -52,7 +52,7 @@ using (var viewer = new Viewer("sample.mpp"))
 {
     // Render the project's active view as HTML.
     // {0} is replaced with the current page number in the output file names.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("render-project-to-html_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -68,7 +68,7 @@ Module Program
         Using viewer = New Viewer("sample.mpp")
             ' Render the project's active view as HTML.
             ' {0} is replaced with the current page number in the output file names.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("render-project-to-html_{0}.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -108,7 +108,7 @@ using (var viewer = new Viewer("sample.mpp"))
     // Render the project's active view as HTML.
     // Specify the HTML file names and location of external resources.
     // {0} and {1} are replaced with the page number and resource name, respectively.
-    var viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
+    var viewOptions = HtmlViewOptions.ForExternalResources("render-project-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}");
     viewer.View(viewOptions);
 }
 ```
@@ -125,7 +125,7 @@ Module Program
             ' Render the project's active view as HTML.
             ' Specify the HTML file names and location of external resources.
             ' {0} and {1} are replaced with the page number and resource name, respectively.
-            Dim viewOptions = HtmlViewOptions.ForExternalResources("page_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
+            Dim viewOptions = HtmlViewOptions.ForExternalResources("render-project-to-html-external_{0}.html", "page_{0}/resource_{0}_{1}", "page_{0}/resource_{0}_{1}")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -171,7 +171,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.mpp"))
 {
     // Create a PDF file for the project's active view.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-project-to-pdf.pdf");
     viewer.View(viewOptions);
 }
 ```
@@ -186,7 +186,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.mpp")
             ' Create a PDF file for the project's active view.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-project-to-pdf.pdf")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -414,7 +414,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.mpp"))
 {
     // Convert the document to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-project-with-page-size.pdf");
     // Specify the page size.
     viewOptions.ProjectManagementOptions.PageSize = PageSize.A3;
     viewer.View(viewOptions);
@@ -431,7 +431,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.mpp")
             ' Convert the document to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-project-with-page-size.pdf")
             ' Specify the page size.
             viewOptions.ProjectManagementOptions.PageSize = PageSize.A3
             viewer.View(viewOptions)
@@ -532,7 +532,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.mpp"))
 {
     // Convert the document to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-project-specific-dates.pdf");
     // Specify the date range.
     viewOptions.ProjectManagementOptions.StartDate = new DateTime(2026, 10, 01);
     viewOptions.ProjectManagementOptions.EndDate = new DateTime(2026, 12, 01);
@@ -551,7 +551,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.mpp")
             ' Convert the document to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-project-specific-dates.pdf")
             ' Specify the date range.
             viewOptions.ProjectManagementOptions.StartDate = New DateTime(2026, 10, 01)
             viewOptions.ProjectManagementOptions.EndDate = New DateTime(2026, 12, 01)
@@ -594,7 +594,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("sample.mpp"))
 {
     // Convert the document to PDF.
-    var viewOptions = new PdfViewOptions("output.pdf");
+    var viewOptions = new PdfViewOptions("render-project-with-notes.pdf");
     // Enable notes rendering.
     viewOptions.RenderNotes = true;
     viewer.View(viewOptions);
@@ -611,7 +611,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("sample.mpp")
             ' Convert the document to PDF.
-            Dim viewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions = New PdfViewOptions("render-project-with-notes.pdf")
             ' Enable notes rendering.
             viewOptions.RenderNotes = True
             viewer.View(viewOptions)

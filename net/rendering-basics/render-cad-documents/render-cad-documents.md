@@ -69,7 +69,7 @@ using (Viewer viewer = new Viewer("sample.dwg"))
 {
     // Create an HTML file for the drawing.
     // Specify the HTML file name.
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForEmbeddedResources("render-cad-to-html.html");
     viewer.View(viewOptions);
 }
 ```
@@ -85,7 +85,7 @@ Module Program
         Using viewer As Viewer = New Viewer("sample.dwg")
             ' Create an HTML file for the drawing.
             ' Specify the HTML file name.
-            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForEmbeddedResources("render-cad-to-html.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -125,7 +125,7 @@ using (Viewer viewer = new Viewer("sample.dwg"))
     // Create an HTML file for the drawing.
     // Specify the HTML file name and location of external resources.
     // {0} is replaced with the resource name.
-    HtmlViewOptions viewOptions = HtmlViewOptions.ForExternalResources("output.html", "output/resource_{0}", "output/resource_{0}");
+    HtmlViewOptions viewOptions = HtmlViewOptions.ForExternalResources("render-cad-to-html-external.html", "output/resource_{0}", "output/resource_{0}");
     viewer.View(viewOptions);
 }
 ```
@@ -142,7 +142,7 @@ Module Program
             ' Create an HTML file for the drawing.
             ' Specify the HTML file name and location of external resources.
             ' {0} is replaced with the resource name.
-            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForExternalResources("output.html", "output/resource_{0}", "output/resource_{0}")
+            Dim viewOptions As HtmlViewOptions = HtmlViewOptions.ForExternalResources("render-cad-to-html-external.html", "output/resource_{0}", "output/resource_{0}")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -180,7 +180,7 @@ using (Viewer viewer = new Viewer("sample.dwg"))
 {
     // Create a PDF file for the drawing.
     // Specify the PDF file name.
-    PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
+    PdfViewOptions viewOptions = new PdfViewOptions("render-cad-to-pdf.pdf");
     viewer.View(viewOptions);
 }
 ```
@@ -196,7 +196,7 @@ Module Program
         Using viewer As Viewer = New Viewer("sample.dwg")
             ' Create a PDF file for the drawing.
             ' Specify the PDF file name.
-            Dim viewOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions("render-cad-to-pdf.pdf")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -453,7 +453,7 @@ using GroupDocs.Viewer.Options;
 using (Viewer viewer = new Viewer("sample.dxf"))
 {
    // Convert the document to PDF.
-   PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
+   PdfViewOptions viewOptions = new PdfViewOptions("render-all-layouts.pdf");
    // Render the Model and all non-empty paper space layouts. 
    viewOptions.CadOptions.RenderLayouts = true;
    viewer.View(viewOptions);
@@ -470,7 +470,7 @@ Module Program
     Sub Main(args As String())
         Using viewer As Viewer = New Viewer("sample.dxf")
             ' Convert the document to PDF.
-            Dim viewOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions("render-all-layouts.pdf")
             ' Render the Model and all non-empty paper space layouts. 
             viewOptions.CadOptions.RenderLayouts = True
             viewer.View(viewOptions)
@@ -504,7 +504,7 @@ using GroupDocs.Viewer.Options;
 using (Viewer viewer = new Viewer("sample.dxf"))
 {
    // Convert the document to PDF.
-   PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
+   PdfViewOptions viewOptions = new PdfViewOptions("render-specific-layout.pdf");
    // Specify the name of the layout to render.
    // If the specified layout is not found,
    // an exception occurs.
@@ -523,7 +523,7 @@ Module Program
     Sub Main(args As String())
         Using viewer As Viewer = New Viewer("sample.dxf")
             ' Convert the document to PDF.
-            Dim viewOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions("render-specific-layout.pdf")
             ' Specify the name of the layout to render.
             ' If the specified layout is not found,
             ' an exception occurs.
@@ -583,7 +583,7 @@ using System.Collections.Generic;
 using (Viewer viewer = new Viewer("sample.dwg"))
 {
     // Convert the document to PDF.
-    PdfViewOptions viewOptions = new PdfViewOptions("output.pdf");
+    PdfViewOptions viewOptions = new PdfViewOptions("render-specific-layers.pdf");
     // Specify a list of layers to display.
     viewOptions.CadOptions.Layers = new List<Layer>
     {
@@ -606,7 +606,7 @@ Module Program
     Sub Main(args As String())
         Using viewer As Viewer = New Viewer("sample.dwg")
             ' Convert the document to PDF.
-            Dim viewOptions As PdfViewOptions = New PdfViewOptions("output.pdf")
+            Dim viewOptions As PdfViewOptions = New PdfViewOptions("render-specific-layers.pdf")
             ' Specify a list of layers to display.
             viewOptions.CadOptions.Layers = New List(Of Layer) From {
                 New Layer("WALLS"),

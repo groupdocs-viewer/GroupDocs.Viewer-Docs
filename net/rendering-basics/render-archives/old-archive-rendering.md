@@ -50,7 +50,7 @@ using (var viewer = new Viewer("documents.zip"))
 {
     // Create an HTML file for the top folder and each subfolder in the archive.
     // {0} is replaced with the current page number in the output file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("legacy-archive-to-html_{0}.html");
     viewer.View(viewOptions);
 }
 ```
@@ -66,7 +66,7 @@ Module Program
         Using viewer = New Viewer("documents.zip")
             ' Create an HTML file for the top folder and each subfolder in the archive.
             ' {0} is replaced with the current page number in the output file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("legacy-archive-to-html_{0}.html")
             viewer.View(viewOptions)
         End Using
     End Sub
@@ -96,7 +96,7 @@ using (var viewer = new Viewer("documents.zip"))
 {
     // Create an HTML file for the top folder and each subfolder in the archive.
     // {0} is replaced with the current page number in the output file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("legacy-archive-items-per-page_{0}.html");
     // Specify the number of items to display on each HTML page.
     viewOptions.ArchiveOptions.ItemsPerPage = 10;
     viewer.View(viewOptions);
@@ -114,7 +114,7 @@ Module Program
         Using viewer = New Viewer("documents.zip")
             ' Create an HTML file for the top folder and each subfolder in the archive.
             ' {0} is replaced with the current page number in the output file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("legacy-archive-items-per-page_{0}.html")
             ' Specify the number of items to display on each HTML page.
             viewOptions.ArchiveOptions.ItemsPerPage = 10
             viewer.View(viewOptions)
@@ -139,7 +139,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("documents.zip"))
 {
     // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("legacy-archive-single-html.html");
     // Render the archive file to a single page.
     viewOptions.RenderToSinglePage = true;
     viewer.View(viewOptions);
@@ -156,7 +156,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("documents.zip")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("legacy-archive-single-html.html")
             ' Render the archive file to a single page.
             viewOptions.RenderToSinglePage = True
             viewer.View(viewOptions)
@@ -401,7 +401,7 @@ using GroupDocs.Viewer.Options;
 using (var viewer = new Viewer("documents.zip"))
 {
     // Create an HTML file.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("legacy-archive-specific-folder.html");
     // Specify a folder to render items from.
     viewOptions.ArchiveOptions.Folder = "Documents/CAD files";
     viewer.View(viewOptions);
@@ -418,7 +418,7 @@ Module Program
     Sub Main(args As String())
         Using viewer = New Viewer("documents.zip")
             ' Create an HTML file.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("output.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("legacy-archive-specific-folder.html")
             ' Specify a folder to render items from.
             viewOptions.ArchiveOptions.Folder = "Documents/CAD files"
             viewer.View(viewOptions)
@@ -450,7 +450,7 @@ using (var viewer = new Viewer("documents.zip"))
 {
     // Create an HTML file for the top folder and each subfolder in the archive.
     // {0} is replaced with the current page number in the output file name.
-    var viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html");
+    var viewOptions = HtmlViewOptions.ForEmbeddedResources("legacy-archive-file-name_{0}.html");
     // Specify a custom filename
     viewOptions.ArchiveOptions.FileName = new FileName("Sample Files");
     viewer.View(viewOptions);
@@ -468,7 +468,7 @@ Module Program
         Using viewer = New Viewer("documents.zip")
             ' Create an HTML file for the top folder and each subfolder in the archive.
             ' {0} is replaced with the current page number in the output file name.
-            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("page_{0}.html")
+            Dim viewOptions = HtmlViewOptions.ForEmbeddedResources("legacy-archive-file-name_{0}.html")
             ' Specify a custom filename
             viewOptions.ArchiveOptions.FileName = New FileName("Sample Files")
             viewer.View(viewOptions)
