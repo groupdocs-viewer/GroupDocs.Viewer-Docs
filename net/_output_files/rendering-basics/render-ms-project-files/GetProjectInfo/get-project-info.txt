@@ -1,4 +1,4 @@
 File type: Microsoft Project File (.mpp)
 The number of pages: 1
-Project start date: 9/7/2026 12:00:00 AM
-Project end date: 1/20/2027 12:00:00 AM
+Project start date: 07.09.2026 0:00:00
+Project end date: 20.01.2027 0:00:00

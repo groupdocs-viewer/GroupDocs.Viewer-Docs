@@ -79,10 +79,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-pdf-to-html.zip" >}}  
 ```text
-page_1.html (732 KB)
-page_2.html (402 KB)
-page_3.html (408 KB)
-page_4.html (85 KB)
+render-pdf-to-html_1.html (732 KB)
+render-pdf-to-html_2.html (402 KB)
+render-pdf-to-html_3.html (408 KB)
+render-pdf-to-html_4.html (85 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfToHtml/render-pdf-to-html.zip)
 {{< /tab >}}
@@ -139,16 +139,16 @@ End Module
 {{< /tab >}}
 {{< tab "render-pdf-to-html-external.zip" >}}  
 ```text
-page_1.html (3 KB)
 page_1/resource_1_f.woff (10 KB)
 page_1/resource_1_f1.woff (22 KB)
 page_1/resource_1_i.png (513 KB)
 page_1/resource_1_s.css (2 KB)
-page_2.html (9 KB)
 page_2/resource_2_f.woff (13 KB)
 page_2/resource_2_f1.woff (23 KB)
 page_2/resource_2_i.png (256 KB)
 page_2/resource_2_s.css (3 KB)
+page_3/resource_3_f.woff (17 KB)
+page_3/resource_3_f1.woff (23 KB)
 [TRUNCATED] (21 files total)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfToHtmlExternal/render-pdf-to-html-external.zip)
@@ -214,10 +214,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-pdf-fluid-layout.zip" >}}  
 ```text
-page_1.html (45 KB)
-page_2.html (52 KB)
-page_3.html (57 KB)
-page_4.html (63 KB)
+render-pdf-fluid-layout_1.html (45 KB)
+render-pdf-fluid-layout_2.html (52 KB)
+render-pdf-fluid-layout_3.html (57 KB)
+render-pdf-fluid-layout_4.html (63 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfFluidLayout/render-pdf-fluid-layout.zip)
 {{< /tab >}}
@@ -288,10 +288,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-pdf-with-image-quality.zip" >}}  
 ```text
-page_1.html (2784 KB)
-page_2.html (1428 KB)
-page_3.html (1433 KB)
-page_4.html (138 KB)
+render-pdf-with-image-quality_1.html (2784 KB)
+render-pdf-with-image-quality_2.html (1428 KB)
+render-pdf-with-image-quality_3.html (1433 KB)
+render-pdf-with-image-quality_4.html (139 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfWithImageQuality/render-pdf-with-image-quality.zip)
 {{< /tab >}}
@@ -410,10 +410,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-pdf-with-layered-rendering.zip" >}}  
 ```text
-page_1.html (769 KB)
-page_2.html (493 KB)
-page_3.html (496 KB)
-page_4.html (114 KB)
+render-pdf-with-layered-rendering_1.html (769 KB)
+render-pdf-with-layered-rendering_2.html (494 KB)
+render-pdf-with-layered-rendering_3.html (496 KB)
+render-pdf-with-layered-rendering_4.html (114 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfWithLayeredRendering/render-pdf-with-layered-rendering.zip)
 {{< /tab >}}
@@ -472,10 +472,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-pdf-to-png.zip" >}}  
 ```text
-output_1.png (450 KB)
-output_2.png (237 KB)
-output_3.png (253 KB)
-output_4.png (73 KB)
+render-pdf-to-png_1.png (450 KB)
+render-pdf-to-png_2.png (237 KB)
+render-pdf-to-png_3.png (253 KB)
+render-pdf-to-png_4.png (73 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfToPng/render-pdf-to-png.zip)
 {{< /tab >}}
@@ -590,10 +590,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-pdf-preserve-page-size.zip" >}}  
 ```text
-output_1.png (278 KB)
-output_2.png (110 KB)
-output_3.png (132 KB)
-output_4.png (24 KB)
+render-pdf-preserve-page-size_1.png (283 KB)
+render-pdf-preserve-page-size_2.png (112 KB)
+render-pdf-preserve-page-size_3.png (133 KB)
+render-pdf-preserve-page-size_4.png (24 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfPreservePageSize/render-pdf-preserve-page-size.zip)
 {{< /tab >}}
@@ -648,10 +648,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-pdf-with-font-hinting.zip" >}}  
 ```text
-output_1.png (961 KB)
-output_2.png (401 KB)
-output_3.png (425 KB)
-output_4.png (63 KB)
+render-pdf-with-font-hinting_1.png (976 KB)
+render-pdf-with-font-hinting_2.png (406 KB)
+render-pdf-with-font-hinting_3.png (427 KB)
+render-pdf-with-font-hinting_4.png (64 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfWithFontHinting/render-pdf-with-font-hinting.zip)
 {{< /tab >}}
@@ -708,10 +708,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-pdf-disable-char-grouping.zip" >}}  
 ```text
-page_1.html (786 KB)
-page_2.html (513 KB)
-page_3.html (543 KB)
-page_4.html (153 KB)
+render-pdf-disable-char-grouping_1.html (786 KB)
+render-pdf-disable-char-grouping_2.html (513 KB)
+render-pdf-disable-char-grouping_3.html (543 KB)
+render-pdf-disable-char-grouping_4.html (153 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfDisableCharGrouping/render-pdf-disable-char-grouping.zip)
 {{< /tab >}}
@@ -768,10 +768,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-pdf-with-comments.zip" >}}  
 ```text
-output_1.png (961 KB)
-output_2.png (401 KB)
-output_3.png (425 KB)
-output_4.png (63 KB)
+render-pdf-with-comments_1.png (976 KB)
+render-pdf-with-comments_2.png (406 KB)
+render-pdf-with-comments_3.png (427 KB)
+render-pdf-with-comments_4.png (64 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfWithComments/render-pdf-with-comments.zip)
 {{< /tab >}}
@@ -983,11 +983,11 @@ End Module
 {{< /tab >}}
 {{< tab "render-xps-skip-font-license-check.zip" >}}  
 ```text
-p_1.html (734 KB)
-p_2.html (114 KB)
-p_3.html (143 KB)
-p_4.html (727 KB)
-p_5.html (88 KB)
+render-xps-skip-font-license-check_1.html (734 KB)
+render-xps-skip-font-license-check_2.html (114 KB)
+render-xps-skip-font-license-check_3.html (142 KB)
+render-xps-skip-font-license-check_4.html (727 KB)
+render-xps-skip-font-license-check_5.html (89 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderXpsSkipFontLicenseCheck/render-xps-skip-font-license-check.zip)
 {{< /tab >}}
@@ -1042,10 +1042,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-pdf-images-in-svg.zip" >}}  
 ```text
-p_1.html (1429 KB)
-p_2.html (1432 KB)
-p_3.html (751 KB)
-p_4.html (67 KB)
+render-pdf-images-in-svg_1.html (1428 KB)
+render-pdf-images-in-svg_2.html (2799 KB)
+render-pdf-images-in-svg_3.html (751 KB)
+render-pdf-images-in-svg_4.html (67 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfImagesInSvg/render-pdf-images-in-svg.zip)
 {{< /tab >}}
@@ -1108,11 +1108,11 @@ End Module
 `copy_protected.pdf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-pdf-documents/copy_protected.pdf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "p_1.html" >}}  
+{{< tab "render-pdf-disable-copy-protection_1.html" >}}  
 ```text
 HTML file (92 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfDisableCopyProtection/p_1.html)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfDisableCopyProtection/render-pdf-disable-copy-protection_1.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -1177,9 +1177,9 @@ End Module
 {{< /tab >}}
 {{< tab "repair-corrupted-pdf.zip" >}}  
 ```text
-p_1.png (130 KB)
-p_2.png (129 KB)
-p_3.png (130 KB)
+repair-corrupted-pdf_1.png (130 KB)
+repair-corrupted-pdf_2.png (130 KB)
+repair-corrupted-pdf_3.png (131 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RepairCorruptedPdf/repair-corrupted-pdf.zip)
 {{< /tab >}}
@@ -1294,16 +1294,16 @@ End Using
 {{< /tab >}}
 {{< tab "render-pdf-popup-annotations.zip" >}}  
 ```text
-p_1.html (769 KB)
 p_1.jpg (279 KB)
-p_1.png (961 KB)
-p_2.html (597 KB)
 p_2.jpg (250 KB)
-p_2.png (420 KB)
-p_3.html (496 KB)
 p_3.jpg (223 KB)
-p_3.png (425 KB)
-p_4.html (114 KB)
+p_4.jpg (129 KB)
+render-pdf-popup-annotations_1.html (769 KB)
+render-pdf-popup-annotations_1.png (976 KB)
+render-pdf-popup-annotations_2.html (597 KB)
+render-pdf-popup-annotations_2.png (426 KB)
+render-pdf-popup-annotations_3.html (496 KB)
+render-pdf-popup-annotations_3.png (427 KB)
 [TRUNCATED] (12 files total)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-pdf-documents/RenderPdfPopupAnnotations/render-pdf-popup-annotations.zip)

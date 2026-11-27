@@ -77,12 +77,12 @@ End Module
 {{< /tab >}}
 {{< tab "render-ebook-to-html.zip" >}}  
 ```text
-page_1.html (53 KB)
-page_2.html (735 KB)
-page_3.html (388 KB)
-page_4.html (732 KB)
-page_5.html (736 KB)
-page_6.html (395 KB)
+render-ebook-to-html_1.html (53 KB)
+render-ebook-to-html_2.html (735 KB)
+render-ebook-to-html_3.html (388 KB)
+render-ebook-to-html_4.html (732 KB)
+render-ebook-to-html_5.html (736 KB)
+render-ebook-to-html_6.html (395 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-ebooks/RenderEbookToHtml/render-ebook-to-html.zip)
 {{< /tab >}}
@@ -139,16 +139,16 @@ End Module
 {{< /tab >}}
 {{< tab "render-ebook-to-html-external.zip" >}}  
 ```text
-page_1.html (2 KB)
 page_1/resource_1_f.woff (11 KB)
 page_1/resource_1_f1.woff (18 KB)
 page_1/resource_1_i.png (7 KB)
 page_1/resource_1_s.css (3 KB)
-page_2.html (4 KB)
 page_2/resource_2_f.woff (13 KB)
 page_2/resource_2_f1.woff (20 KB)
 page_2/resource_2_i.png (513 KB)
 page_2/resource_2_s.css (3 KB)
+page_3/resource_3_f.woff (20 KB)
+page_3/resource_3_f1.woff (11 KB)
 [TRUNCATED] (30 files total)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-ebooks/RenderEbookToHtmlExternal/render-ebook-to-html-external.zip)

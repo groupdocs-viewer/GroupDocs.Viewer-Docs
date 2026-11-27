@@ -64,10 +64,10 @@ End Module
 {{< /tab >}}
 {{< tab "adjust-image-size.zip" >}}  
 ```text
-p_1.jpg (54 KB)
-p_2.jpg (62 KB)
-p_3.jpg (65 KB)
-p_4.jpg (65 KB)
+p_1.jpg (52 KB)
+p_2.jpg (61 KB)
+p_3.jpg (63 KB)
+p_4.jpg (62 KB)
 p_5.jpg (44 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/image-viewer-adjust-image-size/AdjustImageSize/adjust-image-size.zip)

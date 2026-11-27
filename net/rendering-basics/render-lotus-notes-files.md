@@ -112,7 +112,7 @@ End Module
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 398 KB)
+Binary file (PDF, 397 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-lotus-notes-files/RenderNsfToPdf/output.pdf)
 {{< /tab >}}
@@ -169,8 +169,8 @@ End Module
 {{< /tab >}}
 {{< tab "render-nsf-to-png.zip" >}}  
 ```text
-output_1.png (44 KB)
-output_2.png (110 KB)
+output_1.png (46 KB)
+output_2.png (111 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-lotus-notes-files/RenderNsfToPng/render-nsf-to-png.zip)
 {{< /tab >}}
@@ -227,8 +227,8 @@ End Module
 {{< /tab >}}
 {{< tab "render-nsf-to-jpg.zip" >}}  
 ```text
-output_1.jpg (39 KB)
-output_2.jpg (83 KB)
+output_1.jpg (40 KB)
+output_2.jpg (88 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-lotus-notes-files/RenderNsfToJpg/render-nsf-to-jpg.zip)
 {{< /tab >}}
@@ -290,11 +290,11 @@ End Module
 `sample.nsf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "p_1.html" >}}  
+{{< tab "render-nsf-with-max-items_1.html" >}}  
 ```text
 HTML file (278 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-lotus-notes-files/RenderNsfWithMaxItems/p_1.html)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-lotus-notes-files/RenderNsfWithMaxItems/render-nsf-with-max-items_1.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -354,10 +354,10 @@ End Module
 `sample.nsf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-lotus-notes-files/sample.nsf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "p_1.html" >}}  
+{{< tab "render-nsf-with-filters_1.html" >}}  
 ```text
 HTML file (32 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-lotus-notes-files/RenderNsfWithFilters/p_1.html)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-lotus-notes-files/RenderNsfWithFilters/render-nsf-with-filters_1.html)
 {{< /tab >}}
 {{< /tabs >}}

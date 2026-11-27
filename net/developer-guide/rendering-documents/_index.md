@@ -71,11 +71,11 @@ End Module
 {{< /tab >}}
 {{< tab "render-document-to-png.zip" >}}  
 ```text
-page_1.png (206 KB)
-page_2.png (59 KB)
-page_3.png (44 KB)
-page_4.png (309 KB)
-page_5.png (35 KB)
+render-document-to-png_1.png (287 KB)
+render-document-to-png_2.png (33 KB)
+render-document-to-png_3.png (33 KB)
+render-document-to-png_4.png (430 KB)
+render-document-to-png_5.png (21 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/_index/RenderDocumentToPng/render-document-to-png.zip)
 {{< /tab >}}
@@ -130,8 +130,8 @@ End Module
 {{< /tab >}}
 {{< tab "render-specific-pages.zip" >}}  
 ```text
-page_1.png (206 KB)
-page_3.png (44 KB)
+render-specific-pages_1.png (287 KB)
+render-specific-pages_3.png (33 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/_index/RenderSpecificPages/render-specific-pages.zip)
 {{< /tab >}}

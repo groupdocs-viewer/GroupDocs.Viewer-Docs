@@ -76,7 +76,7 @@ End Module
 `sample.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/logging/sample.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.log" >}}  
+{{< tab "write-logs-to-file.log" >}}  
 ```text
 [TRACE] Rendering into HTML with embedded resources.
 [TRACE] Detecting file type by extension.
@@ -90,7 +90,7 @@ End Module
 [TRACE] Page 2 conversion completed.
 [TRUNCATED]
 ```
-[Download full output](/viewer/net/_output_files/developer-guide/logging/WriteLogsToFile/output.log)
+[Download full output](/viewer/net/_output_files/developer-guide/logging/WriteLogsToFile/write-logs-to-file.log)
 {{< /tab >}}
 {{< /tabs >}}
 

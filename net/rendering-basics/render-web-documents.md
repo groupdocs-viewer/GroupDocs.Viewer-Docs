@@ -75,11 +75,11 @@ End Module
 `groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-web-to-pdf.pdf" >}}  
 ```text
 Binary file (PDF, 46 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebToPdf/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebToPdf/render-web-to-pdf.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -128,8 +128,8 @@ End Module
 {{< /tab >}}
 {{< tab "render-web-to-png.zip" >}}  
 ```text
-output_1.png (27 KB)
-output_2.png (25 KB)
+output_1.png (40 KB)
+output_2.png (35 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebToPng/render-web-to-png.zip)
 {{< /tab >}}
@@ -180,8 +180,8 @@ End Module
 {{< /tab >}}
 {{< tab "render-web-to-jpg.zip" >}}  
 ```text
-output_1.jpg (43 KB)
-output_2.jpg (36 KB)
+output_1.jpg (49 KB)
+output_2.jpg (42 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebToJpg/render-web-to-jpg.zip)
 {{< /tab >}}
@@ -390,11 +390,11 @@ End Module
 `groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-web-with-margins.pdf" >}}  
 ```text
 Binary file (PDF, 46 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebWithMargins/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebWithMargins/render-web-with-margins.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -445,11 +445,11 @@ End Module
 `groupdocs-documentation.mhtml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-web-documents/groupdocs-documentation.mhtml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-web-with-page-size.pdf" >}}  
 ```text
-Binary file (PDF, 45 KB)
+Binary file (PDF, 46 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebWithPageSize/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-web-documents/RenderWebWithPageSize/render-web-with-page-size.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

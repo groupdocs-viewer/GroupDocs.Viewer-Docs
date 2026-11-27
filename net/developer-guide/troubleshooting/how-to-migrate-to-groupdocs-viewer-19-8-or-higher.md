@@ -126,12 +126,12 @@ End Module
 {{< /tab >}}
 {{< tab "migrate-new-api.zip" >}}  
 ```text
-p_1.html (228 KB)
+p_1.html (253 KB)
 p_2.html (110 KB)
-p_3.html (142 KB)
-p_4.html (885 KB)
+p_3.html (148 KB)
+p_4.html (1001 KB)
 p_5.html (86 KB)
 ```
-[Download full output](/viewer/net/_output_files/developer-guide/troubleshooting/how-to-migrate-to-groupdocs.viewer-19.8-or-higher/MigrateNewApi/migrate-new-api.zip)
+[Download full output](/viewer/net/_output_files/developer-guide/troubleshooting/how-to-migrate-to-groupdocs-viewer-19-8-or-higher/MigrateNewApi/migrate-new-api.zip)
 {{< /tab >}}
 {{< /tabs >}}

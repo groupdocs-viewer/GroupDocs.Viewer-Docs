@@ -78,11 +78,11 @@ End Module
 `sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.html" >}}  
+{{< tab "render-email-to-html.html" >}}  
 ```text
-HTML file (251 KB)
+HTML file (244 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailToHtml/output.html)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailToHtml/render-email-to-html.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -140,7 +140,7 @@ page_1/resource_1_f.ttf (54 KB)
 page_1/resource_1_f1.ttf (36 KB)
 page_1/resource_1_f2.ttf (45 KB)
 page_1/resource_1_f3.ttf (32 KB)
-page_1/resource_1_i.png (9 KB)
+page_1/resource_1_i.png (3 KB)
 page_1/resource_1_s.css (3 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailToHtmlExternal/render-email-to-html-external.zip)
@@ -190,11 +190,11 @@ End Module
 `sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-email-to-pdf.pdf" >}}  
 ```text
-Binary file (PDF, 102 KB)
+Binary file (PDF, 112 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailToPdf/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailToPdf/render-email-to-pdf.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -247,8 +247,8 @@ End Module
 {{< /tab >}}
 {{< tab "render-email-to-png.zip" >}}  
 ```text
-output_1.png (171 KB)
-output_2.png (47 KB)
+output_1.png (165 KB)
+output_2.png (37 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailToPng/render-email-to-png.zip)
 {{< /tab >}}
@@ -303,8 +303,8 @@ End Module
 {{< /tab >}}
 {{< tab "render-email-to-jpg.zip" >}}  
 ```text
-output_1.jpg (113 KB)
-output_2.jpg (35 KB)
+output_1.jpg (116 KB)
+output_2.jpg (34 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailToJpg/render-email-to-jpg.zip)
 {{< /tab >}}
@@ -366,11 +366,11 @@ End Module
 `sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-email-with-page-size.pdf" >}}  
 ```text
-Binary file (PDF, 102 KB)
+Binary file (PDF, 112 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailWithPageSize/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailWithPageSize/render-email-with-page-size.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -429,11 +429,11 @@ End Module
 `sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.html" >}}  
+{{< tab "render-email-with-renamed-fields.html" >}}  
 ```text
-HTML file (252 KB)
+HTML file (245 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailWithRenamedFields/output.html)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailWithRenamedFields/render-email-with-renamed-fields.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -493,11 +493,11 @@ End Module
 `sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.html" >}}  
+{{< tab "render-email-with-datetime-format.html" >}}  
 ```text
-HTML file (250 KB)
+HTML file (245 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailWithDatetimeFormat/output.html)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/RenderEmailWithDatetimeFormat/render-email-with-datetime-format.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -557,12 +557,6 @@ End Using
 {{< tab-text >}}
 `sample.eml` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-email-messages/sample.eml) to download it.
 {{< /tab-text >}}
-{{< /tab >}}
-{{< tab "p_1.html" >}}  
-```text
-HTML file (251 KB)
-```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-email-messages/GetEmailInfo/p_1.html)
 {{< /tab >}}
 {{< /tabs >}}
 

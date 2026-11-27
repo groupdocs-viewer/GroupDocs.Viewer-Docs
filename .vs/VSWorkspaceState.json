@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\java"
+    "\\net",
+    "\\net\\developer-guide",
+    "\\net\\developer-guide\\rendering-documents",
+    "\\net\\getting-started"
   ],
   "PreviewInSolutionExplorer": false
 }

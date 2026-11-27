@@ -63,7 +63,7 @@ End Module
 {{< /tab >}}
 {{< tab "output.pdf" >}}  
 ```text
-Binary file (PDF, 17 KB)
+Binary file (PDF, 34 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-pdf/optimization-pdf-options/optimization-pdf-spreadsheets/OptimizeSpreadsheets/output.pdf)
 {{< /tab >}}

@@ -97,11 +97,11 @@ End Module
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.html" >}}  
+{{< tab "render-cad-to-html.html" >}}  
 ```text
 HTML file (440 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderCadToHtml/output.html)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderCadToHtml/render-cad-to-html.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -156,8 +156,8 @@ End Module
 {{< /tab >}}
 {{< tab "render-cad-to-html-external.zip" >}}  
 ```text
-output.html (334 bytes)
 output/resource_1 (446 KB)
+render-cad-to-html-external.html (334 bytes)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderCadToHtmlExternal/render-cad-to-html-external.zip)
 {{< /tab >}}
@@ -208,11 +208,11 @@ End Module
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-cad-to-pdf.pdf" >}}  
 ```text
 Binary file (PDF, 97 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderCadToPdf/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderCadToPdf/render-cad-to-pdf.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -484,11 +484,11 @@ End Module
 `sample.dxf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dxf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-all-layouts.pdf" >}}  
 ```text
 Binary file (PDF, 330 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderAllLayouts/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderAllLayouts/render-all-layouts.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -539,11 +539,11 @@ End Module
 `sample.dxf` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dxf) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-specific-layout.pdf" >}}  
 ```text
 Binary file (PDF, 100 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderSpecificLayout/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderSpecificLayout/render-specific-layout.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -623,11 +623,11 @@ End Module
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/render-cad-documents/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-specific-layers.pdf" >}}  
 ```text
 Binary file (PDF, 3 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderSpecificLayers/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/render-cad-documents/RenderSpecificLayers/render-specific-layers.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

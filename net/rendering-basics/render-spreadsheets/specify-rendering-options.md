@@ -75,11 +75,11 @@ End Module
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-headings.pdf" >}}  
 ```text
-Binary file (PDF, 85 KB)
+Binary file (PDF, 87 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderHeadings/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderHeadings/render-headings.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -130,11 +130,11 @@ End Module
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-grid-lines.pdf" >}}  
 ```text
-Binary file (PDF, 81 KB)
+Binary file (PDF, 83 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderGridLines/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderGridLines/render-grid-lines.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -205,11 +205,11 @@ End Module
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "set-text-overflow-mode.pdf" >}}  
 ```text
-Binary file (PDF, 80 KB)
+Binary file (PDF, 82 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/SetTextOverflowMode/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/SetTextOverflowMode/set-text-overflow-mode.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -264,11 +264,11 @@ End Module
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-hidden-rows-and-columns.pdf" >}}  
 ```text
-Binary file (PDF, 81 KB)
+Binary file (PDF, 83 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderHiddenRowsAndColumns/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderHiddenRowsAndColumns/render-hidden-rows-and-columns.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -321,11 +321,11 @@ End Module
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-hidden-pages.pdf" >}}  
 ```text
-Binary file (PDF, 83 KB)
+Binary file (PDF, 85 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderHiddenPages/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderHiddenPages/render-hidden-pages.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -376,11 +376,11 @@ End Module
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "skip-empty-rows-and-columns.pdf" >}}  
 ```text
-Binary file (PDF, 80 KB)
+Binary file (PDF, 82 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/SkipEmptyRowsAndColumns/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/SkipEmptyRowsAndColumns/skip-empty-rows-and-columns.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -434,7 +434,7 @@ End Module
 {{< tab "render-comments.zip" >}}  
 ```text
 output_1.png (25 KB)
-output_2.png (101 KB)
+output_2.png (103 KB)
 output_3.png (30 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/RenderComments/render-comments.zip)
@@ -496,10 +496,10 @@ End Module
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/specify-rendering-options/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "set-worksheet-margins.pdf" >}}  
 ```text
-Binary file (PDF, 81 KB)
+Binary file (PDF, 83 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/SetWorksheetMargins/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/specify-rendering-options/SetWorksheetMargins/set-worksheet-margins.pdf)
 {{< /tab >}}
 {{< /tabs >}}

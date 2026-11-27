@@ -66,8 +66,8 @@ End Module
 {{< /tab >}}
 {{< tab "view-specific-pages.zip" >}}  
 ```text
-p_1.html (228 KB)
-p_3.html (142 KB)
+view-specific-pages_1.html (253 KB)
+view-specific-pages_3.html (148 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/view-specific-pages/ViewSpecificPages/view-specific-pages.zip)
 {{< /tab >}}
@@ -132,9 +132,9 @@ End Module
 {{< /tab >}}
 {{< tab "view-pages-from-array.zip" >}}  
 ```text
-p_1.html (228 KB)
-p_2.html (110 KB)
-p_4.html (885 KB)
+view-pages-from-array_1.html (253 KB)
+view-pages-from-array_2.html (110 KB)
+view-pages-from-array_4.html (1001 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/view-specific-pages/ViewPagesFromArray/view-pages-from-array.zip)
 {{< /tab >}}

@@ -59,11 +59,11 @@ End Module
 {{< /tab >}}
 {{< tab "render-to-png-images.zip" >}}  
 ```text
-p_1.png (206 KB)
-p_2.png (59 KB)
-p_3.png (44 KB)
-p_4.png (309 KB)
-p_5.png (35 KB)
+p_1.png (287 KB)
+p_2.png (33 KB)
+p_3.png (33 KB)
+p_4.png (430 KB)
+p_5.png (21 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/_index/RenderToPngImages/render-to-png-images.zip)
 {{< /tab >}}
@@ -112,11 +112,11 @@ End Module
 {{< /tab >}}
 {{< tab "render-to-jpeg-images.zip" >}}  
 ```text
-p_1.jpg (83 KB)
-p_2.jpg (105 KB)
-p_3.jpg (89 KB)
-p_4.jpg (111 KB)
-p_5.jpg (66 KB)
+p_1.jpg (82 KB)
+p_2.jpg (112 KB)
+p_3.jpg (104 KB)
+p_4.jpg (104 KB)
+p_5.jpg (72 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/_index/RenderToJpegImages/render-to-jpeg-images.zip)
 {{< /tab >}}

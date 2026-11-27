@@ -57,10 +57,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-responsive-html.zip" >}}  
 ```text
-p_1.html (177 KB)
+p_1.html (201 KB)
 p_2.html (10 KB)
 p_3.html (44 KB)
-p_4.html (843 KB)
+p_4.html (960 KB)
 p_5.html (15 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/render-with-responsive-layout/RenderResponsiveHtml/render-responsive-html.zip)

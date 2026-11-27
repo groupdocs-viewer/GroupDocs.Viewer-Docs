@@ -60,10 +60,10 @@ End Module
 {{< /tab >}}
 {{< tab "add-text-watermark.zip" >}}  
 ```text
-p_1.html (229 KB)
+p_1.html (254 KB)
 p_2.html (111 KB)
-p_3.html (143 KB)
-p_4.html (886 KB)
+p_3.html (149 KB)
+p_4.html (1003 KB)
 p_5.html (88 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/add-text-watermark/AddTextWatermark/add-text-watermark.zip)

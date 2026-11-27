@@ -300,10 +300,10 @@ End Using
 {{< /tab >}}
 {{< tab "render-xml-to-images.zip" >}}  
 ```text
-page-1.jpeg (130 KB)
-page-1.png (84 KB)
-page-2.jpeg (15 KB)
-page-2.png (12 KB)
+page-1.jpeg (127 KB)
+page-1.png (67 KB)
+page-2.jpeg (22 KB)
+page-2.png (11 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-xml-documents/RenderXmlToImages/render-xml-to-images.zip)
 {{< /tab >}}

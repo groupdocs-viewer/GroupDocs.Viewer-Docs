@@ -73,11 +73,11 @@ End Module
 `sample.dwg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/sample.dwg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "set-background-color.pdf" >}}  
 ```text
 Binary file (PDF, 97 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/SetBackgroundColor/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/SetBackgroundColor/set-background-color.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -193,11 +193,11 @@ End Module
 `small_page.pc3` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-cad-documents/specify-rendering-options/small_page.pc3) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "apply-pc3-file.pdf" >}}  
 ```text
 Binary file (PDF, 97 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/ApplyPc3File/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-cad-documents/specify-rendering-options/ApplyPc3File/apply-pc3-file.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

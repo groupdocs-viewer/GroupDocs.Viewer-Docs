@@ -90,7 +90,7 @@ End Using
 {{< /tab >}}
 {{< tab "p_1.html" >}}  
 ```text
-HTML file (97 KB)
+HTML file (98 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/search-highlight-text/HighlightWordInWordDocument/p_1.html)
 {{< /tab >}}
@@ -148,10 +148,10 @@ End Using
 {{< /tab >}}
 {{< tab "highlight-regex-matches-in-pdf.zip" >}}  
 ```text
-p_1.png (961 KB)
-p_2.png (402 KB)
-p_3.png (425 KB)
-p_4.png (63 KB)
+p_1.png (976 KB)
+p_2.png (407 KB)
+p_3.png (427 KB)
+p_4.png (64 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/search-highlight-text/HighlightRegexMatchesInPdf/highlight-regex-matches-in-pdf.zip)
 {{< /tab >}}

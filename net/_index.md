@@ -49,10 +49,10 @@ using (Viewer viewer = new Viewer("sample.docx"))
 {{< /tab >}}
 {{< tab "render-docx-to-html.zip" >}}  
 ```text
-page_1.html (228 KB)
+page_1.html (253 KB)
 page_2.html (110 KB)
-page_3.html (142 KB)
-page_4.html (885 KB)
+page_3.html (148 KB)
+page_4.html (1001 KB)
 page_5.html (86 KB)
 ```
 [Download full output](/viewer/net/_output_files/_index/RenderDocxToHtml/render-docx-to-html.zip)

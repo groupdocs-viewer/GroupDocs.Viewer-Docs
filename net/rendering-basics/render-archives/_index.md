@@ -298,8 +298,8 @@ End Using
 {{< /tab >}}
 {{< tab "render-archive-to-images.zip" >}}  
 ```text
-JPEG/page-1.jpeg (465 KB)
-PNG/page-1.png (284 KB)
+JPEG/page-1.jpeg (555 KB)
+PNG/page-1.png (161 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-archives/_index/RenderArchiveToImages/render-archive-to-images.zip)
 {{< /tab >}}

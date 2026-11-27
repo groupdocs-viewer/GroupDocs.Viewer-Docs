@@ -77,11 +77,11 @@ End Using
 `products.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/products.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-worksheet-on-one-page.pdf" >}}  
 ```text
 Binary file (PDF, 73 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/RenderWorksheetOnOnePage/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/RenderWorksheetOnOnePage/render-worksheet-on-one-page.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -142,11 +142,11 @@ End Using
 `products.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/products.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "split-worksheet-by-page-breaks.pdf" >}}  
 ```text
 Binary file (PDF, 75 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/SplitWorksheetByPageBreaks/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/SplitWorksheetByPageBreaks/split-worksheet-by-page-breaks.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -205,11 +205,11 @@ End Using
 `invoice.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/invoice.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-only-print-area.pdf" >}}  
 ```text
 Binary file (PDF, 54 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/RenderOnlyPrintArea/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/RenderOnlyPrintArea/render-only-print-area.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -339,11 +339,11 @@ End Using
 `two-pages.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/two-pages.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "split-worksheet-by-rows.pdf" >}}  
 ```text
 Binary file (PDF, 41 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/SplitWorksheetByRows/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/SplitWorksheetByRows/split-worksheet-by-rows.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -408,11 +408,11 @@ End Using
 `four-pages.xlsx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/four-pages.xlsx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "split-worksheet-by-rows-and-columns.pdf" >}}  
 ```text
 Binary file (PDF, 53 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/SplitWorksheetByRowsAndColumns/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-spreadsheets/split-worksheet-into-pages/SplitWorksheetByRowsAndColumns/split-worksheet-by-rows-and-columns.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

@@ -1,3 +1,3 @@
 Attachments:
-invoice-NWR-2026-0912.pdf - Portable Document Format File (.pdf); ID: beef1f0b-cf7a-5f11-9a96-c45164d87592; Path: invoice-NWR-2026-0912.pdf; Size: 198531B
-delivery-note-0912.xlsx - Microsoft Excel Open XML Spreadsheet (.xlsx); ID: 27d8bb8f-7c88-592f-8967-72831e28e818; Path: delivery-note-0912.xlsx; Size: 7643B
+invoice-NWR-2026-0912.pdf - Portable Document Format File (.pdf); ID: 5bcc7cda-a8d2-59a6-81c9-68c3046ea549; Path: invoice-NWR-2026-0912.pdf; Size: 198531B
+delivery-note-0912.xlsx - Microsoft Excel Open XML Spreadsheet (.xlsx); ID: 2272c6b7-4754-5380-b1d6-faa1c272f174; Path: delivery-note-0912.xlsx; Size: 7643B

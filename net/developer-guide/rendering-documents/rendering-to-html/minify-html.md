@@ -95,10 +95,10 @@ End Module
 {{< /tab >}}
 {{< tab "minify-html.zip" >}}  
 ```text
-p_1.html (228 KB)
+p_1.html (253 KB)
 p_2.html (109 KB)
-p_3.html (141 KB)
-p_4.html (884 KB)
+p_3.html (147 KB)
+p_4.html (1001 KB)
 p_5.html (86 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/minify-html/MinifyHtml/minify-html.zip)

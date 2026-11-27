@@ -88,9 +88,9 @@ End Module
 {{< /tab >}}
 {{< tab "render-visio-to-html.zip" >}}  
 ```text
-page_1.html (6 KB)
-page_2.html (11 KB)
-page_3.html (9 KB)
+render-visio-to-html_1.html (6 KB)
+render-visio-to-html_2.html (11 KB)
+render-visio-to-html_3.html (9 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-visio-documents/RenderVisioToHtml/render-visio-to-html.zip)
 {{< /tab >}}
@@ -148,12 +148,12 @@ End Module
 {{< /tab >}}
 {{< tab "render-visio-to-html-external.zip" >}}  
 ```text
-page_1.html (275 bytes)
 page_1/resource_1_g.svg (6 KB)
-page_2.html (275 bytes)
 page_2/resource_2_g.svg (11 KB)
-page_3.html (275 bytes)
 page_3/resource_3_g.svg (9 KB)
+render-visio-to-html-external_1.html (275 bytes)
+render-visio-to-html-external_2.html (275 bytes)
+render-visio-to-html-external_3.html (275 bytes)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-visio-documents/RenderVisioToHtmlExternal/render-visio-to-html-external.zip)
 {{< /tab >}}
@@ -204,11 +204,11 @@ End Module
 `sample.vsdx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-visio-documents/sample.vsdx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-visio-to-pdf.pdf" >}}  
 ```text
 Binary file (PDF, 85 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-visio-documents/RenderVisioToPdf/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-visio-documents/RenderVisioToPdf/render-visio-to-pdf.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -390,11 +390,11 @@ End Module
 `map.vsdx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-visio-documents/map.vsdx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-visio-shapes-only.pdf" >}}  
 ```text
 Binary file (PDF, 27 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-visio-documents/RenderVisioShapesOnly/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-visio-documents/RenderVisioShapesOnly/render-visio-shapes-only.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

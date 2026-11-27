@@ -119,11 +119,11 @@ End Module
 `terms_of_service.md` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-text-files/terms_of_service.md) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-text-with-load-options.pdf" >}}  
 ```text
 Binary file (PDF, 85 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextWithLoadOptions/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextWithLoadOptions/render-text-with-load-options.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -176,10 +176,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-text-to-html.zip" >}}  
 ```text
-page_1.html (2 KB)
-page_2.html (3 KB)
-page_3.html (2 KB)
-page_4.html (1 KB)
+render-text-to-html_1.html (2 KB)
+render-text-to-html_2.html (3 KB)
+render-text-to-html_3.html (2 KB)
+render-text-to-html_4.html (1 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextToHtml/render-text-to-html.zip)
 {{< /tab >}}
@@ -236,14 +236,14 @@ End Module
 {{< /tab >}}
 {{< tab "render-text-to-html-external.zip" >}}  
 ```text
-page_1.html (2 KB)
 page_1/resource_1_s.css (109 bytes)
-page_2.html (2 KB)
 page_2/resource_2_s.css (109 bytes)
-page_3.html (2 KB)
 page_3/resource_3_s.css (109 bytes)
-page_4.html (1 KB)
 page_4/resource_4_s.css (109 bytes)
+render-text-to-html-external_1.html (2 KB)
+render-text-to-html-external_2.html (2 KB)
+render-text-to-html-external_3.html (2 KB)
+render-text-to-html-external_4.html (1 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextToHtmlExternal/render-text-to-html-external.zip)
 {{< /tab >}}
@@ -347,11 +347,11 @@ End Module
 `terms_of_service.txt` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-text-files/terms_of_service.txt) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-text-to-pdf.pdf" >}}  
 ```text
 Binary file (PDF, 109 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextToPdf/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextToPdf/render-text-to-pdf.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -406,10 +406,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-text-to-png.zip" >}}  
 ```text
-output_1.png (125 KB)
-output_2.png (138 KB)
-output_3.png (122 KB)
-output_4.png (65 KB)
+output_1.png (120 KB)
+output_2.png (134 KB)
+output_3.png (118 KB)
+output_4.png (63 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextToPng/render-text-to-png.zip)
 {{< /tab >}}
@@ -466,10 +466,10 @@ End Module
 {{< /tab >}}
 {{< tab "render-text-to-jpg.zip" >}}  
 ```text
-output_1.jpg (116 KB)
-output_2.jpg (135 KB)
-output_3.jpg (114 KB)
-output_4.jpg (66 KB)
+output_1.jpg (126 KB)
+output_2.jpg (145 KB)
+output_3.jpg (128 KB)
+output_4.jpg (70 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextToJpg/render-text-to-jpg.zip)
 {{< /tab >}}
@@ -537,13 +537,13 @@ End Module
 {{< /tab >}}
 {{< tab "render-text-with-options.zip" >}}  
 ```text
-page_1.html (1 KB)
-page_2.html (1 KB)
-page_3.html (2 KB)
-page_4.html (2 KB)
-page_5.html (1 KB)
-page_6.html (1 KB)
-page_7.html (1 KB)
+render-text-with-options_1.html (1 KB)
+render-text-with-options_2.html (1 KB)
+render-text-with-options_3.html (2 KB)
+render-text-with-options_4.html (2 KB)
+render-text-with-options_5.html (1 KB)
+render-text-with-options_6.html (1 KB)
+render-text-with-options_7.html (1 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-text-files/RenderTextWithOptions/render-text-with-options.zip)
 {{< /tab >}}

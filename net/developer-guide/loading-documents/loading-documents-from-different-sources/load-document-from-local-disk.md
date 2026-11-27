@@ -56,10 +56,10 @@ End Module
 {{< /tab >}}
 {{< tab "load-document-from-local-disk.zip" >}}  
 ```text
-p_1.html (228 KB)
+p_1.html (253 KB)
 p_2.html (110 KB)
-p_3.html (142 KB)
-p_4.html (885 KB)
+p_3.html (148 KB)
+p_4.html (1001 KB)
 p_5.html (86 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/loading-documents/loading-documents-from-different-sources/load-document-from-local-disk/LoadDocumentFromLocalDisk/load-document-from-local-disk.zip)

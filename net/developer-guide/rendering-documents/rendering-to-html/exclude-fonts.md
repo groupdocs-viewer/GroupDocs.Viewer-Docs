@@ -82,11 +82,11 @@ End Module
 {{< /tab >}}
 {{< tab "exclude-all-fonts.zip" >}}  
 ```text
-p_1.html (176 KB)
-p_2.html (10 KB)
-p_3.html (61 KB)
-p_4.html (842 KB)
-p_5.html (15 KB)
+exclude-all-fonts_1.html (201 KB)
+exclude-all-fonts_2.html (10 KB)
+exclude-all-fonts_3.html (67 KB)
+exclude-all-fonts_4.html (959 KB)
+exclude-all-fonts_5.html (15 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/exclude-fonts/ExcludeAllFonts/exclude-all-fonts.zip)
 {{< /tab >}}
@@ -139,12 +139,12 @@ End Module
 {{< /tab >}}
 {{< tab "exclude-specific-fonts.zip" >}}  
 ```text
-p_1.html (57 KB)
-p_2.html (5 KB)
-p_3.html (18 KB)
-p_4.html (17 KB)
-p_5.html (8 KB)
-p_6.html (6 KB)
+exclude-specific-fonts_1.html (57 KB)
+exclude-specific-fonts_2.html (5 KB)
+exclude-specific-fonts_3.html (18 KB)
+exclude-specific-fonts_4.html (17 KB)
+exclude-specific-fonts_5.html (8 KB)
+exclude-specific-fonts_6.html (6 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/exclude-fonts/ExcludeSpecificFonts/exclude-specific-fonts.zip)
 {{< /tab >}}

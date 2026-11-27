@@ -94,14 +94,14 @@ End Module
 ```text
 Page: 1
 Text lines/words/characters:
-Line 'Harbor Lane Provisions - Annual Report 2025 | Page 1' X=341.103 Y=803.10099 198.2x8.8px with 10 word(s).
-	Word 'Harbor' X=341.103 Y=803.10099 24.456x8.8px with 6 character(s).
-		Character 'H' X=341.103 Y=803.101 5.776x8.8px.
-		Character 'a' X=346.879 Y=803.101 4.448x8.8px.
-		Character 'r' X=351.327 Y=803.101 2.664x8.8px.
-		Character 'b' X=353.991 Y=803.101 4.448x8.8px.
-		Character 'o' X=358.439 Y=803.101 4.448x8.8px.
-		Character 'r' X=362.895 Y=803.101 
+Line 'Harbor Lane Provisions - Annual Report 2025 | Page 1' X=341,103 Y=803,10099 198,2x8,8px with 10 word(s).
+	Word 'Harbor' X=341,103 Y=803,10099 24,456x8,8px with 6 character(s).
+		Character 'H' X=341,103 Y=803,101 5,776x8,8px.
+		Character 'a' X=346,879 Y=803,101 4,448x8,8px.
+		Character 'r' X=351,327 Y=803,101 2,664x8,8px.
+		Character 'b' X=353,991 Y=803,101 4,448x8,8px.
+		Character 'o' X=358,439 Y=803,101 4,448x8,8px.
+		Character 'r' X=362,895 Y=803,101 
 [TRUNCATED]
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/image-viewer-get-text-coordinates/GetTextCoordinates/get-text-coordinates.txt)

@@ -67,16 +67,16 @@ End Module
 {{< /tab >}}
 {{< tab "render-to-html-external.zip" >}}  
 ```text
-p_1.html (2 KB)
-p_1_f.woff (20 KB)
-p_1_f1.woff (9 KB)
-p_1_f2.woff (10 KB)
-p_1_i.jpeg (126 KB)
-p_1_i.png (4 KB)
-p_1_s.css (1 KB)
-p_2.html (9 KB)
-p_2_f.woff (15 KB)
-p_2_f1.woff (29 KB)
+render-to-html-external_1.html (2 KB)
+render-to-html-external_1_f.woff (20 KB)
+render-to-html-external_1_f1.woff (9 KB)
+render-to-html-external_1_f2.woff (10 KB)
+render-to-html-external_1_i.jpeg (144 KB)
+render-to-html-external_1_i.png (4 KB)
+render-to-html-external_1_s.css (1 KB)
+render-to-html-external_2.html (9 KB)
+render-to-html-external_2_f.woff (15 KB)
+render-to-html-external_2_f1.woff (29 KB)
 [TRUNCATED] (35 files total)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/_index/RenderToHtmlExternal/render-to-html-external.zip)
@@ -126,11 +126,11 @@ End Module
 {{< /tab >}}
 {{< tab "render-to-html-embedded.zip" >}}  
 ```text
-p_1.html (228 KB)
-p_2.html (110 KB)
-p_3.html (142 KB)
-p_4.html (885 KB)
-p_5.html (86 KB)
+render-to-html-embedded_1.html (253 KB)
+render-to-html-embedded_2.html (110 KB)
+render-to-html-embedded_3.html (148 KB)
+render-to-html-embedded_4.html (1001 KB)
+render-to-html-embedded_5.html (86 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-html/_index/RenderToHtmlEmbedded/render-to-html-embedded.zip)
 {{< /tab >}}

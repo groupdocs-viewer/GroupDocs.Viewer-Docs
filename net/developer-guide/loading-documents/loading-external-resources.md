@@ -71,11 +71,11 @@ End Module
 `business-flyer.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/loading-documents/loading-external-resources/business-flyer.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "p_1.html" >}}  
+{{< tab "skip-loading-external-resources_1.html" >}}  
 ```text
 HTML file (117 KB)
 ```
-[Download full output](/viewer/net/_output_files/developer-guide/loading-documents/loading-external-resources/SkipLoadingExternalResources/p_1.html)
+[Download full output](/viewer/net/_output_files/developer-guide/loading-documents/loading-external-resources/SkipLoadingExternalResources/skip-loading-external-resources_1.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -135,11 +135,11 @@ End Module
 `business-flyer.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/loading-documents/loading-external-resources/business-flyer.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "p_1.html" >}}  
+{{< tab "load-external-resources-from-safelist_1.html" >}}  
 ```text
 HTML file (130 KB)
 ```
-[Download full output](/viewer/net/_output_files/developer-guide/loading-documents/loading-external-resources/LoadExternalResourcesFromSafelist/p_1.html)
+[Download full output](/viewer/net/_output_files/developer-guide/loading-documents/loading-external-resources/LoadExternalResourcesFromSafelist/load-external-resources-from-safelist_1.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -194,10 +194,10 @@ End Module
 `business-flyer.docx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/developer-guide/loading-documents/loading-external-resources/business-flyer.docx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "p_1.html" >}}  
+{{< tab "set-external-resources-timeout_1.html" >}}  
 ```text
 HTML file (140 KB)
 ```
-[Download full output](/viewer/net/_output_files/developer-guide/loading-documents/loading-external-resources/SetExternalResourcesTimeout/p_1.html)
+[Download full output](/viewer/net/_output_files/developer-guide/loading-documents/loading-external-resources/SetExternalResourcesTimeout/set-external-resources-timeout_1.html)
 {{< /tab >}}
 {{< /tabs >}}

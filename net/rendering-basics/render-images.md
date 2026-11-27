@@ -119,11 +119,11 @@ End Module
 `vector-image.svg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.html" >}}  
+{{< tab "render-image-to-html.html" >}}  
 ```text
 HTML file (1.3 MB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-images/RenderImageToHtml/output.html)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-images/RenderImageToHtml/render-image-to-html.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -176,8 +176,8 @@ End Module
 {{< /tab >}}
 {{< tab "render-image-to-html-external.zip" >}}  
 ```text
-output.html (269 bytes)
 output/resource_1 (5 KB)
+render-image-to-html-external.html (269 bytes)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-images/RenderImageToHtmlExternal/render-image-to-html-external.zip)
 {{< /tab >}}
@@ -281,11 +281,11 @@ End Module
 `vector-image.svg` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-images/vector-image.svg) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.png" >}}  
+{{< tab "render-image-to-png.png" >}}  
 ```text
 Binary file (PNG, 247 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-images/RenderImageToPng/output.png)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-images/RenderImageToPng/render-image-to-png.png)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -378,6 +378,9 @@ using (var viewer = new Viewer("sample.psd"))
     viewOptions.DefaultFontName = "Arial";
     viewer.View(viewOptions);
 }
+
+// Reset font sources to default ones after rendering is complete.
+FontSettings.ResetFontSources();
 ```
 {{< /tab >}}
 {{< tab "VB.NET">}}
@@ -401,6 +404,9 @@ Module Program
             viewOptions.DefaultFontName = "Arial"
             viewer.View(viewOptions)
         End Using
+
+        ' Reset font sources to default ones after rendering is complete.
+        FontSettings.ResetFontSources()
     End Sub
 End Module
 ```
@@ -409,12 +415,6 @@ End Module
 {{< tab-text >}}
 `sample.psd` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-images/sample.psd) to download it.
 {{< /tab-text >}}
-{{< /tab >}}
-{{< tab "output.png" >}}  
-```text
-Binary file (PNG, 623 KB)
-```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-images/RenderPsdWithCustomFonts/output.png)
 {{< /tab >}}
 {{< /tabs >}}
 

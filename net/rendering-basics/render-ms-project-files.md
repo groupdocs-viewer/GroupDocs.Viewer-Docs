@@ -80,11 +80,11 @@ End Module
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "page_1.html" >}}  
+{{< tab "render-project-to-html_1.html" >}}  
 ```text
 HTML file (7.0 MB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectToHtml/page_1.html)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectToHtml/render-project-to-html_1.html)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -139,7 +139,6 @@ End Module
 {{< /tab >}}
 {{< tab "render-project-to-html-external.zip" >}}  
 ```text
-page_1.html (81 KB)
 page_1/resource_1_f.ttf (1612 KB)
 page_1/resource_1_f1.ttf (1021 KB)
 page_1/resource_1_f2.ttf (1578 KB)
@@ -149,6 +148,7 @@ page_1/resource_1_i.png (345 bytes)
 page_1/resource_1_i1.png (968 bytes)
 page_1/resource_1_i2.png (946 bytes)
 page_1/resource_1_i3.png (353 bytes)
+page_1/resource_1_s.css (2 KB)
 [TRUNCATED] (11 files total)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectToHtmlExternal/render-project-to-html-external.zip)
@@ -198,11 +198,11 @@ End Module
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-project-to-pdf.pdf" >}}  
 ```text
-Binary file (PDF, 125 KB)
+Binary file (PDF, 126 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectToPdf/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectToPdf/render-project-to-pdf.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -257,7 +257,7 @@ End Module
 {{< /tab >}}
 {{< tab "output_1.png" >}}  
 ```text
-Binary file (PNG, 259 KB)
+Binary file (PNG, 250 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectToPng/output_1.png)
 {{< /tab >}}
@@ -314,7 +314,7 @@ End Module
 {{< /tab >}}
 {{< tab "output_1.jpg" >}}  
 ```text
-Binary file (JPG, 184 KB)
+Binary file (JPG, 180 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectToJpg/output_1.jpg)
 {{< /tab >}}
@@ -386,8 +386,8 @@ End Module
 ```text
 File type: Microsoft Project File (.mpp)
 The number of pages: 1
-Project start date: 9/7/2026 12:00:00 AM
-Project end date: 1/20/2027 12:00:00 AM
+Project start date: 07.09.2026 0:00:00
+Project end date: 20.01.2027 0:00:00
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/GetProjectInfo/get-project-info.txt)
 {{< /tab >}}
@@ -445,11 +445,11 @@ End Module
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-project-with-page-size.pdf" >}}  
 ```text
-Binary file (PDF, 119 KB)
+Binary file (PDF, 120 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectWithPageSize/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectWithPageSize/render-project-with-page-size.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -566,11 +566,11 @@ End Module
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-project-specific-dates.pdf" >}}  
 ```text
-Binary file (PDF, 120 KB)
+Binary file (PDF, 121 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectSpecificDates/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectSpecificDates/render-project-specific-dates.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -625,11 +625,11 @@ End Module
 `sample.mpp` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-ms-project-files/sample.mpp) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-project-with-notes.pdf" >}}  
 ```text
-Binary file (PDF, 149 KB)
+Binary file (PDF, 150 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectWithNotes/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-ms-project-files/RenderProjectWithNotes/render-project-with-notes.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

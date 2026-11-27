@@ -90,12 +90,12 @@ End Module
 {{< /tab >}}
 {{< tab "render-presentation-to-html.zip" >}}  
 ```text
-page_1.html (467 KB)
-page_2.html (329 KB)
-page_3.html (344 KB)
-page_4.html (343 KB)
-page_5.html (333 KB)
-page_6.html (330 KB)
+render-presentation-to-html_1.html (467 KB)
+render-presentation-to-html_2.html (329 KB)
+render-presentation-to-html_3.html (344 KB)
+render-presentation-to-html_4.html (343 KB)
+render-presentation-to-html_5.html (333 KB)
+render-presentation-to-html_6.html (330 KB)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationToHtml/render-presentation-to-html.zip)
 {{< /tab >}}
@@ -153,16 +153,16 @@ End Module
 {{< /tab >}}
 {{< tab "render-presentation-to-html-external.zip" >}}  
 ```text
-page_1.html (255 bytes)
 page_1/resource_1_g.svg (4 KB)
 page_1/resource_1_i.jpg (100 KB)
 page_1/resource_1_i.png (5 KB)
-page_2.html (255 bytes)
 page_2/resource_2_g.svg (6 KB)
-page_3.html (255 bytes)
 page_3/resource_3_g.svg (20 KB)
-page_4.html (255 bytes)
 page_4/resource_4_g.svg (19 KB)
+page_5/resource_5_g.svg (9 KB)
+page_6/resource_6_g.svg (7 KB)
+render-presentation-to-html-external_1.html (255 bytes)
+render-presentation-to-html-external_2.html (255 bytes)
 [TRUNCATED] (14 files total)
 ```
 [Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationToHtmlExternal/render-presentation-to-html-external.zip)
@@ -303,11 +303,11 @@ End Module
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-presentation-to-pdf.pdf" >}}  
 ```text
 Binary file (PDF, 375 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationToPdf/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationToPdf/render-presentation-to-pdf.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -493,11 +493,11 @@ End Module
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-presentation-with-resolution.pdf" >}}  
 ```text
 Binary file (PDF, 375 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationWithResolution/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationWithResolution/render-presentation-with-resolution.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -548,11 +548,11 @@ End Module
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-presentation-with-hidden-slides.pdf" >}}  
 ```text
 Binary file (PDF, 382 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationWithHiddenSlides/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationWithHiddenSlides/render-presentation-with-hidden-slides.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -601,11 +601,11 @@ End Module
 `with_comments.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/with_comments.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-presentation-with-comments.pdf" >}}  
 ```text
 Binary file (PDF, 380 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationWithComments/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationWithComments/render-presentation-with-comments.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 
@@ -660,11 +660,11 @@ End Module
 `sample.pptx` is the sample file used in this example. Click [here](/viewer/net/_sample_files/rendering-basics/render-presentations/sample.pptx) to download it.
 {{< /tab-text >}}
 {{< /tab >}}
-{{< tab "output.pdf" >}}  
+{{< tab "render-presentation-with-notes.pdf" >}}  
 ```text
 Binary file (PDF, 377 KB)
 ```
-[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationWithNotes/output.pdf)
+[Download full output](/viewer/net/_output_files/rendering-basics/render-presentations/RenderPresentationWithNotes/render-presentation-with-notes.pdf)
 {{< /tab >}}
 {{< /tabs >}}
 

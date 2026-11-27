@@ -65,11 +65,11 @@ End Module
 {{< /tab >}}
 {{< tab "adjust-jpg-quality.zip" >}}  
 ```text
-p_1.jpg (41 KB)
-p_2.jpg (56 KB)
-p_3.jpg (49 KB)
-p_4.jpg (54 KB)
-p_5.jpg (36 KB)
+p_1.jpg (46 KB)
+p_2.jpg (64 KB)
+p_3.jpg (59 KB)
+p_4.jpg (56 KB)
+p_5.jpg (44 KB)
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/rendering-documents/rendering-to-png-or-jpeg/image-viewer-adjust-quality-for-jpg/AdjustJpgQuality/adjust-jpg-quality.zip)
 {{< /tab >}}

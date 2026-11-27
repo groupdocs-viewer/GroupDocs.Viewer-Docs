@@ -101,8 +101,8 @@ End Module
 {{< /tab >}}
 {{< tab "cache-rendering-results.txt" >}}  
 ```text
-Time taken on first call to View method 9303 (ms).
-Time taken on second call to View method 65 (ms).
+Time taken on first call to View method 4465 (ms).
+Time taken on second call to View method 19 (ms).
 ```
 [Download full output](/viewer/net/_output_files/developer-guide/caching-results/_index/CacheRenderingResults/cache-rendering-results.txt)
 {{< /tab >}}
